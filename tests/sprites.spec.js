@@ -38,3 +38,26 @@ test('idle loops and one-shot states clamp on the last frame', async ({ page }) 
   expect(out.dEnd).toBe(out.deathN - 1);           // holds the last death frame
   expect(out.dOver).toBe(out.deathN - 1);          // never overruns
 });
+
+test('party classes map to EA hero rigs and the hero carries the greatsword', async ({ page }) => {
+  await loadGame(page);
+  await page.waitForFunction(() => ['hero1H','hero2H','heroDUAL','heroBOW','heroSTAFF']
+    .every(k => window.__wf.EASPR[k] && window.__wf.EASPR[k].ready), null, { timeout: 6000 });
+  const out = await page.evaluate(() => {
+    const wf = window.__wf;
+    return {
+      hero: wf.memberSpriteKey({ kind: 'hero', cls: 'vanguard' }),
+      vanguard: wf.memberSpriteKey({ kind: 'comp', cls: 'vanguard' }),
+      shadow: wf.memberSpriteKey({ kind: 'comp', cls: 'shadow' }),
+      caster: wf.memberSpriteKey({ kind: 'comp', cls: 'caster' }),
+      ranger: wf.memberSpriteKey({ kind: 'comp', cls: 'ranger' }),
+      brightLightens: wf.tintBright('#000000') !== '#000000',
+    };
+  });
+  expect(out.hero).toBe('hero2H');
+  expect(out.vanguard).toBe('hero1H');
+  expect(out.shadow).toBe('heroDUAL');
+  expect(out.caster).toBe('heroSTAFF');
+  expect(out.ranger).toBe('heroBOW');
+  expect(out.brightLightens).toBe(true);
+});
