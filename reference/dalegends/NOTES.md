@@ -137,13 +137,49 @@ placeholder. The paint:
   parts (`hf_headSkin[_2..6]`, `hf_hair_1..12[_back]`, hm_/ef_/em_/df_/dm_
   for the other race-genders, matching CHARACTER_PRESET.xml skin/hair ids).
 
-Build chain (all in /tmp/dal): `headskin.js` slices headSkin+hair out of the
-app SWF into a one-symbol skin (`hfHead_head`, plus empty `hfHead_helmet*` to
+Build chain (all in /tmp/dal): `headskin2.js` slices the preset heads out of
+the app SWF into per-hero skins (`hfHead_head`, plus empty `hfHead_helmet*` to
 blank the helmet slots); `compose2.js` (multi-skin compose.js: per-skin id
 offsets, optional `extra` placement→symbol maps for weaponR/skirt/wp_bow);
 `hero_pipeline.js plan/assemble` exports the composed rigs to the
 `DATA.eaRig.hero{War,Rog,Mag,Arc}` payload (idle/strike/special/dmg/death/
 fwd/evade/block + portrait, action_frames kept).
+
+### Heads, the real algorithm (CompositeHead.as, decompiled from DALFlashApp)
+
+`com/ea2d/dal/display/character/CompositeHead.as` is the avatar head builder.
+Layer order bottom→top: `hair_back` → `headSkin` (beard nested on top, human
+male only) → `eyes` → `hair` (elf-male skinType 2 nests `em_headband` into the
+hair sprite, so it inherits the hair tint) → elf `ears`. Race-gender symbol
+prefixes: hf/hm (human f/m), ef/em (elf), df/dw (dwarf). Elves have a single
+headSkin each plus separate `ef_ear`/`em_ears`/`*_eyes` overlays; elf-female
+hair borrows `hf_hair_*` symbols. The hairType→symbol switch tables are NOT
+identity maps (e.g. human-female hairType 3 → `hf_hair_1`, elf-female 3 →
+`hf_hair_3`, human-male 5 → `hm_hair_1`); human-male skinType doubles as the
+beard selector (`hm_facial_1..5` for types 2..6).
+
+Tints: `skinColors[10]`/`hairColors[10]` arrays of `HeadTint(color, fraction)`
+applied as `fl.motion.Color.setTint` — multipliers `1-fraction`, offsets
+`round(channel*fraction)`, i.e. CXFORM mult 128 + add color/2 at the shipped
+fraction 0.5 (index 9 = no tint). skinColors: 16441285, 16240275, 13668706,
+15708306, 12548926, 7424821, 16577504, 4862756, 3090212. hairColors: 0,
+5915442, 15585637, 3751505, 10374456, 14640941, 13092807, 7097197, 11372869.
+SkinColor/HairColor in CHARACTER_PRESET.xml index straight into these tables.
+
+The four hero loadouts are CHARACTER_PRESET.xml rows rendered through those
+tables, with gendered Basic armor pieces:
+- Warrior: human male, preset M1 (skin 1 / color 4, hair 2 / color 0),
+  `quartzArmor_m`
+- Rogue: human female, preset F4 (skin 1 / color 5, hairType 7 → hf_hair_7
+  +back / color 2), `rippedLeatherArmor_f`
+- Mage: elf male, preset M2 (skinType 2 → em_headband, color 3, hairType 11 →
+  em_hair_11 / color 1), `dirtyRobes_m`
+- Archer: elf female, preset F3 (single ef_headSkin / color 6, hairType 3 →
+  hf_hair_3 / color 4, ef_ear overlay), `rippedLeatherArmor_f`
+
+Dwarf player rigs exist too (`anims_Dwarf_{1H,2H,CROSS,DUAL}` — no STAFF, no
+BOW: dwarves got crossbows and no mages) with `df_`/`dw_` head parts (dw male
+"hair" slots are beards `dw_beard_1..12`) — unused so far.
 
 ## Combat numbers recovered for the d20 layer
 

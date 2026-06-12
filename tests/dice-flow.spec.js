@@ -207,3 +207,40 @@ test('the held card can be placed anywhere and settles back on reset', async ({ 
   expect(out.reset.dragged).toBe(false);
   expect(out.reset.left).toBe('');
 });
+
+test('the card minimizes to its title bar and comes back, like a window', async ({ page }) => {
+  await freshGame(page, 'c');
+  await startBattle(page);
+  const out = await page.evaluate(() => {
+    const wf = window.__wf, box = document.getElementById('battleBox');
+    const scroll = document.getElementById('bScroll'), btn = document.getElementById('bMin');
+    const vis = () => getComputedStyle(scroll).display !== 'none';
+    const before = { min: box.classList.contains('minimized'), bodyVisible: vis() };
+    btn.click();
+    const down = { min: box.classList.contains('minimized'), bodyVisible: vis(),
+      saved: wf.S.settings.cardMin, glyph: btn.textContent };
+    btn.click();
+    const up = { min: box.classList.contains('minimized'), bodyVisible: vis(), saved: wf.S.settings.cardMin };
+    // the preference rides into the next battle…
+    wf.S.settings.cardMin = true;
+    window.startBattle({ enemyKey: 'scopecreep', region: wf.DATA.regions[0], spawn: null, boss: false });
+    const nextBattle = box.classList.contains('minimized');
+    // …and the double-click hand-reset also restores the body
+    wf.S.settings.cardXY = [60, 60];
+    document.getElementById('bHead').dispatchEvent(new MouseEvent('dblclick', { bubbles: true }));
+    const handReset = { min: box.classList.contains('minimized'), saved: !!wf.S.settings.cardMin };
+    return { before, down, up, nextBattle, handReset };
+  });
+  expect(out.before.min).toBe(false);
+  expect(out.before.bodyVisible).toBe(true);
+  expect(out.down.min).toBe(true);
+  expect(out.down.bodyVisible).toBe(false);
+  expect(out.down.saved).toBe(true);
+  expect(out.down.glyph).toBe('❐');
+  expect(out.up.min).toBe(false);
+  expect(out.up.bodyVisible).toBe(true);
+  expect(out.up.saved).toBe(false);
+  expect(out.nextBattle).toBe(true);
+  expect(out.handReset.min).toBe(false);
+  expect(out.handReset.saved).toBe(false);
+});
