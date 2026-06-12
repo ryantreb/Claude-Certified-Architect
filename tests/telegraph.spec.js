@@ -83,7 +83,7 @@ test('staying in the line and a WRONG riposte lets the sweep land', async ({ pag
   expect(out.dmg).toBeGreaterThan(0);          // the sweep landed on whoever stayed
 });
 
-test('a correct riposte turns the sweep aside for the whole line', async ({ page }) => {
+test('a correct riposte earns the roll; a held roll turns the sweep aside for the whole line', async ({ page }) => {
   await freshGame(page, 'c');
   await startBattle(page);
   await forceTelegraph(page, 0);
@@ -94,9 +94,34 @@ test('a correct riposte turns the sweep aside for the whole line', async ({ page
     B.phase = 'q'; window.serveQuestion();
     const rightI = B.opts.findIndex(o => o.ok);
     window.onAnswer(rightI);
+    const phaseAfterAnswer = B.phase;           // correct answer arms the d20, nothing landed yet
+    const hpMid = B.party.reduce((s, m) => s + m.halves, 0);
+    window.resolveRoll(20);                     // the die holds
     const hpAfter = B.party.reduce((s, m) => s + m.halves, 0);
-    return { dmg: hpBefore - hpAfter, aoeCleared: B.aoe === null };
+    return { phaseAfterAnswer, midDmg: hpBefore - hpMid, dmg: hpBefore - hpAfter, aoeCleared: B.aoe === null };
   });
-  expect(out.dmg).toBe(0);                      // riposte protected everyone
+  expect(out.phaseAfterAnswer).toBe('roll');
+  expect(out.midDmg).toBe(0);                   // the answer alone never resolves the sweep
+  expect(out.dmg).toBe(0);                      // the held roll protected everyone
+  expect(out.aoeCleared).toBe(true);
+});
+
+test('a correct riposte whose die breaks still lets the sweep land — but never staggers', async ({ page }) => {
+  await freshGame(page, 'c');
+  await startBattle(page);
+  await forceTelegraph(page, 0);
+  const out = await page.evaluate(() => {
+    const wf = window.__wf, B = wf.B;
+    B.party[0].cell = { col: 0, row: 1 };
+    const hpBefore = B.party.reduce((s, m) => s + m.halves, 0);
+    B.phase = 'q'; window.serveQuestion();
+    window.onAnswer(B.opts.findIndex(o => o.ok));
+    window.resolveRoll(1);                      // the die always fails on a 1
+    const hpAfter = B.party.reduce((s, m) => s + m.halves, 0);
+    const staggered = B.party.some(m => (m.staggerRound | 0) > 0);
+    return { dmg: hpBefore - hpAfter, staggered, aoeCleared: B.aoe === null };
+  });
+  expect(out.dmg).toBeGreaterThan(0);           // the sweep crashed through
+  expect(out.staggered).toBe(false);            // a broken die is not a failed recall
   expect(out.aoeCleared).toBe(true);
 });
