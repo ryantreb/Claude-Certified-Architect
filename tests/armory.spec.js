@@ -58,3 +58,24 @@ test('the weapon table carries the original names and a full tier spread per cla
   expect(out.tiersOk).toBe(true);
   expect(out.sample.length).toBeGreaterThan(3);          // a real original item name
 });
+
+test('the companion roster: chosen pair rides, capped at two, defaults to first sworn', async ({ page }) => {
+  await freshGame(page, 'c');
+  const out = await page.evaluate(() => {
+    const wf = window.__wf;
+    wf.S.companions = ['comp_c0', 'comp_c1', 'comp_c2', 'comp_c3'];
+    const def = wf.activeCompanions().slice(0, 2).map(c => c.id);   // no choice -> first two
+    wf.S.activeComp = { c: ['comp_c2', 'comp_c3'], g: [] };
+    const chosen = wf.activeCompanions().map(c => c.id);
+    window.startBattle({ enemyKey: 'scopecreep', region: wf.DATA.regions[0], spawn: null, boss: false });
+    const party = wf.B.party.filter(m => m.kind === 'comp').map(m => m.id);
+    wf.S.activeComp.c = ['comp_c0', 'comp_c1', 'comp_c2'];          // over-cap -> party still two
+    window.startBattle({ enemyKey: 'scopecreep', region: wf.DATA.regions[0], spawn: null, boss: false });
+    const cap = wf.B.party.filter(m => m.kind === 'comp').length;
+    return { def, chosen, party, cap };
+  });
+  expect(out.def).toEqual(['comp_c0', 'comp_c1']);
+  expect(out.chosen).toEqual(['comp_c2', 'comp_c3']);
+  expect(out.party).toEqual(['comp_c2', 'comp_c3']);
+  expect(out.cap).toBe(2);
+});
