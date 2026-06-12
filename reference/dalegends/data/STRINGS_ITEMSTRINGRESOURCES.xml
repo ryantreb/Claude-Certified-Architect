@@ -1,0 +1,16 @@
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Soren Johnson (Electronic Arts) -->
+<StringData>
+	<!-- =================================================
+	   Item Names
+	================================================== -->
+	<!-- TODO -->
+
+	<!-- =================================================
+	   Item Tooltips
+	================================================== -->
+	<String key="ITEM_TOOLTIP_LEVEL_REQ">Min Level {%level%}</String>
+	<String key="ITEM_TOGGLE_WEAPON_TOOLTIP">Toggle Weapon</String>
+	<String key="CROWN_DESCRIPTION">{%amount%} crowns</String>
+	<String key="COIN_DESCRIPTION">{%amount%} crowns</String>
+	<String key="XP_DESCRIPTION">{%amount%} crowns</String>
+</StringData>

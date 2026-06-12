@@ -1,0 +1,48 @@
+<PerksData>
+	<Perk>
+		<ID>PERK_XP_BONUS</ID>
+		<Name>4x XP</Name>
+		<XPPctDelta>3.0</XPPctDelta>
+	</Perk>
+	<Perk>
+		<ID>PERK_CASTLE_HAPPINESS_BONUS</ID>
+		<Name>4x Happiness</Name>
+		<CastleHappinessPctDelta>3.0</CastleHappinessPctDelta>
+	</Perk>
+	<Perk>
+		<ID>PERK_CASTLE_PRODUCTIVITY_BONUS</ID>
+		<Name>+200% Productivity</Name>
+		<CastleProductivityPctDelta>2.0</CastleProductivityPctDelta>
+	</Perk>
+	<Perk>
+		<ID>PERK_SCRATCHCARD_DAY_1</ID>
+		<Name>Ravi's Riches</Name>
+		<Day>1</Day>
+	</Perk>
+	<Perk>
+		<ID>PERK_SCRATCHCARD_DAY_2</ID>
+		<Name>Lucky Lukesh</Name>
+		<Day>2</Day>
+	</Perk>
+	<Perk>
+		<ID>PERK_SCRATCHCARD_DAY_3</ID>
+		<Name>Score with Sendis</Name>
+		<Day>3</Day>
+	</Perk>
+	<Perk>
+		<ID>PERK_SCRATCHCARD_DAY_4</ID>
+		<Name>Treasures from Tovez</Name>
+		<Day>4</Day>
+	</Perk>
+	<Perk>
+		<ID>PERK_SCRATCHCARD_DAY_5</ID>
+		<Name>Hawke's Hoard</Name>
+		<Day>5</Day>
+	</Perk>
+<!--	<Perk>
+		<ID>PERK_HOLIDAY_FIREWORKS</ID>
+		<Name>Fireworks</Name>
+		<Day>3</Day>
+		<XPPctDelta>1.0</XPPctDelta>
+	</Perk>	-->
+</PerksData>

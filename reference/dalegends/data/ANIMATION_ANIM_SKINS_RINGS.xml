@@ -1,0 +1,306 @@
+<!-- edited with XMLSpy v2010 rel. 3 sp1 (http://www.altova.com) by BOBBY MOLDAVON (ELECTRONIC ARTS) -->
+<!-- DAJFB Char Anim Skin Definitions
+	Created 7.29.2010
+-->
+<RigData>
+	<DefaultChunkName>
+		ANIM_SKINS_ACCESSORIES
+	</DefaultChunkName>
+	<!-- RINGS -->
+	<Entry>
+		<ID>skTestRing</ID>
+		<AssetPrefix>test_ring</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingPower</ID>
+		<AssetPrefix>ring_of_power</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingParrying</ID>
+		<AssetPrefix>ring_of_parrying</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingHaste</ID>
+		<AssetPrefix>ring_of_haste</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingFortune</ID>
+		<AssetPrefix>ring_of_fortune</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingEndurance</ID>
+		<AssetPrefix>ring_of_endurance</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingSloth</ID>
+		<AssetPrefix>ring_of_sloth</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingEvil</ID>
+		<AssetPrefix>ring_of_evil</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingBurden</ID>
+		<AssetPrefix>ring_of_burden</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingDexterity</ID>
+		<AssetPrefix>ring_of_dexterity</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingEnduranceGreater</ID>
+		<AssetPrefix>ring_of_endurance_greater</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingSlothGreater</ID>
+		<AssetPrefix>ring_of_sloth_greater</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingEvilGreater</ID>
+		<AssetPrefix>ring_of_evil_greater</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingBurdenGreater</ID>
+		<AssetPrefix>ring_of_burden_greater</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingDexterityGreater</ID>
+		<AssetPrefix>ring_of_dexterity_greater</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingPowerGreater</ID>
+		<AssetPrefix>ring_of_power_greater</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingParryingGreater</ID>
+		<AssetPrefix>ring_of_parrying_greater</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingHasteGreater</ID>
+		<AssetPrefix>ring_of_haste_greater</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingFortuneGreater</ID>
+		<AssetPrefix>ring_of_fortune_greater</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingMagicalResistance</ID>
+		<AssetPrefix>ring_of_magical_resistance</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingScholar</ID>
+		<AssetPrefix>ring_scholars</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingElementalResistance</ID>
+		<AssetPrefix>ring_of_elemental_resistance</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingGolden</ID>
+		<AssetPrefix>ring_golden</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingGuardian</ID>
+		<AssetPrefix>ring_guardian</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingLyrium</ID>
+		<AssetPrefix>ring_lyrium</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingSuperPremium1</ID>
+		<AssetPrefix>ring_superPremium1</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingTemplar</ID>
+		<AssetPrefix>ring_templar</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingBlackDiamond</ID>
+		<AssetPrefix>ring_blackDiamond</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingDeepRubis</ID>
+		<AssetPrefix>ring_deepRubis</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingPearl</ID>
+		<AssetPrefix>ring_pearl</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingBlackPearl</ID>
+		<AssetPrefix>ring_blackPearl</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingEbony</ID>
+		<AssetPrefix>ring_ebony</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingGreenEye</ID>
+		<AssetPrefix>ring_greeneye</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingRedEye</ID>
+		<AssetPrefix>ring_redeye</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingPhoenix</ID>
+		<AssetPrefix>ring_phoenix</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingVine</ID>
+		<AssetPrefix>ring_vine</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skRingPrideDemon</ID>
+		<AssetPrefix>ring_prideDemon</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+</RigData>

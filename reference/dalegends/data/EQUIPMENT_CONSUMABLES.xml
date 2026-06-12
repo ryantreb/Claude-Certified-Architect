@@ -1,0 +1,848 @@
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Soren Johnson (Electronic Arts) -->
+<!-- DAJFB Consumable Item Data -->
+<Root>
+	<entry>
+		<type>BOMB_SHARD</type>
+		<itemName>Shard Bomb</itemName>
+		<category>CONSUMABLE</category>
+		<tag>BOMB</tag>
+		<iconFrame>44</iconFrame>
+		<description>-{HEART,3}</description>
+		<skillId>CONS_BOMB_SHARD</skillId>
+		<skinId>skBombShard</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>BOMB_FIRE</type>
+		<itemName>Fire Bomb</itemName>
+		<category>CONSUMABLE</category>
+		<tag>BOMB</tag>
+		<iconFrame>2</iconFrame>
+		<description>-{HEART,2}, -{MANA,3}</description>
+		<skillId>CONS_BOMB_FIRE</skillId>
+		<skinId>skBombFire</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>BOMB_TIME</type>
+		<itemName>Time Bomb</itemName>
+		<category>CONSUMABLE</category>
+		<tag>BOMB</tag>
+		<iconFrame>45</iconFrame>
+		<description>A powerful but delayed explosion</description>
+		<skillId>CONS_BOMB_TIME</skillId>
+		<skinId>skBombTime</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>BOMB_FROST</type>
+		<itemName>Frost Bomb</itemName>
+		<category>CONSUMABLE</category>
+		<tag>BOMB</tag>
+		<iconFrame>3</iconFrame>
+		<description>-{HEART,1}, Frozen</description>
+		<skillId>CONS_BOMB_FROST</skillId>
+		<skinId>skBombFrost</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>BOMB_SHOCK</type>
+		<itemName>Shock Bomb</itemName>
+		<category>CONSUMABLE</category>
+		<tag>BOMB</tag>
+		<iconFrame>4</iconFrame>
+		<description>-{HEART,2} to all enemies</description>
+		<skillId>CONS_BOMB_SHOCK</skillId>
+		<skinId>skBombShock</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>BOMB_GREASE</type>
+		<itemName>Grease Bomb</itemName>
+		<category>CONSUMABLE</category>
+		<tag>BOMB</tag>
+		<iconFrame>47</iconFrame>
+		<description>-{HEART,1}, -50% AGL to all enemies</description>
+		<skillId>CONS_BOMB_GREASE</skillId>
+		<skinId>skBombGrease</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>BOMB_ACID</type>
+		<itemName>Acid Bomb</itemName>
+		<category>CONSUMABLE</category>
+		<tag>BOMB</tag>
+		<iconFrame>46</iconFrame>
+		<description>-{HEART,1}, -50% DEF to all enemies</description>
+		<skillId>CONS_BOMB_ACID</skillId>
+		<skinId>skBombAcid</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>BOMB_POISON</type>
+		<itemName>Poison Bomb</itemName>
+		<category>CONSUMABLE</category>
+		<tag>BOMB</tag>
+		<iconFrame>5</iconFrame>
+		<description>-{HEART,1}, Poison</description>
+		<skillId>CONS_BOMB_POISON</skillId>
+		<skinId>skBombPoison</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>BOMB_SMOKE</type>
+		<itemName>Smoke Bomb</itemName>
+		<category>CONSUMABLE</category>
+		<tag>BOMB</tag>
+		<iconFrame>5</iconFrame>
+		<description>-{HEART,1}, -50% ATK to all enemies</description>
+		<skillId>CONS_BOMB_SMOKE</skillId>
+		<skinId>skBombSmoke</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>BOMB_FLAME_WAVE</type>
+		<itemName>Flame Wave Bomb</itemName>
+		<category>CONSUMABLE</category>
+		<tag>BOMB</tag>
+		<iconFrame>5</iconFrame>
+		<description>-{HEART,2}, -{MANA,3} to area</description>
+		<skillId>CONS_BOMB_FLAME</skillId>
+		<skinId>skBombFlame</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>BOMB_FROST_TORRENT</type>
+		<itemName>Frost Torrent Bomb</itemName>
+		<category>CONSUMABLE</category>
+		<tag>BOMB</tag>
+		<iconFrame>5</iconFrame>
+		<description>-{HEART,1}, Frozen to area</description>
+		<skillId>CONS_BOMB_FROST_TORRENT</skillId>
+		<skinId>skBombTorrent</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>BOMB_POISON_CLOUD</type>
+		<itemName>Poison Cloud Bomb</itemName>
+		<category>CONSUMABLE</category>
+		<tag>BOMB</tag>
+		<iconFrame>5</iconFrame>
+		<description>-{HEART,1}, Poison to area</description>
+		<skillId>CONS_BOMB_POISON_CLOUD</skillId>
+		<skinId>skBombCloud</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>BOMB_DISPEL</type>
+		<itemName>Dispel Bomb</itemName>
+		<category>CONSUMABLE</category>
+		<tag>BOMB</tag>
+		<iconFrame>5</iconFrame>
+		<description>Dispel beneficial effects from area</description>
+		<skillId>CONS_BOMB_DISPEL</skillId>
+		<skinId>skBombDispel</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>POTION_HEALTH</type>
+		<itemName>Health Potion</itemName>
+		<category>CONSUMABLE</category>
+		<tag>POTION</tag>
+		<iconFrame>59</iconFrame>
+		<description>+{HEART,4}</description>
+		<skillId>CONS_HEALTH</skillId>
+		<skinId>skPotionHealthSmall</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>POTION_HEALTH_GREATER</type>
+		<itemName>Greater Health Potion</itemName>
+		<category>CONSUMABLE</category>
+		<tag>POTION</tag>
+		<iconFrame>60</iconFrame>
+		<description>+{HEART,6}</description>
+		<skillId>CONS_HEALTH_GREATER</skillId>
+		<skinId>skPotionHealthLarge</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>POTION_HEALTH_RESTORATION</type>
+		<itemName>Full Health Potion</itemName>
+		<category>CONSUMABLE</category>
+		<tag>POTION</tag>
+		<iconFrame>61</iconFrame>
+		<description>Restores full health</description>
+		<skillId>CONS_HEALTH_RESTORATION</skillId>
+		<skinId>skPotionRestoration</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>POTION_MANA</type>
+		<itemName>Mana Potion</itemName>
+		<category>CONSUMABLE</category>
+		<tag>POTION</tag>
+		<iconFrame>9</iconFrame>
+		<description>+{MANA,2}</description>
+		<skillId>CONS_MANA</skillId>
+		<skinId>skPotionManaSmall</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>POTION_MANA_GREATER</type>
+		<itemName>Greater Mana Potion</itemName>
+		<category>CONSUMABLE</category>
+		<tag>POTION</tag>
+		<iconFrame>10</iconFrame>
+		<description>+{MANA,3}</description>
+		<skillId>CONS_MANA_GREATER</skillId>
+		<skinId>skPotionManaLarge</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>POTION_CONCENTRATION</type>
+		<itemName>Concentration Potion</itemName>
+		<category>CONSUMABLE</category>
+		<tag>POTION</tag>
+		<iconFrame>53</iconFrame>
+		<description>+100% Crit</description>
+		<skillId>CONS_CONCENTRATION</skillId>
+		<skinId>skPotionConcentration</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>KIT_INJURY</type>
+		<itemName>Injury Kit</itemName>
+		<category>CONSUMABLE</category>
+		<tag>KIT</tag>
+		<iconFrame>6</iconFrame>
+		<description>+{HEART,4} to an ally</description>
+		<skillId>CONS_KIT_INJURY</skillId>
+		<skinId>skKitHealingSmall</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>KIT_INJURY_GREATER</type>
+		<itemName>Greater Injury Kit</itemName>
+		<category>CONSUMABLE</category>
+		<tag>KIT</tag>
+		<iconFrame>7</iconFrame>
+		<description>+{HEART,6} to an ally</description>
+		<skillId>CONS_KIT_INJURY_GREATER</skillId>
+		<skinId>skKitHealingLarge</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>KIT_ANTIDOTE</type>
+		<itemName>Antidote Kit</itemName>
+		<category>CONSUMABLE</category>
+		<tag>KIT</tag>
+		<iconFrame>54</iconFrame>
+		<description>Cures Poison and +{HEART,4} to an ally</description>
+		<skillId>CONS_KIT_ANTIDOTE</skillId>
+		<skinId>skKitAntidote</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>KIT_BRACING</type>
+		<itemName>Bracing Kit</itemName>
+		<category>CONSUMABLE</category>
+		<tag>KIT</tag>
+		<iconFrame>55</iconFrame>
+		<description>Cures Crippled and +{HEART,6} to an ally</description>
+		<skillId>CONS_KIT_BRACING</skillId>
+		<skinId>skKitSmellingSalts</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>KIT_INJURY_TEAM</type>
+		<itemName>Team Injury Kit</itemName>
+		<category>CONSUMABLE</category>
+		<tag>KIT</tag>
+		<iconFrame>8</iconFrame>
+		<description>+{HEART,4} to all allies</description>
+		<skillId>CONS_KIT_INJURY_TEAM</skillId>
+		<skinId>skKitTeamInjury</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>KIT_MANA</type>
+		<itemName>Mana Salve</itemName>
+		<category>CONSUMABLE</category>
+		<tag>KIT</tag>
+		<iconFrame>56</iconFrame>
+		<description>+{MANA,3}     to an ally</description>
+		<skillId>CONS_KIT_MANA</skillId>
+		<skinId>skKitManaSmall</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>KIT_MANA_GREATER</type>
+		<itemName>Greater Mana Salve</itemName>
+		<category>CONSUMABLE</category>
+		<tag>KIT</tag>
+		<iconFrame>57</iconFrame>
+		<description>+{MANA,4}     to an ally</description>
+		<skillId>CONS_KIT_MANA_GREATER</skillId>
+		<skinId>skKitManaLarge</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>KIT_MANA_TEAM</type>
+		<itemName>Team Mana Salve</itemName>
+		<category>CONSUMABLE</category>
+		<tag>KIT</tag>
+		<iconFrame>58</iconFrame>
+		<description>+{MANA,2} to all allies</description>
+		<skillId>CONS_KIT_MANA_TEAM</skillId>
+		<skinId>skKitManaTeam</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>KIT_POULTICE</type>
+		<itemName>Battle Poultice</itemName>
+		<category>CONSUMABLE</category>
+		<tag>KIT</tag>
+		<iconFrame>12</iconFrame>
+		<description>+8 ATK, +8 LCK to an ally</description>
+		<skillId>CONS_KIT_POULTICE</skillId>
+		<skinId>skPoulticeHealth</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>KIT_TALENT_TEAM</type>
+		<itemName>Team Talent Poultice</itemName>
+		<category>CONSUMABLE</category>
+		<tag>KIT</tag>
+		<iconFrame>14</iconFrame>
+		<description>+8 DEF, +8 AGL to all allies</description>
+		<skillId>CONS_KIT_TALENT_TEAM</skillId>
+		<skinId>skKitTeamTalent</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>KIT_BATTLE_TEAM</type>
+		<itemName>Team Battle Poultice</itemName>
+		<category>CONSUMABLE</category>
+		<tag>KIT</tag>
+		<iconFrame>13</iconFrame>
+		<description>+8 ATK, +8 LCK to all allies</description>
+		<skillId>CONS_KIT_BATTLE_TEAM</skillId>
+		<skinId>skKitTeamBattle</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>KIT_CLEANSING</type>
+		<itemName>Team Cleansing Kit</itemName>
+		<category>CONSUMABLE</category>
+		<tag>KIT</tag>
+		<iconFrame>13</iconFrame>
+		<description>Remove bad effects from all allies</description>
+		<skillId>CONS_KIT_CLEANSING</skillId>
+		<skinId>skKitCleansing</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>KIT_MANA_TEAM_GREATER</type>
+		<itemName>Greater Team Mana Salve</itemName>
+		<category>CONSUMABLE</category>
+		<tag>KIT</tag>
+		<iconFrame>13</iconFrame>
+		<description>+{MANA,3} to all allies</description>
+		<skillId>CONS_KIT_MANA_TEAM_GREATER</skillId>
+		<skinId>skKitManaGreaterTeam</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>KIT_BATTLE_POULTICE_GREATER</type>
+		<itemName>Greater Battle Poultice</itemName>
+		<category>CONSUMABLE</category>
+		<tag>KIT</tag>
+		<iconFrame>13</iconFrame>
+		<description>+16 ATK, +16 LCK to one ally</description>
+		<skillId>CONS_KIT_POULTICE_GREATER</skillId>
+		<skinId>skKitBattleGreaterTeam</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>POTION_POWER</type>
+		<itemName>Power Potion</itemName>
+		<category>CONSUMABLE</category>
+		<tag>POTION</tag>
+		<iconFrame>49</iconFrame>
+		<description>+8 ATK</description>
+		<skillId>CONS_POTION_POWER</skillId>
+		<skinId>skPotionPower</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>POTION_DEFENSE</type>
+		<itemName>Defense Potion</itemName>
+		<category>CONSUMABLE</category>
+		<tag>POTION</tag>
+		<iconFrame>50</iconFrame>
+		<description>+12 DEF</description>
+		<skillId>CONS_POTION_DEFENSE</skillId>
+		<skinId>skPotionDefense</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>POTION_SPEED</type>
+		<itemName>Agility Potion</itemName>
+		<category>CONSUMABLE</category>
+		<tag>POTION</tag>
+		<iconFrame>51</iconFrame>
+		<description>+16 AGL</description>
+		<skillId>CONS_POTION_SPEED</skillId>
+		<skinId>skPotionAgility</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>POTION_LUCK</type>
+		<itemName>Luck Potion</itemName>
+		<category>CONSUMABLE</category>
+		<tag>POTION</tag>
+		<iconFrame>52</iconFrame>
+		<description>+20 LCK</description>
+		<skillId>CONS_POTION_LUCK</skillId>
+		<skinId>skPotionLuck</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>POTION_ANTIDOTE</type>
+		<itemName>Antidote Potion</itemName>
+		<category>CONSUMABLE</category>
+		<tag>POTION</tag>
+		<iconFrame>15</iconFrame>
+		<description>Cures Poison and +{HEART,4}</description>
+		<skillId>CONS_POTION_ANTIDOTE</skillId>
+		<skinId>skPotionAntidote</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>POTION_REVITALIZE</type>
+		<itemName>Revitalize Potion</itemName>
+		<category>CONSUMABLE</category>
+		<tag>POTION</tag>
+		<iconFrame>15</iconFrame>
+		<description>+{HEART,6} and +{MANA,5}</description>
+		<skillId>CONS_REVITALIZE</skillId>
+		<skinId>skPotionRevitalize</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>POTION_LIFE_WARD</type>
+		<itemName>Life Ward Potion</itemName>
+		<category>CONSUMABLE</category>
+		<tag>POTION</tag>
+		<iconFrame>15</iconFrame>
+		<description>Regen health, ward vs bad effects</description>
+		<skillId>CONS_LIFE_WARD</skillId>
+		<skinId>skPotionWard</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>POTION_RESISTANCE</type>
+		<itemName>Resistance Potion</itemName>
+		<category>CONSUMABLE</category>
+		<tag>POTION</tag>
+		<iconFrame>15</iconFrame>
+		<description>80% damage resistance, 6 turns</description>
+		<skillId>CONS_RESISTANCE</skillId>
+		<skinId>skPotionResistance</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>POTION_INSIGHT</type>
+		<itemName>Insight Potion</itemName>
+		<category>CONSUMABLE</category>
+		<tag>POTION</tag>
+		<iconFrame>15</iconFrame>
+		<description>+100% bonus to accuracy</description>
+		<skillId>CONS_INSIGHT</skillId>
+		<skinId>skPotionFocus</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>POTION_ENERGY_LESSER</type>
+		<itemName>Lesser Energy Potion</itemName>
+		<category>CONSUMABLE</category>
+		<tag>PERK</tag>
+		<iconFrame>15</iconFrame>
+		<description>+5 {ENERGY}</description>
+		<skillId>CONS_POTION_ENERGY_LESSER</skillId>
+		<skinId>skPotionEnergyLesser</skinId>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<cost>
+			<gold>2500</gold>
+			<coins>0</coins>
+		</cost>
+	</entry>
+	<entry>
+		<type>POTION_ENERGY</type>
+		<itemName>Energy Potion</itemName>
+		<category>CONSUMABLE</category>
+		<tag>PERK</tag>
+		<iconFrame>15</iconFrame>
+		<description>+10 {ENERGY}</description>
+		<skillId>CONS_POTION_ENERGY</skillId>
+		<skinId>skPotionEnergy</skinId>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<cost>
+			<gold>5000</gold>
+			<coins>0</coins>
+		</cost>
+	</entry>
+	<entry>
+		<type>POTION_ENERGY_GREATER</type>
+		<itemName>Greater Energy Potion</itemName>
+		<category>CONSUMABLE</category>
+		<tag>PERK</tag>
+		<iconFrame>15</iconFrame>
+		<description>+25 {ENERGY}</description>
+		<skillId>CONS_POTION_ENERGY_GREATER</skillId>
+		<skinId>skPotionEnergyGreater</skinId>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<cost>
+			<gold>12500</gold>
+			<coins>0</coins>
+		</cost>
+	</entry>
+	<entry>
+		<type>POTION_ENERGY_PILL</type>
+		<itemName>Energy Pill</itemName>
+		<category>CONSUMABLE</category>
+		<tag>PERK</tag>
+		<iconFrame>15</iconFrame>
+		<description>+2 {ENERGY}</description>
+		<skillId>CONS_POTION_ENERGY_PILL</skillId>
+		<skinId>skPotionEnergyPill</skinId>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<canRequest>TRUE</canRequest>
+		<cost>
+			<gold>1000</gold>
+			<coins>0</coins>
+		</cost>
+	</entry>
+	<entry>
+		<type>POTION_ENERGY_PILL_LESSER</type>
+		<itemName>Lesser Energy Pill</itemName>
+		<category>CONSUMABLE</category>
+		<tag>PERK</tag>
+		<iconFrame>15</iconFrame>
+		<description>+1 {ENERGY}</description>
+		<skillId>CONS_POTION_ENERGY_PILL_LESSER</skillId>
+		<skinId>skPotionEnergyPillLesser</skinId>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<canRequest>TRUE</canRequest>
+		<cost>
+			<gold>500</gold>
+			<coins>0</coins>
+		</cost>
+	</entry>
+	<entry>
+		<type>HORN_EVRAS</type>
+		<itemName>Evra's Horn</itemName>
+		<category>CONSUMABLE</category>
+		<tag>PERK</tag>
+		<iconFrame>15</iconFrame>
+		<description>Call an additional friend to battle instantly</description>
+		<skinId>skHornEvras</skinId>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<cost>
+			<gold>0</gold>
+			<coins>19</coins>
+		</cost>
+	</entry>
+	<entry>
+		<type>SMELLING_SALTS</type>
+		<itemName>Smelling Salts</itemName>
+		<category>CONSUMABLE</category>
+		<tag>PERK</tag>
+		<iconFrame>15</iconFrame>
+		<description>Revive your hero at full health</description>
+		<skinId>skKitSmellingSalts</skinId>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<cost>
+			<gold>0</gold>
+			<coins>19</coins>
+		</cost>
+	</entry>
+	<entry>
+		<type>RECRUIT</type>
+		<itemName>Recruit</itemName>
+		<category>CONSUMABLE</category>
+		<tag>PERK</tag>
+		<iconFrame>15</iconFrame>
+		<description>Call an additional friend to battle instantly</description>
+		<skinId>skHornEvras</skinId>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<cost>
+			<gold>0</gold>
+			<coins>19</coins>
+		</cost>
+	</entry>
+	<entry>
+		<type>REVIVE</type>
+		<itemName>Revive</itemName>
+		<category>CONSUMABLE</category>
+		<tag>PERK</tag>
+		<iconFrame>15</iconFrame>
+		<description>Revive your hero at full health</description>
+		<skinId>skKitSmellingSalts</skinId>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<cost>
+			<gold>0</gold>
+			<coins>19</coins>
+		</cost>
+	</entry>
+	<entry>
+		<type>PERKITEM_XP_BONUS</type>
+		<itemName>Longstaff's Elixir</itemName>
+		<category>CONSUMABLE</category>
+		<tag>PERK</tag>
+		<description>Earn Quadruple XP for 24 hours</description>
+		<skinId>skPerkXPBonus</skinId>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<Perk>
+			<ID>PERK_XP_BONUS</ID>
+			<Time>86400</Time>
+			<!-- 24 hrs, in seconds -->
+		</Perk>
+		<cost>
+			<gold>0</gold>
+			<coins>200</coins>
+		</cost>
+	</entry>
+	<entry>
+		<type>PERKITEM_XP_BONUS_GREATER</type>
+		<itemName>Longstaff's Ultimate Elixir</itemName>
+		<category>CONSUMABLE</category>
+		<tag>PERK</tag>
+		<description>Earn Quadruple XP for 72 hours</description>
+		<skinId>skPerkXPBonusGreater</skinId>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<Perk>
+			<ID>PERK_XP_BONUS</ID>
+			<Time>259200</Time>
+			<!-- 72 hrs, in seconds -->
+		</Perk>
+		<cost>
+			<gold>0</gold>
+			<coins>500</coins>
+		</cost>
+	</entry>
+	<entry>
+		<type>PERKITEM_CASTLE_HAPPINESS_BONUS</type>
+		<itemName>Festival</itemName>
+		<category>CONSUMABLE</category>
+		<tag>PERK</tag>
+		<description>Quadruple castle happiness for 24 hours</description>
+		<skinId>skPerkHappinessBonus</skinId>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<Perk>
+			<ID>PERK_CASTLE_HAPPINESS_BONUS</ID>
+			<Time>86400</Time>
+			<!-- 24 hrs, in seconds -->
+		</Perk>
+		<cost>
+			<gold>0</gold>
+			<coins>400</coins>
+		</cost>
+	</entry>
+	<entry>
+		<type>PERKITEM_CASTLE_PRODUCTIVITY_BONUS</type>
+		<itemName>Viscount's Visit</itemName>
+		<category>CONSUMABLE</category>
+		<tag>PERK</tag>
+		<description>+200% productivity for 24 hours</description>
+		<skinId>skPerkProductivityBonus</skinId>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<Perk>
+			<ID>PERK_CASTLE_PRODUCTIVITY_BONUS</ID>
+			<Time>86400</Time>
+			<!-- 24 hrs, in seconds -->
+		</Perk>
+		<cost>
+			<gold>0</gold>
+			<coins>400</coins>
+		</cost>
+	</entry>
+	<entry>
+		<type>PERK_SCRATCHCARD_DAY_1</type>
+		<itemName>Ravi's Riches</itemName>
+		<category>OFFER_SCRATCHER</category>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<tag>PERK</tag>
+		<description>Day 1 scratchcard</description>
+		<skinId>skPerkScratchcardDay1</skinId>
+		<cost>
+			<gold>0</gold>
+			<coins>9</coins>
+		</cost>
+	</entry>
+	<entry>
+		<type>PERK_SCRATCHCARD_DAY_2</type>
+		<itemName>Lucky Lukesh</itemName>
+		<category>OFFER_SCRATCHER</category>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<tag>PERK</tag>
+		<description>Day 2 scratchcard</description>
+		<skinId>skPerkScratchcardDay2</skinId>
+		<cost>
+			<gold>0</gold>
+			<coins>19</coins>
+		</cost>
+	</entry>
+	<entry>
+		<type>PERK_SCRATCHCARD_DAY_3</type>
+		<itemName>Score with Sendis</itemName>
+		<category>OFFER_SCRATCHER</category>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<tag>PERK</tag>
+		<description>Day 3 scratchcard</description>
+		<skinId>skPerkScratchcardDay3</skinId>
+		<cost>
+			<gold>0</gold>
+			<coins>29</coins>
+		</cost>
+	</entry>
+	<entry>
+		<type>PERK_SCRATCHCARD_DAY_4</type>
+		<itemName>Treasures from Tovez</itemName>
+		<category>OFFER_SCRATCHER</category>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<tag>PERK</tag>
+		<description>Day 4 scratchcard</description>
+		<skinId>skPerkScratchcardDay4</skinId>
+		<cost>
+			<gold>0</gold>
+			<coins>39</coins>
+		</cost>
+	</entry>
+	<entry>
+		<type>PERK_SCRATCHCARD_DAY_5</type>
+		<itemName>Hawke's Hoard</itemName>
+		<category>OFFER_SCRATCHER</category>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<tag>PERK</tag>
+		<description>Day 5 scratchcard</description>
+		<skinId>skPerkScratchcardDay5</skinId>
+		<cost>
+			<gold>0</gold>
+			<coins>49</coins>
+		</cost>
+	</entry>
+	<!-- RAID CONSUMABLES -->
+	<entry>
+		<type>KIT_AID_TEAM</type>
+		<itemName>Team Aid Kit</itemName>
+		<category>CONSUMABLE</category>
+		<tag>KIT</tag>
+		<iconFrame>8</iconFrame>
+		<description>+{HEART,6} and +{MANA,3} to team</description>
+		<skillId>CONS_KIT_AID_TEAM</skillId>
+		<skinId>skKitAidTeam</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>KIT_INVULNERABILITY</type>
+		<itemName>Invulnerability Kit</itemName>
+		<category>CONSUMABLE</category>
+		<tag>KIT</tag>
+		<iconFrame>8</iconFrame>
+		<description>6 turn +80% team damage resist</description>
+		<skillId>CONS_KIT_INVULNERABILITY</skillId>
+		<skinId>skKitInvulnerability</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>DRAGON_KIT</type>
+		<itemName>Dragon Vial</itemName>
+		<category>CONSUMABLE</category>
+		<tag>KIT</tag>
+		<iconFrame>188</iconFrame>
+		<description>Summons a Dragonling to aid you</description>
+		<skillId>CONS_DRAGON_KIT</skillId>
+		<skinId>skKitDragon</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<entry>
+		<type>SWARM_BOTTLE</type>
+		<itemName>Swarm Bottle</itemName>
+		<category>CONSUMABLE</category>
+		<tag>KIT</tag>
+		<iconFrame>183</iconFrame>
+		<description>Summons a swarm of thaig spiders</description>
+		<skillId>CONS_SWARM_BOTTLE</skillId>
+		<skinId>skBombSwarm</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	<!-- Temp. Sale Items-->
+	<entry>
+		<type>PERKITEM_XP_BONUS_GREATER_SALE</type>
+		<itemName>Longstaff's Ultimate Elixir</itemName>
+		<category>CONSUMABLE</category>
+		<tag>PERK</tag>
+		<description>Earn Quadruple XP for 72 hours</description>
+		<skinId>skPerkXPBonusGreater</skinId>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<Perk>
+			<ID>PERK_XP_BONUS</ID>
+			<Time>259200</Time>
+			<!-- 72 hrs, in seconds -->
+		</Perk>
+		<cost>
+			<gold>0</gold>
+			<coins>199</coins>
+		</cost>
+	</entry>
+	<entry>
+		<type>PERKITEM_CASTLE_PRODUCTIVITY_BONUS_SALE</type>
+		<itemName>Viscount's Visit</itemName>
+		<category>CONSUMABLE</category>
+		<tag>PERK</tag>
+		<description>+200% productivity for 24 hours</description>
+		<skinId>skPerkProductivityBonus</skinId>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<Perk>
+			<ID>PERK_CASTLE_PRODUCTIVITY_BONUS</ID>
+			<Time>86400</Time>
+			<!-- 24 hrs, in seconds -->
+		</Perk>
+		<cost>
+			<gold>0</gold>
+			<coins>49</coins>
+		</cost>
+	</entry>
+	<!-- Holiday Perks - disabled - to implement later -->
+	<!--	<entry>
+		<type>PERKITEM_FIREWORKS_BONUS</type>
+		<itemName>Fireworks</itemName>
+		<category>CONSUMABLE</category>
+		<tag>PERK</tag>
+		<description>+50% happiness, double gold and XP for 72 hours</description>
+		<skinId>skPerkProductivityBonus</skinId>
+		<iconGeneratorGroup>BASIC_HEXAGON</iconGeneratorGroup>
+		<Perk>
+			<ID>PERK_HOLIDAY_FIREWORKS</ID>
+			<Time>259200</Time>
+		</Perk>
+		<cost>
+			<gold>0</gold>
+			<coins>400</coins>
+		</cost>
+	</entry>	-->
+	<!--	<entry>
+		<type>BOMB_CONFUSION</type>
+		<itemName>Confusion Bomb</itemName>
+		<category>CONSUMABLE</category>
+		<tag>BOMB</tag>
+		<iconFrame>5</iconFrame>
+		<description>-{HEART,1}, Poison</description>
+		<skillId>CONS_BOMB_CONFUSION</skillId>
+		<skinId>skBombConfusion</skinId>
+		<iconGeneratorGroup>BASIC_CONSUMABLE</iconGeneratorGroup>
+	</entry>
+	-->
+</Root>

@@ -1,0 +1,17 @@
+<GameVariables>
+	<!-- Features -->
+	<EnergyCapEnabled>TRUE</EnergyCapEnabled>
+	<DisableQualityControlInTutorial>FALSE</DisableQualityControlInTutorial>
+	
+	<!-- Variables -->
+	<InvestmentCapStep1>5</InvestmentCapStep1>
+	<InvestmentCapStep2>10</InvestmentCapStep2>
+	<InvestmentCapStep3>15</InvestmentCapStep3>
+	<InvestmentCapUpgradeCost1>1</InvestmentCapUpgradeCost1>
+	<InvestmentCapUpgradeCost2>2</InvestmentCapUpgradeCost2>
+	
+	<GiftingEnabledLevel>15</GiftingEnabledLevel>
+	
+	<MinRaidSlots>2</MinRaidSlots>
+	<MaxRaidSlots>4</MaxRaidSlots>
+</GameVariables>

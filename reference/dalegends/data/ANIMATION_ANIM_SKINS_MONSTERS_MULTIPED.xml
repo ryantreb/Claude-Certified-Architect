@@ -1,0 +1,473 @@
+<!-- DAJFB Char Anim Skin Definitions
+	Created 7.29.2010
+-->
+<RigData>
+	<DefaultChunkName>
+		ANIM_SKINS_MONSTERS_MULTIPED
+	</DefaultChunkName>
+	
+	<!-- Mabari Warhounds -->
+	<Entry>
+		<ID>skMabariAArmor</ID>
+		<AssetPrefix>mhA</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skMabariBArmor</ID>
+		<AssetPrefix>mhB</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skMabariCArmor</ID>
+		<AssetPrefix>mhC</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skMabariDArmor</ID>
+		<AssetPrefix>mhD</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skMabariEArmor</ID>
+		<AssetPrefix>mhE</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skMabariFArmor</ID>
+		<AssetPrefix>mhF</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skMabariGArmor</ID>
+		<AssetPrefix>mhG</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skMabariHArmor</ID>
+		<AssetPrefix>mhH</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skMabariJArmor</ID>	<!-- THERE IS NO i ARMOR -->
+		<AssetPrefix>mhJ</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skMabariKArmor</ID>
+		<AssetPrefix>mhK</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skMabariLArmor</ID>
+		<AssetPrefix>mhL</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	
+	<!-- Genlocks DA2 -->
+	<Entry>
+		<ID>skGenlockRuntArmor</ID>
+		<AssetPrefix>genlockRunt</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plGenlock" />
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skGenlockArmor</ID>
+		<AssetPrefix>genlock</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plGenlock" />
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skGenlockAlphaArmor</ID>
+		<AssetPrefix>genlockAlpha</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plGenlock" />
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skGenlockOmegaArmor</ID>
+		<AssetPrefix>genlockAlpha</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plGenlock" />
+		</RigPieceSet>
+	</Entry>
+	
+	
+	<!-- Dragons -->
+<!--	<Entry>
+		<ID>skDragonArmor</ID>
+		<AssetPrefix>dragon</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plDragon" />
+		</RigPieceSet>
+		<IconPiece>head_1</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skDragonlingArmor</ID>
+		<AssetPrefix>dragonling</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plDragonling" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skDrakeArmor</ID>
+		<AssetPrefix>drake</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plDrake" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+-->	
+	<!-- Spiders -->
+	<Entry>
+		<ID>skGiantSpiderArmor</ID>
+		<AssetPrefix>Gspider</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plSpider" />
+		</RigPieceSet>
+		<IconPiece>thorax</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skCorruptedSpiderArmor</ID>
+		<AssetPrefix>Cspider</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plSpider" />
+		</RigPieceSet>
+		<IconPiece>thorax</IconPiece>
+	</Entry>
+<!--	
+	<Entry>
+		<ID>skDeepstalkerArmor</ID>
+		<AssetPrefix>werewolf</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plWerewolf" />
+		</RigPieceSet>
+	</Entry>
+-->	
+	<!-- desire in biped -->
+	
+	<!-- Shade Demons -->
+	<Entry>
+		<ID>skShadeDemonArmor</ID>
+		<AssetPrefix>shadeDemon</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plShadeDemon" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShadeDemonLesserArmor</ID>
+		<AssetPrefix>shadeDemonLesser</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plShadeDemon" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShadeDemonGreaterArmor</ID>
+		<AssetPrefix>shadeDemonGreater</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plShadeDemon" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<!-- Rage Demons -->
+	<Entry>
+		<ID>skRageDemonArmor</ID>
+		<AssetPrefix>rageDemon</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plRageDemon" />
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skRageDemonLesserArmor</ID>
+		<AssetPrefix>rageDemonLesser</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plRageDemon" />
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skRageDemonGreaterArmor</ID>
+		<AssetPrefix>rageDemonGreater</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plRageDemon" />
+		</RigPieceSet>
+	</Entry>
+	<!-- spirits to do -->
+	<Entry>
+		<ID>skSpiritSpiderArmor</ID>
+		<AssetPrefix>Sspider</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plSpider" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skSpiritWolfArmor</ID>
+		<AssetPrefix>Swolf</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skCorruptedWolfArmor</ID>
+		<AssetPrefix>Cwolf</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skSpiritHallaArmor</ID>
+		<AssetPrefix>Shalla</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHalla" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skCorruptedHallaArmor</ID>
+		<AssetPrefix>Challa</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHalla" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHathuluArmor</ID>
+		<AssetPrefix>hathulu</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHalla" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skSpiritBearArmor</ID>
+		<AssetPrefix>bear</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plBear" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skCorruptedBearArmor</ID>
+		<AssetPrefix>blackBear</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plBear" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+
+	<Entry>
+		<ID>skSpiritBrontoArmor</ID>
+		<AssetPrefix>bronto</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plBronto" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skCorruptedBrontoArmor</ID>
+		<AssetPrefix>brontoCorrupted</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plBronto" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	
+	<!-- BOAR -->
+	<Entry>
+		<ID>skBoarArmor</ID>
+		<AssetPrefix>boar</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plBronto" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+
+	<!-- non combative -->
+	<Entry>
+		<ID>skTrainingDummyArmor</ID>
+		<AssetPrefix>trainingDummy</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plTrainingDummy" />
+		</RigPieceSet>
+	</Entry>
+	
+
+	<!-- GOLEMS that use Genlock rig -->
+	<Entry>
+		<ID>skGolemGenlockRuntArmor</ID>
+		<AssetPrefix>golemThrasherRunt</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plGenlock" />
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skGolemGenlockArmor</ID>
+		<AssetPrefix>golemThrasher</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plGenlock" />
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skGolemGenlockAlphaArmor</ID>
+		<AssetPrefix>golemThrasherAlpha</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plGenlock" />
+		</RigPieceSet>
+	</Entry>
+	
+	<!-- GOLEMS that use Wolf rig -->
+	<Entry>
+		<ID>skGolemWolfRuntArmor</ID>
+		<AssetPrefix>golemWolfRunt</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skGolemWolfArmor</ID>
+		<AssetPrefix>golemWolf</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skGolemWolfAlphaArmor</ID>
+		<AssetPrefix>golemWolfAlpha</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+	</Entry>
+	
+</RigData>

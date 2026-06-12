@@ -1,0 +1,69 @@
+<StringData>
+	<!-- =================================================
+	   Hair Style Names
+	================================================== -->
+	<String key="CHAR_HAIR_TYPE_HUMAN_MALE_1">Parted</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_MALE_2">Tousled</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_MALE_3">Cropped</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_MALE_4">Mohawk</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_MALE_5">Bangs</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_MALE_6">Bearded</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_MALE_7">Long</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_MALE_8">Crewcut</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_MALE_9">Greasy</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_MALE_10">Bushy</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_MALE_11">Curly</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_MALE_12">Swooped</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_FEMALE_1">Short Bob</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_FEMALE_2">Pigtails</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_FEMALE_3">Cropped</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_FEMALE_4">Side Swept</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_FEMALE_5">Bun</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_FEMALE_6">Curly</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_FEMALE_7">Long Bob</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_FEMALE_8">Middle Part</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_FEMALE_9">Bangs</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_FEMALE_10">Loose Bun</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_FEMALE_11">Wavy</String>
+	<String key="CHAR_HAIR_TYPE_HUMAN_FEMALE_12">Spunky</String>
+	
+	<!-- =================================================
+	   Face Style Names
+	================================================== -->
+	<String key="CHAR_FACE_TYPE_HUMAN_MALE_1">Square</String>
+	<String key="CHAR_FACE_TYPE_HUMAN_MALE_2">Unshaven</String>
+	<String key="CHAR_FACE_TYPE_HUMAN_MALE_3">Scarred</String>
+	<String key="CHAR_FACE_TYPE_HUMAN_MALE_4">Burly</String>
+	<String key="CHAR_FACE_TYPE_HUMAN_MALE_5">Round</String>
+	<String key="CHAR_FACE_TYPE_HUMAN_MALE_6">Pinched</String>
+	<String key="CHAR_FACE_TYPE_HUMAN_FEMALE_1">Soft</String>
+	<String key="CHAR_FACE_TYPE_HUMAN_FEMALE_2">Heart</String>
+	<String key="CHAR_FACE_TYPE_HUMAN_FEMALE_3">Round</String>
+	<String key="CHAR_FACE_TYPE_HUMAN_FEMALE_4">Oval</String>
+	<String key="CHAR_FACE_TYPE_HUMAN_FEMALE_5">Cute</String>
+	<String key="CHAR_FACE_TYPE_HUMAN_FEMALE_6">Sharp</String>
+	
+	<!-- =================================================
+	   Hero creation strings
+	================================================== -->
+	<String key="HERO_CREATION_DEFAULT_CHARACTER_NAME">Name Your Hero</String>
+	<String key="HERO_CREATION_CHARACTER_NAME_TOOLTIP">Click to Enter Your Name Here</String>
+	<String key="HERO_CREATION_RANDOM_BUTTON_TOOLTIP">Randomize all characteristics</String>
+	<String key="HERO_CREATION_BEGIN_BUTTON_TOOLTIP">Begin Your Adventure</String>
+	<String key="HERO_CREATION_WARRIOR_DESCRIPTION">Durable and mighty, the warrior charges into the heat of battle to engage the enemy, while protecting allies from harm.</String>
+    <String key="HERO_CREATION_ROGUE_DESCRIPTION"> Stealthy and ruthless, the rogue uses stealth to assassinate foes or strikes with archery, while using deceit and dirty tricks. </String>
+    <String key="HERO_CREATION_MAGE_DESCRIPTION">Mystical and sagacious, the mage uses powerful spells to control the battlefield, aid allies, and even summon new ones.</String>
+	<String key="HERO_CREATION_BEGIN_BUTTON">Begin Your Adventure</String>
+	<String key="HERO_CREATION_RANDOM_BUTTON">Random Hero</String>
+	
+	<String key="HERO_CREATION_MAGE">Mage</String>
+	<String key="HERO_CREATION_ROGUE">Rogue</String>
+	<String key="HERO_CREATION_WARRIOR">Warrior</String>
+	<String key="HERO_CREATION_MALE">Male</String>
+	<String key="HERO_CREATION_FEMALE">Female</String>
+	<String key="HERO_CREATION_GENDER">Gender</String>
+	<String key="HERO_CREATION_APPEARANCE">Appearance</String>
+	<String key="HERO_CREATION_CHOOSE_CHARACTER">Choose your Hero</String>
+	<String key="HERO_CREATION_DEFAULT_NAME">Player</String>
+	
+</StringData>

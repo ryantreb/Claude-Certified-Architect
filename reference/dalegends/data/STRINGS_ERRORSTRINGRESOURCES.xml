@@ -1,0 +1,39 @@
+<StringData>
+	<String key="STRING_ERROR_GENERIC">Uh oh... looks like you're out of sync; attempting to re-sync. If this takes too long, refresh your browser...</String>
+    <String key="STRING_ERROR_FATAL_REFRESH">It looks like we've lost our connection to the server. Please refresh your browser.</String>
+    
+    
+    <!-- BUTTON STRINGS -->
+	<String key="STRING_NETWORK_REFRESH_BTN">Refresh</String>
+	<String key="STRING_ATTEMPT_TO_RESYNC_BTN">Continue</String>
+	
+	<!-- GLOBAL UI STRINGS -->	
+	<String key="STRING_NETWORK_ERROR_YOU_MUST_REFRESH">You must refresh your browser to continue playing.</String>
+	
+	<!-- SPECIFIC ERROR MESSAGE STRINGS -->
+	<String key="STRING_AUTH_ERROR_TITLE">Authentication Error</String>
+	<String key="STRING_AUTH_ERROR_DESC">There was an error authenticating your user.  You could be logged in on multiple machines.  Please refresh your browser.</String>
+	
+	<String key="STRING_GENERIC_NETWORK_ERROR_TITLE">Network Error</String>
+	<String key="STRING_GENERIC_NETWORK_ERROR_DESC">A de-sync has been detected.</String>
+				
+	<String key="STRING_NO_LONGER_CONNECTED_TITLE">No Longer Connected</String>
+	<String key="STRING_NO_LONGER_CONNECTED_DESC">Your machine is unable to contact EA servers.  Please make sure you are connected to the internet and you are not behind a firewall.</String>
+	
+	<String key="STRING_FORCIBLY_KICKED_TITLE">Forcibly Kicked</String>
+	<String key="STRING_FORCIBLY_KICKED_DESC">You have been forcibly kicked by EA servers.  Your profile is either logged into another computer or is undergoing maintenance.</String>
+	
+	<String key="STRING_WRONG_VERSION_TITLE">Outdated Client</String>
+	<String key="STRING_WRONG_VERSION_DESC">Your client is out of date, please refresh to get the latest client.</String>
+	
+	
+	<String key="STRING_CANNOT_FIND_INSTANCE_TITLE">Cannot Log In</String>	
+	<String key="STRING_CANNOT_FIND_INSTANCE_DESC">Unable to log into EA servers.  Please refresh to try again.</String>
+	
+	
+	
+	
+	
+			
+</StringData>
+

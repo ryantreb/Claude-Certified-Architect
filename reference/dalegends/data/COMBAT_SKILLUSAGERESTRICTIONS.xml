@@ -1,0 +1,39 @@
+<!-- Skill usage restrictions based on party IDs, etc -->
+<Data>
+	<DisableSkill>
+		<SkillID>TAUNT</SkillID>
+		<PartyID>BAD_GUYS</PartyID>
+	</DisableSkill>
+	<DisableSkill>
+		<SkillID>AMBUSH</SkillID>
+		<PartyID>BAD_GUYS</PartyID>
+	</DisableSkill>
+	<DisableSkill>
+		<SkillID>FEIGN_DEATH</SkillID>
+		<PartyID>BAD_GUYS</PartyID>
+	</DisableSkill>
+	<DisableSkill>
+		<SkillID>THROW_VOICE</SkillID>
+		<PartyID>BAD_GUYS</PartyID>
+	</DisableSkill>
+	<DisableSkill>
+		<SkillID>BRAVADO</SkillID>
+		<PartyID>BAD_GUYS</PartyID>
+	</DisableSkill>
+	<DisableSkill>
+		<SkillID>EARTHQUAKE</SkillID>
+		<PartyID>BAD_GUYS</PartyID>
+	</DisableSkill>
+	<DisableSkill>
+		<SkillID>WALKING_BOMB</SkillID>
+		<PartyID>BAD_GUYS</PartyID>
+	</DisableSkill>
+	<DisableSkill>
+		<SkillID>DISORIENT</SkillID>
+		<PartyID>BAD_GUYS</PartyID>
+	</DisableSkill>
+	<DisableSkill>
+		<SkillID>SUMMON_DRAKE</SkillID>
+		<PartyID>BAD_GUYS</PartyID>
+	</DisableSkill>
+</Data>

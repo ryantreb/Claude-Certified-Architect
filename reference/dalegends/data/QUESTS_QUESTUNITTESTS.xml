@@ -1,0 +1,649 @@
+<QuestData>
+	<!-- ====================================================================================
+
+  DO NOT MESS WITH THE UNIT TESTS OR THE half-OGRE and the Gnome riding on his helmet WILL SMASH YOU.
+
+
+                           __.==|~|==.__                             ,,;/;
+                         /~     | |    ;~\                         ,;;;/;;'
+                        /|      | |    ;~\\                     ,;;;;/;;;'
+                       |/|      |_|   ;;;|\                    ,;;;;/;;;;'
+                       |/ \          ;;;/  )                 ,;;;;/;;;;;'
+                   ___ | ______     ;_____ |___....__      ,;;;;/;;;;;'
+             ___.=~ \\(| \  \o\ \__/ /o/ /:|)~   ~   \   ,;;;;/;;;;;'
+         /~~~    ~\    |  ~=.     |   .=~: |//  _.=~~==,;;;;/;;;;;'
+        (.=~___     \.'|    | /=.__.=\|::::| //~     ,;;;;/;;;;;'
+        /      ~~==._ \|   /          `\:: |/      ,;;;;/;;;;;'
+     .=|             ~~|   |  /V""""V\ |:  |     ,;;;;/;;;;;' \
+    /                   \  |  ~`^~~^'~ |  /    ,;;;;/;;;;;'    ;
+   (        \             \|`\._____./'|/    ,;;;;/;;;;;'      '\
+  / \        \                             ,;;;;/;;;;;'     /    |
+ |            |                          ,;;;;/;;;;;'      |     |
+|`=._          |                       ,;;;;/;;;;;'              \
+|             /                      ,;;;;/;;;;;'  \ \__________
+(             )                 |  ,;;;;/;;;;;'      |        _.==~
+ \          \/ \              ,  ;;;;;/;;;;;'       /( .=~_..==~~~~~~~~~~
+ \__         '  `       ,     ,;;;;;/;;;;;'    .   /  \   / /~
+ /          \'  |`._______ ,;;;;;;/;;;;;;'    /   :    \/'/'       /|_/| ``|
+| _.=~~~~=._ |   \ __   .,;;;;;;/;;;;;;' ~~~~'   .'    | |       /~ (/\/  ||
+/~ _.=~~~=._\    /~/   ;;;;;;;/;;;;;;;'          |    | |       / ~/_='|= /|
+(/~         \| /' |   ;;;;;;/;;;;;;;;            ;   | |       (.=~;  /= / |
+|            /___ `=,;;;;;/;;;;;;;;'            |   | |      ,/)  /  /= /  |
+ \            \  `=.`===/;;;;;;;;;' |          _'   |T|    /'('  /  /|= _/ //
+   \           /~~/ `=. |;;;;;''    ______.==~~ ~\  |u|  ,~)')  /   | \~===//
+     \      /~(   `=\  `=.`=;   /|    ))   __=####\ |a|   (,   /|    |  \
+       \  /~.  `=.   `=.( `=.`~~ /##############'~~)| |   '   / |    | ~\
+        \(   \    `=._ /~)_/|  /############'       |X|      /  \     \_\ `\
+        ,~`\  `=._  / )#####|/############'   /     |i|  _==~ _/ | .=~~____=='
+       ,'\  `=._  ~)~~ `################'           |o| ((~>/~   \ (((' =_
+     ,'   `=.___)~~      `#############             |n|           ~=_ ~\_
+ _.,'        ,'           `###########              |g|            _=~=__ (
+|  `=.     ,'              `#########       \       | | ((.=~~~=~_==~
+`\    `=.;'                  `#####"                | |           " ((.=~~
+  `=._   )               \     |   |        .       |  \                 "
+      `~~  _/                  |    \               | `=====================
+        |/~                `.  |     \        .     |  O __.===============
+         |                   \ ;      \             |   _.=~
+         |                    |        |            |  /  |
+          |                   |         |           | /'  |
+
+
+          
+============================================================================ -->
+	<!-- ==============================================================
+	 This is a quest made for the unit tests, do not remove or edit
+	=============================================================== -->
+	<Quest>
+		<ID>UNIT_TEST_COMPLETE_QUEST</ID>
+		<Name>NOT_IMPLEMENTED</Name>
+		<StoredInPlayerState>FALSE</StoredInPlayerState>
+		<SideQuest>FALSE</SideQuest>
+		<StartingEventID>INIT</StartingEventID>
+		<ShowInQuestLog>TRUE</ShowInQuestLog>
+		<VisualSymbol>QuestIcon_Generic_MC</VisualSymbol>
+		<QuestReward>
+			<GoldReward>50</GoldReward>
+			<XPReward>50</XPReward>
+			<ItemReward>
+				<Type>TEST_AMULET</Type>
+				<Count>2</Count>
+			</ItemReward>
+		</QuestReward>
+		<Event>
+			<ID>INIT</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+			<Branch>
+				<ID>Q_1_E_1_B_1</ID>
+				<Action>
+					<Type>COMPLETE_QUEST</Type>
+				</Action>
+			</Branch>
+		</Event>
+	</Quest>
+	<!-- ==============================================================
+		This is a quest made for the unit tests, do not remove or edit
+	=============================================================== -->
+	<Quest>
+		<ID>UNIT_TEST_GO_TO_EVENT</ID>
+		<Name>NOT_IMPLEMENTED</Name>
+		<StoredInPlayerState>FALSE</StoredInPlayerState>
+		<SideQuest>FALSE</SideQuest>
+		<StartingEventID>INIT</StartingEventID>
+		<ShowInQuestLog>TRUE</ShowInQuestLog>
+		<VisualSymbol>QuestIcon_Generic_MC</VisualSymbol>
+		<QuestReward>
+			<GoldReward>50</GoldReward>
+			<XPReward>50</XPReward>
+			<ItemReward>
+				<Type>TEST_AMULET</Type>
+				<Count>2</Count>
+			</ItemReward>
+		</QuestReward>
+		<Event>
+			<ID>INIT</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+			<Branch>
+				<ID>Q_1_E_1_B_1</ID>
+				<Action>
+					<Type>GO_TO_EVENT</Type>
+					<Event>EVENT_TWO</Event>
+				</Action>
+			</Branch>
+		</Event>
+		<Event>
+			<ID>EVENT_TWO</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+		</Event>
+	</Quest>
+	<!-- ==============================================================
+		This is a quest made for the unit tests, do not remove or edit
+	=============================================================== -->
+	<Quest>
+		<ID>UNIT_TEST_REVEAL_REGION</ID>
+		<Name>NOT_IMPLEMENTED</Name>
+		<StoredInPlayerState>FALSE</StoredInPlayerState>
+		<SideQuest>FALSE</SideQuest>
+		<StartingEventID>INIT</StartingEventID>
+		<ShowInQuestLog>TRUE</ShowInQuestLog>
+		<VisualSymbol>QuestIcon_Generic_MC</VisualSymbol>
+		<QuestReward>
+			<GoldReward>50</GoldReward>
+			<XPReward>50</XPReward>
+			<ItemReward>
+				<Type>TEST_AMULET</Type>
+				<Count>2</Count>
+			</ItemReward>
+		</QuestReward>
+		<Event>
+			<ID>INIT</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+			<Branch>
+				<ID>Q_1_E_1_B_1</ID>
+				<Action>
+					<Type>REVEAL_REGION</Type>
+					<Region>R_PP</Region>
+				</Action>
+			</Branch>
+		</Event>
+	</Quest>
+	<!-- ==============================================================
+		This is a quest made for the unit tests, do not remove or edit
+	=============================================================== -->
+	<Quest>
+		<ID>UNIT_TEST_SHOW_COMPLETE_QUEST_DIALOGUE</ID>
+		<Name>NOT_IMPLEMENTED</Name>
+		<StoredInPlayerState>FALSE</StoredInPlayerState>
+		<SideQuest>FALSE</SideQuest>
+		<StartingEventID>INIT</StartingEventID>
+		<ShowInQuestLog>TRUE</ShowInQuestLog>
+		<VisualSymbol>QuestIcon_Generic_MC</VisualSymbol>
+		<QuestReward>
+			<GoldReward>50</GoldReward>
+			<XPReward>50</XPReward>
+			<ItemReward>
+				<Type>TEST_AMULET</Type>
+				<Count>2</Count>
+			</ItemReward>
+		</QuestReward>
+		<Event>
+			<ID>INIT</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+			<Branch>
+				<ID>Q_1_E_1_B_1</ID>
+				<Action>
+					<Type>SHOW_QUEST_COMPLETE_DIALOGUE</Type>
+					<QuestGiverType>NPC</QuestGiverType>
+					<QuestGiverID>KAITEN_VISCOUNT</QuestGiverID>
+					<QuestGiverText>COUNT_RAVI_NAME</QuestGiverText>
+					<TitleReference>SAMPLE_QUEST_FINISH_TITLE_TEXT</TitleReference>
+					<TextReference>SAMPLE_QUEST_FINISH_TEXT</TextReference>
+					<DescReference>SAMPLE_QUEST_FINISH_DESC</DescReference>
+					<QuestReward>
+						<GoldReward>50</GoldReward>
+						<XPReward>50</XPReward>
+						<ItemReward>
+							<Type>TEST_AMULET</Type>
+							<Count>2</Count>
+						</ItemReward>
+					</QuestReward>
+				</Action>
+				<Action>
+					<Type>GO_TO_EVENT</Type>
+					<Event>SAMPLE_SECOND_EVENT</Event>
+				</Action>
+			</Branch>
+		</Event>
+		<Event>
+			<ID>SAMPLE_SECOND_EVENT</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+		</Event>
+	</Quest>
+	<!-- ==============================================================
+		This is a quest made for the unit tests, do not remove or edit
+	=============================================================== -->
+	<Quest>
+		<ID>UNIT_TEST_SHOW_COMPLETE_START_DIALOGUE</ID>
+		<Name>NOT_IMPLEMENTED</Name>
+		<StoredInPlayerState>FALSE</StoredInPlayerState>
+		<SideQuest>FALSE</SideQuest>
+		<StartingEventID>INIT</StartingEventID>
+		<ShowInQuestLog>TRUE</ShowInQuestLog>
+		<VisualSymbol>QuestIcon_Generic_MC</VisualSymbol>
+		<QuestReward>
+			<GoldReward>50</GoldReward>
+			<XPReward>50</XPReward>
+			<ItemReward>
+				<Type>TEST_AMULET</Type>
+				<Count>2</Count>
+			</ItemReward>
+		</QuestReward>
+		<Event>
+			<ID>INIT</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+			<Branch>
+				<ID>Q_1_E_1_B_1</ID>
+				<Action>
+					<Type>SHOW_QUEST_START_DIALOGUE</Type>
+					<QuestGiverType>NPC</QuestGiverType>
+					<QuestGiverID>KAITEN_VISCOUNT</QuestGiverID>
+					<QuestGiverText>COUNT_RAVI_NAME</QuestGiverText>
+					<TitleReference>SAMPLE_QUEST_START_TITLE_TEXT</TitleReference>
+					<TextReference>SAMPLE_QUEST_START_TEXT</TextReference>
+					<DescReference>SAMPLE_QUEST_START_DESC</DescReference>
+					<QuestReward>
+						<GoldReward>50</GoldReward>
+						<XPReward>50</XPReward>
+						<ItemReward>
+							<Type>TEST_AMULET</Type>
+							<Count>2</Count>
+						</ItemReward>
+					</QuestReward>
+				</Action>
+				<Action>
+					<Type>GO_TO_EVENT</Type>
+					<Event>PHASE_TWO</Event>
+				</Action>
+			</Branch>
+		</Event>
+	</Quest>
+	<!-- ==============================================================
+		This is a quest made for the unit tests, do not remove or edit
+	=============================================================== -->
+	<Quest>
+		<ID>UNIT_TEST_PLAYER_DEFEATED</ID>
+		<Name>NOT_IMPLEMENTED</Name>
+		<StoredInPlayerState>FALSE</StoredInPlayerState>
+		<SideQuest>FALSE</SideQuest>
+		<StartingEventID>INIT</StartingEventID>
+		<ShowInQuestLog>TRUE</ShowInQuestLog>
+		<VisualSymbol>QuestIcon_Generic_MC</VisualSymbol>
+		<QuestReward>
+			<GoldReward>50</GoldReward>
+			<XPReward>50</XPReward>
+			<ItemReward>
+				<Type>TEST_AMULET</Type>
+				<Count>2</Count>
+			</ItemReward>
+		</QuestReward>
+		<Event>
+			<ID>INIT</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+			<Branch>
+				<ID>Q_1_E_1_B_1</ID>
+				<Condition>
+					<Type>PLAYER_DEFEATED</Type>
+					<Encounter>N_T_1</Encounter>
+				</Condition>
+			</Branch>
+		</Event>
+	</Quest>
+	<!-- ==============================================================
+		This is a quest made for the unit tests, do not remove or edit
+	=============================================================== -->
+	<Quest>
+		<ID>UNIT_TEST_COMPLETED_ENCOUNTER</ID>
+		<Name>NOT_IMPLEMENTED</Name>
+		<StoredInPlayerState>FALSE</StoredInPlayerState>
+		<SideQuest>FALSE</SideQuest>
+		<StartingEventID>INIT</StartingEventID>
+		<ShowInQuestLog>TRUE</ShowInQuestLog>
+		<VisualSymbol>QuestIcon_Generic_MC</VisualSymbol>
+		<QuestReward>
+			<GoldReward>50</GoldReward>
+			<XPReward>50</XPReward>
+			<ItemReward>
+				<Type>TEST_AMULET</Type>
+				<Count>2</Count>
+			</ItemReward>
+		</QuestReward>
+		<Event>
+			<ID>INIT</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+			<Branch>
+				<ID>Q_1_E_1_B_1</ID>
+				<Condition>
+					<Type>PLAYER_HAS_COMPLETED_ENCOUNTER</Type>
+					<Encounter>N_T_1</Encounter>
+				</Condition>
+			</Branch>
+		</Event>
+	</Quest>
+	<!-- ==============================================================
+		This is a quest made for the unit tests, do not remove or edit
+	=============================================================== -->
+	<Quest>
+		<ID>UNIT_TEST_PLAYER_HAS_GOLD</ID>
+		<Name>NOT_IMPLEMENTED</Name>
+		<StoredInPlayerState>FALSE</StoredInPlayerState>
+		<SideQuest>FALSE</SideQuest>
+		<StartingEventID>INIT</StartingEventID>
+		<ShowInQuestLog>TRUE</ShowInQuestLog>
+		<VisualSymbol>QuestIcon_Generic_MC</VisualSymbol>
+		<QuestReward>
+			<GoldReward>50</GoldReward>
+			<XPReward>50</XPReward>
+			<ItemReward>
+				<Type>TEST_AMULET</Type>
+				<Count>2</Count>
+			</ItemReward>
+		</QuestReward>
+		<Event>
+			<ID>INIT</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+			<Branch>
+				<ID>Q_1_E_1_B_1</ID>
+				<Condition>
+					<Type>PLAYER_HAS_GOLD</Type>
+					<Amount>20</Amount>
+				</Condition>
+			</Branch>
+		</Event>
+	</Quest>
+	<!-- ==============================================================
+		This is a quest made for the unit tests, do not remove or edit
+	=============================================================== -->
+	<Quest>
+		<ID>UNIT_TEST_PLAYER_HAS_ITEM</ID>
+		<Name>NOT_IMPLEMENTED</Name>
+		<StoredInPlayerState>FALSE</StoredInPlayerState>
+		<SideQuest>FALSE</SideQuest>
+		<StartingEventID>INIT</StartingEventID>
+		<ShowInQuestLog>TRUE</ShowInQuestLog>
+		<VisualSymbol>QuestIcon_Generic_MC</VisualSymbol>
+		<QuestReward>
+			<GoldReward>50</GoldReward>
+			<XPReward>50</XPReward>
+			<ItemReward>
+				<Type>TEST_AMULET</Type>
+				<Count>2</Count>
+			</ItemReward>
+		</QuestReward>
+		<Event>
+			<ID>INIT</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+			<Branch>
+				<ID>Q_1_E_1_B_1</ID>
+				<Condition>
+					<Type>PLAYER_HAS_ITEM</Type>
+					<ID>TEST_AMULET</ID>
+				</Condition>
+			</Branch>
+		</Event>
+	</Quest>
+	<!-- ==============================================================
+		This is a quest made for the unit tests, do not remove or edit
+	=============================================================== -->
+	<Quest>
+		<ID>UNIT_TEST_PLAYERS_LEVEL_GREATER_THAN</ID>
+		<Name>NOT_IMPLEMENTED</Name>
+		<StoredInPlayerState>FALSE</StoredInPlayerState>
+		<SideQuest>FALSE</SideQuest>
+		<StartingEventID>INIT</StartingEventID>
+		<ShowInQuestLog>TRUE</ShowInQuestLog>
+		<VisualSymbol>QuestIcon_Generic_MC</VisualSymbol>
+		<QuestReward>
+			<GoldReward>50</GoldReward>
+			<XPReward>50</XPReward>
+			<ItemReward>
+				<Type>TEST_AMULET</Type>
+				<Count>2</Count>
+			</ItemReward>
+		</QuestReward>
+		<Event>
+			<ID>INIT</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+			<Branch>
+				<ID>Q_1_E_1_B_1</ID>
+				<Condition>
+					<Type>PLAYERS_LEVEL_GREATER_THAN</Type>
+					<HeroLevel>5</HeroLevel>
+				</Condition>
+			</Branch>
+		</Event>
+	</Quest>
+	<!-- ==============================================================
+		This is a quest made for the unit tests, do not remove or edit
+	=============================================================== -->
+	<Quest>
+		<ID>UNIT_TEST_PLAYERS_LEVEL_LESS_THAN</ID>
+		<Name>NOT_IMPLEMENTED</Name>
+		<StoredInPlayerState>FALSE</StoredInPlayerState>
+		<SideQuest>FALSE</SideQuest>
+		<StartingEventID>INIT</StartingEventID>
+		<ShowInQuestLog>TRUE</ShowInQuestLog>
+		<VisualSymbol>QuestIcon_Generic_MC</VisualSymbol>
+		<QuestReward>
+			<GoldReward>50</GoldReward>
+			<XPReward>50</XPReward>
+			<ItemReward>
+				<Type>TEST_AMULET</Type>
+				<Count>2</Count>
+			</ItemReward>
+		</QuestReward>
+		<Event>
+			<ID>INIT</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+			<Branch>
+				<ID>Q_1_E_1_B_1</ID>
+				<Condition>
+					<Type>PLAYERS_LEVEL_LESS_THAN</Type>
+					<HeroLevel>4</HeroLevel>
+				</Condition>
+			</Branch>
+		</Event>
+	</Quest>
+	<!-- ==============================================================
+		This is a quest made for the unit tests, do not remove or edit
+	=============================================================== -->
+	<Quest>
+		<ID>UNIT_TEST_TIMEOUT</ID>
+		<Name>NOT_IMPLEMENTED</Name>
+		<StoredInPlayerState>FALSE</StoredInPlayerState>
+		<SideQuest>FALSE</SideQuest>
+		<StartingEventID>INIT</StartingEventID>
+		<ShowInQuestLog>TRUE</ShowInQuestLog>
+		<VisualSymbol>QuestIcon_Generic_MC</VisualSymbol>
+		<QuestReward>
+			<GoldReward>50</GoldReward>
+			<XPReward>50</XPReward>
+			<ItemReward>
+				<Type>TEST_AMULET</Type>
+				<Count>2</Count>
+			</ItemReward>
+		</QuestReward>
+		<Event>
+			<ID>INIT</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+			<Branch>
+				<ID>Q_1_E_1_B_1</ID>
+				<Condition>
+					<Type>TIMEOUT</Type>
+					<Time>3600</Time>
+				</Condition>
+			</Branch>
+		</Event>
+	</Quest>
+	<!-- ==============================================================
+		This is a quest made for the unit tests, do not remove or edit
+	=============================================================== -->
+	<Quest>
+		<ID>UNIT_TEST_SHOW_QUEST_PROGESS</ID>
+		<Name>NOT_IMPLEMENTED</Name>
+		<StoredInPlayerState>FALSE</StoredInPlayerState>
+		<SideQuest>FALSE</SideQuest>
+		<StartingEventID>INIT</StartingEventID>
+		<ShowInQuestLog>TRUE</ShowInQuestLog>
+		<VisualSymbol>QuestIcon_Generic_MC</VisualSymbol>
+		<QuestReward>
+			<GoldReward>50</GoldReward>
+			<XPReward>50</XPReward>
+			<ItemReward>
+				<Type>TEST_AMULET</Type>
+				<Count>2</Count>
+			</ItemReward>
+		</QuestReward>
+		<Event>
+			<ID>INIT</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+			<Branch>
+				<ID>Q_1_E_1_B_1</ID>
+				<Action>
+					<Type>SHOW_QUEST_PROGRESS</Type>
+					<QuestGiverType>NPC</QuestGiverType>
+					<QuestGiverID>KAITEN_VISCOUNT</QuestGiverID>
+					<QuestGiverText>COUNT_RAVI_NAME</QuestGiverText>
+					<TitleReference>SAMPLE_QUEST_PROGRESS_TITLE_TEXT</TitleReference>
+					<TextReference>SAMPLE_QUEST_PROGRESS_TEXT</TextReference>
+					<DescReference>SAMPLE_QUEST_PROGRESS_DESC</DescReference>
+				</Action>
+				<Action>
+					<Type>GO_TO_EVENT</Type>
+					<Event>SAMPLE_EVENT_TWO</Event>
+				</Action>
+			</Branch>
+		</Event>
+		<!-- Shows the sample event -->
+		<Event>
+			<ID>SAMPLE_EVENT_TWO</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+		</Event>
+	</Quest>
+	<!-- ==============================================================
+		This is a quest made for the unit tests, do not remove or edit
+	=============================================================== -->
+	<Quest>
+		<ID>UNIT_TEST_START_NEW_QUEST</ID>
+		<Name>NOT_IMPLEMENTED</Name>
+		<StoredInPlayerState>FALSE</StoredInPlayerState>
+		<SideQuest>FALSE</SideQuest>
+		<StartingEventID>INIT</StartingEventID>
+		<ShowInQuestLog>TRUE</ShowInQuestLog>
+		<VisualSymbol>QuestIcon_Generic_MC</VisualSymbol>
+		<QuestReward>
+			<GoldReward>50</GoldReward>
+			<XPReward>50</XPReward>
+			<ItemReward>
+				<Type>TEST_AMULET</Type>
+				<Count>2</Count>
+			</ItemReward>
+		</QuestReward>
+		<Event>
+			<ID>INIT</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+			<Branch>
+				<ID>Q_1_E_1_B_1</ID>
+				<Action>
+					<Type>START_NEW_QUEST</Type>
+					<QuestID>UNIT_TEST_START_NEW_QUEST</QuestID>
+				</Action>
+			</Branch>
+		</Event>
+	</Quest>
+	<!-- ==============================================================
+		This is a quest made for the unit tests, do not remove or edit
+	=============================================================== -->
+	<Quest>
+		<ID>UNIT_TEST_EXECUTE_BRANCHES</ID>
+		<Name>NOT_IMPLEMENTED</Name>
+		<StoredInPlayerState>FALSE</StoredInPlayerState>
+		<SideQuest>FALSE</SideQuest>
+		<StartingEventID>INIT</StartingEventID>
+		<ShowInQuestLog>TRUE</ShowInQuestLog>
+		<VisualSymbol>QuestIcon_Generic_MC</VisualSymbol>
+		<QuestReward>
+			<GoldReward>50</GoldReward>
+			<XPReward>50</XPReward>
+			<ItemReward>
+				<Type>TEST_AMULET</Type>
+				<Count>2</Count>
+			</ItemReward>
+		</QuestReward>
+		<Event>
+			<ID>INIT</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+			<Branch>
+				<ID>Q_1_E_1_B_1</ID>
+				<Action>
+					<Type>SHOW_QUEST_PROGRESS</Type>
+					<QuestGiverType>NPC</QuestGiverType>
+					<QuestGiverID>KAITEN_VISCOUNT</QuestGiverID>
+					<QuestGiverText>COUNT_RAVI_NAME</QuestGiverText>
+					<TitleReference>SAMPLE_QUEST_PROGRESS_TITLE_TEXT</TitleReference>
+					<TextReference>SAMPLE_QUEST_PROGRESS_TEXT</TextReference>
+					<DescReference>SAMPLE_QUEST_PROGRESS_DESC</DescReference>
+				</Action>
+			</Branch>
+			<Branch>
+				<ID>Q_1_E_1_B_2</ID>
+				<Action>
+					<Type>SHOW_QUEST_PROGRESS</Type>
+					<QuestGiverType>NPC</QuestGiverType>
+					<QuestGiverID>KAITEN_VISCOUNT</QuestGiverID>
+					<QuestGiverText>COUNT_RAVI_NAME</QuestGiverText>
+					<TitleReference>SAMPLE_QUEST_PROGRESS_TITLE_TEXT</TitleReference>
+					<TextReference>SAMPLE_QUEST_PROGRESS_TEXT</TextReference>
+					<DescReference>SAMPLE_QUEST_PROGRESS_DESC</DescReference>
+				</Action>
+			</Branch>
+			<Branch>
+				<ID>Q_1_E_1_B_3</ID>
+				<Action>
+					<Type>SHOW_QUEST_PROGRESS</Type>
+					<QuestGiverType>NPC</QuestGiverType>
+					<QuestGiverID>KAITEN_VISCOUNT</QuestGiverID>
+					<QuestGiverText>COUNT_RAVI_NAME</QuestGiverText>
+					<TitleReference>SAMPLE_QUEST_PROGRESS_TITLE_TEXT</TitleReference>
+					<TextReference>SAMPLE_QUEST_PROGRESS_TEXT</TextReference>
+					<DescReference>SAMPLE_QUEST_PROGRESS_DESC</DescReference>
+				</Action>
+			</Branch>
+		</Event>
+	</Quest>
+	<!-- ==============================================================
+		This is a quest made for the unit tests, do not remove or edit
+	=============================================================== -->
+	<Quest>
+		<ID>UNIT_TEST_GO_TO_EVENT</ID>
+		<Name>NOT_IMPLEMENTED</Name>
+		<StoredInPlayerState>FALSE</StoredInPlayerState>
+		<SideQuest>FALSE</SideQuest>
+		<StartingEventID>INIT</StartingEventID>
+		<ShowInQuestLog>TRUE</ShowInQuestLog>
+		<VisualSymbol>QuestIcon_Generic_MC</VisualSymbol>
+		<QuestReward>
+			<GoldReward>50</GoldReward>
+			<XPReward>50</XPReward>
+			<ItemReward>
+				<Type>TEST_AMULET</Type>
+				<Count>2</Count>
+			</ItemReward>
+		</QuestReward>
+		<Event>
+			<ID>INIT</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+			<Branch>
+				<ID>Q_1_E_1_B_1</ID>
+				<Action>
+					<Type>GO_TO_EVENT</Type>
+					<Event>EVENT_2</Event>
+				</Action>
+			</Branch>
+		</Event>
+		<Event>
+			<ID>EVENT_2</ID>
+			<Description>NOT_IMPLEMENTED</Description>
+			<Branch>
+				<ID>Q_1_E_1_B_1</ID>
+				<Action>
+					<Type>SHOW_QUEST_PROGRESS</Type>
+					<QuestGiverType>NPC</QuestGiverType>
+					<QuestGiverID>KAITEN_VISCOUNT</QuestGiverID>
+					<QuestGiverText>COUNT_RAVI_NAME</QuestGiverText>
+					<TitleReference>SAMPLE_QUEST_PROGRESS_TITLE_TEXT</TitleReference>
+					<TextReference>SAMPLE_QUEST_PROGRESS_TEXT</TextReference>
+					<DescReference>SAMPLE_QUEST_PROGRESS_DESC</DescReference>
+				</Action>
+			</Branch>
+		</Event>
+	</Quest>
+</QuestData>

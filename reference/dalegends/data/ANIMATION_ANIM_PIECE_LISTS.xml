@@ -1,0 +1,980 @@
+<!-- DAJFB Char Anim Skin Piece Lists
+	Used to cut down size of skin piece lists and allow reuse across skins
+	Created 8.3.2010
+-->
+<SkinPieceData>
+
+	<Entry>
+		<ID>plIconOnly</ID>
+		<Piece DestSegment="icon" />
+	</Entry>
+
+	<Entry>
+		<ID>plHumanoidBodyStandard</ID>
+		<Piece DestSegment="waist" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="tassetBack" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="hips" />
+		<!--<Piece DestSegment="cape" />-->
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armForeL" />
+		
+	</Entry>
+	<Entry>
+		<ID>plClothBodyStandard</ID>
+		<Piece DestSegment="waist" />
+		<Piece DestSegment="hips" />
+		<!--<Piece DestSegment="cape" />-->
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="tassetBack" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="skirtGradient" GenderNeutral="TRUE" />
+		<Piece DestSegment="skirt" GenderNeutral="TRUE">
+			<!--<AnimSpecificClip>IDLE</AnimSpecificClip>-->
+			<AnimSpecificClip>WALK</AnimSpecificClip>
+			<!--<AnimSpecificClip>SPELL</AnimSpecificClip>
+			<AnimSpecificClip>ATTACK</AnimSpecificClip>
+			<AnimSpecificClip>ATTACK2</AnimSpecificClip>
+			<AnimSpecificClip>SPECIAL1</AnimSpecificClip>
+			<AnimSpecificClip>SPECIAL2</AnimSpecificClip>
+			<AnimSpecificClip>SPECIAL3</AnimSpecificClip>
+			<AnimSpecificClip>SPECIAL4</AnimSpecificClip>
+			<AnimSpecificClip>SPECIAL5</AnimSpecificClip>
+			<AnimSpecificClip>SPECIAL6</AnimSpecificClip>
+			<AnimSpecificClip>INJURY</AnimSpecificClip>-->
+			<AnimSpecificClip>DEATH</AnimSpecificClip>
+		</Piece>
+	</Entry>
+	<Entry>
+		<ID>plHumanoidHelmetStandard</ID>
+		<Piece DestSegment="helmet" />
+	</Entry>
+	<Entry>
+		<ID>plHumanoidHelmetBackStandard</ID>
+		<Piece DestSegment="helmet" />
+		<Piece DestSegment="helmetBack" />
+	</Entry>
+	<Entry>
+		<ID>plHumanoidShieldStandard</ID>
+		<Piece DestSegment="shield" />	<!--added for shield-->
+		<Piece DestSegment="shieldFront" />	<!--added for shield-->
+		<!-- shield available on 1H, 2H and dual wield ART, not sure on design -->
+	</Entry>
+	<Entry>	<!-- capes! they're cool! -->
+		<ID>plHumanoidCapeStandard</ID>
+		<Piece DestSegment="cape" />
+	</Entry>
+	<Entry>
+		<ID>plCrossBow</ID>
+		<Piece DestSegment="weapon" />
+		<Piece DestSegment="weaponShot" />
+	</Entry>
+	
+	<Entry>
+		<ID>plClothMobBodyStandard</ID>
+		<Piece DestSegment="waist" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="skirtGradient" GenderNeutral="TRUE" />
+		<Piece DestSegment="skirt" GenderNeutral="TRUE">
+			<AnimSpecificClip>WALK</AnimSpecificClip>
+			<AnimSpecificClip>DEATH</AnimSpecificClip>
+		</Piece>
+	</Entry>
+	
+
+	<Entry>
+		<ID>plGolem</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="neckRing" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="shoulderL" />
+		<Piece DestSegment="shoulderR" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+	</Entry>
+	
+	<Entry>
+		<ID>plGolemShale</ID>
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="collar" />
+		<Piece DestSegment="collarFront" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="shoulderL" />
+		<Piece DestSegment="shoulderR" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+	</Entry>
+	
+	<Entry>
+		<ID>plMabari</ID>
+		<Piece DestSegment="backFootFar" />
+		<Piece DestSegment="backFootNear" />
+		<Piece DestSegment="backShinFar" />
+		<Piece DestSegment="backShinNear" />
+		<Piece DestSegment="backThighFar" />
+		<Piece DestSegment="backThighNear" />
+		<Piece DestSegment="backToesFar" />
+		<Piece DestSegment="backToesNear" />
+		<Piece DestSegment="body" />
+		<Piece DestSegment="foreArmFar" />
+		<Piece DestSegment="foreArmNear" />
+		<Piece DestSegment="forePawFar" />
+		<Piece DestSegment="forePawNear" />
+		<Piece DestSegment="foreShoulderFar" />
+		<Piece DestSegment="foreShoulderNear" />
+		<Piece DestSegment="hackles" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="head2" />
+		<Piece DestSegment="head3" />
+		<Piece DestSegment="head4" />
+		<Piece DestSegment="neck" />
+	</Entry>
+
+	<!-- DA2 hurlocks -->
+	<Entry>
+		<ID>plHurlock</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="shoulderL" />
+		<Piece DestSegment="shoulderR" />
+		<Piece DestSegment="tassetBack" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="waist" />
+		<Piece DestSegment="weapon" />
+		<Piece DestSegment="weaponR" />
+	</Entry>
+	<Entry>
+		<ID>plHurlockBolter</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="crossBow" />
+		<Piece DestSegment="crossBowShot" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="shoulderL" />
+		<Piece DestSegment="shoulderR" />
+		<Piece DestSegment="tassetBack" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="waist" />
+	</Entry>
+	<Entry>
+		<ID>plHurlockAlphaOrz</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="shoulderL" />
+		<Piece DestSegment="shoulderR" />
+		<Piece DestSegment="tassetBack" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="waist" />
+		<Piece DestSegment="weapon" />
+	</Entry>
+	<Entry>
+		<ID>plHurlockEmissary</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="waist" />
+		<Piece DestSegment="weapon" />
+		<Piece DestSegment="skirtAir" />
+<!--		<Piece DestSegment="skirt1" />
+		<Piece DestSegment="skirt2" />
+		<Piece DestSegment="skirt3" />
+		<Piece DestSegment="skirt" GenderNeutral="TRUE">
+			<AnimSpecificClip>DEATH</AnimSpecificClip>
+			<AnimSpecificClip>INJURY</AnimSpecificClip>
+			<AnimSpecificClip>WALK</AnimSpecificClip>
+			<AnimSpecificClip>IDLE</AnimSpecificClip>-->
+			<!--<AnimSpecificClip>STRIKE1</AnimSpecificClip>
+			<AnimSpecificClip>STRIKE2</AnimSpecificClip>
+			<AnimSpecificClip>STRIKE3</AnimSpecificClip>-->
+		<!--</Piece>-->
+	</Entry>
+	<Entry>
+		<ID>plHurlockBodyStandard</ID>
+		<Piece DestSegment="waist" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="tassetBack" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armForeL" />
+	</Entry>
+	<Entry>
+		<ID>plHurlockBodyBolter</ID>
+		<Piece DestSegment="waist" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="weapon" />
+		<Piece DestSegment="weaponShot" />
+		<Piece DestSegment="tassetBack" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armForeL" />
+	</Entry>
+	<Entry>
+		<ID>plHurlockEmissOrz</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="blueFire" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="cloak" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="shoulderL" />
+		<Piece DestSegment="shoulderR" />
+		<Piece DestSegment="tassetBack" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="waist" />
+	</Entry>
+	<Entry>
+		<ID>plHurlockEmissBlueOrz</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="shoulderL" />
+		<Piece DestSegment="shoulderR" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="weapon" />
+		<Piece DestSegment="cloak" GenderNeutral="TRUE">
+			<AnimSpecificClip>DEATH</AnimSpecificClip>
+			<AnimSpecificClip>INJURY</AnimSpecificClip>
+			<AnimSpecificClip>WALK</AnimSpecificClip>
+			<AnimSpecificClip>IDLE</AnimSpecificClip>
+			<AnimSpecificClip>STRIKE1</AnimSpecificClip>
+			<AnimSpecificClip>STRIKE2</AnimSpecificClip>
+			<AnimSpecificClip>STRIKE3</AnimSpecificClip>
+		</Piece>
+	<!--	<Piece DestSegment="painFlame" GenderNeutral="TRUE">
+			<AnimSpecificClip>STRIKE3</AnimSpecificClip>
+		</Piece>	-->
+	</Entry>
+	<Entry>
+		<ID>plGenlock</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="fingersL" />
+		<Piece DestSegment="fingersR" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="lowerbody" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="neck" />
+		<Piece DestSegment="torso" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+	</Entry>
+	
+
+	<Entry>
+		<ID>plCultist</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="shoulderL" />
+		<Piece DestSegment="shoulderR" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="waist" />
+		<Piece DestSegment="weapon" />
+		<Piece DestSegment="skirtGradient" GenderNeutral="TRUE" />
+		<Piece DestSegment="skirt" GenderNeutral="TRUE">
+			<AnimSpecificClip>DEATH</AnimSpecificClip>
+			<AnimSpecificClip>INJURY</AnimSpecificClip>
+			<AnimSpecificClip>WALK</AnimSpecificClip>
+			<AnimSpecificClip>IDLE</AnimSpecificClip>
+			<AnimSpecificClip>STRIKE1</AnimSpecificClip>
+			<AnimSpecificClip>STRIKE2</AnimSpecificClip>
+			<AnimSpecificClip>STRIKE3</AnimSpecificClip>
+			<AnimSpecificClip>STRIKE4</AnimSpecificClip>
+		</Piece>
+<!--		<Piece DestSegment="cape" GenderNeutral="TRUE">
+			<AnimSpecificClip>DEATH</AnimSpecificClip>
+			<AnimSpecificClip>INJURY</AnimSpecificClip>
+			<AnimSpecificClip>WALK</AnimSpecificClip>
+			<AnimSpecificClip>IDLE</AnimSpecificClip>
+			<AnimSpecificClip>STRIKE1</AnimSpecificClip>
+			<AnimSpecificClip>STRIKE2</AnimSpecificClip>
+			<AnimSpecificClip>STRIKE3</AnimSpecificClip>
+			<AnimSpecificClip>STRIKE4</AnimSpecificClip>
+		</Piece>-->
+		<Piece DestSegment="deathStare" GenderNeutral="TRUE">
+			<AnimSpecificClip>STRIKE2</AnimSpecificClip>
+		</Piece>
+		<Piece DestSegment="painFlame" GenderNeutral="TRUE">
+			<AnimSpecificClip>STRIKE3</AnimSpecificClip>
+		</Piece>
+	</Entry>
+<!--	<Entry>
+		<ID>plDragonling</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="fingersL" />
+		<Piece DestSegment="fireball" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="head_2" />
+		<Piece DestSegment="mouth" />
+		<Piece DestSegment="neck" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="tail" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="toesL" />
+		<Piece DestSegment="toesR" />
+		<Piece DestSegment="wingForeL" />
+		<Piece DestSegment="wingForeR" />
+		<Piece DestSegment="wingL" />
+		<Piece DestSegment="wingR" />
+		<Piece DestSegment="wingUpperL" />
+		<Piece DestSegment="wingUpperR" />
+		<Piece DestSegment="wingWebLa" />
+		<Piece DestSegment="wingWebRa" />
+	</Entry>
+	<Entry>
+		<ID>plDrake</ID>
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="clawL" />
+		<Piece DestSegment="clawR" />
+		<Piece DestSegment="fire" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="head1" />
+		<Piece DestSegment="head2" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="jaw_1" />
+		<Piece DestSegment="neck_1" />
+		<Piece DestSegment="neck_2" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="tail" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="toesL" />
+		<Piece DestSegment="toesR" />
+		<Piece DestSegment="wingForeL_1" />
+		<Piece DestSegment="wingForeL_2" />
+		<Piece DestSegment="wingForeL_3" />
+		<Piece DestSegment="wingForeL_4" />
+		<Piece DestSegment="wingForeR_1" />
+		<Piece DestSegment="wingForeR_2" />
+		<Piece DestSegment="wingForeR_3" />
+		<Piece DestSegment="wingForeR_4" />
+		<Piece DestSegment="wristL" />
+		<Piece DestSegment="wristR" />
+	</Entry>
+	<Entry>
+		<ID>plDragon</ID>
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="clawL" />
+		<Piece DestSegment="ClawL_1" />
+		<Piece DestSegment="ClawL_2" />
+		<Piece DestSegment="clawR" />
+		<Piece DestSegment="ClawR_1" />
+		<Piece DestSegment="ClawR_2" />
+		<Piece DestSegment="ClawR_3" />
+		<Piece DestSegment="eyeGlow" />
+		<Piece DestSegment="head_1" />
+		<Piece DestSegment="head_2" />
+		<Piece DestSegment="jaw" />
+		<Piece DestSegment="neck" />
+		<Piece DestSegment="outerTeeth" />
+	</Entry>
+	-->
+	<Entry>
+		<ID>plOgre</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="handL1" />
+		<Piece DestSegment="handL2" />
+		<Piece DestSegment="handR1" />
+		<Piece DestSegment="handR2" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="head2" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="shoulderL" />
+		<Piece DestSegment="shoulderR" />
+		<Piece DestSegment="tassetRag" />
+		<Piece DestSegment="brokHorn" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="torso" />
+		<Piece DestSegment="undies" />
+		<Piece DestSegment="waist" />
+	</Entry>
+	<Entry>
+		<ID>plCorruptedDwarf</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="shoulderL" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+	</Entry>
+	<Entry>
+		<ID>plBandit</ID>
+		<Piece DestSegment="weapon" />
+		<Piece DestSegment="weaponR" />
+		<Piece DestSegment="cape" GenderNeutral="TRUE">
+			<AnimSpecificClip>DEATH</AnimSpecificClip>
+			<AnimSpecificClip>INJURY</AnimSpecificClip>
+			<AnimSpecificClip>WALK</AnimSpecificClip>
+			<AnimSpecificClip>IDLE</AnimSpecificClip>
+			<AnimSpecificClip>ATTACK</AnimSpecificClip>	<!-- strike 1 -->
+			<AnimSpecificClip>ATTACK2</AnimSpecificClip>
+			<AnimSpecificClip>SPECIAL1</AnimSpecificClip>
+			<AnimSpecificClip>SPECIAL2</AnimSpecificClip> <!-- strike 2 -->
+		</Piece>
+	</Entry>
+	<Entry>
+		<ID>plSpider</ID>
+		<Piece DestSegment="abdomen" />
+		<Piece DestSegment="legEnd1Far" />	<!-- END -->
+		<Piece DestSegment="legEnd2Far" />
+		<Piece DestSegment="legEnd3Far" />
+		<Piece DestSegment="legEnd4Far" />
+		<Piece DestSegment="legEnd1Near" />
+		<Piece DestSegment="legEnd2Near" />
+		<Piece DestSegment="legEnd3Near" />
+		<Piece DestSegment="legEnd4Near" />
+		<Piece DestSegment="legMid1Near" />	<!-- MID -->
+		<Piece DestSegment="legMid2Near" />
+		<Piece DestSegment="legMid3Near" />
+		<Piece DestSegment="legMid4Near" />
+		<Piece DestSegment="legMid1Far" />
+		<Piece DestSegment="legMid2Far" />
+		<Piece DestSegment="legMid3Far" />
+		<Piece DestSegment="legMid4Far" />
+		<Piece DestSegment="legUpper1Near" />	<!-- UPPER -->
+		<Piece DestSegment="legUpper2Near" />
+		<Piece DestSegment="legUpper3Near" />
+		<Piece DestSegment="legUpper4Near" />
+		<Piece DestSegment="legUpper1Far" />
+		<Piece DestSegment="legUpper2Far" />
+		<Piece DestSegment="legUpper3Far" />
+		<Piece DestSegment="legUpper4Far" />
+		<Piece DestSegment="thorax" />
+	</Entry>
+	
+<!--	<Entry>
+		<ID>plDeepStalker</ID>
+		<Piece DestSegment="ankleL" />
+		<Piece DestSegment="ankleR" />
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="body" />
+		<Piece DestSegment="dead" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="neckDetail_1" />
+		<Piece DestSegment="neckDetail_2" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="tail" />
+		<Piece DestSegment="tailMarks_1" />
+		<Piece DestSegment="tailMarks_2" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+	</Entry>
+-->
+	<Entry>
+		<ID>plWerewolf</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="head2" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="waist" />
+	</Entry>
+	<Entry>
+		<ID>plCorpse</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="tassetBack" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="waist" />
+	</Entry>
+	<Entry>
+		<ID>plSkeleton</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="tassetBack" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="waist" />
+	</Entry>
+	<Entry>
+		<ID>plArcaneHorror</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="waist" />
+		<Piece DestSegment="skirt" GenderNeutral="TRUE">
+			<AnimSpecificClip>DEATH</AnimSpecificClip>
+			<AnimSpecificClip>DMG</AnimSpecificClip>
+			<AnimSpecificClip>FWD</AnimSpecificClip>
+			<AnimSpecificClip>IDLE</AnimSpecificClip>
+			<AnimSpecificClip>STRIKE1</AnimSpecificClip>
+			<AnimSpecificClip>STRIKE2</AnimSpecificClip>
+		</Piece>
+	</Entry>
+	
+
+	<Entry>
+		<ID>plShriek</ID>
+		<Piece DestSegment="torso" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="tasset" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="shoulderL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="collarFront" />
+		<Piece DestSegment="collarBack" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armForeL" />
+	</Entry>
+	<Entry>
+		<ID>plDesireDemon</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="tassetBack" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="waist" />
+	</Entry>
+	<Entry>
+		<ID>plRageDemon</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="chestfireball" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="lowerbody" />
+		<Piece DestSegment="neck" />
+		<Piece DestSegment="torso" />
+		<Piece DestSegment="trail" />
+		<Piece DestSegment="upperbody" />
+	</Entry>
+	<Entry>
+		<ID>plShadeDemon</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="lowerbody" />
+		<Piece DestSegment="neck" />
+		<Piece DestSegment="torso" />
+		<Piece DestSegment="trail" />
+		<Piece DestSegment="upperbody" />
+	</Entry>
+	<Entry>
+		<ID>plRevenant</ID>
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="tassetBack" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="waist" />
+	</Entry>
+	
+	<Entry>
+		<ID>plHalla</ID>
+		<Piece DestSegment="backFootFar" />
+		<Piece DestSegment="backFootNear" />
+		<Piece DestSegment="backShinFar" />
+		<Piece DestSegment="backShinNear" />
+		<Piece DestSegment="backThighFar" />
+		<Piece DestSegment="backThighNear" />
+		<Piece DestSegment="backToesFar" />
+		<Piece DestSegment="backToesNear" />
+		<Piece DestSegment="body" />
+		<Piece DestSegment="foreArmFar" />
+		<Piece DestSegment="foreArmNear" />
+		<Piece DestSegment="forePawFar" />
+		<Piece DestSegment="forePawNear" />
+		<Piece DestSegment="foreShoulderFar" />
+		<Piece DestSegment="foreShoulderNear" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="head2" />
+		<Piece DestSegment="neck" />
+		<Piece DestSegment="tail" />
+	</Entry>
+	
+	<Entry>
+		<ID>plBear</ID>
+		<Piece DestSegment="backShinFar" />
+		<Piece DestSegment="backShinNear" />
+		<Piece DestSegment="backThighFar" />
+		<Piece DestSegment="backThighNear" />
+		<Piece DestSegment="backToesFar1" />
+		<Piece DestSegment="backToesFar2" />
+		<Piece DestSegment="backToesFar3" />
+		<Piece DestSegment="backToesNear1" />
+		<Piece DestSegment="backToesNear2" />
+		<Piece DestSegment="backToesNear3" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="foreArmFar" />
+		<Piece DestSegment="foreArmNear" />
+		<Piece DestSegment="foreHandNear" />
+		<Piece DestSegment="forePawFar1" />
+		<Piece DestSegment="forePawFar2" />
+		<Piece DestSegment="forePawFar3" />
+		<Piece DestSegment="forePawNear1" />
+		<Piece DestSegment="forePawNear2" />
+		<Piece DestSegment="forePawNear3" />
+		<Piece DestSegment="foreShoulderFar" />
+		<Piece DestSegment="foreShoulderNear" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="head2" />
+		<Piece DestSegment="head3" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="neck" />
+		<Piece DestSegment="tail" />
+	</Entry>
+	
+	<Entry>
+		<ID>plBronto</ID>
+		<Piece DestSegment="backShinFar" />
+		<Piece DestSegment="backShinNear" />
+		<Piece DestSegment="backThighFar" />
+		<Piece DestSegment="backThighNear" />
+		<Piece DestSegment="backToesFar" />
+		<Piece DestSegment="backToesNear" />
+		<Piece DestSegment="chest" />
+		<Piece DestSegment="foreArmFar" />
+		<Piece DestSegment="foreArmNear" />
+		<Piece DestSegment="foreFingersNear" />
+		<Piece DestSegment="forePawFar" />
+		<Piece DestSegment="forePawNear" />
+		<Piece DestSegment="foreShoulderFar" />
+		<Piece DestSegment="foreShoulderNear" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="hips" />
+		<Piece DestSegment="neck" />
+		<Piece DestSegment="tail" />
+	</Entry>
+	
+	<Entry>
+		<ID>plTrainingDummy</ID>
+		<Piece DestSegment="armL" />
+		<Piece DestSegment="armR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="tasset" />
+		<Piece DestSegment="torso" />
+		<Piece DestSegment="waist" />
+	</Entry>
+	
+	<Entry>
+		<ID>plSoleil</ID>
+	</Entry>
+	
+	<Entry>
+		<ID>plTianne</ID>
+	</Entry>
+	
+	<Entry>
+		<ID>plSylvan</ID>
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="handL" />
+		<Piece DestSegment="handL2" />
+		<Piece DestSegment="handR" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="leftArmL" />
+		<Piece DestSegment="lowerArmR" />
+		<Piece DestSegment="midTorso" />
+		<Piece DestSegment="neck" />
+		<Piece DestSegment="pelvis" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="upperArmL" />
+		<Piece DestSegment="upperArmR" />
+		<Piece DestSegment="upperTorso" />
+	</Entry>
+	
+	<Entry>
+		<ID>plDeymour</ID>
+	</Entry>
+	
+	<Entry>
+		<ID>plEmissHurlock</ID>
+		<Piece DestSegment="shoulderL" />
+		<Piece DestSegment="armForeL" />
+		<Piece DestSegment="handL1" />
+		<Piece DestSegment="armUpperL" />
+		<Piece DestSegment="head" />
+		<Piece DestSegment="waist" />
+		<Piece DestSegment="tassetRag" />
+		<Piece DestSegment="shinL" />
+		<Piece DestSegment="thighL" />
+		<Piece DestSegment="footL" />
+		<Piece DestSegment="undies" />
+		<Piece DestSegment="tailA" />
+		<Piece DestSegment="tailB" />
+		<Piece DestSegment="torso" />
+		<Piece DestSegment="shinR" />
+		<Piece DestSegment="thighR" />
+		<Piece DestSegment="footR" />
+		<Piece DestSegment="shoulderR" />
+		<Piece DestSegment="armForeR" />
+		<Piece DestSegment="armUpperR" />
+		<Piece DestSegment="handR1" />
+	</Entry>
+	
+</SkinPieceData>

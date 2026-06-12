@@ -1,0 +1,4052 @@
+<!-- edited with XMLSpy v2010 rel. 3 sp1 (http://www.altova.com) by BOBBY MOLDAVON (ELECTRONIC ARTS) -->
+<!-- DAJFB Char Anim Skin Definitions
+	Created 7.29.2010
+-->
+<RigData>
+	<DefaultChunkName>
+		ANIM_SKINS_WEAPONS
+	</DefaultChunkName>
+	<!-- WEAPONS -->
+	<Entry>
+		<ID>skWpSimpleSword</ID>
+		<AssetPrefix>starterSword</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordLong</ID>
+		<AssetPrefix>sword_long</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordEmerald</ID>
+		<AssetPrefix>sword_hiltless</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordPlain</ID>
+		<AssetPrefix>sword_stout</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordTested</ID>
+		<AssetPrefix>sword_tested</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordSickle</ID>
+		<AssetPrefix>sword_sickle</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordRusty</ID>
+		<AssetPrefix>sword_ancient</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordRapier</ID>
+		<AssetPrefix>sword_rapier</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordCutlass</ID>
+		<AssetPrefix>sword_scimitar</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordLight</ID>
+		<AssetPrefix>sword_light</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordHook</ID>
+		<AssetPrefix>sword_hooked</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordParrying</ID>
+		<AssetPrefix>sword_parrying</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordFiery</ID>
+		<AssetPrefix>sword_fire</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordElectric</ID>
+		<AssetPrefix>sword_electricity</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordAmagic</ID>
+		<AssetPrefix>sword_chantry</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordRage</ID>
+		<AssetPrefix>sword_rage</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordReliable</ID>
+		<AssetPrefix>sword_reliable</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordBoundBone</ID>
+		<AssetPrefix>sword_boundbone</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordTwisted</ID>
+		<AssetPrefix>sword_twisted</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordTinyHawkeStaff</ID>
+		<AssetPrefix>sword_tiny_hawkeStaff</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordTinyQunariSpear</ID>
+		<AssetPrefix>sword_tiny_qunariSpear</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordWood</ID>
+		<AssetPrefix>sword_wood</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordPurpleStone</ID>
+		<AssetPrefix>sword_purplestone</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordBlueStone</ID>
+		<!-- isaac sword -->
+		<AssetPrefix>sword_bluestone</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordHeavyBend</ID>
+		<AssetPrefix>sword_heavybend</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordGrayHeavy</ID>
+		<AssetPrefix>sword_grayheavy</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordGrayLeatherhandle</ID>
+		<AssetPrefix>sword_grayleatherhandle</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordGrayPatternHandle</ID>
+		<AssetPrefix>sword_graypatternhandle</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordEye</ID>
+		<AssetPrefix>sword_eye</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordCurved</ID>
+		<AssetPrefix>sword_curved</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordLyriumInfused</ID>
+		<AssetPrefix>sword_lyriumInfused</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordUnnamedPremium1</ID>
+		<AssetPrefix>sword_unnamed1</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordSuperPremium1</ID>
+		<AssetPrefix>sword_superPremium1</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordWarden</ID>
+		<AssetPrefix>sword_warden</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordScarbringer</ID>
+		<AssetPrefix>sword_scarbringer</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordTaulin</ID>
+		<AssetPrefix>sword_taulin</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDragonScale</ID>
+		<AssetPrefix>sword_dragonScale</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordLockjaw</ID>
+		<AssetPrefix>sword_lockjaw</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordFlayer</ID>
+		<AssetPrefix>sword_flayer</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordEdgeTeeth</ID>
+		<AssetPrefix>sword_edgeTeeth</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordLightPiercer</ID>
+		<AssetPrefix>sword_lightPiercer</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordTaintedShroud</ID>
+		<AssetPrefix>sword_taintedShroud</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordGrave</ID>
+		<AssetPrefix>sword_grave</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordTesla</ID>
+		<AssetPrefix>sword_electric</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<!--Dual Wield Swords-->
+	<Entry>
+		<ID>skWpSwordDualRuin</ID>
+		<AssetPrefix>swordDual_ruin</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_ruin_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualForked</ID>
+		<AssetPrefix>swordDual_forked</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_forked_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualStarred</ID>
+		<AssetPrefix>swordDual_starred</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_starred_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualBackfacing</ID>
+		<AssetPrefix>swordDual_backfacing</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_backfacing_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualQunari</ID>
+		<AssetPrefix>swordDual_qunariSword</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_qunariSword_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualFlamberge</ID>
+		<AssetPrefix>swordDual_flamberge</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_flamberge_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualBitingTongue</ID>
+		<AssetPrefix>swordDual_bitingTongue</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_bitingTongue_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualTrailerWeapons</ID>
+		<AssetPrefix>swordDual_bitingTongue</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" ClipNameOverride="swordDual_vashoth_weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_bitingTongue_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualObsidian</ID>
+		<AssetPrefix>swordDual_obsidian</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_obsidian_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualFalcata</ID>
+		<AssetPrefix>swordDual_falcata</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_falcata_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualHonor</ID>
+		<AssetPrefix>swordDual_honor</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_honor_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualThorns</ID>
+		<AssetPrefix>swordDual_thorns</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_thorns_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualGracefulGale</ID>
+		<AssetPrefix>swordDual_gracefulGale</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_gracefulGale_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualSanguine</ID>
+		<AssetPrefix>swordDual_Sanguine</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_Sanguine_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualVashoth</ID>
+		<AssetPrefix>swordDual_vashoth</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_vashoth_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualHurlock</ID>
+		<AssetPrefix>swordDual_hurlock</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_hurlock_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualBiPower</ID>
+		<AssetPrefix>swordDual_bipower</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_bipower_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualCurvyPower</ID>
+		<AssetPrefix>swordDual_curvypower</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_curvypower_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpRoundWind</ID>
+		<AssetPrefix>thrown_roundwind</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="thrown_roundwind_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpGoldenWave</ID>
+		<AssetPrefix>thrown_goldenwave</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="thrown_goldenwave_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualSuperPremium1</ID>
+		<AssetPrefix>swordDual_superPremium1</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_superPremium1_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	
+	<Entry>
+		<ID>skWpSwordDualWretched</ID>
+		<AssetPrefix>swordDual_wretched</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_wretched_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualCrystal</ID>
+		<AssetPrefix>swordDual_crystal</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_crystal_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualSmuggler</ID>
+		<AssetPrefix>swordDual_smuggler</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_smuggler_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualCerulean</ID>
+		<AssetPrefix>swordDual_cerulean</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_cerulean_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualFathomFury</ID>
+		<AssetPrefix>swordDual_fury</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" ClipNameOverride="swordDual_fathom_weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_fury_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weaponR</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualDragonTooth</ID>
+		<AssetPrefix>swordDual_dragonTooth</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_dragonTooth_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weaponR</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualBiBlade</ID>
+		<AssetPrefix>swordDual_biBlade</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_biBlade_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weaponR</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualFeatherSharp</ID>
+		<AssetPrefix>swordDual_featherSharp</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_featherSharp_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weaponR</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualVenomHatchet</ID>
+		<AssetPrefix>thrown_envenomed_hatchet</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="thrown_envenomed_hatchet_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualHighDragon</ID>
+		<AssetPrefix>swordDual_highDragon</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_highDragon_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weaponR</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualBroom</ID>
+		<AssetPrefix>swordDual_broom</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_broom_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weaponR</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualDaggerIsabelas</ID>
+		<AssetPrefix>dagger_isabellas</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="dagger_isabellas_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualTesla</ID>
+		<AssetPrefix>sword_electric</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="sword_electric_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualPrideDemon</ID>
+		<AssetPrefix>swordDual_prideDemon</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_prideDemon_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSwordDualWinter</ID>
+		<AssetPrefix>swordDual_winter</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="swordDual_winter_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+		<IconSecondaryPiece>weapon</IconSecondaryPiece>
+	</Entry>
+	<!-- 1H Axes -->
+	<Entry>
+		<ID>skWpSimpleAxe</ID>
+		<AssetPrefix>starterAxe</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeTomahawk</ID>
+		<AssetPrefix>axe_hatchet</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeBearded</ID>
+		<AssetPrefix>axe_dwarf</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeParrying</ID>
+		<AssetPrefix>starterAxe</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeStrong</ID>
+		<AssetPrefix>axe_hatchet</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeLucky</ID>
+		<AssetPrefix>axe_dwarf</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeAgile</ID>
+		<AssetPrefix>axe_scythe</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeSlow</ID>
+		<AssetPrefix>axe_dwarf</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeEvil</ID>
+		<AssetPrefix>axe_scythe</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeCold</ID>
+		<AssetPrefix>axe_cold</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeNasty</ID>
+		<AssetPrefix>axe_DiscipleAxe</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeNature</ID>
+		<AssetPrefix>axe_golok</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxePick</ID>
+		<AssetPrefix>axe_cleaver</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeBlocking</ID>
+		<AssetPrefix>axe_protection</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeWoodman</ID>
+		<AssetPrefix>axe_woodmans</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeParrying</ID>
+		<AssetPrefix>axe_parrying</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeSloth</ID>
+		<AssetPrefix>axe_sloth</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeHaste</ID>
+		<AssetPrefix>axe_haste</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxePower</ID>
+		<AssetPrefix>axe_power</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeFortune</ID>
+		<AssetPrefix>axe_fortune</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeHurlock</ID>
+		<AssetPrefix>axe_hurlockaxe</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeHeavySharp</ID>
+		<AssetPrefix>axe_heavysharp</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeBloodFeather</ID>
+		<AssetPrefix>axe_bloodfeather</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeBlueSharp</ID>
+		<AssetPrefix>axe_bluesharp</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeGoldenCurve</ID>
+		<AssetPrefix>axe_goldencurve</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeUnnamedPremium1</ID>
+		<AssetPrefix>axe_unnamed1</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeSuperPremium1</ID>
+		<AssetPrefix>axe_superPremium1</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeSuperPremium2</ID>
+		<AssetPrefix>axe_superPremium2</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxePromoDarkSpore</ID>
+		<AssetPrefix>axe_sdGhostSentinal1H</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeHeran</ID>
+		<AssetPrefix>axe_heran</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeFused</ID>
+		<AssetPrefix>axe_fused</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeBlazing</ID>
+		<AssetPrefix>axe_blazing</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeBlackFeather</ID>
+		<AssetPrefix>axe_blackfeather</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeWindMarrow</ID>
+		<AssetPrefix>axe_windmarrow</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeFereldenDragon</ID>
+		<AssetPrefix>axe_fereldenDragon</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeGoldenBat</ID>
+		<AssetPrefix>axe_goldenBat</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeBloodyEye</ID>
+		<AssetPrefix>axe_bloodyEye</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeBlueFire</ID>
+		<AssetPrefix>axe_blueFire</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeHighDragon</ID>
+		<AssetPrefix>axe_highDragon</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpAxeWinter</ID>
+		<AssetPrefix>axe_winter</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<!-- Maces -->
+	<Entry>
+		<ID>skWpSimpleMace</ID>
+		<AssetPrefix>starterMace</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceNormal</ID>
+		<AssetPrefix>mace_studded</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceMorningstar</ID>
+		<AssetPrefix>mace_spiky</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceBrainmasher</ID>
+		<AssetPrefix>mace_chunky</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceBloody</ID>
+		<AssetPrefix>mace_bloody</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceParrying</ID>
+		<AssetPrefix>mace_parrying</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceSpeed</ID>
+		<AssetPrefix>mace_studded</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceWild</ID>
+		<AssetPrefix>mace_wild</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceLucky</ID>
+		<AssetPrefix>mace_luck</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceDisrupt</ID>
+		<AssetPrefix>mace_disruptor</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceFiery</ID>
+		<AssetPrefix>mace_fire</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceShocking</ID>
+		<AssetPrefix>mace_electricity</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceBoard</ID>
+		<AssetPrefix>mace_nailboard</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceHammering</ID>
+		<AssetPrefix>mace_hammering</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceBoardBigger</ID>
+		<AssetPrefix>mace_nailboardBigger</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceSledgeHammer</ID>
+		<AssetPrefix>mace_sledgeHammer</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMace</ID>
+		<AssetPrefix>mace</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceHaste</ID>
+		<AssetPrefix>mace_haste</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceTower</ID>
+		<AssetPrefix>mace_tower</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceMetalBall</ID>
+		<AssetPrefix>mace_metalball</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceColdStone</ID>
+		<AssetPrefix>mace_coldstone</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceBloodGem</ID>
+		<AssetPrefix>mace_bloodgem</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceSteelSpine</ID>
+		<AssetPrefix>mace_steelspine</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceBloodyDrum</ID>
+		<AssetPrefix>mace_bloodydrum</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceOxe</ID>
+		<AssetPrefix>mace_oxe</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceMeat</ID>
+		<AssetPrefix>mace_meat</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceLyrium</ID>
+		<AssetPrefix>mace_lyriumMace</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceHerald</ID>
+		<AssetPrefix>mace_herald</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceGuiding</ID>
+		<AssetPrefix>mace_guilding</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceRegal</ID>
+		<AssetPrefix>mace_regal</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMacePineFork</ID>
+		<AssetPrefix>mace_pineFork</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceFlickering</ID>
+		<AssetPrefix>mace_flickering</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceNorthern</ID>
+		<AssetPrefix>mace_frostMace</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceSkeletonTorch</ID>
+		<AssetPrefix>mace_skeletonTorch</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceBlackSnow</ID>
+		<AssetPrefix>mace_blackSnow</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceGoldenGlobe</ID>
+		<AssetPrefix>mace_goldenGlobe</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpMaceInvisible</ID>
+		<AssetPrefix>mace_thisDoesntExist</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<!-- 2H Sword -->
+	<Entry>
+		<ID>skWpSimple2HSword</ID>
+		<AssetPrefix>starterGreatsword</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordNice</ID>
+		<AssetPrefix>greatSword_nice</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordRazortooth</ID>
+		<AssetPrefix>greatSword_nasty</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordKatana</ID>
+		<AssetPrefix>greatSword_katana</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordSoulEdge</ID>
+		<AssetPrefix>greatSword_golden</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordHeavy</ID>
+		<AssetPrefix>sword_darkSpawn</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordEvil</ID>
+		<AssetPrefix>sword_hurlockSickle</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordLucky</ID>
+		<AssetPrefix>greatSword_golden</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordNasty</ID>
+		<AssetPrefix>greatSword_MightOfSten</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordHawke</ID>
+		<AssetPrefix>greatSword_hawke</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordPower</ID>
+		<AssetPrefix>greatSword_power</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordBlocking</ID>
+		<AssetPrefix>greatSword_protection</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordBoasting</ID>
+		<AssetPrefix>greatSword_boasting</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordBurden</ID>
+		<AssetPrefix>greatSword_burden</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordFiery</ID>
+		<AssetPrefix>greatSword_fire</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordAphonic</ID>
+		<AssetPrefix>greatSword_aphonic</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordDeep</ID>
+		<AssetPrefix>greatSword_Deep</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordLongTwisty</ID>
+		<AssetPrefix>greatSword_longTwisty</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordParrying</ID>
+		<AssetPrefix>greatSword_parrying</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordFortune</ID>
+		<AssetPrefix>greatSword_fortune</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordPattern</ID>
+		<AssetPrefix>greatSword_pattern</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordGreenCircle</ID>
+		<AssetPrefix>greatSword_greencircle</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordGoldenHeavy</ID>
+		<AssetPrefix>greatSword_goldenheavy</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordHurlock</ID>
+		<AssetPrefix>greatSword_hurlock</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordBiDragon</ID>
+		<AssetPrefix>greatSword_bidragon</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordStrength</ID>
+		<AssetPrefix>greatSword_strength</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordHurlockGlaive</ID>
+		<AssetPrefix>greatSword_hurlockGlaive</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSuperPremium1</ID>
+		<AssetPrefix>greatsword_superPremium1</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSuperPremium2</ID>
+		<AssetPrefix>greatSword_superPremium2</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HswObsidian</ID>
+		<AssetPrefix>greatSword_obsidian</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HswEmpyrean</ID>
+		<AssetPrefix>greatSword_empyrean</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HswClairvoyant</ID>
+		<AssetPrefix>greatSword_clairvoyant</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordTetras</ID>
+		<AssetPrefix>greatSword_tetras</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordMoonBlade</ID>
+		<AssetPrefix>greatSword_moonblade</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordMagma</ID>
+		<AssetPrefix>greatSword_magma</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordBlueLight</ID>
+		<AssetPrefix>greatSword_bluelight</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HSwordLightEvil</ID>
+		<AssetPrefix>greatSword_lightevil</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HInfectedObsidianLongSword</ID>
+		<AssetPrefix>greatSword_obsidianPoison</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HHighDragon</ID>
+		<AssetPrefix>greatSword_highDragon</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HTesla</ID>
+		<AssetPrefix>starterStaff</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HWinter</ID>
+		<AssetPrefix>greatSword_winter</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<!-- 2H Axe -->
+	<Entry>
+		<ID>skWpSimple2HAxe</ID>
+		<AssetPrefix>starterGreataxe</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeDwarf</ID>
+		<AssetPrefix>greatAxe_dwarf</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeOrnate</ID>
+		<AssetPrefix>greatAxe_ornate</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeLumberjack</ID>
+		<AssetPrefix>greatAxe_wood_hammer</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeHalberd</ID>
+		<AssetPrefix>greatAxe_dwarf</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeHeavy</ID>
+		<AssetPrefix>greatAxe_darkSpawn</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeSlow</ID>
+		<AssetPrefix>greatAxe_wood_hammer</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeFast</ID>
+		<AssetPrefix>greatAxe_darkSpawn</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeParrying</ID>
+		<AssetPrefix>greatAxe_brass</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeElectric</ID>
+		<AssetPrefix>greatAxe_brass</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeTrout</ID>
+		<AssetPrefix>greatAxe_trout</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeBlocking</ID>
+		<AssetPrefix>starterGreataxe</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeExecutioner</ID>
+		<AssetPrefix>greatAxe_executioners</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeReliable</ID>
+		<AssetPrefix>greatAxe_brass</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeNature</ID>
+		<AssetPrefix>greatAxe_qunari_maul</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeHorse</ID>
+		<AssetPrefix>greatAxe_horse</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeShovel</ID>
+		<AssetPrefix>greatAxe_shovel</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeDwarfChipped</ID>
+		<AssetPrefix>greatAxe_dwarfChipped_weapon</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeBroom</ID>
+		<AssetPrefix>greatAxe_broom</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeHaste</ID>
+		<AssetPrefix>greatAxe_haste</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeVoltaic</ID>
+		<AssetPrefix>greatAxe_voltaic</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeParrying</ID>
+		<AssetPrefix>greatAxe_parrying</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeReaver</ID>
+		<AssetPrefix>greatAxe_twinReaver</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeSloth</ID>
+		<AssetPrefix>greatAxe_sloth</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeEvil</ID>
+		<AssetPrefix>greatAxe_evil</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeArrowDodger</ID>
+		<AssetPrefix>greatAxe_arrowdodger</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeUnerringMight</ID>
+		<AssetPrefix>greatAxe_unerringMight</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeHurlockAxe</ID>
+		<AssetPrefix>greatAxe_hurlockAxe</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeStar</ID>
+		<AssetPrefix>greatAxe_star</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeWings</ID>
+		<AssetPrefix>greatAxe_wings</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeEagle</ID>
+		<AssetPrefix>greatAxe_eagle</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeBrownWings</ID>
+		<AssetPrefix>greatAxe_brownwings</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeBlueFeather</ID>
+		<AssetPrefix>greatAxe_bluefeather</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeBloodyDrum</ID>
+		<AssetPrefix>greatAxe_bloodydrum</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeGoldenDrum</ID>
+		<AssetPrefix>greatAxe_goldendrum</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeWoodenDrum</ID>
+		<AssetPrefix>greatAxe_woodendrum</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeOxe</ID>
+		<AssetPrefix>greatAxe_oxe</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeOxeBigger</ID>
+		<AssetPrefix>greatAxe_oxeBigger</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxePower</ID>
+		<AssetPrefix>greatAxe_power</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeSilverPower</ID>
+		<AssetPrefix>greatAxe_silverpower</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeUnnamedPremium1</ID>
+		<AssetPrefix>greatAxe_unnamed1</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeUnnamedPremium2</ID>
+		<AssetPrefix>greatAxe_unnamed2</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeUnnamedPremium3</ID>
+		<AssetPrefix>greatAxe_unnamed3</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeSuperPremium1</ID>
+		<AssetPrefix>greatAxe_superPremium1</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeSuperPremium1</ID>
+		<AssetPrefix>greatAxe_superPremium1</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeSuperPremium2</ID>
+		<AssetPrefix>greatAxe_superPremium2</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeSuperPremium3</ID>
+		<AssetPrefix>greatAxe_superPremium3</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeSuperPremium4</ID>
+		<AssetPrefix>greatAxe_superPremium4</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeSuperPremium5</ID>
+		<AssetPrefix>greatAxe_superPremium5</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeSuperPremium6</ID>
+		<AssetPrefix>greatAxe_superPremium6</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxePromoDarkSpore</ID>
+		<AssetPrefix>greatAxe_dsGhostSentinalBattle</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeNPCtovez</ID>
+		<AssetPrefix>greatAxe_tovez</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeDraconic</ID>
+		<AssetPrefix>greatAxe_draconic</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeOgreBone</ID>
+		<AssetPrefix>greatAxe_ogreBone</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeUmbral</ID>
+		<AssetPrefix>greatAxe_umbral</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeFrenzied</ID>
+		<AssetPrefix>greatAxe_frenzied</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeCerion</ID>
+		<AssetPrefix>greatAxe_cerion</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeUmbral</ID>
+		<AssetPrefix>greatAxe_umbral</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeDraconic</ID>
+		<AssetPrefix>greatAxe_draconic</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeTovez</ID>
+		<AssetPrefix>greatAxe_tovez</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeHurlockAlphaNormal</ID>
+		<AssetPrefix>greatAxe_hurlockAlphaNormal</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeDragoneye</ID>
+		<AssetPrefix>greatAxe_dragoneye</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeTrident</ID>
+		<AssetPrefix>greatAxe_trident</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeWingedScythe</ID>
+		<AssetPrefix>greatAxe_wingedScythe</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeClawScythe</ID>
+		<AssetPrefix>greatAxe_clawScythe</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWp2HAxeBoneScythe</ID>
+		<AssetPrefix>greatAxe_boneScythe</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<!-- Staves -->
+	<Entry>
+		<ID>skWpSimpleStaff</ID>
+		<AssetPrefix>staff_twisty</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--default -->
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffRuby</ID>
+		<AssetPrefix>staff_bulbous</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffPlain</ID>
+		<AssetPrefix>staff_twisty</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffTrident</ID>
+		<AssetPrefix>staff_trident</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffTesla</ID>
+		<AssetPrefix>starterStaff</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RasterizeIcon>FALSE</RasterizeIcon>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffWild</ID>
+		<AssetPrefix>staff_cultist_clawStaff</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffParrying</ID>
+		<AssetPrefix>staff_parrying</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffLight</ID>
+		<AssetPrefix>staff_fortitude</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffRegeneration</ID>
+		<AssetPrefix>staff_power</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffPower</ID>
+		<AssetPrefix>staff_regeneration</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffShepard</ID>
+		<AssetPrefix>staff_shepard</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffNasty</ID>
+		<AssetPrefix>staff_ruin</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffReading</ID>
+		<AssetPrefix>staff_Apostates_Courage</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffNature</ID>
+		<AssetPrefix>staff_countering</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffHurlockEmissary</ID>
+		<AssetPrefix>staff_hurlockEmissary</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffHurlockConjurer</ID>
+		<AssetPrefix>staff_hurlockConjurer</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffHurlockShaman</ID>
+		<AssetPrefix>staff_hurlockShaman</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffCultistHook</ID>
+		<AssetPrefix>staff_cultistHook</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffFortune</ID>
+		<AssetPrefix>staff_fortune</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffAcolyte</ID>
+		<AssetPrefix>staff_acolytes</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffSpeed</ID>
+		<AssetPrefix>staff_speed</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffDusk</ID>
+		<AssetPrefix>staff_dusk</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffLifetree</ID>
+		<AssetPrefix>staff_lifetree</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffBlueFlower</ID>
+		<AssetPrefix>staff_blueflower</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffMoon</ID>
+		<AssetPrefix>staff_moon</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffSimpleGrey</ID>
+		<AssetPrefix>staff_graysimple</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffSharpShell</ID>
+		<AssetPrefix>staff_sharpshell</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffBirds</ID>
+		<AssetPrefix>staff_birds</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffFeather</ID>
+		<AssetPrefix>staff_feather</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffTree</ID>
+		<AssetPrefix>staff_tree</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffGrayLong</ID>
+		<AssetPrefix>staff_graylong</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffRoot</ID>
+		<AssetPrefix>staff_root</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffDragonBall</ID>
+		<AssetPrefix>staff_dragonball</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffDragonBall</ID>
+		<AssetPrefix>staff_dragonball</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffVista</ID>
+		<AssetPrefix>staff_vista</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpHurlockConjurer</ID>
+		<AssetPrefix>staff_hurlockConjurer</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpHurlockShaman</ID>
+		<AssetPrefix>staff_hurlockShaman</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaveSuperPremium1</ID>
+		<AssetPrefix>staff_superPremium1</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaveSuperPremium2</ID>
+		<AssetPrefix>staff_superPremium2</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaveSuperPremium3</ID>
+		<AssetPrefix>staff_superPremium3</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaveSuperPremium4</ID>
+		<AssetPrefix>staff_superPremium4</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaveSuperPremium5</ID>
+		<AssetPrefix>staff_superPremium5</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaveSuperPremium6</ID>
+		<AssetPrefix>staff_superPremium6</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaveSuperPremium7</ID>
+		<AssetPrefix>staff_superPremium7</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaveDarkSporeLightArm</ID>
+		<AssetPrefix>staff_dsLightArm</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffBramblewind</ID>
+		<AssetPrefix>staff_bramblewind</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffMartyrsKey</ID>
+		<AssetPrefix>staff_martyr</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffBlackfeather</ID>
+		<AssetPrefix>staff_blackfeather</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffMenders</ID>
+		<AssetPrefix>staff_menders</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffFanch</ID>
+		<AssetPrefix>staff_fanch</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffPotionPot</ID>
+		<AssetPrefix>staff_potionPot</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffSilverPotionPot</ID>
+		<AssetPrefix>staff_potionPotSilver</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffSnakeSkeleton</ID>
+		<AssetPrefix>staff_snakeSkeleton</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffHurlockEmissaryRunt</ID>
+		<AssetPrefix>staff_hurlockEmissaryRunt</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffGrey</ID>
+		<AssetPrefix>staff_grey</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffTribalDemon</ID>
+		<AssetPrefix>staff_tribalDemon</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffDemonEye</ID>
+		<AssetPrefix>staff_demonEye</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffHighDragon</ID>
+		<AssetPrefix>staff_highDragon</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffPrideDemon</ID>
+		<AssetPrefix>staff_prideDemon</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpStaffWinter</ID>
+		<AssetPrefix>staff_winter</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<!-- Daggers -->
+	<Entry>
+		<ID>skWpSimpleDagger</ID>
+		<AssetPrefix>dagger_curvy</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerNormal</ID>
+		<AssetPrefix>starterDagger</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerKris</ID>
+		<AssetPrefix>dagger_curvy</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerVicious</ID>
+		<AssetPrefix>dagger_nasty</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerSeptic</ID>
+		<AssetPrefix>dagger_katara</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerWild</ID>
+		<AssetPrefix>starterDagger</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerPoison</ID>
+		<AssetPrefix>dagger_nasty</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerIcy</ID>
+		<AssetPrefix>dagger_ice</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerReliable</ID>
+		<AssetPrefix>dagger_accurate</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerPronged</ID>
+		<AssetPrefix>dagger_ruin</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerPurloined</ID>
+		<AssetPrefix>dagger_isabellas</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerSloth</ID>
+		<AssetPrefix>dagger_sloth</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerQuick</ID>
+		<AssetPrefix>dagger_quick</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerPower</ID>
+		<AssetPrefix>dagger_power</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerIronBodkin</ID>
+		<AssetPrefix>dagger_ironBodkin</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerParrying</ID>
+		<AssetPrefix>dagger_parrying</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerNettle</ID>
+		<AssetPrefix>dagger_sylvanNettle</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerSacrifice</ID>
+		<AssetPrefix>dagger_ritualSacrifice</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerGolden</ID>
+		<AssetPrefix>dagger_golden</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerPurplehandle</ID>
+		<AssetPrefix>dagger_purplehandle</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerGolderncurvy</ID>
+		<AssetPrefix>dagger_golderncurvy</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerSilverncurvy</ID>
+		<AssetPrefix>dagger_silvercurvy</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerWide</ID>
+		<AssetPrefix>dagger_wide</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerGrayball</ID>
+		<AssetPrefix>dagger_grayball</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerHurlock</ID>
+		<AssetPrefix>dagger_hurlock</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerGoldSpider</ID>
+		<AssetPrefix>dagger_goldSpider</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerBlueTear</ID>
+		<AssetPrefix>dagger_blueTear</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerSuperPremium1</ID>
+		<AssetPrefix>dagger_superPremium1</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerSuperPremium2</ID>
+		<AssetPrefix>dagger_superPremium2</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerSuperPremium3</ID>
+		<AssetPrefix>dagger_superPremium3</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerSuperPremium4</ID>
+		<AssetPrefix>dagger_superPremium4</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerSuperPremium5</ID>
+		<AssetPrefix>dagger_superPremium5</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerTetras</ID>
+		<AssetPrefix>dagger_tetras</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerIronspike</ID>
+		<AssetPrefix>dagger_ironspike</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerInfuser</ID>
+		<AssetPrefix>dagger_infuser</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerJaws</ID>
+		<AssetPrefix>dagger_jaws</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerGarrak</ID>
+		<AssetPrefix>dagger_garrak</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerFathom</ID>
+		<AssetPrefix>dagger_fathom</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerFury</ID>
+		<AssetPrefix>dagger_fury</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerSimpleDirk</ID>
+		<AssetPrefix>dagger_simpleDirk</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerBranch</ID>
+		<AssetPrefix>dagger_branch</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerCatEye</ID>
+		<AssetPrefix>dagger_catEye</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerGlowSkeleton</ID>
+		<AssetPrefix>dagger_glowSkeleton</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDaggerHawkeStaff</ID>
+		<AssetPrefix>swordDual_smuggler</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<!-- Bows -->
+	<Entry>
+		<ID>skWpSimpleBowShort</ID>
+		<AssetPrefix>bow_starterShort</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon">
+				<!--	<Action>
+					<CharLabel>charge</CharLabel>
+					<CharLabel>action_frame</CharLabel>
+				</Action>-->
+				<AnimSpecificClip>ATTACK</AnimSpecificClip>
+				<AnimSpecificClip>ATTACK2</AnimSpecificClip>
+			</Piece>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowLongD</ID>
+		<AssetPrefix>bow_LongD</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowElfShort</ID>
+		<AssetPrefix>bow_ElfShort</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowShortB</ID>
+		<AssetPrefix>bow_ShortB</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSimpleBow</ID>
+		<AssetPrefix>bow_Long</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowRuin</ID>
+		<AssetPrefix>bow_ruin</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowCurved</ID>
+		<AssetPrefix>bow_curved</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowHeavy</ID>
+		<AssetPrefix>bow_heavy</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowAgile</ID>
+		<AssetPrefix>bow_haste</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowLucky</ID>
+		<AssetPrefix>bow_lucky</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowSlow</ID>
+		<AssetPrefix>bow_slow</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowEfficient</ID>
+		<AssetPrefix>bow_Compound</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowIcy</ID>
+		<AssetPrefix>bow_ElfSteelWing</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowGreasy</ID>
+		<AssetPrefix>bow_Twisty</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowElectric</ID>
+		<AssetPrefix>bow_ElectricBlue</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowAccurate</ID>
+		<AssetPrefix>bow_ElfWing</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowWeird</ID>
+		<AssetPrefix>bow_AdderOfAntiva</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowFire</ID>
+		<AssetPrefix>bow_ElfFire</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowElfBone</ID>
+		<AssetPrefix>bow_ElfBone</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<!-- OMG MASS EFFECT WEAPON -->
+		<ID>skWpBowAssaultRifle</ID>
+		<AssetPrefix>bow_assaultRifle</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon">
+				<AnimSpecificClip>ATTACK</AnimSpecificClip>
+				<AnimSpecificClip>ATTACK2</AnimSpecificClip>
+			</Piece>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<!-- OMG MASS EFFECT WEAPON -->
+		<ID>skWpBowShotgun</ID>
+		<AssetPrefix>bow_shotgun</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon">
+				<AnimSpecificClip>ATTACK</AnimSpecificClip>
+				<AnimSpecificClip>ATTACK2</AnimSpecificClip>
+			</Piece>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<!-- OMG MASS EFFECT WEAPON -->
+		<ID>skWpBowGethGun</ID>
+		<AssetPrefix>bow_gethgun</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon">
+				<AnimSpecificClip>ATTACK</AnimSpecificClip>
+				<AnimSpecificClip>ATTACK2</AnimSpecificClip>
+			</Piece>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<!-- OMG DEAD SPACE WEAPON -->
+		<ID>skWpBowPlasmaCutter</ID>
+		<AssetPrefix>bow_plasmaCutter</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon">
+				<AnimSpecificClip>ATTACK</AnimSpecificClip>
+				<AnimSpecificClip>ATTACK2</AnimSpecificClip>
+			</Piece>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowSlythe</ID>
+		<AssetPrefix>bow_slythe</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowKarnaian</ID>
+		<AssetPrefix>bow_karnaian</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowSpiderNet</ID>
+		<AssetPrefix>bow_spidernet</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowWood</ID>
+		<AssetPrefix>bow_wood</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowSharp</ID>
+		<AssetPrefix>bow_sharp</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowHarvest</ID>
+		<AssetPrefix>bow_harvest</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpSuperPremium1</ID>
+		<AssetPrefix>bow_superPremium1</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpScorpion</ID>
+		<AssetPrefix>bow_scorpion</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpOceansTouch</ID>
+		<AssetPrefix>bow_oceansTouch</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowDarkStryker</ID>
+		<AssetPrefix>bow_darkStryker</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowSpectral</ID>
+		<AssetPrefix>bow_spectral</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowSuzette</ID>
+		<AssetPrefix>bow_suzette</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowScarletRibbon</ID>
+		<AssetPrefix>bow_scarletRibbon</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowDarkRoot</ID>
+		<AssetPrefix>bow_darkRoot</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowBoneEdge</ID>
+		<AssetPrefix>bow_boneEdge</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowNightWhisper</ID>
+		<AssetPrefix>bow_nightWhisper</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowGoldOssein</ID>
+		<AssetPrefix>bow_goldOssein</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowHighDragon</ID>
+		<AssetPrefix>bow_highDragon</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpBowWinter</ID>
+		<AssetPrefix>bow_winter</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon" />
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<!-- CROSSBOWS!!! -->
+	<Entry>
+		<ID>skWpCrossHurlockBolter</ID>
+		<AssetPrefix>cross_hurlockBolter</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossHurlockBolterPrem</ID>
+		<AssetPrefix>cross_hurlockBolterPrem</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossBiancaBasic</ID>
+		<AssetPrefix>cross_biancaBasic</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossBiancaSpeed</ID>
+		<AssetPrefix>cross_biancaSpeed</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossBiancaPowered</ID>
+		<AssetPrefix>cross_biancaPowered</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossBiancaComplete</ID>
+		<AssetPrefix>cross_biancaComplete</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossCrimson</ID>
+		<AssetPrefix>cross_crimson</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossScout</ID>
+		<AssetPrefix>cross_scout</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossLightning</ID>
+		<AssetPrefix>cross_lightning</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossFiery</ID>
+		<AssetPrefix>cross_fiery</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossNavigator</ID>
+		<AssetPrefix>cross_navigator</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossNightstalker</ID>
+		<AssetPrefix>cross_nightstalker</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossMEAssaultRiflee</ID>
+		<AssetPrefix>cross_MEassaultRifle</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossMEGethGun</ID>
+		<AssetPrefix>cross_MEgethgun</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossDSplasmaCutter</ID>
+		<AssetPrefix>cross_DSplasmaCutter</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossDecimating</ID>
+		<AssetPrefix>cross_decimating</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossRanger</ID>
+		<AssetPrefix>cross_ranger</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossDragonling</ID>
+		<AssetPrefix>cross_dragonling</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossGnarled</ID>
+		<AssetPrefix>cross_gnarled</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossNorthern</ID>
+		<AssetPrefix>cross_northern</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossPeacemaker</ID>
+		<AssetPrefix>cross_peacemaker</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossCurious</ID>
+		<AssetPrefix>cross_curious</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossTwilight</ID>
+		<AssetPrefix>cross_twilight</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpCrossDrake</ID>
+		<AssetPrefix>cross_drake</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<!-- OMG MASS EFFECT CROSSBOW -->
+		<ID>skWpCrossAssaultRifle</ID>
+		<AssetPrefix>cross_MEassaultRifle</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<!-- OMG MASS EFFECT CROSSBOW -->
+		<ID>skWpCrossShotgun</ID>
+		<AssetPrefix>cross_MEshotgun</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<!-- OMG MASS EFFECT CROSSBOW -->
+		<ID>skWpCrossGethGun</ID>
+		<AssetPrefix>cross_MEgethgun</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<!-- OMG DEAD SPACE CROSSBOW -->
+		<ID>skWpCrossPlasmaCutter</ID>
+		<AssetPrefix>cross_DSplasmaCutter</AssetPrefix>
+		<RigPieceSet>
+			<PieceList ID="plCrossBow"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<!-- Throwables -->
+	<Entry>
+		<ID>skWpThrowableBanditKnife</ID>
+		<AssetPrefix>thrown_bandit_knife</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableSilverCurvy</ID>
+		<AssetPrefix>thrown_silverCurvy</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableDart</ID>
+		<AssetPrefix>thrown_simple_knife</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableKnife</ID>
+		<AssetPrefix>thrown_simple_knife</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableAxe</ID>
+		<AssetPrefix>thrown_simple_hatchet</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableHurlockEmissary</ID>
+		<AssetPrefix>thrown_hEmiss_hatchet</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableQuick</ID>
+		<AssetPrefix>thrown_iron_dart</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableParrying</ID>
+		<AssetPrefix>thrown_knife_of_parrying</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableFast</ID>
+		<AssetPrefix>thrown_knife_of_haste</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableLucky</ID>
+		<AssetPrefix>thrown_knife_of_fortune</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableWild</ID>
+		<AssetPrefix>thrown_knife_of_bravado</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableSlow</ID>
+		<AssetPrefix>thrown_knife_of_sloth</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableNasty</ID>
+		<AssetPrefix>thrown_opportunitys_edge</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableIcy</ID>
+		<AssetPrefix>thrown_hailfire</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableCrows</ID>
+		<AssetPrefix>thrown_crows_barbs</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableElectric</ID>
+		<AssetPrefix>thrown_ball_lightning</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableNature</ID>
+		<AssetPrefix>thrown_envenomed_hatchet</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableTinyHawkeStaff</ID>
+		<AssetPrefix>thrown_tiny_hawkeStaff</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableTinyQunariSpear</ID>
+		<AssetPrefix>thrown_tiny_qunariSpear</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableFeather</ID>
+		<AssetPrefix>thrown_feather</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableHurlockEmissaryDual</ID>
+		<AssetPrefix>thrown_hEmiss_hatchet</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+			<Piece DestSegment="weaponR" ClipNameOverride="thrown_hEmiss_hatchet_weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpDolphin</ID>
+		<AssetPrefix>thrown_dolphin</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableUnnamedPremium1</ID>
+		<AssetPrefix>thrown_unnamed1</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableSuperPremium1</ID>
+		<AssetPrefix>thrown_superPremium1</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableFlare</ID>
+		<AssetPrefix>thrown_flare</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableImbrued</ID>
+		<AssetPrefix>thrown_imbrued</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableParagon</ID>
+		<AssetPrefix>thrown_paragon</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableStormborn</ID>
+		<AssetPrefix>thrown_stormborn</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableDoubleSpear</ID>
+		<AssetPrefix>thrown_doubleSpear</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableBladeSky</ID>
+		<AssetPrefix>thrown_bladesSky</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableFall</ID>
+		<AssetPrefix>thrown_fall</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableBluePearl</ID>
+		<AssetPrefix>thrown_bluePearl</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableRedBow</ID>
+		<AssetPrefix>thrown_redBow</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableHighDragon</ID>
+		<AssetPrefix>thrown_highDragon</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableHurlockDagger</ID>
+		<AssetPrefix>thrown_hurlockDagger</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableCorpseArm</ID>
+		<AssetPrefix>thrown_corpse_arm</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableRockShale</ID>
+		<AssetPrefix>thrown_rock_shale</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skWpThrowableSpearQunariA</ID>
+		<AssetPrefix>thrown_spear_qunariA</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="weapon"/>
+		</RigPieceSet>
+		<IconPiece>weapon</IconPiece>
+	</Entry>
+</RigData>

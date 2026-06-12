@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 sp1 (http://www.altova.com) by BOBBY MOLDAVON (ELECTRONIC ARTS) -->
+<!-- ==============================================================
+	This is the list of valid offer types allowed in the game.
+=============================================================== -->
+<Root>
+	<OfferType ID="GOLD"/>
+	<OfferType ID="CROWNS"/>
+	<OfferType ID="UPGRADE_CASTLE_ROOM"/>
+	<OfferType ID="OFFER_UPSELL_HEALTH_POTION"/>
+	<OfferType ID="OFFER_UPSELL_ENERGY"/>
+	<OfferType ID="OFFER_UPSELL_EVRAS_HORN"/>
+	<OfferType ID="OFFER_UPSELL_SMELLING_SALTS"/>
+	<OfferType ID="STORE"/>
+	<OfferType ID="OFFER_BATTLE_SLOT"/>
+	<OfferType ID="OFFER_UPGRADE_CASTLE_ROOM_HERO"/>
+	<OfferType ID="OFFER_UPGRADE_CASTLE_ROOM_APOTHECARY"/>
+	<OfferType ID="OFFER_UPGRADE_CASTLE_ROOM_ALCHEMY"/>
+	<OfferType ID="OFFER_UPGRADE_CASTLE_ROOM_INFIRMARY"/>
+	<OfferType ID="OFFER_UPGRADE_CASTLE_ROOM_TAVERN"/>
+	<OfferType ID="OFFER_UPGRADE_CASTLE_ROOM_FURNACE"/>
+	<OfferType ID="OFFER_UPGRADE_CASTLE_ROOM_STOREROOM"/>
+    <OfferType ID="OFFER_UPGRADE_CASTLE_ROOM_THRONEROOM"/>
+    <OfferType ID="OFFER_UPGRADE_CASTLE_ROOM_TREASURY"/>
+    <OfferType ID="OFFER_UPGRADE_CASTLE_ROOM_GREATHALL"/>
+    <OfferType ID="OFFER_UPGRADE_ROOM_LIBRARY"/>
+    <OfferType ID="OFFER_UPGRADE_ROOM_CHANTRY"/>
+    <OfferType ID="OFFER_UPGRADE_ROOM_TRAININGROOM"/>
+	<OfferType ID="OFFER_NPC_ROOM_UPGRADE_SHALE"/>
+	<OfferType ID="OFFER_NPC_ROOM_UPGRADE_MORRIGAN"/>
+	<OfferType ID="OFFER_GOLD_SMALL"/>
+	<OfferType ID="OFFER_GOLD_MEDIUM"/>
+	<OfferType ID="OFFER_GOLD_LARGE"/>
+	<OfferType ID="OFFER_UPSELL_POTION_HEALTH_GREATER"/>
+	<OfferType ID="OFFER_UPSELL_ENERGY_LESSER"/>
+	<OfferType ID="OFFER_UPSELL_POTION_HEALTH_RESTORATION"/>
+	<OfferType ID="OFFER_UPSELL_ENERGY_GREATER"/>
+	<OfferType ID="OFFER_SCRATCHER"/>
+	<OfferType ID="COMBAT_UPSELL"/>
+	<OfferType ID="OFFER_CHALLENGE_TOKEN"/>
+	<OfferType ID="OFFER_CHALLENGE_TOKEN_STACK"/>
+	<OfferType ID="OFFER_RAID_SLOT_1"/>
+	<OfferType ID="OFFER_RAID_SLOT_2"/>
+	<OfferType ID="OFFER_HIRE_MERCS_2"/>
+	<OfferType ID="OFFER_HIRE_MERCS_3"/>
+	<OfferType ID="OFFER_HIRE_MERCS_4"/>
+	<OfferType ID="OFFER_HIRE_MERCS_5"/>
+	<OfferType ID="OFFER_HIRE_MERCS_6"/>
+	<OfferType ID="OFFER_HIRE_MERCS_7"/>
+	<OfferType ID="OFFER_HIRE_MERCS_8"/>
+	<OfferType ID="OFFER_HIRE_MERCS_9"/>
+	<OfferType ID="OFFER_HIRE_MERCS_10"/>
+	<OfferType ID="OFFER_HIRE_MERCS_11"/>
+	<OfferType ID="OFFER_HIRE_MERCS_12"/>
+	<OfferType ID="OFFER_HIRE_MERCS_13"/>
+	<OfferType ID="OFFER_HIRE_MERCS_14"/>
+	<OfferType ID="OFFER_NPC_ROOM_UPGRADE_BARKSPAWN"/>
+	<OfferType ID="OFFER_NPC_ROOM_UPGRADE_ISABELA"/>
+	<OfferType ID="OFFER_NPC_ROOM_UPGRADE_DRAKE"/>
+	<OfferType ID="OFFER_NPC_ROOM_UPGRADE_MORRIGAN"/>
+	<OfferType ID="OFFER_NPC_ROOM_UPGRADE_SHALE"/>
+</Root>

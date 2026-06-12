@@ -1,0 +1,178 @@
+<StringData>
+	<!-- Raid UI Text -->
+	<String key="SCREEN_MAIN_DESC">Wage war against powerful foes to vanquish evil and earn legendary rewards!</String>
+	<String key="SCREEN_LOOT_DESC_SP">Earn more powerful equipment by eliminating the boss more quickly! Finish the battle in the fastest time to get the best loot.</String>
+	<String key="SCREEN_LOOT_DESC_MP">Defeat enemy camps quickly to earn platinum loot!</String>
+	<!-- <String key="SCREEN_LOOT_DESC_MP">Defeat more enemy camps quickly to earn the best loot! Make greater contributions to the battle to get better loot than everyone else.</String> -->
+	<!-- Raid boss names, short.-->
+	<String key="RAID_NAME_RASPIN">Raspin, the Bandit Lord</String>
+	<String key="RAID_NAME_SPIDER">Carthriss, the Spider Queen</String>
+	<String key="RAID_NAME_DRAGON">the Dragon</String>
+	<String key="RAID_NAME_SOLEIL">Soleil</String>
+	<!-- Raid Description -->
+	<String key="RAID_DESC_RASPIN">Raspin is back for revenge. His defeat at your hands has angered him fiercely. He has banded together with several other robber clans and has come to your castle to claim it... and your life.</String>
+	<String key="RAID_DESC_SPIDER">The dwarves of Orzammar Thaig have begun to reclaim Davroken Thaig, but discovered that a nest of spiders there. It will take a mighty feat to drive out the spiders and defeat their queen.</String>
+	<String key="RAID_DESC_DRAGON">A high dragon has been spotted in the Vimmark Mountains with an army of darkspawn and dragonlings. You will need to enlist your friends to win this battle.</String>
+	<String key="RAID_DESC_SOLEIL">The possessed witch Soleil has vanished from her cell in the dungeons of Kaiten. It is said an army of darkspawn and demons protect her now in the deep swamps.</String>
+	<!-- Raid Invite Text -->
+	<String key="RAID_INVITE_TEXT_RASPIN">My castle is under siege! Raspin and his robber clans have come for revenge. Help me fend them off in Dragon Age Legends and you will share in the epic rewards!</String>
+	<String key="RAID_INVITE_TEXT_SPIDER">We must help the dwarves reclaim Davroken Thaig! The spider queen Carthriss has taken over with her hordes of spiderlings. Help me oust them in Dragon Age Legends and you will share in the epic rewards!</String>
+	<String key="RAID_INVITE_TEXT_DRAGON">A High Dragon has been spotted on a ridge in the Vimmark Mountains! An army of darkspawn and dragonlings stand between us and victory. Join my battle in Dragon Age Legends and you will share in the epic rewards!</String>
+	<String key="RAID_INVITE_TEXT_SOLEIL">Soleil has escaped Kaiten! She is marshalling a horde of demons and darkspawn in the swamps. Join my battle in Dragon Age Legends and you will share in the epic rewards!</String>
+	<!-- Boss Names, more detailed.-->
+	<String key="BOSS_NAME_RASPIN">Raspin</String>
+	<String key="BOSS_NAME_SPIDER">Carthriss</String>
+	<String key="BOSS_NAME_DRAGON">Dragon</String>
+	<String key="BOSS_NAME_SOLEIL">Soleil</String>
+	<!-- Raid Screen Tabs -->
+	<String key="RAID_PREVIEW_TAB_TEXT">My Raids</String>
+	<String key="RAID_FRIEND_TAB_TEXT">Friend Raids</String>
+	<String key="RAID_TROPHY_TAB_TEXT">Trophies</String>
+	<!-- My Raid Screen -->
+	<String key="MY_RAID_SCREEN_TITLE">Battle Room</String>
+	<String key="TIME_LIMIT_TEXT">Time Limit {%timeLimitStr%}</String>
+	<String key="POSSIBLE_LOOT_TEXT">See loot</String>
+	<String key="START_BUTTON_TEXT">Start Raid!</String>
+	<!-- <String key="START_BUTTON_TEXT">Fight {%bossName%}</String> -->
+	<String key="SINGLE_PLAYER_TEXT">Single Player</String>
+	<String key="MULTI_PLAYER_TEXT">Multiplayer</String>
+	<String key="COMING_SOON_TEXT">Coming Soon</String>
+	<String key="RAID_SLOT_RAID_DESCRIPTION_TEXT">You vs. {%raidName%}</String>
+	<String key="RAID_SLOT_OWNER_RAID_DESCRIPTION_TEXT">{%ownerName%} vs. {%raidName%}</String>
+	<String key="RAID_SLOT_PROGRESS_TEXT">{%campsCompleted%}/{%campsToComplete%} Camps</String>
+	<String key="RAID_SLOT_DETAIL_BTN_TEXT">Fight</String>
+	<!--<String key="RAID_SLOT_UPGRADE_BTN_TEXT"><![CDATA[Additional Raid Slot
+{COIN}    {%amount%}]]></String>-->
+	<String key="RAID_SLOT_UPGRADE_BTN_TEXT"><![CDATA[Additional Raid
+Slot {COIN}      {%amount%}]]></String>
+	<String key="RAID_SLOT_EMPTY_TEXT">Available Slot</String>
+	<String key="RAID_SLOT_START_RAID_TEXT">Click on a raid button above to use this slot.</String>
+	<!-- Friend Raid Screen -->
+	<String key="FRIEND_RAID_SCREEN_TITLE">Friend Raids</String>
+	<String key="FRIEND_RAID_SCREEN_SORT_LABEL">Sort by</String>
+	<String key="FRIEND_RAID_SCREEN_SHOW_LABEL">Show to</String>
+	<String key="FRIEND_RAID_SCREEN_PROGRESS_TEXT">{%campsCompleted%}/{%campsToComplete%} Camps</String>
+	<String key="FRIEND_RAID_SCREEN_TIME_LABEL_TEXT">Time Remaining:</String>
+	<String key="FRIEND_RAID_SCREEN_VIEW_BTN_TEXT">View</String>
+	<!-- Trophy Screen -->
+	<String key="TROPHY_SCREEN_TITLE">Trophy Room</String>
+	<String key="TROPHY_SCREEN_RAID_LABEL">Raid</String>
+	<String key="TROPHY_SCREEN_STATUS_LABEL">Status</String>
+	<String key="TROPHY_SCREEN_LOOT_LABEL">Loot</String>
+	<String key="TROPHY_SCREEN_TROPHY_LABEL">Trophy</String>
+	<String key="TROPHY_SLOT_BEST_TIME_LABEL">Best Time:</String>
+	<String key="TROPHY_SLOT_BEST_TIME_TEXT">--d --h --m</String>
+	<String key="TROPHY_SLOT_LOOT_QUALITY_LABEL">Loot Completion:</String>
+	<String key="TROPHY_SLOT_LOOT_QUALITY_TEXT">{%progressPct%}%</String>
+	<String key="TROPHY_SLOT_CROWN_ICON_TOOLTIP">Check out a matching weapon in the store!</String>
+	<String key="TROPHY_SLOT_CROWN_ICON_NOT_ENOUGH_LEVEL_TOOLTIP">Your level is too low to see this weapon.</String>
+	<String key="TROPHY_SLOT_CROWN_ICON_COMING_SOON_TOOLTIP">Matching weapons coming soon!</String>
+	<!-- Raid start confirm box -->
+	<String key="START_BOX_DESCRIPTION">Multiplayer raid!</String>
+	<String key="START_BOX_OPTION_TEXT">Invite Only</String>
+	<String key="START_BOX_CONFIRM_BTN_TEXT">Start Battle?</String>
+	<!-- Raid continue confirm dialog -->
+	<String key="CONTINUE_DIALOG_TITLE">Continue Battle?</String>
+	<String key="CONTINUE_DIALOG_ENERGY_COST">&#xD;{%campEnergy%}{ENERGY}</String>
+	<String key="CONTINUE_DIALOG_CONTINUE">Continue</String>
+	<String key="CONTINUE_DIALOG_RETREAT">Retreat</String>
+	<!-- Raid Detail Screen -->
+	<String key="RAID_DETAIL_TITLE">Your {%bossName%} Raid</String>
+	<String key="RAID_DETAIL_FIGHT_BUTTON_TEXT">Fight&#xD;Camp</String>
+	<String key="RAID_DETAIL_FIGHTBOSS_BUTTON_TEXT">Fight&#xD;Boss</String>
+	<String key="RAID_DETAIL_HIRE_BUTTON_TEXT">Hire {%mercAmount%} Mercs &#xD;{COIN}    {%crownAmount%}</String>
+	<String key="RAID_DETAIL_INVITE_BUTTON_TEXT">Invite Friends</String>
+	<String key="RAID_DETAIL_JOIN_BUTTON_TEXT">Join&#xD;Raid</String>
+	<String key="RAID_DETAIL_QUIT_BUTTON_TEXT">Quit&#xD;Raid</String>
+	<String key="RAID_DETAIL_FIGHTBOSS_BUTTON_TOOLTIP">Fight the raid boss before time runs out to complete the raid and get your loot.</String>
+	<String key="RAID_DETAIL_FIGHT_BUTTON_TOOLTIP">The more enemy camps you defeat in a row, the greater the progress!</String>
+	<String key="RAID_DETAIL_HIRE_BUTTON_TOOLTIP">{%mercAmount%} camps will be defeated by the mercenaries and added to your raid contribution.</String>
+	<String key="RAID_DETAIL_INVITE_BUTTON_TOOLTIP">You can ask your friends to help you fight this battle</String>
+	<String key="RAID_DETAIL_JOIN_BUTTON_TOOLTIP">Join this raid</String>
+	<String key="RAID_DETAIL_QUIT_BUTTON_TOOLTIP">Quit Raid</String>
+	<String key="RAID_DETAIL_BACK_BUTTON_TOOLTIP">Back</String>
+	<String key="RAID_DETAIL_PROGRESS_TEXT"><![CDATA[ Camps Towards Boss]]></String>
+	<String key="RAID_DETAIL_PROGRESS_COMPLETE_TEXT"><![CDATA[  Camps Completed]]></String>
+	<String key="RAID_DETAIL_BESTLOOT_LABEL">Possible Raid Boss Loot for {%tierType%} Tier:</String>
+	<String key="RAID_DETAIL_BESTLOOT_LABEL_DEFAULT_TIER_TEXT">CURRENT</String>
+	<String key="RAID_DETAIL_BESTLOOT_LABEL_MULTIPLAYER">Best Possible Loot in Current Tier:</String>
+	<String key="RAID_DETAIL_TIME_REMAINING_LABEL">Time Remaining:</String>
+	<String key="RAID_DETAIL_FAIL_TEXT">You have failed to defeat {%bossName%} in time.</String>
+	<!-- Raid CompleteScreen -->
+	<String key="RAID_COMPLETE_TITLE">CONGRATULATIONS</String>
+	<String key="RAID_COMPLETE_CONTRIBUTORS_TITLE">Top Contributors</String>
+	<String key="RAID_COMPLETE_BTN_CELEBRATE">Top Contributors</String>
+	<String key="RAID_COMPLETE_LOOT_COUNT">You have earned {%count%} out of {%total%} loot.</String>
+	<!-- Raid generic confirm dialog -->
+	<String key="GENERIC_CONFIRM_BTN_TEXT">Yes</String>
+	<String key="GENERIC_CANCEL_BTN_TEXT">No</String>
+	<!-- Raid quit confirm dialog -->
+	<String key="RAID_QUIT_TITLE">Quit Raid?</String>
+	<String key="RAID_QUIT_TEXT">Are you sure you want to quit this Raid? All progress will be lost.</String>
+	<String key="RAID_QUIT_CANCEL_BTN_TEXT">Not Now</String>
+	<!-- Raid generic warning dialog -->
+	<String key="GENERIC_WARNING_TITLE">Warning!</String>
+	<String key="GENERIC_WARNING_BTN_TEXT">Confirm</String>
+	<!-- Can not quit raid warning -->
+	<String key="CAN_NOT_QUIT_RAID_WARNING_TEXT">You cannot quit a Raid you initiated as others are participating.</String>
+	<!-- Can not start raid warning -->
+	<String key="OUT_OF_SLOT_WARNING_TEXT">You have run out of battle slots.</String>
+	<!-- Raid Fail warning -->
+	<String key="RAID_FAIL_WARNING_TEXT">You ran out of time in {%raidName%}'s Raid. Are you up for a re-match?</String>
+	<String key="RAID_FAIL_WARNING_BTN_TEXT">Ok</String>
+	<!--Continue Flavor Text Bandits-->
+	<String key="RAID_1_CONTINUE_AFTER_ENC_1">Having defeated the scouts, you can see a guard tower up ahead. Continue on to the guard tower or retreat? (The next encounter is worth 2 camps and has increased rewards)  </String>
+	<String key="RAID_1_CONTINUE_AFTER_ENC_2">The guards have been defeated but there are several other bandits advancing. Fight off the assailants or retreat? (The next encounter is worth 3 camps and has increased rewards)  </String>
+	<String key="RAID_1_CONTINUE_AFTER_ENC_3">There is a group of bandits guarding the leader's tent. Continue forward or retreat? (The next encounter is worth 4 camps and has increased rewards)  </String>
+	<String key="RAID_1_CONTINUE_AFTER_ENC_4">The leader of this band has come out of his tent with his guards. Battle the leader or retreat? (The next encounter is worth 5 camps and has increased rewards)  </String>
+	<String key="RAID_1_CONTINUE_AFTER_ENC_5">You've defeated this band of brigands, but the leader has escaped to another camp! Continue onward to next camp or retreat? (The next encounter is worth 1 camp)  </String>
+	<String key="RAID_1_CONTINUE_BEFORE_BOSS">The boss encounter has unlocked. Continue on to battle the boss or retreat?  </String>
+	<!--Continue Flavor Text Spiders-->
+	<String key="RAID_2_CONTINUE_AFTER_ENC_1">These hatchlings are only the beginning, there is another group closer to the nest! Continue onward or retreat? (The next encounter is worth 2 camps and has increased rewards)  </String>
+	<String key="RAID_2_CONTINUE_AFTER_ENC_2">An ambush! Fight them off or retreat? (The next encounter is worth 3 camps and has increased rewards)  </String>
+	<String key="RAID_2_CONTINUE_AFTER_ENC_3">There is a large cluster of eggs here at the center of the thaig. Continue forward or retreat? (The next encounter is worth 4 camps and has increased rewards)  </String>
+	<String key="RAID_2_CONTINUE_AFTER_ENC_4">You've found a huge nest of spiders near the river. Destroy the nest or retreat? (The next encounter is worth 5 camps and has increased rewards)  </String>
+	<String key="RAID_2_CONTINUE_AFTER_ENC_5">This nest has been destroyed, but there are more nests to destroy before you can find the queen. Continue onward to next nest or retreat? (The next encounter is worth 1 camp)  </String>
+	<String key="RAID_2_CONTINUE_BEFORE_BOSS">The boss encounter has unlocked. Continue on to battle the boss or retreat?  </String>
+	<!--Continue Flavor Text Dragons-->
+	<String key="RAID_3_CONTINUE_AFTER_ENC_1">Continue onward into the camp or retreat? (The next encounter is worth 2 camps and has increased rewards)  </String>
+	<String key="RAID_3_CONTINUE_AFTER_ENC_2">You are now deeper into the camp! Fight them off or retreat? (The next encounter is worth 3 camps and has increased rewards)  </String>
+	<String key="RAID_3_CONTINUE_AFTER_ENC_3">You are now deeper into the camp! Continue forward or retreat? (The next encounter is worth 4 camps and has increased rewards)  </String>
+	<String key="RAID_3_CONTINUE_AFTER_ENC_4">You are now in the heart of the drake camp! Destroy the nest or retreat? (The next encounter is worth 5 camps and has increased rewards)  </String>
+	<String key="RAID_3_CONTINUE_AFTER_ENC_5">Continue onward to next group or retreat? (The next encounter is worth 1 camp)  </String>
+	<String key="RAID_3_CONTINUE_BEFORE_BOSS">The boss encounter has unlocked. Continue on to battle the boss or retreat?  </String>
+	<!--Continue Flavor Text Soleil-->
+	<String key="RAID_4_CONTINUE_AFTER_ENC_1">Continue onward or retreat? (The next encounter is worth 2 camps and has increased rewards)  </String>
+	<String key="RAID_4_CONTINUE_AFTER_ENC_2">Fight them off or retreat? (The next encounter is worth 3 camps and has increased rewards)  </String>
+	<String key="RAID_4_CONTINUE_AFTER_ENC_3">Continue forward or retreat? (The next encounter is worth 4 camps and has increased rewards)  </String>
+	<String key="RAID_4_CONTINUE_AFTER_ENC_4">Destroy the nest or retreat? (The next encounter is worth 5 camps and has increased rewards)  </String>
+	<String key="RAID_4_CONTINUE_AFTER_ENC_5">Continue onward to next group or retreat? (The next encounter is worth 1 camp)  </String>
+	<String key="RAID_4_CONTINUE_BEFORE_BOSS">The boss encounter has unlocked. Continue on to battle the boss or retreat?  </String>
+	<!-- Convert medal/loot tier to text -->
+	<String key="MEDAL_PLATINUM_TEXT">PLATINUM</String>
+	<String key="MEDAL_GOLD_TEXT">GOLD</String>
+	<String key="MEDAL_SILVER_TEXT">SILVER</String>
+	<String key="MEDAL_BRONZE_TEXT">BRONZE</String>
+	<String key="MEDAL_WOODEN_TEXT">WOODEN</String>
+	<!-- Raid Unlock Requirement -->
+	<String key="RAID_UNLOCK_LABEL">Unlock Requirements</String>
+	<String key="RAID_UNLOCK_START_LEVEL">Hero Level {%raidLevel%}</String>
+	<!-- Raid invite -->
+	<String key="RAID_INVITE_TITLE_TEXT">Confirmation</String>
+	<String key="RAID_INVITE_YES_BUTTON_TEXT">Invite</String>
+	<String key="RAID_INVITE_NO_BUTTON_TEXT">Cancel</String>
+	<String key="RAID_INVITE_CHECKBOX_LABEL">Invite</String>
+	<String key="RAID_INVITE_SENT_TEXT">Your invitation has been sent.</String>
+	<!-- Raid invite -->
+	<String key="RAID_HELP_YES_BUTTON_TEXT">Help {%friendName%}?</String>
+	<String key="RAID_HELP_DESCRIPTION_TEXT">I need help defeating {%bossName%}'s raid!</String>
+	<!-- Raid join error messages -->
+	<String key="RAID_JOIN_ERROR_RAID_NOT_FOUND">The raid you are trying to join cannot be found.</String>
+	<String key="RAID_JOIN_ERROR_RAID_ARCHETYPE_NOT_FOUND">The archetype of the raid you are trying to join cannot be found.</String>
+	<String key="RAID_JOIN_ERROR_RAID_IS_FULL">Cannot join raid; it is already full.</String>
+	<String key="RAID_JOIN_ERROR_PLAYER_HAS_JOINED_RAID">You have already joined this raid.</String>
+	<String key="RAID_JOIN_ERROR_RAID_IS_LOCKED_DOWN">The raid you are trying to join is currently locked.</String>
+	<String key="RAID_JOIN_ERROR_RAID_IS_EXPIRED">The raid you are trying to join has expired.</String>
+	<String key="RAID_JOIN_ERROR_PLAYER_HAS_NO_RAID_SLOT">You currently do not have enough available raid slots for this raid.</String>
+	<String key="RAID_JOIN_ERROR_PLAYER_LEVEL_NOT_ENOUGH">You are too low of a level to join this raid.</String>
+</StringData>

@@ -1,0 +1,1398 @@
+<!-- edited with XMLSpy v2010 rel. 3 sp1 (http://www.altova.com) by BOBBY MOLDAVON (ELECTRONIC ARTS) -->
+<!-- DAJFB Char Anim Skin Definitions
+	Created 7.29.2010
+-->
+<RigData>
+	<DefaultChunkName>
+		ANIM_SKINS_HUMANELF_LEATHER
+	</DefaultChunkName>
+	<!-- LEATHER -->
+	<Entry>
+		<ID>skLtStarterLeatherArmor1</ID>
+		<AssetPrefix>tornLeatherArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtStarterLeatherArmor2</ID>
+		<AssetPrefix>commandersPleather</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtStarterLeatherArmor3</ID>
+		<AssetPrefix>rippedLeatherArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtStarterLeatherArmor4</ID>
+		<AssetPrefix>gorillaArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtNormalLeatherArmor1</ID>
+		<AssetPrefix>reinforcedLeather</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtNormalLeatherArmor2</ID>
+		<AssetPrefix>bronzedLeatherArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtNormalLeatherArmor3</ID>
+		<AssetPrefix>indecentLeatherArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtNormalLeatherArmor4</ID>
+		<AssetPrefix>leatherArmorOfBlood</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtNormalLeatherArmor5</ID>
+		<AssetPrefix>commandersPleather</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtPrLeatherArmor1</ID>
+		<AssetPrefix>thievesArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtPrLeatherArmor2</ID>
+		<AssetPrefix>corinthianLeather</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtPrLeatherArmor3</ID>
+		<AssetPrefix>calmingLeather</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtPrLeatherArmor4</ID>
+		<AssetPrefix>aegisLeatherArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtPrLeatherArmor5</ID>
+		<AssetPrefix>workerGarbs</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtPrLeatherArmor6</ID>
+		<AssetPrefix>gorillaArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtPrLeatherArmor7</ID>
+		<AssetPrefix>hawkeLeatherArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtPrLeatherArmor8</ID>
+		<AssetPrefix>raggedLeatherArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtPrLeatherArmor9</ID>
+		<AssetPrefix>rustyLeatherArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- BANDIT ARMORS FOR PLAYER -->
+	<Entry>
+		<ID>skHvBanditLeatherRuffianArmor</ID>
+		<AssetPrefix>banditRuffian</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvBanditLeatherHunterArmor</ID>
+		<AssetPrefix>banditHunter</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- PROMO ARMORS -->
+	<Entry>
+		<ID>skLtPromoLeatherArmor0</ID>
+		<AssetPrefix>hawkeLeatherArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtPromoLeatherArmor1</ID>
+		<AssetPrefix>bloodDragonLeatherArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtPromoLeatherArmor2</ID>
+		<AssetPrefix>N7leatherArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtPromoLeatherArmor3</ID>
+		<AssetPrefix>JadeEmpireLeatherArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtPromoLeatherArmor4</ID>
+		<AssetPrefix>isaacLeatherArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtPromoLeatherArmor6</ID>
+		<AssetPrefix>originLeatherArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- BANDIT ARMORS - Apostate-->
+	<Entry>
+		<ID>skBanditApostateRecruitArmor</ID>
+		<AssetPrefix>apostateSTAFF</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditApostateNoviceArmor</ID>
+		<AssetPrefix>apostateSTAFF</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditApostateArmor</ID>
+		<AssetPrefix>apostateSTAFF</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditApostateVeteranArmor</ID>
+		<AssetPrefix>apostateSTAFF</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- BANDIT ARMORS - Brawler-->
+	<Entry>
+		<ID>skBanditBrawlerRecruitArmor</ID>
+		<AssetPrefix>brawlerDUAL</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditBrawlerNoviceArmor</ID>
+		<AssetPrefix>brawlerDUAL</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditBrawlerArmor</ID>
+		<AssetPrefix>brawlerDUAL</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditBrawlerVeteranArmor</ID>
+		<AssetPrefix>brawlerDUAL</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- BANDIT ARMORS - mercenary-->
+	<Entry>
+		<ID>skBanditMercenaryRecruitArmor</ID>
+		<AssetPrefix>mercenary1H</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditMercenaryNoviceArmor</ID>
+		<AssetPrefix>mercenary1H</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditMercenaryArmor</ID>
+		<AssetPrefix>mercenary1H</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditMercenaryVeteranArmor</ID>
+		<AssetPrefix>mercenary1H</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- BANDIT ARMORS - sapper-->
+	<Entry>
+		<ID>skBanditSapperRecruitArmor</ID>
+		<AssetPrefix>sapper1H</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditSapperNoviceArmor</ID>
+		<AssetPrefix>sapper1H</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditSapperArmor</ID>
+		<AssetPrefix>sapper1H</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditSapperVeteranArmor</ID>
+		<AssetPrefix>sapper1H</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- BANDIT ARMORS - theif-->
+	<Entry>
+		<ID>skBanditThiefRecruitArmor</ID>
+		<AssetPrefix>thiefBOW</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditThiefNoviceArmor</ID>
+		<AssetPrefix>thiefBOW</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditThiefArmor</ID>
+		<AssetPrefix>thiefBOW</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditThiefVeteranArmor</ID>
+		<AssetPrefix>thiefBOW</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- BANDIT ARMORS - thug-->
+	<Entry>
+		<ID>skBanditThugRecruitArmor</ID>
+		<AssetPrefix>thug2H</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditThugNoviceArmor</ID>
+		<AssetPrefix>thug2H</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditThugArmor</ID>
+		<AssetPrefix>thug2H</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditThugVeteranArmor</ID>
+		<AssetPrefix>thug2H</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- BANDIT ARMORS - leader-->
+	<Entry>
+		<ID>skBanditLeaderRecruitArmor</ID>
+		<AssetPrefix>leader2H</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditLeaderNoviceArmor</ID>
+		<AssetPrefix>leader2H</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditLeaderArmor</ID>
+		<AssetPrefix>leader2H</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skBanditLeaderVeteranArmor</ID>
+		<AssetPrefix>leader2H</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- WORKER -->
+	<Entry>
+		<ID>skLtWorkerArmor</ID>
+		<AssetPrefix>workerBasic</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!--ELF DALISH - 1H - Tracker-->
+	<Entry>
+		<ID>skLtElfDalish1HRecruitArmor</ID>
+		<AssetPrefix>dalishTrackerRecruit2h</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalish1HApprenticeArmor</ID>
+		<AssetPrefix>dalishTrackerRecruit2h</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalish1HArmor</ID>
+		<AssetPrefix>dalishTracker2h</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalish1HMasterArmor</ID>
+		<AssetPrefix>dalishTrackerMaster2h</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!--ELF DALISH - 2H - Forester-->
+	<Entry>
+		<ID>skLtElfDalish2HRecruitArmor</ID>
+		<AssetPrefix>dalishForesterRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalish2HApprenticeArmor</ID>
+		<AssetPrefix>dalishForesterRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalish2HArmor</ID>
+		<AssetPrefix>dalishForester</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalish2HMasterArmor</ID>
+		<AssetPrefix>dalishForesterMaster</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<!-- player equipable -->
+		<ID>skLtElfDalishChitinPlayerArmor</ID>
+		<AssetPrefix>elvenChitin</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!--ELF DALISH - DW - Wanderer-->
+	<Entry>
+		<ID>skLtElfDalishDWRecruitArmor</ID>
+		<AssetPrefix>dalishWandererRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishDWApprenticeArmor</ID>
+		<AssetPrefix>dalishWandererRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishDWArmor</ID>
+		<AssetPrefix>dalishWanderer</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishDWMasterArmor</ID>
+		<AssetPrefix>dalishWandererMaster</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!--ELF DALISH - Dagger-->
+	<Entry>
+		<ID>skLtElfDalishDaggerRecruitArmor</ID>
+		<AssetPrefix>dalishScoutRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishDaggerApprenticeArmor</ID>
+		<AssetPrefix>dalishScoutRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishDaggerArmor</ID>
+		<AssetPrefix>dalishScout</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishDaggerMasterArmor</ID>
+		<AssetPrefix>dalishScoutMaster</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!--ELF DALISH - Ranged - Hunter-->
+	<Entry>
+		<ID>skLtElfDalishRangedRecruitArmor</ID>
+		<AssetPrefix>dalishHunterRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishRangedApprenticeArmor</ID>
+		<AssetPrefix>dalishHunterRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishRangedArmor</ID>
+		<AssetPrefix>dalishHunter</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishRangedMasterArmor</ID>
+		<AssetPrefix>dalishHunterMaster</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!--ELF DALISH - Buffer - Ranger-->
+	<Entry>
+		<ID>skLtElfDalishBufferRecruitArmor</ID>
+		<AssetPrefix>dalishRangerRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishBufferApprenticeArmor</ID>
+		<AssetPrefix>dalishRangerRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishBufferArmor</ID>
+		<AssetPrefix>dalishRanger</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishBufferMasterArmor</ID>
+		<AssetPrefix>dalishRangerMaster</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<!-- player equipable -->
+		<ID>skLtElfDalishRangerPlayerArmor</ID>
+		<AssetPrefix>elvenRanger</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!--ELF DALISH - Thrown - Sapper-->
+	<Entry>
+		<ID>skLtElfDalishSapperRecruitArmor</ID>
+		<AssetPrefix>dalishTrapperRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishSapperApprenticeArmor</ID>
+		<AssetPrefix>dalishTrapperRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishSapperArmor</ID>
+		<AssetPrefix>dalishTrapper</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishSapperMasterArmor</ID>
+		<AssetPrefix>dalishTrapperMaster</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<!-- player equipable -->
+		<ID>skLtElfDalishSapperPlayerArmor</ID>
+		<AssetPrefix>elvenTrapper</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!--ELF DALISH - Healer - Keeper-->
+	<Entry>
+		<ID>skLtElfDalishHealerRecruitArmor</ID>
+		<AssetPrefix>dalishStewardRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishHealerApprenticeArmor</ID>
+		<AssetPrefix>dalishStewardRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishHealerArmor</ID>
+		<AssetPrefix>dalishSteward</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishHealerMasterArmor</ID>
+		<AssetPrefix>dalishStewardMaster</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!--ELF DALISH - Direct Damage - Keeper-->
+	<Entry>
+		<ID>skLtElfDalishHandlerRecruitArmor</ID>
+		<AssetPrefix>dalishHandlerRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishHandlerApprenticeArmor</ID>
+		<AssetPrefix>dalishHandlerRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishHandlerArmor</ID>
+		<AssetPrefix>dalishHandler</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishHandlerMasterArmor</ID>
+		<AssetPrefix>dalishHandlerMaster</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!--ELF DALISH - Frost - Keeper-->
+	<Entry>
+		<ID>skLtElfDalishChillerRecruitArmor</ID>
+		<AssetPrefix>dalishChillerRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishChillerApprenticeArmor</ID>
+		<AssetPrefix>dalishChillerRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishChillerArmor</ID>
+		<AssetPrefix>dalishChiller</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtElfDalishChillerMasterArmor</ID>
+		<AssetPrefix>dalishChillerMaster</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!--DRAGON CULTIST - Tamer-->
+	<Entry>
+		<ID>skLtDragon1HRecruitArmor</ID>
+		<AssetPrefix>cultistTamerRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtDragon1HApprenticeArmor</ID>
+		<AssetPrefix>cultistTamerRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtDragon1HArmor</ID>
+		<AssetPrefix>cultistTamer</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtDragon1HMasterArmor</ID>
+		<AssetPrefix>cultistTamerVeteran</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!--DRAGON CULTIST - Fanatic-->
+	<Entry>
+		<ID>skLtDragon2HRecruitArmor</ID>
+		<AssetPrefix>cultistFanaticRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtDragon2HApprenticeArmor</ID>
+		<AssetPrefix>cultistFanatic</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtDragon2HArmor</ID>
+		<AssetPrefix>cultistFanaticVeteran</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtDragon2HMasterArmor</ID>
+		<AssetPrefix>cultistFanaticVeteran</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!--DRAGON CULTIST - Mad Monk-->
+	<Entry>
+		<ID>skLtDragonBufferRecruitArmor</ID>
+		<AssetPrefix>cultistZealotRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtDragonBufferApprenticeArmor</ID>
+		<AssetPrefix>cultistZealotRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtDragonBufferArmor</ID>
+		<AssetPrefix>cultistZealot</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtDragonBufferMasterArmor</ID>
+		<AssetPrefix>cultistZealotVeteran</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!--DRAGON CULTIST - Seductress-->
+	<Entry>
+		<ID>skLtDragonDaggerRecruitArmor</ID>
+		<AssetPrefix>cultistSeductressRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtDragonDaggerApprenticeArmor</ID>
+		<AssetPrefix>cultistSeductressRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtDragonDaggerArmor</ID>
+		<AssetPrefix>cultistSeductress</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtDragonDaggerMasterArmor</ID>
+		<AssetPrefix>cultistSeductressVeteran</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtHuntsmanArmor</ID>
+		<AssetPrefix>huntsmanLeather</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtNightstalkerArmor</ID>
+		<AssetPrefix>nightstalkerLeather</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtAssassinArmor</ID>
+		<AssetPrefix>assassinLeather</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtRaiderScoundrelMaster</ID>
+		<AssetPrefix>raiderScoundrelMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtCoterieArsonistMaster</ID>
+		<AssetPrefix>coterieArsonistMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtHighDragonArmor</ID>
+		<AssetPrefix>highDragonRogue</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtHurlockAssassinOmegaArmor</ID>
+		<AssetPrefix>hurlockAssassinOmega</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skLtShadowElfSapperArmor</ID>
+		<AssetPrefix>shadowSapperMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+</RigData>

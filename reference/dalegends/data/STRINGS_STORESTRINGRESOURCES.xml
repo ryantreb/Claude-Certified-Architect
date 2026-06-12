@@ -1,0 +1,73 @@
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Soren Johnson (Electronic Arts) -->
+<StringData>
+	<String key="STORE_FILTER_LABEL">Show Me:</String>
+	<String key="STORE_SORT_LABEL">Sort By:</String>
+	<String key="CODE_PROMPT">Enter Code</String>
+	<String key="SUBMIT_CODE_BUTTON">Submit</String>
+	
+	<String key="SORT_LVL_LOW_TO_HIGH">Level: Low to High</String>
+	<String key="SORT_LVL_HIGH_TO_LOW">Level: High to Low</String>
+	<String key="SORT_PRICE_LOW_TO_HIGH">Price: Low to High</String>
+	<String key="SORT_PRICE_HIGH_TO_LOW">Price: High to Low</String>
+	<String key="SORT_ALPHABETICAL">Name</String>
+	
+	<String key="SUBFILTER_ALL">All</String>
+	<String key="SUBFILTER_ITEMS_BOMBS">Bombs</String>
+	<String key="SUBFILTER_ITEMS_POTIONS">Potions</String>
+	<String key="SUBFILTER_ITEMS_KITS">Kits</String>
+	<String key="SUBFILTER_WEAPONS_ONEHAND">1 Handed Weapons</String>
+	<String key="SUBFILTER_WEAPONS_TWOHAND">2 Handed Weapons</String>	
+	<String key="SUBFILTER_WEAPONS_DUALWIELD">Dual Wield Weapons</String>
+	<String key="SUBFILTER_WEAPONS_SWORDS">Swords</String>
+	<String key="SUBFILTER_WEAPONS_AXES">Axes</String>		
+	<String key="SUBFILTER_WEAPONS_THROWING">Throwing Weapons</String>
+	<String key="SUBFILTER_WEAPONS_CLUBS">Clubs</String>
+	<String key="SUBFILTER_WEAPONS_BOWS">Bows</String>
+	<String key="SUBFILTER_WEAPONS_STAVES">Staves</String>
+	<String key="SUBFILTER_ARMOR_HELMETS">Helmets</String>
+	<String key="SUBFILTER_ARMOR_METALARMOR">Metal Armor</String>
+	<String key="SUBFILTER_ARMOR_LEATHERARMOR">Leather Armor</String>
+	<String key="SUBFILTER_ARMOR_ROBES">Robes</String>
+	<String key="SUBFILTER_ARMOR_SHIELDS">Shields</String>
+	<String key="SUBFILTER_ACCESSORIES_AMULETS">Amulets</String>
+	<String key="SUBFILTER_ACCESSORIES_RINGS">Rings</String>
+	<String key="SUBFILTER_ACCESSORIES_BELTS">Belts</String>
+	
+	<String key="SUBFILTER_CONSUMABLE_PERK">Perks</String>
+
+	<!--  promo code promotion names -->
+	<String key="EA_EMPLOYEE_PROMO">EA Employee Promo Pack</String>
+	<String key="NEWSLETTER_PROMO_1">Newsletter Perk 1</String>
+	<String key="NEWSLETTER_PROMO_2">Newsletter Promo 2</String>
+	<String key="NEWSLETTER_PROMO_3">Newsletter Promo 3</String>
+	<String key="NEWSLETTER_PROMO_4">Newsletter Promo 4</String>
+	<String key="NEWSLETTER_PROMO_5">Newsletter Promo 5</String>
+	<String key="NEWSLETTER_PROMO_6">Newsletter Promo 6</String>
+	<String key="AMULET_SUFFERING_PROMO">Silent Suffering Promo</String>
+	<String key="E3_PROMO_2011">Battlefield 3 Promo</String>
+	<String key="NEWSLETTER_PROMO_7">Newsletter Promo 7</String>
+	<String key="GUILD_VS_GUILD_PROMO">Guild Vs Guild Promo</String>
+	<String key="NEWSLETTER_PROMO_8">Newsletter Promo 8</String>
+	<String key="NEWSLETTER_PROMO_9">Newsletter Promo 9</String>
+	<String key="NEWSLETTER_PROMO_10">Newsletter Promo 10</String>
+	<String key="NEWSLETTER_PROMO_11">Newsletter Promo 11</String>
+	<String key="NEWSLETTER_PROMO_12">Newsletter Promo 12</String>
+	<String key="NEWSLETTER_PROMO_13">Newsletter Promo 13</String>
+	<String key="NEWSLETTER_PROMO_14">Newsletter Promo 14</String>
+	<String key="NEWSLETTER_PROMO_15">Newsletter Promo 15</String>
+	<String key="NEWSLETTER_PROMO_16">Newsletter Promo 16</String>
+	<String key="NEWSLETTER_PROMO_17">Newsletter Promo 17</String>
+	<String key="NEWSLETTER_PROMO_18">Newsletter Promo 18</String>
+	<String key="NEWSLETTER_PROMO_19">Newsletter Promo 19</String>
+	<String key="NEWSLETTER_PROMO_20">Newsletter Promo 20</String>
+	<String key="NEWSLETTER_PROMO_21">Newsletter Promo 21</String>
+	<String key="NEWSLETTER_PROMO_22">Newsletter Promo 22</String>
+	<String key="NEWSLETTER_PROMO_23">Newsletter Promo 23</String>
+	<String key="NEWSLETTER_PROMO_24">Newsletter Promo 24</String>
+	<String key="BF3_PROMO_2011">Battlefield 3 Helmet Promo</String>
+	<String key="BF3_WARRIOR_PROMO_2011">Battlefield 3 Warrior Helmet Promo</String>
+	<String key="BF3_MAGE_PROMO_2011">Battlefield 3 Mage Helmet Promo</String>
+	<String key="BF3_ROGUE_PROMO_2011">Battlefield 3 Rogue Helmet Promo</String>
+	<String key="MEDIA_PROMO_1">Media Promo</String>
+	<String key="ACQUISITION_PROMO_00">Awesome Promo 1</String>
+</StringData>

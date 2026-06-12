@@ -1,0 +1,41 @@
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Soren Johnson (Electronic Arts) -->
+<StringData>
+	<String key="GUILD_BUTTON_ADD">Add</String>
+	<String key="GUILD_BUTTON_REMOVE">Remove</String>
+	<String key="GUILD_BUTTON_UPGRADE"><![CDATA[{COIN}  {%amt%}]]></String>
+	<String key="GUILD_BUTTON_INGUILD">In Guild</String>
+	<String key="GUILD_BUTTON_FULL">Guild Full</String>
+	<String key="GUILD_BUTTON_BUILD"><![CDATA[Purchase
+{COIN}  {%amt%}]]></String>
+	<String key="GUILD_NAME_EDIT">Edit</String>
+	<String key="GUILD_NAME_SUBMIT">Submit</String>
+
+	<String key="GUILD_PROMO_BUTTON_BUY_THRONE_ROOM"><![CDATA[Throne Room
+{COIN}  {%amt%}]]></String>
+	<String key="GUILD_PROMO_BUTTON_UNLOCK_TAVERN"><![CDATA[Unlock
+{COIN}  {%amt%}]]></String>
+	<String key="GUILD_PROMO_BUTTON_UNLOCK_GREAT_HALL"><![CDATA[Unlock
+{COIN}  {%amt%}]]></String>
+	<String key="GUILD_PROMO_BUTTON_BUILD_GREAT_HALL"><![CDATA[Great Hall
+{COIN}  {%amt%}]]></String>
+	<String key="GUILD_PROMO_BUTTON_PREMIUM_UPGRADE"><![CDATA[Upgrade
+{CROWN,1,-4}    {%amt%}]]></String>
+	
+	<String key="DEFAULT_GUILD_RAVI_PROMO">Score the Guild Mate Bonus to reduce rest times. If you and your friend are in each others' guilds, rest times are decreased by 25%.</String>
+	<String key="COMBAT_GUILD_RAVI_PROMO">Score the Guild Mate Bonus to reduce rest times. If you and your friend are in each others' guilds, rest times are decreased by 25%.</String>
+	<String key="COMBAT_GUILD_FULL_RAVI_PROMO">If you want to recruit a friend not in your guild, you must replace a friend that is not resting.</String>
+	<String key="BUY_THRONE_ROOM_GUILD_RAVI_PROMO">If you want to add more friends to your Guild, you will need to buy a Throne Room first.</String>
+	<String key="UNLOCK_TAVERN_GUILD_RAVI_PROMO">If you want to add more friends to your Guild, you need to unlock the Tavern in your Throne Room.</String>
+	<String key="UNLOCK_GREAT_HALL_GUILD_RAVI_PROMO">If you want to add more friends to your Guild, you need to unlock the Great Hall in your Throne Room.</String>
+	<String key="BUILD_GREAT_HALL_GUILD_RAVI_PROMO">Want to add more friends to your guild? Build a Great Hall in your castle to grow your guild by 4 slots.</String>
+	<String key="PREMIUM_UPGRADE_GUILD_RAVI_PROMO">Want to use your Guild Mates more frequently? Purchase my upgrade to decrease rest times by 10%.</String>
+	<String key="REMOVE_FRIEND_GUILD_RAVI_PROMO">If you want to call {%friend_hero_name%} to battle, you must remove a friend from your guild.</String>
+
+	<String key="OPEN_GUILD_SCREEN_PROTIP">Your Guild is currently full. Let me show you how to manage your Guild now so you can use your closest friends in combat.</String>
+	<String key="GUILD_TUTORIAL_FRIENDS_AUTOMATICALLY_ADDED">Welcome to your Guild. Friends who you use in combat are automatically added to your Guild if there is space.</String>
+	<String key="GUILD_TUTORIAL_ADD_AND_REMOVE">You can only bring a Friend into battle if they are in your Guild. Add and remove friends using the buttons below.</String>
+	<String key="GUILD_TUTORIAL_GUILD_MATE_BONUS">Score the Guild Mate Bonus when you and your Friend are in each others' Guild and your rest time will be reduced by 25%.</String>
+	<String key="GUILD_TUTORIAL_MANAGE_GUILD">Enjoy managing your Guild now, or close this interface to return to battle.</String>
+	<String key="GUILD_TUTORIAL_CLICK_FRIEND_BAR">Click on friends on the friend bar to add them to your guild.</String>
+
+</StringData>

@@ -1,0 +1,685 @@
+<!-- edited with XMLSpy v2010 rel. 3 sp1 (http://www.altova.com) by BOBBY MOLDAVON (ELECTRONIC ARTS) -->
+<!-- DAJFB Char Anim Skin Definitions
+	Created 7.29.2010
+-->
+<RigData>
+	<DefaultChunkName>
+		ANIM_SKINS_HUMANELF_HEAVY
+	</DefaultChunkName>
+	<!--METAL -->
+	<Entry>
+		<ID>skHvStarterMetalArmor1</ID>
+		<AssetPrefix>quartzArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvStarterMetalArmor2</ID>
+		<AssetPrefix>tarnishedHeavyArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvStarterMetalArmor3</ID>
+		<AssetPrefix>silverliteArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvNormalMetalArmor1</ID>
+		<AssetPrefix>quartzArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvNormalMetalArmor2</ID>
+		<AssetPrefix>quartzArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvNormalMetalArmor3</ID>
+		<AssetPrefix>gildedArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvNormalMetalArmor4</ID>
+		<AssetPrefix>silverliteArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvNormalMetalArmor5</ID>
+		<AssetPrefix>ornateHolyArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvNormalMetalArmor6</ID>
+		<AssetPrefix>powerArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrMetalArmor1</ID>
+		<AssetPrefix>mirrorArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrMetalArmor2</ID>
+		<AssetPrefix>amplifyingArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrMetalArmor3</ID>
+		<AssetPrefix>shieldArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrMetalArmor4</ID>
+		<AssetPrefix>drainArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrMetalArmor5</ID>
+		<AssetPrefix>hurlockHumanArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrMetalArmor6</ID>
+		<AssetPrefix>winterArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrMetalArmor6</ID>
+		<AssetPrefix>winterArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrMetalArmor6</ID>
+		<AssetPrefix>winterArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrMetalArmor6</ID>
+		<AssetPrefix>winterArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrMetalArmor6</ID>
+		<AssetPrefix>winterArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrMetalArmor6</ID>
+		<AssetPrefix>winterArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrMetalArmor7</ID>
+		<AssetPrefix>drakeScaleArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrMetalArmor8</ID>
+		<AssetPrefix>juggernautArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrMetalArmor9</ID>
+		<AssetPrefix>ceremonialArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrMetalArmor10</ID>
+		<AssetPrefix>diligenceArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- BANDIT ARMORS FOR PLAYER -->
+	<Entry>
+		<ID>skHvBanditHeavyMercArmor</ID>
+		<AssetPrefix>banditMerc</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvBanditHeavyLeaderArmor</ID>
+		<AssetPrefix>banditLeader</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	
+	<!-- PROMO ARMORS -->
+	<Entry>
+		<ID>skHvPromoMetalArmor0</ID>
+		<AssetPrefix>hawkeHeavyArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPromoMetalArmor1</ID>
+		<AssetPrefix>bloodDragonHeavyArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPromoMetalArmor2</ID>
+		<AssetPrefix>N7heavyArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPromoMetalArmor3</ID>
+		<AssetPrefix>JadeEmpireHeavyArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--generic rig -->
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPromoMetalArmor4</ID>
+		<AssetPrefix>isaacHeavyArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPromoMetalArmor6</ID>
+		<AssetPrefix>originHeavyArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvBlackIronArmor</ID>
+		<AssetPrefix>blackironArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvTemplarArmor</ID>
+		<AssetPrefix>templarArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvCollossalArmor</ID>
+		<AssetPrefix>collossalArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvHighDragonArmor</ID>
+		<AssetPrefix>highDragonWarrior</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvRaiderBerserkerMaster</ID>
+		<AssetPrefix>raiderBerserkerMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvCoterieFootpadMaster</ID>
+		<AssetPrefix>coterieFootpadMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvHurlockAlphaNormalArmor</ID>
+		<AssetPrefix>hurlockAlphaNormal</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- BUFF ARMORS -->
+	<Entry>
+		<ID>skBfBuffGolemHumanArmor</ID>
+		<AssetPrefix>golemBuffArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- Vanity Stuff -->
+	<Entry>
+		<ID>skArmorCorpseCostume</ID>
+		<AssetPrefix>corpseCostume</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skArmorDrakeCostume</ID>
+		<AssetPrefix>drakeCostume</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skArmorGenlockRuntCostume</ID>
+		<AssetPrefix>genlockRuntCostume</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skArmorOgreCostume</ID>
+		<AssetPrefix>ogreCostume</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skArmorShriekCostume</ID>
+		<AssetPrefix>shriekCostume</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skArmorSkeletonCostume</ID>
+		<AssetPrefix>skeletonCostume</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skArmorWerewolfCostume</ID>
+		<AssetPrefix>shadowWerewolfCostume</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skArmorHurlockAlphaNormal</ID>
+		<AssetPrefix>hurlockAlphaNormal</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skArmorWinterHunterGreen</ID>
+		<AssetPrefix>winterHunterGreen</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skArmorWinterHunterBlue</ID>
+		<AssetPrefix>winterHunterMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skArmorWinterRedMaster</ID>
+		<AssetPrefix>winterRedMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skArmorWinterFrostMaster</ID>
+		<AssetPrefix>frostMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- Pride Demon -->
+	<Entry>
+		<ID>skHvPrideDemonArmor</ID>
+		<AssetPrefix>prideDemonArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- Shadow Elf Armors -->
+	<Entry>
+		<ID>skHvShadowElfSlayerMaster</ID>
+		<AssetPrefix>shadowSlayerMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- The best -->
+	<Entry>
+		<ID>skHvHurlockAttack</ID>
+		<AssetPrefix>coolHurlockPile</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- Grey Warden Armors -->
+	<Entry>
+		<ID>skArmorGreyWardenRobe</ID>
+		<AssetPrefix>greyWardenRobes</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skArmorGreyWardenLeather</ID>
+		<AssetPrefix>greyWardenLeather</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skArmorGreyWardenHeavy</ID>
+		<AssetPrefix>greyWardenHeavy</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+</RigData>

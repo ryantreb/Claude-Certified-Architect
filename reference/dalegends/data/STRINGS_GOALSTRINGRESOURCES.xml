@@ -1,0 +1,403 @@
+<StringData>
+	<!-- SAMPLE GOAL STRINGS -->
+	<String key="SAMPLE_GOAL_1_NAME">Shocked Silly.</String>
+	<String key="SAMPLE_GOAL_1_DESCRIPTION">(1) We want you to do this. Now.</String>
+	<String key="USE_SHOCKBOMB_SAMPLE_GOAL_1_1_NAME">Use 1 Shock Bomb</String>
+	<String key="USE_SHOCKBOMB_SAMPLE_GOAL_1_1_DESCRIPTION">This is an awesome objective: use 1 FTW.</String>
+	<String key="USE_SHOCKBOMB_SAMPLE_GOAL_1_2_NAME">Use 1 Shock Bomb</String>
+	<String key="USE_SHOCKBOMB_SAMPLE_GOAL_1_2_DESCRIPTION">This is an awesome objective: use 1 FTW.</String>
+	<String key="SAMPLE_GOAL_2_NAME">Shell Shocked.</String>
+	<String key="SAMPLE_GOAL_2_DESCRIPTION">(2) We want you to do this. Now.</String>
+	<String key="USE_SHOCKBOMB_SAMPLE_GOAL_2_NAME">Use 1 Shock Bomb</String>
+	<String key="USE_SHOCKBOMB_SAMPLE_GOAL_2_DESCRIPTION">This is an awesome objective: use 1 FTW.</String>
+	<String key="SAMPLE_GOAL_3_NAME">Shockingly Bombed.</String>
+	<String key="SAMPLE_GOAL_3_DESCRIPTION">(3) We want you to do this. Now.</String>
+	<String key="USE_SHOCKBOMB_SAMPLE_GOAL_3_NAME">Use 1 Shock Bomb</String>
+	<String key="USE_SHOCKBOMB_SAMPLE_GOAL_3_DESCRIPTION">This is an awesome objective: use 1 FTW.</String>
+	<String key="SAMPLE_GOAL_4_NAME">Shock It To 'Em</String>
+	<String key="SAMPLE_GOAL_4_DESCRIPTION">(4) We want you to do this. Now.</String>
+	<String key="USE_SHOCKBOMB_SAMPLE_GOAL_4_NAME">Use 1 Shock Bomb</String>
+	<String key="USE_SHOCKBOMB_SAMPLE_GOAL_4_DESCRIPTION">This is an awesome objective: use 1 FTW.</String>
+	<String key="SAMPLE_GOAL_5_NAME">We Will, We Will Shock You.</String>
+	<String key="SAMPLE_GOAL_5_DESCRIPTION">(5) We want you to do this. Now.</String>
+	<String key="USE_SHOCKBOMB_SAMPLE_GOAL_5_NAME">Use 1 Shock Bomb</String>
+	<String key="USE_SHOCKBOMB_SAMPLE_GOAL_5_DESCRIPTION">This is an awesome objective: use 1 FTW.</String>
+	<!-- ACTUAL GOAL STRINGS -->
+	<!-- GOAL_1 -->
+	<String key="GOAL_1_NAME">New Hire</String>
+	<String key="GOAL_1_DESCRIPTION">Workers help you craft bombs and potions for battle</String>
+	<String key="GOAL_1_1_NAME">Build a Worker Room</String>
+	<String key="GOAL_1_1_DESCRIPTION">Access Build Mode by clicking on the hammer icon</String>
+	<String key="GOAL_1_2_NAME">Assign Worker</String>
+	<String key="GOAL_1_2_DESCRIPTION">Assign the worker to craft potions in the apothecary</String>
+	<!-- GOAL_2 -->
+	<String key="GOAL_2_NAME">Apothecary Now</String>
+	<String key="GOAL_2_DESCRIPTION">Build another apothecary</String>
+	<String key="GOAL_2_1_NAME">Build an Apothecary</String>
+	<String key="GOAL_2_1_DESCRIPTION">Access Build Mode by clicking on the hammer icon</String>
+	<String key="GOAL_2_2_NAME">Unlock Greater Health Potion</String>
+	<String key="GOAL_2_2_DESCRIPTION">Use gold to unlock the greater health potion in the apothecary crafting menu</String>
+	<String key="GOAL_2_3_NAME">Craft 10 Greater Health Potions</String>
+	<String key="GOAL_2_3_DESCRIPTION">Craft 10 greater health potions using the apothecary</String>
+	<!-- GOAL_3 -->
+	<String key="GOAL_3_NAME">New Toys</String>
+	<String key="GOAL_3_DESCRIPTION">Win weapons and armor in combat or buy premium versions from the store, then equip them on your hero to increase your might</String>
+	<String key="GOAL_3_1_NAME">Replace Your Weapon</String>
+	<String key="GOAL_3_1_DESCRIPTION">Drag a new weapon to its slot using the inventory menu</String>
+	<String key="GOAL_3_2_NAME">Replace Your Armor</String>
+	<String key="GOAL_3_2_DESCRIPTION">Drag a new suit of armor to its slot using the inventory menu</String>
+	<!-- GOAL_4 -->
+	<String key="GOAL_4_NAME">Staffing Up</String>
+	<String key="GOAL_4_DESCRIPTION">By adding more workers, you'll be able to craft more bombs and potions</String>
+	<String key="GOAL_4_1_NAME">Build a Second Worker Room</String>
+	<String key="GOAL_4_1_DESCRIPTION">Access Build Mode by clicking on the hammer icon</String>
+	<String key="GOAL_4_2_NAME">Assign Worker</String>
+	<String key="GOAL_4_2_DESCRIPTION">Assign the worker to craft bombs in the alchemy lab</String>
+	<!-- GOAL_5 -->
+	<String key="GOAL_5_NAME">Bombs Away!</String>
+	<String key="GOAL_5_DESCRIPTION">Build an alchemy lab to craft powerful bombs for use in battle</String>
+	<String key="GOAL_5_1_NAME">Build an Alchemy Lab</String>
+	<String key="GOAL_5_1_DESCRIPTION">Access Build Mode by clicking on the hammer icon</String>
+	<String key="GOAL_5_2_NAME">Craft 10 Shard Bombs</String>
+	<String key="GOAL_5_2_DESCRIPTION">Craft 10 shard bombs using the alchemy lab</String>
+	<String key="GOAL_5_3_NAME">Use 5 Shard Bombs</String>
+	<String key="GOAL_5_3_DESCRIPTION">Use 5 shard bombs during battle</String>
+	<!-- GOAL_6 -->
+	<String key="GOAL_6_NAME">More Mana</String>
+	<String key="GOAL_6_DESCRIPTION">Mana potions allow you to use powerful skills in combat, so unlocking the ability to craft them is essential</String>
+	<String key="GOAL_6_1_NAME">Unlock Mana Potions</String>
+	<String key="GOAL_6_1_DESCRIPTION">Use gold to unlock them in the apothecary crafting menu</String>
+	<String key="GOAL_6_2_NAME">Craft 10 Mana Potions</String>
+	<String key="GOAL_6_2_DESCRIPTION">Craft 10 mana potions using the apothecary</String>
+	<String key="GOAL_6_3_NAME">Use 5 Mana Potions</String>
+	<String key="GOAL_6_3_DESCRIPTION">Use 5 mana potions during battle</String>
+	<!-- GOAL_7 -->
+	<String key="GOAL_7_NAME">What's in a Name</String>
+	<String key="GOAL_7_DESCRIPTION">Personalize your hero to make them stand out among your allies by clicking on the "view your character" icon</String>
+	<String key="GOAL_7_1_NAME">Name Your Hero</String>
+	<String key="GOAL_7_1_DESCRIPTION">Give your hero a name worthy of "legendary" status</String>
+	<String key="GOAL_7_2_NAME">Edit Your Warcry</String>
+	<String key="GOAL_7_2_DESCRIPTION">Your hero will shout a warcry when landing a critical hit</String>
+	<String key="GOAL_7_3_NAME">Name Your Castle</String>
+	<String key="GOAL_7_3_DESCRIPTION">Your friends will see your castle name whenever they visit</String>
+	<!-- GOAL_8 -->
+	<String key="GOAL_8_NAME">Infirmation</String>
+	<String key="GOAL_8_DESCRIPTION">Infirmaries allow you to crafts kits that aid your allies in battle</String>
+	<String key="GOAL_8_1_NAME">Build an Infirmary</String>
+	<String key="GOAL_8_1_DESCRIPTION">Access Build Mode by clicking on the hammer icon</String>
+	<String key="GOAL_8_2_NAME">Craft 10 Injury Kits</String>
+	<String key="GOAL_8_2_DESCRIPTION">Craft 10 injury kits using the infirmary</String>
+	<String key="GOAL_8_3_NAME">Use 5 Injury Kits</String>
+	<String key="GOAL_8_3_DESCRIPTION">Use 5 injury kits during battle</String>
+	<!-- GOAL_9 -->
+	<String key="GOAL_9_NAME">Playing with Fire</String>
+	<String key="GOAL_9_DESCRIPTION">Fire bombs will burn away your enemies' mana</String>
+	<String key="GOAL_9_1_NAME">Unlock Fire Bombs</String>
+	<String key="GOAL_9_1_DESCRIPTION">Use gold to unlock them in the alchemy lab crafting menu</String>
+	<String key="GOAL_9_2_NAME">Craft 10 Fire Bombs</String>
+	<String key="GOAL_9_2_DESCRIPTION">Craft 10 fire bombs using the alchemy lab</String>
+	<String key="GOAL_9_3_NAME">Use 5 Fire Bombs</String>
+	<String key="GOAL_9_3_DESCRIPTION">Use 5 fire bombs during battle</String>
+	<!-- GOAL_10 -->
+	<String key="GOAL_10_NAME">Better with Friends</String>
+	<String key="GOAL_10_DESCRIPTION">The more real-life friends you have playing Dragon Age Legends, the more fun you'll have!</String>
+	<String key="GOAL_10_1_NAME">Add a friend to your guild</String>
+	<String key="GOAL_10_1_DESCRIPTION">Open the Guild screen via the main menu</String>
+	<String key="GOAL_10_2_NAME">Add 4 friends to your guild</String>
+	<String key="GOAL_10_2_DESCRIPTION">Open the Guild screen via the main menu</String>
+	<String key="GOAL_10_3_NAME">Bring friends into combat 6 times</String>
+	<String key="GOAL_10_3_DESCRIPTION">Use your friends in combat as allies</String>
+	<!-- GOAL_11 -->
+	<String key="GOAL_11_NAME">Shave and a Haircut</String>
+	<String key="GOAL_11_DESCRIPTION">Customize your hero's appearance by clicking on the "view your character" icon and then selecting "Edit Hero"</String>
+	<String key="GOAL_11_1_NAME">Customize Your Hero</String>
+	<String key="GOAL_11_1_DESCRIPTION">Make sure you explore both hair and face options</String>
+	<!-- GOAL_12 -->
+	<String key="GOAL_12_NAME">Shocker</String>
+	<String key="GOAL_12_DESCRIPTION">Shock bombs deal damage to all enemies</String>
+	<String key="GOAL_12_1_NAME">Unlock Shock Bombs</String>
+	<String key="GOAL_12_1_DESCRIPTION">Use gold to unlock them in the alchemy lab crafting menu</String>
+	<String key="GOAL_12_2_NAME">Craft 10 Shock Bombs</String>
+	<String key="GOAL_12_2_DESCRIPTION">Craft 10 shock bombs using the alchemy lab</String>
+	<String key="GOAL_12_3_NAME">Use 5 Shock Bombs</String>
+	<String key="GOAL_12_3_DESCRIPTION">Use 5 shock bombs during battle</String>
+	<!-- GOAL_13 -->
+	<String key="GOAL_13_NAME">Castle Tour</String>
+	<String key="GOAL_13_DESCRIPTION">Visit your friends' castles to see what they've built and collect gold</String>
+	<String key="GOAL_13_1_NAME">Visit a Friend's Castle</String>
+	<String key="GOAL_13_1_DESCRIPTION">Click on a friend in your friend bar, then on the castle icon</String>
+	<String key="GOAL_13_2_NAME">Collect Friend Gold</String>
+	<String key="GOAL_13_2_DESCRIPTION">Friends who have gold for you are noted in the friend bar</String>
+	<!-- GOAL_14 -->
+	<String key="GOAL_14_NAME">Merchant</String>
+	<String key="GOAL_14_DESCRIPTION">Buy premium gear from the store, and sell your extra items to earn gold!</String>
+	<String key="GOAL_14_1_NAME">Make a Purchase</String>
+	<String key="GOAL_14_1_DESCRIPTION">Use your gold to make a purchase in the store</String>
+	<String key="GOAL_14_2_NAME">Make a Profit</String>
+	<String key="GOAL_14_2_DESCRIPTION">Drag an item from your inventory to the sell icon to receive gold</String>
+	<!-- GOAL_15 -->
+	<String key="GOAL_15_NAME">Heavy Load</String>
+	<String key="GOAL_15_DESCRIPTION">Increase your inventory space to carry more items at once</String>
+	<String key="GOAL_15_1_NAME">Build a Storehouse</String>
+	<String key="GOAL_15_1_DESCRIPTION">Access Build Mode by clicking on the hammer icon</String>
+	<!-- GOAL_16 -->
+	<String key="GOAL_16_NAME">Freeze!</String>
+	<String key="GOAL_16_DESCRIPTION">Frost bombs will prevent enemies from taking action for a number of turns</String>
+	<String key="GOAL_16_1_NAME">Unlock Frost Bombs</String>
+	<String key="GOAL_16_1_DESCRIPTION">Use gold to unlock them in the alchemy lab crafting menu</String>
+	<String key="GOAL_16_2_NAME">Craft 10 Frost Bombs</String>
+	<String key="GOAL_16_2_DESCRIPTION">Craft 10 frost bombs using the alchemy lab</String>
+	<String key="GOAL_16_3_NAME">Use 5 Frost Bombs</String>
+	<String key="GOAL_16_3_DESCRIPTION">Use 5 frost bombs during battle</String>
+	<!-- GOAL_17 -->
+	<String key="GOAL_17_NAME">The Cure</String>
+	<String key="GOAL_17_DESCRIPTION">Antidote kits cure your allies of poison and restore some health</String>
+	<String key="GOAL_17_1_NAME">Unlock Antidote Kit</String>
+	<String key="GOAL_17_1_DESCRIPTION">Use gold to unlock them in the infirmary crafting menu</String>
+	<String key="GOAL_17_2_NAME">Craft 10 Antidote Kits</String>
+	<String key="GOAL_17_2_DESCRIPTION">Craft 10 antidote kits using the infirmary</String>
+	<String key="GOAL_17_3_NAME">Use 5 Antidote Kits</String>
+	<String key="GOAL_17_3_DESCRIPTION">Use 5 antidote kits during battle</String>
+	<!-- GOAL_18 -->
+	<String key="GOAL_18_NAME">Decorate</String>
+	<String key="GOAL_18_DESCRIPTION">Customize your castle's appearance by clicking on the "view your character" icon and then selecting "Edit Castle"</String>
+	<String key="GOAL_18_1_NAME">Change Background</String>
+	<String key="GOAL_18_1_DESCRIPTION">Change your castle's background</String>
+	<String key="GOAL_18_2_NAME">Change Style</String>
+	<String key="GOAL_18_2_DESCRIPTION">Change your castle's style</String>
+	<!-- GOAL_19 -->
+	<String key="GOAL_19_NAME">Efficiency Expert</String>
+	<String key="GOAL_19_DESCRIPTION">Furnaces increase the productivity of adjacent rooms, meaning you can craft more items at once</String>
+	<String key="GOAL_19_1_NAME">Unlock the Furnace</String>
+	<String key="GOAL_19_1_DESCRIPTION">Use gold to unlock the furnace via the throne room</String>
+	<String key="GOAL_19_2_NAME">Build a Furnace</String>
+	<String key="GOAL_19_2_DESCRIPTION">Access Build Mode by clicking on the hammer icon</String>
+	<String key="GOAL_19_3_NAME">Productivity Boost</String>
+	<String key="GOAL_19_3_DESCRIPTION">Upgrade the productivity of 2 rooms via their crafting menus</String>
+	<!-- GOAL_20 -->
+	<String key="GOAL_20_NAME">Bombs Away! II</String>
+	<String key="GOAL_20_DESCRIPTION">Building a second alchemy lab will allow you to craft more bombs at once</String>
+	<String key="GOAL_20_1_NAME">Build an Alchemy Lab</String>
+	<String key="GOAL_20_1_DESCRIPTION">Access Build Mode by clicking on the hammer icon</String>
+	<String key="GOAL_20_2_NAME">Craft 10 Grease Bombs</String>
+	<String key="GOAL_20_2_DESCRIPTION">Craft 10 grease bombs using the alchemy lab</String>
+	<String key="GOAL_20_3_NAME">Use 5 Grease Bombs</String>
+	<String key="GOAL_20_3_DESCRIPTION">Use 5 grease bombs during battle</String>
+	<!-- GOAL_21 -->
+	<String key="GOAL_21_NAME">Just Concentrate</String>
+	<String key="GOAL_21_DESCRIPTION">Concentration potions increase your chance to land a critical hit</String>
+	<String key="GOAL_21_1_NAME">Unlock Concentration</String>
+	<String key="GOAL_21_1_DESCRIPTION">Use gold to unlock them in the apothecary crafting menu</String>
+	<String key="GOAL_21_2_NAME">Craft 10 Concentration Potions</String>
+	<String key="GOAL_21_2_DESCRIPTION">Craft 10 concentration potions using the apothecary</String>
+	<String key="GOAL_21_3_NAME">Use 5 Concentration Potion</String>
+	<String key="GOAL_21_3_DESCRIPTION">Use 5 concentration potions during battle</String>
+	<!-- GOAL_22 -->
+	<String key="GOAL_22_NAME">Into the Woods</String>
+	<String key="GOAL_22_DESCRIPTION">Your quest to reach Lukesh and Ravi's son continues in the Planasene Forest</String>
+	<String key="GOAL_22_1_NAME">Enter the Forest</String>
+	<String key="GOAL_22_1_DESCRIPTION">Click on the Planasene Forest region via the world map</String>
+	<!-- GOAL_23 -->
+	<String key="GOAL_23_NAME">A Little Boost</String>
+	<String key="GOAL_23_DESCRIPTION">Battle Poultices temporarily increase the attack and luck stats of one of your allies</String>
+	<String key="GOAL_23_1_NAME">Unlock Battle Poultice</String>
+	<String key="GOAL_23_1_DESCRIPTION">Use gold to unlock them in the infirmary crafting menu</String>
+	<String key="GOAL_23_2_NAME">Craft 10 Battle Poultices</String>
+	<String key="GOAL_23_2_DESCRIPTION">Craft 10 battle poultices using the infirmary</String>
+	<String key="GOAL_23_3_NAME">Use 5 Battle Poultices</String>
+	<String key="GOAL_23_3_DESCRIPTION">Use 5 battle poultices during battle</String>
+	<!-- GOAL_24 -->
+	<String key="GOAL_24_NAME">Poisoner</String>
+	<String key="GOAL_24_DESCRIPTION">Poison bombs damage affected enemies each turn</String>
+	<String key="GOAL_24_1_NAME">Unlock Poison Bombs</String>
+	<String key="GOAL_24_1_DESCRIPTION">Use gold to unlock them in the alchemy lab crafting menu</String>
+	<String key="GOAL_24_2_NAME">Craft 10 Poison Bombs</String>
+	<String key="GOAL_24_2_DESCRIPTION">Craft 10 poison bombs using the alchemy lab</String>
+	<String key="GOAL_24_3_NAME">Use 5 Poison Bombs</String>
+	<String key="GOAL_24_3_DESCRIPTION">Use 5 poison bombs during battle</String>
+	<!-- GOAL_25 -->
+	<String key="GOAL_25_NAME">Make Room</String>
+	<String key="GOAL_25_DESCRIPTION">Upgrading your storehouse will allow you to carry even more items at once</String>
+	<String key="GOAL_25_1_NAME">Upgrade Storehouse</String>
+	<String key="GOAL_25_1_DESCRIPTION">Mouse over your storehouse and click the arrow icon</String>
+	<!-- GOAL_26 -->
+	<String key="GOAL_26_NAME">A Royal Room</String>
+	<String key="GOAL_26_DESCRIPTION">The Throne Room allows you to unlock useful new castle rooms</String>
+	<String key="GOAL_26_1_NAME">Build a Throne Room</String>
+	<String key="GOAL_26_1_DESCRIPTION">Access Build Mode by clicking on the hammer icon</String>
+	<!-- GOAL_27 -->
+	<String key="GOAL_27_NAME">Bombastic</String>
+	<String key="GOAL_27_DESCRIPTION">Bombs can help turn the tide in your favor, so use them often</String>
+	<String key="GOAL_27_1_NAME">Kill 25 Enemies</String>
+	<String key="GOAL_27_1_DESCRIPTION">Use bombs to defeat 25 enemies</String>
+	<!-- GOAL_28 -->
+	<String key="GOAL_28_NAME">Mana Maven</String>
+	<String key="GOAL_28_DESCRIPTION">Mana potions are essential for combat, so make sure you keep crafting them</String>
+	<String key="GOAL_28_1_NAME">Craft 50 Potions</String>
+	<String key="GOAL_28_1_DESCRIPTION">Have your workers craft 50 mana potions</String>
+	<String key="GOAL_28_2_NAME">Use 25 Potions</String>
+	<String key="GOAL_28_2_DESCRIPTION">Consume 25 mana potions during combat</String>
+	<!-- GOAL_29 -->
+	<String key="GOAL_29_NAME">Skillful</String>
+	<String key="GOAL_29_DESCRIPTION">Make sure you take advantage of your skills during battle; they can often be the key to victory</String>
+	<String key="GOAL_29_1_NAME">Kill 25 Enemies</String>
+	<String key="GOAL_29_1_DESCRIPTION">Use skills to defeat 25 enemies</String>
+	<String key="GOAL_29_2_NAME">Upgrade a Skill</String>
+	<String key="GOAL_29_2_DESCRIPTION">When leveling up, choose to upgrade an existing skill</String>
+	<!-- GOAL_30 -->
+	<String key="GOAL_30_NAME">Shocking!</String>
+	<String key="GOAL_30_DESCRIPTION">Shock bombs are highly effective against large groups of enemies</String>
+	<String key="GOAL_30_1_NAME">Craft 50 Shock Bombs</String>
+	<String key="GOAL_30_1_DESCRIPTION">Have your workers craft 50 shock bombs</String>
+	<String key="GOAL_30_2_NAME">Use 25 Shock Bombs</String>
+	<String key="GOAL_30_2_DESCRIPTION">Use 25 shock bombs during combat</String>
+	<!-- GOAL_31 -->
+	<String key="GOAL_31_NAME">Cheers</String>
+	<String key="GOAL_31_DESCRIPTION">Taverns increase the happiness of adjacent worker rooms, meaning you can craft items faster</String>
+	<String key="GOAL_31_1_NAME">Unlock the Tavern</String>
+	<String key="GOAL_31_1_DESCRIPTION">Use gold to unlock the tavern via the throne room</String>
+	<String key="GOAL_31_2_NAME">Build a Tavern</String>
+	<String key="GOAL_31_2_DESCRIPTION">Make sure you place it next to at least one worker room</String>
+	<!-- GOAL_32 -->
+	<String key="GOAL_32_NAME">More Mana II</String>
+	<String key="GOAL_32_DESCRIPTION">Greater mana potions refill more mana per use</String>
+	<String key="GOAL_32_1_NAME">Unlock Greater Mana</String>
+	<String key="GOAL_32_1_DESCRIPTION">Use gold to unlock the greater mana potion in the apothecary crafting menu</String>
+	<String key="GOAL_32_2_NAME">Craft 10 Potions</String>
+	<String key="GOAL_32_2_DESCRIPTION">Craft 10 greater mana potions using the apothecary</String>
+	<String key="GOAL_32_3_NAME">Use 5 Potions</String>
+	<String key="GOAL_32_3_DESCRIPTION">Use 5 greater mana potions potions during battle</String>
+	<!-- GOAL_33 -->
+	<String key="GOAL_33_NAME">On the Defensive</String>
+	<String key="GOAL_33_DESCRIPTION">Defense potions significantly boost your defense stat</String>
+	<String key="GOAL_33_1_NAME">Unlock Defense Potion</String>
+	<String key="GOAL_33_1_DESCRIPTION">Use gold to unlock the defense potion in the apothecary crafting menu</String>
+	<String key="GOAL_33_2_NAME">Craft 10 Potions</String>
+	<String key="GOAL_33_2_DESCRIPTION">Craft 10 defense potions using the apothecary</String>
+	<String key="GOAL_33_3_NAME">Use 5 Potions</String>
+	<String key="GOAL_33_3_DESCRIPTION">Use 5 defense potions during battle</String>
+	<!-- GOAL_34 -->
+	<String key="GOAL_34_NAME">Moneymaker</String>
+	<String key="GOAL_34_DESCRIPTION">The treasury automatically collects your friend gold from other castles</String>
+	<String key="GOAL_34_1_NAME">Unlock the Treasury</String>
+	<String key="GOAL_34_1_DESCRIPTION">Use gold to unlock the treasury via the throne room</String>
+	<String key="GOAL_34_2_NAME">Build a Treasury</String>
+	<String key="GOAL_34_2_DESCRIPTION">Access Build Mode by clicking on the hammer icon</String>
+	<String key="GOAL_34_3_NAME">Collect Gold</String>
+	<String key="GOAL_34_3_DESCRIPTION">Assign a worker to collect your friend gold</String>
+	<!-- GOAL_35 -->
+	<String key="GOAL_35_NAME">Power Up</String>
+	<String key="GOAL_35_DESCRIPTION">Power potions significantly boost your attack stat</String>
+	<String key="GOAL_35_1_NAME">Unlock Power Potion</String>
+	<String key="GOAL_35_1_DESCRIPTION">Use gold to unlock them in the apothecary crafting menu</String>
+	<String key="GOAL_35_2_NAME">Craft 10 Potions</String>
+	<String key="GOAL_35_2_DESCRIPTION">Craft 10 power potions using the apothecary</String>
+	<String key="GOAL_35_3_NAME">Use 5 Potions</String>
+	<String key="GOAL_35_3_DESCRIPTION">Use 5 power potions during battle</String>
+	<!-- GOAL_36 -->
+	<String key="GOAL_36_NAME">Bad Trip</String>
+	<String key="GOAL_36_DESCRIPTION">Acid bombs temporarily lower the defense of all enemies</String>
+	<String key="GOAL_36_1_NAME">Unlock Acid Bomb</String>
+	<String key="GOAL_36_1_DESCRIPTION">Use gold to unlock them in the alchemy lab crafting menu</String>
+	<String key="GOAL_36_2_NAME">Craft 10 Acid Bombs</String>
+	<String key="GOAL_36_2_DESCRIPTION">Craft 10 acid bombs using the alchemy lab</String>
+	<String key="GOAL_36_3_NAME">Use 5 Acid Bombs</String>
+	<String key="GOAL_36_3_DESCRIPTION">Use 5 acid bombs during battle</String>
+	<!-- GOAL_37 -->
+	<String key="GOAL_37_NAME">Missed Me!</String>
+	<String key="GOAL_37_DESCRIPTION">Agility potions significantly boost your agility stat, giving you more turns in combat and increasing your chance to dodge</String>
+	<String key="GOAL_37_1_NAME">Unlock Agility Potion</String>
+	<String key="GOAL_37_1_DESCRIPTION">Use gold to unlock the agility potion in the apothecary crafting menu</String>
+	<String key="GOAL_37_2_NAME">Craft 10 Potions</String>
+	<String key="GOAL_37_2_DESCRIPTION">Craft 10 agility potions using the apothecary</String>
+	<String key="GOAL_37_3_NAME">Use 5 Potions</String>
+	<String key="GOAL_37_3_DESCRIPTION">Use 5 agility potions during battle</String>
+	<!-- GOAL_38 -->
+	<String key="GOAL_38_NAME">New Hires</String>
+	<String key="GOAL_38_DESCRIPTION">Add new workers to your castle by purchasing additional worker rooms</String>
+	<String key="GOAL_38_1_NAME">Build 2 More Worker Rooms</String>
+	<String key="GOAL_38_1_DESCRIPTION">Access Build Mode by clicking on the hammer icon</String>
+	<!-- GOAL_39 -->
+	<String key="GOAL_39_NAME">Brace Yourself</String>
+	<String key="GOAL_39_DESCRIPTION">Bracing kits cure your allies of crippled and restore some health</String>
+	<String key="GOAL_39_1_NAME">Unlock Bracing Kit</String>
+	<String key="GOAL_39_1_DESCRIPTION">Use gold to unlock them in the infirmary crafting menu</String>
+	<String key="GOAL_39_2_NAME">Craft 10 Kits</String>
+	<String key="GOAL_39_2_DESCRIPTION">Craft 10 bracing kits using the infirmary</String>
+	<String key="GOAL_39_3_NAME">Use 5 Kits</String>
+	<String key="GOAL_39_3_DESCRIPTION">Use 5 bracing kits during battle</String>
+	<!-- GOAL_40 -->
+	<String key="GOAL_40_NAME">New Alliances</String>
+	<String key="GOAL_40_DESCRIPTION">Expanding your great hall allows you to add even more friends to your guild</String>
+	<String key="GOAL_40_1_NAME">Upgrade Great Hall</String>
+	<String key="GOAL_40_1_DESCRIPTION">Mouse over your great hall and click the arrow icon</String>
+	<!-- GOAL_41 -->
+	<String key="GOAL_41_NAME">Team Effort</String>
+	<String key="GOAL_41_DESCRIPTION">Team mana salves add mana to every member of your party</String>
+	<String key="GOAL_41_1_NAME">Unlock Team Mana Salve</String>
+	<String key="GOAL_41_1_DESCRIPTION">Use gold to unlock team mana salves in the infirmary crafting menu</String>
+	<String key="GOAL_41_2_NAME">Craft 10 Team Mana Salves</String>
+	<String key="GOAL_41_2_DESCRIPTION">Craft 10 team mana salves using the infirmary</String>
+	<String key="GOAL_41_3_NAME">Use 5 Team Mana Salves</String>
+	<String key="GOAL_41_3_DESCRIPTION">Use 5 team mana salves during battle</String>
+	<!-- GOAL_42 -->
+	<String key="GOAL_42_NAME">Bombastic II</String>
+	<String key="GOAL_42_DESCRIPTION">Bombs can help turn the tide in your favor, so use them often</String>
+	<String key="GOAL_42_1_NAME">Kill 50 Enemies</String>
+	<String key="GOAL_42_1_DESCRIPTION">Use bombs to defeat 50 enemies</String>
+	<!-- GOAL_43 -->
+	<String key="GOAL_43_NAME">Remodeler</String>
+	<String key="GOAL_43_DESCRIPTION">Room upgrades improve the overall benefits your castle provides, so save up gold and upgrade often</String>
+	<String key="GOAL_43_1_NAME">Complete 10 Upgrades</String>
+	<String key="GOAL_43_1_DESCRIPTION">Upgrade 10 different castle rooms</String>
+	<!-- GOAL_44 -->
+	<String key="GOAL_44_NAME">Making Friends</String>
+	<String key="GOAL_44_DESCRIPTION">Build a great hall so that you can add more friends to your guild</String>
+	<String key="GOAL_44_1_NAME">Unlock Great Hall</String>
+	<String key="GOAL_44_1_DESCRIPTION">Use gold to unlock the great hall via the throne room</String>
+	<String key="GOAL_44_2_NAME">Build Great Hall</String>
+	<String key="GOAL_44_2_DESCRIPTION">The great hall requires 6 expansion rooms and must be built aboveground</String>
+	<!-- GOAL_45 -->
+	<String key="GOAL_45_NAME">Greater Mana Salve</String>
+	<String key="GOAL_45_DESCRIPTION">Greater mana salves grant a large amount of mana to one of your allies</String>
+	<String key="GOAL_45_1_NAME">Unlock Greater Mana Salve</String>
+	<String key="GOAL_45_1_DESCRIPTION">Use gold to unlock greater mana salves in the infirmary crafting menu</String>
+	<String key="GOAL_45_2_NAME">Craft 10 Greater Mana Salves</String>
+	<String key="GOAL_45_2_DESCRIPTION">Craft 10 greater mana salves using the infirmary</String>
+	<String key="GOAL_45_3_NAME">Use 5 Greater Mana Salves</String>
+	<String key="GOAL_45_3_DESCRIPTION">Use 5 greater mana salves during battle</String>
+	<!-- GOAL_46 -->
+	<String key="GOAL_46_NAME">Mana Salve</String>
+	<String key="GOAL_46_DESCRIPTION">Mana salves grant a small amount of mana to one of your allies</String>
+	<String key="GOAL_46_1_NAME">Build another Infirmary</String>
+	<String key="GOAL_46_1_DESCRIPTION">Access Build Mode by clicking on the hammer icon</String>
+	<String key="GOAL_46_2_NAME">Unlock Mana Salve</String>
+	<String key="GOAL_46_2_DESCRIPTION">Use gold to unlock mana salves in the infirmary crafting menu</String>
+	<String key="GOAL_46_3_NAME">Craft and use 5 Mana Salves</String>
+	<String key="GOAL_46_3_DESCRIPTION">Use 5 mana salves during battle</String>
+	<!-- GOAL_47 -->
+	<String key="GOAL_47_NAME">Greater Injury Kits</String>
+	<String key="GOAL_47_DESCRIPTION">Greater injury kits grant a large amount of health to one of your allies</String>
+	<String key="GOAL_47_1_NAME">Unlock Greater Injury Kits</String>
+	<String key="GOAL_47_1_DESCRIPTION">Use gold to unlock greater injury kits in the infirmary crafting menu</String>
+	<String key="GOAL_47_2_NAME">Craft 10 Greater Injury Kits</String>
+	<String key="GOAL_47_2_DESCRIPTION">Craft 10 greater injury kits using the infirmary</String>
+	<String key="GOAL_47_3_NAME">Use 5 Greater Injury Kits</String>
+	<String key="GOAL_47_3_DESCRIPTION">Use 5 greater injury kits during battle</String>
+	<!-- GOAL_48-->
+	<String key="GOAL_48_NAME">Team Injury Kits</String>
+	<String key="GOAL_48_DESCRIPTION">Team injury kits grant a small amount of health to each of your allies</String>
+	<String key="GOAL_48_1_NAME">Unlock Team Injury Kits</String>
+	<String key="GOAL_48_1_DESCRIPTION">Use gold to unlock team injury kits in the infirmary crafting menu</String>
+	<String key="GOAL_48_2_NAME">Craft 10 Team Injury Kits</String>
+	<String key="GOAL_48_2_DESCRIPTION">Craft 10 team injury kits using the infirmary</String>
+	<String key="GOAL_48_3_NAME">Use 5 Team Injury Kits</String>
+	<String key="GOAL_48_3_DESCRIPTION">Use 5 team injury kits during battle</String>
+	<!-- GOAL_49 -->
+	<String key="GOAL_49_NAME">Guild vs Guild</String>
+	<String key="GOAL_49_DESCRIPTION">Description</String>
+	<String key="GOAL_49_1_NAME">Defeat a friend</String>
+	<String key="GOAL_49_1_DESCRIPTION"/>
+	<String key="GOAL_49_2_NAME">Become a Nemesis</String>
+	<String key="GOAL_49_2_DESCRIPTION"/>
+</StringData>

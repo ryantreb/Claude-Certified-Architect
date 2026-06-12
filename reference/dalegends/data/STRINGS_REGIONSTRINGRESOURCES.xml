@@ -1,0 +1,25 @@
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Soren Johnson (Electronic Arts) -->
+<StringData>
+	<String key="REGION_C_NAME">Your Castle</String>
+	<String key="REGION_C_DESCRIPTION">It's your castle. Home sweet home.</String>
+	<String key="REGION_DEBUG_NAME">Debug region</String>
+	<String key="REGION_DEBUG_DESCRIPTION">Do you dare to enter the secret land of debugging where story doesn't matter?</String>
+	<String key="REGION_UT_NAME">Unit Test Land</String>
+	<String key="REGION_UT_DESCRIPTION">Welcome to Unit Test Land, where MockPlayers make everything possible!</String>
+	<String key="REGION_T_NAME">The Viscount's Estate</String>
+	<String key="REGION_T_DESCRIPTION">An overgrown piece of land once owned by the Viscount Ravi</String>
+	<String key="REGION_PP_NAME">Planasene Pass</String>
+	<String key="REGION_PP_DESCRIPTION">A forested, mountain pass</String>
+	<String key="REGION_PF_NAME">Planasene Forest</String>
+	<String key="REGION_PF_DESCRIPTION">A dark, foreboding forest</String>
+	<String key="REGION_WC_NAME">The Waking Coves</String>
+	<String key="REGION_WC_DESCRIPTION">Deep, mysterious sea caves</String>
+	<String key="REGION_GD_NAME">The Green Dales</String>
+	<String key="REGION_GD_DESCRIPTION">TBD</String>
+	<String key="REGION_WS_NAME">The Waking Sea</String>
+	<String key="REGION_WS_DESCRIPTION">A menacing rocky isle</String>
+	<String key="REGION_OR_NAME">Orzammar</String>
+	<String key="REGION_OR_DESCRIPTION">A dwarven thaig in the Frostback Mountains</String>
+	<String key="REGION_KW_NAME">Kirkwall</String>
+	<String key="REGION_KW_DESCRIPTION">A grand city north of the Waking Sea.</String>
+</StringData>

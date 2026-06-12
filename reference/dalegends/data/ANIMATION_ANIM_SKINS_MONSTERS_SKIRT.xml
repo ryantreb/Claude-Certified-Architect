@@ -1,0 +1,543 @@
+<!-- edited with XMLSpy v2010 rel. 3 sp1 (http://www.altova.com) by BOBBY MOLDAVON (ELECTRONIC ARTS) -->
+<!-- DAJFB Char Anim Skin Definitions
+	Created 7.29.2010
+-->
+<RigData>
+	<DefaultChunkName>
+		ANIM_SKINS_MONSTERS_SKIRT
+	</DefaultChunkName>
+	<!-- cultist -->
+	<!-- used by cultistPrimal, cultistCreation, cultistConjuror, cultistEntropy -->
+	<Entry>
+		<ID>skCultistArmor</ID>
+		<AssetPrefix>cultist</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plCultist"/>
+		</RigPieceSet>
+	</Entry>
+	<!-- arcaneHorror -->
+	<Entry>
+		<ID>skArcaneHorrorArmor</ID>
+		<AssetPrefix>arcaneHorror</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plArcaneHorror"/>
+		</RigPieceSet>
+	</Entry>
+	<!-- Hurlock Emissary from DA2 -->
+	<!-- CONJURER -->
+	<Entry>
+		<ID>skHurlockConjurerRuntArmor</ID>
+		<AssetPrefix>hurlockConjurerRunt</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skHurlockConjurerArmor</ID>
+		<AssetPrefix>hurlockConjurer</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skHurlockConjurerAlphaArmor</ID>
+		<AssetPrefix>hurlockConjurerAlpha</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skHurlockConjurerOmegaArmor</ID>
+		<AssetPrefix>hurlockConjurerOmega</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<!-- EMISSARY -->
+	<Entry>
+		<ID>skHurlockEmissaryRuntArmor</ID>
+		<AssetPrefix>hurlockEmissaryRunt</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skHurlockEmissaryArmor</ID>
+		<AssetPrefix>hurlockEmissary</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skHurlockEmissaryAlphaArmor</ID>
+		<AssetPrefix>hurlockEmissaryAlpha</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skHurlockEmissaryOmegaArmor</ID>
+		<AssetPrefix>hurlockEmissaryOmega</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<!-- SHAMAN -->
+	<Entry>
+		<ID>skHurlockShamanRuntArmor</ID>
+		<AssetPrefix>hurlockShamanRunt</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skHurlockShamanArmor</ID>
+		<AssetPrefix>hurlockShaman</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skHurlockShamanAlphaArmor</ID>
+		<AssetPrefix>hurlockShamanAlpha</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skHurlockShamanOmegaArmor</ID>
+		<AssetPrefix>hurlockShamanOmega</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<!-- SHAMAN SUPER -->
+	<Entry>
+		<ID>skHurlockShamanSuperAlphaArmor</ID>
+		<AssetPrefix>hurlockShamanSuperAlpha</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<!-- Hurlock Emissary Blue has cloak - normal hEmiss in biped_journeys -->
+	<Entry>
+		<ID>skHurlockEmissBlueOrzArmor</ID>
+		<AssetPrefix>hEmissBlueOrz</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissBlueOrz"/>
+		</RigPieceSet>
+	</Entry>
+	<!-- Dwaft Bandit cape -->
+	<Entry>
+		<ID>skBanditArmor</ID>
+		<AssetPrefix>dwarfBandit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plDwarfBandit"/>
+		</RigPieceSet>
+	</Entry>
+	<!--
+	<Entry>
+		<ID>skSoleilArmor</ID>
+		<AssetPrefix>Soleil</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plSoleil" />
+		</RigPieceSet>
+	</Entry>	
+	<Entry>
+		<ID>skTianneArmor</ID>
+		<AssetPrefix>tianne</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plTianne" />
+		</RigPieceSet>
+	</Entry>	
+-->
+	<!-- Arcane Conjurer-->
+	<Entry>
+		<ID>skArcaneHorrorConjurerArmor</ID>
+		<AssetPrefix>arcaneHorrorConjurer</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skArcaneConjurerGreaterArmor</ID>
+		<AssetPrefix>arcaneConjurerGreater</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skArcaneConjurerLesserArmor</ID>
+		<AssetPrefix>arcaneConjurerLesser</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<!-- Arcane Elementalist -->
+	<Entry>
+		<ID>skArcaneElementalistArmor</ID>
+		<AssetPrefix>arcaneElementalist</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skArcaneElementalistGreaterArmor</ID>
+		<AssetPrefix>arcaneElementalistGreater</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skArcaneElementalistLesserArmor</ID>
+		<AssetPrefix>arcaneElementalistLesser</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<!-- Arcane Horror -->
+	<Entry>
+		<ID>skArcaneHorrorArmor</ID>
+		<AssetPrefix>arcaneHorror</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skArcaneHorrorGreaterArmor</ID>
+		<AssetPrefix>arcaneHorrorGreater</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skArcaneHorrorLesserArmor</ID>
+		<AssetPrefix>arcaneHorrorLesser</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<!-- Cultists Conjuring -->
+	<Entry>
+		<ID>skCultistConjuringRecruitArmor</ID>
+		<AssetPrefix>cultistConjuringRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skCultistConjuringArmor</ID>
+		<AssetPrefix>cultistConjuring</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skCultistConjuringVeteranArmor</ID>
+		<AssetPrefix>cultistConjuringVeteran</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<!-- Cultists Crippling -->
+	<Entry>
+		<ID>skCultistCripplingRecruitArmor</ID>
+		<AssetPrefix>cultistCripplingRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skCultistCripplingArmor</ID>
+		<AssetPrefix>cultistCrippling</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skCultistCripplingVeteranArmor</ID>
+		<AssetPrefix>cultistCripplingVeteran</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<!-- Cultists Elemental -->
+	<Entry>
+		<ID>skCultistElementalRecruitArmor</ID>
+		<AssetPrefix>cultistElementalRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skCultistElementalArmor</ID>
+		<AssetPrefix>cultistElemental</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skCultistElementalVeteranArmor</ID>
+		<AssetPrefix>cultistElementalVeteran</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<!-- Cultists Healing -->
+	<Entry>
+		<ID>skCultistHealingRecruitArmor</ID>
+		<AssetPrefix>cultistHealingRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skCultistHealingArmor</ID>
+		<AssetPrefix>cultistHealing</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skCultistHealingVeteranArmor</ID>
+		<AssetPrefix>cultistHealingVeteran</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<!--TEMPLAR Mage - Primal-->
+	<Entry>
+		<ID>skTemplarPrimalRecruitArmor</ID>
+		<AssetPrefix>cultistConjuringRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skTemplarPrimalArmor</ID>
+		<AssetPrefix>cultistConjuring</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skTemplarPrimalVeteranArmor</ID>
+		<AssetPrefix>cultistConjuringVeteran</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<!--TEMPLAR Mage - Creation-->
+	<Entry>
+		<ID>skTemplarCreationRecruitArmor</ID>
+		<AssetPrefix>cultistCripplingRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skTemplarCreationArmor</ID>
+		<AssetPrefix>cultistCrippling</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skTemplarCreationVeteranArmor</ID>
+		<AssetPrefix>cultistCripplingVeteran</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<!--TEMPLAR Mage - Conjuring-->
+	<Entry>
+		<ID>skTemplarConjuringRecruitArmor</ID>
+		<AssetPrefix>cultistCripplingRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skTemplarConjuringArmor</ID>
+		<AssetPrefix>cultistCrippling</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skTemplarConjuringVeteranArmor</ID>
+		<AssetPrefix>cultistCripplingVeteran</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<!--TEMPLAR Mage - Entropy-->
+	<Entry>
+		<ID>skTemplarEntropyRecruitArmor</ID>
+		<AssetPrefix>cultistCripplingRecruit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skTemplarEntropyArmor</ID>
+		<AssetPrefix>cultistCrippling</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skTemplarEntropyVeteranArmor</ID>
+		<AssetPrefix>cultistCripplingVeteran</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothMobBodyStandard"/>
+		</RigPieceSet>
+	</Entry>
+	
+	<!-- GOLEM MAGE -->
+	<Entry>
+		<ID>skGolemMageRuntArmor</ID>
+		<AssetPrefix>golemMageRunt</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skGolemMageArmor</ID>
+		<AssetPrefix>golemMage</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	<Entry>
+		<ID>skGolemMageAlphaArmor</ID>
+		<AssetPrefix>golemMageAlpha</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockEmissary"/>
+		</RigPieceSet>
+	</Entry>
+	
+	<!-- adding raspin boss -->
+	<Entry>
+		<ID>skHvBossArmorRaspinRaid</ID>
+		<AssetPrefix>bossArmorRaspin</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHurlockBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	
+</RigData>

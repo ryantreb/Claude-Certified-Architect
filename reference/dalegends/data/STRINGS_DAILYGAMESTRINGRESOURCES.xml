@@ -1,0 +1,29 @@
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Soren Johnson (Electronic Arts) -->
+<StringData>
+	<String key="DAILY_GAME_CARD_NAME"><![CDATA[Game {%game_num%}]]></String>
+	<String key="DAILY_GAME_INSTRUCTION_1"><![CDATA[Scratch off 3 matching icons in a row to win prizes!]]></String>
+	<String key="DAILY_GAME_INSTRUCTION_2"><![CDATA[Match 1 of the numbers at left to win prizes!]]></String>
+	<String key="DAILY_GAME_INSTRUCTION_3"><![CDATA[Scratch off 3 matching icons in a row to win prizes!]]></String>
+	<String key="DAILY_GAME_INSTRUCTION_4"><![CDATA[Match 1 of the numbers at left to win prizes!]]></String>
+	<String key="DAILY_GAME_INSTRUCTION_5"><![CDATA[Scratch off 3 matching icons in a row to win prizes!]]></String>
+	<String key="DAILY_GAME_WIN_MESSAGE"><![CDATA[You won! Come back tomorrow to play again!]]></String>
+	<String key="DAILY_GAME_LOSE_MESSAGE"><![CDATA[You lost. Come back tomorrow to play again!]]></String>	
+	<String key="DAILY_GAME_TOOLTIP_TITLE_1"><![CDATA[MATCH TO WIN]]></String>
+	<String key="DAILY_GAME_TOOLTIP_TITLE_2"><![CDATA[FIND YOUR NUMBER]]></String>
+	<String key="DAILY_GAME_TOOLTIP_TITLE_3"><![CDATA[MATCH TO WIN]]></String>
+	<String key="DAILY_GAME_TOOLTIP_TITLE_4"><![CDATA[FIND YOUR NUMBER]]></String>
+	<String key="DAILY_GAME_TOOLTIP_TITLE_5"><![CDATA[MATCH TO WIN]]></String>
+	<String key="DAILY_GAME_TOOLTIP_MESSAGE_1"><![CDATA[Scratch and match the following icons to their prizes.]]></String>
+	<String key="DAILY_GAME_TOOLTIP_MESSAGE_2"><![CDATA[Scratch off your numbers and then try to match one of the winning numbers.]]></String>
+	<String key="DAILY_GAME_TOOLTIP_MESSAGE_3"><![CDATA[Scratch and match the following icons to their prizes.]]></String>
+	<String key="DAILY_GAME_TOOLTIP_MESSAGE_4"><![CDATA[Scratch off your numbers and then try to match one of the winning numbers.]]></String>
+	<String key="DAILY_GAME_TOOLTIP_MESSAGE_5"><![CDATA[Scratch and match the following icons to their prizes.]]></String>
+	<String key="DAILY_GAME_WIN_LABEL_TIER_1"><![CDATA[WINNER!]]></String>
+	<String key="DAILY_GAME_WIN_LABEL_TIER_2"><![CDATA[WINNER!]]></String>
+	<String key="DAILY_GAME_WIN_LABEL_TIER_3"><![CDATA[WINNER!]]></String>
+	<String key="DAILY_GAME_WIN_LABEL_TIER_4"><![CDATA[WINNER!]]></String>
+	<String key="DAILY_GAME_HEADER"><![CDATA[Play for 5 days in a row for the best payout!]]></String>
+	<String key="DAILY_GAME_TOP_PRIZES_FREE"><![CDATA[Top Prizes]]></String>
+	<String key="DAILY_GAME_TOP_PRIZES_PURCHASED"><![CDATA[Jackpot Prizes]]></String>
+	<String key="DAILY_GAME_IN_USE"><![CDATA[In Use]]></String>
+</StringData>

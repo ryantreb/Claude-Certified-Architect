@@ -1,0 +1,436 @@
+<!-- DAJFB Char Anim Skin Definitions
+	Created 7.29.2010
+-->
+<RigData>
+	<DefaultChunkName>
+		ANIM_SKINS_HUMANELF_ROBE
+	</DefaultChunkName>
+	
+	<!-- ROBE -->
+	<Entry>
+		<ID>skRbStarterRobeArmor1</ID>
+		<AssetPrefix>blueBathRobe</AssetPrefix>
+		<!--<AssetPrefix>fadedRobes</AssetPrefix>-->
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skRbStarterRobeArmor2</ID>
+		<AssetPrefix>robesOfVagaries</AssetPrefix>
+		<!--<AssetPrefix>frayedRobes</AssetPrefix>-->
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skRbStarterRobeArmor3</ID>
+		<AssetPrefix>dirtyRobes</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>	
+	<Entry>
+		<ID>skRbNormalRobeArmor1</ID>
+		<AssetPrefix>blueBathRobe</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>	
+	<Entry>
+		<ID>skRbNormalRobeArmor2</ID>
+		<AssetPrefix>robesOfBronze</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>	
+	<Entry>
+		<ID>skRbNormalRobeArmor3</ID>
+		<AssetPrefix>robesOfVagaries</AssetPrefix>
+		<!--<AssetPrefix>unfashionableRobes</AssetPrefix>-->
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>	
+	<Entry>
+		<ID>skRbNormalRobeArmor4</ID>
+		<AssetPrefix>robesOfVagaries</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>	
+	<Entry>
+		<ID>skRbNormalRobeArmor5</ID>
+		<AssetPrefix>centurionRobes</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>	
+	<Entry>
+		<ID>skRbNormalRobeArmor6</ID>
+		<AssetPrefix>robesOfFortitude</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+		<Entry>
+		<ID>skRbNormalRobeArmor7</ID>
+		<AssetPrefix>shreddedRobes</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+		<Entry>
+		<ID>skRbNormalRobeArmor8</ID>
+		<AssetPrefix>wilderRobes</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skRbPrRobeArmor1</ID>
+		<AssetPrefix>primalRobes</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skRbPrRobeArmor2</ID>
+		<AssetPrefix>creationRobes</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skRbPrRobeArmor3</ID>
+		<AssetPrefix>spiritRobes</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skRbPrRobeArmor4</ID>
+		<AssetPrefix>entropyRobes</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>	
+	<Entry>
+		<ID>skRbPrRobeArmor5</ID>
+		<AssetPrefix>fadedRobes</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skRbPrRobeArmor6</ID>
+		<AssetPrefix>draughtRobe</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skRbPrRobeArmor7</ID>
+		<AssetPrefix>keepersRobes</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skRbPrRobeArmor8</ID>
+		<AssetPrefix>hawkeRobeArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skRbBanditApostateRobes</ID>
+		<AssetPrefix>banditApostate</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	
+	<!-- ELF ROBES -->
+	<Entry>
+		<ID>skRbElfElvenRobes</ID>
+		<AssetPrefix>elvenRobes</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skRbElfShamanRobes</ID>
+		<AssetPrefix>shamanRobes</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet> <!--cloth robe rig -->
+			<PieceList ID="plClothBodyStandard" />
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	
+	<!-- PROMO ARMORS -->
+	<!-- hawke Dragon Age  -->
+	<Entry>
+		<ID>skRbPromoRobeArmor0</ID>
+		<AssetPrefix>hawkeRobeArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	
+	<!-- blood dragon Dragon Age  -->
+	<Entry>
+		<ID>skRbPromoRobeArmor1</ID>
+		<AssetPrefix>bloodDragonRobeArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothBodyStandard"/>	<!--CLOTH!!!-->
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	
+	<!-- N7 Mass Effect  -->
+	<Entry>
+		<ID>skRbPromoRobeArmor2</ID>
+		<AssetPrefix>N7robeArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	
+	<!-- Deaths Hand - Jade Empire  -->
+	<Entry>
+		<ID>skRbPromoRobeArmor3</ID>
+		<AssetPrefix>JadeEmpireRobeArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- Sir Isaac Dead Space  -->
+	<Entry>
+		<ID>skRbPromoRobeArmor4</ID>
+		<AssetPrefix>isaacRobeArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- Origin  -->
+	<Entry>
+		<ID>skRbPromoRobeArmor6</ID>
+		<AssetPrefix>originRobeArmor</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	
+	<!-- Premium B -->
+	<Entry>
+		<ID>skRbResolutionistArmor</ID>
+		<AssetPrefix>resolutionistRobe</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skRbMagusArmor</ID>
+		<AssetPrefix>magusRobe</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skRbDreamerArmor</ID>
+		<AssetPrefix>dreamerRobe</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skRbHighDragonArmor</ID>
+		<AssetPrefix>highDragonMage</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skRbRaiderHereticMaster</ID>
+		<AssetPrefix>raiderHereticMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skRbCultistCripplingRecruit</ID>
+		<AssetPrefix>cultistCripplingRecruit</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skRbHurlockConjurerRobe</ID>
+		<AssetPrefix>hurlockShamanRobe</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skRbShadowElfCaster</ID>
+		<AssetPrefix>shadowCasterMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<!-- Vanity -->
+	<Entry>
+		<ID>skArmorWinterFrostMage</ID>
+		<AssetPrefix>frostSkirtMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+</RigData>

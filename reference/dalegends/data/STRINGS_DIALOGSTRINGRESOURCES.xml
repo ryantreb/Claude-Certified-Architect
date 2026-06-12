@@ -1,0 +1,312 @@
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Soren Johnson (Electronic Arts) -->
+<StringData>
+	<String key="CONFIRM_ITEM_PURCHASE_TITLE"><![CDATA[Purchase the {%ITEM_NAME%}]]></String>
+	<String key="CONFIRM_ITEM_PURCHASE_INFORMATION"><![CDATA[What would you like to do with the {%ITEM_NAME%}?]]></String>
+	<String key="CONFIRM_ITEM_PURCHASE_STORE_LABEL"><![CDATA[Store]]></String>
+	<String key="CONFIRM_ITEM_PURCHASE_EQUIP_LABEL"><![CDATA[Equip]]></String>
+	<String key="NOT_ENOUGH_CROWNS_TITLE"><![CDATA[Not Enough Crowns]]></String>
+	<String key="NOT_ENOUGH_CROWNS_INFORMATION"><![CDATA[We're Sorry, but you need {%QUANTITY%} more Crowns in order to buy {%ITEM_NAME%}. Would you like to get more Crowns so that you can purchase {%ITEM_NAME%}?]]></String>
+	<String key="NOT_ENOUGH_CROWNS_ACT_LATER_LABEL"><![CDATA[Not Now]]></String>
+	<String key="NOT_ENOUGH_CROWNS_ACT_NOW_LABEL"><![CDATA[Buy Crowns]]></String>
+    <String key="NOT_ENOUGH_CROWNS_FOR_GOLD_TITLE"><![CDATA[Not Enough Crowns]]></String>
+	<String key="NOT_ENOUGH_CROWNS_FOR_GOLD_INFORMATION"><![CDATA[We're Sorry, but you need {%QUANTITY%} more Crowns in order to buy gold. Would you like to get more Crowns so that you can purchase gold?]]></String>
+	<String key="NOT_ENOUGH_GOLD_TITLE"><![CDATA[Not Enough Gold]]></String>
+	<String key="NOT_ENOUGH_GOLD_INFORMATION"><![CDATA[We're Sorry, but you need {%QUANTITY%} more Gold in order to buy {%ITEM_NAME%}. You can convert Crowns into Gold so that you can purchase {%ITEM_NAME%}. Would you like to get more Crowns now so that you can purchase {%ITEM_NAME%}?]]></String>
+	<String key="NOT_ENOUGH_GOLD_ACT_LATER_LABEL"><![CDATA[Not Now]]></String>
+	<String key="NOT_ENOUGH_GOLD_ACT_NOW_LABEL"><![CDATA[Get Crowns]]></String>
+	<String key="NOT_ENOUGH_GOLD_ENOUGH_CROWNS_TITLE"><![CDATA[Not Enough Gold]]></String>
+	<String key="NOT_ENOUGH_GOLD_ENOUGH_CROWNS_INFORMATION"><![CDATA[We're Sorry, but you need {%QUANTITY%} more Gold in order to buy {%ITEM_NAME%}. You can convert Crowns into Gold so that you can purchase {%ITEM_NAME%}. Would you like to get more Crowns now so that you can purchase {%ITEM_NAME%}?]]></String>
+	<String key="NOT_ENOUGH_GOLD_ENOUGH_CROWNS_ACT_LATER_LABEL"><![CDATA[Not Now]]></String>
+	<String key="NOT_ENOUGH_GOLD_ENOUGH_CROWNS_ACT_NOW_LABEL"><![CDATA[Purchase]]></String>
+	<String key="CONVERT_CROWNS_TO_GOLD_INFORMATION"><![CDATA[Choose a package to purchase more Gold. Use gold to improve your castle and buy equipment for your hero.]]></String>
+	<String key="CONVERT_CROWNS_TO_GOLD_ACT_LATER_LABEL"><![CDATA[Not Now]]></String>
+	<String key="CONVERT_CROWNS_TO_GOLD_ACT_NOW_LABEL"><![CDATA[Buy Gold!]]></String>
+	<String key="CONVERT_CROWNS_TO_GOLD_BASIC_OFFER_TITLE"><![CDATA[Basic Pack]]></String>
+	<String key="CONVERT_CROWNS_TO_GOLD_PREMIUM_OFFER_TITLE"><![CDATA[Templar Pack]]></String>
+	<String key="CONVERT_CROWNS_TO_GOLD_DELUXE_OFFER_TITLE"><![CDATA[Grey Warden Pack]]></String>
+	<String key="NOT_ENOUGH_CROWNS_FOR_CONVERSION_PACKAGE"><![CDATA[You do not have enough Crowns for any of these packages. Purchase more Crowns before converting them to Gold.]]></String>
+	<String key="NOT_ENOUGH_GOLD_INFORMATION_STANDALONE"><![CDATA[We're Sorry, but you need {%QUANTITY%} more Gold in order to buy {%ITEM_NAME%}.]]></String>
+	<String key="NOT_ENOUGH_GOLD_FOR_PURCHASE_INFORMATION_STANDALONE"><![CDATA[We're Sorry, but you need {%QUANTITY%} more Gold in order for this purchase.]]></String>
+	<String key="NOT_ENOUGH_GOLD_ACT_LATER_LABEL_STANDALONE"><![CDATA[Confirm]]></String>
+	
+	<String key="PURCHASE_CONFIRMATION_TITLE"><![CDATA[Confirm Purchase]]></String>
+	<String key="PURCHASE_CONFIRMATION_DESC1"><![CDATA[Would you like to purchase {%ITEM_NAME%}?]]></String>
+	<String key="PURCHASE_CONFIRMATION_DESC2"><![CDATA[Click the button below to complete your purchase.]]></String>
+	
+	<String key="HEAL_HERO_BEFORE_COMBAT_TITLE">Would you like to heal your hero?</String>
+	<String key="HEAL_HERO_DIALOG_TITLE">Would you like to heal your hero?</String>
+	<String key="HEAL_HERO_BEFORE_COMBAT_PROMPT">Your Health:</String>
+	<String key="HEAL_HERO_DIALOG_PROMPT">Your Health:</String>
+	<String key="RESTORES_FULL_HEALTH">Restores Full Health</String>
+	
+	<String key="HEAL_HERO_DIALOG_BEGIN">Fight!</String>
+	<String key="HEAL_HERO_DIALOG_CANCEL">Return to Map</String>
+	<String key="GVG_HEAL_HERO_DIALOG_CANCEL">Cancel</String>
+	<String key="REFILL_ENERGY_DIALOG_BEGIN">Fight!</String>
+	<String key="REFILL_ENERGY_DIALOG_CANCEL">Not Right Now</String>
+	<String key="CONSUMABLE_DIALOG_USE">Drink Potion</String>
+	<String key="CONSUMABLE_DIALOG_BUY"><![CDATA[Buy & Drink
+{COIN}    {%amount%}]]></String>
+	<String key="CONSUMABLE_DIALOG_REQUEST">None Available</String>
+	<String key="HERO_READY">Your hero is ready</String>
+	<String key="HEALTH_FULL">Health Full</String>
+	<String key="ENERGY_FULL">Energy Full</String>
+	
+	<String key="REFILL_ENERGY_BEFORE_COMBAT_TITLE"><![CDATA[You need +{%amount%}{ENERGY,1.5,5.5}!]]></String>
+	<String key="REFILL_ENERGY_DIALOG_TITLE"><![CDATA[Use Energy Potions?]]></String>
+	<String key="REFILL_ENERGY_BEFORE_COMBAT_PROMPT"><![CDATA[Your Energy:]]></String>
+	<String key="REFILL_ENERGY_DIALOG_PROMPT"><![CDATA[Your Energy:]]></String>
+
+	<String key="MESSAGE_DIALOG_YES_LABEL"><![CDATA[OK]]></String>
+
+	<String key="GENERIC_BUY_DIALOG_NO_LABEL"><![CDATA[Not Now]]></String>
+    <String key="GENERIC_BUY_DIALOG_YES_LABEL"><![CDATA[Buy Now]]></String>
+	<String key="GENERIC_BUY_AND_USE_DIALOG_YES_LABEL"><![CDATA[Buy and Use]]></String>
+	<String key="GENERIC_BUY_AND_EQUIP_DIALOG_YES_LABEL"><![CDATA[Buy & Equip]]></String>
+
+    <String key="SHARE_LEVELUP_DIALOG_TITLE"><![CDATA[You Leveled Up!]]></String>
+    <String key="SHARE_LEVELUP_DIALOG_DESC1"><![CDATA[{%hero_name%} is now a Level {%level%} {%class%}.]]></String>
+    <String key="SHARE_LEVELUP_DIALOG_DESC2"><![CDATA[You are one step closer towards becoming legendary.]]></String>
+
+	<String key="SHARE_QUEST_COMPLETE_DIALOG_TITLE"><![CDATA[Quest Completed!]]></String>
+    <String key="SHARE_QUEST_COMPLETE_DIALOG_DESC1"><![CDATA[Congratulations on beating {%quest_name%}!]]></String>
+    <String key="SHARE_QUEST_COMPLETE_DIALOG_DESC2"><![CDATA[Tales of a hero's journey grow into legend over time.]]></String>
+	
+	<String key="PARTY_SELECTION_CONFIRM_TITLE">Confirm Your Party</String>
+	<String key="PARTY_SELECTION_CONFIRM_PROMPT">You can bring up to {%maxNumber%} heroes into each fight.  Are you sure that you would like to face the enemy without more backup?</String>
+	<String key="PARTY_SELECTION_CONFIRM_YES">Continue</String>
+	<String key="PARTY_SELECTION_CONFIRM_NO">Add Heroes</String>
+	<String key="PARTY_SELECTION_CONFIRM_AUTO">Choose For Me</String>
+	
+	<String key="SKIP_TUTORIAL_YES_LABEL"><![CDATA[Skip Tutorial]]></String>
+	<String key="SKIP_TUTORIAL_WARNING_TITLE"><![CDATA[Skip Tutorial?]]></String>
+	<String key="SKIP_TUTORIAL_WARNING_DESC1"><![CDATA[Are you sure you would like to skip the tutorial?  If you do, we will bring you to your castle and give you some gold and xp.]]></String>
+	<String key="SKIP_TUTORIAL_WARNING_DESC2"><![CDATA[This is only recommended if you are unable to complete the tutorial due to experiencing bugs.  Please check the forums at social.bioware.com to report issues.]]></String>
+	
+	<!-- Friend bar-->
+	<String key="FRIEND_BAR_GOLD_NOTIFICATION">"I've earned you some gold. Visit my castle to collect it."</String>
+
+	<String key="NAME_CONFIRM_DIALOG_NAME_TEXT"><![CDATA[Enter your name]]></String>
+	<String key="NAME_CONFIRM_DIALOG_BUTTON_TEXT"><![CDATA[Continue]]></String>
+	<String key="NAME_CONFIRM_DIALOG_HERO_CREATION_TITLE_TEXT"><![CDATA[Name Your Hero]]></String>
+	<String key="NAME_CONFIRM_DIALOG_HERO_CREATION_INFO_TEXT"><![CDATA[You cannot begin your legendary adventure until your hero has a name. Enter it below.]]></String>
+	<String key="NAME_CONFIRM_DIALOG_CASTLE_CREATION_TITLE_TEXT"><![CDATA[Name Your Castle]]></String>
+	<String key="NAME_CONFIRM_DIALOG_CASTLE_CREATION_INFO_TEXT"><![CDATA[You cannot begin your legendary adventure until your castle has a name. Enter it below.]]></String>
+	<String key="NAME_CONFIRM_DIALOG_WARCRY_TEXT"><![CDATA[Enter your warcry]]></String>
+	<String key="NAME_CONFIRM_DIALOG_WARCRY_CREATION_TITLE_TEXT"><![CDATA[Create Your Warcry]]></String>
+	<String key="NAME_CONFIRM_DIALOG_WARCRY_CREATION_INFO_TEXT"><![CDATA[Create your own warcry. Enter it below.]]></String>
+
+	<String key="UNLOCK_EARNED_DIALOG_LINKED_TITLE">{%item_name%}!</String>
+	<String key="UNLOCK_EARNED_DIALOG_LINKED_DESC1">Congratulations, you have unlocked {%item_name%} in Dragon Age 2.</String>
+	<String key="UNLOCK_EARNED_DIALOG_LINKED_DESC2">Click the button below to view your unlocked items.</String>
+	<String key="UNLOCK_EARNED_DIALOG_UNLINKED_TITLE">DA2 Unlocks Earned</String>
+	<String key="UNLOCK_EARNED_DIALOG_UNLINKED_DESC">Congratulations, you have unlocked the items below in Dragon Age 2.  To use these items in Dragon Age 2 on Xbox 360, PS3 or PC, sign in below with the same EA Account you will use to play Dragon Age 2.</String>
+	<String key="UNLOCK_EARNED_DIALOG_YES_LABEL">View Unlocks</String>
+	<String key="UNLOCK_EARNED_DIALOG_NO_LABEL">Continue</String>
+	<String key="PLEASE_ENJOY_DIALOG_TITLE">Please Enjoy</String>
+	<String key="PLEASE_ENJOY_DIALOG_DESC">The following items have just been added to your EA Account.  You can now start using them in Dragon Age 2.</String>
+	<String key="PLEASE_ENJOY_DIALOG_YES_LABEL">OK</String>
+	
+	<String key="UNLOCK_NAG_DIALOG_TITLE">DA2 Unlocks!</String>
+	<String key="UNLOCK_NAG_DIALOG_DESC1">You have unlocked bonus items in Dragon Age 2.  To use these items in Dragon Age 2 on Xbox 360, PS3 or PC, sign in below with the same EA Account you will use to play Dragon Age 2.</String>
+
+	<String key="INVITE_FRIENDS_DIALOG_TITLE">Invite Friends!</String>
+	<String key="INVITE_FRIENDS_DIALOG_DESC1">Friends will help you win battles.</String>
+	<String key="INVITE_FRIENDS_DIALOG_DESC2">They can also send you Friend Gold and FREE gifts!</String>
+	<String key="INVITE_FRIENDS_DIALOG_YES_LABEL">Invite Now!</String>
+   
+	<String key="SHARE_FALLEN_FRIEND_DIALOG_TITLE"><![CDATA[A Friend Has Fallen!]]></String>
+	<String key="SHARE_FALLEN_FRIEND_DIALOG_DESC1"><![CDATA[{%friend_name%}'s hero, {%friend_hero_name%}, paid the ultimate price while at your side in battle.]]></String>
+	<String key="SHARE_FALLEN_FRIEND_DIALOG_DESC2"><![CDATA[Will you honor their sacrifice?]]></String>
+   
+	<String key="SEND_ITEM_DIALOG_TITLE"><![CDATA[Send Gift]]></String>
+	<String key="SEND_ITEM_DIALOG_INFO"><![CDATA[You are about to send a gift.]]></String>
+	<String key="SEND_ITEM_DIALOG_POSTAGE"><![CDATA[Courier Cost:]]></String>
+	<String key="SEND_ITEM_DIALOG_CANCEL"><![CDATA[Cancel]]></String>
+	<String key="SEND_ITEM_DIALOG_SEND"><![CDATA[Send & Post]]></String>
+       
+	<!-- Battle Slot Dialog -->
+	<String key="BATTLE_SLOT_DIALOG_TITLE"><![CDATA[Buy Battle Slots!]]></String>
+	<String key="BATTLE_SLOT_DIALOG_DESC1"><![CDATA[Would you like to buy additional battle slots to add more friends to your party?]]></String>
+	<String key="BATTLE_SLOT_DIALOG_DESC2"><![CDATA[Battle Slot Description.]]></String>
+	<String key="BATTLE_SLOT_DIALOG_CONFIRM_BUY"><![CDATA[Buy Now]]></String>
+
+	<!-- Challenge Token Dialog -->
+	<String key="CHALLENGE_TOKEN_DIALOG_TITLE"><![CDATA[Refill Challenge Tokens?]]></String>
+	<String key="CHALLENGE_TOKEN_DIALOG_BUY_DESC"><![CDATA[Would you like to refill your Challenge Tokens so you can instantly continue to battle your friends?]]></String>
+	<String key="CHALLENGE_TOKEN_DIALOG_ITEM_DESC"><![CDATA[]]></String>
+	<String key="CHALLENGE_TOKEN_DIALOG_CONFIRM_BUY"><![CDATA[Refill Now]]></String>
+
+	<!-- Smelling Salt Dialog -->
+	<String key="SMELLING_SALT_DIALOG_TITLE"><![CDATA[Revive Your Hero!]]></String>
+	<String key="SMELLING_SALT_DIALOG_BUY_DESC"><![CDATA[Would you like to use Smelling Salts to revive your hero?]]></String>
+	<String key="SMELLING_SALT_DIALOG_USE_DESC"><![CDATA[Would you like to use a Smelling Salt from your backpack to revive your hero?]]></String>
+	<String key="SMELLING_SALT_DIALOG_ITEM_DESC"><![CDATA[Smelling Salts will instantly revive your hero with full health so you can continue the fight.]]></String>
+	<String key="SMELLING_SALT_DIALOG_CONFIRM_BUY"><![CDATA[Buy and Use]]></String>
+	<String key="SMELLING_SALT_DIALOG_CONFIRM_USE"><![CDATA[Use Now]]></String>
+	
+	<String key="REVIVE_FOR_GOLD_DIALOG_TITLE"><![CDATA[Revive Your Hero!]]></String>
+	<String key="REVIVE_FOR_GOLD_DIALOG_DESC1"><![CDATA[Would you like to pay gold to revive your hero?]]></String>
+	<String key="REVIVE_FOR_GOLD_DIALOG_DESC2"><![CDATA[You will be instantly revived with full health so you can continue the fight.]]></String>
+	<String key="REVIVE_FOR_GOLD_DIALOG_YES_LABEL"><![CDATA[Buy]]></String>
+	<String key="REVIVE_FOR_GOLD_DIALOG_NO_LABEL"><![CDATA[No Thanks]]></String>
+	
+	<!-- Evra's Horn Dialog -->
+	<String key="HORN_EVRAS_DIALOG_TITLE"><![CDATA[Call {%target_name%} to Battle?]]></String>
+	<String key="HORN_EVRAS_DIALOG_BUY_DESC"><![CDATA[Would you like to use Evra's Horn to call {%target_name%} to Battle?]]></String>
+	<String key="HORN_EVRAS_DIALOG_USE_DESC"><![CDATA[Would you like to use an Evra's Horn from your backpack to call {%target_name%} to Battle?]]></String>
+	<String key="HORN_EVRAS_DIALOG_GUILD_BUY_DESC"><![CDATA[{%target_name%} is not in your guild. Would you like to use Evra's Horn to call {%target_name%} to Battle?]]></String>
+	<String key="HORN_EVRAS_DIALOG_GUILD_USE_DESC"><![CDATA[{%target_name%} is not in your guild. Would you like to use an Evra's Horn from your backpack to call {%target_name%} to Battle?]]></String>
+	<String key="HORN_EVRAS_DIALOG_ITEM_DESC"><![CDATA[Evra's Horn will instantly add {%target_name%} to your party with Full health.]]></String>
+	<String key="HORN_EVRAS_DIALOG_CONFIRM_BUY"><![CDATA[Buy and Use]]></String>
+	<String key="HORN_EVRAS_DIALOG_CONFIRM_USE"><![CDATA[Use Now]]></String>
+	
+	<String key="RECRUIT_FOR_GOLD_DIALOG_TITLE"><![CDATA[Recruit {%target_name%} to Battle?]]></String>
+	<String key="RECRUIT_FOR_GOLD_DIALOG_DESC1"><![CDATA[Would you like to pay gold to recruit {%target_name%} to this battle?]]></String>
+	<String key="RECRUIT_FOR_GOLD_DIALOG_DESC2"><![CDATA[{%target_name%} will be added to your party with full health.]]></String>
+	<String key="RECRUIT_FOR_GOLD_DIALOG_YES_LABEL"><![CDATA[Buy]]></String>
+	<String key="RECRUIT_FOR_GOLD_DIALOG_NO_LABEL"><![CDATA[No Thanks]]></String>
+
+	<!-- Level Cap -->
+	<String key="LEVEL_CAP_REACHED_TITLE"><![CDATA[Level Cap Reached!]]></String>
+	<String key="LEVEL_CAP_REACHED_DESC"><![CDATA[Your hero has reached his current level cap. You cannot earn any more XP until you raise your level cap by upgrading your Hero Room.]]></String>
+	<String key="LEVEL_CAP_REACHED_UPGRADE_DESC"><![CDATA[You can upgrade your Hero Room now for {%amount%} {COIN,1}. Would you like to upgrade your hero room to raise your level cap to {%newLevelCap%}?]]></String>
+	<String key="LEVEL_CAP_REACHED_PURCHASE_DESC"><![CDATA[You need {%amount%} {COIN,1} to upgrade your level cap to {%newLevelCap%}. Would you like to purchase gold now?]]></String>
+	<String key="LEVEL_CAP_REACHED_MAX_LEVEL_DESC1"><![CDATA[Your hero has reached Dragon Age Legends maximum level. This level cap may increase with future updates to the game.]]></String>
+	<String key="LEVEL_CAP_REACHED_MAX_LEVEL_DESC2"><![CDATA[Until then, we hope you continue your legendary adventure. There are always more quests to complete and more darkspawn to slay.]]></String>
+	<String key="LEVEL_CAP_REACHED_UPGRADE_YES_LABEL"><![CDATA[Upgrade]]></String>
+	<String key="LEVEL_CAP_REACHED_PURCHASE_YES_LABEL"><![CDATA[Purchase]]></String>
+	<String key="LEVEL_CAP_REACHED_MAX_LEVEL_YES_LABEL"><![CDATA[Okay]]></String>
+	<String key="LEVEL_CAP_REACHED_NO_LABEL"><![CDATA[Not Now]]></String>
+	
+	<!-- Promo Packs -->
+	<String key="PROMO_PACKS_TITLE">Promo Packs</String>
+	<String key="PROMO_PACKS_UNLINKED_DESC">You may have already earned one of several promo packs for playing EA games like Dragon Age 2, Mass Effect 2 or Dead Space 2 and signing in with your EA account. Link your account below to check for packs.</String>
+	<String key="PROMO_PACKS_LINKED_DESC">You may have already earned one of several promo packs for playing EA games like Dragon Age 2, Mass Effect 2 or Dead Space 2 and signing in with your EA account. Check for packs by pressing the button below.</String>
+	<String key="CHECK_FOR_PACKS_YES_LABEL">Check</String>
+	<String key="CHECK_FOR_PACKS_TITLE">{%pack_name%} Pack</String>
+	<String key="CHECK_FOR_PACKS_UNLINKED_DESC">You may have already earned the {%pack_name%} pack by signing in to {%game_name%} with your EA account. To check if you have earned the {%pack_name%} pack, please sign in to your EA Account below.</String>
+	<String key="CHECK_FOR_PACKS_LINKED_DESC">You may have already earned the {%pack_name%} pack by signing in to {%game_name%} with your EA account. To check if you have earned the {%pack_name%} pack, please use the button below.</String>
+	
+	<String key="PACK_CHECK_SUCCESS_TITLE">{%pack_name%} Pack</String>
+	<String key="PACK_CHECK_SUCCESS_DESC">Thank you for playing {%game_name%}. As a reward, the {%pack_name%} pack has been added to your hero's inventory. Enjoy your Legendary Adventure!</String>
+	<String key="PACK_CHECK_SUCCESS_YES_LABEL">Continue</String>
+
+	<String key="PACK_CHECK_FAILED_TITLE">Promo Packs</String>
+	<String key="PACK_CHECK_FAILED_CONSOLATION_DESC">Thank you for checking your Crate. Unfortunately, we did not find any new items for you, only this bag of {%num_coins%} Gold. You can check for promotional packs at any time by pressing the Promo Pack button on the Options menu.</String>
+	<String key="PACK_CHECK_FAILED_NO_CONSOLATION_DESC">We're sorry, but we did not find any new promotional items for you. You can check for promotional packs at any time by pressing the Promo Pack button on the Options menu.</String>
+	<String key="PACK_CHECK_FAILED_CONSOLATION_YES_LABEL">Collect Gold</String>
+	<String key="PACK_CHECK_FAILED_NO_CONSOLATION_YES_LABEL">Return</String>
+
+	<String key="BE_LEGENDARY_PACK_CHECK_UNLINKED_DESC">You may have already earned the {%pack_name%} pack by signing up to participate in the Closed Beta. To check if you have earned the {%pack_name%} pack, please sign in to your EA Account below.</String>
+	<String key="BE_LEGENDARY_PACK_CHECK_LINKED_DESC">You may have already earned the {%pack_name%} pack by signing up to participate in the Closed Beta. To check if you have earned the {%pack_name%} pack, please use the button below.</String>
+	<String key="BE_LEGENDARY_PACK_CHECK_SUCCESS_DESC">Thank you for participating in the Closed Beta! As a reward, the items found below have been added to your hero's inventory. Enjoy your Legendary Adventure!</String>
+
+	<String key="SIMS_MEDIEVAL_CHECK_UNLINKED_DESC">To earn the {%pack_name%} pack, link to your EA Account below.</String>
+	<String key="SIMS_MEDIEVAL_CHECK_LINKED_DESC">Hit check to get Medieval with the Sims.</String>
+	<String key="SIMS_MEDIEVAL_CHECK_SUCCESS_DESC">The Medieval PlumbBob is yours!</String>
+
+	<String key="ORIGINS_PACK_CHECK_UNLINKED_DESC">You may have already earned the {%pack_name%} pack by using the Origin store. To check if you have earned the {%pack_name%} pack, please sign in to your EA Account below.</String>
+	<String key="ORIGINS_PACK_CHECK_LINKED_DESC">You may have already earned the {%pack_name%} pack using the Origin store. To check if you have earned the {%pack_name%} pack, please use the button below.</String>
+	<String key="ORIGINS_PACK_CHECK_SUCCESS_DESC">Congratulations! You have successfully redeemed your exclusive Origin Promo Pack. Your items will show up in your inventory.</String>
+	<String key="P4F_CS_PACK_CHECK_SUCCESS_DESC">You have been credited the Customer Service Promo Pack for your troubles. We hope these items will improve your playing experience. Your items will show up in your inventory. Be Legendary!</String>
+
+	<String key="RESET_DATA_WARNING_YES_LABEL"><![CDATA[I Acknowledge]]></String>
+	<String key="RESET_DATA_WARNING_TITLE"><![CDATA[Player Reset Warning!]]></String>
+	<String key="RESET_DATA_WARNING_DESC1"><![CDATA[Dragon Age Legends is currently in Open Beta. During this time, you are free to start the game over and play as a new hero.]]></String>
+	<String key="RESET_DATA_WARNING_DESC2"><![CDATA[You will keep any {CROWN,1,-4}    Balance you have, but all other game data will be erased, including any premium items you have purchased.  By clicking the button below, you acknowledge that your existing data will be cleared and premium items will be erased.]]></String>
+	
+	<String key="RESPEC_HERO_WARNING_YES_LABEL"><![CDATA[I Acknowledge]]></String>
+	<String key="RESPEC_HERO_WARNING_TITLE"><![CDATA[Hero Respec Warning]]></String>
+	<String key="RESPEC_HERO_WARNING_DESC1"><![CDATA[Re-spec allows you to redistribute the skills and stat points you’ve earned over the course of the game.]]></String>
+	<String key="RESPEC_HERO_WARNING_DESC2"><![CDATA[When you re-spec, you return to Level 1 but keep all of your XP, allowing you to immediately level back up and allocate your skills and stat points in whatever new configuration you wish.]]></String>
+	
+	<String key="DIALOG_CREATE_ACCOUNT">Create</String>
+	<String key="DIALOG_LINK_ACCOUNT">Link</String>
+	
+	<String key="PROMO_CODE_INVALID_TITLE">Invalid Code</String>
+	<String key="PROMO_CODE_INVALID_DESC1">There is an error with the code you entered.  Please recheck your code and try again.</String>
+	<String key="PROMO_CODE_INVALID_YES_LABEL">OK</String>
+	
+	<String key="PROMO_CODE_EXPIRED_TITLE">Expired Code</String>
+	<String key="PROMO_CODE_EXPIRED_DESC1">The code you entered is no longer active.  This code expired on {%end_date%}.</String>
+	<String key="PROMO_CODE_EXPIRED_YES_LABEL">OK</String>
+	
+	<String key="PROMO_CODE_NOT_VALID_YET_TITLE">Early Bird</String>
+	<String key="PROMO_CODE_NOT_VALID_YET_DESC1">The code you entered is not valid until {%start_date%}.  Please come back on that date to redeem your code.</String>
+	<String key="PROMO_CODE_NOT_VALID_YET_YES_LABEL">OK</String>
+	
+	<String key="PROMO_CODE_ALREADY_REDEEMED_TITLE">Copy Cat</String>
+	<String key="PROMO_CODE_ALREADY_REDEEMED_DESC1">This promotion has already been redeemed on this account.</String>
+	<String key="PROMO_CODE_ALREADY_REDEEMED_YES_LABEL">OK</String>
+	
+	<String key="PROMO_CODE_GRANTED_TITLE">Success</String>
+	<String key="PROMO_CODE_GRANTED_DESC">You have been granted the {%promo_name%} with the following items:</String>
+	<String key="PROMO_CODE_GRANTED_YES_LABEL">OK</String>
+	
+	<String key="GVG_PROMO_CODE_GRANTED_TITLE">Congratulations!</String>
+	<String key="GVG_PROMO_CODE_GRANTED_DESC">Congratulations on completing your first battle in Guild vs Guild! As a reward, we've activated an Ultimate Alluriel's Elixir - granting you double XP for the next 72 hours!</String>
+	
+	<String key="SHARE_FRIEND_ADDED_TO_GUILD_DIALOG_TITLE"><![CDATA[Friend Added]]></String>
+	<String key="SHARE_FRIEND_ADDED_TO_GUILD_DIALOG_DESC1"><![CDATA[{%friend_name%} has been added to your guild.]]></String>
+	<String key="SHARE_FRIEND_ADDED_TO_GUILD_DIALOG_DESC2"><![CDATA[Let them know they achieved this great honor!]]></String>
+	
+	<String key="SHARE_FRIEND_REMOVED_FROM_GUILD_DIALOG_TITLE"><![CDATA[Friend Removed]]></String>
+	<String key="SHARE_FRIEND_REMOVED_FROM_GUILD_DIALOG_DESC1"><![CDATA[{%friend_name%} has been removed from your guild.]]></String>
+	<String key="SHARE_FRIEND_REMOVED_FROM_GUILD_DIALOG_DESC2"><![CDATA[Let them know they are in your closest circle no longer.]]></String>
+	
+	<String key="SHARE_GUILD_MATE_BONUS_DIALOG_TITLE"><![CDATA[Guild Mate Found!]]></String>
+	<String key="SHARE_GUILD_MATE_BONUS_DIALOG_DESC1"><![CDATA[{%friend_name%} has become your guild mate and you now both require 25% less rest!]]></String>
+	<String key="SHARE_GUILD_MATE_BONUS_DIALOG_DESC2"><![CDATA[Share the good news with them!]]></String>
+	
+	<String key="SHARE_GUILD_NAME_CHANGED_DIALOG_TITLE"><![CDATA[Guild Named]]></String>
+	<String key="SHARE_GUILD_NAME_CHANGED_DIALOG_DESC1"><![CDATA[Your guild is now named {%guild_name%}]]></String>
+	<String key="SHARE_GUILD_NAME_CHANGED_DIALOG_DESC2"><![CDATA[Let others know of your growing rise to power!]]></String>
+	
+	<String key="GVG_NOT_ENOUGH_MEMBERS_DIALOG_TITLE"><![CDATA[Guild Too Small]]></String>
+	<String key="GVG_NOT_ENOUGH_MEMBERS_DIALOG_DESC1"><![CDATA[{%friend_name%}'s guild is not large enough to challenge.]]></String>
+	<String key="GVG_NOT_ENOUGH_MEMBERS_DIALOG_DESC2"><![CDATA[Tell them to add more members to their guild so you can fight them.]]></String>
+
+	<String key="GIFT_CLAIM_ENTRY_FROM"><![CDATA[{%friend_name%}'s Gift]]></String>
+	<String key="GIFT_CLAIM_ENTRY_TIME_LEFT"><![CDATA[Days Left:]]></String>
+	<String key="GIFT_CLAIM_ENTRY_ACCEPT"><![CDATA[Accept]]></String>
+	<String key="GIFT_CLAIM_ENTRY_SELL"><![CDATA[Sell
+{COIN}    {%amount%}]]></String>
+	<String key="GIFT_CLAIM_ENTRY_RETURN"><![CDATA[Send a Return Gift]]></String>
+
+	<String key="GIFT_CLAIM_TITLE"><![CDATA[Unclaimed Gifts]]></String>
+	<String key="GIFT_CLAIM_ACCEPT_ALL"><![CDATA[Accept All]]></String>
+	<String key="GIFT_CLAIM_SELL_ALL"><![CDATA[Sell All
+{COIN}    {%amount%}]]></String>
+
+	<String key="GIFT_SENDING_TITLE"><![CDATA[Gift Sending]]></String>
+	<String key="GIFT_SENDING_BODY"><![CDATA[You are about to send {%friend_name%} a gift.]]></String>
+	<String key="GIFT_SENDING_POSTAGE"><![CDATA[Postage]]></String>
+	<String key="GIFT_SENDING_CANCEL"><![CDATA[Cancel]]></String>
+	<String key="GIFT_SENDING_SEND"><![CDATA[Send]]></String>
+
+	<String key="GIFT_SENDING_TIP_BODY"><![CDATA[Share treasures with friends! Just drag down what you want to give.]]></String>
+	<String key="GIFT_SENDING_TIP_CHECK"><![CDATA[Do not show again]]></String>
+
+	<String key="CLEAR_BOULDER_TITLE"><![CDATA[Remove Boulder?]]></String>
+	<String key="CLEAR_BOULDER_TEXT"><![CDATA[This will cost {%cost%} gold.]]></String>
+	<String key="CLEAR_BOULDER_YES_LABEL"><![CDATA[Smash]]></String>
+	<String key="CLEAR_BOULDER_NO_LABEL"><![CDATA[Cancel]]></String>
+	
+	<String key="DAILY_GAME_WON_TIER2_DIALOG_TITLE"><![CDATA[Winner!]]></String>
+	<String key="DAILY_GAME_WON_TIER2_DIALOG_DESC1"><![CDATA[Congratulations on your rare prize!]]></String>
+	<String key="DAILY_GAME_WON_TIER2_DIALOG_DESC2"><![CDATA[Would you like to share with your friends that you won {%item_name%}?]]></String>
+	
+	<String key="DAILY_GAME_WON_TIER3_DIALOG_TITLE"><![CDATA[Winner!]]></String>
+	<String key="DAILY_GAME_WON_TIER3_DIALOG_DESC1"><![CDATA[Congratulations on your truly epic prize!]]></String>
+	<String key="DAILY_GAME_WON_TIER3_DIALOG_DESC2"><![CDATA[Would you like to share with your friends that you won {%item_name%}?]]></String>
+	
+	<String key="DAILY_GAME_WON_TIER4_DIALOG_TITLE"><![CDATA[Winner!]]></String>
+	<String key="DAILY_GAME_WON_TIER4_DIALOG_DESC1"><![CDATA[Congratulations on your truly legendary prize!]]></String>
+	<String key="DAILY_GAME_WON_TIER4_DIALOG_DESC2"><![CDATA[Would you like to share with your friends that you won {%item_name%}?]]></String>
+	
+	<String key="VANITY_EQUIPMENT_WARNING_DIALOG_TITLE"><![CDATA[Cannot equip this item!]]></String>
+	<String key="VANITY_EQUIPMENT_WARNING_DIALOG_TEXT1"><![CDATA[The weapon you attempted to place in the vanity slot does not match up with the weapon type of the item currently equipped.]]></String>
+	<String key="VANITY_EQUIPMENT_WARNING_DIALOG_TEXT2"><![CDATA[Example: A one-handed vanity weapon with a two-handed weapon.]]></String>
+	<String key="VANITY_EQUIPMENT_WARNING_DIALOG_BTN"><![CDATA[OK]]></String>
+</StringData>

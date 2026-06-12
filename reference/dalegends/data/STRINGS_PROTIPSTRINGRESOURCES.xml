@@ -1,0 +1,67 @@
+<StringData>
+	<!-- TUTORIAL PRO TIPS -->
+	<String key="PROTIP_TUTORIAL_WELCOME_1">{%heroName%}, welcome to Dragon Age Legends!</String>
+	<!-- Tutorial 1 pro tips -->
+	<String key="PROTIP_TUTORIAL_BASIC_ATTACK_1">Move your mouse over this monster to see your options, then click to attack.</String>
+	<String key="PROTIP_TUTORIAL_BASIC_ATTACK_2">Good work! You used your basic attack. Attacks are the key to victory!</String>
+	<String key="PROTIP_TUTORIAL_HURT_NEED_HEALING">Ouch, that Hurlock packed a punch. Heal your hero before your next attack.</String>
+	<String key="PROTIP_TUTORIAL_CRIT_HIT">Incredible! You defeated that Hurlock with a well placed critical hit.</String>
+	<String key="PROTIP_TUTORIAL_1_SUCCESS">The Hurlock was hoarding gold and a shock bomb. Click to pick them up.</String>
+	<!-- Old potion tutorial -->
+	<String key="PROTIP_TUTORIAL_HEALTH_POTION_1">When your hero is low on health, you can drink health potions for +{HEART,4}</String>
+	<String key="PROTIP_TUTORIAL_HEALTH_POTION_2">Heroes can both drink a potion and attack on their turn.</String>
+	<String key="PROTIP_TUTORIAL_RECRUIT_FRIENDS_1">Yikes, it's Soleil! Fortunately we have a friend to recruit and help out.</String>
+	<String key="PROTIP_TUTORIAL_RECRUIT_FRIENDS_2">Click the Fight button to begin!</String>
+	<String key="PROTIP_TUTORIAL_USE_ITEM">Let's take care of these Hurlocks first. Use the shock bomb you looted</String>
+	<String key="PROTIP_TUTORIAL_USE_FRIEND_SKILL">Now use your friend's skill to summon a drake</String>
+	<String key="PROTIP_TUTORIAL_FLEE">You got lucky this time, but we'll meet again in the Planasene Forest!</String>
+	<String key="PROTIP_TUTORIAL_FLEE_2">Wow, you scared off Soleil! I fear she won't be that easy next time though, so let's continue moving toward your castle.</String>
+	<String key="PROTIP_TUTORIAL_TURN_QUEUE_1">Heroes and monsters take turns attacking based on their Agility.</String>
+	<String key="PROTIP_TUTORIAL_TURN_QUEUE_2">See whose turn is coming up next by looking at the Turn Queue.</String>
+	<String key="PROTIP_TUTORIAL_RECRUIT_FRIENDS_3">You can recruit up to two friends into each battle. Try it now!</String>
+	<String key="PROTIP_TUTORIAL_THROW_BOMB_1">Let's take care of these Hurlocks first. Use the shock bomb you looted.</String>
+	<String key="PROTIP_TUTORIAL_THROW_BOMB_2">Now use your friend's skill to down lightning on all your enemies.</String>
+	<String key="PROTIP_TUTORIAL_MANA_1">Your hero needs mana to use skills. Drink a mana potion for +{MANA,1}{MANA,1}</String>
+	<String key="PROTIP_TUTORIAL_SKILL_1">Click on the skill icon to use your new skill.</String>
+	<String key="PROTIP_TUTORIAL_SKILL_2">Good work! You just used {%skillName%} to deal more damage.</String>
+	<String key="PROTIP_TUTORIAL_SKILL_3">As your hero levels up, you will learn a wide variety of unique skills.</String>
+	<String key="PROTIP_TUTORIAL_FINAL_BATTLE_1">{%heroName%}, you are now prepared to begin your Legendary adventure.</String>
+	<String key="PROTIP_TUTORIAL_FINAL_BATTLE_2">Remember to recruit friends, use bombs, potions and skills. Good luck!</String>
+	<String key="PROTIP_TUTORIAL_LEVEL_UP_1">When you earn enough XP, your hero will Level Up.</String>
+	<String key="PROTIP_TUTORIAL_LEVEL_UP_2">Invest in one of these five Stats and your hero's might will grow.</String>
+	<String key="PROTIP_TUTORIAL_LEVEL_UP_3">Each time you level up, you can learn a new skill or upgrade an existing one.</String>
+	<String key="PROTIP_TUTORIAL_LEVEL_UP_4">Try it now by learning {%skillName%}.</String>
+	<String key="PROTIP_TUTORIAL_INVITE_FRIENDS_1">Dragon Age Legends is even more fun with friends!</String>
+	<String key="PROTIP_TUTORIAL_INVITE_FRIENDS_2">You can invite friends to join your Legendary Adventure at any time.</String>
+	<String key="PROTIP_TUTORIAL_CASTLE_CREATOR_1">{%heroName%}, as promised, here is my gift to you.</String>
+	<String key="PROTIP_TUTORIAL_CASTLE_CREATOR_2">I am giving you one of my old estates.</String>
+	<String key="PROTIP_TUTORIAL_CASTLE_CREATOR_3">Customize your new castle with the options on the right.</String>
+	<String key="PROTIP_TUTORIAL_ENTER_BUILD_MODE">Let me show you how to build rooms in your castle.</String>
+	<String key="PROTIP_TUTORIAL_BUILD_WORKER_ROOM_1">Drag and drop this worker room into your castle to hire a worker.</String>
+	<String key="PROTIP_TUTORIAL_BUILD_WORKER_ROOM_2">You need workers to craft bombs, potions and kits for your adventure.</String>
+	<String key="PROTIP_TUTORIAL_BUILD_APOTHECARY_1">Good work! Now build an apothecary to craft potions.</String>
+	<!-- String key="PROTIP_TUTORIAL_BUILD_EXIT_BUILD_MODE_1">You just built an Apothecary, a workshop where your workers craft potions.</String -->
+	<String key="PROTIP_TUTORIAL_BUILD_EXIT_BUILD_MODE_2">Now, click on a stool to have your worker start crafting a health potion.</String>
+	<String key="PROTIP_TUTORIAL_CRAFT_POTION_1">Choose the amount of health potions you would like your worker to craft.</String>
+	<!-- String key="PROTIP_TUTORIAL_CRAFT_POTION_2">The more potions you craft, the longer it will take your worker to complete.</String -->
+	<String key="PROTIP_TUTORIAL_COMPLETE_TUTORIAL_1">Now that your worker is busy, let's continue your Legendary Adventure!</String>
+	<!-- GENERIC QUEST PRO TIPS -->
+	<String key="PROTIP_NEW_QUEST">{%heroName%}, I have a new quest for you. Click here to find out more.</String>
+	<String key="PROTIP_QUEST_COMPLETE">{%heroName%}, you have finished a quest. Click here to collect your rewards.</String>
+	<!-- HERO DISPLAY TIPS -->
+	<String key="PROTIP_INVENTORY_OVERFULL">Please sell excess items until you are within your inventory limit.</String>
+	<!-- Single Level Tutorial protips -->
+	<String key="PROTIP_TUTORIAL_INTRO">We are nearly to your estate, {%firstName%}, but our path is blocked by darkspawn. Get ready for battle!</String>
+	<String key="PROTIP_TUTORIAL_RECRUIT">You cannot defeat these monsters alone. Bring us into battle! Recruit your friends to ensure victory.</String>
+	<String key="PROTIP_TUTORIAL_BASIC_ATTACK">Use your basic attack to damage this Hurlock.</String>
+	<String key="PROTIP_TUTORIAL_FROSTBITE">Now it is Derandt's turn. Use his Frostbite skill to freeze the Emissary in place for four turns.</String>
+	<String key="PROTIP_TUTORIAL_TURN_QUEUE">This is the turn queue. It indicates the order of actions in combat.</String>
+	<String key="PROTIP_TUTORIAL_OVERRUN">Now, use my Overrun skill to attack the first row of enemies with a single swipe.</String>
+	<String key="PROTIP_TUTORIAL_FREE_COMBAT_WAVE_1">Finish off the rest of them however you like. A few basic attacks will suffice.</String>
+	<String key="PROTIP_TUTORIAL_SHOCK_BOMB">Bombs don't end your turn, so throw a Shock Bomb now, then attack!</String>
+	<String key="PROTIP_TUTORIAL_FREE_COMBAT_WAVE_2">Continue using your attacks, skills, and bombs to defeat these monsters!</String>
+	<String key="PROTIP_TUTORIAL_USE_MANA_POTION">Derandt can summon a powerful Bronto, but he is out of mana. Have him drink a mana potion first.</String>
+	<String key="PROTIP_TUTORIAL_SUMMON_BRONTO">Now summon the Bronto and witness its destructive might!</String>
+	<String key="PROTIP_TUTORIAL_USE_HEALTH_POTION">Ouch, getting low on health here! Healing potions will help you and your allies recover health. Use one now.</String>
+	<String key="PROTIP_TUTORIAL_BATTLE_END">Great teamwork! We defeated the fearsome drake. Collect your rewards, and I can show you your estate.</String>
+</StringData>

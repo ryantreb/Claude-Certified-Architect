@@ -1,0 +1,1675 @@
+<!-- DAJFB Char Anim Rig Definitions
+	Created 7.29.2010
+-->
+<RigData>
+	<Entry>
+		<ID>rigHumanoid1HMelee</ID>
+		<AssetPrefix>hf_1H_mail1</AssetPrefix>
+		<Segment Name="helmet" />
+		<Segment Name="head" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="shield" />
+		<Segment Name="shieldFront" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<!--<Segment Name="capes" />-->
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+		<Segment Name="skirtGradient" />
+	</Entry>
+	<Entry>
+		<ID>rigHumanoid2HMelee</ID>
+		<AssetPrefix>hf_2H_mail1</AssetPrefix>
+		<Segment Name="helmet" />
+		<Segment Name="head" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="shield" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<!--<Segment Name="capes" />-->
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigHumanoidDualMelee</ID>
+		<AssetPrefix>hf_dual_mail1</AssetPrefix>
+		<Segment Name="helmet" />
+		<Segment Name="head" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="weaponR" />
+		<Segment Name="shield" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<!--<Segment Name="capes" />-->
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigHumanoidBow</ID>
+		<AssetPrefix>hf_bow_mail1</AssetPrefix>
+		<Segment Name="head" />
+		<Segment Name="helmet" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<!--<Segment Name="capes" />-->
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigHumanoidCloth</ID>
+		<AssetPrefix>hf_staff_cloth1</AssetPrefix>
+		<Segment Name="head" />
+		<Segment Name="helmet" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<!--<Segment Name="capes" />-->
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="skirt" />
+		<Segment Name="tassetBack" />
+		<Segment Name="skirtGradient" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigHumanoidDualMelee</ID>
+		<AssetPrefix>hf_dual_mail1</AssetPrefix>
+		<Segment Name="helmet" />
+		<Segment Name="head" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />	<!-- default weapon hand is L -->
+		<Segment Name="weaponR" />
+		<Segment Name="shield" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<!--<Segment Name="capes" />-->
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>		<!-- UNTESTED RIG -->
+		<ID>rigHumanoidCross</ID>
+		<AssetPrefix>hf_cross_mail1</AssetPrefix>
+		<Segment Name="head" />
+		<Segment Name="helmet" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="weaponShot" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<!--<Segment Name="capes" />-->
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<!-- DWARF PLAYER RIGS -->
+	<Entry>
+		<ID>rigDwarf1HMelee</ID>
+		<AssetPrefix>dwarf1H</AssetPrefix>
+		<Segment Name="helmet" />
+		<Segment Name="head" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="shield" />
+		<Segment Name="shieldFront" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+		<Segment Name="skirtGradient" />
+	</Entry>
+	<Entry>
+		<ID>rigDwarf2HMelee</ID>
+		<AssetPrefix>dwarf2H</AssetPrefix>
+		<Segment Name="helmet" />
+		<Segment Name="head" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="shield" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigDwarfDualMelee</ID>
+		<AssetPrefix>dwarfDUAL</AssetPrefix>
+		<Segment Name="helmet" />
+		<Segment Name="head" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="weaponR" />
+		<Segment Name="shield" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigDwarfBow</ID>
+		<AssetPrefix>dwarfBOW</AssetPrefix>
+		<Segment Name="head" />
+		<Segment Name="helmet" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigDwarfCross</ID>
+		<AssetPrefix>dwarfCROSS</AssetPrefix>
+		<Segment Name="head" />
+		<Segment Name="helmet" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="weaponShot" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<!-- HUMANOID MOB RIGS -->
+	<Entry>
+		<ID>rigHumanoidMob1HMelee</ID>
+		<AssetPrefix>humanoidMob1H</AssetPrefix>
+		<Segment Name="helmet" />
+		<Segment Name="head" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="shield" />
+		<Segment Name="shieldFront" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+		<Segment Name="skirtGradient" />
+	</Entry>
+	<Entry>
+		<ID>rigHumanoidMob2HMelee</ID>
+		<AssetPrefix>humanoidMob2H</AssetPrefix>
+		<Segment Name="helmet" />
+		<Segment Name="head" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="shield" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigHumanoidMobDualMelee</ID>
+		<AssetPrefix>humanoidMobDUAL</AssetPrefix>
+		<Segment Name="helmet" />
+		<Segment Name="head" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="weaponR" />
+		<Segment Name="shield" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigHumanoidMobBow</ID>
+		<AssetPrefix>humanoidMobBOW</AssetPrefix>
+		<Segment Name="head" />
+		<Segment Name="helmet" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigHumanoidMobCloth</ID>
+		<AssetPrefix>humanoidMobSTAFF</AssetPrefix>
+		<Segment Name="head" />
+		<Segment Name="helmet" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="skirt" />
+		<Segment Name="skirtGradient" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigHumanoidMobCross</ID>
+		<AssetPrefix>humanoidMobCROSS</AssetPrefix>
+		<Segment Name="head" />
+		<Segment Name="helmet" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="weaponShot" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<!-- DWARF MOB RIGS -->
+	<Entry>
+		<ID>rigDwarfMob1HMelee</ID>
+		<AssetPrefix>dwarfMob1H</AssetPrefix>
+		<Segment Name="helmet" />
+		<Segment Name="head" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="shield" />
+		<Segment Name="shieldFront" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+		<Segment Name="skirtGradient" />
+	</Entry>
+	<Entry>
+		<ID>rigDwarfMob2HMelee</ID>
+		<AssetPrefix>dwarfMob2H</AssetPrefix>
+		<Segment Name="helmet" />
+		<Segment Name="head" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigDwarfMobDualMelee</ID>
+		<AssetPrefix>dwarfMobDUAL</AssetPrefix>
+		<Segment Name="helmet" />
+		<Segment Name="head" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="weaponR" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigDwarfMobBow</ID>
+		<AssetPrefix>dwarfMobBOW</AssetPrefix>
+		<Segment Name="head" />
+		<Segment Name="helmet" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigDwarfMobCross</ID>
+		<AssetPrefix>dwarfMobCROSS</AssetPrefix>
+		<Segment Name="head" />
+		<Segment Name="helmet" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="weaponShot" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<!-- MONSTER RIGS -->	
+	<Entry>
+		<ID>rigGolem</ID>
+		<AssetPrefix>golem</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_GOLEM</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="neckRing" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="shoulderL" />
+		<Segment Name="shoulderR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+	</Entry>
+	<Entry>
+		<ID>rigGolemShale</ID>
+		<AssetPrefix>sh</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_GOLEM_SHALE</ChunkName>
+		<Segment Name="armForeR" />
+		<Segment Name="armForeL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="chest" />
+		<Segment Name="collar" />
+		<Segment Name="collarFront" />
+		<Segment Name="footR" />
+		<Segment Name="footL" />
+		<Segment Name="handR" />
+		<Segment Name="handL" />
+		<Segment Name="head" />
+		<Segment Name="hips" />
+		<Segment Name="shinR" />
+		<Segment Name="shinL" />
+		<Segment Name="shoulderR" />
+		<Segment Name="shoulderL" />
+		<Segment Name="thighR" />
+		<Segment Name="thighL" />
+	</Entry>
+	<Entry>
+		<ID>rigMabari</ID>
+		<AssetPrefix>mh</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_MABARI</ChunkName>
+		<Segment Name="backFootFar" />
+		<Segment Name="backFootNear" />
+		<Segment Name="backShinFar" />
+		<Segment Name="backShinNear" />
+		<Segment Name="backThighFar" />
+		<Segment Name="backThighNear" />
+		<Segment Name="backToesFar" />
+		<Segment Name="backToesNear" />
+		<Segment Name="body" />
+		<Segment Name="foreArmFar" />
+		<Segment Name="foreArmNear" />
+		<Segment Name="forePawFar" />
+		<Segment Name="forePawNear" />
+		<Segment Name="foreShoulderFar" />
+		<Segment Name="foreShoulderNear" />
+		<Segment Name="hackles" />
+		<Segment Name="head" />
+		<Segment Name="head2" />
+		<Segment Name="head3" />
+		<Segment Name="head4" />
+		<Segment Name="neck" />
+	</Entry>
+	<!-- DA2 hurlocks -->
+	<Entry>
+		<ID>rigHurlock</ID>
+		<AssetPrefix>hurlock</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_HURLOCK</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="shoulderL" />
+		<Segment Name="shoulderR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="waist" />
+		<Segment Name="weapon" />
+		<Segment Name="weaponR" />
+	</Entry>
+	<Entry>
+		<ID>rigHurlockBolter</ID>
+		<AssetPrefix>hurlockBolter</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_HURLOCK</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="crossBow" />
+		<Segment Name="crossBowShot" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="shoulderL" />
+		<Segment Name="shoulderR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigHurlockAlpha</ID>
+		<AssetPrefix>hurlock</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_HURLOCK_AE</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="shoulderL" />
+		<Segment Name="shoulderR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="waist" />
+		<Segment Name="weapon" />
+		<Segment Name="weaponR" />
+	</Entry>
+	<Entry>
+		<ID>rigHurlockEmissary</ID>
+		<AssetPrefix>hurlockEmissary</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_HURLOCK_AE</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="waist" />
+		<Segment Name="weapon" />
+		<Segment Name="skirtAir" />
+		<!--<Segment Name="skirt" />
+		<Segment Name="skirt1" />
+		<Segment Name="skirt2" />
+		<Segment Name="skirt3" />-->
+	</Entry>
+	<!-- Adding human animations as hurlock animations -->
+	<Entry>
+		<ID>rigHurlock1HMelee</ID>
+		<AssetPrefix>hurlock1H</AssetPrefix>
+		<ChunkName>ANIMS_HUMANELF_1H</ChunkName>
+		<Segment Name="helmet" />
+		<Segment Name="head" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="shield" />
+		<Segment Name="shieldFront" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigHurlock2HMelee</ID>
+		<AssetPrefix>hurlock2H</AssetPrefix>
+		<ChunkName>ANIMS_HUMANELF_2H</ChunkName>
+		<Segment Name="helmet" />
+		<Segment Name="head" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="shield" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigHurlockDualMelee</ID>
+		<AssetPrefix>hurlockDUAL</AssetPrefix>
+		<ChunkName>ANIMS_HUMANELF_DUAL</ChunkName>
+		<Segment Name="helmet" />
+		<Segment Name="head" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="weaponR" />
+		<Segment Name="shield" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigHurlockCross</ID>
+		<AssetPrefix>hurlockCROSS</AssetPrefix>
+		<ChunkName>ANIMS_HUMANELF_DUAL</ChunkName>
+		<Segment Name="helmet" />
+		<Segment Name="head" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="weaponShot" />
+		<Segment Name="shield" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigHurlockStaff</ID>
+		<AssetPrefix>hurlockSTAFF</AssetPrefix>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="waist" />
+		<Segment Name="weapon" />
+		<Segment Name="skirtAir" />
+		<!--<Segment Name="skirt" />
+		<Segment Name="skirt1" />
+		<Segment Name="skirt2" />
+		<Segment Name="skirt3" />-->
+	</Entry>
+	<!-- DA Journeys Orzammar Hurlocks -->
+	<!-- hurlock and hurlock archer use hurlock+hurlockBolter rigs -->
+	<!-- hurlock alpha orz and new alpha are same rig -->
+	<Entry>
+		<ID>rigHurlockEmissaryOrz</ID>	<!--needs an empty blueFire symbol in armor-->
+		<AssetPrefix>hEmissBlueOrz</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_HURLOCK_AE</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="shoulderL" />
+		<Segment Name="shoulderR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigHurlockEmissaryBlueOrz</ID>
+		<AssetPrefix>hEmissBlueOrz</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_HURLOCK_AE</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="blueFire" />
+		<Segment Name="chest" />
+		<Segment Name="cloak" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="shoulderL" />
+		<Segment Name="shoulderR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="hips" />
+	</Entry>
+	<!-- Genlocks DA2 - all genlocks use the same rig -->
+	<Entry>
+		<ID>rigGenlock</ID>
+		<AssetPrefix>genlock</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_GENLOCK</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="fingersL" />
+		<Segment Name="fingersR" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="lowerbody" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="neck" />
+		<Segment Name="torso" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+	</Entry>
+
+	<!-- journeys orzammar genlocks -->
+	<Entry>
+		<ID>rigGenlockOrzMelee</ID>
+		<AssetPrefix>gW</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_GENLOCK_ORZ</ChunkName>
+	</Entry>
+	<Entry>
+		<ID>rigGenlockArcherOrz</ID>
+		<AssetPrefix>gX</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_GENLOCK_ORZ</ChunkName>
+	</Entry>
+	<Entry>
+		<ID>rigGenlockAlphaOrz</ID>
+		<AssetPrefix>gA</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_GENLOCK_ORZ</ChunkName>
+	</Entry>
+	<Entry>
+		<ID>rigGenlockEmissOrz</ID>
+		<AssetPrefix>gE</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_GENLOCK_ORZ</ChunkName>
+	</Entry>
+	<Entry>
+		<ID>rigCultist</ID>
+		<AssetPrefix>cultist</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_CULTIST</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="shoulderL" />
+		<Segment Name="shoulderR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="waist" />
+		<Segment Name="weapon" />
+		<Segment Name="skirt" />
+		<!--<Segment Name="cape" />-->
+		<Segment Name="deathStare" />
+		<Segment Name="painFlame" />
+		<Segment Name="skirtGradient" />
+	</Entry>
+	<Entry>
+		<ID>rigDragonling</ID>
+		<AssetPrefix>dragling</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_DRAGONLING</ChunkName>
+		<!--
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="fingersL" />
+		<Segment Name="fireball" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="head_2" />
+		<Segment Name="mouth" />
+		<Segment Name="neck" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="tail" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="toesL" />
+		<Segment Name="toesR" />
+		<Segment Name="wingForeL" />
+		<Segment Name="wingForeR" />
+		<Segment Name="wingL" />
+		<Segment Name="wingR" />
+		<Segment Name="wingUpperL" />
+		<Segment Name="wingUpperR" />
+		<Segment Name="wingWebLa" />
+		<Segment Name="wingWebRa" />
+		-->
+	</Entry>
+	<Entry>
+		<ID>rigDragonlingFire</ID>
+		<AssetPrefix>draglingFire</AssetPrefix>
+	</Entry>
+	<Entry>
+		<ID>rigDragonlingFrost</ID>
+		<AssetPrefix>draglingFrost</AssetPrefix>
+	</Entry>
+	<Entry>
+		<ID>rigDragonlingNature</ID>
+		<AssetPrefix>draglingNature</AssetPrefix>
+	</Entry>
+	<Entry>
+		<ID>rigDragonlingShock</ID>
+		<AssetPrefix>draglingShock</AssetPrefix>
+	</Entry>
+	<Entry>
+		<ID>rigDrake</ID>
+		<AssetPrefix>drake</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_DRAKE</ChunkName>
+		<!--
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="clawL" />
+		<Segment Name="clawR" />
+		<Segment Name="fire" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="head1" />
+		<Segment Name="head2" />
+		<Segment Name="hips" />
+		<Segment Name="jaw_1" />
+		<Segment Name="neck_1" />
+		<Segment Name="neck_2" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="tail" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="toesL" />
+		<Segment Name="toesR" />
+		<Segment Name="wingForeL_1" />
+		<Segment Name="wingForeL_2" />
+		<Segment Name="wingForeL_3" />
+		<Segment Name="wingForeL_4" />
+		<Segment Name="wingForeR_1" />
+		<Segment Name="wingForeR_2" />
+		<Segment Name="wingForeR_3" />
+		<Segment Name="wingForeR_4" />
+		<Segment Name="wristL" />
+		<Segment Name="wristR" />
+		-->
+	</Entry>
+	<Entry>
+		<ID>rigDrakeFire</ID>
+		<AssetPrefix>drakeFire</AssetPrefix>
+	</Entry>
+	<Entry>
+		<ID>rigBoneDragon</ID>
+		<AssetPrefix>boneDragon</AssetPrefix>
+	</Entry>
+	<Entry>
+		<ID>rigDrakeFrost</ID>
+		<AssetPrefix>drakeFrost</AssetPrefix>
+	</Entry>
+	<Entry>
+		<ID>rigDrakeNature</ID>
+		<AssetPrefix>drakeNature</AssetPrefix>
+	</Entry>
+	<Entry>
+		<ID>rigDrakeShock</ID>
+		<AssetPrefix>drakeShock</AssetPrefix>
+	</Entry>
+	<Entry>
+		<ID>rigWarhoundReptilian</ID>
+		<AssetPrefix>warhoundReptilian</AssetPrefix>
+	</Entry>
+	<Entry>
+		<ID>rigWarhound</ID>
+		<AssetPrefix>warhound</AssetPrefix>
+	</Entry>
+	<Entry>
+		<ID>rigDragon</ID>
+		<AssetPrefix>dragon</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_DRAGON</ChunkName>
+		<!--<Segment Name="armUpperR" />
+		<Segment Name="clawL" />
+		<Segment Name="ClawL_1" />
+		<Segment Name="ClawL_2" />
+		<Segment Name="clawR" />
+		<Segment Name="ClawR_1" />
+		<Segment Name="ClawR_2" />
+		<Segment Name="ClawR_3" />
+		<Segment Name="eyeGlow" />
+		<Segment Name="head_1" />
+		<Segment Name="head_2" />
+		<Segment Name="jaw" />
+		<Segment Name="neck" />
+		<Segment Name="outerTeeth" />
+		-->
+	</Entry>
+	<Entry>
+		<ID>rigOgre</ID>
+		<AssetPrefix>ogre</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_OGRE</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL1" />
+		<Segment Name="handL2" />
+		<Segment Name="handR1" />
+		<Segment Name="handR2" />
+		<Segment Name="head" />
+		<Segment Name="head2" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="shoulderL" />
+		<Segment Name="shoulderR" />
+		<Segment Name="tassetRag" />
+		<Segment Name="brokHorn" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="torso" />
+		<Segment Name="undies" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigShriek</ID>
+		<AssetPrefix>shr</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_SHRIEK</ChunkName>
+		<Segment Name="torso" />
+		<Segment Name="thighR" />
+		<Segment Name="thighL" />
+		<Segment Name="tasset" />
+		<Segment Name="shinR" />
+		<Segment Name="shinL" />
+		<Segment Name="head" />
+		<Segment Name="hips" />
+		<Segment Name="handR" />
+		<Segment Name="handL" />
+		<Segment Name="shoulderL" />
+		<Segment Name="shoulderR" />
+		<Segment Name="footR" />
+		<Segment Name="footL" />
+		<Segment Name="collarFront" />
+		<Segment Name="collarBack" />
+		<Segment Name="armUpperR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armForeL" />
+	</Entry>
+	<Entry>
+		<ID>rigCorruptedDwarf</ID>
+		<AssetPrefix>cd</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_CORRUPTED_DWARF</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="shoulderL" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+	</Entry>
+	<Entry>
+		<ID>rigBandit</ID>
+		<AssetPrefix>dwarfBandit</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_BANDIT</ChunkName>
+		<Segment Name="weapon" />
+		<Segment Name="weaponR" />
+		<Segment Name="cape" />
+	</Entry>
+	<Entry>
+		<ID>rigSpider</ID>
+		<AssetPrefix>spider</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_SPIDERS</ChunkName>
+		<Segment Name="abdomen" />
+		<Segment Name="legEnd1Far" />	<!-- END -->
+		<Segment Name="legEnd2Far" />
+		<Segment Name="legEnd3Far" />
+		<Segment Name="legEnd4Far" />
+		<Segment Name="legEnd1Near" />
+		<Segment Name="legEnd2Near" />
+		<Segment Name="legEnd3Near" />
+		<Segment Name="legEnd4Near" />
+		<Segment Name="legMid1Near" />	<!-- MID -->
+		<Segment Name="legMid2Near" />
+		<Segment Name="legMid3Near" />
+		<Segment Name="legMid4Near" />
+		<Segment Name="legMid1Far" />
+		<Segment Name="legMid2Far" />
+		<Segment Name="legMid3Far" />
+		<Segment Name="legMid4Far" />
+		<Segment Name="legUpper1Near" />	<!-- UPPER -->
+		<Segment Name="legUpper2Near" />
+		<Segment Name="legUpper3Near" />
+		<Segment Name="legUpper4Near" />
+		<Segment Name="legUpper1Far" />
+		<Segment Name="legUpper2Far" />
+		<Segment Name="legUpper3Far" />
+		<Segment Name="legUpper4Far" />
+		<Segment Name="thorax" />
+	</Entry>
+
+	<Entry>
+		<ID>rigDeepStalker</ID>
+		<AssetPrefix>deepstalker</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_DEEP_STALKER</ChunkName>
+		<!--
+		<Segment Name="ankleL" />
+		<Segment Name="ankleR" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="body" />
+		<Segment Name="dead" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="neckDetail_1" />
+		<Segment Name="neckDetail_2" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="tail" />
+		<Segment Name="tailMarks_1" />
+		<Segment Name="tailMarks_2" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		-->
+	</Entry>
+	<Entry>
+		<ID>rigWerewolf</ID>
+		<AssetPrefix>werewolf</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_WEREWOLF</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="head2" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigCorpse</ID>
+		<AssetPrefix>corpse</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_CORPSE</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigSkeleton</ID>
+		<AssetPrefix>skel</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_SKELETON</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="waist" />
+		<Segment Name="weapon" />
+	</Entry>
+	<Entry>
+		<ID>rigArcaneHorror</ID>
+		<AssetPrefix>aHorror</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_ARCANE_HORROR</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="head" />
+		<Segment Name="chest" />
+		<Segment Name="hips" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigDesireDemon</ID>
+		<AssetPrefix>desire</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_DESIRE_DEMON</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigRageDemon</ID>
+		<AssetPrefix>RageDemon</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_RAGE_DEMON</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="lowerbody" />
+		<Segment Name="neck" />
+		<Segment Name="torso" />
+		<Segment Name="trail" />
+		<Segment Name="upperbody" />
+	</Entry>
+	<Entry>
+		<ID>rigShadeDemon</ID>
+		<AssetPrefix>ShadeDemon</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_SHADE_DEMON</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="lowerbody" />
+		<Segment Name="neck" />
+		<Segment Name="torso" />
+		<Segment Name="trail" />
+		<Segment Name="upperbody" />
+	</Entry>
+	<Entry>
+		<ID>rigArcaneHorror</ID>
+		<AssetPrefix>arcaneHorror</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_ARCANE_HORROR</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="hips" />
+		<Segment Name="waist" />
+	</Entry>
+	<Entry>
+		<ID>rigRevenant</ID>
+		<AssetPrefix>revenant</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_REVENANT</ChunkName>
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="waist" />
+	</Entry>
+	
+	<!-- Summon Spirit Animals -->
+	<!-- spider uses spider rigs, wolf uses mabari rig, halla will use mabari until halla is animated -->
+	<Entry>
+		<ID>rigHalla</ID>
+		<AssetPrefix>halla</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_HALLA</ChunkName>
+		<Segment Name="backFootFar" />
+		<Segment Name="backFootNear" />
+		<Segment Name="backShinFar" />
+		<Segment Name="backShinNear" />
+		<Segment Name="backThighFar" />
+		<Segment Name="backThighNear" />
+		<Segment Name="backToesFar" />
+		<Segment Name="backToesNear" />
+		<Segment Name="body" />
+		<Segment Name="foreArmFar" />
+		<Segment Name="foreArmNear" />
+		<Segment Name="forePawFar" />
+		<Segment Name="forePawNear" />
+		<Segment Name="foreShoulderFar" />
+		<Segment Name="foreShoulderNear" />
+		<Segment Name="head" />
+		<Segment Name="head2" />
+		<Segment Name="neck" />
+		<Segment Name="paw" />
+		<Segment Name="tail" />
+	</Entry>
+	<Entry>
+		<ID>rigBear</ID>
+		<AssetPrefix>bear</AssetPrefix>
+		<ChunkName>CHAR_ANIMS_BEAR</ChunkName>
+		<Segment Name="backShinFar" />
+		<Segment Name="backShinNear" />
+		<Segment Name="backThighFar" />
+		<Segment Name="backThighNear" />
+		<Segment Name="backToesFar1" />
+		<Segment Name="backToesFar2" />
+		<Segment Name="backToesFar3" />
+		<Segment Name="backToesNear1" />
+		<Segment Name="backToesNear2" />
+		<Segment Name="backToesNear3" />
+		<Segment Name="chest" />
+		<Segment Name="foreArmFar" />
+		<Segment Name="foreArmNear" />
+		<Segment Name="foreHandNear" />
+		<Segment Name="forePawFar1" />
+		<Segment Name="forePawFar2" />
+		<Segment Name="forePawFar3" />
+		<Segment Name="forePawNear1" />
+		<Segment Name="forePawNear2" />
+		<Segment Name="forePawNear3" />
+		<Segment Name="foreShoulderFar" />
+		<Segment Name="foreShoulderNear" />
+		<Segment Name="head" />
+		<Segment Name="head2" />
+		<Segment Name="head3" />
+		<Segment Name="hips" />
+		<Segment Name="neck" />
+		<Segment Name="tail" />
+	</Entry>
+	<Entry>
+		<ID>rigBronto</ID>
+		<AssetPrefix>bronto</AssetPrefix>
+		<Segment Name="backShinFar" />
+		<Segment Name="backShinNear" />
+		<Segment Name="backThighFar" />
+		<Segment Name="backThighNear" />
+		<Segment Name="backToesFar" />
+		<Segment Name="backToesNear" />
+		<Segment Name="chest" />
+		<Segment Name="foreArmFar" />
+		<Segment Name="foreArmNear" />
+		<Segment Name="foreFingersNear" />
+		<Segment Name="forePawFar" />
+		<Segment Name="forePawNear" />
+		<Segment Name="foreShoulderFar" />
+		<Segment Name="foreShoulderNear" />
+		<Segment Name="head" />
+		<Segment Name="hips" />
+		<Segment Name="neck" />
+		<Segment Name="tail" />
+	</Entry>
+	<Entry>
+		<ID>rigTrainingDummy</ID>
+		<AssetPrefix>trainingDummy</AssetPrefix>
+		<Segment Name="armL" />
+		<Segment Name="armR" />
+		<Segment Name="head" />
+		<Segment Name="tasset" />
+		<Segment Name="torso" />
+		<Segment Name="waist" />
+	</Entry>
+	
+	<!-- BOSSES -->
+	<Entry>
+		<ID>rigSoleil</ID>
+		<AssetPrefix>Soleil</AssetPrefix>
+	</Entry>
+	<Entry>
+		<ID>rigTianne</ID>
+		<AssetPrefix>tianne</AssetPrefix>
+	</Entry>
+	<Entry>
+		<ID>rigSylvan</ID>
+		<AssetPrefix>sylvan</AssetPrefix>
+		<Segment Name= "footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handL2" />
+		<Segment Name="handR" />
+		<Segment Name="head" />
+		<Segment Name="leftArmL" />
+		<Segment Name="lowerArmR" />
+		<Segment Name="midTorso" />
+		<Segment Name="neck" />
+		<Segment Name="pelvis" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="upperArmL" />
+		<Segment Name="upperArmR" />
+		<Segment Name="upperTorso" />
+	</Entry>
+	<Entry>
+		<ID>rigDeymour</ID>
+		<AssetPrefix>deymour</AssetPrefix>
+	</Entry>
+	<Entry>
+		<ID>rigBeirus</ID>
+		<AssetPrefix>beirus</AssetPrefix>
+	</Entry>
+	<Entry>
+		<ID>rigEmissaryPrideDemon</ID>
+		<AssetPrefix>emissPrideDemon</AssetPrefix>
+	</Entry>
+	<Entry>
+		<ID>rigEmissaryPrideDemonUltimate</ID>
+		<AssetPrefix>emissPrideDemonUltimate</AssetPrefix>
+	</Entry>
+	
+	<Entry>
+		<ID></ID>
+		<AssetPrefix></AssetPrefix>
+		<ChunkName>CHAR_ANIMS_</ChunkName>
+		<!-- TODO: segmentized monster -->
+	</Entry>
+	<Entry>
+		<ID></ID>
+		<AssetPrefix></AssetPrefix>
+		<ChunkName>CHAR_ANIMS_</ChunkName>
+		<!-- TODO: segmentized monster -->
+	</Entry>
+	<Entry>
+		<ID></ID>
+		<AssetPrefix></AssetPrefix>
+		<ChunkName>CHAR_ANIMS_</ChunkName>
+		<!-- TODO: segmentized monster -->
+	</Entry>
+	<Entry>
+		<ID></ID>
+		<AssetPrefix></AssetPrefix>
+		<ChunkName>CHAR_ANIMS_</ChunkName>
+		<!-- TODO: segmentized monster -->
+	</Entry>
+	<Entry>
+		<ID></ID>
+		<AssetPrefix></AssetPrefix>
+		<ChunkName>CHAR_ANIMS_</ChunkName>
+		<!-- TODO: segmentized monster -->
+	</Entry>
+	
+	<!-- Qunari -->
+	<Entry>
+		<ID>rigHumanoidMobSpear</ID>
+		<AssetPrefix>humanoidMobSpear</AssetPrefix>
+		<Segment Name="helmet" />
+		<Segment Name="head" />
+		<Segment Name="helmetBack" />
+		<Segment Name="weapon" />
+		<Segment Name="shield" />
+		<Segment Name="shieldFront" />
+		<Segment Name="armForeL" />
+		<Segment Name="armForeR" />
+		<Segment Name="armUpperL" />
+		<Segment Name="armUpperR" />
+		<Segment Name="chest" />
+		<Segment Name="footL" />
+		<Segment Name="footR" />
+		<Segment Name="handL" />
+		<Segment Name="handR" />
+		<Segment Name="hips" />
+		<Segment Name="shinL" />
+		<Segment Name="shinR" />
+		<Segment Name="thighL" />
+		<Segment Name="thighR" />
+		<Segment Name="tassetBack" />
+		<Segment Name="waist" />
+		<Segment Name="skirtGradient" />
+	</Entry>
+</RigData>

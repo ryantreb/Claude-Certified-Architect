@@ -1,0 +1,290 @@
+<!-- edited with XMLSpy v2010 rel. 3 sp1 (http://www.altova.com) by BOBBY MOLDAVON (ELECTRONIC ARTS) -->
+<!-- DAJFB Char Anim Skin Definitions
+	Created 7.29.2010
+-->
+<RigData>
+	<DefaultChunkName>
+		ANIM_SKINS_ACCESSORIES
+	</DefaultChunkName>
+	<!-- Amulet -->
+	<Entry>
+		<ID>skTestAmulet</ID>
+		<AssetPrefix>test_amulet</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletPower</ID>
+		<AssetPrefix>amulet_power</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletParrying</ID>
+		<AssetPrefix>amulet_parrying</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletEndurance</ID>
+		<AssetPrefix>amulet_endurance</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletHaste</ID>
+		<AssetPrefix>amulet_haste</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletFortune</ID>
+		<AssetPrefix>amulet_fortune</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletEvil</ID>
+		<AssetPrefix>amulet_evil</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletSloth</ID>
+		<AssetPrefix>amulet_sloth</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletParryingGreater</ID>
+		<AssetPrefix>amulet_parrying_greater</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletProwess</ID>
+		<AssetPrefix>amulet_of_prowess</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletEnduranceGreater</ID>
+		<AssetPrefix>amulet_of_endurance_greater</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletPowerGreater</ID>
+		<AssetPrefix>amulet_of_power_greater</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletBurden</ID>
+		<AssetPrefix>amulet_of_burden</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletDexterity</ID>
+		<AssetPrefix>amulet_of_dexterity</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletMalefic</ID>
+		<AssetPrefix>amulet_malefic_pendant</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletLifestealer</ID>
+		<AssetPrefix>amulet_lifestealer</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletIronskin</ID>
+		<AssetPrefix>amulet_ironskin_charm</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletVengeance</ID>
+		<AssetPrefix>amulet_crucial_vengeance</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletRetribution</ID>
+		<AssetPrefix>amulet_retribution</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletAndraste</ID>
+		<AssetPrefix>amulet_andraste_eye</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletPsyche</ID>
+		<AssetPrefix>amulet_psyche</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletWhiteeye</ID>
+		<AssetPrefix>amulet_whiteeye</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletSufferire</ID>
+		<AssetPrefix>amulet_sufferire</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletSuperPremium1</ID>
+		<AssetPrefix>amulet_superPremium1</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletSuperPremium2</ID>
+		<AssetPrefix>amulet_superPremium2</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletTemplar</ID>
+		<AssetPrefix>amulet_templar</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletDeepRubis</ID>
+		<AssetPrefix>amulet_deepRubis</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletBlackDiamond</ID>
+		<AssetPrefix>amulet_blackDiamond</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletPearl</ID>
+		<AssetPrefix>amulet_pearl</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletBlackPearl</ID>
+		<AssetPrefix>amulet_blackPearl</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletEbony</ID>
+		<AssetPrefix>amulet_ebony</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletTotem</ID>
+		<AssetPrefix>amulet_totem</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletCompass</ID>
+		<AssetPrefix>amulet_compass</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletCrystal</ID>
+		<AssetPrefix>amulet_crystal</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skAmuletPrideDemon</ID>
+		<AssetPrefix>amulet_prideDemon</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+</RigData>

@@ -1,0 +1,26 @@
+<Features>
+	<Feature>
+		<Name>GUILDS</Name>
+		<Enabled>FALSE</Enabled>
+	</Feature>
+	<Feature>
+		<Name>GUILDVSGUILD</Name>
+		<Enabled>FALSE</Enabled>
+	</Feature>
+	<Feature>
+		<Name>GOALSYSTEM</Name>
+		<Enabled>TRUE</Enabled>
+	</Feature>
+	<Feature>
+		<Name>INVESTMENTS</Name>
+		<Enabled>FALSE</Enabled>
+	</Feature>
+	<Feature>
+		<Name>FULLSCREEN</Name>
+		<Enabled>TRUE</Enabled>
+	</Feature>
+	<Feature>
+		<Name>RAIDS</Name>
+		<Enabled>TRUE</Enabled>
+	</Feature>
+</Features>

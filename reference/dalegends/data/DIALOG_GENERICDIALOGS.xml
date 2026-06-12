@@ -1,0 +1,967 @@
+<!-- Possible parameters:
+	Name: a unique string identifying the dialog
+	TriggerCondition: possible values defined in Client/DALFlashBase/src/com/ea2d/dal/display/events/DialogTriggerEvent.as
+	ConditionParam: possible values defined in Client/DALFlashBase/src/com/ea2d/dal/display/events/DialogTriggerEvent.as
+	IsBuy: TRUE or FALSE
+	IsBuyAndUse: TRUE or FALSE - buy dialog that uses the item immediately
+	IsBuyAndEquip: TRUE or FALSE - buy dialog that equips the item immediately
+	IsShare: TRUE or FALSE
+	Probability: number from 0 to 100
+	TitleText: localization id for string to display for dialog title
+	Desc1Text: localization id for string to display for top description field
+	Desc2Text: localization id for string to display for bottom description field
+	YesText: localization id to override the default yes text for buy/share dialog
+	NoText: localization id to override the default no text for buy/share dialog
+	OfferId: title of the offer in the store catalog to use for the buy dialog (comma separated list in priority order for 3 choice dialog)
+	WallPostId: id of the wall post to use for the share dialog
+	SoundId: id of the sound to play when this dialog is open if any
+	ImageUrl: url to for icon image to display in the dialog, overrides default from offer or wall post image
+	LinkageName: linkage name to use for icon image to display (needs to be in asset swf not embedded swc)
+	Cooldown: The number of seconds between when 2 dialogs of this type can ever be shown to a user
+	OverrideGlobalCooldown: TRUE or FALSE.  Bypass the global cooldown if necessary to show this type of dialog
+	MaxTimes: The maximum number of times this type of dialog can be shown to a user
+	IsDaily: TRUE or FALSE, whether or not this dialog can only be shown once per day
+	MinPlayTime: The minimum amount of time you must have been playing (in seconds) for this to be shown
+	StartDate: The first date this can be shown (in the format 1/2/2011 - you must use full year)
+	EndDate: The last date this can be shown (in the format 1/2/2011 - you must use full year)
+	CooldownAfterMaxCount: How often in seconds the dialog can be shown after max count is reached (default or < 0 means never)
+	IsLinkAccountDialog: Whether this is a dialog that includes the ability to link a nucleus account
+	IsLargeDialog: Whether this is a large dialog with the ability to show multiple images
+	CooldownGroup: Name of cooldown group this is tied to, cooldown specified for that group affects all dialogs in the group
+	Comparisons xml node with Comparison nodes containing the following: 
+		ComparisonType: possible values defined in Client/DALFlashBase/src/com/ea2d/dal/model/global/dialog/Comparison.as
+		ComparePercent: TRUE or FALSE
+		CompareAgainst: value to compare against for VALUE_CHANGE trigger
+		ChangeRequired: TRUE or FALSE, whether this only triggers if this comparison has just become true
+	LaunchIcon xml node with information on icon to be used to launch the dialog
+		MinX: minimum x position to spawn at
+		MaxX: maximum x posiiton to spawn at
+		MinY: minimum y position to spawn at
+		MaxY: maximum y position to spawn at
+		LinkageName: linkage name to use for the launch icon to display (needs to be in asset swf not embedded swf)
+		ImageUrl: url of launch icon to display if loading an external image instead of an art asset in a swf
+		ShowDuration: maximum time to show the launch icon in seconds
+		RemovalTrigger: Name of trigger condition that will cause the launch icon to be removed
+	ItemIds: comma separated list of items to display in this dialog	
+-->
+<DialogData>
+	<!-- Minimum time in seconds between when any 2 triggered dialogs can be shown -->
+	<GlobalDialogCooldown>0</GlobalDialogCooldown>
+	<!-- Default minimum time in seconds between when 2 dialogs of the same type can be shown --> 
+	<DefaultDialogCooldownForType>0</DefaultDialogCooldownForType>
+	<!-- Default maximum number of times a dialog of a given type can be shown, -1 for no max -->
+	<DefaultMaxTimes>-1</DefaultMaxTimes>
+	<!-- Cooldown groups that control how often any dialog in a given group can be displayed -->
+	<CooldownGroups>
+		<CooldownGroup>
+			<GroupName>EntitlementCrates</GroupName>
+			<Cooldown>259200</Cooldown>
+		</CooldownGroup>
+	</CooldownGroups>
+	
+	<!--  You try to do something that you don't have enough energy for --> 
+	<Dialog>
+		<Name>NeedEnergy</Name>
+		<TriggerCondition>NEED_ENERGY</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>REFILL_ENERGY_BEFORE_COMBAT_TITLE</TitleText>
+		<Desc1Text>REFILL_ENERGY_BEFORE_COMBAT_PROMPT</Desc1Text>
+		<OfferId>Lesser Energy Potion,Energy Potion,Greater Energy Potion</OfferId>
+		<ItemIds>POTION_ENERGY_PILL_LESSER,POTION_ENERGY_PILL</ItemIds>
+		<YesText>REFILL_ENERGY_DIALOG_BEGIN</YesText>
+		<NoText>REFILL_ENERGY_DIALOG_CANCEL</NoText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	
+	<!--  You click on the energy bar and don't have full energy --> 
+	<Dialog>
+		<Name>RefillEnergy</Name>
+		<TriggerCondition>REFILL_ENERGY</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>REFILL_ENERGY_DIALOG_TITLE</TitleText>
+		<Desc1Text>REFILL_ENERGY_DIALOG_PROMPT</Desc1Text>
+		<OfferId>Lesser Energy Potion,Energy Potion,Greater Energy Potion</OfferId>
+		<ItemIds>POTION_ENERGY_PILL_LESSER,POTION_ENERGY_PILL</ItemIds>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	
+	<!--  You try to enter combat at less than full health --> 
+	<Dialog>
+		<Name>NeedHealth</Name>
+		<TriggerCondition>NEED_HEALTH</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>HEAL_HERO_BEFORE_COMBAT_TITLE</TitleText>
+		<Desc1Text>HEAL_HERO_BEFORE_COMBAT_PROMPT</Desc1Text>
+		<OfferId>Health Potion,Greater Health Potion,Restoration Potion</OfferId>
+		<YesText>HEAL_HERO_DIALOG_BEGIN</YesText>
+		<NoText>HEAL_HERO_DIALOG_CANCEL</NoText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<Dialog>
+		<Name>NeedHealthGvG</Name>
+		<TriggerCondition>NEED_HEALTH_GVG</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>HEAL_HERO_BEFORE_COMBAT_TITLE</TitleText>
+		<Desc1Text>HEAL_HERO_BEFORE_COMBAT_PROMPT</Desc1Text>
+		<OfferId>Health Potion,Greater Health Potion,Restoration Potion</OfferId>
+		<YesText>HEAL_HERO_DIALOG_BEGIN</YesText>
+		<NoText>GVG_HEAL_HERO_DIALOG_CANCEL</NoText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	
+	<!--  You click on the energy bar and don't have full energy --> 
+	<Dialog>
+		<Name>HealHero</Name>
+		<TriggerCondition>HEAL_HERO</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>HEAL_HERO_DIALOG_TITLE</TitleText>
+		<Desc1Text>HEAL_HERO_DIALOG_PROMPT</Desc1Text>
+		<OfferId>Health Potion,Greater Health Potion,Restoration Potion</OfferId>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	
+	<!-- level up -->
+	<Dialog>
+		<Name>LevelUp</Name>
+		<TriggerCondition>LEVEL_UP</TriggerCondition>
+		<IsShare>TRUE</IsShare>
+		<Probability>100</Probability>
+		<WallPostId>LEVEL_UP</WallPostId>
+		<TitleText>SHARE_LEVELUP_DIALOG_TITLE</TitleText>
+		<Desc1Text>SHARE_LEVELUP_DIALOG_DESC1</Desc1Text>
+		<Desc2Text>SHARE_LEVELUP_DIALOG_DESC2</Desc2Text>
+		<YesText>SHARE</YesText>
+		<NoText>SKIP</NoText>
+	</Dialog>
+	<!-- complete quest -->
+	<Dialog>
+		<Name>QuestComplete</Name>
+		<TriggerCondition>COMPLETE_QUEST</TriggerCondition>
+		<IsShare>TRUE</IsShare>
+		<Probability>100</Probability>
+		<WallPostId>QUEST_COMPLETE</WallPostId>
+		<TitleText>SHARE_QUEST_COMPLETE_DIALOG_TITLE</TitleText>
+		<Desc1Text>SHARE_QUEST_COMPLETE_DIALOG_DESC1</Desc1Text>
+		<Desc2Text>SHARE_QUEST_COMPLETE_DIALOG_DESC2</Desc2Text>
+		<YesText>SHARE</YesText>
+		<NoText>SKIP</NoText>
+	</Dialog>
+	<Dialog>
+		<Name>UnlockEarnedLinked</Name>
+		<TriggerCondition>EARNED_UNLOCK_LINKED</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>UNLOCK_EARNED_DIALOG_LINKED_TITLE</TitleText>
+		<Desc1Text>UNLOCK_EARNED_DIALOG_LINKED_DESC1</Desc1Text>
+		<Desc2Text>UNLOCK_EARNED_DIALOG_LINKED_DESC2</Desc2Text>
+		<YesText>UNLOCK_EARNED_DIALOG_YES_LABEL</YesText>
+		<NoText>UNLOCK_EARNED_DIALOG_NO_LABEL</NoText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+		<SoundId>Victory</SoundId>
+	</Dialog>
+	<Dialog>
+		<Name>UnlockEarnedUnlinked</Name>
+		<TriggerCondition>EARNED_UNLOCK_UNLINKED</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>UNLOCK_EARNED_DIALOG_UNLINKED_TITLE</TitleText>
+		<Desc1Text>UNLOCK_EARNED_DIALOG_LINKED_DESC1</Desc1Text>
+		<Desc2Text>UNLOCK_EARNED_DIALOG_UNLINKED_DESC</Desc2Text>
+		<YesText>UNLOCK_EARNED_DIALOG_YES_LABEL</YesText>
+		<NoText>UNLOCK_EARNED_DIALOG_NO_LABEL</NoText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+		<IsLinkAccountDialog>TRUE</IsLinkAccountDialog>
+		<SoundId>Victory</SoundId>
+	</Dialog>
+	<Dialog>
+		<Name>UnlockPleaseEnjoy</Name>
+		<TriggerCondition>UNLOCK_PLEASE_ENJOY</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>PLEASE_ENJOY_DIALOG_TITLE</TitleText>
+		<Desc1Text>PLEASE_ENJOY_DIALOG_DESC</Desc1Text>
+		<Desc2Text>PLEASE_ENJOY_DIALOG_DESC</Desc2Text>
+		<YesText>PLEASE_ENJOY_DIALOG_YES_LABEL</YesText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+		<IsLinkAccountDialog>TRUE</IsLinkAccountDialog>
+	</Dialog>
+	<!-- <Dialog>
+		<Name>UnlockNag</Name>
+		<TriggerCondition>UNLINKED_ENTITLEMENTS</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>UNLOCK_NAG_DIALOG_TITLE</TitleText>
+		<Desc1Text>UNLOCK_NAG_DIALOG_DESC1</Desc1Text>
+		<IsLinkAccountDialog>TRUE</IsLinkAccountDialog>
+		<IsDaily>TRUE</IsDaily>
+		<MaxTimes>3</MaxTimes>
+		<MinPlayTime>300</MinPlayTime>
+		<CooldownAfterMaxCount>604800</CooldownAfterMaxCount>
+	</Dialog> -->
+	
+	<!-- Deprecated. Use invite friend protips instead.
+	<Dialog>
+		<Name>InviteFriends</Name>
+		<TriggerCondition>ENTER_CASTLE</TriggerCondition>
+		<Probability>0</Probability>
+		<TitleText>INVITE_FRIENDS_DIALOG_TITLE</TitleText>
+		<Desc1Text>INVITE_FRIENDS_DIALOG_DESC1</Desc1Text>
+		<Desc2Text>INVITE_FRIENDS_DIALOG_DESC2</Desc2Text>
+		<YesText>INVITE_FRIENDS_DIALOG_YES_LABEL</YesText>
+		<NoText>GENERIC_BUY_DIALOG_NO_LABEL</NoText>
+		<ImageUrl>invitefriends.png</ImageUrl>
+		<MinPlayTime>60</MinPlayTime>
+		<IsDaily>TRUE</IsDaily>
+	</Dialog>
+	-->
+
+	<Dialog>
+		<Name>ResetDataWarning</Name>
+		<TitleText>RESET_DATA_WARNING_TITLE</TitleText>
+		<Desc1Text>RESET_DATA_WARNING_DESC1</Desc1Text>
+		<Desc2Text>RESET_DATA_WARNING_DESC2</Desc2Text>
+		<YesText>RESET_DATA_WARNING_YES_LABEL</YesText>
+		<NoText>GENERIC_BUY_DIALOG_NO_LABEL</NoText>
+	</Dialog>
+	<Dialog>
+		<Name>RespecHeroWarning</Name>
+		<TitleText>RESPEC_HERO_WARNING_TITLE</TitleText>
+		<Desc1Text>RESPEC_HERO_WARNING_DESC1</Desc1Text>
+		<Desc2Text>RESPEC_HERO_WARNING_DESC2</Desc2Text>
+		<YesText>RESPEC_HERO_WARNING_YES_LABEL</YesText>
+		<NoText>GENERIC_BUY_DIALOG_NO_LABEL</NoText>
+	</Dialog>
+	<Dialog>
+		<Name>SkipTutorialWarning</Name>
+		<TitleText>SKIP_TUTORIAL_WARNING_TITLE</TitleText>
+		<Desc1Text>SKIP_TUTORIAL_WARNING_DESC1</Desc1Text>
+		<Desc2Text>SKIP_TUTORIAL_WARNING_DESC2</Desc2Text>
+		<YesText>SKIP_TUTORIAL_YES_LABEL</YesText>
+		<NoText>GENERIC_BUY_DIALOG_NO_LABEL</NoText>
+	</Dialog>
+	<!--  You try to craft potion without active workers --> 
+	<Dialog>
+		<Name>NeedWorkers</Name>
+		<TitleText>HEAL_HERO_BEFORE_COMBAT_TITLE</TitleText>
+		<Desc1Text>HEAL_HERO_BEFORE_COMBAT_PROMPT</Desc1Text>
+		<Desc2Text>SKIP_TUTORIAL_WARNING_DESC2</Desc2Text>
+		<YesText>HEAL_HERO_DIALOG_BEGIN</YesText>
+		<NoText>HEAL_HERO_DIALOG_CANCEL</NoText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<!-- buy battle slot dialog -->
+	<Dialog>
+		<Name>BuyBattleSlot</Name>
+		<IsBuy>TRUE</IsBuy>
+		<OfferId>Extra Battle Slot</OfferId>
+		<TitleText>BATTLE_SLOT_DIALOG_TITLE</TitleText>
+		<Desc1Text>BATTLE_SLOT_DIALOG_DESC1</Desc1Text>
+		<Desc2Text>BATTLE_SLOT_DIALOG_DESC2</Desc2Text>
+		<YesText>BATTLE_SLOT_DIALOG_CONFIRM_BUY</YesText>
+		<NoText>GENERIC_BUY_DIALOG_NO_LABEL</NoText>
+	</Dialog>
+	<!-- buy smelling salt dialog -->
+	<Dialog>
+		<Name>BuySmellingSalt</Name>
+		<IsBuyAndUse>TRUE</IsBuyAndUse>
+		<OfferId>Smelling Salts</OfferId>
+		<TitleText>SMELLING_SALT_DIALOG_TITLE</TitleText>
+		<Desc1Text>SMELLING_SALT_DIALOG_BUY_DESC</Desc1Text>
+		<Desc2Text>SMELLING_SALT_DIALOG_ITEM_DESC</Desc2Text>
+		<YesText>SMELLING_SALT_DIALOG_CONFIRM_BUY</YesText>
+		<NoText>GENERIC_BUY_DIALOG_NO_LABEL</NoText>
+	</Dialog>
+	<Dialog>
+		<Name>BuyReviveGvG</Name>
+		<IsBuyAndUse>TRUE</IsBuyAndUse>
+		<OfferId>Revive Yourself</OfferId>
+		<TitleText>SMELLING_SALT_DIALOG_TITLE</TitleText>
+		<Desc1Text>SMELLING_SALT_DIALOG_BUY_DESC</Desc1Text>
+		<Desc2Text>SMELLING_SALT_DIALOG_ITEM_DESC</Desc2Text>
+		<YesText>SMELLING_SALT_DIALOG_CONFIRM_BUY</YesText>
+		<NoText>GENERIC_BUY_DIALOG_NO_LABEL</NoText>
+	</Dialog>
+	<!-- use smelling salt dialog -->
+	<Dialog>
+		<Name>UseSmellingSalt</Name>
+		<TitleText>SMELLING_SALT_DIALOG_TITLE</TitleText>
+		<Desc1Text>SMELLING_SALT_DIALOG_USE_DESC</Desc1Text>
+		<Desc2Text>SMELLING_SALT_DIALOG_ITEM_DESC</Desc2Text>
+		<YesText>SMELLING_SALT_DIALOG_CONFIRM_USE</YesText>
+		<NoText>GENERIC_BUY_DIALOG_NO_LABEL</NoText>
+	</Dialog>
+	<!-- revive for gold dialog -->
+	<Dialog>
+		<Name>ReviveForGold</Name>
+		<TitleText>REVIVE_FOR_GOLD_DIALOG_TITLE</TitleText>
+		<Desc1Text>REVIVE_FOR_GOLD_DIALOG_DESC1</Desc1Text>
+		<Desc2Text>REVIVE_FOR_GOLD_DIALOG_DESC2</Desc2Text>
+		<YesText>REVIVE_FOR_GOLD_DIALOG_YES_LABEL</YesText>
+		<NoText>REVIVE_FOR_GOLD_DIALOG_NO_LABEL</NoText>
+	</Dialog>
+	<!-- buy evra's horn dialog -->
+	<Dialog>
+		<Name>BuyHornEvras</Name>
+		<IsBuyAndUse>TRUE</IsBuyAndUse>
+		<OfferId>Evra's Horn</OfferId>
+		<TitleText>HORN_EVRAS_DIALOG_TITLE</TitleText>
+		<Desc1Text>HORN_EVRAS_DIALOG_BUY_DESC</Desc1Text>
+		<Desc2Text>HORN_EVRAS_DIALOG_ITEM_DESC</Desc2Text>
+		<YesText>HORN_EVRAS_DIALOG_CONFIRM_BUY</YesText>
+		<NoText>GENERIC_BUY_DIALOG_NO_LABEL</NoText>
+	</Dialog>
+	<Dialog>
+		<Name>BuyHornEvrasGvG</Name>
+		<IsBuyAndUse>TRUE</IsBuyAndUse>
+		<OfferId>Evra's Horn (GvG)</OfferId>
+		<TitleText>HORN_EVRAS_DIALOG_TITLE</TitleText>
+		<Desc1Text>HORN_EVRAS_DIALOG_BUY_DESC</Desc1Text>
+		<Desc2Text>HORN_EVRAS_DIALOG_ITEM_DESC</Desc2Text>
+		<YesText>HORN_EVRAS_DIALOG_CONFIRM_BUY</YesText>
+		<NoText>GENERIC_BUY_DIALOG_NO_LABEL</NoText>
+	</Dialog>
+	<Dialog>
+		<Name>BuyRecruitGvG</Name>
+		<IsBuyAndUse>TRUE</IsBuyAndUse>
+		<OfferId>Recruit an Ally</OfferId>
+		<TitleText>HORN_EVRAS_DIALOG_TITLE</TitleText>
+		<Desc1Text>HORN_EVRAS_DIALOG_BUY_DESC</Desc1Text>
+		<Desc2Text>HORN_EVRAS_DIALOG_ITEM_DESC</Desc2Text>
+		<YesText>HORN_EVRAS_DIALOG_CONFIRM_BUY</YesText>
+		<NoText>GENERIC_BUY_DIALOG_NO_LABEL</NoText>
+	</Dialog>
+	<!-- use evra's horn dialog -->
+	<Dialog>
+		<Name>UseHornEvras</Name>
+		<TitleText>HORN_EVRAS_DIALOG_TITLE</TitleText>
+		<Desc1Text>HORN_EVRAS_DIALOG_USE_DESC</Desc1Text>
+		<Desc2Text>HORN_EVRAS_DIALOG_ITEM_DESC</Desc2Text>
+		<YesText>HORN_EVRAS_DIALOG_CONFIRM_USE</YesText>
+		<NoText>GENERIC_BUY_DIALOG_NO_LABEL</NoText>
+	</Dialog>
+	<!-- recruit for gold dialog -->
+	<Dialog>
+		<Name>RecruitForGold</Name>
+		<TitleText>RECRUIT_FOR_GOLD_DIALOG_TITLE</TitleText>
+		<Desc1Text>RECRUIT_FOR_GOLD_DIALOG_DESC1</Desc1Text>
+		<Desc2Text>RECRUIT_FOR_GOLD_DIALOG_DESC2</Desc2Text>
+		<YesText>RECRUIT_FOR_GOLD_DIALOG_YES_LABEL</YesText>
+		<NoText>RECRUIT_FOR_GOLD_DIALOG_NO_LABEL</NoText>
+	</Dialog>
+	<!-- buy challenge token dialog -->
+	<Dialog>
+		<Name>BuyChallengeToken</Name>
+		<IsBuy>TRUE</IsBuy>
+		<OfferId>Challenge Token Stack</OfferId>
+		<TitleText>CHALLENGE_TOKEN_DIALOG_TITLE</TitleText>
+		<Desc1Text>CHALLENGE_TOKEN_DIALOG_BUY_DESC</Desc1Text>
+		<Desc2Text>CHALLENGE_TOKEN_DIALOG_ITEM_DESC</Desc2Text>
+		<YesText>CHALLENGE_TOKEN_DIALOG_CONFIRM_BUY</YesText>
+		<NoText>GENERIC_BUY_DIALOG_NO_LABEL</NoText>
+	</Dialog>
+	<!-- buy evra's horn dialog (not in guild version) -->
+	<Dialog>
+		<Name>BuyHornEvrasGuild</Name>
+		<IsBuyAndUse>TRUE</IsBuyAndUse>
+		<OfferId>Evra's Horn</OfferId>
+		<TitleText>HORN_EVRAS_DIALOG_TITLE</TitleText>
+		<Desc1Text>HORN_EVRAS_DIALOG_GUILD_BUY_DESC</Desc1Text>
+		<Desc2Text>HORN_EVRAS_DIALOG_ITEM_DESC</Desc2Text>
+		<YesText>HORN_EVRAS_DIALOG_CONFIRM_BUY</YesText>
+		<NoText>GENERIC_BUY_DIALOG_NO_LABEL</NoText>
+	</Dialog>
+	<!-- use evra's horn dialog (not in guild version) -->
+	<Dialog>
+		<Name>UseHornEvrasGuild</Name>
+		<TitleText>HORN_EVRAS_DIALOG_TITLE</TitleText>
+		<Desc1Text>HORN_EVRAS_DIALOG_GUILD_USE_DESC</Desc1Text>
+		<Desc2Text>HORN_EVRAS_DIALOG_ITEM_DESC</Desc2Text>
+		<YesText>HORN_EVRAS_DIALOG_CONFIRM_USE</YesText>
+		<NoText>GENERIC_BUY_DIALOG_NO_LABEL</NoText>
+	</Dialog>
+<!-- fallen friend -->
+	<Dialog>
+		<Name>FallenFriend</Name>
+		<TriggerCondition>Fallen_Friend</TriggerCondition>
+		<IsShare>TRUE</IsShare>
+		<Probability>30</Probability>
+		<WallPostId>FALLEN_FRIEND</WallPostId>
+		<TitleText>SHARE_FALLEN_FRIEND_DIALOG_TITLE</TitleText>
+		<Desc1Text>SHARE_FALLEN_FRIEND_DIALOG_DESC1</Desc1Text>
+		<Desc2Text>SHARE_FALLEN_FRIEND_DIALOG_DESC2</Desc2Text>
+		<YesText>SHARE</YesText>
+		<NoText>SKIP</NoText>
+	</Dialog>
+	<Dialog>
+		<Name>LevelCapReachedUpgrade</Name>
+		<TriggerCondition>LEVEL_CAP_REACHED_UPGRADE</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>LEVEL_CAP_REACHED_TITLE</TitleText>
+		<Desc1Text>LEVEL_CAP_REACHED_DESC</Desc1Text>
+		<Desc2Text>LEVEL_CAP_REACHED_UPGRADE_DESC</Desc2Text>
+		<YesText>LEVEL_CAP_REACHED_UPGRADE_YES_LABEL</YesText>
+		<NoText>LEVEL_CAP_REACHED_NO_LABEL</NoText>
+		<Cooldown>28800</Cooldown>
+	</Dialog>
+	<Dialog>
+		<Name>LevelCapReachedPurchase</Name>
+		<TriggerCondition>LEVEL_CAP_REACHED_PURCHASE</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>LEVEL_CAP_REACHED_TITLE</TitleText>
+		<Desc1Text>LEVEL_CAP_REACHED_DESC</Desc1Text>
+		<Desc2Text>LEVEL_CAP_REACHED_PURCHASE_DESC</Desc2Text>
+		<YesText>LEVEL_CAP_REACHED_PURCHASE_YES_LABEL</YesText>
+		<NoText>LEVEL_CAP_REACHED_NO_LABEL</NoText>
+		<Cooldown>28800</Cooldown>
+	</Dialog>
+	<Dialog>
+		<!--
+			The hero level cap is calculated according to the formula below:
+			heroLevelCap = base(=0) + heroRoomLevelCap * increment(=10).
+			For example, the hero level cap is 100 if the hero room level cap is 10.
+			Refer to getMaxLevel() in HeroUtil.as for more details.
+			-han 02.03.2011
+		-->
+		<Name>LevelCapReachedMaxLevel_100</Name>
+		<TriggerCondition>LEVEL_CAP_REACHED_MAX_LEVEL</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>LEVEL_CAP_REACHED_TITLE</TitleText>
+		<Desc1Text>LEVEL_CAP_REACHED_MAX_LEVEL_DESC1</Desc1Text>
+		<Desc2Text>LEVEL_CAP_REACHED_MAX_LEVEL_DESC2</Desc2Text>
+		<YesText>LEVEL_CAP_REACHED_MAX_LEVEL_YES_LABEL</YesText>
+		<MaxTimes>1</MaxTimes>
+	</Dialog>
+	
+	<!--  promo packs -->
+	<Dialog>
+		<Name>PromoPackOptions</Name>
+		<TriggerCondition>OPTION_MENU_CRATES</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>PROMO_PACKS_TITLE</TitleText>
+		<Desc1Text>PROMO_PACKS_LINKED_DESC</Desc1Text>
+		<Desc2Text>PROMO_PACKS_UNLINKED_DESC</Desc2Text>
+		<IsLinkAccountDialog>TRUE</IsLinkAccountDialog>
+		<YesText>CHECK_FOR_PACKS_YES_LABEL</YesText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<Dialog>
+		<Name>BiowareSignatureCrate</Name>
+		<TriggerCondition>SHOW_PROMO_PACK_CRATE</TriggerCondition>
+		<Comparisons>
+			<Comparison>
+				<ComparisonType>EQUAL</ComparisonType>
+				<CompareAgainst>BIOWARE_SIGNATURE_PACK</CompareAgainst>
+			</Comparison>
+		</Comparisons>
+		<Probability>100</Probability>
+		<TitleText>CHECK_FOR_PACKS_TITLE</TitleText>
+		<Desc1Text>CHECK_FOR_PACKS_LINKED_DESC</Desc1Text>
+		<Desc2Text>CHECK_FOR_PACKS_UNLINKED_DESC</Desc2Text>
+		<IsLinkAccountDialog>TRUE</IsLinkAccountDialog>
+		<YesText>CHECK_FOR_PACKS_YES_LABEL</YesText>
+		<IsDaily>TRUE</IsDaily>
+		<LaunchIcon>
+			<MinX>-180</MinX>
+			<MaxX>-180</MaxX>
+			<MinY>120</MinY>
+			<MaxY>120</MaxY>
+			<RemovalTrigger>EXIT_CASTLE</RemovalTrigger>
+		</LaunchIcon>
+	</Dialog>
+	<Dialog>
+		<Name>PromoPackCrate</Name>
+		<TriggerCondition>SHOW_PROMO_PACK_CRATE</TriggerCondition>
+		<Comparisons>
+			<Comparison>
+				<ComparisonType>NOT_EQUAL</ComparisonType>
+				<CompareAgainst>BE_LEGENDARY_PACK1</CompareAgainst>
+			</Comparison>
+			<Comparison>
+				<ComparisonType>NOT_EQUAL</ComparisonType>
+				<CompareAgainst>BE_LEGENDARY_PACK2</CompareAgainst>
+			</Comparison>
+			<Comparison>
+				<ComparisonType>NOT_EQUAL</ComparisonType>
+				<CompareAgainst>BIOWARE_SIGNATURE_PACK</CompareAgainst>
+			</Comparison>
+			<Comparison>
+				<ComparisonType>NOT_EQUAL</ComparisonType>
+				<CompareAgainst>SIMS_MEDIEVAL_PACK</CompareAgainst>
+			</Comparison>
+			<Comparison>
+				<ComparisonType>NOT_EQUAL</ComparisonType>
+				<CompareAgainst>P4F_CS_PACK</CompareAgainst>
+			</Comparison>
+			<Comparison>
+				<ComparisonType>NOT_EQUAL</ComparisonType>
+				<CompareAgainst>ORIGINS_PACK</CompareAgainst>
+			</Comparison>
+		</Comparisons>
+		<Probability>100</Probability>
+		<TitleText>CHECK_FOR_PACKS_TITLE</TitleText>
+		<Desc1Text>CHECK_FOR_PACKS_LINKED_DESC</Desc1Text>
+		<Desc2Text>CHECK_FOR_PACKS_UNLINKED_DESC</Desc2Text>
+		<IsLinkAccountDialog>TRUE</IsLinkAccountDialog>
+		<YesText>CHECK_FOR_PACKS_YES_LABEL</YesText>
+		<CooldownGroup>EntitlementCrates</CooldownGroup>
+		<LaunchIcon>
+			<MinX>-180</MinX>
+			<MaxX>-180</MaxX>
+			<MinY>120</MinY>
+			<MaxY>120</MaxY>
+			<RemovalTrigger>EXIT_CASTLE</RemovalTrigger>
+		</LaunchIcon>
+	</Dialog>
+	<Dialog>
+		<Name>BeLegendaryCrate1</Name>
+		<TriggerCondition>SHOW_PROMO_PACK_CRATE</TriggerCondition>
+		<Comparisons>
+			<Comparison>
+				<ComparisonType>EQUAL</ComparisonType>
+				<CompareAgainst>BE_LEGENDARY_PACK1</CompareAgainst>
+			</Comparison>
+		</Comparisons>
+		<Probability>100</Probability>
+		<TitleText>CHECK_FOR_PACKS_TITLE</TitleText>
+		<Desc1Text>BE_LEGENDARY_PACK_CHECK_LINKED_DESC</Desc1Text>
+		<Desc2Text>BE_LEGENDARY_PACK_CHECK_UNLINKED_DESC</Desc2Text>
+		<IsLinkAccountDialog>TRUE</IsLinkAccountDialog>
+		<YesText>CHECK_FOR_PACKS_YES_LABEL</YesText>
+		<CooldownGroup>EntitlementCrates</CooldownGroup>
+		<LaunchIcon>
+			<MinX>-180</MinX>
+			<MaxX>-180</MaxX>
+			<MinY>120</MinY>
+			<MaxY>120</MaxY>
+			<RemovalTrigger>EXIT_CASTLE</RemovalTrigger>
+		</LaunchIcon>
+	</Dialog>
+	<Dialog>
+		<Name>BeLegendaryCrate2</Name>
+		<TriggerCondition>SHOW_PROMO_PACK_CRATE</TriggerCondition>
+		<Comparisons>
+			<Comparison>
+				<ComparisonType>EQUAL</ComparisonType>
+				<CompareAgainst>BE_LEGENDARY_PACK2</CompareAgainst>
+			</Comparison>
+		</Comparisons>
+		<Probability>100</Probability>
+		<TitleText>CHECK_FOR_PACKS_TITLE</TitleText>
+		<Desc1Text>BE_LEGENDARY_PACK_CHECK_LINKED_DESC</Desc1Text>
+		<Desc2Text>BE_LEGENDARY_PACK_CHECK_UNLINKED_DESC</Desc2Text>
+		<IsLinkAccountDialog>TRUE</IsLinkAccountDialog>
+		<YesText>CHECK_FOR_PACKS_YES_LABEL</YesText>
+		<CooldownGroup>EntitlementCrates</CooldownGroup>
+		<LaunchIcon>
+			<MinX>-180</MinX>
+			<MaxX>-180</MaxX>
+			<MinY>120</MinY>
+			<MaxY>120</MaxY>
+			<RemovalTrigger>EXIT_CASTLE</RemovalTrigger>
+		</LaunchIcon>
+	</Dialog>
+	<Dialog>
+		<Name>SimsMedievalCrate</Name>
+		<TriggerCondition>SHOW_PROMO_PACK_CRATE</TriggerCondition>
+		<Comparisons>
+			<Comparison>
+				<ComparisonType>EQUAL</ComparisonType>
+				<CompareAgainst>SIMS_MEDIEVAL_PACK</CompareAgainst>
+			</Comparison>
+		</Comparisons>
+		<Probability>100</Probability>
+		<TitleText>CHECK_FOR_PACKS_TITLE</TitleText>
+		<Desc1Text>SIMS_MEDIEVAL_CHECK_LINKED_DESC</Desc1Text>
+		<Desc2Text>SIMS_MEDIEVAL_CHECK_UNLINKED_DESC</Desc2Text>
+		<IsLinkAccountDialog>TRUE</IsLinkAccountDialog>
+		<YesText>CHECK_FOR_PACKS_YES_LABEL</YesText>
+		<CooldownGroup>EntitlementCrates</CooldownGroup>
+		<LaunchIcon>
+			<MinX>-180</MinX>
+			<MaxX>-180</MaxX>
+			<MinY>120</MinY>
+			<MaxY>120</MaxY>
+			<RemovalTrigger>EXIT_CASTLE</RemovalTrigger>
+		</LaunchIcon>
+	</Dialog>
+	<Dialog>
+		<Name>OriginsCrate</Name>
+		<TriggerCondition>SHOW_PROMO_PACK_CRATE</TriggerCondition>
+		<Comparisons>
+			<Comparison>
+				<ComparisonType>EQUAL</ComparisonType>
+				<CompareAgainst>ORIGINS_PACK</CompareAgainst>
+			</Comparison>
+		</Comparisons>
+		<Probability>100</Probability>
+		<TitleText>CHECK_FOR_PACKS_TITLE</TitleText>
+		<Desc1Text>ORIGINS_PACK_CHECK_LINKED_DESC</Desc1Text>
+		<Desc2Text>ORIGINS_PACK_CHECK_UNLINKED_DESC</Desc2Text>
+		<IsLinkAccountDialog>TRUE</IsLinkAccountDialog>
+		<YesText>CHECK_FOR_PACKS_YES_LABEL</YesText>
+		<CooldownGroup>EntitlementCrates</CooldownGroup>
+		<LaunchIcon>
+			<MinX>-180</MinX>
+			<MaxX>-180</MaxX>
+			<MinY>120</MinY>
+			<MaxY>120</MaxY>
+			<RemovalTrigger>EXIT_CASTLE</RemovalTrigger>
+		</LaunchIcon>
+	</Dialog>
+	<Dialog>
+		<Name>PromoPackSuccess</Name>
+		<TriggerCondition>PROMO_PACK_SUCCESS</TriggerCondition>
+		<Comparisons>
+			<Comparison>
+				<ComparisonType>NOT_EQUAL</ComparisonType>
+				<CompareAgainst>BE_LEGENDARY_PACK1</CompareAgainst>
+			</Comparison>
+			<Comparison>
+				<ComparisonType>NOT_EQUAL</ComparisonType>
+				<CompareAgainst>BE_LEGENDARY_PACK2</CompareAgainst>
+			</Comparison>
+			<Comparison>
+				<ComparisonType>NOT_EQUAL</ComparisonType>
+				<CompareAgainst>SIMS_MEDIEVAL_PACK</CompareAgainst>
+			</Comparison>
+			<Comparison>
+				<ComparisonType>NOT_EQUAL</ComparisonType>
+				<CompareAgainst>P4F_CS_PACK</CompareAgainst>
+			</Comparison>
+			<Comparison>
+				<ComparisonType>NOT_EQUAL</ComparisonType>
+				<CompareAgainst>ORIGINS_PACK</CompareAgainst>
+			</Comparison>
+		</Comparisons>
+		<Probability>100</Probability>
+		<TitleText>PACK_CHECK_SUCCESS_TITLE</TitleText>
+		<Desc1Text>PACK_CHECK_SUCCESS_DESC</Desc1Text>
+		<IsLinkAccountDialog>TRUE</IsLinkAccountDialog>
+		<YesText>PACK_CHECK_SUCCESS_YES_LABEL</YesText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<Dialog>
+		<Name>BeLegendaryPackSuccess</Name>
+		<TriggerCondition>PROMO_PACK_SUCCESS</TriggerCondition>
+		<Comparisons>
+			<Comparison>
+				<ComparisonType>EQUAL</ComparisonType>
+				<CompareAgainst>BE_LEGENDARY_PACK1</CompareAgainst>
+			</Comparison>
+		</Comparisons>
+		<Probability>100</Probability>
+		<TitleText>PACK_CHECK_SUCCESS_TITLE</TitleText>
+		<Desc1Text>BE_LEGENDARY_PACK_CHECK_SUCCESS_DESC</Desc1Text>
+		<IsLinkAccountDialog>TRUE</IsLinkAccountDialog>
+		<YesText>PACK_CHECK_SUCCESS_YES_LABEL</YesText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<Dialog>
+		<Name>BeLegendaryPackSuccess</Name>
+		<TriggerCondition>PROMO_PACK_SUCCESS</TriggerCondition>
+		<Comparisons>
+			<Comparison>
+				<ComparisonType>EQUAL</ComparisonType>
+				<CompareAgainst>BE_LEGENDARY_PACK2</CompareAgainst>
+			</Comparison>
+		</Comparisons>
+		<Probability>100</Probability>
+		<TitleText>PACK_CHECK_SUCCESS_TITLE</TitleText>
+		<Desc1Text>BE_LEGENDARY_PACK_CHECK_SUCCESS_DESC</Desc1Text>
+		<IsLinkAccountDialog>TRUE</IsLinkAccountDialog>
+		<YesText>PACK_CHECK_SUCCESS_YES_LABEL</YesText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<Dialog>
+		<Name>SimsMedievalPackSuccess</Name>
+		<TriggerCondition>PROMO_PACK_SUCCESS</TriggerCondition>
+		<Comparisons>
+			<Comparison>
+				<ComparisonType>EQUAL</ComparisonType>
+				<CompareAgainst>SIMS_MEDIEVAL_PACK</CompareAgainst>
+			</Comparison>
+		</Comparisons>
+		<Probability>100</Probability>
+		<TitleText>PACK_CHECK_SUCCESS_TITLE</TitleText>
+		<Desc1Text>SIMS_MEDIEVAL_CHECK_SUCCESS_DESC</Desc1Text>
+		<IsLinkAccountDialog>TRUE</IsLinkAccountDialog>
+		<YesText>PACK_CHECK_SUCCESS_YES_LABEL</YesText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<Dialog>
+		<Name>OriginsPackSuccess</Name>
+		<TriggerCondition>PROMO_PACK_SUCCESS</TriggerCondition>
+		<Comparisons>
+			<Comparison>
+				<ComparisonType>EQUAL</ComparisonType>
+				<CompareAgainst>ORIGINS_PACK</CompareAgainst>
+			</Comparison>
+		</Comparisons>
+		<Probability>100</Probability>
+		<TitleText>PACK_CHECK_SUCCESS_TITLE</TitleText>
+		<Desc1Text>ORIGINS_PACK_CHECK_SUCCESS_DESC</Desc1Text>
+		<IsLinkAccountDialog>TRUE</IsLinkAccountDialog>
+		<YesText>PACK_CHECK_SUCCESS_YES_LABEL</YesText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<Dialog>
+		<Name>P4FPackSuccess</Name>
+		<TriggerCondition>PROMO_PACK_SUCCESS</TriggerCondition>
+		<Comparisons>
+			<Comparison>
+				<ComparisonType>EQUAL</ComparisonType>
+				<CompareAgainst>P4F_CS_PACK</CompareAgainst>
+			</Comparison>
+		</Comparisons>
+		<Probability>100</Probability>
+		<TitleText>PACK_CHECK_SUCCESS_TITLE</TitleText>
+		<Desc1Text>P4F_CS_PACK_CHECK_SUCCESS_DESC</Desc1Text>
+		<IsLinkAccountDialog>TRUE</IsLinkAccountDialog>
+		<YesText>PACK_CHECK_SUCCESS_YES_LABEL</YesText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<Dialog>
+		<Name>PromoPackFailNoConsolation</Name>
+		<TriggerCondition>PROMO_PACK_FAIL_NO_CONSOLATION</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>PACK_CHECK_FAILED_TITLE</TitleText>
+		<Desc1Text>PACK_CHECK_FAILED_NO_CONSOLATION_DESC</Desc1Text>
+		<IsLinkAccountDialog>TRUE</IsLinkAccountDialog>
+		<YesText>PACK_CHECK_FAILED_NO_CONSOLATION_YES_LABEL</YesText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<Dialog>
+		<Name>PromoPackFailConsolation</Name>
+		<TriggerCondition>PROMO_PACK_FAIL_CONSOLATION</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>PACK_CHECK_FAILED_TITLE</TitleText>
+		<Desc1Text>PACK_CHECK_FAILED_CONSOLATION_DESC</Desc1Text>
+		<IsLinkAccountDialog>TRUE</IsLinkAccountDialog>
+		<YesText>PACK_CHECK_FAILED_CONSOLATION_YES_LABEL</YesText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<Dialog>
+		<Name>PromoCodeInvalidDialog</Name>
+		<TriggerCondition>PROMO_CODE_INVALID</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>PROMO_CODE_INVALID_TITLE</TitleText>
+		<Desc1Text>PROMO_CODE_INVALID_DESC1</Desc1Text>
+		<YesText>PROMO_CODE_INVALID_YES_LABEL</YesText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<Dialog>
+		<Name>PromoCodeExpiredDialog</Name>
+		<TriggerCondition>PROMO_CODE_EXPIRED</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>PROMO_CODE_EXPIRED_TITLE</TitleText>
+		<Desc1Text>PROMO_CODE_EXPIRED_DESC1</Desc1Text>
+		<YesText>PROMO_CODE_EXPIRED_YES_LABEL</YesText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<Dialog>
+		<Name>PromoCodeNotValidYetDialog</Name>
+		<TriggerCondition>PROMO_CODE_NOT_VALID_YET</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>PROMO_CODE_NOT_VALID_YET_TITLE</TitleText>
+		<Desc1Text>PROMO_CODE_NOT_VALID_YET_DESC1</Desc1Text>
+		<YesText>PROMO_CODE_NOT_VALID_YET_YES_LABEL</YesText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<Dialog>
+		<Name>PromoCodeAlreadyRedeemedDialog</Name>
+		<TriggerCondition>PROMO_CODE_ALREADY_REDEEMED</TriggerCondition>
+		<Probability>100</Probability>
+		<TitleText>PROMO_CODE_ALREADY_REDEEMED_TITLE</TitleText>
+		<Desc1Text>PROMO_CODE_ALREADY_REDEEMED_DESC1</Desc1Text>
+		<YesText>PROMO_CODE_ALREADY_REDEEMED_YES_LABEL</YesText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<Dialog>
+		<Name>PromoCodeGrantedDialog</Name>
+		<TriggerCondition>PROMO_CODE_GRANTED</TriggerCondition>
+		<Comparisons>
+			<Comparison>
+				<ComparisonType>NOT_EQUAL</ComparisonType>
+				<CompareAgainst>GUILD_VS_GUILD_PROMO</CompareAgainst>
+			</Comparison>
+		</Comparisons>
+		<Probability>100</Probability>
+		<TitleText>PROMO_CODE_GRANTED_TITLE</TitleText>
+		<Desc1Text>PROMO_CODE_GRANTED_DESC</Desc1Text>
+		<YesText>PROMO_CODE_GRANTED_YES_LABEL</YesText>
+		<IsLargeDialog>TRUE</IsLargeDialog>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<Dialog>
+		<Name>GvGPromoGrantedDialog</Name>
+		<TriggerCondition>PROMO_CODE_GRANTED</TriggerCondition>
+		<Comparisons>
+			<Comparison>
+				<ComparisonType>EQUAL</ComparisonType>
+				<CompareAgainst>GUILD_VS_GUILD_PROMO</CompareAgainst>
+			</Comparison>
+		</Comparisons>
+		<Probability>100</Probability>
+		<TitleText>GVG_PROMO_CODE_GRANTED_TITLE</TitleText>
+		<Desc1Text>GVG_PROMO_CODE_GRANTED_DESC</Desc1Text>
+		<YesText>SHARE</YesText>
+		<NoText>SKIP</NoText>
+		<IsShare>TRUE</IsShare>
+		<WallPostId>GUILD_VS_GUILD_FIRST_BATTLE</WallPostId>
+		<IsLargeDialog>TRUE</IsLargeDialog>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	
+	
+<!-- NETWORK DIALOGUE BOXES -->
+	<Dialog>
+		<Name>AuthenticationError</Name>
+		<Probability>100</Probability>
+		<TitleText>STRING_AUTH_ERROR_TITLE</TitleText>
+		<Desc1Text>STRING_AUTH_ERROR_DESC</Desc1Text>
+		<YesText>STRING_NETWORK_REFRESH_BTN</YesText>
+	</Dialog>
+	<Dialog>
+		<Name>InstanceTimoue</Name>
+		<Probability>100</Probability>
+		<TitleText>STRING_CANNOT_FIND_INSTANCE_TITLE</TitleText>
+		<Desc1Text>STRING_CANNOT_FIND_INSTANCE_DESC</Desc1Text>
+		<YesText>STRING_NETWORK_REFRESH_BTN</YesText>
+	</Dialog>
+	<Dialog>
+		<Name>WrongVersionError</Name>
+		<Probability>100</Probability>
+		<TitleText>STRING_WRONG_VERSION_TITLE</TitleText>
+		<Desc1Text>STRING_WRONG_VERSION_DESC</Desc1Text>
+		<YesText>STRING_NETWORK_REFRESH_BTN</YesText>
+	</Dialog>
+	<Dialog>
+		<Name>GenericNetworkError</Name>
+		<Probability>100</Probability>
+		<TitleText>STRING_GENERIC_NETWORK_ERROR_TITLE</TitleText>
+		<Desc1Text>STRING_GENERIC_NETWORK_ERROR_DESC</Desc1Text>
+		<YesText>STRING_NETWORK_REFRESH_BTN</YesText>
+		<NoText>STRING_ATTEMPT_TO_RESYNC_BTN</NoText>
+	</Dialog>
+	<Dialog>
+		<Name>NoLongerConnectedToServer</Name>
+		<Probability>100</Probability>
+		<TitleText>STRING_NO_LONGER_CONNECTED_TITLE</TitleText>
+		<Desc1Text>STRING_NO_LONGER_CONNECTED_DESC</Desc1Text>
+		<YesText>STRING_NETWORK_REFRESH_BTN</YesText>
+	</Dialog>
+	<Dialog>
+		<Name>ForciblyKicked</Name>
+		<Probability>100</Probability>
+		<TitleText>STRING_FORCIBLY_KICKED_TITLE</TitleText>
+		<Desc1Text>STRING_FORCIBLY_KICKED_DESC</Desc1Text>
+		<YesText>STRING_NETWORK_REFRESH_BTN</YesText>
+	</Dialog>
+	<Dialog>
+		<Name>FriendAddedToGuild</Name>
+		<TriggerCondition>FRIEND_ADDED_TO_GUILD</TriggerCondition>
+		<IsShare>TRUE</IsShare>
+		<Probability>100</Probability>
+		<WallPostId>FRIEND_ADDED_TO_GUILD</WallPostId>
+		<TitleText>SHARE_FRIEND_ADDED_TO_GUILD_DIALOG_TITLE</TitleText>
+		<Desc1Text>SHARE_FRIEND_ADDED_TO_GUILD_DIALOG_DESC1</Desc1Text>
+		<Desc2Text>SHARE_FRIEND_ADDED_TO_GUILD_DIALOG_DESC2</Desc2Text>
+		<YesText>SHARE</YesText>
+		<NoText>SKIP</NoText>
+		<Cooldown>1800</Cooldown>
+	</Dialog>
+	<Dialog>
+		<Name>FriendRemovedFromGuild</Name>
+		<TriggerCondition>FRIEND_REMOVED_FROM_GUILD</TriggerCondition>
+		<IsShare>TRUE</IsShare>
+		<Probability>30</Probability>
+		<WallPostId>FRIEND_REMOVED_FROM_GUILD</WallPostId>
+		<TitleText>SHARE_FRIEND_REMOVED_FROM_GUILD_DIALOG_TITLE</TitleText>
+		<Desc1Text>SHARE_FRIEND_REMOVED_FROM_GUILD_DIALOG_DESC1</Desc1Text>
+		<Desc2Text>SHARE_FRIEND_REMOVED_FROM_GUILD_DIALOG_DESC2</Desc2Text>
+		<YesText>SHARE</YesText>
+		<NoText>SKIP</NoText>
+		<Cooldown>1800</Cooldown>
+	</Dialog>
+	<Dialog>
+		<Name>GuildMateBonus</Name>
+		<TriggerCondition>GUILD_MATE_BONUS</TriggerCondition>
+		<IsShare>TRUE</IsShare>
+		<Probability>100</Probability>
+		<WallPostId>GUILD_MATE_BONUS</WallPostId>
+		<TitleText>SHARE_GUILD_MATE_BONUS_DIALOG_TITLE</TitleText>
+		<Desc1Text>SHARE_GUILD_MATE_BONUS_DIALOG_DESC1</Desc1Text>
+		<Desc2Text>SHARE_GUILD_MATE_BONUS_DIALOG_DESC2</Desc2Text>
+		<YesText>SHARE</YesText>
+		<NoText>SKIP</NoText>
+		<Cooldown>1800</Cooldown>
+	</Dialog>
+	<Dialog>
+		<Name>GuildNameChanged</Name>
+		<TriggerCondition>GUILD_NAME_CHANGED</TriggerCondition>
+		<IsShare>TRUE</IsShare>
+		<Probability>100</Probability>
+		<WallPostId>GUILD_NAME_CHANGED</WallPostId>
+		<TitleText>SHARE_GUILD_NAME_CHANGED_DIALOG_TITLE</TitleText>
+		<Desc1Text>SHARE_GUILD_NAME_CHANGED_DIALOG_DESC1</Desc1Text>
+		<Desc2Text>SHARE_GUILD_NAME_CHANGED_DIALOG_DESC2</Desc2Text>
+		<YesText>SHARE</YesText>
+		<NoText>SKIP</NoText>
+		<IsDaily>TRUE</IsDaily>
+	</Dialog>
+	<Dialog>
+		<Name>GvGNotEnoughMembers</Name>
+		<TriggerCondition>GVG_NOT_ENOUGH_MEMBERS</TriggerCondition>
+		<IsShare>TRUE</IsShare>
+		<Probability>100</Probability>
+		<WallPostId>GUILD_VS_GUILD_NOT_ENOUGH_MEMBERS</WallPostId>
+		<TitleText>GVG_NOT_ENOUGH_MEMBERS_DIALOG_TITLE</TitleText>
+		<Desc1Text>GVG_NOT_ENOUGH_MEMBERS_DIALOG_DESC1</Desc1Text>
+		<Desc2Text>GVG_NOT_ENOUGH_MEMBERS_DIALOG_DESC2</Desc2Text>
+		<YesText>SHARE</YesText>
+		<NoText>SKIP</NoText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<Dialog>
+		<Name>ClearBoulder</Name>
+		<TitleText>CLEAR_BOULDER_TITLE</TitleText>
+		<Desc1Text>CLEAR_BOULDER_TEXT</Desc1Text>
+		<YesText>CLEAR_BOULDER_YES_LABEL</YesText>
+		<NoText>CLEAR_BOULDER_NO_LABEL</NoText>
+	</Dialog>
+	<Dialog>
+		<Name>DailyGameWonTier2</Name>
+		<TriggerCondition>DAILY_GAME_WON_TIER2</TriggerCondition>
+		<IsShare>TRUE</IsShare>
+		<Probability>100</Probability>
+		<WallPostId>DAILY_GAME_WON_TIER2</WallPostId>
+		<TitleText>DAILY_GAME_WON_TIER2_DIALOG_TITLE</TitleText>
+		<Desc1Text>DAILY_GAME_WON_TIER2_DIALOG_DESC1</Desc1Text>
+		<Desc2Text>DAILY_GAME_WON_TIER2_DIALOG_DESC2</Desc2Text>
+		<YesText>SHARE</YesText>
+		<NoText>SKIP</NoText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<Dialog>
+		<Name>DailyGameWonTier3</Name>
+		<TriggerCondition>DAILY_GAME_WON_TIER3</TriggerCondition>
+		<IsShare>TRUE</IsShare>
+		<Probability>100</Probability>
+		<WallPostId>DAILY_GAME_WON_TIER3</WallPostId>
+		<TitleText>DAILY_GAME_WON_TIER3_DIALOG_TITLE</TitleText>
+		<Desc1Text>DAILY_GAME_WON_TIER3_DIALOG_DESC1</Desc1Text>
+		<Desc2Text>DAILY_GAME_WON_TIER3_DIALOG_DESC2</Desc2Text>
+		<YesText>SHARE</YesText>
+		<NoText>SKIP</NoText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+	<Dialog>
+		<Name>DailyGameWonTier4</Name>
+		<TriggerCondition>DAILY_GAME_WON_TIER4</TriggerCondition>
+		<IsShare>TRUE</IsShare>
+		<Probability>100</Probability>
+		<WallPostId>DAILY_GAME_WON_TIER4</WallPostId>
+		<TitleText>DAILY_GAME_WON_TIER4_DIALOG_TITLE</TitleText>
+		<Desc1Text>DAILY_GAME_WON_TIER4_DIALOG_DESC1</Desc1Text>
+		<Desc2Text>DAILY_GAME_WON_TIER4_DIALOG_DESC2</Desc2Text>
+		<YesText>SHARE</YesText>
+		<NoText>SKIP</NoText>
+		<OverrideGlobalCooldown>TRUE</OverrideGlobalCooldown>
+	</Dialog>
+</DialogData>

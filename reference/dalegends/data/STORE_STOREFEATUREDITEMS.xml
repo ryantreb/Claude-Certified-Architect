@@ -1,0 +1,913 @@
+<Root>
+	<!-- Sale Offers -->
+	<!-- Sale offers must have OfferTitles and EndDates -->
+	<entry>
+		<OfferTitle>'No Helmet' Helmet</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<!-- Holidays -->
+	<entry>
+		<OfferTitle>Winter Hood</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Icy Headdress</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>The Frozen Crown</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Winter Cap</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Full Winter Beard</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Winter Beard</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Winter Cap and Full Beard</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Winter Cap and Beard</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Helper's Cap</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Pale Faux Elf Ears</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Tan Faux Elf Ears</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Red Winter Vestments</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Green Winter Vestments</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Icy Robes</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Icy Tunic</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Helper's Raiment</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Winter Bow</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>								
+	<entry>
+		<OfferTitle>Winter Axe</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>								
+	<entry>
+		<OfferTitle>Winter Greatsword</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>								
+	<entry>
+		<OfferTitle>Winter Throwing Axe</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>								
+	<entry>
+		<OfferTitle>Winter Staff</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>								
+	<entry>
+		<OfferTitle>Winter Blades</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>								
+	<entry>
+		<OfferTitle>Winter Shield</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<!-- Extra -->
+	<entry>
+		<OfferTitle>Slayer's Mask</OfferTitle>
+		<PromoText>New!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>FALSE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Sapper's Helm</OfferTitle>
+		<PromoText>New!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>FALSE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Enchanter's Hood</OfferTitle>
+		<PromoText>New!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>FALSE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Caster's Circlet</OfferTitle>
+		<PromoText>New!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>FALSE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Enchanter's Raiment</OfferTitle>
+		<PromoText>New!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>FALSE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Sapper's Vestments</OfferTitle>
+		<PromoText>New!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>FALSE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Slayer's Embrace</OfferTitle>
+		<PromoText>New!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>FALSE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Cord of Ferocity</OfferTitle>
+		<PromoText>New!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>FALSE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Waistguard of the Spider</OfferTitle>
+		<PromoText>New!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>FALSE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Compass of Acumen</OfferTitle>
+		<PromoText>New!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>FALSE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Vaporous Pendant</OfferTitle>
+		<PromoText>New!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>FALSE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Ring of Vapors</OfferTitle>
+		<PromoText>New!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>FALSE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Band of Attack</OfferTitle>
+		<PromoText>New!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>FALSE</Vanity>
+	</entry>
+	<!-- New Featured Items -->
+	<!-- Featured offers must have OfferTitles -->
+	<!-- Costume Pieces -->
+	<entry>
+		<OfferTitle>Drake Mask (Green)</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Drake Costume (Green)</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Legendary 'Stache</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Legendary Beard</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Legendary Combo</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Hawke's Scar</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Halla Helm</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<StartDate>2011/11/30 10:00:00 GMT-0800</StartDate>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<!-- Replica Items -->
+	<entry>
+		<OfferTitle>Replica Ser Cerion's Justice</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Unerring Might</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Edge of Divinity</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Lionshead</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Somber Scimitar</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Ominous Claymore</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Draconian Rage</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Clairvoyant Blade</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Lyrium-Fused Axe</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Ravener</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Sinister Cleaver</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Vorpal Axe</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Warden's Sword</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Shimmersword</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Grave Cutlass</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Dragon's Jaw</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Regal Maul</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Bronto Skull</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Northern Force</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Bloody Drum</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Garrak's Talon</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Isabela's Dagger</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Golden Spider</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Tetra's Revenge</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Bladed Flare</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Paragon's Hatchet</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Serpentine Dart</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Frostfire</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Blackfeather Staff</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Lifetree</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Ascension Staff</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Fanch's Pride</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Obsidian Blades</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Fiery Sunset</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Cerulean Teeth</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Blades of the Rending</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Night Whisper</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Darkstriker</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Serpentine Bow</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Molten Bow</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Heartshredder</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Unyielding Arbalest</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Kirkwall Peacemaker</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Northern Wind</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Hawke Scar</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Faux Elf Ears</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Gorilla's Visage</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Gorilla Suit</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Crescent Cowl</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Skulking Hood</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Blood Dragon Helm</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Spiked Menace</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Secured Skull</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Blue Secured Skull</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Drudge</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Red Acolyte's Garbs</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Blue Acolyte's Garbs</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Sylvan Leaves</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Purple Aegis Armor</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Green Aegis Armor</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Assassin's Embrace</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Blue Arlsguard</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Yellow Arlsguard</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Maker's Light</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Blue Tesla Staff</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Green Tesla Staff</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Blue Tesla Sword</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Green Tesla Sword</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Black Bereskarn Hat</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Green Tesla Swords</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Blue Tesla Swords</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Green Tesla Greatsword</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Replica Blue Tesla Greatsword</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	
+	<entry>
+		<OfferTitle>Corrupted Halla Helmet</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Golem Mage Mask</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Golem Dwarf Helm</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Bandit Sapper Mask</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Veggie Hat</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Chicken Fight Armor</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Grey Warden Mage</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Grey Warden Leather</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Grey Warden Warrior</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>The Fanciest Beard</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<!-- I added the promo stuff below this line -->
+	<entry>
+		<OfferTitle>Blood Dragon Cloth Helmet</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Blood Dragon Leather Helmet</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Blood Dragon Metal Helmet</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>N7 Cloth Helmet</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>N7 Leather Helmet</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>N7 Metal Helmet</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Ser Isaac's Cloth Helmet</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Ser Isaac's Leather Helmet</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Ser Isaac's Metal Helmet</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Darkspore Helm</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Darkspore Shark</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Blood Dragon Robes</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Blood Dragon Leather Armor</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Blood Dragon Armor</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>N7 Robes</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>N7 Leather Armor</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>N7 Heavy Armor</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>TRUE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Ser Isaac's Robes</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Ser Isaac's Leather Armor</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Ser Isaac's Armor</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Origin Robes</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Origin Leather Armor</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+	<entry>
+		<OfferTitle>Origin Heavy Armor</OfferTitle>
+		<PromoText>Vanity Item!</PromoText>
+		<Featured>FALSE</Featured>
+		<Vanity>TRUE</Vanity>
+	</entry>
+</Root>

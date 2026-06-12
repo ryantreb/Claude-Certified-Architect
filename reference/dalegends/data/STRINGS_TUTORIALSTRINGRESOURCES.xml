@@ -1,0 +1,36 @@
+<StringData>
+	<String key="TUTORIAL_TOOLTIP_BASIC_ATTACK">Attack</String>
+	<String key="TUTORIAL_TOOLTIP_HEAL">Drink Potion</String>
+	<String key="TUTORIAL_TOOLTIP_RECRUIT">Recruit</String>
+	<String key="TUTORIAL_TOOLTIP_RECRUIT_BAVAIN">Recruit Bavain</String>
+	<String key="TUTORIAL_TOOLTIP_RECRUIT_2_FRIENDS">Recruit 2 Friends</String>
+	<String key="TUTORIAL_TOOLTIP_START_BATTLE">Start battle</String>
+	<String key="TUTORIAL_TOOLTIP_COLLECT_LOOT">Collect Loot</String>
+	<String key="TUTORIAL_TOOLTIP_CLICK_HEAL_POTION">Use Health Potion</String>
+	<String key="TUTORIAL_TOOLTIP_CLICK_BOMB">Throw Bomb</String>
+	<String key="TUTORIAL_TOOLTIP_SELECT_STAT">Upgrade Stat</String>
+	<String key="TUTORIAL_TOOLTIP_SELECT_SKILL">Learn Skill</String>
+	<String key="TUTORIAL_TOOLTIP_CONFIRM_CHANGES">Confirm Changes</String>
+	<String key="TUTORIAL_TOOLTIP_CONTINUE">Continue</String>
+	<String key="TUTORIAL_TOOLTIP_CLICK_MANA_POTION">Drink Mana Potion</String>
+	<String key="TUTORIAL_TOOLTIP_CLICK_SKILL">Use Skill</String>
+	<String key="TUTORIAL_TOOLTIP_ENTER_BUILD_MODE">Enter Build Mode</String>
+	<String key="TUTORIAL_TOOLTIP_EXIT_BUILD_MODE">Exit Build Mode</String>
+	<String key="TUTORIAL_TOOLTIP_BUILD_WORKER_ROOM">Build Worker Room</String>
+	<String key="TUTORIAL_TOOLTIP_BUILD_APOTHECARY">Build Apothecary</String>
+	<String key="TUTORIAL_TOOLTIP_CRAFT_POTION">Craft Potion</String>
+	<String key="TUTORIAL_TOOLTIP_SELECT_POTION">Select Potion</String>
+	<String key="TUTORIAL_TOOLTIP_SELECT_AMOUNT">Select Amount</String>
+	<String key="TUTORIAL_TOOLTIP_CONTINUE_YOUR_ADVENTURE">Continue Your Adventure</String>
+	<String key="TUTORIAL_TOOLTIP_LEVEL_CAP">You have reached the level cap. Upgrade your hero room so you can level up.</String>
+	<String key="TUTORIAL_TOOLTIP_INVITE_FRIEND_1">It looks like you are running low on available friends. Invite new friends to join you in your legendary adventure.</String>
+	<String key="TUTORIAL_TOOLTIP_INVITE_FRIEND_2">Strong Warriors are good to shield your hero from the front row. Invite new friends to protect your hero and encourage them to be Warriors.</String>
+	<String key="TUTORIAL_TOOLTIP_INVITE_FRIEND_3">Agile Rogues act quickly and rain arrows down on the battlefield. Invite your most cunning friends and encourage them to be Rogues.</String>
+	<String key="TUTORIAL_TOOLTIP_INVITE_FRIEND_4">Powerful Mages can dominate the battlefield with mighty spells. Invite friends and encourage them to be Mages.</String>
+	<String key="TUTORIAL_TOOLTIP_INVITE_FRIEND_5">Looks like you could use more friends to aid you in your adventure. Invite friends to join Dragon Age Legends today.</String>
+	<String key="TUTORIAL_TOOLTIP_INVITE_FRIEND_6">When more friends use your hero, you can earn more gold each day. Invite friends to join your legendary adventure to earn more gold.</String>
+	<String key="TUTORIAL_TOOLTIP_INVITE_FRIEND_7">Just like Ravi had Lukesh and Sendis, you need your best friends by your side. Invite your friends to play Dragon Age Legends today!</String>
+	<String key="TUTORIAL_TOOLTIP_INVITE_FRIEND_8">Legends is more fun when your friends see your hero's Epic Loot! Invite your friends to play Dragon Age Legends today!</String>
+	<String key="TUTORIAL_TOOLTIP_INVITE_FRIEND_9">Need more gold to upgrade your castle? More friends means more gold! Invite friends to join Dragon Age Legends today.</String>
+	<String key="TUTORIAL_TOOLTIP_INVITE_FRIEND_10">Legends is more fun when your friends see your hero's Epic Loot! Invite your friends to play Dragon Age Legends today!</String>
+</StringData>
