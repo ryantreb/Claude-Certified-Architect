@@ -106,3 +106,29 @@ test('battle slots sit on the original BattleDisplay grid', async ({ page }) => 
   expect(out.row1.y).toBe(340);
   expect(out.row2.y).toBe(490);
 });
+
+test('the four original hero loadouts are riggable and steer the party', async ({ page }) => {
+  await loadGame(page);
+  await page.waitForFunction(() => ['heroWar', 'heroRog', 'heroMag', 'heroArc']
+    .every(k => {
+      const r = window.__wf.EARIG[k];
+      return r && r.anims.idle && r.anims.idle[0].complete && r.anims.idle[0].naturalWidth > 0;
+    }), null, { timeout: 8000 });
+  const out = await page.evaluate(() => {
+    const wf = window.__wf;
+    const rigs = wf.HERO_CHOICES.map(c => c.rig);
+    const full = rigs.every(k => ['idle', 'strike', 'special', 'dmg', 'death', 'fwd', 'evade', 'block']
+      .every(a => wf.DATA.eaRig[k].anims[a] && wf.DATA.eaRig[k].anims[a].f.length > 0));
+    const portraits = rigs.every(k => wf.EARIG[k].portrait && wf.EARIG[k].portrait.src.length > 50);
+    wf.S.hero = { rig: 'heroMag', cls: 'caster' };
+    const heroKey = wf.memberSpriteKey({ kind: 'hero', cls: 'caster' });
+    wf.S.hero = null;
+    const legacy = wf.memberSpriteKey({ kind: 'hero', cls: 'vanguard' });
+    return { full, portraits, heroKey, legacy, choices: wf.HERO_CHOICES.map(c => c.cls).sort() };
+  });
+  expect(out.full).toBe(true);                   // every loadout ships its full original anim set
+  expect(out.portraits).toBe(true);
+  expect(out.heroKey).toBe('heroMag');           // the chosen discipline rides into battle
+  expect(out.legacy).toBe('deymour');            // old saves keep their champion
+  expect(out.choices).toEqual(['caster', 'ranger', 'shadow', 'vanguard']);
+});
