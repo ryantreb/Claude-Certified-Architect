@@ -1,0 +1,2865 @@
+<TileSet>
+  <WIDTH>1500</WIDTH>
+  <HEIGHT>1100</HEIGHT>
+  <BASE>2</BASE>
+  <Decals>
+    <Decal>
+      <x>1021</x>
+      <y>345</y>
+      <f>363</f>
+    </Decal>
+    <Decal>
+      <x>297</x>
+      <y>702</y>
+      <f>10</f>
+    </Decal>
+    <Decal>
+      <x>310</x>
+      <y>719</y>
+      <f>7</f>
+    </Decal>
+    <Decal>
+      <x>132</x>
+      <y>476</y>
+      <f>10</f>
+    </Decal>
+    <Decal>
+      <x>136</x>
+      <y>474</y>
+      <f>12</f>
+    </Decal>
+    <Decal>
+      <x>322</x>
+      <y>707</y>
+      <f>12</f>
+    </Decal>
+    <Decal>
+      <x>295</x>
+      <y>417</y>
+      <f>54</f>
+    </Decal>
+    <Decal>
+      <x>330</x>
+      <y>404</y>
+      <f>55</f>
+    </Decal>
+    <Decal>
+      <x>345</x>
+      <y>397</y>
+      <f>53</f>
+    </Decal>
+    <Decal>
+      <x>310</x>
+      <y>683</y>
+      <f>90</f>
+    </Decal>
+    <Decal>
+      <x>298</x>
+      <y>705</y>
+      <f>15</f>
+    </Decal>
+  </Decals>
+  <Tiles>
+    <Tile>
+      <i>28</i>
+      <j>50</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f4</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>28</i>
+      <j>51</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>28</i>
+      <j>52</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>29</i>
+      <j>49</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f2</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f6</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>29</i>
+      <j>50</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f10</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>29</i>
+      <j>51</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f9</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>29</i>
+      <j>52</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f3</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>29</i>
+      <j>53</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>30</i>
+      <j>48</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f4</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>30</i>
+      <j>49</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f3</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f2</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>30</i>
+      <j>50</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f2</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>30</i>
+      <j>51</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f6</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>30</i>
+      <j>52</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f9</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>30</i>
+      <j>53</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f2</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>30</i>
+      <j>54</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f6</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>31</i>
+      <j>47</j>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f17</Road2>
+      </Road>
+    </Tile>
+    <Tile>
+      <i>31</i>
+      <j>48</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f17</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>31</i>
+      <j>49</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f4</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>31</i>
+      <j>50</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f7</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>31</i>
+      <j>51</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f3</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>31</i>
+      <j>52</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f8</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>31</i>
+      <j>53</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f7</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>31</i>
+      <j>54</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f3</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>31</i>
+      <j>55</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>32</i>
+      <j>46</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f6</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>32</i>
+      <j>47</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f36</Grass2>
+      </Grass>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f14</Road2>
+      </Road>
+    </Tile>
+    <Tile>
+      <i>32</i>
+      <j>49</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f8</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>32</i>
+      <j>50</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f3</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>32</i>
+      <j>51</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f1</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f5</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>32</i>
+      <j>52</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f10</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>32</i>
+      <j>53</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f9</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>32</i>
+      <j>54</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f10</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Highlands Bushes</Shrub1>
+        <Shrub2>f6</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>32</i>
+      <j>55</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f9</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>32</i>
+      <j>56</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>33</i>
+      <j>45</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f1</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>33</i>
+      <j>46</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f47</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f4</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>33</i>
+      <j>47</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f44</Grass2>
+      </Grass>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f2</Road2>
+      </Road>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f1</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>33</i>
+      <j>48</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f36</Grass2>
+      </Grass>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f13</Road2>
+      </Road>
+    </Tile>
+    <Tile>
+      <i>33</i>
+      <j>49</j>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f4</Road2>
+      </Road>
+    </Tile>
+    <Tile>
+      <i>33</i>
+      <j>50</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f42</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>33</i>
+      <j>51</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f4</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>33</i>
+      <j>52</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f7</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>33</i>
+      <j>53</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f8</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>33</i>
+      <j>54</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f7</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>33</i>
+      <j>55</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f3</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>33</i>
+      <j>56</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f3</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>33</i>
+      <j>57</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>34</i>
+      <j>44</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f8</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>34</i>
+      <j>45</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f1</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>34</i>
+      <j>46</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f29</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>34</i>
+      <j>47</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f16</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>34</i>
+      <j>48</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f31</Grass2>
+      </Grass>
+      <Design>
+        <Design1>GenericProps</Design1>
+        <Design2>f11</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>34</i>
+      <j>49</j>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f2</Road2>
+      </Road>
+    </Tile>
+    <Tile>
+      <i>34</i>
+      <j>50</j>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f13</Road2>
+      </Road>
+    </Tile>
+    <Tile>
+      <i>34</i>
+      <j>51</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f13</Grass2>
+      </Grass>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f13</Road2>
+      </Road>
+    </Tile>
+    <Tile>
+      <i>34</i>
+      <j>52</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f13</Grass2>
+      </Grass>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f4</Road2>
+      </Road>
+    </Tile>
+    <Tile>
+      <i>34</i>
+      <j>53</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f8</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>34</i>
+      <j>54</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Shrub>
+        <Shrub1>Highlands Bushes</Shrub1>
+        <Shrub2>f1</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>34</i>
+      <j>55</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f4</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f5</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>34</i>
+      <j>56</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>34</i>
+      <j>57</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>34</i>
+      <j>58</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>35</i>
+      <j>43</j>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f1</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>35</i>
+      <j>44</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f9</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>35</i>
+      <j>45</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f49</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f2</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>35</i>
+      <j>46</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f44</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f3</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>35</i>
+      <j>47</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f20</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>35</i>
+      <j>48</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f44</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f3</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>35</i>
+      <j>50</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f35</Grass2>
+      </Grass>
+      <Shrub>
+        <Shrub1>Flowers</Shrub1>
+        <Shrub2>f4</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>35</i>
+      <j>51</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f36</Grass2>
+      </Grass>
+      <Shrub>
+        <Shrub1>Flowers</Shrub1>
+        <Shrub2>f5</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>35</i>
+      <j>52</j>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f16</Road2>
+      </Road>
+    </Tile>
+    <Tile>
+      <i>35</i>
+      <j>54</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f13</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>35</i>
+      <j>55</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f42</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>35</i>
+      <j>56</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f4</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f1</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>35</i>
+      <j>57</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f1</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>35</i>
+      <j>58</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f14</Design2>
+      </Design>
+      <Water>
+        <Water1>Dales Stream</Water1>
+        <Water2>f14</Water2>
+      </Water>
+    </Tile>
+    <Tile>
+      <i>35</i>
+      <j>59</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>42</j>
+      <SpecialBase>24</SpecialBase>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f4</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f4</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>43</j>
+      <SpecialBase>24</SpecialBase>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f10</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f8</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>44</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f46</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f4</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>45</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f4</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f10</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>46</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f9</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>47</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f2</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f1</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>48</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f40</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>49</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f24</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>50</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f43</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f2</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Flowers</Shrub1>
+        <Shrub2>f3</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>51</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f6</Grass2>
+      </Grass>
+      <Shrub>
+        <Shrub1>Flowers</Shrub1>
+        <Shrub2>f7</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>52</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f36</Grass2>
+      </Grass>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>empty</Road2>
+      </Road>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>53</j>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>empty</Road2>
+      </Road>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>54</j>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>empty</Road2>
+      </Road>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>55</j>
+      <Water>
+        <Water1>Lake Water</Water1>
+        <Water2>f22</Water2>
+      </Water>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>56</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f8</Grass2>
+      </Grass>
+      <Water>
+        <Water1>Lake Water</Water1>
+        <Water2>f23</Water2>
+      </Water>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>57</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f9</Design2>
+      </Design>
+      <Water>
+        <Water1>Dales Stream</Water1>
+        <Water2>f1</Water2>
+      </Water>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f6</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>58</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f10</Design2>
+      </Design>
+      <Water>
+        <Water1>Dales Stream</Water1>
+        <Water2>f3</Water2>
+      </Water>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>59</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f9</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>36</i>
+      <j>60</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>41</j>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f2</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>42</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f35</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f4</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>43</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f21</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f7</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>44</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f8</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>45</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f49</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f7</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>46</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f8</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>47</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>empty</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Highlands Bushes</Shrub1>
+        <Shrub2>f6</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>48</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Shrub>
+        <Shrub1>Highlands Bushes</Shrub1>
+        <Shrub2>f2</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>49</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>50</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>51</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f4</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f2</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>52</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f44</Grass2>
+      </Grass>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f19</Road2>
+      </Road>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f3</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>53</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f36</Grass2>
+      </Grass>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f13</Road2>
+      </Road>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>54</j>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f4</Road2>
+      </Road>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>55</j>
+      <Water>
+        <Water1>Lake Water</Water1>
+        <Water2>f25</Water2>
+      </Water>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>56</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f17</Grass2>
+      </Grass>
+      <Water>
+        <Water1>Lake Water</Water1>
+        <Water2>f52</Water2>
+      </Water>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>57</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f2</Design2>
+      </Design>
+      <Water>
+        <Water1>Dales Stream</Water1>
+        <Water2>f3</Water2>
+      </Water>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f8</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>58</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f2</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>59</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f4</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>37</i>
+      <j>60</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f5</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>40</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f1</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>41</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f45</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f7</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>42</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f34</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f8</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>43</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f42</Grass2>
+      </Grass>
+      <Road>
+        <Road1>Stone Road</Road1>
+        <Road2>f19</Road2>
+      </Road>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>empty</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f4</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>44</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f1</Grass2>
+      </Grass>
+      <Road>
+        <Road1>Stone Road</Road1>
+        <Road2>f18</Road2>
+      </Road>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>empty</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>45</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f43</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f2</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f3</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>46</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>47</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Shrub>
+        <Shrub1>Highlands Bushes</Shrub1>
+        <Shrub2>f4</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>48</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>50</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>51</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>52</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f1</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f1</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>53</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f9</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>54</j>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f14</Road2>
+      </Road>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>55</j>
+      <Water>
+        <Water1>Lake Water</Water1>
+        <Water2>f21</Water2>
+      </Water>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>56</j>
+      <Water>
+        <Water1>Lake Water</Water1>
+        <Water2>f44</Water2>
+      </Water>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>57</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f42</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>58</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f2</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>59</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f6</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>38</i>
+      <j>60</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f8</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>39</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>40</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f13</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>41</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f44</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f10</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f2</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>42</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f21</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f4</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>43</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f23</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f10</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>44</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f3</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f5</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>45</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f9</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>46</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>47</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>48</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>49</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>51</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>52</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Shrub>
+        <Shrub1>Highlands Bushes</Shrub1>
+        <Shrub2>f4</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>53</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f6</Grass2>
+      </Grass>
+      <Shrub>
+        <Shrub1>Highlands Bushes</Shrub1>
+        <Shrub2>f6</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>54</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f36</Grass2>
+      </Grass>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f16</Road2>
+      </Road>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>55</j>
+      <Water>
+        <Water1>Lake Water</Water1>
+        <Water2>empty</Water2>
+      </Water>
+      <Shrub>
+        <Shrub1>Flowers</Shrub1>
+        <Shrub2>f5</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>56</j>
+      <Water>
+        <Water1>Lake Water</Water1>
+        <Water2>empty</Water2>
+      </Water>
+      <Shrub>
+        <Shrub1>Flowers</Shrub1>
+        <Shrub2>f2</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>57</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f23</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f3</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Flowers</Shrub1>
+        <Shrub2>f3</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>58</j>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f2</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>39</i>
+      <j>59</j>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f6</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>40</i>
+      <j>40</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f17</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>40</i>
+      <j>41</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f9</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>40</i>
+      <j>42</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f8</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>40</i>
+      <j>43</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f45</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f7</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>40</i>
+      <j>44</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f42</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f3</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>40</i>
+      <j>45</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f4</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>40</i>
+      <j>46</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>40</i>
+      <j>47</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>40</i>
+      <j>52</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>40</i>
+      <j>53</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f45</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>40</i>
+      <j>54</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f39</Grass2>
+      </Grass>
+      <Water>
+        <Water1>Lake Water</Water1>
+        <Water2>empty</Water2>
+      </Water>
+    </Tile>
+    <Tile>
+      <i>40</i>
+      <j>55</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f21</Grass2>
+      </Grass>
+      <Water>
+        <Water1>Lake Water</Water1>
+        <Water2>empty</Water2>
+      </Water>
+      <Shrub>
+        <Shrub1>Flowers</Shrub1>
+        <Shrub2>f7</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>40</i>
+      <j>56</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f43</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f2</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Flowers</Shrub1>
+        <Shrub2>f1</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>40</i>
+      <j>57</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f10</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Highlands Bushes</Shrub1>
+        <Shrub2>f2</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>40</i>
+      <j>58</j>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f9</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>41</i>
+      <j>41</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>41</i>
+      <j>42</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f2</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>41</i>
+      <j>43</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f44</Grass2>
+      </Grass>
+      <Design>
+        <Design1>PlanescenePassCaves</Design1>
+        <Design2>f2</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>41</i>
+      <j>44</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f43</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f10</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f6</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>41</i>
+      <j>45</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f4</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>41</i>
+      <j>46</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>41</i>
+      <j>47</j>
+      <SpecialBase>24</SpecialBase>
+    </Tile>
+    <Tile>
+      <i>41</i>
+      <j>51</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>41</i>
+      <j>52</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f2</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Highlands Bushes</Shrub1>
+        <Shrub2>f3</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>41</i>
+      <j>53</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f44</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f3</Design2>
+      </Design>
+      <Water>
+        <Water1>Lake Water</Water1>
+        <Water2>empty</Water2>
+      </Water>
+      <Shrub>
+        <Shrub1>Highlands Bushes</Shrub1>
+        <Shrub2>f6</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>41</i>
+      <j>54</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f20</Grass2>
+      </Grass>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f17</Road2>
+      </Road>
+      <Water>
+        <Water1>Lake Water</Water1>
+        <Water2>empty</Water2>
+      </Water>
+      <Shrub>
+        <Shrub1>Flowers</Shrub1>
+        <Shrub2>f6</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>41</i>
+      <j>55</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f10</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Highlands Bushes</Shrub1>
+        <Shrub2>f6</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>41</i>
+      <j>56</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f5</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>41</i>
+      <j>57</j>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f9</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>42</i>
+      <j>42</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>42</i>
+      <j>43</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f1</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>42</i>
+      <j>44</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f7</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>42</i>
+      <j>45</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f8</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>42</i>
+      <j>48</j>
+      <SpecialBase>24</SpecialBase>
+    </Tile>
+    <Tile>
+      <i>42</i>
+      <j>49</j>
+      <SpecialBase>24</SpecialBase>
+    </Tile>
+    <Tile>
+      <i>42</i>
+      <j>51</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>42</i>
+      <j>52</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f2</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>42</i>
+      <j>53</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f1</Grass2>
+      </Grass>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f1</Road2>
+      </Road>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>empty</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f6</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>42</i>
+      <j>54</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f3</Grass2>
+      </Grass>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f3</Road2>
+      </Road>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f2</Design2>
+      </Design>
+      <Water>
+        <Water1>Lake Water</Water1>
+        <Water2>empty</Water2>
+      </Water>
+    </Tile>
+    <Tile>
+      <i>42</i>
+      <j>55</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f7</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>42</i>
+      <j>56</j>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f8</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>43</i>
+      <j>43</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>43</i>
+      <j>44</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f1</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>43</i>
+      <j>45</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f17</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>43</i>
+      <j>46</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>43</i>
+      <j>50</j>
+      <SpecialBase>24</SpecialBase>
+    </Tile>
+    <Tile>
+      <i>43</i>
+      <j>51</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>43</i>
+      <j>52</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>43</i>
+      <j>53</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f41</Grass2>
+      </Grass>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f14</Road2>
+      </Road>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f3</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>43</i>
+      <j>54</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f1</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>43</i>
+      <j>55</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>44</i>
+      <j>44</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f17</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>44</i>
+      <j>45</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>44</i>
+      <j>46</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f2</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>44</i>
+      <j>47</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f17</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>44</i>
+      <j>48</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>44</i>
+      <j>50</j>
+      <SpecialBase>24</SpecialBase>
+    </Tile>
+    <Tile>
+      <i>44</i>
+      <j>51</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>44</i>
+      <j>52</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>44</i>
+      <j>53</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f41</Grass2>
+      </Grass>
+      <Road>
+        <Road1>Dirt Road</Road1>
+        <Road2>f14</Road2>
+      </Road>
+      <Design>
+        <Design1>GenericProps</Design1>
+        <Design2>empty</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f6</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>44</i>
+      <j>54</j>
+      <Design>
+        <Design1>planascenePassCliffs</Design1>
+        <Design2>f5</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>45</i>
+      <j>45</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>45</i>
+      <j>46</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f1</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>45</i>
+      <j>47</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f17</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>45</i>
+      <j>48</j>
+      <SpecialBase>24</SpecialBase>
+    </Tile>
+    <Tile>
+      <i>45</i>
+      <j>49</j>
+      <SpecialBase>24</SpecialBase>
+    </Tile>
+    <Tile>
+      <i>45</i>
+      <j>52</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>45</i>
+      <j>53</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f41</Grass2>
+      </Grass>
+      <Design>
+        <Design1>GenericProps</Design1>
+        <Design2>empty</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>46</i>
+      <j>46</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f17</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>46</i>
+      <j>47</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f17</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>46</i>
+      <j>48</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f2</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>46</i>
+      <j>49</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>46</i>
+      <j>50</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f1</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>46</i>
+      <j>51</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f2</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>46</i>
+      <j>52</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+    <Tile>
+      <i>47</i>
+      <j>47</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>47</i>
+      <j>48</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f17</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f2</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>47</i>
+      <j>49</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+      <Shrub>
+        <Shrub1>Rocks</Shrub1>
+        <Shrub2>f2</Shrub2>
+      </Shrub>
+    </Tile>
+    <Tile>
+      <i>47</i>
+      <j>50</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>47</i>
+      <j>51</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>48</i>
+      <j>48</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f5</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>48</i>
+      <j>49</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f17</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>48</i>
+      <j>50</j>
+      <SpecialBase>24</SpecialBase>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+      <Design>
+        <Design1>Highland Trees</Design1>
+        <Design2>f17</Design2>
+      </Design>
+    </Tile>
+    <Tile>
+      <i>49</i>
+      <j>50</j>
+      <Grass>
+        <Grass1>Grass Green</Grass1>
+        <Grass2>f50</Grass2>
+      </Grass>
+    </Tile>
+  </Tiles>
+</TileSet>
