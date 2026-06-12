@@ -295,3 +295,30 @@ original.
   battle strings (UI labels only); dwarf PLAYER heroes (Dwarf_* player rigs
   exist and Carta skins fit the MOB rigs — a future pass could compose
   hero-grade dwarves the same way).
+
+## The Creation Hall and the earned drink (pass 20)
+
+- chooseHero became **The Creation Hall**: the four disciplines plus
+  **Legends & Terrors** — beirus/shale/ogre/tianne/werewolf/soleil/desire/
+  dragon as playable champions. `LEGEND_CHOICES` rows carry stat keys into
+  eaStats; `legendRec()` feeds the same d20 plumbing comps use
+  (atk/12 to hit, def/12 to guard, agi≥16 widens crit, hp shifts max
+  halves via `legendHpBonus`). Legends bark via FOEPAIN/FOEDIE; the
+  Std-armor visual swap safely no-ops for them. Optional champion name
+  (`S.heroName`, sanitized, presentation only).
+- `portraitSquare(rig)` runtime alpha-crops portraits to content and
+  centers on a square canvas (the raw symbol exports carry uneven
+  framing); rigs without a portrait (ogre/desire/dragon) stand in their
+  first idle frame. Cards use object-fit:contain.
+- **Consumables are earned actions** (honesty kin of rule 6): poultice/
+  mana drink only in the `pick` phase — the action a correct answer just
+  bought — and drinking spends it (`phase -> fb`). Buttons explain
+  themselves when locked.
+- `comboChip` reads "streak ×N" with a tooltip: it is the answer-streak
+  multiplier on TACTICAL damage only (never mastery/meters). The "+1.5♥"
+  floater on poultices is hearts healed.
+- Question-card size setting (S/M/L/XL -> battleBox zoom 0.85/1/1.18/1.35).
+- The full original wardrobe (skins × hairs × armors × bodies, thousands
+  of Flash piece combos) cannot recompose at runtime — combos are baked
+  offline via tools/batch18-style composes; the hall says so and more
+  presets can be added on request.
