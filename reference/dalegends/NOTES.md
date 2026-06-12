@@ -117,3 +117,40 @@ scripts assume ffdec at /tmp/ffdec/ffdec.jar, sharp at /tmp/dal/npm, and write
 to /tmp/dal/out2 — adjust the constants at the top when running elsewhere.
 Payload knobs: webp q70, frame step 2 (heavy creatures 3, deaths 3–4), every
 strike keeps its action_frame; creatures export at in-game AnimScale.
+
+## Player heroes — rig + multi-skin composition
+
+The `anims_HumanElf_<WEAPON>.swf` files (2H/DUAL/STAFF/BOW…) are the player
+rigs: full timelines named `hf_<class>_<outfit>_<anim>` (idle_1, attack_1,
+special_1..4, dmg_1, death_1, fwd_1, evade, defend_1, portrait, plus the
+w_of_/w_de_/w_co_ skill anims) — but BARE rigs: every named placement
+(armForeL…waist, head, helmet(Back), weapon(R), wp_bow, robe skirt) is
+placeholder. The paint:
+
+- body armor: `animSkins_HumanElf_{Heavy,Leather,Robe}_{Basic,Standard,…}.swf`
+  as `<set>_{m,f}_<piece>` (Basic = the starter looks: quartzArmor,
+  rippedLeatherArmor, dirtyRobes; robes add `<set>_fwd_1_skirt` etc.)
+- weapons: `animSkins_Weapons_*.swf` as `<set>_weapon`
+  (starterGreatsword/starterDagger/starterStaff/bow_starterShort are the
+  originals' starting arms)
+- head: NOT in any animSkins file — `DALFlashApp.swf` carries the avatar
+  parts (`hf_headSkin[_2..6]`, `hf_hair_1..12[_back]`, hm_/ef_/em_/df_/dm_
+  for the other race-genders, matching CHARACTER_PRESET.xml skin/hair ids).
+
+Build chain (all in /tmp/dal): `headskin.js` slices headSkin+hair out of the
+app SWF into a one-symbol skin (`hfHead_head`, plus empty `hfHead_helmet*` to
+blank the helmet slots); `compose2.js` (multi-skin compose.js: per-skin id
+offsets, optional `extra` placement→symbol maps for weaponR/skirt/wp_bow);
+`hero_pipeline.js plan/assemble` exports the composed rigs to the
+`DATA.eaRig.hero{War,Rog,Mag,Arc}` payload (idle/strike/special/dmg/death/
+fwd/evade/block + portrait, action_frames kept).
+
+## Combat numbers recovered for the d20 layer
+
+DATA.eaStats now carries Defense/Agility medians per shape (same CHARCLASS
+extraction; skeleton/arcaneHorror rows are matched by Name — they ship no
+DefaultRigId). foeGuard = 8 + def/16 + agi/28 (clamp 8–15, boss +1);
+foeThreat = 9 + atk/8 (clamp 10–16, boss +1). DATA.eaWeapons holds three
+originals per tier per class from EQUIPMENT_WEAPON.xml; tier = +to-hit,
+agility>0 = +1 crit range. All tactical only — mastery never moves with any
+of it.
