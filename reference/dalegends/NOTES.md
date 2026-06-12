@@ -87,8 +87,11 @@ The "dragon" payload key uses the baked `anims_drakeFire.swf`.
 
 goblin hp12 atk25 · ghost 16/55 · golem 12/26 · zombie 10/18 · spider 11/30 ·
 ogre 24/60 · skeleton 10/20 · wisp 12/28 · banshee 18/60 · slime 10/26 ·
-minotaur 15/29 · dragon 16/35 · portal 24/70 (xp 5–18). Not yet wired into
-combat balance — kept here for a future data pass.
+minotaur 15/29 · dragon 16/35 · portal 24/70 (xp 5–18). Wired into combat as
+DATA.eaStats: foe vitality scales by hp/12 (clamp 0.7–2, +6 halves cap) and
+hit strength by atk/30 (clamp 0.75–1.6); the exam gauntlet is exempt so its
+question-count pacing stays exact. No XP flows from kills — meters stay
+mastery-only.
 
 ## Regenerating exports (tools)
 
