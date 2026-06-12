@@ -60,6 +60,36 @@ CamShakeOnAction, IconFrame.
 Also: EQUIPMENT_*, QUESTS per region (GD/KW/OR/PF/PP/WS), WORLD_REGIONS,
 GLOBAL_GAMEVARIABLES, STRINGS_* (all UI text incl. BATTLESTRINGRESOURCES).
 
+## Rigs vs skins — how the art actually ships
+
+Creature `anims_*.swf` files come in two kinds:
+
+- **Self-contained** (baked paint): deymour, soleil, tianne, beirus, desire,
+  deepstalker, spiders, arcaneHorror, and the elemental drakes
+  (`anims_drakeFire/Frost/Nature/Shock`). Export directly.
+- **Bare rigs** (magenta/cyan placeholder pieces): genlock, skeleton, ogre,
+  golem, corpse, shadeDemon, rageDemon, mabari, golemShale, bronto, the plain
+  drake, and all humanoid mobs. Their paint lives in `animSkins_Monsters_*.swf`
+  as per-piece symbols named `<prefix>_<pieceName>` (e.g. `genlock_shinR`);
+  the game attaches them onto rig placements named `shinR`, `torso`, `head`…
+
+`tools/compose.js` reproduces that composition offline: ffdec `-swf2xml` both
+files, import the skin's Define tags (ids +20000), retarget every named piece
+placement to the skin symbol, `-xml2swf` back. Verified pixel-faithful.
+
+Skin sources used (file :: prefix): Genlock::genlock,
+Skeleton_Normal::skeletonNormal, Ogre::ogre, Biped_Journeys::golem,
+Corpse_Normal::corpseNormal, ShadeRageDemons::shadeDemon|rageDemon,
+Mabari::mhA, Biped::golemShale, Spirit_Corrupted::bronto.
+The "dragon" payload key uses the baked `anims_drakeFire.swf`.
+
+## EA stat medians per Weavefall foe shape (CHARCLASS, by rig)
+
+goblin hp12 atk25 · ghost 16/55 · golem 12/26 · zombie 10/18 · spider 11/30 ·
+ogre 24/60 · skeleton 10/20 · wisp 12/28 · banshee 18/60 · slime 10/26 ·
+minotaur 15/29 · dragon 16/35 · portal 24/70 (xp 5–18). Not yet wired into
+combat balance — kept here for a future data pass.
+
 ## Regenerating exports (tools)
 
 ```
@@ -69,10 +99,18 @@ java -jar ffdec.jar -export script OUT DALFlashApp.swf
 java -jar ffdec.jar -export binaryData OUT DALFlashApp.swf
 # render a background to PNG (800×600)
 java -jar ffdec.jar -export frame OUT assets/battleBGForest.swf
-# creature animation frames as PNGs (use -zoom 2 for 2x)
-java -jar ffdec.jar -zoom 2 -export sprite OUT assets/anims_genlock.swf
-# map exported sprite IDs to animation names
-node tools/symbols.js assets/anims_genlock.swf
+# map symbol names / frame counts / action_frame labels / fps (no ffdec needed)
+node tools/meta.js assets/anims_genlock.swf
+# attach a skin onto a bare rig (see table above for file::prefix pairs)
+node tools/compose.js assets/anims_genlock.swf \
+  assets/animSkins_Monsters_Genlock.swf genlock /tmp/genlock.swf
+# full payload build (frames -> trimmed webp -> DATA.eaRig/DATA.eaBg JS)
+node tools/pipeline2.js plan && bash -c 'xargs -P3 -I{} bash -c "{}" </tmp/dal/cmds2.txt'
+node tools/pipeline2.js assemble
 ```
 
-ffdec: github.com/jindrapetrik/jpexs-decompiler (needs Java 11+).
+ffdec: github.com/jindrapetrik/jpexs-decompiler (needs Java 11+). The pipeline
+scripts assume ffdec at /tmp/ffdec/ffdec.jar, sharp at /tmp/dal/npm, and write
+to /tmp/dal/out2 — adjust the constants at the top when running elsewhere.
+Payload knobs: webp q70, frame step 2 (heavy creatures 3, deaths 3–4), every
+strike keeps its action_frame; creatures export at in-game AnimScale.
