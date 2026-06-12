@@ -238,3 +238,21 @@ of it.
   Rogue: Dirty Fighting/Backstab/Whirlwind; Archer: Bow Shot/Pinning Shot/
   Mass Volley; Mage: Bolt/Frostbite/Storm (costs and slots unchanged, deep
   recall still gates every costed skill).
+
+## Road over the original quest maps, page by page (pass 17)
+
+`map_pipeline2.js` rebuilt `DATA.eaMap` as campaign-keyed page sets — every
+page of PP(5)/PF(7)/GD(6)/WS(7)/OR(7) plus WC(5) for the Crossweave; 37 maps,
+webp q68, each with its ENCOUNTER_LEVELSETS trail (BFS trunk of the Location
+connection graph, MapX/MapY map-pixels). `regionRoadPage(tr,rid)` resolves a
+region's CURRENT page: QUESTBIND names the set, progression state 0..4
+(wins 0-3, then the felled boss) spreads across the set's pages, so PP walks
+1→5 exactly and longer sets skip-stride. `layoutRoads()` re-anchors nodes on
+that page (re-run on endBattleUI — pages turn when you return to the road);
+`heroMP`/`mapCam`/`nodeScreenXY` follow {key,page}. `worldLoop()` picks the
+world music: Orzammar pages play `deep_roads1_lp`, everywhere else the quest
+loop; `showBanner` re-syncs on arrival. regionRoadPage peeks S read-only
+(boot runs layoutRoads before S exists — guarded). There is exactly ONE
+overworld in the build (DMMapScreenSWF — WORLD_CONTINENTS ships a single
+continent); journeys beyond the Marches happen on these zone maps, as in the
+original.
