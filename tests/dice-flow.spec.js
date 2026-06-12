@@ -187,3 +187,23 @@ test('boss battles run on exam recall: every action deep, six choices, hints off
   expect(out.n).toBeGreaterThanOrEqual(4);
   expect(out.hintHidden).toBe(true);
 });
+
+test('the held card can be placed anywhere and settles back on reset', async ({ page }) => {
+  await freshGame(page, 'c');
+  await startBattle(page);
+  const out = await page.evaluate(() => {
+    const wf = window.__wf, box = document.getElementById('battleBox');
+    wf.S.settings.cardXY = [120, 80];
+    wf.applyCardPos();
+    const placed = { dragged: box.classList.contains('dragged'), left: box.style.left, top: box.style.top };
+    wf.S.settings.cardXY = null;
+    wf.applyCardPos();
+    const reset = { dragged: box.classList.contains('dragged'), left: box.style.left };
+    return { placed, reset };
+  });
+  expect(out.placed.dragged).toBe(true);
+  expect(out.placed.left).toBe('120px');
+  expect(out.placed.top).toBe('80px');
+  expect(out.reset.dragged).toBe(false);
+  expect(out.reset.left).toBe('');
+});
