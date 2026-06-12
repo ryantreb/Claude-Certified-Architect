@@ -190,3 +190,51 @@ foeThreat = 9 + atk/8 (clamp 10–16, boss +1). DATA.eaWeapons holds three
 originals per tier per class from EQUIPMENT_WEAPON.xml; tier = +to-hit,
 agility>0 = +1 crit range. All tactical only — mastery never moves with any
 of it.
+
+## The full original feature layer (passes 11–16)
+
+- **Audio** (`audio_payload.js`, pass 11): every audio.swf sample (202) in
+  `DATA.eaSnd`; the music loops (Castle/ChooseParty/Combat/Quest +
+  deep_roads1_lp) in `DATA.eaMusic`. Sfx gained a lazy-decode sample player
+  (synth kept as fallback; EAMAP routes click/win/lose/levelup/open to the
+  original cues; footsteps rotate da_flash_pc_walk1..5). Music follows MODE
+  (battle/keep/world+map) plus the party picker; `S.settings.music` gates it.
+  Voice barks: hero gender → male / ss_elf_woman sets; foes grunt by shape
+  (genlock/ogre/spider/shriek sets).
+- **VFX** (`fx_pipeline.js`, pass 12): `DATA.eaFx` = 20 vfx/vfx_ui exports
+  (fireball/bolt/frost pairs, lightning, heal, buffs, powerFlash, levelUp,
+  arrow, six banners); `DATA.eaPartIcon` = the seven resistance damage-burst
+  icons. The burst engine reproduces ParticleSys verbatim: seed angle random
+  0–360°, v = rand(0..velRand)/2 + vel, gravity accumulates g·f/10 per frame,
+  constant force lift, size 5→0 over 0.5 s at 24 fps (numbers from
+  EFFECTS_PARTICLEEFFECTS.xml rows; pools 25, magic 18). dt is treated as one
+  24fps frame-step (px/frame velocities) — the one interpretive call.
+- **Overworld** (pass 13): `DATA.eaWorldMap` = DMMapScreenSWF parchment
+  (767×615) + DMMapRegionIconSWF scroll + DMMapPlayerCastleSWF castle;
+  `DATA.eaWorld` = the WORLD_REGIONS.xml graph verbatim (Castle 360,180 …
+  Orzammar 175,455; R_T shares the castle's coords in the XML and is nudged
+  to 300,228 for a visible marker — placement-only deviation). MAPBIND walks
+  study regions along Estate→Pass→Forest→Dales→Sea; trial at Orzammar. The
+  screen is read-only over region/road state.
+- **Companions** (`comp_payload.js`, pass 14): `DATA.eaComp` = 20
+  CHARACTER_GUILDNPCS battle NPCs (stats/warcries/portraits verbatim; the
+  duplicate tutorial Derandt dropped). Join rules are read-only milestone
+  derivations (region bosses, levels, streaks, badges, caches, mastered
+  count, perfect practical). Tactical only: atk/12→hit, def/12→guard,
+  agi≥16→crit.
+- **Items** (pass 15): `DATA.eaItems` = 2,074 real EQUIPMENT_* rows
+  ([name,def,atk,agi,luck,health,power,weightClass]). Vault + worn slot per
+  type; derived caps: def→guard +3, atk→hit +2, agi≥12→crit +1,
+  health/4→halves, power≥4→mana. Drops by weightClass ≤ region tier (+boss).
+- **Castle & quests** (pass 16): `DATA.eaRooms` = ten CastleRoom_*_MC
+  backdrops over the keep cards (HeroRoom/Training/Treasury/Tavern/Library/
+  Infirmary/GreatHall/Throne/Alchemy/Market). `DATA.eaQuests` = the original
+  quest lines from STRINGS_QUESTSTRINGRESOURCES (PP/PPR/PF/GD/WS/KW/OR, 60+
+  quests, names + openings, {%HeroName%}→Architect). QUESTBIND maps region
+  index → chain; wins+boss turn the pages; objective chip carries the name.
+  Flavor only — progression still moves on mastery alone.
+- **Skills**: the SKILLS table now wears the original SKILL_SKILLS_* names
+  on the same mechanical frame — Warrior: Strike/Shield Bash/Shield Charge;
+  Rogue: Dirty Fighting/Backstab/Whirlwind; Archer: Bow Shot/Pinning Shot/
+  Mass Volley; Mage: Bolt/Frostbite/Storm (costs and slots unchanged, deep
+  recall still gates every costed skill).
