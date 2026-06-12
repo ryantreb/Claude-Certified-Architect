@@ -256,3 +256,42 @@ loop; `showBanner` re-syncs on arrival. regionRoadPage peeks S read-only
 overworld in the build (DMMapScreenSWF — WORLD_CONTINENTS ships a single
 continent); journeys beyond the Marches happen on these zone maps, as in the
 original.
+
+## Fight the original fights (passes 18–19)
+
+- **Villains**: region bosses are the campaign's named terrors by act —
+  Raspin (newly composed: HumanoidMob_1H + banditLeader_m + a real sword),
+  Soleil, Tianne, Deymour, Beirus (their existing rigs, CHARCLASS stat rows
+  in eaStats, ProTip portraits in `DATA.eaVillainPort` shown at the rifts).
+- **Encounters**: `DATA.eaEnc` = per walked page, chain-ordered node waves
+  from Location→DefaultEncounter→CombatWaveSet (first wave, cap 6): shape +
+  ORIGINAL monster name + the waveset's BGTileset. `nodeEnc(n)` reads a road
+  node's fight from its {key,page,pi} anchor; `buildFoes` spawns it; the
+  battle stands on the original ground (ENVBG passes tilesets straight
+  through; the full 18-set `DATA.eaBg` replaced the City-only payload).
+  New shapes (stalker, mabari, bear, sylvan, werewolf, shriek=`shr_`,
+  hurlock1H/2H/Staff on hurlockAlphaNormal/ShamanRobe skins, bandit1H/Mage/
+  Bow on the Bandit Standard sets, carta on cartaDwarfWarrior) ride
+  `mob_pipeline3.js` exports; rig→shape census in `RIG2SHAPE`.
+- **Dwarves**: the user was right — `animSkins_Monsters_CartaDwarves.swf`
+  carries 18 full dwarf piece sets (6 roles × 3 ranks) for the DwarfMob
+  rigs, plus dwarf axes in the weapon files. No human-armor resizing needed.
+  Tovez fights as a Carta 2H dwarf (EACOMP_SPRITE override); Shale,
+  Barkspawn, the Fire Drake fight as their own rigs too.
+- **Guild companions**: compVan/Sha/Cas/Rng — HumanElf rigs in Standard
+  armors (silverlite/commandersPleather/robesOfFortitude/tornLeather) with
+  their own preset heads (M3 bearded, F2, M4 untinted, F1) — replace the
+  villain-placeholder CLASS_SPRITE.
+- **Visible equipment**: worn armor of weightClass ≥ 2 swaps the hero rig to
+  its Standard outfit (heroWarStd/RogStd/MagStd/ArcStd: powerArmor,
+  reinforcedLeather, robesOfBronze, bronzedLeatherArmor).
+- **Leveling**: `DATA.eaLevels` = CHARACTER_LEVELING XPDeltaNext (100
+  levels); battles pay summed XPForDefeat medians (eaStats.xp ×2.2, boss ×3).
+- **Summon Spider**: the mage's original cost-1 summon at lv15 — deep recall
+  earns the cast (no die), the spider seats in a free cell, soaks blows, and
+  flanks (+1 party to-hit) while it stands.
+- Skipped, documented: generated item icons (iconGeneratorAssets carries
+  only backgrounds/borders/mask — the glyph sheets live deeper in the app);
+  battle strings (UI labels only); dwarf PLAYER heroes (Dwarf_* player rigs
+  exist and Carta skins fit the MOB rigs — a future pass could compose
+  hero-grade dwarves the same way).

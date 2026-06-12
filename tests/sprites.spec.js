@@ -61,13 +61,13 @@ test('hits land on the strike action_frame, never at time zero', async ({ page }
   expect(out.goblin).toBeLessThan(out.strikeDur);  // the blow lands mid-swing
 });
 
-test('the party are the DA Legends companions with portraits', async ({ page }) => {
+test('the party companions wear their own guild looks; villains keep their rigs', async ({ page }) => {
   await loadGame(page);
-  await page.waitForFunction(() => ['deymour', 'shale', 'tianne', 'soleil', 'beirus']
+  await page.waitForFunction(() => ['deymour', 'compVan', 'compSha', 'compCas', 'compRng']
     .every(k => {
       const r = window.__wf.EARIG[k];
       return r && r.anims.idle && r.anims.idle[0].complete && r.anims.idle[0].naturalWidth > 0;
-    }), null, { timeout: 8000 });
+    }), null, { timeout: 12000 });
   const out = await page.evaluate(() => {
     const wf = window.__wf;
     return {
@@ -76,16 +76,18 @@ test('the party are the DA Legends companions with portraits', async ({ page }) 
       shadow: wf.memberSpriteKey({ kind: 'comp', cls: 'shadow' }),
       caster: wf.memberSpriteKey({ kind: 'comp', cls: 'caster' }),
       ranger: wf.memberSpriteKey({ kind: 'comp', cls: 'ranger' }),
-      portraits: ['deymour', 'shale', 'tianne', 'soleil', 'beirus']
-        .every(k => wf.EARIG[k].portrait && wf.EARIG[k].portrait.src.length > 50),
+      tovez: wf.memberSpriteKey({ kind: 'comp', id: 'NPC_TOVEZ', cls: 'vanguard' }),
+      villains: ['tianne', 'soleil', 'beirus']
+        .every(k => wf.EARIG[k] && wf.EARIG[k].portrait && wf.EARIG[k].portrait.src.length > 50),
     };
   });
   expect(out.hero).toBe('deymour');
-  expect(out.vanguard).toBe('shale');
-  expect(out.shadow).toBe('tianne');
-  expect(out.caster).toBe('soleil');
-  expect(out.ranger).toBe('beirus');
-  expect(out.portraits).toBe(true);
+  expect(out.vanguard).toBe('compVan');
+  expect(out.shadow).toBe('compSha');
+  expect(out.caster).toBe('compCas');
+  expect(out.ranger).toBe('compRng');
+  expect(out.tovez).toBe('carta2H');
+  expect(out.villains).toBe(true);
 });
 
 test('battle slots sit on the original BattleDisplay grid', async ({ page }) => {

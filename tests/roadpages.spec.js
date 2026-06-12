@@ -15,7 +15,7 @@ test('every page of the campaign-bound map sets is aboard with its trail', async
       deepRoads: M.OR[4].set,
     };
   });
-  expect(out.counts).toEqual({ PP: 5, PF: 7, GD: 6, WS: 7, OR: 7, WC: 5 });
+  expect(out.counts).toEqual({ PP: 5, PF: 7, GD: 6, WS: 7, OR: 7, WC: 5, KW: 7 });
   expect(out.allTrails).toBe(true);
   expect(out.deepRoads).toBe('L_OR_5');          // the Deep Roads page itself
 });
