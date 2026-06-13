@@ -76,6 +76,26 @@ test('the streak chip names itself and the card resizes', async ({ page }) => {
   expect(parseFloat(out.zs)).toBeCloseTo(0.85);
 });
 
+test('the hero screen portraits resolve sharp, not thumbnail-sized', async ({ page }) => {
+  await freshGame(page, 'c');
+  const keys = ['heroWar', 'heroRog', 'heroMag', 'heroArc', 'werewolf', 'desire'];
+  await page.waitForFunction((ks) => {
+    const E = window.__wf.EARIG;
+    return ks.every(k => E[k] && E[k].portrait && E[k].portrait.complete && E[k].portrait.naturalWidth > 0);
+  }, keys, { timeout: 20000 });
+  const out = await page.evaluate(async (ks) => {
+    const wf = window.__wf;
+    const sizes = {};
+    for (const k of ks) {
+      const img = new Image();
+      await new Promise(r => { img.onload = r; img.onerror = r; img.src = wf.portraitSquare(k); });
+      sizes[k] = img.naturalWidth;
+    }
+    return sizes;
+  }, keys);
+  for (const k of keys) expect(out[k], k).toBeGreaterThanOrEqual(96);
+});
+
 test('portraits crop to content and land centered on a square', async ({ page }) => {
   await freshGame(page, 'c');
   await page.waitForFunction(() => {
