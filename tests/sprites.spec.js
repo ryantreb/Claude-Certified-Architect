@@ -132,5 +132,6 @@ test('the four original hero loadouts are riggable and steer the party', async (
   expect(out.portraits).toBe(true);
   expect(out.heroKey).toBe('heroMag');           // the chosen discipline rides into battle
   expect(out.legacy).toBe('deymour');            // old saves keep their champion
-  expect(out.choices).toEqual(['caster', 'ranger', 'shadow', 'vanguard']);
+  // 6 loadouts now: the Half-Elf Rogue doubles 'shadow', the Red Wizard doubles 'caster'
+  expect(out.choices).toEqual(['caster', 'caster', 'ranger', 'shadow', 'shadow', 'vanguard']);
 });
