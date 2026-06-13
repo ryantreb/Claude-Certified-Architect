@@ -6980,5 +6980,67 @@ window.__wf={
 /* all overrides are defined: build the road and start the game */
 boot();
 </script>
+<script>
+/* offline cache (phone-only path): cache every EA asset so the map paints even
+   after iOS suspends the local a-Shell server. Secure-context only (localhost /
+   https); over a plain-http LAN ip this returns immediately and changes nothing. */
+(function () {
+  if (!("serviceWorker" in navigator) || !window.isSecureContext) return;
+  navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).catch(function () {});
+
+  var pill;
+  function say(t) {
+    if (!pill) {
+      pill = document.createElement("div");
+      pill.style.cssText =
+        "position:fixed;left:50%;transform:translateX(-50%);bottom:8px;z-index:99999;" +
+        "background:rgba(20,17,30,.92);color:#e8e2d6;font:600 12px/1.4 system-ui,sans-serif;" +
+        "padding:6px 12px;border-radius:14px;border:1px solid rgba(238,214,156,.35);" +
+        "pointer-events:none;max-width:90vw;text-align:center";
+      document.body.appendChild(pill);
+    }
+    pill.textContent = t;
+  }
+  function done() { if (pill) { pill.remove(); pill = null; } }
+  function flag(k, v) {
+    try { return v === undefined ? localStorage.getItem(k) : localStorage.setItem(k, v); }
+    catch (e) { return null; }
+  }
+
+  async function warm() {
+    var m;
+    try { m = await (await fetch("asset-manifest.json", { cache: "no-store" })).json(); }
+    catch (e) { return; }
+    var list = m && m.assets;
+    if (!Array.isArray(list) || !list.length) return;
+    if (flag("wf-warmed") === m.version) return;          /* already fully cached this build */
+    var total = list.length, seen = 0, failed = 0, i = 0;
+    say("Caching art for offline… 0%");
+    async function pull() {
+      while (i < list.length) {
+        var url = list[i++];
+        try { await fetch(url); } catch (e) { failed++; }
+        seen++;
+        if (seen % 12 === 0 || seen === total)
+          say("Caching art for offline… " + Math.round((seen / total) * 100) + "%");
+      }
+    }
+    var lanes = [];
+    for (var k = 0; k < 6; k++) lanes.push(pull());
+    await Promise.all(lanes);
+    if (failed) {
+      say("Offline cache " + Math.round(((total - failed) / total) * 100) +
+          "% — wake a-Shell, return here, reload to finish");
+      setTimeout(done, 9000);
+    } else {
+      flag("wf-warmed", m.version);
+      say("Offline cache complete ✓ — the server can sleep now");
+      setTimeout(done, 3000);
+    }
+  }
+  if (document.readyState === "complete") setTimeout(warm, 1500);
+  else addEventListener("load", function () { setTimeout(warm, 1500); });
+})();
+</script>
 </body>
 </html>
