@@ -78,7 +78,7 @@ test('the streak chip names itself and the card resizes', async ({ page }) => {
 
 test('the hero screen portraits resolve sharp, not thumbnail-sized', async ({ page }) => {
   await freshGame(page, 'c');
-  const keys = ['heroWar', 'heroRog', 'heroMag', 'heroArc', 'werewolf', 'desire'];
+  const keys = ['heroWar', 'heroRog', 'heroMag', 'heroArc', 'heroRog2', 'heroMag2', 'werewolf', 'desire'];
   await page.waitForFunction((ks) => {
     const E = window.__wf.EARIG;
     return ks.every(k => E[k] && E[k].portrait && E[k].portrait.complete && E[k].portrait.naturalWidth > 0);
@@ -94,6 +94,29 @@ test('the hero screen portraits resolve sharp, not thumbnail-sized', async ({ pa
     return sizes;
   }, keys);
   for (const k of keys) expect(out[k], k).toBeGreaterThanOrEqual(96);
+});
+
+test('the half-elf rogue and the red wizard stand in the hall with full hero rigs', async ({ page }) => {
+  await freshGame(page, 'c');
+  const out = await page.evaluate(() => {
+    const wf = window.__wf;
+    const byRig = Object.fromEntries(wf.HERO_CHOICES.map(c => [c.rig, c]));
+    const kinds = ['idle', 'strike', 'special', 'dmg', 'death', 'fwd', 'evade', 'block'];
+    const whole = (k) => {
+      const r = wf.DATA.eaRig[k];
+      return !!(r && r.portrait && kinds.every(a => r.anims[a] && r.anims[a].f.length > 0));
+    };
+    return {
+      rog: byRig.heroRog2 && byRig.heroRog2.cls,
+      mag: byRig.heroMag2 && byRig.heroMag2.cls,
+      rogWhole: whole('heroRog2'),
+      magWhole: whole('heroMag2'),
+    };
+  });
+  expect(out.rog).toBe('shadow');
+  expect(out.mag).toBe('caster');
+  expect(out.rogWhole).toBe(true);
+  expect(out.magWhole).toBe(true);
 });
 
 test('portraits crop to content and land centered on a square', async ({ page }) => {
