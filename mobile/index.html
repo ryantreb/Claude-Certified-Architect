@@ -2205,7 +2205,7 @@ function newState(){
     flags:{intro:false,firstBattle:false,restNudge:0},
     road:{c:{at:0,done:{}},g:{at:0,done:{}}},   // node-path progress per track
     energy:{v:10,ts:0},                          // travel energy (regenerates in real time)
-    settings:{sound:true,music:true,motion:true,dpad:false,qscale:"m"},heroName:"",
+    settings:{sound:true,music:true,motion:true,dpad:false,qscale:"m",qzoom:1},heroName:"",
     pos:{x:DATA.keepPos.cx+2,y:DATA.keepPos.cy+3},
     session:null
   };
@@ -5848,6 +5848,7 @@ function bindKeepActions(scope){
       else if(act==="qsize"){
         const order=["s","m","l","x"],QL={s:"Small",m:"Medium",l:"Large",x:"Extra large"};
         S.settings.qscale=order[(order.indexOf(S.settings.qscale||"m")+1)%order.length];
+        S.settings.qzoom=1;
         el.textContent=QL[S.settings.qscale];applySettings();queueSave();
       }
       else if(act==="summary"){showSummary(true);return}
@@ -5952,8 +5953,13 @@ function applySettings(){
   document.body.classList.toggle("nomotion",!S.settings.motion);
   if(S.settings.music===false)Music.stop();else Music.sync();
   $("dpad").classList.toggle("hidden",!S.settings.dpad||MODE==="title");
-  const z={s:0.85,m:1,l:1.18,x:1.35}[S.settings.qscale||"m"]||1;
-  $("battleBox").style.zoom=z;
+  applyCardZoom();
+}
+function applyCardZoom(){
+  const box=$("battleBox");if(!box)return;
+  const base={s:0.85,m:1,l:1.18,x:1.35}[(S.settings&&S.settings.qscale)||"m"]||1;
+  const q=(S.settings&&+S.settings.qzoom)||1;
+  box.style.zoom=clamp(base*q,0.45,2.2);
 }
 function confirmReset(){
   showModal("<h2 class='serif'>Abandon the restoration?</h2><p>All mastery, relics, badges, and the keep itself will be erased. This cannot be undone.</p>",
@@ -6183,7 +6189,7 @@ function applyCardPos(){
 (function(){
   const box=$("battleBox"),head=$("bHead");
   if(!box||!head)return;
-  let drag=null;
+  let drag=null,pinch=null;
   head.addEventListener("pointerdown",e=>{
     if(e.target.closest("button,a"))return;      // the item buttons still work
     const r=box.getBoundingClientRect();
@@ -6194,7 +6200,7 @@ function applyCardPos(){
     e.preventDefault();
   });
   head.addEventListener("pointermove",e=>{
-    if(!drag||e.pointerId!==drag.id)return;
+    if(pinch||!drag||e.pointerId!==drag.id)return;
     const W=window.innerWidth,H=window.innerHeight,w=box.offsetWidth;
     box.style.left=clamp(e.clientX-drag.dx,8-w*0.5,W-w*0.5-8)+"px";
     box.style.top=clamp(e.clientY-drag.dy,8,H-64)+"px";
@@ -6208,8 +6214,8 @@ function applyCardPos(){
   head.addEventListener("pointerup",end);
   head.addEventListener("pointercancel",end);
   head.addEventListener("dblclick",()=>{
-    S.settings.cardXY=null;S.settings.cardMin=false;queueSave();
-    applyCardPos();applyCardMin();
+    S.settings.cardXY=null;S.settings.cardMin=false;S.settings.qzoom=1;queueSave();
+    applyCardPos();applyCardMin();applyCardZoom();
     toast("The card settles back into your hand.");
   });
   const minBtn=$("bMin");
@@ -6217,6 +6223,23 @@ function applyCardPos(){
     S.settings.cardMin=!S.settings.cardMin;
     applyCardMin();queueSave();
   });
+  /* ---- two-finger pinch on the card to resize it; persists as qzoom ---- */
+  const tdist=t=>Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY);
+  box.addEventListener("touchstart",e=>{
+    if(e.touches.length!==2)return;
+    pinch={d0:tdist(e.touches),z0:(S.settings&&+S.settings.qzoom)||1};
+    if(drag){drag=null;box.classList.remove("dragging")}   // a second finger cancels a drag
+    e.preventDefault();
+  },{passive:false});
+  box.addEventListener("touchmove",e=>{
+    if(!pinch||e.touches.length!==2)return;
+    e.preventDefault();                                    // keep the page from scrolling/zooming
+    S.settings.qzoom=clamp(pinch.z0*(tdist(e.touches)/pinch.d0),0.45,2.0);
+    applyCardZoom();
+  },{passive:false});
+  const pend=e=>{if(pinch&&e.touches.length<2){pinch=null;queueSave()}};
+  box.addEventListener("touchend",pend);
+  box.addEventListener("touchcancel",pend);
   window.addEventListener("resize",()=>{if(S&&S.settings&&S.settings.cardXY)applyCardPos()});
 })();
 $("btnTonic").addEventListener("click",useTonic);
