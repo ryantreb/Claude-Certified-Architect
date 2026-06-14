@@ -245,36 +245,50 @@ test('the card minimizes to its title bar and comes back, like a window', async 
   expect(out.handReset.saved).toBe(false);
 });
 
-test('dragging an edge scales the whole card — text and all — and resets on hand-return', async ({ page }) => {
+test('edges resize one axis at a time — width scales the words, height stays free — and the scrollbar is clear', async ({ page }) => {
   await freshGame(page, 'c');
   await startBattle(page);
   const out = await page.evaluate(() => {
     const wf = window.__wf, box = document.getElementById('battleBox');
     const handles = box.querySelectorAll('.bResize').length;
     const zoom = () => parseFloat(box.style.zoom) || 1;
-    wf.S.settings.qscale = 'm'; wf.S.settings.qzoom = 1; wf.applySettings();
-    const z0 = zoom();
-    const east = box.querySelector('.bResize.e');
+    // rendered height from layout × zoom — free of the docked card's 1.4° tilt, which
+    // would otherwise inflate a getBoundingClientRect reading.
+    const renderedH = () => box.offsetHeight * zoom();
+    wf.S.settings.qscale = 'm'; wf.S.settings.qzoom = 1; wf.S.settings.cardH = null; wf.applySettings();
     const ev = (x, y) => ({ pointerId: 5, clientX: x, clientY: y, bubbles: true });
-    // grab the east edge and pull outward ~30% of the card width → the card scales up
+    const drag = (cls, fromX, fromY, toX, toY) => {
+      const h = box.querySelector('.bResize.' + cls);
+      h.dispatchEvent(new PointerEvent('pointerdown', ev(fromX, fromY)));
+      h.dispatchEvent(new PointerEvent('pointermove', ev(toX, toY)));
+      h.dispatchEvent(new PointerEvent('pointerup', ev(toX, toY)));
+    };
+    // the east handle must sit at/outside the right edge, leaving the scrollbar clickable.
+    const ecs = getComputedStyle(box.querySelector('.bResize.e'));
+    const insideOverlap = parseFloat(ecs.width) + parseFloat(ecs.right);  // right is negative → outside
+    const scrollbarClear = insideOverlap <= 3;
+    // HORIZONTAL: drag the east edge out → words scale up (zoom), height held
     let r = box.getBoundingClientRect();
-    east.dispatchEvent(new PointerEvent('pointerdown', ev(r.right, (r.top + r.bottom) / 2)));
-    east.dispatchEvent(new PointerEvent('pointermove', ev(r.right + r.width * 0.3, (r.top + r.bottom) / 2)));
-    const zBig = zoom(), qBig = wf.S.settings.qzoom;
-    east.dispatchEvent(new PointerEvent('pointerup', ev(r.right + r.width * 0.3, (r.top + r.bottom) / 2)));
-    // pull the edge back inward and the card scales down again
+    const z0 = zoom(), h0 = renderedH();
+    drag('e', r.right, (r.top + r.bottom) / 2, r.right + r.width * 0.3, (r.top + r.bottom) / 2);
+    const horiz = { zoomUp: zoom() > z0 + 0.05, heightHeld: Math.abs(renderedH() - h0) < 8 };
+    // VERTICAL: drag the south edge down → taller only, words (zoom) unchanged
     r = box.getBoundingClientRect();
-    east.dispatchEvent(new PointerEvent('pointerdown', ev(r.right, (r.top + r.bottom) / 2)));
-    east.dispatchEvent(new PointerEvent('pointermove', ev(r.right - r.width * 0.4, (r.top + r.bottom) / 2)));
-    const zSmall = zoom();
-    east.dispatchEvent(new PointerEvent('pointerup', ev(r.right - r.width * 0.4, (r.top + r.bottom) / 2)));
-    // settling the card back into the hand returns it to the default scale
+    const zBefore = zoom(), hBefore = renderedH();
+    drag('s', r.right - 40, r.bottom, r.right - 40, r.bottom + 130);
+    const vert = { tallerNow: renderedH() > hBefore + 40, zoomHeld: Math.abs(zoom() - zBefore) < 0.001 };
+    // hand-return wipes both the scale and the dragged height
     document.getElementById('bHead').dispatchEvent(new MouseEvent('dblclick', { bubbles: true }));
-    return { handles, z0, zBig, qBig, zSmall, zReset: zoom() };
+    return { handles, scrollbarClear, horiz, vert,
+      reset: { zoom: zoom(), cardH: wf.S.settings.cardH, height: box.style.height } };
   });
-  expect(out.handles).toBe(8);                 // four edges + four corners
-  expect(out.zBig).toBeGreaterThan(out.z0);    // dragging out scales the card (text included) up
-  expect(out.qBig).toBeGreaterThan(1);         // …carried on the shared qzoom, like the pinch
-  expect(out.zSmall).toBeLessThan(out.zBig);   // dragging back in scales it down
-  expect(out.zReset).toBeCloseTo(1);           // the hand-reset returns to the default scale
+  expect(out.handles).toBe(8);                  // four edges + four corners
+  expect(out.scrollbarClear).toBe(true);        // the east handle no longer blankets the scrollbar
+  expect(out.horiz.zoomUp).toBe(true);          // dragging width scales the words up
+  expect(out.horiz.heightHeld).toBe(true);      // …without changing height (horizontal-only)
+  expect(out.vert.tallerNow).toBe(true);        // dragging the bottom edge grows the height
+  expect(out.vert.zoomHeld).toBe(true);         // …without rescaling the words (vertical-only)
+  expect(out.reset.zoom).toBeCloseTo(1);
+  expect(out.reset.cardH).toBeNull();
+  expect(out.reset.height).toBe('');
 });
