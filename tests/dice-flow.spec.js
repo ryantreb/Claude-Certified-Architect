@@ -245,40 +245,36 @@ test('the card minimizes to its title bar and comes back, like a window', async 
   expect(out.handReset.saved).toBe(false);
 });
 
-test('the card resizes by dragging an edge and settles back on reset', async ({ page }) => {
+test('dragging an edge scales the whole card — text and all — and resets on hand-return', async ({ page }) => {
   await freshGame(page, 'c');
   await startBattle(page);
   const out = await page.evaluate(() => {
     const wf = window.__wf, box = document.getElementById('battleBox');
     const handles = box.querySelectorAll('.bResize').length;
-    // an explicit footprint applies as inline width/height over the CSS defaults
-    wf.S.settings.cardWH = [400, 300];
-    wf.applyCardSize();
-    const applied = { w: box.style.width, h: box.style.height };
-    // grab the south-east corner and drag it out 120×80 (zoom is 1, so px map 1:1)
-    const se = box.querySelector('.bResize.se');
-    const r = box.getBoundingClientRect();
-    const ev = (x, y) => ({ pointerId: 7, clientX: x, clientY: y, bubbles: true });
-    se.dispatchEvent(new PointerEvent('pointerdown', ev(r.right, r.bottom)));
-    const w0 = box.offsetWidth, h0 = box.offsetHeight;
-    se.dispatchEvent(new PointerEvent('pointermove', ev(r.right + 120, r.bottom + 80)));
-    const grew = { dw: box.offsetWidth - w0, dh: box.offsetHeight - h0,
-      dragged: box.classList.contains('dragged') };
-    se.dispatchEvent(new PointerEvent('pointerup', ev(r.right + 120, r.bottom + 80)));
-    const saved = !!(wf.S.settings.cardWH && wf.S.settings.cardWH[0] > 0);
-    // double-clicking the header settles the card back into the hand at default size
+    const zoom = () => parseFloat(box.style.zoom) || 1;
+    wf.S.settings.qscale = 'm'; wf.S.settings.qzoom = 1; wf.applySettings();
+    const z0 = zoom();
+    const east = box.querySelector('.bResize.e');
+    const ev = (x, y) => ({ pointerId: 5, clientX: x, clientY: y, bubbles: true });
+    // grab the east edge and pull outward ~30% of the card width → the card scales up
+    let r = box.getBoundingClientRect();
+    east.dispatchEvent(new PointerEvent('pointerdown', ev(r.right, (r.top + r.bottom) / 2)));
+    east.dispatchEvent(new PointerEvent('pointermove', ev(r.right + r.width * 0.3, (r.top + r.bottom) / 2)));
+    const zBig = zoom(), qBig = wf.S.settings.qzoom;
+    east.dispatchEvent(new PointerEvent('pointerup', ev(r.right + r.width * 0.3, (r.top + r.bottom) / 2)));
+    // pull the edge back inward and the card scales down again
+    r = box.getBoundingClientRect();
+    east.dispatchEvent(new PointerEvent('pointerdown', ev(r.right, (r.top + r.bottom) / 2)));
+    east.dispatchEvent(new PointerEvent('pointermove', ev(r.right - r.width * 0.4, (r.top + r.bottom) / 2)));
+    const zSmall = zoom();
+    east.dispatchEvent(new PointerEvent('pointerup', ev(r.right - r.width * 0.4, (r.top + r.bottom) / 2)));
+    // settling the card back into the hand returns it to the default scale
     document.getElementById('bHead').dispatchEvent(new MouseEvent('dblclick', { bubbles: true }));
-    const reset = { wh: wf.S.settings.cardWH, w: box.style.width, h: box.style.height };
-    return { handles, applied, grew, saved, reset };
+    return { handles, z0, zBig, qBig, zSmall, zReset: zoom() };
   });
   expect(out.handles).toBe(8);                 // four edges + four corners
-  expect(out.applied.w).toBe('400px');
-  expect(out.applied.h).toBe('300px');
-  expect(out.grew.dragged).toBe(true);         // resizing floats the card, like moving it
-  expect(out.grew.dw).toBeGreaterThan(80);     // the corner drag widened it
-  expect(out.grew.dh).toBeGreaterThan(50);     // …and made it taller
-  expect(out.saved).toBe(true);                // the footprint persisted to settings
-  expect(out.reset.wh).toBeNull();             // the hand-reset clears the footprint
-  expect(out.reset.w).toBe('');
-  expect(out.reset.h).toBe('');
+  expect(out.zBig).toBeGreaterThan(out.z0);    // dragging out scales the card (text included) up
+  expect(out.qBig).toBeGreaterThan(1);         // …carried on the shared qzoom, like the pinch
+  expect(out.zSmall).toBeLessThan(out.zBig);   // dragging back in scales it down
+  expect(out.zReset).toBeCloseTo(1);           // the hand-reset returns to the default scale
 });
