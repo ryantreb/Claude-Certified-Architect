@@ -148,7 +148,7 @@ button:focus-visible,.opt:focus-visible{outline:2px solid #d9a441;outline-offset
    bottom sheet. Semi-transparent so the EA scenery and sprites read behind it. */
 #battleUI{position:absolute;left:0;right:0;bottom:0;z-index:40;display:flex;justify-content:center;
   padding:0 8px calc(8px + env(safe-area-inset-bottom));pointer-events:none}
-#battleBox{width:100%;max-width:560px;pointer-events:auto;display:flex;flex-direction:column;
+#battleBox{position:relative;width:100%;max-width:560px;pointer-events:auto;display:flex;flex-direction:column;
   max-height:min(48vh,48dvh);border-radius:14px;
   background:rgba(20,17,30,.82);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
   box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 0 1px rgba(120,100,160,.18)}
@@ -220,7 +220,11 @@ button:focus-visible,.opt:focus-visible{outline:2px solid #d9a441;outline-offset
 #battleBox.minimized #bItems{display:none}
 #battleBox.minimized #bHead{border-bottom:none}
 #comboChip{color:#f0c860;background:rgba(90,62,16,.5);border:1px solid #8a6420;border-radius:8px;padding:3px 9px;min-height:28px;display:inline-flex;align-items:center}
-#bScroll{overflow-y:auto;padding:9px 11px 10px;-webkit-overflow-scrolling:touch}
+#bScroll{overflow-y:auto;padding:9px 11px 10px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:#6a5a92 rgba(0,0,0,.18)}
+#bScroll::-webkit-scrollbar{width:11px}
+#bScroll::-webkit-scrollbar-track{background:transparent}
+#bScroll::-webkit-scrollbar-thumb{background:#6a5a92;border-radius:8px;border:3px solid transparent;background-clip:content-box}
+#bScroll::-webkit-scrollbar-thumb:hover{background:#8270b0;border:3px solid transparent;background-clip:content-box}
 #dicePanel{margin:6px 0 4px;display:flex;flex-direction:column;gap:7px}
 #diceCtx{font-size:12px;color:#cbbf9f;display:flex;flex-direction:column;gap:2px}
 #diceCtx b{color:#f0e2c0;font-size:13px}
@@ -241,6 +245,25 @@ button:focus-visible,.opt:focus-visible{outline:2px solid #d9a441;outline-offset
 #battleBox.dragged{position:fixed;margin:0;width:min(560px,92vw);max-height:min(72vh,620px);
   transform:none !important;transition:none;border-radius:14px}
 #battleBox.dragging{box-shadow:0 18px 48px rgba(0,0,0,.8),0 0 0 1px rgba(190,160,230,.35);opacity:.96}
+/* ---- desktop: drag an edge to resize one axis (E/W scale the card + its text,
+       N/S change height only); corners do both. Handles sit just outside the
+       card so they never cover the scrollbar or the header. ---- */
+.bResize{position:absolute;z-index:6;display:none;touch-action:none}
+@media (hover:hover) and (pointer:fine){.bResize{display:block}}
+#battleBox.minimized .bResize{display:none}
+.bResize.e{top:16px;bottom:16px;right:-10px;width:12px;cursor:ew-resize}
+.bResize.w{top:16px;bottom:16px;left:-10px;width:12px;cursor:ew-resize}
+.bResize.s{left:16px;right:16px;bottom:-10px;height:12px;cursor:ns-resize}
+.bResize.n{left:16px;right:16px;top:-10px;height:12px;cursor:ns-resize}
+.bResize.se{right:-11px;bottom:-11px;width:17px;height:17px;cursor:nwse-resize}
+.bResize.sw{left:-11px;bottom:-11px;width:17px;height:17px;cursor:nesw-resize}
+.bResize.ne{right:-11px;top:-11px;width:17px;height:17px;cursor:nesw-resize}
+.bResize.nw{left:-11px;top:-11px;width:17px;height:17px;cursor:nwse-resize}
+.bResize.e:hover,.bResize.w:hover,.bResize.n:hover,.bResize.s:hover{background:rgba(190,160,230,.22);border-radius:6px}
+.bResize.se::after,.bResize.sw::after{content:"";position:absolute;bottom:4px;width:8px;height:8px;border-bottom:2px solid rgba(207,196,232,.55);opacity:.6}
+.bResize.se::after{right:4px;border-right:2px solid rgba(207,196,232,.55)}
+.bResize.sw::after{left:4px;border-left:2px solid rgba(207,196,232,.55)}
+.bResize.se:hover::after,.bResize.sw:hover::after{opacity:1}
 .heroGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px}
 .herocard{display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 8px;border-radius:12px;
   background:rgba(36,31,58,.55);border:1px solid #4d4470;color:#e8deca;text-align:center}
@@ -438,7 +461,7 @@ body.nomotion *{animation:none !important;transition:none !important}
 
   <div id="battleUI" class="hidden">
     <div id="battleBox" class="panel">
-      <div id="bHead" title="drag to move the card · double-click to return it to your hand">
+      <div id="bHead" title="drag to move the card · drag a side to resize (left/right scales the words, top/bottom changes height) · double-click to return it to your hand">
         <div id="bFoe">
           <div id="bFoeName"></div>
           <div id="bVigor"></div>
@@ -464,6 +487,14 @@ body.nomotion *{animation:none !important;transition:none !important}
           <button class="btn danger hidden" id="btnFlee">Withdraw</button>
         </div>
       </div>
+      <div class="bResize n" data-edge="n"></div>
+      <div class="bResize s" data-edge="s"></div>
+      <div class="bResize e" data-edge="e"></div>
+      <div class="bResize w" data-edge="w"></div>
+      <div class="bResize ne" data-edge="ne"></div>
+      <div class="bResize nw" data-edge="nw"></div>
+      <div class="bResize se" data-edge="se"></div>
+      <div class="bResize sw" data-edge="sw"></div>
     </div>
   </div>
 
@@ -3652,6 +3683,7 @@ function startBattle(cfg){
   $("battleUI").classList.remove("hidden");
   if(typeof applyCardPos==="function")applyCardPos();
   if(typeof applyCardMin==="function")applyCardMin();
+  if(typeof applyCardZoom==="function")applyCardZoom();
   $("bIntro").textContent="“"+B.enemy.taunt+"”";
   $("btnFlee").classList.toggle("hidden",!!B.gauntlet||!!B.boss);
   Sfx.play("hit");
@@ -5814,7 +5846,7 @@ function settingsRows(){
          row("sound","Sound","The original strikes, spells and voices")+
          row("motion","Motion & shake","Disable for reduced motion")+
          row("dpad","On-screen d-pad","Tap-to-move always works regardless")+
-         "<div class='setrow'><div style='flex:1'><div class='slab'>Question card size</div><div class='ssub'>How large the battle card reads</div></div>"+
+         "<div class='setrow'><div style='flex:1'><div class='slab'>Question card size</div><div class='ssub'>Preset zoom — or drag a side (L/R scales words, T/B height)</div></div>"+
          "<button class='btn sm ghost' data-act='qsize'>"+QL[q]+"</button></div>";
 }
 function bindKeepActions(scope){
@@ -5959,7 +5991,13 @@ function applyCardZoom(){
   const box=$("battleBox");if(!box)return;
   const base={s:0.85,m:1,l:1.18,x:1.35}[(S.settings&&S.settings.qscale)||"m"]||1;
   const q=(S.settings&&+S.settings.qzoom)||1;
-  box.style.zoom=clamp(base*q,0.45,2.2);
+  const z=clamp(base*q,0.45,2.2);
+  box.style.zoom=z;
+  /* a height dragged on the N/S edges is an independent rendered px height —
+     applied in layout space (÷zoom) so it reads the same at any text scale */
+  const H=S&&S.settings&&S.settings.cardH;
+  if(H){const lh=Math.min(H,window.innerHeight-8)/z+"px";box.style.height=lh;box.style.maxHeight=lh;}
+  else{box.style.height="";box.style.maxHeight="";}
 }
 function confirmReset(){
   showModal("<h2 class='serif'>Abandon the restoration?</h2><p>All mastery, relics, badges, and the keep itself will be erased. This cannot be undone.</p>",
@@ -6214,7 +6252,7 @@ function applyCardPos(){
   head.addEventListener("pointerup",end);
   head.addEventListener("pointercancel",end);
   head.addEventListener("dblclick",()=>{
-    S.settings.cardXY=null;S.settings.cardMin=false;S.settings.qzoom=1;queueSave();
+    S.settings.cardXY=null;S.settings.cardMin=false;S.settings.qzoom=1;S.settings.cardH=null;queueSave();
     applyCardPos();applyCardMin();applyCardZoom();
     toast("The card settles back into your hand.");
   });
@@ -6240,7 +6278,47 @@ function applyCardPos(){
   const pend=e=>{if(pinch&&e.touches.length<2){pinch=null;queueSave()}};
   box.addEventListener("touchend",pend);
   box.addEventListener("touchcancel",pend);
-  window.addEventListener("resize",()=>{if(S&&S.settings&&S.settings.cardXY)applyCardPos()});
+  /* ---- grab an edge or corner and drag to resize one axis at a time:
+         E/W scale the card width AND its words (carried on qzoom, like the pinch),
+         holding the height; N/S change the rendered height alone (text unchanged);
+         corners do both. ---- */
+  let rez=null;
+  box.querySelectorAll(".bResize").forEach(h=>{
+    h.addEventListener("pointerdown",e=>{
+      const ed=h.dataset.edge;
+      const z0=parseFloat(getComputedStyle(box).zoom)||1;       // true zoom, free of the docked tilt
+      const qz0=(S.settings&&+S.settings.qzoom)||1;
+      const W0=box.offsetWidth*z0,H0=box.offsetHeight*z0;       // rendered size, no bounding-box inflation
+      rez={edge:ed,id:e.pointerId,px:e.clientX,py:e.clientY,W0,H0,
+           z0,base:z0/(qz0||1),horiz:/[ew]/.test(ed),vert:/[ns]/.test(ed)};
+      S.settings.cardH=H0;             // pin the height so a width drag stays horizontal-only
+      box.classList.add("dragging");
+      try{h.setPointerCapture(e.pointerId)}catch(err){}
+      e.preventDefault();e.stopPropagation();
+    });
+    h.addEventListener("pointermove",e=>{
+      if(!rez||e.pointerId!==rez.id)return;
+      const ed=rez.edge;
+      if(rez.horiz){
+        const dW=(ed.indexOf("e")>=0?e.clientX-rez.px:0)+(ed.indexOf("w")>=0?rez.px-e.clientX:0);
+        const z=clamp(rez.z0*(Math.max(160,rez.W0+dW)/rez.W0),0.45,2.2);
+        S.settings.qzoom=z/rez.base;   // width + word scale ride qzoom
+      }
+      if(rez.vert){
+        const dH=(ed.indexOf("s")>=0?e.clientY-rez.py:0)+(ed.indexOf("n")>=0?rez.py-e.clientY:0);
+        S.settings.cardH=clamp(rez.H0+dH,140,window.innerHeight-8);
+      }
+      applyCardZoom();
+      e.preventDefault();
+    });
+    const rend=e=>{
+      if(!rez||e.pointerId!==rez.id)return;
+      rez=null;box.classList.remove("dragging");queueSave();
+    };
+    h.addEventListener("pointerup",rend);
+    h.addEventListener("pointercancel",rend);
+  });
+  window.addEventListener("resize",()=>{if(S&&S.settings){if(S.settings.cardXY)applyCardPos();applyCardZoom();}});
 })();
 $("btnTonic").addEventListener("click",useTonic);
 $("btnDraught").addEventListener("click",useDraught);
