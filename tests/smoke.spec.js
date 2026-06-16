@@ -6,7 +6,7 @@ const { loadGame, freshGame, aConcept, forceMaster, expect } = require('./helper
 
 test('title screen renders with the core entry points', async ({ page }) => {
   await loadGame(page);
-  await expect(page.locator('#gameTitle')).toHaveText('WEAVEFALL');
+  await expect(page.locator('#gameTitle')).toHaveText('DRAGON AGE: LEGENDS');
   await expect(page.locator('#btnNewGame')).toBeVisible();
   await expect(page.locator('#btnTitleHow')).toBeVisible();
 });

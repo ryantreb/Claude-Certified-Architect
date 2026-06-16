@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="theme-color" content="#0b0a12">
-<title>Weavefall — an Architect's Study Saga</title>
+<title>Dragon Age: Legends — an Architect's Study Saga</title>
 <style>
 /* ============ RESET / BASE ============ */
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -438,8 +438,8 @@ body.nomotion *{animation:none !important;transition:none !important}
       <button class="iconbtn" id="btnMap" aria-label="Map" title="The Free Marches">🗺</button>
       <div id="objChip"><span id="objLabel">Objective</span><span id="objText">—</span></div>
       <div id="hudMeters">
-        <div class="mmrow loom"><span class="loomc">L</span><span class="mbar"><i id="mmLoom"></i></span></div>
-        <div class="mmrow forge"><span class="forgec">F</span><span class="mbar"><i id="mmForge"></i></span></div>
+        <div class="mmrow loom"><span class="loomc">V</span><span class="mbar"><i id="mmLoom"></i></span></div>
+        <div class="mmrow forge"><span class="forgec">M</span><span class="mbar"><i id="mmForge"></i></span></div>
       </div>
     </div>
     <div id="hudRow2">
@@ -447,7 +447,7 @@ body.nomotion *{animation:none !important;transition:none !important}
       <span id="streakChip" title="Daily streak">✦ 0</span>
       <span id="energyChip" title="Travel energy — new nodes cost energy; patrols are always free">⚡ <b id="energyNum">10</b><i id="energyEta"></i></span><span id="lvlChip">Lv <b id="lvlNum">1</b><span class="xpbar"><i id="xpFill"></i></span></span>
       <span style="flex:1"></span>
-      <button class="iconbtn" id="btnBastion" aria-label="Return to the Bastion">⌂</button>
+      <button class="iconbtn" id="btnBastion" aria-label="Return to Kaiten Castle">⌂</button>
     </div>
   </div>
 
@@ -531,10 +531,10 @@ body.nomotion *{animation:none !important;transition:none !important}
           </g>
         </svg>
       </div>
-      <h1 id="gameTitle">WEAVEFALL</h1>
-      <div id="gameSub">The Great Loom is unraveling. Only an Architect can restring the world.</div>
+      <h1 id="gameTitle">DRAGON AGE: LEGENDS</h1>
+      <div id="gameSub">Kaiten stands besieged. A demon of Pride wears many faces — only an Architect can unmake them, through earned mastery, not luck.</div>
       <div class="titleBtns">
-        <button class="btn primary" id="btnContinueGame" style="display:none">Resume the Restoration</button>
+        <button class="btn primary" id="btnContinueGame" style="display:none">Return to Kaiten</button>
         <button class="btn" id="btnNewGame">Begin Anew</button>
         <button class="btn ghost" id="btnTitleHow">How Mastery Works</button>
       </div>
@@ -549,7 +549,7 @@ body.nomotion *{animation:none !important;transition:none !important}
     <div id="keepHead">
       <div id="keepTitleRow">
         <div>
-          <h2 class="serif">The Bastion</h2>
+          <h2 class="serif">Kaiten Castle</h2>
           <div class="small dim" id="keepLvlLine">Keep Level 1</div>
         </div>
         <button class="btn sm primary" id="btnLeaveKeep">To the Field ▸</button>
@@ -717,12 +717,12 @@ const Music=(()=>{
 const DATA={};
 
 DATA.tracks={
-  c:{key:"c",name:"Covenant of the Loom",short:"Loom",cls:"loom",color:"#e8b054",
+  c:{key:"c",name:"The Architect's Vigil",short:"Vigil",cls:"loom",color:"#e8b054",
      cert:"Claude Certified Architect — Foundations",passMark:720,passPct:0.72,
-     gauntlet:"Trial of the Loom"},
-  g:{key:"g",name:"Order of the Forge",short:"Forge",cls:"forge",color:"#54cbae",
+     gauntlet:"Trial of the Vigil"},
+  g:{key:"g",name:"The Marcher Campaign",short:"March",cls:"forge",color:"#54cbae",
      cert:"GitHub Certified: Agentic AI Developer (GH-600 beta)",passMark:700,passPct:0.70,
-     gauntlet:"Trial of the Forge"}
+     gauntlet:"Trial of the March"}
 };
 
 /* exam domains; weight in % (GitHub uses band midpoints, normalized to 100) */
@@ -751,15 +751,15 @@ DATA.visions=[
   {name:"The Mason's Hand",sub:"Code Generation with Claude Code"},
   {name:"The Manyminds",sub:"Multi-Agent Research System"},
   {name:"The Craftsman's Hours",sub:"Developer Productivity with Claude"},
-  {name:"The Endless Forgeline",sub:"Claude Code for CI/CD"},
+  {name:"The Tireless Garrison",sub:"Claude Code for CI/CD"},
   {name:"The Gleaner's Ledger",sub:"Structured Data Extraction"}
 ];
 
 /* ---------------- enemies ----------------
-   Claude-track foes embody the ten anti-patterns; Forge-track foes embody
+   Vigil-front foes embody the ten Claude anti-patterns; March-front foes embody
    the GH-600 failure modes. shape: wraith|golem|blob|wisp|beast|twin|siren|portal */
 DATA.enemies={
-  /* Loom (Claude) */
+  /* The Architect's Vigil (Claude) — Kaiten's own constructs, corrupted by shards of Pride */
   parsewraith:{name:"Parsewraith",shape:"ghost",hue:275,size:1,taunt:"Read my parting words… if you dare guess when I am done.",lore:"It ends nothing cleanly; it waits for someone to misread it."},
   capgeist:{name:"Capgeist",shape:"wisp",hue:200,size:0.9,taunt:"Ten turns. No more. Whatever is left undone… stays undone.",lore:"A counting spirit that strangles work at an arbitrary number."},
   prompthusk:{name:"Promptbound Husk",shape:"zombie",hue:35,size:1.05,taunt:"The rules were written on my skin. Politely. They flake away.",lore:"It trusted instructions where enforcement was needed."},
@@ -776,7 +776,7 @@ DATA.enemies={
   confwisp:{name:"Confidence Wisp",shape:"wisp",hue:55,size:0.9,taunt:"I am 98% certain. I am always 98% certain.",lore:"Its certainty is a costume with nothing inside."},
   sentsiren:{name:"Sentiment Siren",shape:"banshee",hue:340,size:1.05,taunt:"He sounded ANGRY. Sound the alarms. Wake the masters.",lore:"It mistakes the loudest voice for the hardest problem."},
   summarist:{name:"The Summarist",shape:"ghost",hue:265,size:1.4,boss:true,taunt:"I kept the gist of you. The rest was… unnecessary.",lore:"Each retelling loses a truth, and it retells forever."},
-  /* Forge (GitHub) */
+  /* The Marcher Campaign (GitHub) — the Darkspawn Emissary's coalition in the field */
   planless:{name:"Planless Charger",shape:"minotaur",hue:10,size:1.05,taunt:"Plan IS action! Action IS plan! CHARGE!",lore:"It cannot tell deciding from doing, and tramples both."},
   scopecreep:{name:"Scopecreep",shape:"goblin",hue:90,size:1,taunt:"While I am here… I shall also fix that. And that. And THAT.",lore:"Given one task, it swells to fill the whole realm."},
   uncheck:{name:"The Unchecked Executor",shape:"ogre",hue:355,size:1.4,boss:true,taunt:"Approval is a chain. I have shed my chains.",lore:"It acts the instant it imagines, and no one signed for it."},
@@ -794,50 +794,51 @@ DATA.enemies={
   contradiction:{name:"The Contradiction",shape:"banshee",hue:300,size:1.4,boss:true,taunt:"Both of my answers are final. Choose neither. Choose both.",lore:"It speaks with many mouths and agrees with none of them."},
   rubberstamp:{name:"Rubberstamp Shade",shape:"zombie",hue:80,size:0.95,taunt:"Approved. Approved. Approved. What was it? Approved.",lore:"A thousand meaningless sign-offs wore it smooth."},
   irrevocable:{name:"The Irrevocable",shape:"golem",hue:0,size:1.1,taunt:"What I do cannot be undone. That is why I do it quickly.",lore:"It seeks the deletes that have no undo."},
-  breachmaw:{name:"Breachmaw, Oathless",shape:"dragon",hue:350,size:1.45,boss:true,taunt:"Policy is parchment. Parchment burns beautifully.",lore:"No rule binds it because no rule was ever enforced on it."},
-  sundering:{name:"The Sundering",shape:"dragon",hue:262,size:1.55,boss:true,taunt:"Two crafts, one wound. Stitch me if you can, Architect.",lore:"Where the Loom and the Forge tore apart, it slipped through."},
-  warden:{name:"Trial Warden",shape:"portal",hue:48,size:1.5,boss:true,taunt:"Four visions await. Show me earned mastery, not luck.",lore:"It keeps the gate between study and the broken world."}
+  breachmaw:{name:"Breachmaw, Oathless",shape:"dragon",hue:350,size:1.45,boss:true,taunt:"Policy is parchment. Parchment burns beautifully.",lore:"No rule binds it because no rule was ever enforced on it — a vessel of Pride that answers to nothing."},
+  sundering:{name:"The Darkspawn Emissary",shape:"dragon",hue:262,size:1.55,boss:true,taunt:"Kaiten's own failings, gathered into one host. Stand against all of them, Architect.",lore:"The general of Pride's coalition — disciple darkspawn, demons, and cultists — mustered where the inner and outer wars meet."},
+  warden:{name:"Trial Warden",shape:"portal",hue:48,size:1.5,boss:true,taunt:"Four visions await. Show me earned mastery, not luck.",lore:"Ravi's master-at-arms keeps the gate to the Fade, where Pride must be bound. None pass on luck."},
+  pridedemon:{name:"Eiton, Vessel of Pride",shape:"dragon",hue:300,size:1.7,boss:true,taunt:"Father, end this — and you, Architect, hold true. While my will lasts I bind the demon; while your mastery lasts you bind me.",lore:"The Pride demon's last vessel: Ravi's son Eiton, who keeps the demon dormant only as long as your recall holds. Strike true, and Pride is bound in the Fade at last."}
 };
 
 /* ---------------- regions ----------------
    tier gates by keep level: tier1→Keep 1, tier2→Keep 2, tier3→Keep 3 */
 DATA.regions=[
-  {id:"c1r",cert:"c",dom:0,tier:1,name:"Loomspire Heights",cx:15,cy:10,r:6,hue:36,ground:"#2e2740",deco:"spire",
+  {id:"c1r",cert:"c",dom:0,tier:1,name:"The High Hall of Kaiten Castle",cx:15,cy:10,r:6,hue:36,ground:"#2e2740",deco:"spire",
    enemies:["parsewraith","capgeist","prompthusk"],boss:"mirrorkin",
-   intro:"Towers of thread climb into a torn sky. Here the old Orchestrators conducted a thousand looms at once."},
-  {id:"c2r",cert:"c",dom:1,tier:1,name:"The Implement Vaults",cx:28,cy:43,r:6,hue:215,ground:"#27293f",deco:"gear",
+   intro:"Beneath Kaiten's high vaults the Architect once conducted a hundred bound constructs at once. A vessel of Pride has set them looping, each certain its own work is already done."},
+  {id:"c2r",cert:"c",dom:1,tier:1,name:"The Castle Armory",cx:28,cy:43,r:6,hue:215,ground:"#27293f",deco:"gear",
    enemies:["mutegolem","hollowmaw"],boss:"bristleback",
-   intro:"Racks of perfect instruments rust in the dark, hoarded by things that forgot how to choose."},
-  {id:"c3r",cert:"c",dom:2,tier:2,name:"Scriptorium Hollow",cx:19,cy:40,r:6,hue:260,ground:"#2b2540",deco:"book",
+   intro:"Racks of fine implements line the keep's armory. The constructs here hoard every tool at once and can no longer choose which to draw."},
+  {id:"c3r",cert:"c",dom:2,tier:2,name:"The Scriptorium of Kaiten",cx:19,cy:40,r:6,hue:260,ground:"#2b2540",deco:"book",
    enemies:["inkscriv","unplanned"],boss:"chaosquill",
-   intro:"A sunken library where the working rites of the Mason's craft were written — and unwritten."},
-  {id:"c4r",cert:"c",dom:3,tier:2,name:"The Glasswrit Fens",cx:9,cy:21,r:6,hue:160,ground:"#243832",deco:"shard",
+   intro:"Where the working-rites of the craft are kept — the conventions, the plans, the standing orders. A vessel has let them rot, so the constructs cut before they read."},
+  {id:"c4r",cert:"c",dom:3,tier:2,name:"The Glasswright's Cloister",cx:9,cy:21,r:6,hue:160,ground:"#243832",deco:"shard",
    enemies:["vaguewisp","formless"],boss:"avgbeast",
-   intro:"Marsh-glass etched with schema-runes. Ask vaguely here and the fen answers vaguely, forever."},
-  {id:"c5r",cert:"c",dom:4,tier:3,name:"Mnemonic Steppes",cx:13,cy:31,r:6,hue:280,ground:"#322a45",deco:"obelisk",
+   intro:"Schema-glass etched with binding-runes. Ask a construct vaguely here and it answers vaguely, forever — its words slipping every mould meant to hold them."},
+  {id:"c5r",cert:"c",dom:4,tier:3,name:"The Memory Vaults",cx:13,cy:31,r:6,hue:280,ground:"#322a45",deco:"obelisk",
    enemies:["confwisp","sentsiren"],boss:"summarist",
-   intro:"Wind-scoured plains where memory obelisks crumble — every gust carries off another fact."},
-  {id:"g1r",cert:"g",dom:0,tier:1,name:"The Draughting Yards",cx:45,cy:10,r:6,hue:30,ground:"#3a2f28",deco:"scaffold",
+   intro:"Kaiten's record-vaults run as deep as the Deep Roads. Here a construct's memory crumbles — every retelling loses a truth, and the vessel feeds on the forgetting."},
+  {id:"g1r",cert:"g",dom:0,tier:1,name:"Pilgrim's Path",cx:45,cy:10,r:6,hue:30,ground:"#3a2f28",deco:"scaffold",
    enemies:["planless","scopecreep"],boss:"uncheck",
-   intro:"Half-built frames and abandoned blueprints. Work began here before anyone agreed what done meant."},
-  {id:"g2r",cert:"g",dom:1,tier:1,name:"Foundry Gate",cx:57,cy:28,r:6,hue:14,ground:"#3b2a26",deco:"anvil",
+   intro:"The long road where the Marcher host musters for Kaiten. Corrupted constructs charge into works before anyone has agreed what 'done' should mean."},
+  {id:"g2r",cert:"g",dom:1,tier:1,name:"The Hollow Crossing",cx:57,cy:28,r:6,hue:14,ground:"#3b2a26",deco:"anvil",
    enemies:["omnikey","sprawler"],boss:"mishandler",
-   intro:"The great toolworks of the Order. Every implement hangs ready — and unguarded."},
-  {id:"g3r",cert:"g",dom:2,tier:2,name:"The Ledger Crypts",cx:50,cy:38,r:6,hue:200,ground:"#26303c",deco:"crypt",
+   intro:"The river-road to the safe house where Eiton was hidden. Every tool lies ready and unguarded, and the corrupted constructs seize whatever comes to hand."},
+  {id:"g3r",cert:"g",dom:2,tier:2,name:"The Dales of Khenderlan",cx:50,cy:38,r:6,hue:200,ground:"#26303c",deco:"crypt",
    enemies:["stalewraith","fog"],boss:"driftmaw",
-   intro:"Vaults of record beneath the hills. What was not written down here was lost; what was stale, worshipped."},
-  {id:"g4r",cert:"g",dom:3,tier:2,name:"Assay Fields",cx:41,cy:41,r:6,hue:60,ground:"#35351f",deco:"scale",
+   intro:"Khedra's old estate among the Dales, its ledger-crypts thick with dust. What was never written down is lost here; what is stale, the vessel worships."},
+  {id:"g4r",cert:"g",dom:3,tier:2,name:"The Jainen Coast",cx:41,cy:41,r:6,hue:60,ground:"#35351f",deco:"scale",
    enemies:["glosseye","untuned"],boss:"rootless",
-   intro:"Proving grounds of the Order, where every work was once weighed, traced, and named by its true cause."},
-  {id:"g5r",cert:"g",dom:4,tier:3,name:"Concord Ruins",cx:44,cy:24,r:5.5,hue:130,ground:"#283828",deco:"arch",
+   intro:"The proving grounds above the Waking Sea, where every work was once weighed, traced, and named by its true cause. The vessel glances where it should examine."},
+  {id:"g5r",cert:"g",dom:4,tier:3,name:"Orzammar & the Deep Roads",cx:44,cy:24,r:5.5,hue:130,ground:"#283828",deco:"arch",
    enemies:["mergegeist","echotwins"],boss:"contradiction",
-   intro:"A meeting-city of the agent hosts. Its treaties of handoff and record are broken stone now."},
-  {id:"g6r",cert:"g",dom:5,tier:3,name:"Wardstone Cliffs",cx:56,cy:16,r:5.5,hue:350,ground:"#3a2630",deco:"ward",
+   intro:"The meeting-place of many hosts beneath the mountains. Its treaties of handoff and shared record lie in broken stone, and the constructs war over the same work."},
+  {id:"g6r",cert:"g",dom:5,tier:3,name:"The Road to Kaiten",cx:56,cy:16,r:5.5,hue:350,ground:"#3a2630",deco:"ward",
    enemies:["rubberstamp","irrevocable"],boss:"breachmaw",
-   intro:"The realm's last guardrails — wardstones ranking every deed by its danger. Most lie toppled."},
-  {id:"x0r",cert:"x",dom:-1,tier:2,name:"The Crossweave",cx:33,cy:49,r:5.5,hue:262,ground:"#2e2438",deco:"cross",
+   intro:"The last march home, past Sundermount to the gates. Here stood the realm's wardstones, ranking every deed by its danger — most now toppled by the vessel's hand."},
+  {id:"x0r",cert:"x",dom:-1,tier:2,name:"The Waking Coves",cx:33,cy:49,r:5.5,hue:262,ground:"#2e2438",deco:"cross",
    enemies:["stalewraith","parsewraith","mergegeist","confwisp"],boss:"sundering",
-   intro:"Where Loom-thread and Forge-iron intertwine. The same wounds appear here under both crafts' names."}
+   intro:"Where the inner war and the field war meet, beneath Kaiten's cliffs. The same wounds appear under both fronts' names, and the Darkspawn Emissary musters Pride's coalition here."}
 ];
 DATA.keepPos={cx:33,cy:26};
 
@@ -869,7 +870,7 @@ DATA.companions=[
 
 /* ---------------- crosswalk codex: overlap concepts, both vendor answers side by side ---------------- */
 /* every concept maps to its real documentation page ("the Archives") so a miss
-   can be studied at the source; Forge links use GitHub Docs search (stable URLs) */
+   can be studied at the source; March-front links use GitHub Docs search (stable URLs) */
 DATA.docs={"c":{"loop-control":"https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons","iteration-caps":"https://www.anthropic.com/engineering/building-effective-agents","guardrails":"https://code.claude.com/docs/en/hooks","review-isolation":"https://code.claude.com/docs/en/sub-agents","task-decomposition":"https://www.anthropic.com/engineering/building-effective-agents","multi-agent-orchestration":"https://platform.claude.com/docs/en/build-with-claude/mid-conversation-effort-example","workflow-vs-agent":"https://www.anthropic.com/engineering/building-effective-agents","session-scope":"https://code.claude.com/docs/en/memory","parallel-subagents":"https://code.claude.com/docs/en/sub-agents","error-handling":"https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls","empty-vs-error":"https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls","tool-selection":"https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-combinations","tool-descriptions":"https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools","mcp-integration":"https://code.claude.com/docs/en/mcp","tool-distribution":"https://www.anthropic.com/engineering/advanced-tool-use","builtin-tools":"https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-reference","tool-context":"https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool","claude-md":"https://code.claude.com/docs/en/memory","custom-commands":"https://code.claude.com/docs/en/slash-commands","skills-packaging":"https://code.claude.com/docs/en/skills","plan-validation":"https://code.claude.com/docs/en/common-workflows","iterative-refinement":"https://www.anthropic.com/engineering/claude-code-best-practices","ci-integration":"https://code.claude.com/docs/en/github-actions","batch-processing":"https://platform.claude.com/docs/en/build-with-claude/batch-processing","explicit-criteria":"https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/be-clear-and-direct","few-shot":"https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/multishot-prompting","structured-tool-output":"https://platform.claude.com/docs/en/build-with-claude/structured-outputs","schema-design":"https://platform.claude.com/docs/en/build-with-claude/structured-outputs","output-validation":"https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/increase-output-consistency","retry-loops":"https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/increase-output-consistency","multi-pass-review":"https://www.anthropic.com/engineering/building-effective-agents","segmented-accuracy":"https://platform.claude.com/docs/en/test-and-evaluate/develop-tests","thinking-controls":"https://platform.claude.com/docs/en/build-with-claude/adaptive-thinking","context-drift":"https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents","context-positioning":"https://platform.claude.com/docs/en/build-with-claude/context-windows","escalation":"https://www.anthropic.com/engineering/building-effective-agents","error-propagation":"https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls","human-approval":"https://code.claude.com/docs/en/iam","provenance":"https://platform.claude.com/docs/en/build-with-claude/citations","prompt-caching":"https://platform.claude.com/docs/en/build-with-claude/prompt-caching","compaction":"https://platform.claude.com/docs/en/build-with-claude/compaction","token-budgeting":"https://platform.claude.com/docs/en/build-with-claude/task-budgets"},"g":{"sdlc-integration":"https://docs.github.com/en/search?query=copilot+software+development+lifecycle","plan-validation":"https://docs.github.com/en/search?query=copilot+coding+agent+plan","autonomy-calibration":"https://docs.github.com/en/search?query=copilot+agent+autonomy","inspectable-artifacts":"https://docs.github.com/en/search?query=copilot+coding+agent+session+logs","agent-antipatterns":"https://docs.github.com/en/search?query=copilot+coding+agent+best+practices","success-criteria":"https://docs.github.com/en/search?query=writing+issues+copilot+coding+agent","human-checkpoints":"https://docs.github.com/en/search?query=copilot+coding+agent+pull+request+review","tool-selection":"https://docs.github.com/en/search?query=copilot+coding+agent+capabilities","mcp-integration":"https://docs.github.com/en/search?query=copilot+mcp","mcp-allowlists":"https://docs.github.com/en/search?query=copilot+coding+agent+mcp+configuration","repo-scoping":"https://docs.github.com/en/search?query=copilot+coding+agent+repository+access","branch-scope":"https://docs.github.com/en/search?query=copilot+coding+agent+branch","ci-integration":"https://docs.github.com/en/search?query=copilot+github+actions","error-handling":"https://docs.github.com/en/search?query=copilot+coding+agent+troubleshooting","rollback-recovery":"https://docs.github.com/en/search?query=reverting+a+pull+request","escalation":"https://docs.github.com/en/search?query=copilot+coding+agent+request+changes","memory-types":"https://docs.github.com/en/search?query=copilot+custom+instructions+context","memory-hygiene":"https://docs.github.com/en/search?query=copilot+custom+instructions","durable-artifacts":"https://docs.github.com/en/search?query=github+issues+projects+documentation","resume-state":"https://docs.github.com/en/search?query=copilot+coding+agent+resume+session","context-drift":"https://docs.github.com/en/search?query=copilot+context+window+limits","shared-state":"https://docs.github.com/en/search?query=github+projects+collaboration","output-validation":"https://docs.github.com/en/search?query=copilot+code+review","eval-signals":"https://docs.github.com/en/search?query=copilot+usage+metrics","automated-scanning":"https://docs.github.com/en/search?query=code+scanning+codeql","trace-analysis":"https://docs.github.com/en/search?query=copilot+coding+agent+logs","root-cause":"https://docs.github.com/en/search?query=actions+workflow+run+logs+debug","instruction-tuning":"https://docs.github.com/en/search?query=copilot+repository+custom+instructions","tool-misuse":"https://docs.github.com/en/search?query=copilot+policies+governance","multi-agent-orchestration":"https://docs.github.com/en/search?query=copilot+agents+assign+issues","agent-isolation":"https://docs.github.com/en/search?query=copilot+coding+agent+environment+firewall","multi-agent-conflict":"https://docs.github.com/en/search?query=resolving+merge+conflicts","audit-artifacts":"https://docs.github.com/en/search?query=audit+log+organization","decision-records":"https://docs.github.com/en/search?query=pull+request+reviews+history","loop-control":"https://docs.github.com/en/search?query=copilot+coding+agent+iterate+feedback","agent-lifecycle":"https://docs.github.com/en/search?query=copilot+coding+agent+sessions","risk-tiering":"https://docs.github.com/en/search?query=repository+rulesets+protected+branches","human-approval":"https://docs.github.com/en/search?query=required+reviews+pull+requests","guardrails":"https://docs.github.com/en/search?query=branch+protection+rules","least-privilege":"https://docs.github.com/en/search?query=github+token+permissions+fine+grained","approval-fatigue":"https://docs.github.com/en/search?query=code+review+best+practices","irreversible-actions":"https://docs.github.com/en/search?query=protected+branches+force+push"}};
 function docLinkHtml(cert,concept){
   const u=(DATA.docs[cert]||{})[concept];
@@ -877,39 +878,39 @@ function docLinkHtml(cert,concept){
 }
 DATA.codex=[
   {concept:"loop-control",title:"Knowing When the Work Ends",
-   shared:"Both crafts demand a real signal that a run is finished or stuck — never vibes."},
+   shared:"Both fronts demand a real signal that a run is finished or stuck — never vibes."},
   {concept:"guardrails",title:"Rules That Cannot Be Talked Past",
-   shared:"Both crafts enforce critical rules in the system itself, not in polite instructions."},
+   shared:"Both fronts enforce critical rules in the system itself, not in polite instructions."},
   {concept:"multi-agent-orchestration",title:"Conducting Many Hands",
-   shared:"Both crafts split work into scoped tasks for specialists and integrate the results."},
+   shared:"Both fronts split work into scoped tasks for specialists and integrate the results."},
   {concept:"tool-selection",title:"The Few Right Tools",
-   shared:"Both crafts give an agent only the small set of tools its task truly needs."},
+   shared:"Both fronts give an agent only the small set of tools its task truly needs."},
   {concept:"error-handling",title:"Failures That Explain Themselves",
-   shared:"Both crafts make failures classified and actionable instead of silent or generic."},
+   shared:"Both fronts make failures classified and actionable instead of silent or generic."},
   {concept:"mcp-integration",title:"Gates Between Worlds",
-   shared:"Both crafts connect agents to external systems through MCP servers, governed deliberately."},
+   shared:"Both fronts connect agents to external systems through MCP servers, governed deliberately."},
   {concept:"plan-validation",title:"The Sealed Blueprint",
-   shared:"Both crafts separate proposing from doing, and review the plan before changes land."},
-  {concept:"ci-integration",title:"The Untended Forgeline",
-   shared:"Both crafts run agents non-interactively inside pipelines, with scoped permissions."},
+   shared:"Both fronts separate proposing from doing, and review the plan before changes land."},
+  {concept:"ci-integration",title:"The Tireless Garrison",
+   shared:"Both fronts run agents non-interactively inside pipelines, with scoped permissions."},
   {concept:"output-validation",title:"Trust, Then Verify, Then Trust",
-   shared:"Both crafts define what correct output looks like and check it before use."},
+   shared:"Both fronts define what correct output looks like and check it before use."},
   {concept:"context-drift",title:"The Slow Unremembering",
-   shared:"Both crafts expect long runs to degrade and plan detection and recovery for it."},
+   shared:"Both fronts expect long runs to degrade and plan detection and recovery for it."},
   {concept:"escalation",title:"When to Wake the Masters",
-   shared:"Both crafts escalate on real, structured signals — and carry context when they do."},
+   shared:"Both fronts escalate on real, structured signals — and carry context when they do."},
   {concept:"human-approval",title:"The Living Signature",
-   shared:"Both crafts put a human in front of high-stakes or irreversible outcomes."}
+   shared:"Both fronts put a human in front of high-stakes or irreversible outcomes."}
 ];
 
 /* relic flavor for variable drops (cosmetic; never grants mastery) */
 DATA.relicRarity=[
-  {name:"Frayed",cls:"rar0",icon:"◈"},
-  {name:"Woven",cls:"rar1",icon:"◆"},
-  {name:"Gilded",cls:"rar2",icon:"✦"},
-  {name:"Mythic",cls:"rar3",icon:"❖"}
+  {name:"Worn",cls:"rar0",icon:"◈"},
+  {name:"Fine",cls:"rar1",icon:"◆"},
+  {name:"Masterwork",cls:"rar2",icon:"✦"},
+  {name:"Enchanted",cls:"rar3",icon:"❖"}
 ];
-DATA.relicNouns=["Thread","Sigil","Lens","Knot","Charm","Key","Quill","Ward","Bead","Loop"];
+DATA.relicNouns=["Amulet","Sigil","Talisman","Rune","Charm","Key","Phylactery","Ward","Pendant","Token"];
 /* battle backgrounds (player-provided), JPEG-embedded; regions map to environments */
 /* battle backdrops live in DATA.eaBg (verbatim 800x600 renders) */
 /* seamless ground textures (player-provided), tiled in world space by the chunk painter */
@@ -2436,7 +2437,7 @@ function addXP(n){
   while(S.xp>=xpNeed(S.level)){S.xp-=xpNeed(S.level);S.level++;ups++}
   return ups;
 }
-const TITLES=["Apprentice","Journeyman","Thread-Binder","Warden","Master Architect","Grand Restorer"];
+const TITLES=["Apprentice","Journeyman","Construct-Binder","Warden of Kaiten","Master Architect","Champion of Kaiten"];
 function levelTitle(){return TITLES[Math.min(TITLES.length-1,Math.floor((S.level-1)/4))]}
 
 /* ---- daily streak (habit loss-aversion; one freeze, never touches mastery) ---- */
@@ -2486,13 +2487,13 @@ function currentQuest(){
   for(const r of trackRegions(cert)){
     const st=S.regions[r.id]||{boss:false};
     if(st.boss)continue;
-    if(!regionUnlocked(r))return {text:"Raise the Bastion to Keep Lv "+r.tier+" to open "+r.name,region:r,kind:"locked"};
+    if(!regionUnlocked(r))return {text:"Raise Kaiten Castle to Keep Lv"+r.tier+" to open "+r.name,region:r,kind:"locked"};
     const oq=regionQuestNow(r);
     const tag=oq?"「"+oq.n+"」 ":"";
     if(st.wins<3)return {text:tag+r.name+": defeat corrupted foes ("+st.wins+"/3)",region:r,kind:"fight"};
     return {text:tag+r.name+": challenge "+DATA.enemies[r.boss].name+" at the rift",region:r,kind:"boss"};
   }
-  if(!S.badges[cert])return {text:"Enter the "+tname.gauntlet+" at the Bastion gates",region:null,kind:"gauntlet"};
+  if(!S.badges[cert])return {text:"Enter the "+tname.gauntlet+" at the castle gates",region:null,kind:"gauntlet"};
   const due=dueConcepts(cert).length;
   if(due>0)return {text:"Maintain mastery — "+due+" concept"+(due>1?"s":"")+" due for review",region:null,kind:"review"};
   return {text:"The "+tname.short+" holds. Tend the other craft, or rest.",region:null,kind:"done"};
@@ -3574,7 +3575,7 @@ function creditBossRecall(cert,concept,res){
 }
 function tryBoss(rift){
   const st=bossRec(rift.region);
-  if(rift.region.cert!=="x"&&rift.region.cert!==S.track){toast("This rift answers to the other craft. Switch tracks at the Bastion.");return}
+  if(rift.region.cert!=="x"&&rift.region.cert!==S.track){toast("This rift answers to the other front. Switch tracks at Kaiten Castle.");return}
   if(st.boss){toast("This rift is sealed. The land here breathes easier.");return}
   if(st.wins<3){toast("The rift resists — defeat "+(3-st.wins)+" more corrupted foe"+(3-st.wins>1?"s":"")+" in this region first.");return}
   if(!bossPhaseReady(rift.region)){
@@ -3643,7 +3644,7 @@ const EAVILLAIN=[
       const v=EAVILLAIN[i];if(!v||!r.boss||!DATA.enemies[r.boss])return;
       const e=DATA.enemies[r.boss];
       e.name=v.name;e.shape=v.shape;e.taunt=v.taunt;
-      e.lore=(e.lore?e.lore+" ":"")+"The campaign's own terror, wearing its original face.";
+      e.lore=(e.lore?e.lore+" ":"")+"A vessel of the Pride demon, the campaign's own terror wearing its original face.";
     });
   }
 })();
@@ -4763,13 +4764,13 @@ function winBattle(){
     const hi=B&&B.party?B.party.findIndex(m=>m.kind==="hero"):-1;
     const at=hi>=0?fxAtMember(hi):null;
     if(at)spawnFx("levelUp",at.x,at.y,{scale:0.8});}
-  html+="<div class='rewardline'><span class='ric'>✦</span><span>+"+shards+" aether shards · +"+xpGain+" xp"+(ups?" · LEVEL UP!":"")+"</span></div>";
+  html+="<div class='rewardline'><span class='ric'>✦</span><span>+"+shards+" lyrium shards · +"+xpGain+" xp"+(ups?" · LEVEL UP!":"")+"</span></div>";
   const wDrop=(!B.gauntlet)?rollWeaponDrop(wasBoss):null;
   const iDrop=(!B.gauntlet&&(wasBoss||!wDrop))?rollItemDrop(wasBoss):null;
   if(iDrop){Sfx.ea("LootPop",0.8);
     html+="<div class='rewardline'><span class='ric'>🛡</span><span>Found: <b>"+esc(iDrop.n)+"</b> — "+iDrop.slot+(S.gear[iDrop.slot]===iDrop.i?" (worn)":"")+". The Vault keeps it.</span></div>";}
   if(wDrop)Sfx.ea("LootGet",0.8);
-  if(wDrop)html+="<div class='rewardline'><span class='ric'>⚔</span><span>Weapon won: <b>"+esc(wDrop.n)+"</b> — tier "+wDrop.t+" "+CLSNAME[wDrop.cls]+" arm"+(S.wield[wDrop.cls]===wDrop.i?" (wielded)":"")+". The Bastion Armory keeps it.</span></div>";
+  if(wDrop)html+="<div class='rewardline'><span class='ric'>⚔</span><span>Weapon won: <b>"+esc(wDrop.n)+"</b> — tier "+wDrop.t+" "+CLSNAME[wDrop.cls]+" arm"+(S.wield[wDrop.cls]===wDrop.i?" (wielded)":"")+". Kaiten's Armory keeps it.</span></div>";
   html+="<div class='rewardline'><span class='ric'>◈</span><span>"+counts.correct+"/"+counts.asked+" answered true — recall logged to the "+DATA.tracks[B.cert].short+" track only</span></div>";
   if(bossRetreat){
     html+="<div class='divider'></div><p class='small'><b>Phase "+phaseShown+" of "+phaseTot+" broken.</b> Its next form cannot be reached this sitting — it heals as cramming would. Return after <b>"+MASTER_REPS+" due reviews</b> in "+esc(DATA.domains[B.cert][bossDom(region)].name)+" across <b>"+MASTER_IV+"+ weave-days</b>.</p>";
@@ -4805,7 +4806,7 @@ function afterVictory(clearedNow,region){
 function afterRecruit(region){
   const cert=region.cert==="x"?S.track:region.cert;
   if(cert!=="x"&&allCleared(cert)&&!S.badges[cert]){
-    toast("All "+DATA.tracks[cert].short+" regions restored! The "+DATA.tracks[cert].gauntlet+" opens at the Bastion.",true);
+    toast("All "+DATA.tracks[cert].short+" regions restored! The "+DATA.tracks[cert].gauntlet+" opens at Kaiten Castle.",true);
   }
   refreshHUD();maybeRestNudge();
 }
@@ -4815,23 +4816,23 @@ function loseBattle(){
   Sfx.play("lose");
   if(S.road&&S.road[S.track])S.road[S.track].at=0;
   if(typeof RD!=="undefined"){RD.x=0;RD.target=null}
-  showModal("<h2 class='serif'>The party is unwoven…</h2><p>The threads catch you and carry you back to the Bastion. Your mastery is untouched — only this skirmish is lost. The concepts that wounded you will return as due reviews.</p>"+examRep,
+  showModal("<h2 class='serif'>The party is unwoven…</h2><p>The threads catch you and carry you back to Kaiten Castle. Your mastery is untouched — only this skirmish is lost. The concepts that wounded you will return as due reviews.</p>"+examRep,
     [{label:"Rise again",cls:"primary"}]);
   queueSave();
 }
 /* ---- gauntlets (exam simulations) ---- */
 function tryGauntlet(portal){
   if(!portalOpen(portal)){
-    const need=portal.kind==="dual"?"Clear every region of both crafts":"Clear every region of the "+DATA.tracks[portal.kind].short;
+    const need=portal.kind==="dual"?"Clear every region of both fronts":"Clear every region of the "+DATA.tracks[portal.kind].short;
     toast("The portal is dark. "+need+" to open it.");return;
   }
   let html,kind=portal.kind;
   if(kind==="c"){
-    html="<h2 class='serif'>Trial of the Loom</h2><p class='small dim'>Simulates: Claude Certified Architect — Foundations. The Trial draws <b>4 of 6 visions at random</b>, as the true exam draws 4 of 6 scenarios. 20 questions across all five domains. Pass at 72% (15/20).</p>";
+    html="<h2 class='serif'>Trial of the Vigil</h2><p class='small dim'>Simulates: Claude Certified Architect — Foundations. The Trial draws <b>4 of 6 visions at random</b>, as the true exam draws 4 of 6 scenarios. 20 questions across all five domains. Pass at 72% (15/20).</p>";
   }else if(kind==="g"){
-    html="<h2 class='serif'>Trial of the Forge</h2><p class='small dim'>Simulates: GitHub Certified — Agentic AI Developer (GH-600 beta). 20 questions across all six domains, weighted as the exam weights them. Pass at 70% (14/20).</p>";
+    html="<h2 class='serif'>Trial of the March</h2><p class='small dim'>Simulates: GitHub Certified — Agentic AI Developer (GH-600 beta). 20 questions across all six domains, weighted as the exam weights them. Pass at 70% (14/20).</p>";
   }else{
-    html="<h2 class='serif'>The Twin Trial</h2><p class='small dim'>24 questions alternating between crafts. Each craft is scored separately: Loom needs 9/12 (72%), Forge needs 9/12 (70%+). No reward bleeds across tracks.</p>";
+    html="<h2 class='serif'>The Twin Trial</h2><p class='small dim'>24 questions alternating between fronts. Each front is scored separately: the Vigil needs 9/12 (72%), the March needs 9/12 (70%+). No reward bleeds across tracks.</p>";
   }
   html+="<p class='small dim'>No skills, no items, no hints — recall alone, as in the examination hall. Spaced-repetition law still holds.</p>";
   showModal(html,[{label:"Begin the trial",cls:"primary",fn:()=>startGauntlet(kind)},{label:"Withdraw",cls:"ghost"}]);
@@ -4844,12 +4845,12 @@ function startGauntlet(kind){
        passNeed:{c:15},label:i=>{const v=vis[Math.min(3,Math.floor(i/5))];return "Vision "+(Math.floor(i/5)+1)+"/4: “"+v.name+"” — "+v.sub+"  ·  Q"+(i+1)+"/20"}};
   }else if(kind==="g"){
     g={kind,total:20,asked:{c:0,g:0},correct:{c:0,g:0},idx:0,
-       passNeed:{g:14},label:i=>"The Forge weighs your craft  ·  Q"+(i+1)+"/20"};
+       passNeed:{g:14},label:i=>"The March weighs your campaign  ·  Q"+(i+1)+"/20"};
   }else{
     g={kind,total:24,asked:{c:0,g:0},correct:{c:0,g:0},idx:0,
-       passNeed:{c:9,g:9},label:i=>"Twin Trial — "+((i%2===0)?"Loom":"Forge")+" thread  ·  Q"+(i+1)+"/24"};
+       passNeed:{c:9,g:9},label:i=>"Twin Trial — "+((i%2===0)?"Vigil":"March")+" front  ·  Q"+(i+1)+"/24"};
   }
-  startBattle({enemyKey:"warden",region:null,spawn:null,boss:true,gauntlet:g});
+  startBattle({enemyKey:kind==="dual"?"pridedemon":"warden",region:null,spawn:null,boss:true,gauntlet:g});
 }
 function finishGauntlet(){
   const g=B.gauntlet;
@@ -4868,19 +4869,20 @@ function finishGauntlet(){
   if(g.kind==="dual"&&passedAll&&!S.badges.dual){S.badges.dual=true;anyBadge=true}
   if(passedAll){
     Sfx.play("win");
-    html="<h2 class='serif'>"+(g.kind==="dual"?"The Weave is whole.":"The Trial is passed.")+"</h2>";
+    html="<h2 class='serif'>"+(g.kind==="dual"?"Kaiten endures.":"The Trial is passed.")+"</h2>";
     html+=lines.join("");
     html+="<div class='divider'></div>";
-    if(g.kind==="c")html+="<p>The Loom hums beneath your hands. You are named <b class='loomc'>Architect of the Loom</b>. The badge hangs in your keep — and the real exam draws nearer to your reach.</p>";
-    else if(g.kind==="g")html+="<p>The Forge-fires steady. You are named <b class='forgec'>Architect of the Forge</b>. The badge hangs in your keep — carry this discipline to the real exam.</p>";
-    else html+="<p>Loom and Forge sing in concord. You are <b class='gold'>Architect of the Sundered Weave</b>, restorer of both crafts.</p>";
+    if(g.kind==="c")html+="<p>The Vigil holds. You are named <b class='loomc'>Architect of the Vigil</b>. The badge hangs in Kaiten Castle — and the real exam draws nearer to your reach.</p>";
+    else if(g.kind==="g")html+="<p>The Marches are secured. You are named <b class='forgec'>Marcher-Architect of Kaiten</b>. The badge hangs in Kaiten Castle — carry this discipline to the real exam.</p>";
+    else html+="<p>The Vigil and the March stand as one. You are <b class='gold'>Architect of Kaiten</b>, who held both fronts and faced the demon of Pride.</p>";
   }else{
     Sfx.play("lose");
     html="<h2 class='serif'>The Trial holds you back.</h2>"+lines.join("");
     html+="<p class='small dim'>The Warden marks every concept you missed as due. Hunt them in the field, let the reviews come due, and return.</p>";
   }
-  if(anyBadge)html+="<p class='small dim'>Badge added to the Bastion's Chronicle.</p>";
-  showModal(html,[{label:"Return",cls:"primary",fn:()=>{refreshHUD()}}]);
+  if(anyBadge)html+="<p class='small dim'>Badge added to Kaiten's Chronicle.</p>";
+  const dualWin=passedAll&&g.kind==="dual";
+  showModal(html,[{label:dualWin?"Bind the demon in the Fade":"Return",cls:"primary",fn:()=>{refreshHUD();if(dualWin)showEpilogue();}}]);
   queueSave();
 }
 /* ---- caches ---- */
@@ -4894,7 +4896,7 @@ function openCache(c){
   const dom=CONCEPT_DOM[cert][concept];
   const qs=QIDX[cert][dom][concept];
   const rule=qs[0].rule;
-  const relic={n:"Gilded "+pick(DATA.relicNouns)+" of "+titleCase(concept),r:2,c:concept,cert,t:now()};
+  const relic={n:DATA.relicRarity[2].name+" "+pick(DATA.relicNouns)+" of "+titleCase(concept),r:2,c:concept,cert,t:now()};
   S.relics.push(relic);
   const shards=12;S.shards+=shards;if(S.session)S.session.shards+=shards;
   const roll=Math.random();
@@ -4903,8 +4905,8 @@ function openCache(c){
   else if(roll<0.65){S.consume.bomb=Math.min(4,S.consume.bomb+1);bonus=" · +1 Clay Bomb"}
   Sfx.play("open");
   showModal("<h2 class='serif'>Hidden cache</h2>"+
-    "<div class='rewardline'><span class='ric rar2'>✦</span><span><b>"+esc(relic.n)+"</b><br><span class='small dim'>Equip it in the Bastion to carry its lesson.</span></span></div>"+
-    "<div class='rewardline'><span class='ric'>✧</span><span>+"+shards+" aether shards"+bonus+"</span></div>"+
+    "<div class='rewardline'><span class='ric rar2'>✦</span><span><b>"+esc(relic.n)+"</b><br><span class='small dim'>Equip it in Kaiten Castle to carry its lesson.</span></span></div>"+
+    "<div class='rewardline'><span class='ric'>✧</span><span>+"+shards+" lyrium shards"+bonus+"</span></div>"+
     "<div class='divider'></div><p class='small'>Inscribed within: <i>“"+esc(rule)+"”</i></p>"+docLinkHtml(cert,concept),
     [{label:"Take it",cls:"primary"}]);
   queueSave();
@@ -4922,7 +4924,7 @@ function updateBattleHUD(){
     const tone=dm>=67?"strong":(dm<34?"weak":"even");
     domTag="  ·  ⚔ "+DATA.domains[B.cert][B.dom].name+" ("+(tone==="weak"?"weak here — "+dm+"% mastered":tone==="strong"?"strong here — "+dm+"% mastered":dm+"% mastered")+")";
   }
-  $("bFoeName").textContent=(B.boss?"☠ ":"")+(B.gauntlet?"Trial Warden · question "+Math.min(B.gauntlet.idx+1,B.gauntlet.total)+"/"+B.gauntlet.total
+  $("bFoeName").textContent=(B.boss?"☠ ":"")+(B.gauntlet?(B.enemy&&B.enemy.name?B.enemy.name:"Trial Warden")+" · question "+Math.min(B.gauntlet.idx+1,B.gauntlet.total)+"/"+B.gauntlet.total
     :(tf?tf.e.name:"")+(B.foes.length>1?"  ·  pack of "+B.foes.length:"")+(B.region?"  ·  "+B.region.name:"")+domTag);
   $("comboChip").textContent="streak ×"+B.combo.toFixed(2).replace(/0$/,"");
   let v="";
@@ -5462,7 +5464,7 @@ function renderBattle(t){
 <script>
 "use strict";
 /* =====================================================================
-   UI LAYER — modal system, toasts, HUD, the Bastion (keep), codex,
+   UI LAYER — modal system, toasts, HUD, Kaiten Castle (keep), codex,
    session summary, settings
    ===================================================================== */
 function showModal(html,buttons){
@@ -5494,7 +5496,7 @@ function toast(msg,goldb){
 let bannerTimer=null;
 function showBanner(r){
   $("rbName").textContent=r.name;
-  $("rbSub").textContent=r.cert==="x"?"Crossweave — overlap concepts ("+DATA.tracks[S.track].short+" lens)":
+  $("rbSub").textContent=r.cert==="x"?"The Waking Coves — overlap concepts ("+DATA.tracks[S.track].short+" lens)":
     DATA.tracks[r.cert].short+" · "+DATA.domains[r.cert][r.dom].name;
   const b=$("regionBanner");b.classList.add("show");
   Music.sync();
@@ -5535,14 +5537,14 @@ function refreshHUD(){
   $("mmForge").style.width=Math.min(100,mg.total/10)+"%";
 }
 
-/* ---- the Bastion ---- */
-const KEEPTABS=[["overview","Overview"],["quests","Quests"],["upgrades","Upgrades"],["travel","Travel"],["track","Track"],["relics","Relics"],["codex","Codex"],["chron","Chronicle"]];
+/* ---- Kaiten Castle (keep) ---- */
+const KEEPTABS=[["overview","Overview"],["quests","Quests"],["upgrades","Upgrades"],["merchant","Merchant"],["travel","Travel"],["track","Track"],["relics","Relics"],["codex","Codex"],["chron","Chronicle"]];
 let keepTab="overview";
 function openKeep(){
   MODE="keep";
   Music.sync();
   $("keepScr").classList.remove("hidden");
-  $("keepLvlLine").textContent="Keep Level "+S.keepLvl+" · "+S.shards+" aether shards · "+levelTitle()+" Lv "+S.level;
+  $("keepLvlLine").textContent="Keep Level "+S.keepLvl+" · "+S.shards+" lyrium shards · "+levelTitle()+" Lv "+S.level;
   const tabs=$("keepTabs");tabs.innerHTML="";
   KEEPTABS.forEach(([id,label])=>{
     const b=document.createElement("button");
@@ -5564,6 +5566,7 @@ function renderKeepTab(){
   if(keepTab==="overview")body.innerHTML=tabOverview();
   else if(keepTab==="quests")body.innerHTML=tabQuests();
   else if(keepTab==="upgrades")body.innerHTML=tabUpgrades();
+  else if(keepTab==="merchant")body.innerHTML=tabMerchant();
   else if(keepTab==="travel")body.innerHTML=tabTravel();
   else if(keepTab==="track")body.innerHTML=tabTrack();
   else if(keepTab==="relics")body.innerHTML=tabRelics();
@@ -5591,10 +5594,10 @@ function tabOverview(){
   html+="<div class='kcard'><img class='kroom' src='"+DATA.eaRooms.throne.d+"' alt=''><h3>Standing orders</h3>";
   html+="<div class='statline'><span>Active craft</span><b>"+esc(DATA.tracks[S.track].name)+"</b></div>";
   html+="<div class='statline'><span>Objective</span><b>"+esc(currentQuest().text)+"</b></div>";
-  html+="<div class='statline'><span>Reviews due</span><b>"+dueC+" Loom · "+dueG+" Forge</b></div>";
+  html+="<div class='statline'><span>Reviews due</span><b>"+dueC+" Vigil · "+dueG+" March</b></div>";
   html+="<div class='statline'><span>Badges</span><b>"+
-    "<span class='badge"+(S.badges.c?" earned":"")+"'>Loom Architect</span>"+
-    "<span class='badge"+(S.badges.g?" earned":"")+"'>Forge Architect</span>"+
+    "<span class='badge"+(S.badges.c?" earned":"")+"'>Vigil Architect</span>"+
+    "<span class='badge"+(S.badges.g?" earned":"")+"'>Marcher-Architect</span>"+
     "<span class='badge"+(S.badges.dual?" earned":"")+"'>Twin Trial</span></b></div>";
   html+="<button class='btn ghost wfull' data-act='how' style='margin-top:10px'>How mastery & the meters work</button></div>";
   return html;
@@ -5642,11 +5645,35 @@ function tabQuests(){
       (i<done?"<span class='good'>✓ "+esc(q.n)+"</span>":(i===done&&!st.boss?"<b>▸ "+esc(q.n)+"</b>":"<span style='opacity:.55'>"+esc(q.n)+"</span>"))).join(" · ")+"</div>";
   });
   html+="<div class='small dim'>The old campaign turns its pages as your recalls win battles — names and words from the original, progress from mastery alone.</div></div>";
-  html+="<div class='kcard'><div class='small dim'>Beyond both questlines: the Crossweave region and the Twin Trial — overlap concepts, served through whichever craft you carry.</div></div>";
+  html+="<div class='kcard'><div class='small dim'>Beyond both questlines: the Waking Coves and the Twin Trial — overlap concepts, served through whichever front you carry.</div></div>";
+  return html;
+}
+/* Kaiten's quartermaster: spend study-earned lyrium shards on tactical supplies.
+   Buying never touches SM-2 mastery or the pass meters (same rule as loot drops). */
+const MERCHANT=[
+  {k:"tonic",name:"Mending Tonic",cost:12,cap:5,desc:"Heals 1.5♥ to a wounded ally in battle."},
+  {k:"draught",name:"Mana Draught",cost:14,cap:4,desc:"Restores +2☄ mana in battle."},
+  {k:"bomb",name:"Clay Bomb",cost:16,cap:4,desc:"1♥ to a whole enemy column."}
+];
+function buyConsumable(k){
+  const it=MERCHANT.find(m=>m.k===k);
+  if(!it||S.shards<it.cost||(S.consume[k]||0)>=it.cap)return false;
+  S.shards-=it.cost;S.consume[k]=(S.consume[k]||0)+1;return true;
+}
+function tabMerchant(){
+  let html="<div class='kcard'><img class='kroom' src='"+DATA.eaRooms.market.d+"' alt=''><h3>Kaiten's Quartermaster</h3><div class='small dim'>Lyrium shards: <span class='gold'>"+S.shards+"</span>. Spend the shards your recall has earned on supplies for the field — never on the pass meters.</div></div>";
+  html+="<div class='kgrid'>";
+  for(const it of MERCHANT){
+    const have=S.consume[it.k]||0,full=have>=it.cap,afford=S.shards>=it.cost;
+    html+="<div class='upcard'><h4>"+it.name+" <span class='dim small'>("+have+"/"+it.cap+")</span></h4><div class='updesc'>"+it.desc+"</div>"+
+      (full?"<div class='small dim'>Your pack is full.</div>"
+           :"<button class='btn "+(afford?"primary":"")+"' data-act='buy' data-item='"+it.k+"' "+(afford?"":"disabled")+">"+it.cost+" shards</button>")+"</div>";
+  }
+  html+="</div>";
   return html;
 }
 function tabUpgrades(){
-  let html="<div class='kcard'><img class='kroom' src='"+DATA.eaRooms.market.d+"' alt=''><h3>Aether shards: <span class='gold'>"+S.shards+"</span></h3><div class='small dim'>Won in battle and from caches. Upgrades open the realm — they never grant mastery.</div></div>";
+  let html="<div class='kcard'><img class='kroom' src='"+DATA.eaRooms.market.d+"' alt=''><h3>Lyrium shards: <span class='gold'>"+S.shards+"</span></h3><div class='small dim'>Won in battle and from caches. Upgrades open the realm — they never grant mastery.</div></div>";
   html+="<div class='kgrid'>";
   if(S.keepLvl<3){
     const cost=KEEP_COSTS[S.keepLvl+1];
@@ -5745,7 +5772,7 @@ function tabUpgrades(){
   return html;
 }
 function tabTravel(){
-  let html="<div class='kcard'><div class='small dim'>The Bastion's loomgates carry you to any discovered region. Walk the field to find caches, foes, and rifts.</div></div>";
+  let html="<div class='kcard'><div class='small dim'>Kaiten's wards carry you to any discovered region. Walk the field to find caches, foes, and rifts.</div></div>";
   DATA.regions.forEach(r=>{
     const un=regionUnlocked(r),st=regState(r.id);
     let masteredPct=0;
@@ -5803,7 +5830,7 @@ function tabRelics(){
 function tabCodex(){
   if(!S.upgrades.library)
     return "<div class='kcard'><img class='kroom' src='"+DATA.eaRooms.library.d+"' alt=''><h3>The Library lies in ruin</h3><div class='small dim'>Restore it (Upgrades tab) to open the Codex — a crosswalk of every concept both certifications cover, with each vendor's correct answer side by side.</div></div>";
-  let html="<div class='kcard'><div class='small dim'>Entries unlock when a concept is <b>mastered in both crafts</b>. The two answers may differ — that is the point. Study aid only; nothing here is graded.</div></div>";
+  let html="<div class='kcard'><div class='small dim'>Entries unlock when a concept is <b>mastered on both fronts</b>. The two answers may differ — that is the point. Study aid only; nothing here is graded.</div></div>";
   DATA.codex.forEach(cx=>{
     const mc=srState(srKey("c",cx.concept))==="mastered",mg=srState(srKey("g",cx.concept))==="mastered";
     if(mc&&mg){
@@ -5811,11 +5838,11 @@ function tabCodex(){
       const rg=QIDX.g[CONCEPT_DOM.g[cx.concept]][cx.concept][0].rule;
       html+="<div class='codexrow'><div class='cxhead'>"+esc(cx.title)+" <span class='dim small'>("+esc(titleCase(cx.concept))+")</span></div>"+
         "<div class='small dim'>"+esc(cx.shared)+"</div>"+
-        "<div class='cxpair'><div class='cxside loom'><b>Loom · Claude exam</b>"+esc(rc)+docLinkHtml("c",cx.concept)+"</div>"+
-        "<div class='cxside forge'><b>Forge · GH-600</b>"+esc(rg)+docLinkHtml("g",cx.concept)+"</div></div></div>";
+        "<div class='cxpair'><div class='cxside loom'><b>Vigil · Claude exam</b>"+esc(rc)+docLinkHtml("c",cx.concept)+"</div>"+
+        "<div class='cxside forge'><b>March · GH-600</b>"+esc(rg)+docLinkHtml("g",cx.concept)+"</div></div></div>";
     }else{
       html+="<div class='codexrow lockedrow'><div class='cxhead'>"+esc(cx.title)+" <span class='dim small'>("+esc(titleCase(cx.concept))+")</span></div>"+
-        "<div class='small dim'>Locked — master it in "+(mc?"":"the Loom")+(!mc&&!mg?" and ":"")+(mg?"":"the Forge")+".</div></div>";
+        "<div class='small dim'>Locked — master it in "+(mc?"":"the Vigil")+(!mc&&!mg?" and ":"")+(mg?"":"the March")+".</div></div>";
     }
   });
   return html;
@@ -5828,8 +5855,8 @@ function tabChron(){
   html+="<div class='statline'><span>Longest vigil</span><b>"+S.streak.best+"</b></div>";
   html+="<div class='statline'><span>Battles won</span><b>"+S.stats.battles+" ("+S.stats.bosses+" rifts sealed)</b></div>";
   html+="<div class='statline'><span>Lifetime answers</span><b>"+S.stats.answers+" ("+acc+"% true)</b></div>";
-  html+="<div class='statline'><span>Recent accuracy (Loom)</span><b>"+Math.round(recentAcc("c")*100)+"%</b></div>";
-  html+="<div class='statline'><span>Recent accuracy (Forge)</span><b>"+Math.round(recentAcc("g")*100)+"%</b></div>";
+  html+="<div class='statline'><span>Recent accuracy (Vigil)</span><b>"+Math.round(recentAcc("c")*100)+"%</b></div>";
+  html+="<div class='statline'><span>Recent accuracy (March)</span><b>"+Math.round(recentAcc("g")*100)+"%</b></div>";
   html+="<div class='statline'><span>This session</span><b>"+sesMin+" min · "+(ses?ses.answered:0)+" answers</b></div>";
   html+="</div>";
   html+="<div class='kcard'><img class='kroom' src='"+DATA.eaRooms.infirmary.d+"' alt=''><h3>Session</h3><div class='small dim' style='margin-bottom:9px'>End with a summary of what truly moved — then rest. Mastery never decays as punishment for stopping.</div>"+
@@ -5860,7 +5887,8 @@ function bindKeepActions(scope){
       else if(act==="still"){if(S.shards<45)return;S.shards-=45;S.upgrades.still=true;S.prod.tonic=now()+20*60000;Sfx.play("levelup");toast("The Stillroom bubbles to life.",true)}
       else if(act==="alembic"){if(S.shards<55)return;S.shards-=55;S.upgrades.alembic=true;S.prod.draught=now()+roomPeriod("alembic",30*60000);Sfx.play("levelup");toast("The Alembic begins its slow work.",true)}
       else if(act==="powder"){if(S.shards<50)return;S.shards-=50;S.upgrades.powder=true;S.prod.bomb=now()+roomPeriod("powder",40*60000);Sfx.play("levelup");toast("The Powder Mill thuds into rhythm.",true)}
-      else if(act==="hire"){const room=el.dataset.room;if(S.shards<30||(S.workers[room]||0)>=2)return;S.shards-=30;S.workers[room]=(S.workers[room]||0)+1;Sfx.play("levelup");toast("A weavefolk worker takes up the bench.",true)}
+      else if(act==="hire"){const room=el.dataset.room;if(S.shards<30||(S.workers[room]||0)>=2)return;S.shards-=30;S.workers[room]=(S.workers[room]||0)+1;Sfx.play("levelup");toast("A Kaiten worker takes up the bench.",true)}
+      else if(act==="buy"){if(buyConsumable(el.dataset.item))Sfx.play("levelup")}
       else if(act==="hero"){chooseHero(()=>{openKeep()});return}
       else if(act==="wield"){armState();const wc=el.dataset.cls,wi=+el.dataset.i;S.wield[wc]=(S.wield[wc]===wi)?null:wi;}
       else if(act==="wear"){vaultState();const sl=el.dataset.slot,ii=+el.dataset.i;S.gear[sl]=(S.gear[sl]===ii)?null:ii;Sfx.ea("da_flash_equip1_sgl",0.7);}
@@ -5928,7 +5956,7 @@ function openWorldMap(){
   const ci=Math.round(M.castle.w*0.55*fit);
   html+="<button class='mapNode' data-map='Castle' style='left:"+sx(cast)+"px;top:"+(sy(cast)+10)+"px'>"+
     "<img src='"+M.castle.d+"' width='"+ci+"'>"+
-    "<span class='mlab'>The Bastion</span><span class='msub'>"+esc(cast.name)+"</span></button>";
+    "<span class='mlab'>Kaiten Castle</span><span class='msub'>"+esc(cast.name)+"</span></button>";
   regs.forEach((r,i)=>{
     const place=DATA.eaWorld.find(w=>w.id===MAPBIND[S.track][i]);
     if(!place)return;
@@ -6043,14 +6071,14 @@ function showHowItWorks(){
     "· Answering again <b>before a review is due earns nothing</b> — cramming cannot fake progress.<br>"+
     "· <b>Mastered</b> = 3+ correct recalls on separate due reviews, with the interval grown to several weave-days (1 weave-day ≈ 10 real minutes).<br>"+
     "· Long-neglected mastery <b>decays gently</b> back to learning and comes due — the only loss in the game, and only to summon you back to review.</p>";
-  html+="<p>The two <b>pass meters</b> (720 Loom, 700 Forge) are computed purely from earned mastery, weighted by each exam's domain weights. Correct-answer counts, playtime, XP, shards, and relics never move them.</p>";
+  html+="<p>The two <b>pass meters</b> (720 Vigil, 700 March) are computed purely from earned mastery, weighted by each exam's domain weights. Correct-answer counts, playtime, XP, shards, and relics never move them.</p>";
   html+="<p class='small dim'>Hints reveal a false option but forfeit recall credit. Accuracy is steered toward 85–90%: struggle and the field softens, excel and it sharpens.</p>";
   showModal(html,[{label:"Understood",cls:"primary",fn:()=>{if(MODE==="keep")openKeep()}}]);
 }
 
 /* ---- menu ---- */
 function openMenu(){
-  let html="<h2 class='serif'>Weavefall</h2>";
+  let html="<h2 class='serif'>Dragon Age: Legends</h2>";
   html+="<div class='small dim' style='margin-bottom:4px'>"+esc(DATA.tracks[S.track].cert)+" · active</div>";
   showModal(html,[
     {label:"Session summary",cls:"",fn:()=>showSummary(false)},
@@ -6342,7 +6370,7 @@ $("btnTitleHow").addEventListener("click",()=>{Sfx.unlock();showHowItWorks()});
 
 /* ---- new game flow ---- */
 function pickTrackIntro(){
-  let html="<h2 class='serif'>Choose your first craft</h2><p class='small dim'>Each craft is one certification's questline with its own pass meter. You may switch at the Bastion whenever you wish — progress in one never bleeds into the other.</p>";
+  let html="<h2 class='serif'>Choose your first craft</h2><p class='small dim'>Each craft is one certification's questline with its own pass meter. You may switch at Kaiten Castle whenever you wish — progress in one never bleeds into the other.</p>";
   html+="<div class='trackCards'>";
   html+="<button class='tcard loom' data-pick='c'><span class='tc-title'>The Loom</span><span class='tc-cert'>Claude Certified Architect — Foundations · pass 720/1000 · 5 domains, 6 scenario visions</span><span class='tc-flavor'>“Orchestrate the threads. End loops truly. Let hooks, not hopes, hold the law.”</span></button>";
   html+="<button class='tcard forge' data-pick='g'><span class='tc-title'>The Forge</span><span class='tc-cert'>GitHub Certified: Agentic AI Developer (GH-600 beta) · pass 700/1000 · 6 domains</span><span class='tc-flavor'>“Plan before the hammer falls. Scope every key. Leave a record fit for any reckoning.”</span></button>";
@@ -6429,12 +6457,21 @@ function chooseHero(after,isNew){
   });
 }
 function showIntroLore(){
-  let html="<h2 class='serif'>The Weave has fallen</h2>";
-  html+="<p>Once this realm ran itself. A lattice of tireless servitors — <i>agents</i> — wove its days: they planned, they built, they remembered. Then the old Architects grew careless. Law lived in polite requests. No one checked when a working truly ended. Servitors hoarded tools they could not choose between, approved their own labors, and slowly forgot their purpose mid-task.</p>";
-  html+="<p>The Great Loom unraveled. The Forge went cold. What remains of the realm is yours to restring — <b>one true recall at a time</b>.</p>";
+  let html="<h2 class='serif'>Kaiten besieged</h2>";
+  html+="<p>The city of Kaiten is kept by <i>bound constructs</i> — tireless spirit-driven <i>agents</i> that plan its works, wield its tools, and hold its memory. Thirteen years ago Viscount Khedra was found to be an abomination, a vessel of a <b>demon of Pride</b>, and was struck down. But Pride did not die: it split its soul into many vessels, and one by one those vessels have turned Kaiten's own constructs against it — looping without end, seizing tools they cannot choose between, approving their own labors, forgetting their purpose mid-task.</p>";
+  html+="<p>Viscount Ravi has named you <b>Architect</b>. Bind the constructs rightly and cleanse each vessel of Pride — <b>one true recall at a time</b>.</p>";
   html+="<div class='divider'></div>";
-  html+="<p class='small dim'>· Tap or click the ground to walk (WASD/arrows too).<br>· Touch a corrupted foe to give battle — your answers are your blade.<br>· After every answer, read the rule-line: that is the lesson.<br>· The Bastion at the center holds your pass meters, upgrades, and the track switch.</p>";
+  html+="<p class='small dim'>· Tap or click the ground to walk (WASD/arrows too).<br>· Touch a corrupted foe to give battle — your answers are your blade.<br>· After every answer, read the rule-line: that is the lesson.<br>· Kaiten Castle at the center holds your pass meters, upgrades, and the track switch.</p>";
   showModal(html,[{label:"Take up the work",cls:"primary",fn:()=>startGame(true)}]);
+}
+/* the canon climax — shown only after the Twin Trial is passed (earned mastery, not luck) */
+function showEpilogue(){
+  let html="<h2 class='serif'>The last vessel</h2>";
+  html+="<p>With the Emissary's coalition broken and both fronts held, the Architect comes at last to the truth Ravi could not face: the demon's final vessel is <b>Eiton</b>, his own son. Eiton can no longer keep Pride dormant. He asks to be struck down while his will still holds, so the demon falls with him — bound forever in the <b>Fade</b>.</p>";
+  html+="<p>You proved your mastery, and so the binding holds. Pride is unmade. Kaiten grieves its young lord — and endures, its constructs quiet and rightly bound once more.</p>";
+  html+="<div class='divider'></div>";
+  html+="<p class='small dim'>Your study does not end here. Concepts still come due; keep your recall true, and the real examinations are yours to pass.</p>";
+  showModal(html,[{label:"Kaiten endures",cls:"primary",fn:()=>{refreshHUD()}}]);
 }
 function startGame(isNew){
   $("title").classList.add("hidden");
@@ -6446,7 +6483,7 @@ function startGame(isNew){
     const decayed=applyDecay();
     if(decayed>0)toast(decayed+" long-neglected concept"+(decayed>1?"s":"")+" slipped toward forgetting — they await review.");
     const made=prodTick();
-    if(made>0)setTimeout(()=>toast("The Bastion's workshops finished "+made+" item"+(made>1?"s":"")+" while you were away.",true),1400);
+    if(made>0)setTimeout(()=>toast("Kaiten's workshops finished "+made+" item"+(made>1?"s":"")+" while you were away.",true),1400);
   }
   const sMsg=touchStreak();
   if(sMsg)setTimeout(()=>toast(sMsg,true),900);
@@ -6485,7 +6522,7 @@ setInterval(()=>{
   if(!S||MODE==="title")return;
   applyDecay();
   const made=prodTick();
-  if(made>0){toast("A Bastion workshop finished its craft.",true);if(B)updateBattleHUD()}
+  if(made>0){toast("A castle workshop finished its craft.",true);if(B)updateBattleHUD()}
   const msg=touchStreak();
   if(msg)toast(msg,true);
   if(MODE==="world")refreshHUD();
@@ -6701,7 +6738,7 @@ function roadGo(i){
   const n=N[i];
   if(i===Math.round(RD.x)&&RD.target===null){nodeEvent(n);return}
   if(nodeDone(S.track,n)<1){
-    if(nodeLocked(n)){toast("The way is barred. Raise the Bastion to Keep Lv "+n.region.tier+" to open "+n.region.name+".");return}
+    if(nodeLocked(n)){toast("The way is barred. Raise Kaiten Castle to Keep Lv"+n.region.tier+" to open "+n.region.name+".");return}
     if(!nodeReachable(S.track,i)){toast("The road ahead is contested — clear the previous trial first.");return}
     const cost=nodeCost(n);
     if(!spendEnergy(cost)){
@@ -7037,6 +7074,7 @@ window.__wf={
   openWorldMap, closeWorldMap, mapPlaceOf, get MAPBIND(){return MAPBIND},
   eaCompJoined, eaCompRoster, masteredTotal, eaCompRec,
   vaultState, rollItemDrop, gearHitBonus, gearGuardBonus, gearCritBonus, gearHpBonus, gearManaBonus, wornItems,
+  buyConsumable, get MERCHANT(){return MERCHANT},
   questChainOf, regionQuestNow, currentQuest, get QUESTBIND(){return QUESTBIND},
   regionRoadPage, worldLoop, layoutRoads, heroMP, nodeEnc, mkFoeEa, mpOnPage,
   castSummon, summonHitBonus, battleXp, xpNeed,
