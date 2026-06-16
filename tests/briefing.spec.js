@@ -8,7 +8,7 @@ const { test, expect } = require('@playwright/test');
 const { loadGame } = require('./helpers');
 
 // region briefing keys are cert+dom; x0r (the overlap finale) has no domain lesson.
-const EXPECTED = ['c0', 'c1', 'c2', 'c3', 'c4'];
+const EXPECTED = ['c0', 'c1', 'c2', 'c3', 'c4', 'g0', 'g1', 'g2', 'g3', 'g4', 'g5'];
 
 test('every region has a briefing that teaches and doc-links its quizzed concepts', async ({ page }) => {
   await loadGame(page);
