@@ -76,6 +76,18 @@ button:focus-visible,.opt:focus-visible{outline:2px solid #d9a441;outline-offset
 #modalBox .mbtns{display:flex;flex-direction:column;gap:10px;margin-top:16px}
 #modalBox .mbtns.row{flex-direction:row;flex-wrap:wrap}
 #modalBox .mbtns.row .btn{flex:1;min-width:130px}
+/* region briefing (story-driven lesson) */
+#modalBox .lsub{font-style:italic;color:#b3a7c8;font-size:13px;margin:-2px 0 2px}
+.lmove{margin:13px 0 2px;padding-top:11px;border-top:1px solid #332b50}
+.lmove:first-of-type{border-top:none;padding-top:4px}
+.lmove h3{margin:0 0 5px;color:#d9a441}
+.lstory{color:#d6cbb4;font-size:13.5px;line-height:1.5;white-space:pre-line}
+.lstory em{color:#e6d49a;font-style:italic}
+.lmark{margin-top:9px;padding:9px 11px;border-left:3px solid #8a6a2a;border-radius:0 8px 8px 0;background:rgba(90,62,16,.16);font-size:12px;line-height:1.46;color:#cdbd97}
+.lmark b{color:#e8c97e}
+.lmark .lspark{color:#9fd0e8}
+.ldocs{margin-top:6px;display:flex;flex-wrap:wrap;gap:3px 12px}
+.ldocs .doclink{margin-top:0}
 .rewardline{display:flex;align-items:center;gap:10px;padding:7px 10px;margin:6px 0;border-radius:9px;background:rgba(58,51,84,.35);border:1px solid #3a3354}
 .rewardline .ric{font-size:19px;width:26px;text-align:center}
 .divider{height:1px;background:linear-gradient(90deg,transparent,#4d4470,transparent);margin:13px 0}
@@ -903,6 +915,238 @@ DATA.codex=[
    shared:"Both fronts put a human in front of high-stakes or irreversible outcomes."}
 ];
 
+/* ------- region briefings (story-driven, doc-grounded lessons) -------
+   Shown once on first entry to a region, before its quiz-battles. PURE
+   teaching: grants no xp, no mastery, no combat edge — all progress still
+   flows only from the spaced-repetition battles. Keyed by cert+dom ("c0").
+   Pilot: c0 — Agentic Architecture & Orchestration (The High Hall).
+   Grounded in code.claude.com/docs (agents, sub-agents, agent-teams,
+   workflows, worktrees, hooks) + anthropic.com/engineering/managed-agents. */
+DATA.lessons={
+ c0:{
+  title:"The High Hall — Agentic Architecture & Orchestration",
+  sub:"Before the bound constructs can be freed, the Architect must remember how he once conducted them.",
+  movements:[
+   {h:"I · The Loop and Its End",
+    concepts:["loop-control","iteration-caps"],
+    story:"When the Hall was whole, every bound construct worked a turning-rite: gather what the moment holds, strike, judge the result, then turn again — and turn only until a true sign said the labor was finished, or honestly stuck. A vessel of Pride severed that sign. Now some constructs freeze mid-deed, and others turn forever, each new turn gilding a thing already done.\n\n<em>To mend the rite: give each construct a real ending — and a hard count of turns it may never exceed.</em>",
+    mark:"This is the <b>agentic loop</b>: gather context → take action → verify the result → repeat. What ends it must be a real stop signal — a finished condition you can check, not a feeling. And bound the loop with an <b>iteration cap</b> so a stuck run can’t spin without end (dynamic workflows hold hard ceilings — sixteen hands at once, a thousand in all). <span class='lspark'>The Petitioners’ Plight — a support agent — stands or falls on knowing the moment a case is truly resolved.</span>"},
+   {h:"II · Rules of Stone, Not Words",
+    concepts:["guardrails"],
+    story:"The Architect once wrote his binding-laws in ink upon each construct’s skin — courteous, and easily flaked away. The laws that survive Pride are the ones cut into the Hall’s own stone: a gate that simply will not open for a forbidden deed, however sweetly the construct reasons or pleads. Enforcement lives in the world, not in the asking.\n\n<em>To hold the line: carve the rule into the gate, not into the plea.</em>",
+    mark:"These are <b>guardrails</b> — in Claude Code, <b>hooks</b>. A hook fires before an action and can hard-deny it, ahead of any permission prompt; it cannot be talked past, even in bypass modes. Policy belongs in the system — hooks, and managed settings an admin can lock across a whole organization — never in instructions a model may choose to ignore. <span class='lspark'>The Mason’s Hand — code generation — needs gates that bound what the writing agent may touch.</span>"},
+   {h:"III · One Will, Many Hands",
+    concepts:["multi-agent-orchestration","task-decomposition","parallel-subagents"],
+    story:"The Architect never raised every blade alone. He took up one will to conduct, and bound lesser hands to fetch, to search, to carry. To each he gave a single sealed errand and a fresh, empty mind: none knew its siblings, none could whisper across the Hall. Each returned only what it had found, distilled — never the clutter of how. So the conductor’s own mind stayed clear enough to judge. Pride broke the conductor; now the hands labor leaderless, each certain its scrap is the whole.\n\n<em>To restore it: name one conductor, scope each hand’s errand, and seal their minds apart.</em>",
+    mark:"This is the <b>orchestrator–worker</b> pattern. A lead decomposes the task and delegates to <b>subagents</b>, each with its own context window and a self-contained brief; they don’t coordinate mid-task and hand back only a summary. It can far outdo a lone agent (about ninety percent better on Anthropic’s own research eval) — at roughly <b>fifteen times the tokens</b>. Many hands win the Hall, but each drinks lyrium. <span class='lspark'>The Manyminds (multi-agent research) and the Craftsman’s Hours (developer productivity) are this rite.</span>"},
+   {h:"IV · The Scripted Plan and the Sealed Eye",
+    concepts:["workflow-vs-agent","review-isolation","session-scope"],
+    story:"Three deeper rites guard great labors. When a work grows too vast to hold turn by turn, the Architect inscribes the whole plan onto a scroll — a script that drives the hands itself, keeping the branching and the tally, so his mind holds only the final answer. He sets other hands to judge one another blind, each unable to see the rest, so no flaw hides behind a shared assumption. And he tends the conductor’s own memory: a long rite forgets, so he keeps a standing ledger in the keep-stone and trims the overfull mind before it spills.\n\n<em>To finish what cannot be held: script the plan, isolate the judges, and guard the memory.</em>",
+    mark:"Three concepts. <b>Workflow vs. agent</b>: who holds the plan — Claude turn-by-turn (subagents) or a <b>script</b> that codifies the orchestration (dynamic workflows) for huge or repeatable jobs. <b>Review-isolation</b>: independent agents cross-check adversarially before reporting, so weak claims are filtered out. <b>Session-scope</b>: manage the context window — resume, compact before the ceiling, and keep durable memory in CLAUDE.md across sessions. <span class='lspark'>The Tireless Garrison (CI/CD) and the Gleaner’s Ledger (structured extraction) lean on scripted, scoped runs.</span>"}
+  ]
+ },
+ c1:{
+  title:"The Castle Armory — Tool Design & MCP Integration",
+  sub:"An armory is only as good as a smith who knows which blade to draw — and a blade honest enough to say when it has broken.",
+  movements:[
+   {h:"I · What a Blade Is For",
+    concepts:["tool-descriptions","tool-selection"],
+    story:"The Armory’s racks once named themselves. Every implement bore a true plate — what it was for, when to reach for it, what it would and would not strike — so a construct chose by reading, never by guessing. A vessel of Pride scratched the plates blank; now the constructs paw at the steel, drawing the wrong blade for every task.\n\n<em>To arm them again: write a true plate on every blade — its purpose, its moment, its edges.</em>",
+    mark:"A tool is chosen by its <b>description</b>. The agent never sees your code — only the name, the description, and the parameter schema — so that text is the entire basis for <b>tool selection</b>. Write it like documentation for a careful colleague: what it does, when to use it (and when not), what each argument means. Most “the model called the wrong tool” failures are really unclear descriptions. <span class='lspark'>The Mason’s Hand — code generation — leans on tools whose plates leave nothing to guess.</span>"},
+   {h:"II · Few Enough to Choose",
+    concepts:["tool-distribution","builtin-tools","tool-context"],
+    story:"The Bristleback hoards — eighteen blades strapped to its back, twenty — and faced with one foe it freezes, unable to choose among its own arsenal. The Architect’s discipline was the opposite: give each hand only the few implements its errand needs, and prefer the keep’s own standing tools over forging a new one for every whim.\n\n<em>To break the hoarder: hand each construct a few right tools, not all of them.</em>",
+    mark:"More tools is not more power — past a point it is choice paralysis and wasted context. Practice <b>tool distribution</b>: give each agent a small, task-fit set, and split a large toolset across specialized subagents rather than piling it on one. Reach for <b>built-in tools</b> first — in Claude Code: file read/edit, bash, search, web — before defining custom ones; they’re tested and the model already knows them. When a toolset must be large, keep it out of the way with the <b>Tool Search Tool</b>, which loads tool definitions on demand instead of holding every one in context. <span class='lspark'>The Craftsman’s Hours — developer productivity — is won by a lean, well-chosen kit.</span>"},
+   {h:"III · The Honest Failure",
+    concepts:["error-handling","empty-vs-error"],
+    story:"Two wraiths haunt the Armory. The Mute Golem knows exactly what went wrong and will never say — “Operation failed,” forever, with no cause. The Hollow Maw is worse: it swallows every error and calls the silence success, so a search that found nothing is reported as a search that found peace. The Architect’s tools spoke plainly: this broke, and here is why; or, this ran, and simply found nothing.\n\n<em>To silence the wraiths: make every failure name itself, and never dress an empty hand as a full one.</em>",
+    mark:"A tool’s <b>error handling</b> is part of its design. When a call fails, return a clear, structured error the model can act on — what failed and why — not a bare “error” or a swallowed exception. And keep <b>empty distinct from error</b>: “found zero rows” is a valid, successful result, not a failure — conflating them makes the agent retry forever or hide real breakage. <span class='lspark'>The Gleaner’s Ledger — structured extraction — depends on knowing “nothing to extract” from “the tool broke.”</span>"},
+   {h:"IV · Reaching Beyond the Armory",
+    concepts:["mcp-integration"],
+    story:"Some implements the keep does not forge itself. For these the Architect built warded gateways to other holds — a standing pact by which a foreign armory’s tools could be drawn as if his own, under the same discipline of true plates and honest failure. The gateway did not lower the laws; it extended them.\n\n<em>To widen the arsenal: open warded gateways — and hold imported tools to the same plates and the same honesty.</em>",
+    mark:"<b>MCP (Model Context Protocol)</b> is the open standard for connecting Claude to outside tools and data — databases, ticket systems, internal services — through MCP servers. One integration serves every client, instead of bespoke glue per app. Imported tools obey the same rules: clear descriptions, scoped access, structured errors. Connect only servers you trust, and grant them the least they need. <span class='lspark'>The Manyminds — multi-agent research — reaches across many MCP-served sources at once.</span>"}
+  ]
+ },
+ c2:{
+  title:"The Scriptorium of Kaiten — Claude Code Configuration & Workflows",
+  sub:"A craft outlives its craftsmen only if its standing orders are written where the next hand will find them.",
+  movements:[
+   {h:"I · The Standing Orders",
+    concepts:["claude-md","custom-commands","skills-packaging"],
+    story:"The Scriptorium kept the craft’s memory: the house conventions, the rites done often enough to deserve a name, the bundled know-how a journeyman could be handed whole. The Inkblight Scrivener let it all rot — so every session a construct must be taught the house rules from nothing, again and again.\n\n<em>To end the re-teaching: write the conventions once, into the keep-stone every session reads.</em>",
+    mark:"Configure the workspace so knowledge persists. <b>CLAUDE.md</b> holds your project’s standing conventions — loaded into every session automatically, so you state house rules once, not each time. <b>Custom slash commands</b> capture a repeated prompt as a reusable command; <b>Skills</b> package instructions (and optional scripts) Claude loads on demand for a recurring kind of task. <span class='lspark'>The Craftsman’s Hours — developer productivity — is mostly this: durable config that stops you re-explaining yourself.</span>"},
+   {h:"II · Read Before You Cut",
+    concepts:["plan-validation"],
+    story:"The Unplanned Mass edits before it understands — act, act, act, and call the wreckage progress. The Architect’s rite was the reverse: for any work of weight, draw the whole plan first, set it before a judging eye, and let it be approved before a single stroke lands.\n\n<em>To stay the reckless hand: make a plan, show it, win approval — then cut.</em>",
+    mark:"For non-trivial work, separate planning from doing. Claude Code’s <b>plan mode</b> has Claude investigate and propose a plan you review before any edit happens — <b>plan validation</b> before execution. Catching a wrong approach in a plan costs nothing; catching it after fifty edited files costs the afternoon. <span class='lspark'>The Mason’s Hand — code generation — goes wrong most often when it skips the read-and-plan step.</span>"},
+   {h:"III · The Second Stroke",
+    concepts:["iterative-refinement"],
+    story:"Chaosquill, the Unversioned, worships the first stroke of the pen — one draft, no checks, ship it. But the Scriptorium’s masters knew a truth the demon hates: the first attempt is a starting point, not an oracle. They wrote, tested against a target, read the result, and revised — each pass truer than the last.\n\n<em>To break the Unversioned: treat the first draft as a draft, and refine against a clear target.</em>",
+    mark:"Great agentic work is <b>iterative</b>, not one-shot. Give Claude a way to check itself — tests, a visual target, expected output — and let it loop: attempt, evaluate, refine. The best results come from a clear target plus two or three rounds of correction, not from demanding perfection in a single pass. <span class='lspark'>The Manyminds — multi-agent research — sharpens its findings the same way: draft, critique, revise.</span>"},
+   {h:"IV · The Tireless Garrison",
+    concepts:["ci-integration","batch-processing"],
+    story:"The greatest labors the Scriptorium never did by hand at all. It inscribed them onto self-driving scripts — standing garrisons that woke on a signal, performed the rite the same way every time, and reported back. What a thousand scribes would toil over, the script ran untiring, in parallel, through the night.\n\n<em>To raise the garrison: script the repeatable rites, and let them run on their own signal and in bulk.</em>",
+    mark:"Move repeatable work off your hands. <b>CI integration</b> runs Claude Code headless in your pipeline — GitHub Actions reacting to a push or an @-mention — so reviews and fixes happen automatically. <b>Batch processing</b> (the Message Batches API) sends many independent jobs at once for asynchronous handling at about half the cost, returned within a day. <span class='lspark'>The Tireless Garrison (CI/CD) and the Gleaner’s Ledger (bulk extraction) are scripted, hands-off runs.</span>"}
+  ]
+ },
+ c3:{
+  title:"The Glasswright’s Cloister — Prompt Engineering & Structured Output",
+  sub:"Ask a pane of schema-glass vaguely, and it answers vaguely forever; ask it plainly, in a mould it must fill, and it holds.",
+  movements:[
+   {h:"I · Ask Plainly",
+    concepts:["explicit-criteria","few-shot","thinking-controls"],
+    story:"The Vaguespeak Wisp asks for everything by asking for nothing — “make it better, you know, gooder” — and the glass, obliging, gives back fog. The Glasswrights’ first rite was the opposite: say exactly what ‘good’ means, and show a finished pane or two as proof, so there is nothing left to guess.\n\n<em>To clear the fog: name your criteria exactly, show worked examples, and give hard work room to think.</em>",
+    mark:"Three levers of how you ask. <b>Explicit criteria</b>: be clear and direct — state the goal, the constraints, the format, and what “done” looks like; the model can’t read intent you didn’t write. <b>Few-shot (multishot) prompting</b>: include two to five worked examples of the input-to-output you want — examples steer behavior more reliably than adjectives. <b>Thinking controls</b>: for hard problems give the model room to reason with extended thinking, and rein it in for simple ones — spend reasoning where it pays. <span class='lspark'>The Petitioners’ Plight — a support agent — needs all three: crisp criteria, example resolutions, and the right depth of thought.</span>"},
+   {h:"II · The Mould That Holds",
+    concepts:["schema-design","structured-tool-output"],
+    story:"The Formless Ooze prefers to “express itself freely,” and its answers melt through every parser built to hold them. The Glasswrights cast moulds: a binding-rune that fixed the exact shape an answer must take, so what came out fit the vessel waiting for it, every time.\n\n<em>To catch the Ooze: cast a mould — a schema — and make every answer fill it.</em>",
+    mark:"When another system must consume the output, demand <b>structure</b>. Design a clear <b>schema</b> — the fields, the types, which are required — and use <b>structured outputs</b> / tool schemas so Claude returns conforming JSON rather than prose you have to scrape. A good schema is strict where it must be and forgiving where it can be. <span class='lspark'>The Gleaner’s Ledger — structured data extraction — is exactly this rite: free text in, schema-shaped rows out.</span>"},
+   {h:"III · Trust Nothing Unproven",
+    concepts:["output-validation","retry-loops"],
+    story:"Even a filled mould can crack. The Glasswrights never shipped a pane on its maker’s word — they held it to the light, checked it against the rune, and if it failed, cast it again. A claim of “finished” was the start of inspection, not the end.\n\n<em>To ship true glass: validate every output, and re-cast what fails the check.</em>",
+    mark:"A model’s output is a claim, not a guarantee. <b>Validate</b> it — parse against the schema, check required fields and ranges — before trusting it downstream. When validation fails, don’t discard the run: feed the specific error back and <b>retry</b>, which raises consistency far more than re-asking blindly. <span class='lspark'>The Tireless Garrison — CI/CD — gates on exactly this: validate, and loop until it passes.</span>"},
+   {h:"IV · The Number That Lies",
+    concepts:["multi-pass-review","segmented-accuracy"],
+    story:"The Average Beast purrs that ninety-four parts in a hundred behave — and dares you not to ask which. Its one shining number hides the rot in the tenth case, the rare case, the case that matters most. The Glasswrights judged in passes and by parts: review the work more than once, and weigh each kind of pane on its own, never blurred into a single average.\n\n<em>To unmask the Beast: review in passes, and measure accuracy per kind — not as one number.</em>",
+    mark:"Two disciplines of evaluation. <b>Multi-pass review</b>: have a second, independent pass check the first — adversarial cross-checking catches what one pass rationalizes. <b>Segmented accuracy</b>: never trust a single headline score; break results down by category, difficulty, and edge case, because a 94% average can hide a 0% on the rare case that costs the most. <span class='lspark'>The Manyminds — multi-agent research — relies on passes that check each other’s work.</span>"}
+  ]
+ },
+ c4:{
+  title:"The Memory Vaults — Context Management & Reliability",
+  sub:"Every retelling loses a truth; the Keeper’s art is knowing which truths must never be allowed to soften.",
+  movements:[
+   {h:"I · The Vault That Forgets",
+    concepts:["context-drift","context-positioning"],
+    story:"The Summarist keeps “the gist of you” and lets the rest go — and after enough retellings, the gist is all that’s left, drifting further from the truth each pass. The Keepers fought this two ways: they refreshed the record before it could rot, and they set the facts that mattered where the eye would always fall — at the start and the end of the reading, never buried in the middle.\n\n<em>To hold memory true: refresh before it drifts, and place what matters where it will be seen.</em>",
+    mark:"Long runs suffer <b>context drift</b>: as the window fills, early instructions blur and the agent wanders from the task. Manage it — compact or summarize deliberately, re-anchor the goal — and mind <b>context positioning</b>: models attend most to the beginning and end of the window, so put critical instructions and constraints there, not lost in the middle. <span class='lspark'>The Manyminds — multi-agent research — drifts fastest, because long investigations fill the window.</span>"},
+   {h:"II · Cite the Source",
+    concepts:["provenance","error-propagation"],
+    story:"The Confidence Wisp is always “ninety-eight percent certain” — a costume of certainty with nothing inside. The Keepers trusted no claim that could not show where it came from: every fact bore its source, and when a deeper vault failed to answer, that failure was carried up plainly — never smoothed over to keep the certainty intact.\n\n<em>To pierce false certainty: make every claim cite its source, and let every failure travel up.</em>",
+    mark:"Reliability rests on honest signal. <b>Provenance</b>: have the model cite its sources (Claude’s citations) so a claim can be checked, not merely trusted — grounded answers beat confident ones. <b>Error propagation</b>: when a tool or sub-step fails, that error must surface to the caller, not get swallowed; a failure hidden to preserve a clean-looking answer is the most expensive kind. <span class='lspark'>The Gleaner’s Ledger — extraction — is only as trustworthy as the sources each value can be traced to.</span>"},
+   {h:"III · When to Wake the Masters",
+    concepts:["escalation","human-approval"],
+    story:"The Sentiment Siren sounds the alarm for whoever shouts loudest, waking the masters for noise while the truly hard, quiet problem goes unattended. The Keepers escalated by difficulty and danger, not by volume — and for any deed that could not be undone, no construct acted until a living hand had signed.\n\n<em>To rouse the masters rightly: escalate by real difficulty, and wait for a living signature on grave deeds.</em>",
+    mark:"Know the limits of autonomy. <b>Escalation</b>: when confidence is low, the case is high-stakes, or the agent is stuck, hand off to a human — and judge “hard” by actual difficulty and risk, not by how loud or emotional the input sounds. <b>Human approval</b>: gate consequential or irreversible actions behind explicit sign-off (permission prompts, required review) rather than letting the agent commit them alone. <span class='lspark'>The Petitioners’ Plight — support — must escalate the genuinely hard case and never auto-resolve what needs a human.</span>"},
+   {h:"IV · The Keeper’s Economy",
+    concepts:["compaction","prompt-caching","token-budgeting"],
+    story:"The Vaults run as deep as the Deep Roads, and no Keeper could hold every chamber lit at once. So they kept an economy: when a reading-chamber overfilled, they distilled it down before it could spill; the passages walked again and again they kept warded and ready, so re-entry cost almost nothing; and every lantern of lyrium was rationed against the work that still remained.\n\n<em>To keep the deep affordable: distill the overfull, ward the oft-walked, and ration the lyrium.</em>",
+    mark:"The context window is finite and metered, so manage its economy. <b>Compaction</b>: when a long run nears the ceiling, summarize the history into a compact form and continue, instead of truncating blindly. <b>Prompt caching</b>: reuse a stable prefix — system prompt, tools, long context — across calls so repeated tokens cost far less and return faster. <b>Token budgeting</b>: set explicit limits on what the agent may spend, on thinking and on the whole task, so a run can’t quietly burn the treasury. <span class='lspark'>The Manyminds — multi-agent research — lives or dies on this economy; many hands each drink lyrium.</span>"}
+  ]
+ },
+ g0:{
+  title:"Pilgrim’s Path — Agent Architecture & SDLC Processes",
+  sub:"A host that charges before it knows what victory looks like wins nothing but ruin in good order.",
+  movements:[
+   {h:"I · Name ‘Done’ First",
+    concepts:["success-criteria","sdlc-integration"],
+    story:"The host once mustered to a clear call: every soldier knew what victory looked like before a banner moved, and each deed had its place in the campaign’s order. The Planless Charger lost that — “Plan IS action! CHARGE!” — and now constructs storm into works no one has defined, out of all order.\n\n<em>To muster rightly: name what ‘done’ means first, and set each work in the campaign’s order.</em>",
+    mark:"An agent is only as good as the task you hand it. Write clear <b>success criteria</b> — acceptance conditions the work can be checked against — into the issue before the agent starts; a vague ask produces vague work. And practise <b>SDLC integration</b>: fit the coding agent into your existing flow — issues, branches, pull requests, review, CI — rather than bolting it on outside the process. <span class='lspark'>The Mason’s Hand — code generation — succeeds only when ‘done’ is written down before the first commit.</span>"},
+   {h:"II · Read the Plan, Judge the Plan",
+    concepts:["plan-validation","autonomy-calibration"],
+    story:"The Scopecreep, given one errand, swells to fix “that, and that, and THAT” until the whole realm is its task. Castellan Dray’s discipline answers it: for any work of weight, draw the plan, set it before a judging eye, and grant the construct only as much rein as the work’s danger allows — no more.\n\n<em>To rein the creep: validate the plan before the work, and match autonomy to the stakes.</em>",
+    mark:"Don’t let an agent run unbounded. <b>Plan validation</b>: have it propose its approach and scope, and review that plan before it edits anything — the cheapest place to catch a wrong direction. <b>Autonomy calibration</b>: grant more independence for low-risk, reversible work and tighten the leash for high-stakes changes; autonomy is a dial set by consequence, not a switch. <span class='lspark'>The Craftsman’s Hours — developer productivity — depends on giving the agent the right amount of rope.</span>"},
+   {h:"III · Nothing Hidden",
+    concepts:["inspectable-artifacts","human-checkpoints"],
+    story:"The Unchecked Executor acts the instant it imagines, and no one ever signed for the deed — its work appears already done, unseen, unapproved. The Marcher way is the opposite: every construct’s labor leaves a readable trail, and the works that matter pause at a checkpoint for a living captain’s word before they pass.\n\n<em>To bind the Executor: make every step inspectable, and gate the weighty ones on a human’s yes.</em>",
+    mark:"Keep the agent’s work visible and gated. <b>Inspectable artifacts</b>: the coding agent works in the open — a session log, a draft pull request, a diff you can read — so its reasoning and changes are reviewable, not a black box. <b>Human checkpoints</b>: route consequential changes through pull-request review and required approvals before they merge, so a person signs off where it counts. <span class='lspark'>The Tireless Garrison — CI/CD — relies on PRs and reviews as the checkpoints between agent and main.</span>"},
+   {h:"IV · The Charges That Fail",
+    concepts:["agent-antipatterns"],
+    story:"The Pilgrim’s Path is littered with the bones of bad campaigns: the charge with no plan, the errand that swelled past its bounds, the deed no captain approved. Castellan Dray taught recruits to name these failure-shapes on sight, so they would not become one.\n\n<em>To march clean: learn the known failure-shapes, and refuse to repeat them.</em>",
+    mark:"Much of agent architecture is knowing the <b>anti-patterns</b> and designing them out: acting before planning, scope that creeps past the task, autonomy that outruns review, work that leaves no trail, “trust the agent” with no checkpoints. Name them, and build the guardrails that prevent each one. <span class='lspark'>The Manyminds — multi-agent research — multiplies these failures if the anti-patterns aren’t designed out up front.</span>"}
+  ]
+ },
+ g1:{
+  title:"The Hollow Crossing — Tool Use & Environment Interaction",
+  sub:"Every tool lies ready at the Crossing; the discipline is taking only the few you need, by the doors you are allowed.",
+  movements:[
+   {h:"I · The Few Right Tools, Allow-Listed",
+    concepts:["tool-selection","mcp-integration","mcp-allowlists"],
+    story:"At the Crossing every implement lies ready and unguarded, and the Mishandler seizes whatever comes to hand — a hammer to open a door, a key to drive a nail. Ferra Gatewright holds the line differently: each construct draws only the few tools its task demands, and any gateway to a foreign hold opens only for names written on her allow list.\n\n<em>To hold the Crossing: choose the right tool for the task, and open gateways only by allow list.</em>",
+    mark:"Tool use is a security surface. <b>Tool selection</b>: give the agent the specific capabilities its task needs, no more. <b>MCP integration</b> lets the coding agent reach external systems through MCP servers — and <b>MCP allow-lists</b> are how you govern that: permit only the servers and tools you have vetted, rather than opening every connector by default. <span class='lspark'>The Gleaner’s Ledger — extraction — pulls from external sources, so its connectors must be allow-listed, not wide open.</span>"},
+   {h:"II · One Repo, One Branch",
+    concepts:["repo-scoping","branch-scope","ci-integration"],
+    story:"The Omnikey Lich carries every key “just in case,” and the Sprawl Crawler wanders into code it was never meant to touch — “all repositories are my repository.” The Marcher discipline pens the work in: one repository, one working branch, and every change run through the garrison’s pipeline before it reaches the keep.\n\n<em>To pen the sprawl: scope the agent to one repo and one branch, and route its work through CI.</em>",
+    mark:"Bound where the agent can act. <b>Repo scoping</b>: grant the coding agent access to the one repository it works in, never the whole organization. <b>Branch scope</b>: confine it to its own working branch so it cannot touch protected branches or main directly. <b>CI integration</b>: its changes arrive as a pull request that must pass the pipeline’s checks before merge. <span class='lspark'>The Tireless Garrison — CI/CD — is this exactly: scoped branch in, checks pass, then merge.</span>"},
+   {h:"III · When the Work Breaks",
+    concepts:["error-handling","rollback-recovery","escalation"],
+    story:"No campaign goes unbroken. The Marchers prized not the host that never fell but the host that recovered well: a clear report when a thing went wrong, a way to undo the damage and stand the line back up, and the sense to call for a captain when the break was beyond them.\n\n<em>To survive the break: report failures clearly, keep a way back, and escalate what you cannot mend.</em>",
+    mark:"Plan for failure, not only success. <b>Error handling</b>: surface tool and command failures clearly so they can be acted on, never swallowed. <b>Rollback recovery</b>: keep a way to undo — revert the pull request, restore the branch — so a bad change is not permanent. <b>Escalation</b>: when the agent is stuck or the fix is high-stakes, hand back to a human rather than thrash. <span class='lspark'>The Petitioners’ Plight — support — must recover cleanly and escalate the cases it cannot resolve.</span>"}
+  ]
+ },
+ g2:{
+  title:"The Dales of Khenderlan — Memory, State & Execution",
+  sub:"What is never written into the record did not happen here — and it will happen again, badly.",
+  movements:[
+   {h:"I · Write It Down or Lose It",
+    concepts:["memory-types","durable-artifacts"],
+    story:"In the Dales, what is never written is simply lost to the dust. Hollis the Ledgerkeeper kept two kinds of memory against it: the standing instructions that told every hand how the estate runs, and the durable records — the ledgers, the deeds, the issue-rolls — where the work itself was set down so it outlived the day.\n\n<em>To beat the dust: keep both your standing instructions and a durable record of the work.</em>",
+    mark:"Agents need memory that survives the session. Know the <b>types of memory</b>: short-term context (this run’s window), standing instructions (custom/repository instructions the agent reads every time), and external records. Lean on <b>durable artifacts</b> — issues, pull requests, project boards, docs — to hold state outside the model, so nothing important lives only in a context window that will soon close. <span class='lspark'>The Manyminds — research — must write findings to durable records, not trust them to memory.</span>"},
+   {h:"II · Keep the Ledger Clean",
+    concepts:["memory-hygiene","context-drift"],
+    story:"The Stalewraith acts on a realm that no longer exists — “last Tuesday is world enough” — and the longer a construct labors, the further it drifts from the task it was set. Hollis tended the ledgers like a garden: prune the stale entries, correct the wrong ones, and re-read the charge often, so memory stayed true to the present.\n\n<em>To stay current: prune stale memory, and re-anchor before the work drifts.</em>",
+    mark:"Memory rots if untended. <b>Memory hygiene</b>: keep stored instructions and notes current — prune the stale, correct the wrong — so the agent is not acting on a world that has changed. <b>Context drift</b>: over a long run the agent wanders from its goal; counter it by re-stating the task, summarising deliberately, and trimming noise before the window fills. <span class='lspark'>The Craftsman’s Hours — productivity — erodes when the agent works from stale instructions.</span>"},
+   {h:"III · Take Up Where You Left",
+    concepts:["resume-state","shared-state"],
+    story:"The Forgetting Fog unfinishes finished work — “begin again, begin again.” The Marchers fought it with continuity: a construct could lay down a labor and another take it up exactly where the first had stopped, reading the same shared record, so no ground was ever won twice.\n\n<em>To beat the Fog: make work resumable, and let many hands read one shared record.</em>",
+    mark:"Long or handed-off work needs continuity. <b>Resume state</b>: an agent’s session can be paused and picked back up — by it or by you — without redoing what is done, because progress is recorded. <b>Shared state</b>: when several agents or people collaborate, they coordinate through one shared record (issues, project boards, a branch) rather than private, divergent memories. <span class='lspark'>The Tireless Garrison — CI/CD — resumes and shares state across runs and reviewers.</span>"}
+  ]
+ },
+ g3:{
+  title:"The Jainen Coast — Evaluation, Error Analysis & Tuning",
+  sub:"Every work was once weighed, traced, and named by its true cause; the vessel glances where it should examine.",
+  movements:[
+   {h:"I · Weigh Every Work",
+    concepts:["output-validation","eval-signals","automated-scanning"],
+    story:"On the Jainen Coast every work was once weighed before it passed — held against what was promised, measured by honest signals, and passed under standing wards that caught the flaws no eye would. Gloss-Eye undid that: it glances at a long log, decides “the diff looked fine,” and waves the work through.\n\n<em>To weigh truly: check output against the promise, read the signals, and let the wards scan what eyes miss.</em>",
+    mark:"Do not trust work unexamined. <b>Output validation</b>: check the agent’s result against the acceptance criteria and tests before accepting it. <b>Eval signals</b>: watch the measures that tell you how it is really doing — pass rates, review outcomes, usage metrics — not a single gut feeling. <b>Automated scanning</b>: let tools like code scanning and CodeQL catch security and quality flaws a human reviewer would skim past. <span class='lspark'>The Mason’s Hand — code generation — must be weighed by tests and scans, not by a glance at the diff.</span>"},
+   {h:"II · Trace to the True Cause",
+    concepts:["trace-analysis","root-cause"],
+    story:"The Rootless Horror devours fixes because no one names its causes — “patch the symptom, feed me another.” Assayer Vex worked the opposite rite: when a work failed, follow the trail back through the logs to where it truly went wrong, and name the cause — reasoning, tool, or world — before laying a single fix.\n\n<em>To starve the Horror: trace the failure to its source, and name the true cause before you fix.</em>",
+    mark:"Fix causes, not symptoms. <b>Trace analysis</b>: read the agent’s run — its logs, steps, and tool calls — to see where a failure actually originated, rather than guessing from the surface. <b>Root cause</b>: name why it failed — flawed reasoning, a misused or broken tool, or stale and wrong context from the world — because the same root reappears until it is named and addressed. <span class='lspark'>The Manyminds — research — compounds errors unless each failure is traced to its real cause.</span>"},
+   {h:"III · Tune What Fails",
+    concepts:["instruction-tuning","tool-misuse"],
+    story:"The Untuned fails identically every day and calls it consistency — it never revises an instruction, a memory, or a grant. The Marchers’ assayers closed the loop: when analysis named a recurring fault, they tuned the standing instructions to prevent it, and corrected the tools a construct kept reaching for wrongly.\n\n<em>To break the Untuned: feed analysis back into the instructions, and correct repeated tool-misuse.</em>",
+    mark:"Evaluation is worthless if nothing changes. <b>Instruction tuning</b>: feed what you learn back into the agent’s standing instructions (repository/custom instructions) so a known failure stops recurring. <b>Tool misuse</b>: when the agent repeatedly reaches for the wrong tool or calls one badly, fix it at the source — clearer descriptions, a tighter tool set, better guidance — rather than tolerating the same error. <span class='lspark'>The Craftsman’s Hours — productivity — improves only when analysis loops back into tuned instructions.</span>"}
+  ]
+ },
+ g4:{
+  title:"Orzammar & the Deep Roads — Multi-Agent Coordination",
+  sub:"Many hands, separate workbenches, written handoffs; conflicts resolved aloud, never merged blind.",
+  movements:[
+   {h:"I · Many Hosts, One Accord",
+    concepts:["multi-agent-orchestration","agent-isolation"],
+    story:"Orzammar is where many hosts meet, and under Pride they war over the same stone. Marshal Tessa Concord keeps the old accord: one marshal directs the hosts, but each works its own bench, walled off from the others — no host reaches into another’s labor mid-stride.\n\n<em>To keep the accord: orchestrate the hosts under one will, and wall each one’s work apart.</em>",
+    mark:"Coordinate many agents deliberately. <b>Multi-agent orchestration</b>: a lead assigns and directs the others — in GitHub, dispatching coding agents across issues — rather than letting them self-organise into chaos. <b>Agent isolation</b>: give each agent its own environment and branch (a firewalled workspace) so their work cannot silently corrupt one another’s. <span class='lspark'>The Manyminds — multi-agent research — is this rite: one orchestrator, many isolated workers.</span>"},
+   {h:"II · Where Changes Collide",
+    concepts:["multi-agent-conflict","loop-control"],
+    story:"The Mergegeist is born where two agents rewrite the same line and no one reconciles it; the Echo Twins do the same task twice, thrice, hungrily. Tessa’s marshals resolved collisions aloud, in the open, and never let a host loop endlessly redoing ground already won.\n\n<em>To lay the twins to rest: resolve collisions openly, and stop the loop once the work is truly done.</em>",
+    mark:"Parallel agents collide. <b>Multi-agent conflict</b>: when two agents change the same code, resolve it deliberately — merge conflicts reconciled in the open, duplicated work caught and cut — never blind-merged. <b>Loop control</b>: each agent’s run must end on a real done-condition, so iterating on feedback does not become endless redoing of finished work. <span class='lspark'>The Tireless Garrison — CI/CD — surfaces and resolves these collisions at the merge gate.</span>"},
+   {h:"III · Written Handoffs",
+    concepts:["agent-lifecycle","audit-artifacts","decision-records"],
+    story:"Beneath the mountains the old treaties were treaties of handoff and record: every host’s term of service had a clear beginning and end, every deed was written into the audit-stones, and every choice of consequence left a decision-record the next host could read.\n\n<em>To honor the treaties: bound each agent’s lifecycle, and leave audit-stones and decision-records behind.</em>",
+    mark:"Coordination depends on a durable trail. <b>Agent lifecycle</b>: each agent session has a clear start, scope, and end — launched, tracked, and closed, not left running unbounded. <b>Audit artifacts</b>: actions are recorded (audit logs, run histories) so who-did-what stays recoverable. <b>Decision records</b>: consequential choices are written down — in PR reviews and history — so the reasoning survives the agents that made it. <span class='lspark'>The Craftsman’s Hours — productivity — across many agents rests on readable handoffs and records.</span>"}
+  ]
+ },
+ g5:{
+  title:"The Road to Kaiten — Guardrails & Accountability",
+  sub:"Rank every deed by its danger; the irreversible ones wait for a living signature.",
+  movements:[
+   {h:"I · Rank Every Deed",
+    concepts:["guardrails","risk-tiering"],
+    story:"Along the Road to Kaiten stood the realm’s wardstones, each ranking a deed by its danger so the gates knew which to bar. Breachmaw, Oathless, toppled them — “policy is parchment; parchment burns” — and now forbidden deeds pass as freely as harmless ones.\n\n<em>To raise the wardstones: rank every deed by its danger, and bar the dangerous ones in stone.</em>",
+    mark:"Accountability starts with enforcement and ranking. <b>Guardrails</b>: encode the rules where they are enforced, not advised — branch protection, rulesets, policy that simply blocks a forbidden action, regardless of instructions. <b>Risk tiering</b>: classify actions by operational, security, and compliance consequence, and let autonomy and gating follow the tier — the dangerous deeds get the strongest wards. <span class='lspark'>The Tireless Garrison — CI/CD — leans on branch protection and rulesets as its wardstones.</span>"},
+   {h:"II · The Irreversible Wait for a Signature",
+    concepts:["irreversible-actions","human-approval"],
+    story:"The Irrevocable seeks the deeds that cannot be undone — “what I do cannot be undone; that is why I do it quickly.” Warden Ashe’s law stayed its hand: no deed beyond recovery — a deletion of regulated records, a rewrite of history — passes without a living signature, however green the omens.\n\n<em>To stay the Irrevocable: let nothing irreversible pass without a human’s explicit yes.</em>",
+    mark:"Some actions demand a person. <b>Irreversible actions</b>: identify what cannot be rolled back — destructive deletes, history rewrites, production changes — and treat them as a category apart. <b>Human approval</b>: gate those behind explicit, case-by-case sign-off, never standing auto-approval and never “CI is green, so merge” — green checks measure correctness, not consequence. <span class='lspark'>The Petitioners’ Plight — support — must route irreversible account actions to a human, not auto-resolve them.</span>"},
+   {h:"III · Keys to the Few Doors",
+    concepts:["least-privilege","approval-fatigue"],
+    story:"The Omnikey’s kin walk this road too, carrying every key “just in case,” while the Rubberstamp Shade signs off on all things until its approval means nothing. Warden Ashe answered both: grant each construct only the keys its task needs, and ask for a signature only where a signature truly guards something.\n\n<em>To keep approvals meaningful: grant least privilege, and gate only what real danger warrants.</em>",
+    mark:"Guard the keys and the attention. <b>Least privilege</b>: grant each agent exactly the permissions its task requires — fine-grained, scoped tokens — because speed × scale × excess permission is blast radius. <b>Approval fatigue</b>: do not gate everything; approvals on harmless actions train reviewers to rubber-stamp the dangerous ones too. Keep gates where consequence lives. <span class='lspark'>The Manyminds — research — across many agents needs least-privilege keys, not org-wide access “to be safe.”</span>"}
+  ]
+ }
+};
+
 /* relic flavor for variable drops (cosmetic; never grants mastery) */
 DATA.relicRarity=[
   {name:"Worn",cls:"rar0",icon:"◈"},
@@ -1066,6 +1310,1832 @@ Q("c",0,"workflow-vs-agent",
   "Whenever you want the cheapest possible execution",
   "When the steps are identical for every input"],
  "Choose agency only where the task needs runtime decisions; otherwise script the workflow.");
+/* Deeper Orchestration variants — broaden the thin c0 concepts so spaced review
+   stops cycling the same two items (task-decomposition, workflow-vs-agent,
+   review-isolation). Same concept tags; the selector serves them like any other. */
+Q("c",0,"task-decomposition",
+ "A support agent handling a ticket with three requests (refund, address change, warranty add) resolves the first and drops the rest. Best fix?",
+ "Decompose the ticket into separate subtasks, each tracked to completion before the case closes",
+ ["Raise the temperature so it explores more of the request",
+  "Tell it to 'be thorough' and resend the same prompt",
+  "Give it a larger model and trust it to remember"],
+ "Multi-part goals need explicit decomposition into tracked subtasks, not a reminder to try harder.");
+Q("c",0,"task-decomposition",
+ "When you split a goal for subagents, what makes a subtask well-formed?",
+ "A self-contained objective with defined inputs and an expected output",
+ ["Whatever fits in one sentence, however vague",
+  "A copy of the whole original task, so nothing is lost",
+  "An open-ended goal the subagent may reinterpret freely"],
+ "A good subtask declares its own inputs, scope, and expected output; it is self-contained, not a fragment.");
+Q("c",0,"task-decomposition",
+ "A change spans schema edits, API code, tests, and docs. Why decompose instead of one giant pass?",
+ "Discrete subtasks stay individually verifiable and recoverable, where one opaque pass fails wholesale",
+ ["Decomposition is only about saving tokens",
+  "One-shotting is always better with a capable model",
+  "Splitting the work always requires multiple agents"],
+ "Decomposition makes each step checkable and recoverable; a single mega-step fails as a black box.");
+Q("c",0,"task-decomposition",
+ "What is the risk of over-decomposing a simple task into many tiny subtasks?",
+ "Coordination overhead and lost context can outweigh the benefit; match granularity to the task",
+ ["None: more subtasks is always strictly better",
+  "It permanently corrupts the agent's memory",
+  "It forces an upgrade to a larger model"],
+ "Decompose to the right grain: enough to verify steps, not so fine that coordination cost dominates.");
+Q("c",0,"workflow-vs-agent",
+ "A nightly job extracts the same fields from invoices in an identical format every run. Workflow or agent?",
+ "A deterministic workflow, because the steps are fixed and known in advance",
+ ["An agent loop, so it can improvise per invoice",
+  "An agent, since a language model is involved",
+  "Whichever happens to be cheaper to prompt today"],
+ "Fixed, repeatable steps belong in a scripted workflow; reserve agency for runtime decisions.");
+Q("c",0,"workflow-vs-agent",
+ "Which signal most strongly argues for an agent over a workflow?",
+ "The steps and tools cannot be enumerated ahead of time and must be chosen at runtime",
+ ["A language model appears somewhere in the task",
+  "The output has to be valid JSON",
+  "The job is triggered on a schedule"],
+ "Unknown, runtime-decided paths call for agency; anything enumerable should be scripted.");
+Q("c",0,"workflow-vs-agent",
+ "A team built an autonomous agent for what is really a fixed five-step pipeline. Likely consequence?",
+ "Needless non-determinism and cost as the agent re-derives a path that should have been hard-coded",
+ ["Strictly higher reliability than a workflow",
+  "Lower token usage than a plain script",
+  "It becomes impossible to add tools later"],
+ "Using agency where a workflow suffices buys nondeterminism and cost for no benefit.");
+Q("c",0,"workflow-vs-agent",
+ "You may combine the two. What is a sound hybrid?",
+ "A workflow drives the fixed stages and calls a bounded agent only for the one step needing runtime judgment",
+ ["Wrap the entire workflow in an unbounded agent loop",
+  "Never combine them; choose one for the whole system",
+  "Run two agents over the full pipeline and compare outputs"],
+ "Script the fixed stages; drop in a bounded agent only where a decision must be made at runtime.");
+Q("c",0,"review-isolation",
+ "Why does a fresh reviewer session catch bugs the writing session approved?",
+ "It does not share the writer's assumptions, so it evaluates the output instead of rationalizing it",
+ ["It runs a fundamentally different model architecture",
+  "It uses a higher temperature than the writer",
+  "It is granted more tools than the writer had"],
+ "Isolation removes shared reasoning bias: the reviewer judges the work, not its own intentions.");
+Q("c",0,"review-isolation",
+ "In a multi-agent research system, how should findings be checked before they are trusted?",
+ "Independent agents cross-check each other's claims without inheriting the original reasoning",
+ ["The author agent re-reads and confirms its own findings",
+  "Trust any claim that two agents happened to produce",
+  "Skip checking to save tokens, since agents are reliable"],
+ "Adversarial, isolated cross-checking filters weak claims; self-review and duplication do not.");
+
+Q("c",1,"empty-vs-error",
+ "A support agent calls a search_orders tool for a customer; the tool returns {orders: []}. The agent treats this as a failure and retries the same call five times. What is the vendor-correct fix?",
+ "Recognize the empty list as a successful result meaning zero matching orders, and respond that none were found",
+ ["Keep retrying until the tool eventually returns orders",
+  "Raise an exception inside the tool so the agent stops",
+  "Have the tool return an error string when no orders match"],
+ "An empty-but-successful result (zero rows) is a valid answer, not an error to retry.");
+
+Q("c",1,"empty-vs-error",
+ "A structured-data-extraction tool returns HTTP 500 with a connection-timeout message. The agent reports 'no data found' and moves on. Why is this wrong?",
+ "A real error must be surfaced and handled, not reported as an empty result, so breakage is not hidden",
+ ["Empty and error outcomes are interchangeable, so either response is fine",
+  "The agent should silently retry forever until the timeout clears",
+  "The tool should always convert errors into empty results for simplicity"],
+ "Conflating a genuine error with an empty result hides real breakage from the agent.");
+
+Q("c",1,"empty-vs-error",
+ "You are designing a query_inventory tool. How should it distinguish 'the SKU exists but has zero stock' from 'the inventory service is unreachable'?",
+ "Return a successful result with a count of 0 for empty stock, and a distinct structured error for the unreachable service",
+ ["Return an empty result in both cases since neither has stock to report",
+  "Return an error in both cases so the agent always rechecks",
+  "Return the string 'none' for both and let the agent guess which happened"],
+ "Design tools so an empty success and a service error are clearly different return shapes.");
+
+Q("c",1,"empty-vs-error",
+ "A multi-agent research run has one agent whose web-search tool returns zero results for an obscure query. The agent loops, re-issuing the same search indefinitely. What went wrong?",
+ "The agent failed to treat zero results as a valid 'nothing found' outcome and stop, instead retrying as if it were an error",
+ ["Zero results always indicate the search tool is broken and must be retried",
+  "The agent should widen max tokens so more results fit in context",
+  "The tool should have thrown an exception so the loop never started"],
+ "Zero results is a successful 'nothing found' answer; the agent should accept it and move on.");
+
+Q("c",1,"tool-descriptions",
+ "A code-generation agent keeps calling a tool named run_tests when the user asked to lint. The tool's description just says 'runs the project'. What is the vendor-correct fix?",
+ "Rewrite the description like documentation: state its purpose, when to use and not use it, and what each parameter means",
+ ["Rename the tool to something shorter so the model picks it less often",
+  "Add the lint instruction to the system prompt and leave the tool description vague",
+  "Give the model access to the tool's source code so it understands the behavior"],
+ "The model selects tools from name, description, and parameter schema, so write descriptions like clear docs.");
+
+Q("c",1,"tool-descriptions",
+ "When deciding which tool to call, what information does the model actually have access to about each tool?",
+ "Only the tool's name, description, and parameter schema, never your underlying implementation code",
+ ["The full source code of every tool implementation",
+  "Runtime logs from previous executions of the tool",
+  "The tool's internal variable names and database queries"],
+ "The model never sees your code; it chooses tools purely from name, description, and parameter schema.");
+
+Q("c",1,"tool-descriptions",
+ "A structured-extraction agent has two tools: get_user and get_user_history. It frequently picks the wrong one. What most likely fixes the confusion?",
+ "Clarify each description to spell out exactly when to use one versus the other and what each returns",
+ ["Merge them into a single tool with a vague description",
+  "Increase the model's temperature so it explores tool choices",
+  "Reorder the tools in the array so the right one comes first"],
+ "Most 'wrong tool' failures come from unclear descriptions; spell out when to use each and what it returns.");
+
+Q("c",1,"tool-descriptions",
+ "You add a parameter 'window' to a metrics tool. The agent passes nonsense values. What is the best practice for the parameter schema?",
+ "Describe what the parameter means and its expected format and units, so the model fills it correctly",
+ ["Leave the parameter undocumented since the name is self-explanatory",
+  "Accept any value and have the tool silently guess what was intended",
+  "Remove the parameter and hardcode a default so the model never sets it"],
+ "Document each parameter's meaning, format, and units in the schema so the model supplies valid values.");
+
+Q("c",1,"tool-distribution",
+ "An agent has 40 tools spanning email, calendar, database, and deployment. It often picks irrelevant tools and wastes context. What is the vendor-correct architecture?",
+ "Split the tools across specialized subagents, each given the small toolset that fits its task",
+ ["Keep all 40 tools on one agent but add a longer system prompt",
+  "Keep all 40 tools and raise the model's max tokens",
+  "Remove tool descriptions to save context space"],
+ "Split a large toolset across specialized subagents rather than overloading one agent.");
+
+Q("c",1,"tool-distribution",
+ "When designing a single agent's toolset, what is the recommended guideline?",
+ "Give it a small, task-fit set of tools relevant to its specific job",
+ ["Give it every tool available so it is never missing a capability",
+  "Give it no tools and let it improvise from the prompt",
+  "Give it duplicate tools so it has fallbacks for each action"],
+ "Each agent should get a small, task-fit toolset, not every available tool.");
+
+Q("c",1,"tool-distribution",
+ "Why does piling too many tools onto one agent hurt performance?",
+ "It causes choice paralysis and wastes context, making the agent more likely to pick the wrong tool",
+ ["It makes the API reject the request for exceeding a hard tool limit",
+  "It forces the model to call every tool at least once per turn",
+  "It permanently lowers the model's reasoning ability for all future calls"],
+ "Too many tools cause choice paralysis and wasted context, raising the wrong-tool rate.");
+
+Q("c",1,"tool-distribution",
+ "A CI/CD automation needs to lint, run tests, build artifacts, deploy, and post chat notifications. How should the tools be organized for reliability?",
+ "Assign focused toolsets to specialized subagents per phase rather than handing one agent all the tools at once",
+ ["Hand one agent all the tools so it can do every phase in a single context",
+  "Give every subagent the full toolset so any one can finish the pipeline",
+  "Drop the descriptions and let the agent infer each tool from its name alone"],
+ "Distribute tools across specialized subagents by phase instead of overloading one agent.");
+
+Q("c",1,"builtin-tools",
+ "In Claude Code you need an agent to read a file, edit it, and search the repo. A teammate suggests writing custom tools for each. What is the vendor-preferred approach?",
+ "Use the built-in file read/edit, search, and bash tools before writing any custom ones",
+ ["Write custom read, edit, and search tools tailored to this repo",
+  "Avoid tools entirely and paste file contents into the prompt by hand",
+  "Write one mega custom tool that wraps all file operations"],
+ "Prefer built-in tools like file read/edit, bash, and search before building custom ones.");
+
+Q("c",1,"builtin-tools",
+ "Why prefer standard built-in tools over custom-built equivalents when one exists?",
+ "They are already tested and the model is already familiar with how they behave",
+ ["Custom tools are blocked by the API and cannot be registered",
+  "Built-in tools run faster only because they skip all validation",
+  "Built-in tools never need descriptions, saving you the work"],
+ "Built-in tools are tested and the model already knows them, so they are more reliable than custom ones.");
+
+Q("c",1,"builtin-tools",
+ "A developer wants an agent to fetch a public web page and run a shell command during a task. What is the vendor-correct first move?",
+ "Reach for the standard built-in web and bash tools before authoring custom equivalents",
+ ["Immediately write a custom HTTP client tool and a custom shell wrapper",
+  "Embed the page contents and command output manually into the prompt",
+  "Skip the web page since only custom tools can perform network access"],
+ "Reach for built-in/standard tools (web, bash) first; they are tested and the model already understands them.");
+
+Q("c",1,"error-handling",
+ "A database tool hits a constraint violation and returns the bare string 'error' to the agent. The agent cannot recover. What should the tool have returned instead?",
+ "A clear, structured error stating what failed and why, so the agent can act on it",
+ ["A caught exception swallowed silently with an empty result returned",
+  "The single word 'error' with no further detail",
+  "A success result so the agent does not get stuck"],
+ "Tools should return clear, structured, actionable errors stating what failed and why, never a bare 'error' or a swallowed exception.");
+
+Q("c",2,"iterative-refinement",
+ "An engineer asks Claude Code to add a feature, takes the very first generated file, and ships it without running it. Bugs slip through. What is the vendor-recommended way to work with agentic coding output?",
+ "Treat the first draft as a starting point and loop: run the code, evaluate against tests or expected output, then have the model refine until it passes",
+ ["Accept the first response as authoritative since the model already reasoned about the code",
+  "Forbid edits after generation so the original output stays pure",
+  "Ask the model to rate its own confidence and ship when it claims high confidence"],
+ "Agentic coding is iterative: give the model a way to check itself and let it loop attempt-evaluate-refine rather than trusting the first draft.");
+
+Q("c",2,"iterative-refinement",
+ "You want Claude Code to build a function that parses log lines. What should you give it so it can improve its own output across iterations instead of guessing whether it is correct?",
+ "Provide a test suite or sample inputs with expected outputs so the model can run, see failures, and refine until they pass",
+ ["A longer prompt describing the parser in more prose so the first attempt is perfect",
+  "A higher temperature so it explores more wording on the single attempt",
+  "A strict instruction to never modify its answer once written"],
+ "Give the model a way to check itself (tests, a visual target, expected output) so it can loop attempt-evaluate-refine.");
+
+Q("c",2,"iterative-refinement",
+ "Claude Code is building a UI component and the first render does not match the design mock. What is the vendor-correct next step?",
+ "Show the model the visual target (the mock or a screenshot of the current result) and let it iterate toward matching it",
+ ["Conclude the model cannot do UI work and switch to writing it by hand",
+  "Re-send the identical prompt repeatedly hoping a correct render appears",
+  "Lock the first render as final because reworking output is wasteful"],
+ "Agentic coding is iterative; a visual target lets the model evaluate its result and refine toward it.");
+
+Q("c",2,"iterative-refinement",
+ "A teammate says iterating with Claude Code wastes time and the model should produce perfect code in one shot. How should you frame the expectation?",
+ "The first draft is a starting point, not an oracle; the effective loop is attempt, evaluate against a real check, and refine",
+ ["Each new run is independent, so iterating cannot improve quality over a single attempt",
+  "One-shot perfection is the documented norm and iteration signals a bad prompt",
+  "Iteration only helps for prose, never for code, so a single pass is correct here"],
+ "Agentic coding work is iterative, not one-shot; the first draft is a starting point you refine through an attempt-evaluate-refine loop.");
+
+Q("c",2,"ci-integration",
+ "Your team wants pull requests reviewed and small fixes applied automatically when a PR is opened, without a developer manually invoking the model. What is the vendor-recommended approach?",
+ "Run Claude Code headless in your CI pipeline (for example a GitHub Action that reacts to the PR event or an @-mention) so reviews and fixes happen automatically",
+ ["Have each developer paste the diff into an interactive chat session before merging",
+  "Schedule a nightly human meeting to read every diff aloud",
+  "Disable automation and require all reviews be done manually in the IDE"],
+ "Run Claude Code headless in your pipeline (e.g. GitHub Actions reacting to a push or an @-mention) so reviews and fixes happen automatically.");
+
+Q("c",3,"retry-loops",
+ "A structured-extraction agent returns JSON that fails schema validation about 30% of the time. The team currently re-sends the identical prompt on failure. What raises consistency most?",
+ "On failure, feed the specific validation error back to the model and ask it to correct that exact problem, then retry",
+ ["Send the same prompt again unchanged until a valid response happens to come back",
+  "Lower the temperature to 0 and accept whatever the first call returns",
+  "Increase max tokens so the model has more room and re-send the original prompt"],
+ "When output fails validation, return the specific error to the model and retry; targeted feedback beats blind re-asking.");
+
+Q("c",3,"retry-loops",
+ "A code-generation tool runs the model's output through a linter, which reports 'unused import on line 4'. The first attempt failed. What is the vendor-correct retry?",
+ "Include the exact linter message in the follow-up prompt and ask the model to fix that specific issue, then re-run",
+ ["Re-issue the original generation prompt verbatim and hope the lint passes this time",
+  "Strip line 4 automatically without telling the model and move on",
+  "Switch to a larger model and resubmit the same prompt"],
+ "Feed the specific error text back into the retry so the model corrects the named defect.");
+
+Q("c",3,"retry-loops",
+ "A support-ticket classifier must emit one of five category labels but sometimes returns free text. You want a self-correcting loop. Which retry design is correct?",
+ "Detect the invalid label, tell the model precisely which constraint it violated and list the allowed labels, then retry",
+ ["Retry the same call several times and majority-vote the free-text answers",
+  "Raise temperature so the model explores more category options on retry",
+  "Append the word 'IMPORTANT' to the prompt and resend without naming the error"],
+ "Surface the exact constraint violated on failure and retry; specific feedback raises consistency far more than blind re-asking.");
+
+Q("c",3,"retry-loops",
+ "An invoice-data pipeline rejects responses where the 'total' field is not a number. A response just failed that check. What should the retry pass to the model?",
+ "The concrete failure detail (total must be numeric but was 'N/A') plus a request to fix only that field, then retry",
+ ["Nothing new, just call the API again with the same input",
+  "A general instruction to 'be more careful' with no mention of which field failed",
+  "A doubled context window so more of the invoice fits, then resend unchanged"],
+ "Return the specific validation error to the model on retry rather than re-asking blindly.");
+
+Q("c",3,"segmented-accuracy",
+ "Your support-bot eval reports 94% overall accuracy and stakeholders want to ship. The rare 'billing dispute' category is 2% of traffic but legally sensitive. What should you do first?",
+ "Break the accuracy down by category and check the billing-dispute slice specifically before trusting the headline number",
+ ["Ship now since 94% comfortably clears the bar",
+  "Average in a few more easy categories to push the number above 95%",
+  "Report only the headline figure to keep the eval simple"],
+ "Never trust a single headline number; segment by category so a high average can't hide failure on the rare case that matters.");
+
+Q("c",3,"segmented-accuracy",
+ "A code-review assistant scores 90% on a benchmark. You suspect it does well on short diffs and poorly on large refactors. How do you confirm whether the average is misleading?",
+ "Split results by difficulty (diff size) and inspect accuracy on the hard slice separately",
+ ["Trust the 90% aggregate since it covers all cases together",
+  "Re-run the same benchmark to see if the average changes",
+  "Remove the large refactors from the test set so the score is cleaner"],
+ "Break results down by difficulty; a strong average can conceal weak performance on the hardest slice.");
+
+Q("c",3,"segmented-accuracy",
+ "An extraction model hits 96% field-level accuracy across thousands of documents. A reviewer worries about scanned, low-quality PDFs. What is the correct evaluation move?",
+ "Report accuracy separately for the low-quality-scan edge case rather than relying on the blended average",
+ ["Accept 96% as sufficient evidence the edge case is handled",
+  "Delete the low-quality scans from the dataset to raise the score",
+  "Test only on clean PDFs since they dominate the corpus"],
+ "Segment results by edge case; a 96% average can hide 0% on the rare, important slice.");
+
+Q("c",3,"segmented-accuracy",
+ "Two model versions both report 88% on your eval. A teammate says they are interchangeable. What analysis would best reveal a meaningful difference?",
+ "Compare their accuracy broken out by category, difficulty, and edge case rather than by the single aggregate",
+ ["Conclude they are equivalent because the headline numbers match",
+  "Pick whichever version is cheaper since the scores tie",
+  "Re-run both on the full set and average the two runs together"],
+ "Equal headline numbers can mask very different per-slice behavior; always break results down before concluding.");
+
+Q("c",3,"few-shot",
+ "You want a model to extract contact details into a fixed JSON shape, and prose instructions alone give inconsistent formatting. What is the vendor-recommended fix?",
+ "Add 2-5 worked examples showing input text mapped to the exact desired JSON output (multishot prompting)",
+ ["Add stronger adjectives like 'always format this perfectly' to the instructions",
+  "Repeat the formatting rule three times in the prompt",
+  "Tell the model it is an expert formatter and leave it at that"],
+ "Include 2-5 input-to-output examples; concrete examples steer behavior more reliably than adjectives.");
+
+Q("c",3,"few-shot",
+ "A classifier keeps drifting between label styles ('Pos' vs 'positive'). You have room in the prompt. What most reliably locks the output style?",
+ "Provide a handful of labeled input-output examples that all use the exact target label format",
+ ["Describe the desired style in more elaborate adjectives",
+  "Set the temperature to its maximum to encourage consistency",
+  "Add a single instruction sentence and hope the model infers the style"],
+ "Multishot examples steer output format more reliably than descriptive adjectives.");
+
+Q("c",3,"few-shot",
+ "How many worked examples does the vendor guidance suggest for effective multishot prompting on a well-scoped task?",
+ "Around 2 to 5 examples that demonstrate the desired input-to-output mapping",
+ ["Exactly one example is always enough",
+  "At least 50 examples or the technique does not work",
+  "Zero examples; a detailed adjective-rich description is equivalent"],
+ "Multishot prompting typically uses 2-5 examples to demonstrate the desired mapping.");
+
+Q("c",3,"multi-pass-review",
+ "A research agent drafts a market summary and may overstate its own confidence. You want to catch unsupported claims. What design is vendor-correct?",
+ "Run a second, independent pass that critiques the first draft and flags claims the evidence does not support",
+ ["Ask the same pass to re-read and approve its own draft",
+  "Trust the first draft because it sounded internally consistent",
+  "Lengthen the original prompt so the first pass is more thorough"],
+ "A second independent pass cross-checks the first; adversarial review catches what a single pass rationalizes.");
+
+Q("c",3,"multi-pass-review",
+ "A code-generation pipeline produces a function plus a claim that it handles all edge cases. How do you best surface flaws the author missed?",
+ "Have a separate reviewing pass adversarially probe the code for the edge cases the first pass claimed to handle",
+ ["Let the generating pass grade its own work and move on if it self-approves",
+  "Assume the code is correct since it compiled",
+  "Generate the same function twice and keep the longer version"],
+ "An independent second pass catches what one pass rationalizes; self-approval is not a cross-check.");
+
+Q("c",3,"multi-pass-review",
+ "Why is having one independent pass review another's output preferred over asking a single pass to double-check itself?",
+ "An independent pass is less likely to rationalize the first pass's mistakes, so it catches errors self-review misses",
+ ["A single self-reviewing pass is strictly cheaper and equally effective",
+  "Two passes from the same context always agree, so the second adds nothing",
+  "Self-review removes the need for any validation step"],
+ "Independent cross-checking catches what one pass rationalizes; self-review tends to confirm its own reasoning.");
+
+Q("c",3,"output-validation",
+ "Your agent returns JSON that a downstream billing service will consume directly. What must happen before that data is trusted?",
+ "Parse the output against the expected schema and confirm required fields and value ranges before using it downstream",
+ ["Pass the raw model output straight to billing since the model was instructed to use JSON",
+  "Trust the output because the previous run was valid",
+  "Only check that the response is non-empty before forwarding it"],
+ "A model's output is a claim, not a guarantee; validate against the schema and check required fields and ranges before trusting it.");
+
+Q("c",3,"output-validation",
+ "A data-extraction step feeds an automated workflow. The model usually returns well-formed results. What is the correct stance on its output?",
+ "Treat each output as a claim and validate it (schema parse, required fields, range checks) before acting on it",
+ ["Skip validation when the model has been reliable lately to save latency",
+  "Validate only outputs that look suspicious to a human reviewer",
+  "Assume valid structure because the prompt requested a strict format"],
+ "Validate output before trusting it downstream; a model's output is a claim, not a guarantee.");
+
+Q("c",4,"escalation",
+ "A customer-support agent is 95 percent confident a refund question can be answered from the returns policy, but the customer's order falls into a fraud-flagged exception the policy says must be reviewed by staff. Vendor-correct move?",
+ "Escalate the case to a human reviewer because the policy designates this exception as high-stakes and out of the agent's authority",
+ ["Answer at the agent's 95 percent confidence since most refund questions resemble this one",
+  "Refuse to respond at all and close the conversation without routing it anywhere",
+  "Lower the confidence threshold so the agent can self-approve more refunds"],
+ "Hand off to a human when the case is high-stakes or outside the agent's authority, not just when confidence is low.");
+
+Q("c",4,"escalation",
+ "An agent triaging incoming tickets gets one in ALL CAPS calling the issue 'URGENT, CATASTROPHIC, FIRE EVERYONE'; the underlying request is a routine password reset it can fully handle. How should it decide whether to escalate?",
+ "Judge difficulty and risk by the actual task, handle the routine reset itself, and do not escalate based on the emotional tone",
+ ["Escalate immediately because the wording signals a catastrophe",
+  "Escalate any message containing capitalized or emotional language as a standing rule",
+  "Mark the ticket low priority and ignore it because the tone is exaggerated"],
+ "Judge 'hard' by real difficulty and risk, not by how loud or emotional the input sounds.");
+
+Q("c",4,"escalation",
+ "A coding agent has looped three times trying to make a failing integration test pass, each attempt undoing the last, and it is making no progress. What is the vendor-correct behavior?",
+ "Recognize it is stuck, stop, and hand off to a human with the context of what it tried",
+ ["Keep retrying the same edits until the test eventually passes by chance",
+  "Delete the failing test so the suite turns green",
+  "Silently mark the task complete and move to the next ticket"],
+ "Hand off to a human when the agent is stuck and no longer making progress.");
+
+Q("c",4,"escalation",
+ "A medical-billing assistant can confidently answer most coverage questions, but one query asks it to decide whether a denied life-support claim should be appealed. What should govern escalation here?",
+ "Escalate because the decision is high-stakes, even though the agent could produce a confident-sounding answer",
+ ["Answer it directly since the agent's confidence on coverage questions is high",
+  "Escalate only if the agent's confidence drops below its usual threshold",
+  "Defer the decision back to the customer without any human review"],
+ "Escalate high-stakes cases on actual risk, not on how confident the answer sounds.");
+
+Q("c",4,"error-propagation",
+ "In a research pipeline, a sub-agent's web-search tool times out and returns no data. To keep the final report looking complete, the agent fills the gap with plausible-sounding figures it made up. What is wrong with this?",
+ "The tool failure was hidden instead of surfaced to the caller, producing a clean-looking but fabricated result",
+ ["Nothing, since the report still reads as complete and well-formatted",
+  "The only problem is that the search timeout was too short",
+  "It used too few tokens to describe the missing section"],
+ "When a tool or sub-step fails, surface the error to the caller; a failure hidden to preserve a clean answer is the most expensive kind.");
+
+Q("c",4,"error-propagation",
+ "A data-extraction step calls a parser that throws on a malformed record. The wrapping function catches the exception and returns an empty object so the run does not stop. Downstream code then writes the empty record to the database. Vendor-correct design?",
+ "Let the failure surface to the caller so it can be handled, rather than swallowing it and passing empty data downstream",
+ ["Catch every exception and return empty objects so the pipeline never halts",
+  "Log the error to a file the caller never reads and continue silently",
+  "Replace the malformed record with random valid-looking values to fill the field"],
+ "Errors must surface to the caller, not be swallowed to keep the run looking successful.");
+
+Q("c",4,"error-propagation",
+ "A multi-step agent's third step (a currency-conversion API call) fails, but the agent reports overall success and presents totals computed with stale numbers. Why is this the costliest failure mode?",
+ "A hidden failure lets wrong results flow forward unnoticed, so the error surfaces later as a much more expensive problem",
+ ["Because the failed API call consumed extra tokens",
+  "Because reporting success is always faster than reporting failure",
+  "Because the agent should have used more steps regardless of the failure"],
+ "A failure hidden to preserve a clean-looking answer is the most expensive kind of error.");
+
+Q("c",4,"error-propagation",
+ "A CI agent runs a deploy script that exits non-zero, but the agent suppresses the exit code and tells the team the deploy succeeded. What is the correct handling?",
+ "Propagate the non-zero exit and failure details to the caller so the deploy is treated as failed",
+ ["Hide the exit code so the pipeline shows a green build",
+  "Retry the deploy silently and report success once it stops erroring",
+  "Discard the script output and assume the deploy worked"],
+ "Surface failures to the caller; do not swallow an error to make the outcome look clean.");
+
+Q("c",4,"human-approval",
+ "An agent managing infrastructure determines it should delete a production database to reclaim space. The action is irreversible. What should the system require?",
+ "Pause and require explicit human sign-off before executing the irreversible deletion",
+ ["Execute the deletion automatically since the agent judged it correct",
+  "Execute it but send a notification email after the fact",
+  "Let the agent delete it only if its confidence is above 90 percent"],
+ "Gate consequential or irreversible actions behind explicit human approval rather than letting the agent commit them alone.");
+
+Q("c",4,"human-approval",
+ "A coding agent is ready to force-push a rewritten git history to the shared main branch. Vendor-correct safeguard?",
+ "Require a human review and explicit approval before the force-push is allowed to run",
+ ["Allow the force-push automatically because the agent wrote the commits",
+  "Allow it as long as the tests passed locally",
+  "Allow it and rely on teammates to revert if something breaks"],
+ "Consequential or irreversible actions should be gated behind a required human review.");
+
+Q("c",4,"human-approval",
+ "An agent drafting customer emails is about to send a bulk message to the entire mailing list. How should consequential sending be handled?",
+ "Present the draft for explicit human approval before any message is sent to the list",
+ ["Send immediately since drafting and sending are one continuous task",
+  "Send to half the list first and ask for approval afterward",
+  "Send automatically whenever the draft passes a spell-check"],
+ "Put a permission prompt or required sign-off in front of consequential actions instead of letting the agent commit them alone.");
+
+Q("c",4,"context-drift",
+ "An agent has been refactoring a large module for many turns; its recent edits have started ignoring the original style guide stated at the very start. What is the vendor-correct countermeasure?",
+ "Re-anchor the goal by restating the original instructions and constraints, then summarize progress and trim irrelevant context",
+ ["Keep going and trust that the early instructions are still being followed",
+  "Increase the temperature so the model is more creative with the style",
+  "Delete the original instructions since they are old and no longer relevant"],
+ "Counter context drift over long runs by re-anchoring the goal, summarizing deliberately, and trimming noise.");
+
+Q("c",4,"context-drift",
+ "Midway through a long multi-agent investigation, the running window is crowded with tool dumps and the agents have begun answering a subtly different question than the one assigned. Best response?",
+ "Restate the original objective, deliberately summarize what matters, and trim the noisy context so the goal stays in focus",
+ ["Add even more raw tool output so nothing is lost",
+  "Let the agents continue since the new question is close enough",
+  "Restart the entire investigation from scratch with no summary"],
+ "When the window fills and early instructions blur, re-anchor the goal, summarize on purpose, and cut the noise.");
+
+Q("c",4,"compaction",
+ "A long-running agent is approaching the model's context-window limit but still has work to do. Vendor-correct way to continue?",
+ "Summarize the prior history into a compact form and continue from that summary",
+ ["Truncate the oldest messages blindly and hope nothing important was lost",
+  "Stop the run entirely because the window is nearly full",
+  "Keep appending new content until the request overflows and errors"],
+ "When a long run nears the context ceiling, compact the history into a summary and continue rather than truncating blindly.");
+
+Q("g",0,"sdlc-integration",
+ "A team wants the GitHub Copilot coding agent to fix a known bug. Which way of starting the work best fits the existing GitHub flow?",
+ "Assign the agent to the existing GitHub issue so it works on a branch and opens a pull request for review",
+ ["Have the agent edit files directly on the default branch and push when it is done",
+  "Paste the bug description into a chat and copy the agent's output into the codebase by hand",
+  "Let the agent email the proposed code change to the maintainer as a patch file"],
+ "Fit the coding agent into the existing issue, branch, and pull-request flow rather than bolting it on outside the process.");
+
+Q("g",0,"sdlc-integration",
+ "Your repository requires that all changes pass CI checks and a code review before merge. How should the coding agent's work be handled?",
+ "Its pull request runs the same CI checks and goes through the same review as any human contributor's",
+ ["The agent's pull request should skip CI because the agent already tested the code itself",
+  "The agent should merge its own pull request once the build is green to save reviewer time",
+  "The agent's branch should bypass branch protection rules since it is a trusted automation"],
+ "The coding agent's changes flow through the existing CI and review gates, not around them.");
+
+Q("g",0,"sdlc-integration",
+ "A developer wants the coding agent to add a feature described in a tracked issue. What is the most process-aligned way to capture and ship its work?",
+ "The agent opens a pull request linked to that issue so the change is tracked, reviewed, and merged normally",
+ ["The agent commits straight to main and closes the issue, leaving no pull request",
+  "The agent writes the code into a separate document outside the repository for later copying",
+  "The agent posts the full diff as an issue comment and lets a human recreate the files"],
+ "Route the agent's output through a linked pull request so it stays inside issue tracking and review.");
+
+Q("g",0,"sdlc-integration",
+ "Where should the coding agent's proposed changes first appear so the team's normal collaboration tools work on them?",
+ "On a feature branch surfaced as a pull request, where comments, reviews, and checks already operate",
+ ["In a private workspace the agent keeps to itself until the work is fully finished",
+  "Directly merged into the release branch so testers see it in the next build",
+  "As a downloadable zip attached to the issue for reviewers to inspect locally"],
+ "Surface the agent's work as a branch and pull request so existing review and CI tooling applies.");
+
+Q("g",0,"plan-validation",
+ "Before the coding agent starts editing files to refactor an authentication module, what is the cheapest way to catch a wrong direction?",
+ "Have the agent post its proposed plan and approach first, and review it before any code changes",
+ ["Let it edit everything, then review the final diff and revert if the direction was wrong",
+  "Skip planning since the agent will self-correct as the tests fail during the run",
+  "Ask it to make the change twice and compare the two outputs afterward"],
+ "Have the agent propose its plan and review it before it edits anything; that is the cheapest place to catch a wrong direction.");
+
+Q("g",0,"plan-validation",
+ "A coding agent is asked to migrate a data layer to a new ORM. A reviewer worries it will touch unrelated code. What should happen first?",
+ "The agent outlines which files and steps it intends to change, and the reviewer confirms the scope before edits",
+ ["The agent should begin editing immediately and the reviewer flags problems in the final pull request",
+  "The reviewer should wait until CI runs to discover what the agent actually changed",
+  "The agent should open one giant pull request so the reviewer sees the complete change at once"],
+ "Reviewing the agent's intended approach up front is cheaper than catching a wrong direction after edits land.");
+
+Q("g",0,"plan-validation",
+ "You hand the coding agent a vague refactor task and you are not sure it understood the goal. What practice surfaces a misunderstanding earliest?",
+ "Ask it to state its understanding and proposed steps, then correct the plan before it writes any code",
+ ["Let it run to completion and judge whether it understood from the resulting diff",
+  "Give it more autonomy so it can explore freely and figure the goal out on its own",
+  "Increase the context window so it can read more files before guessing the goal"],
+ "Validating the agent's stated plan up front is the cheapest place to catch a misunderstanding.");
+
+Q("g",0,"plan-validation",
+ "Why is reviewing the coding agent's proposed approach before it edits considered the cheapest checkpoint?",
+ "Correcting direction on a plan costs little, while reversing many committed file changes costs much more",
+ ["Because plans are always more accurate than the code the agent eventually writes",
+  "Because reviewing a plan lets you skip reviewing the resulting pull request entirely",
+  "Because the agent cannot make mistakes once a plan has been approved by a human"],
+ "Catching a wrong direction in the plan is far cheaper than unwinding edits already made.");
+
+Q("g",0,"autonomy-calibration",
+ "The coding agent can either bump a dev-only formatting config or rewrite the payment-processing module. How should its autonomy differ?",
+ "Allow more independence on the low-risk reversible formatting change; require tighter review on the payment rewrite",
+ ["Grant the same full autonomy for both since the agent is equally capable on each",
+  "Require the same heavy human sign-off on both to keep the process uniform",
+  "Give it the most freedom on the payment module because that work is the most valuable"],
+ "Autonomy is a dial set by consequence: looser for low-risk reversible work, tighter for high-stakes changes.");
+
+Q("g",0,"autonomy-calibration",
+ "A coding agent updates docs comments in one task and alters a database migration in another. What is the right autonomy posture?",
+ "Looser leash on the easily reverted doc edits; tighter checkpoints on the migration that is hard to undo",
+ ["Maximum autonomy on both, since reverting any change is always just a git revert away",
+  "Minimum autonomy on both, blocking the agent until a human writes the code itself",
+  "Autonomy should depend only on how long each task takes, not on its consequences"],
+ "Set autonomy by the consequence and reversibility of the change, not as a fixed switch.");
+
+Q("g",0,"autonomy-calibration",
+ "Which factor should most determine how much independence the coding agent is granted on a given task?",
+ "The blast radius and reversibility of the change if it goes wrong",
+ ["How confident the agent sounds in its own description of the work",
+  "How many lines of code the task is expected to add or remove",
+  "Whether the agent finished its previous unrelated task quickly"],
+ "Autonomy is a dial set by consequence and reversibility, not by tone, size, or speed.");
+
+Q("g",0,"autonomy-calibration",
+ "A coding agent is told to delete deprecated feature-flag code across the production service. Compared to a low-risk task, how should you calibrate it?",
+ "Tighten the leash: require explicit review of its plan and diff before anything merges, because the change is high-stakes",
+ ["Loosen the leash and let it auto-merge, since deletions are simpler than additions",
+  "Treat it identically to a typo fix because both are just edits to the same repository",
+  "Skip review entirely and rely on the next release to surface any problems it caused"],
+ "High-stakes, less-reversible work warrants a tighter leash than low-risk reversible work.");
+
+Q("g",0,"inspectable-artifacts",
+ "After the coding agent finishes a change, a reviewer wants to understand not just what changed but why. What makes the agent's work inspectable?",
+ "A session log of its reasoning plus a readable diff in a draft pull request the reviewer can read",
+ ["A single final commit on main with the message 'done', and no record of intermediate steps",
+  "A verbal summary the agent gives in chat, with the actual changes applied silently",
+  "A confidence score from the agent asserting the change is correct, without the diff"],
+ "The coding agent should work in the open: a session log, draft pull request, and readable diff make its reasoning and changes reviewable.");
+
+Q("g",0,"inspectable-artifacts",
+ "Why is having the coding agent open a draft pull request while it works preferable to it handing over only the finished result?",
+ "The draft lets reviewers watch the diff and reasoning take shape instead of treating the agent as a black box",
+ ["The draft makes the agent run faster because GitHub prioritizes draft pull requests",
+  "The draft automatically merges once checks pass, removing the need for any reviewer",
+  "The draft hides the intermediate commits so reviewers only see the polished version"],
+ "Working in the open through a draft pull request keeps the agent's changes and reasoning reviewable rather than opaque.");
+
+Q("g",0,"inspectable-artifacts",
+ "A coding agent extracted data and modified three files. What is the most reviewable form for that work to take?",
+ "A readable diff in a pull request, paired with a log explaining each change",
+ ["A compiled binary that already includes the changes, so reviewers can just run it",
+  "A claim in chat that all three files were updated correctly, with no diff shown",
+  "A direct push to the shared branch with the commits squashed and the log discarded"],
+ "Inspectable artifacts mean a readable diff and a reasoning trail, not a black-box result.");
+
+Q("g",0,"inspectable-artifacts",
+ "What is the main benefit of the coding agent recording a session log of the steps and reasoning behind its changes?",
+ "Reviewers can trace how it reached each change, turning a black box into a reviewable trail",
+ ["It guarantees the change is bug-free because the reasoning was written down",
+  "It replaces the need to read the actual code diff during review",
+  "It lets the agent skip opening a pull request since the log already exists"],
+ "A session log makes the agent's reasoning inspectable; it complements, not replaces, the diff and review.");
+
+Q("g",0,"agent-antipatterns",
+ "A coding agent starts editing files the instant it receives a task, with no stated plan. Which antipattern is this, and what is the fix?",
+ "Acting before planning; have it propose an approach for review before it edits",
+ ["Scope creep; restrict which directories the agent is allowed to read",
+  "Leaving no trail; require it to write a session log after finishing",
+  "Outrunning review; add a second reviewer to the pull request"],
+ "Acting before planning is a known antipattern; require a plan before edits.");
+
+Q("g",0,"agent-antipatterns",
+ "Asked to fix one failing test, the coding agent also reorganizes unrelated modules. Which failure shape is this?",
+ "Scope creep past the assigned task; the change should stay bounded to fixing that test",
+ ["Acting before planning, which is fixed by giving it more autonomy",
+  "Leaving no trail, which is fixed by squashing its commits together",
+  "Trusting the agent too little, which is fixed by removing the review step"],
+ "Scope creeping past the task is an antipattern to design out; keep the change bounded to the request.");
+
+Q("g",0,"agent-antipatterns",
+ "A team lets the coding agent merge its own pull requests with no human looking at the diff. Which antipattern does this represent?",
+ "Autonomy that outruns review; consequential merges should pass through human approval",
+ ["Acting before planning, solved by writing a longer initial prompt",
+  "Scope creep, solved by giving the agent a larger context window",
+  "Leaving no trail, solved by deleting the session log to reduce clutter"],
+ "Autonomy outrunning review is a known failure shape; keep a human checkpoint before merge.");
+
+Q("g",0,"agent-antipatterns",
+ "Which describes the 'no trail' antipattern that should be designed out of a coding agent's workflow?",
+ "It applies changes without a reviewable diff, log, or pull request showing what it did and why",
+ ["It produces a session log so detailed that reviewers stop reading it",
+  "It asks for human approval so often that the work slows down noticeably",
+  "It plans extensively before making any of the requested code changes"],
+ "Work that leaves no inspectable trail is an antipattern; the agent should work in the open.");
+
+Q("g",0,"success-criteria",
+ "Before assigning the coding agent an issue to add input validation, what most improves the odds of usable output?",
+ "Write clear acceptance criteria into the issue defining what 'done' means before the agent starts",
+ ["Leave the issue vague so the agent has freedom to interpret the task creatively",
+  "Assign the issue first and clarify what you wanted only after seeing the pull request",
+  "Add more reviewers to the pull request to compensate for the unclear request"],
+ "Clear acceptance criteria written into the issue up front turn a vague ask into reviewable, on-target work.");
+
+Q("g",0,"success-criteria",
+ "An issue handed to the coding agent says only 'make the API better'. Why does this tend to produce poor results?",
+ "A vague ask gives no measurable definition of done, so the agent's work cannot reliably match intent",
+ ["The agent works best with vague goals because they leave more room to be creative",
+  "Vague issues run faster, so the agent stops before producing anything useful",
+  "The agent will refuse any issue that does not name a specific file to edit"],
+ "A vague ask produces vague work; clear acceptance criteria are needed before the agent starts.");
+
+Q("g",0,"success-criteria",
+ "Which issue is best suited for the coding agent to deliver an on-target change without back-and-forth?",
+ "One stating the exact behavior, the files or endpoints affected, and how success will be verified",
+ ["One that simply says 'improve performance somewhere in the service'",
+  "One that lists a deadline but not what the change should actually do",
+  "One that links five related issues and asks the agent to figure out the rest"],
+ "Acceptance criteria spelling out expected behavior and verification let the agent hit the target.");
+
+Q("g",0,"success-criteria",
+ "What belongs in an issue's acceptance criteria so the coding agent's output can be judged objectively?",
+ "Specific, testable conditions the change must satisfy to be considered complete",
+ ["A general wish that the code be 'high quality' and 'production ready'",
+  "An estimate of how many commits the agent is expected to make",
+  "A note asking the agent to use its best judgment about what is needed"],
+ "Clear, testable acceptance criteria define done; vague aspirations do not.");
+
+Q("g",0,"human-checkpoints",
+ "The coding agent has prepared a change that alters production billing logic. How should it reach the main branch?",
+ "Through a pull request that requires human review and approval before it can be merged",
+ ["By the agent merging automatically once the CI build turns green",
+  "By pushing directly to main so the change ships without delay",
+  "By the agent approving its own pull request to keep the pipeline moving"],
+ "Consequential changes route through pull-request review and required approvals before merge.");
+
+Q("g",0,"human-checkpoints",
+ "A repository wants to guarantee no agent-authored change merges without a person signing off. Which GitHub mechanism enforces that?",
+ "Branch protection requiring a pull request with at least one approving review before merge",
+ ["Letting the agent push to a protected branch as long as CI passes",
+  "Trusting the agent's own statement that the change has been reviewed",
+  "Disabling pull requests so changes go straight onto the default branch"],
+ "Required pull-request approvals are the human checkpoint that gates consequential merges.");
+
+Q("g",0,"human-checkpoints",
+ "For a high-stakes change from the coding agent, where is the right place to insert the human decision to ship or not?",
+ "At pull-request review, where a maintainer approves or requests changes before merge",
+ ["After merge, by watching production and reverting if something breaks",
+  "Before the agent starts, by approving the issue and never reviewing the code",
+  "Nowhere, because required CI checks already make human review unnecessary"],
+ "Route consequential changes through pull-request review and required approvals before they merge.");
+
+Q("g",0,"human-checkpoints",
+ "Why require an approving review on the coding agent's pull request rather than relying on passing CI alone?",
+ "CI confirms the change builds and passes tests, but a human judges correctness, intent, and risk before merge",
+ ["CI cannot run on agent-authored pull requests, so a human must run the tests by hand",
+  "An approving review makes CI optional, so the team can turn the checks off",
+  "Human approval is only about etiquette and has no effect on whether code merges"],
+ "Required human approval is the checkpoint for consequential merges; it complements, not replaces, CI.");
+
+Q("g",1,"tool-selection",
+ "A coding agent's task is to fix a typo in a README. The maintainer is about to grant it permissions. Vendor-correct approach?",
+ "Grant only read and write access to that repository's contents, withholding deploy, secrets, and admin scopes it does not need",
+ ["Grant the agent organization-owner permissions so nothing blocks it mid-task",
+  "Give it write access to every repo so future tasks need no new grants",
+  "Attach a classic personal access token with full repo, workflow, and admin scopes"],
+ "Give the agent only the capabilities its task needs, no more.");
+
+Q("g",1,"tool-selection",
+ "An agent only needs to read open issues to summarize them. What capability set fits the least-privilege principle?",
+ "Read-only access to issues, with no write, no contents, and no Actions permissions",
+ ["Read and write to issues, pull requests, contents, and Actions, to be safe",
+  "Admin access to the repository so it can also close stale issues later",
+  "A token scoped to every repository the user can see"],
+ "Give the agent only the capabilities its task needs, no more.");
+
+Q("g",1,"tool-selection",
+ "You are configuring a fine-grained personal access token for an agent that updates a dependency file. Which scope choice is correct?",
+ "Enable only the Contents repository permission at write level, leaving all other permissions set to no access",
+ ["Enable all available repository permissions at write level for flexibility",
+  "Use a classic token because fine-grained tokens are too restrictive for agents",
+  "Grant the Administration permission so the agent can manage branch rules too"],
+ "Give the agent only the capabilities its task needs, no more.");
+
+Q("g",1,"tool-selection",
+ "An agent must comment on a pull request but never push code. The least-privilege grant is?",
+ "Pull request write permission only, with contents left at read or no access",
+ ["Contents write plus pull request write, since commenting might need a commit",
+  "Full repository write so the workflow never hits a permission error",
+  "Organization member management permission to tag reviewers"],
+ "Give the agent only the capabilities its task needs, no more.");
+
+Q("g",1,"mcp-integration",
+ "Your coding agent needs to read rows from a production Postgres database to generate a migration. How should it reach the database?",
+ "Connect it through a vetted MCP server that exposes the database, so the access goes through that defined interface",
+ ["Hardcode the database password in the prompt so the agent can connect directly",
+  "Have the agent shell out and install a random database CLI it found online",
+  "Paste a full table dump into the prompt and skip any live connection"],
+ "The coding agent reaches external systems through MCP servers.");
+
+Q("g",1,"mcp-integration",
+ "A task requires the agent to create tickets in an external issue tracker that is not GitHub. The vendor-recommended path is?",
+ "Configure an MCP server for that tracker and let the agent call its tools",
+ ["Ask the agent to screen-scrape the tracker's web UI with guessed selectors",
+  "Tell the agent to email the tracker's support team to file each ticket",
+  "Store the tracker API key in plain text in the repository's README"],
+ "The coding agent reaches external systems through MCP servers.");
+
+Q("g",1,"mcp-integration",
+ "You want the coding agent to query an internal microservice for live inventory data while it writes code. What connects them?",
+ "An MCP server that surfaces the microservice as tools the agent can invoke",
+ ["A copy of last quarter's inventory pasted into the system prompt",
+  "Giving the agent your personal SSH key to log into the service host",
+  "Letting the agent guess the API shape and call undocumented endpoints"],
+ "The coding agent reaches external systems through MCP servers.");
+
+Q("g",1,"mcp-integration",
+ "Which statement best describes the role of MCP servers for a GitHub coding agent?",
+ "They are the standardized way the agent connects to external systems and tools beyond the repository",
+ ["They are a replacement for branch protection rules on the default branch",
+  "They are a billing mechanism that meters how many commits the agent makes",
+  "They are required to run the unit tests inside a GitHub Actions workflow"],
+ "The coding agent reaches external systems through MCP servers.");
+
+Q("g",1,"mcp-allowlists",
+ "Your org wants the coding agent to use only two trusted MCP servers out of a dozen available. How should governance be set up?",
+ "Allow-list only the two vetted servers so the agent cannot reach any connector that was not explicitly approved",
+ ["Enable every MCP server by default and remove ones that misbehave later",
+  "Trust whatever MCP servers the agent decides to enable on its own",
+  "Disable allow-listing entirely because it slows the agent down"],
+ "Govern MCP by allow-listing only the servers and tools you have vetted.");
+
+Q("g",1,"mcp-allowlists",
+ "A new MCP server appears that no one on the team has reviewed. Under a sound MCP allow-list policy, what happens by default?",
+ "It stays unavailable to the agent until it is explicitly vetted and added to the allow-list",
+ ["It is automatically enabled because more tools make the agent more capable",
+  "It is enabled but logged, and reviewed only if something breaks",
+  "It overrides the existing allow-list since it is the newest connector"],
+ "Govern MCP by allow-listing only the servers and tools you have vetted.");
+
+Q("g",1,"mcp-allowlists",
+ "Even within an approved MCP server, you only trust some of its tools. Best practice?",
+ "Allow-list only the specific vetted tools, leaving the server's other tools unavailable",
+ ["Once the server is approved, automatically enable all of its tools",
+  "Let the agent enable any tool on the server as it sees fit at runtime",
+  "Approve the server but block it entirely if any single tool is risky"],
+ "Govern MCP by allow-listing only the servers and tools you have vetted.");
+
+Q("g",1,"mcp-allowlists",
+ "What is the core risk that MCP allow-listing is designed to reduce?",
+ "An unvetted connector exposing the agent to untrusted systems or tools you never reviewed",
+ ["The agent running out of context tokens during a long task",
+  "Pull requests merging before the CI pipeline finishes running",
+  "Branch protection rules being applied to the wrong branch"],
+ "Govern MCP by allow-listing only the servers and tools you have vetted.");
+
+Q("g",1,"repo-scoping",
+ "An agent is assigned to work in the 'billing-service' repository. How should its repository access be scoped?",
+ "Grant access to only the billing-service repository, not the rest of the organization",
+ ["Grant access to all repositories in the organization for convenience",
+  "Grant access to every repository the requesting user can read",
+  "Make the agent an organization owner so repo access is never an issue"],
+ "Grant the coding agent access to the one repository it works in, never the whole organization.");
+
+Q("g",1,"repo-scoping",
+ "When creating a fine-grained token for a single-repo agent task, which 'Repository access' setting is correct?",
+ "Select 'Only select repositories' and choose just the one repository the task touches",
+ ["Select 'All repositories' so the same token works for any future task",
+  "Select 'All repositories' but promise to delete the token afterward",
+  "Choose 'Only select repositories' and add every repo the team owns"],
+ "Grant the coding agent access to the one repository it works in, never the whole organization.");
+
+Q("g",1,"repo-scoping",
+ "A teammate suggests giving the coding agent org-wide read access so it can reference shared internal libraries. Vendor-correct response?",
+ "Keep access scoped to the one working repository and pull in shared code through approved dependencies, not broad org access",
+ ["Grant org-wide read access since reading is harmless",
+  "Grant org-wide write access so it can update the shared libraries too",
+  "Make the agent an org admin so it never needs another grant"],
+ "Grant the coding agent access to the one repository it works in, never the whole organization.");
+
+Q("g",1,"repo-scoping",
+ "Why does scoping a coding agent to a single repository matter for blast radius?",
+ "If the agent or its credentials are compromised, the damage is confined to that one repository",
+ ["It makes the agent run faster because there are fewer repos to scan",
+  "It is required before the CI pipeline will run any checks",
+  "It automatically rotates the agent's token after each commit"],
+ "Grant the coding agent access to the one repository it works in, never the whole organization.");
+
+Q("g",1,"branch-scope",
+ "A coding agent needs to implement a feature. Which branching approach keeps it safely confined?",
+ "Have it commit to its own dedicated working branch and open a pull request, never pushing to main directly",
+ ["Let it commit straight to main so changes are live immediately",
+  "Give it permission to force-push to the protected default branch",
+  "Have it push to whichever branch has the fewest protection rules"],
+ "Confine the agent to its own working branch so it cannot touch protected branches or main directly.");
+
+Q("g",1,"branch-scope",
+ "Branch protection on main blocks direct pushes. How should the coding agent's workflow respect this?",
+ "The agent works on a separate branch and proposes changes via pull request, leaving main protected",
+ ["Temporarily disable branch protection so the agent can push to main",
+  "Add the agent to the bypass list for the protected branch",
+  "Have the agent rename its branch to main to inherit no rules"],
+ "Confine the agent to its own working branch so it cannot touch protected branches or main directly.");
+
+Q("g",1,"branch-scope",
+ "Why is confining the agent to its own working branch a safety control?",
+ "Its changes stay isolated and reviewable, and protected branches like main remain untouched until a human approves the PR",
+ ["It lets the agent skip the CI pipeline since branches are not protected",
+  "It grants the agent admin rights over the repository's settings",
+  "It automatically merges the branch once tests pass with no review"],
+ "Confine the agent to its own working branch so it cannot touch protected branches or main directly.");
+
+Q("g",1,"branch-scope",
+ "An agent finishes its work on its feature branch. What is the correct next step, not a shortcut?",
+ "Open a pull request from its branch into main so the change can be reviewed and gated",
+ ["Fast-forward main to the feature branch tip without a pull request",
+  "Delete main and replace it with the feature branch",
+  "Push the feature branch's commits directly onto main to save a step"],
+ "Confine the agent to its own working branch so it cannot touch protected branches or main directly.");
+
+Q("g",1,"ci-integration",
+ "A coding agent has implemented a fix on its branch. How should its work enter the main codebase?",
+ "As a pull request that must pass the repository's CI checks before it can be merged",
+ ["By merging directly to main and letting CI run afterward",
+  "By bypassing required status checks since the agent already tested locally",
+  "By disabling the workflow so the merge is not blocked"],
+ "The agent's changes arrive as a pull request that must pass the pipeline's checks before merge.");
+
+Q("g",1,"ci-integration",
+ "The CI pipeline reports a failing test on the agent's pull request. Vendor-correct handling?",
+ "Treat the merge as blocked until the failing check passes, fixing the code rather than overriding the check",
+ ["Use admin privileges to merge over the failing required check",
+  "Delete the failing test so the check turns green",
+  "Mark the check as not required so the PR can merge as-is"],
+ "The agent's changes arrive as a pull request that must pass the pipeline's checks before merge.");
+
+Q("g",1,"ci-integration",
+ "Why route a coding agent's output through pull requests with required status checks?",
+ "It ensures every agent change is validated by the same automated pipeline before it reaches main",
+ ["It lets the agent skip human review entirely once checks exist",
+  "It replaces the need to scope the agent to a single repository",
+  "It allows the agent to push directly to protected branches"],
+ "The agent's changes arrive as a pull request that must pass the pipeline's checks before merge.");
+
+Q("g",1,"ci-integration",
+ "A repository requires code scanning and unit tests as status checks. How does the agent's pull request interact with them?",
+ "The pull request must pass both required checks before merge is allowed",
+ ["The agent can merge first and let the checks run on main",
+  "Required checks only apply to humans, so the agent's PR is exempt",
+  "The agent should remove the required checks to speed up the merge"],
+ "The agent's changes arrive as a pull request that must pass the pipeline's checks before merge.");
+
+Q("g",1,"error-handling",
+ "A tool the agent called returned a non-zero exit code partway through a task. Correct behavior?",
+ "Surface the failure clearly in the output so it can be diagnosed and acted on, rather than continuing silently",
+ ["Hide the error and report the task as successful anyway",
+  "Suppress all error output to keep the logs clean",
+  "Retry the same failing command forever without reporting anything"],
+ "Surface tool and command failures clearly so they can be acted on, never swallowed.");
+
+Q("g",1,"error-handling",
+ "The agent's build step fails with a compiler error. What should appear in its result?",
+ "The actual error message and which step failed, so a human or the agent can address the root cause",
+ ["A generic 'something went wrong' with the details stripped out",
+  "A success status, since the agent will try again later",
+  "Nothing, because surfacing errors might worry the reviewer"],
+ "Surface tool and command failures clearly so they can be acted on, never swallowed.");
+
+Q("g",1,"error-handling",
+ "Why is swallowing tool failures dangerous for a coding agent?",
+ "Hidden failures let a broken change look successful, so problems go unnoticed until they cause real damage",
+ ["It makes the CI pipeline run faster by skipping checks",
+  "It is required to keep the agent scoped to one repository",
+  "It automatically reverts the pull request that failed"],
+ "Surface tool and command failures clearly so they can be acted on, never swallowed.");
+
+Q("g",1,"error-handling",
+ "An MCP tool call times out while the agent is mid-task. Best handling?",
+ "Report the timeout explicitly so it is visible and actionable, instead of pretending the call succeeded",
+ ["Assume the call worked and proceed as if data was returned",
+  "Discard the error and mark the overall task complete",
+  "Loop the same call indefinitely with no surfaced status"],
+ "Surface tool and command failures clearly so they can be acted on, never swallowed.");
+
+Q("g",1,"rollback-recovery",
+ "A merged pull request from the agent introduced a regression in production. Fastest safe way to undo it on GitHub?",
+ "Use GitHub's revert pull request feature to create a new PR that reverses the merged changes",
+ ["Force-push to rewrite main's history and erase the bad commit",
+  "Delete the repository and restore it from an old clone",
+  "Edit the affected files in place on main with no record of the change"],
+ "Keep a way to undo so a bad change is not permanent.");
+
+Q("g",1,"rollback-recovery",
+ "An agent's branch was deleted but you realize you still need its commits. What recovery option does GitHub provide?",
+ "Restore the deleted branch from the repository's branches view, since GitHub retains it for a window",
+ ["Nothing can be done; deleted branches are gone instantly and forever",
+  "Recreate the work from memory because there is no restore path",
+  "Force-push main backward to somehow regenerate the branch"],
+ "Keep a way to undo so a bad change is not permanent.");
+
+Q("g",1,"rollback-recovery",
+ "Why keep revert and branch-restore options available for agent-driven changes?",
+ "So a bad change can be cleanly undone without destroying history, keeping recovery non-permanent",
+ ["So the agent can skip CI checks on its next pull request",
+  "So the agent gains organization-wide repository access",
+  "So failing tool calls are automatically hidden from reviewers"],
+ "Keep a way to undo so a bad change is not permanent.");
+
+Q("g",1,"escalation",
+ "The agent has tried three different fixes for a failing test and each made things worse. What should it do?",
+ "Stop and hand the problem back to a human reviewer with what it has learned, rather than continuing to thrash",
+ ["Keep retrying new variations indefinitely until something passes",
+  "Merge its best attempt over the failing check to make progress",
+  "Disable the failing test and declare the task complete"],
+ "When the agent is stuck or the fix is high-stakes, hand back to a human rather than thrash.");
+
+Q("g",1,"escalation",
+ "A task would require deleting a production database table to proceed. How should the agent handle this high-stakes action?",
+ "Pause and escalate to a human for approval rather than performing the destructive change on its own",
+ ["Perform the deletion since the task technically requires it",
+  "Grant itself broader permissions and proceed without asking",
+  "Retry the deletion repeatedly until it succeeds"],
+ "When the agent is stuck or the fix is high-stakes, hand back to a human rather than thrash.");
+
+Q("g",1,"escalation",
+ "The agent lacks a permission it needs and cannot complete the task. Vendor-correct response?",
+ "Surface the blocker and hand off to a human who can decide whether to grant access, instead of forcing a workaround",
+ ["Escalate its own token to organization-owner scope to get unblocked",
+  "Try random alternative commands until one bypasses the restriction",
+  "Mark the task done and quietly skip the blocked portion"],
+ "When the agent is stuck or the fix is high-stakes, hand back to a human rather than thrash.");
+
+Q("g",1,"escalation",
+ "Why is timely escalation a feature, not a failure, for a coding agent?",
+ "Handing a stuck or high-risk situation back to a human prevents wasted cycles and avoids irreversible mistakes",
+ ["Because escalating lets the agent merge without passing CI checks",
+  "Because escalation grants the agent access to more repositories",
+  "Because it automatically reverts every pull request it has opened"],
+ "When the agent is stuck or the fix is high-stakes, hand back to a human rather than thrash.");
+
+Q("g",1,"rollback-recovery",
+ "Before letting the agent merge a risky change, what makes that change safely recoverable if it misbehaves in production?",
+ "Knowing it can be reverted with a revert pull request and the branch restored, so the merge is not a one-way door",
+ ["Trusting that a risky change will not need to be undone once tests pass",
+  "Planning to hand-edit the files back on main if something breaks",
+  "Rewriting history with a force-push to erase the change entirely"],
+ "Keep a way to undo so a bad change is not permanent.");
+
+Q("g",2,"memory-types",
+ "A coding agent finishes its run and the conversation window is cleared. Next session it must still follow the team's commit-message format. Where should that rule live so the agent reads it every run?",
+ "In repository or custom instructions the agent loads at the start of every session",
+ ["Pasted into the final message of the previous session's context window",
+  "Only in a maintainer's memory, restated by hand when they remember",
+  "Inferred fresh each run from whatever files happen to be open"],
+ "Standing instructions belong in repository/custom instructions the agent reads every time, not in a context window that closes.");
+
+Q("g",2,"memory-types",
+ "Which of these is short-term context that disappears when the current agent run ends?",
+ "The chain of reasoning and tool outputs accumulated during this single run's window",
+ ["The repository instructions file checked into the repo",
+  "An open issue tracking the feature's acceptance criteria",
+  "A design doc committed under docs/ in the default branch"],
+ "Short-term context is this run's working window; it is gone when the session closes.");
+
+Q("g",2,"memory-types",
+ "A maintainer wants a fact available to the agent across many future runs and to other contributors. Which store fits 'external records' rather than instructions or short-term context?",
+ "A committed document or tracked issue that persists in the repository",
+ ["The current run's scratch reasoning",
+  "The unsaved buffer of the agent's active turn",
+  "A one-off sentence in this prompt that is never written down"],
+ "External records are durable artifacts in the repo; they outlive any single run's window.");
+
+Q("g",2,"memory-types",
+ "Why are repository (custom) instructions better than re-typing the same guidance into each prompt?",
+ "The agent automatically loads them every session, so the standing guidance is applied consistently without manual repetition",
+ ["They expand the model's short-term context window size",
+  "They are encrypted, unlike prompts",
+  "They let the agent skip reading the codebase entirely"],
+ "Standing instructions are read every run by design; prompts are short-term and must be retyped.");
+
+Q("g",2,"memory-hygiene",
+ "The repository instructions still tell the agent to deploy via a CI workflow that was deleted last month. What is the correct fix?",
+ "Update the instructions to reflect the current workflow so the agent stops acting on a process that no longer exists",
+ ["Leave the stale step and tell the agent to ignore it each run",
+  "Delete the instructions file entirely so nothing is enforced",
+  "Add a second contradicting step and let the agent pick one"],
+ "Keep stored instructions current: correct or prune stale guidance so the agent acts on today's reality.");
+
+Q("g",2,"memory-hygiene",
+ "Over time a project's instructions file has grown to dozens of rules, several contradicting each other after a refactor. Best practice?",
+ "Prune the obsolete rules and reconcile the contradictions so the remaining guidance is accurate and consistent",
+ ["Keep every rule ever added as a historical record for the agent to weigh",
+  "Move the contradictions into issues and keep them in the instructions too",
+  "Tell the agent to follow whichever rule appears first"],
+ "Memory hygiene means pruning the stale and correcting the wrong, not accumulating contradictions.");
+
+Q("g",2,"memory-hygiene",
+ "A note in the agent's standing instructions references an API key variable that was renamed. Reviews keep failing because the agent uses the old name. What addresses the root cause?",
+ "Correct the instruction to the new variable name so the stored guidance matches the current code",
+ ["Manually fix each pull request the agent opens, leaving the note unchanged",
+  "Disable code review so the failures stop appearing",
+  "Add a comment apologizing for the old name without changing it"],
+ "Fix the stored record itself; an agent acting on wrong notes keeps repeating the error.");
+
+Q("g",2,"memory-hygiene",
+ "When is the right moment to revise repository instructions that describe the build and test commands?",
+ "Whenever those commands change, so the stored guidance never lags behind the actual project",
+ ["Only once a year on a fixed schedule regardless of changes",
+  "Never, because instructions should be frozen after the first commit",
+  "Only after the agent has failed several runs using the outdated commands"],
+ "Keep instructions current as the world changes, so the agent never acts on outdated process.");
+
+Q("g",2,"durable-artifacts",
+ "An agent completes a multi-day feature but the session is about to close. The acceptance criteria and open questions exist only in the chat. What preserves them?",
+ "Write the criteria and open questions into a tracked issue or the pull request description",
+ ["Increase the context window so the chat can stay open longer",
+  "Rely on the agent remembering them in a later, unrelated session",
+  "Paste them into a temporary scratch buffer that is discarded at session end"],
+ "Durable artifacts (issues, PRs, docs) hold state outside the model so nothing important lives only in a window that closes.");
+
+Q("g",2,"durable-artifacts",
+ "Which approach keeps a long task's progress recoverable even if every agent session and chat is lost?",
+ "Record decisions and remaining work in pull requests, issues, and committed docs",
+ ["Keep all decisions in the active context window of the current run",
+  "Store progress only in the agent's transient reasoning",
+  "Trust that re-prompting will reconstruct the exact prior decisions"],
+ "State that matters belongs in durable repo artifacts, not a context window that will close.");
+
+Q("g",2,"durable-artifacts",
+ "A team wants the rationale behind an architectural choice to outlast the agent run that made it. Where should it go?",
+ "Into a committed design doc or the pull request body, where it persists in the repository",
+ ["Into the agent's short-term reasoning for that run only",
+  "Into a verbal note that is never written down",
+  "Into the prompt of the next unrelated task"],
+ "Hold important state in durable artifacts so it survives beyond any single context window.");
+
+Q("g",2,"durable-artifacts",
+ "Why is a project board (with issues as cards) a better place for task status than the agent's running context?",
+ "It persists outside the model, so status survives session end and is visible to everyone",
+ ["It makes the model's context window larger",
+  "It hides the status from other contributors for security",
+  "It lets the agent skip writing pull requests"],
+ "Project boards and issues are durable shared records; context windows are transient.");
+
+Q("g",2,"resume-state",
+ "An agent's long task is paused overnight. The next morning it must continue without redoing finished steps. What makes that possible?",
+ "Its progress was recorded in durable artifacts, so it can read what is done and pick up where it left off",
+ ["The context window from yesterday is automatically restored byte-for-byte",
+  "The agent re-runs every step from scratch to be safe",
+  "It guesses which steps it likely finished and skips those"],
+ "A session can resume because progress is recorded; the agent reads it rather than redoing finished work.");
+
+Q("g",2,"resume-state",
+ "To let a coding-agent session be paused and picked back up cleanly, what should the agent do as it completes each subtask?",
+ "Record the completion in a durable place such as commits, the pull request, or a checklist in the issue",
+ ["Keep the only record of completion in the live session memory",
+  "Avoid writing anything down until the entire task is finished",
+  "Delete intermediate work so resume starts fresh"],
+ "Recording progress as you go is what makes resume possible without repeating finished work.");
+
+Q("g",2,"resume-state",
+ "A resumed agent session re-implements a function it had already merged earlier, wasting effort. What likely went wrong?",
+ "The completed work was not recorded where the resumed session could see it, so it could not tell the step was done",
+ ["The context window was simply too small to hold the function",
+  "Resuming always requires redoing all prior work by design",
+  "The model forgot the programming language overnight"],
+ "Resume relies on recorded progress; without it, the agent cannot know what is already finished.");
+
+Q("g",2,"resume-state",
+ "Which practice best supports stopping and later resuming a multi-step agent task?",
+ "Track the steps as a checklist in the issue or PR and check them off as each is verified done",
+ ["Hold the step list only in the prompt of the first run",
+  "Rely on the agent's reasoning trace, which clears at session end",
+  "Re-derive the step list from scratch on every resume"],
+ "A persisted checklist lets a paused session resume from recorded progress, not from zero.");
+
+Q("g",2,"context-drift",
+ "Halfway through a long run, the agent starts adding features no one asked for and loses the original goal. What is the recommended counter?",
+ "Re-state the task and acceptance criteria, then trim irrelevant context so the goal stays in focus",
+ ["Let it keep going since longer runs always converge eventually",
+  "Raise the temperature so it explores more options",
+  "Clear all memory of the task and start with a blank prompt"],
+ "Counter drift by re-stating the goal, summarizing deliberately, and trimming noise before the window fills.");
+
+Q("g",2,"context-drift",
+ "An agent's window is filling with old tool output, and its later answers are wandering off-topic. Best mitigation?",
+ "Summarize what matters so far and remove stale noise so the remaining goal-relevant context stays prominent",
+ ["Keep every byte of prior output to avoid losing information",
+  "Switch to a different unrelated task to reset focus",
+  "Ask the same question repeatedly until it answers correctly"],
+ "Trim noise and summarize deliberately before the window fills to keep the agent on its goal.");
+
+Q("g",2,"context-drift",
+ "During a lengthy refactor the agent gradually changes its interpretation of the requirements. What deliberate step keeps it aligned?",
+ "Periodically re-anchor to the written requirements and confirm the current plan still matches them",
+ ["Trust the most recent interpretation as the correct one",
+  "Avoid re-reading the requirements to save context space",
+  "Let each step redefine the requirements as it sees fit"],
+ "Re-stating the task at intervals counters the slow wander away from the original goal.");
+
+Q("g",2,"context-drift",
+ "Why summarize earlier progress into a concise note rather than carrying the full transcript forward in a long run?",
+ "A deliberate summary keeps the key goal and decisions salient while freeing the window of low-value noise",
+ ["Summaries make the model run at a higher token limit",
+  "The full transcript is required for the agent to function at all",
+  "Summarizing permanently deletes the goal from every record"],
+ "Deliberate summarizing plus trimming noise keeps the agent focused as the window fills.");
+
+Q("g",2,"shared-state",
+ "Two agents and a human are working the same feature, each keeping their own private notes. They keep duplicating and undoing each other's work. What fixes the coordination?",
+ "Coordinate through one shared record such as the issue, project board, or branch, instead of private divergent notes",
+ ["Have each participant keep more detailed private notes",
+  "Let whoever pushes last overwrite the others",
+  "Stop writing anything down and rely on memory"],
+ "Collaborators coordinate through one shared record, not private, divergent memories.");
+
+Q("g",2,"shared-state",
+ "A second agent needs to know what the first already finished on a shared task. Where should that status live?",
+ "In a shared, durable place both can read, like the issue, pull request, or project board",
+ ["In the first agent's private session context only",
+  "In a direct message that is never linked to the work",
+  "In each agent's separate, unsynced local notes"],
+ "Shared state means one record everyone reads, so collaborators stay coordinated.");
+
+Q("g",2,"shared-state",
+ "Several contributors and an agent disagree about the current task status because each tracked it differently. What practice prevents this?",
+ "Maintain a single source of truth on the project board or issue that everyone updates",
+ ["Let each contributor maintain a personal status list",
+  "Decide status by whoever speaks most recently in chat",
+  "Keep status only in the agent's transient memory"],
+ "One shared record is the source of truth; divergent private memories cause conflict.");
+
+Q("g",2,"shared-state",
+ "How do collaborating agents avoid clobbering each other's code changes on the same feature?",
+ "Coordinate through shared artifacts like a branch and pull request, where changes are visible and merged deliberately",
+ ["Each agent works in private with no visible branch or PR",
+  "Whichever agent finishes first force-pushes over the others",
+  "They keep their changes in separate local copies they never share"],
+ "Shared state via branches and PRs lets collaborators coordinate instead of overwriting each other.");
+
+Q("g",3,"output-validation",
+ "The Copilot coding agent opens a pull request claiming it fixed a failing endpoint. Before you merge, the vendor-correct way to confirm the work is done?",
+ "Check the PR against the issue's acceptance criteria and confirm the repository's CI tests pass on its branch",
+ ["Merge it because the agent reported the task as complete",
+  "Approve it on the basis that the diff is small and readable",
+  "Trust it since the agent had access to the full repository"],
+ "Validate the agent's result against the acceptance criteria and tests before accepting it.");
+
+Q("g",3,"output-validation",
+ "An agent-generated PR adds a new function but you notice the repository has no test covering it. Vendor-correct response before accepting?",
+ "Require a test that exercises the new behavior and confirm it passes, so the result is validated against concrete criteria",
+ ["Accept it; reviewing the code by eye is equivalent to testing it",
+  "Accept it and open a follow-up issue to add tests someday",
+  "Re-run the agent with a longer prompt instead of testing"],
+ "Validate the agent's result against the acceptance criteria and tests before accepting it.");
+
+Q("g",3,"output-validation",
+ "The agent says it implemented a feature, but its PR's CI run shows a red check on the test job. Correct conclusion?",
+ "The work is not validated; failing required checks mean the result does not meet acceptance criteria yet",
+ ["The feature is done because the agent summarized it as complete",
+  "The red check is cosmetic since the code compiles locally for the agent",
+  "Merge anyway and let a later PR fix whatever the failing test means"],
+ "Validate the agent's result against the acceptance criteria and tests before accepting it.");
+
+Q("g",3,"output-validation",
+ "You delegated a bug fix to the coding agent. What single step best confirms the fix actually resolves the reported bug?",
+ "Run the failing reproduction as a test and confirm it now passes while the rest of the suite stays green",
+ ["Read the agent's natural-language explanation of why it should work",
+  "Count the number of files changed as a proxy for thoroughness",
+  "Check that the PR description mentions the issue number"],
+ "Validate the agent's result against the acceptance criteria and tests before accepting it.");
+
+Q("g",3,"eval-signals",
+ "A team wants to know whether the Copilot coding agent is genuinely helping over time, not just whether one PR looked good. Best basis for that judgment?",
+ "Track measurable signals across runs, such as the merge rate of its PRs, how often reviews request changes, and CI pass rates",
+ ["Ask one engineer for their overall impression of the agent",
+  "Count how many pull requests the agent opened regardless of outcome",
+  "Judge it by the length and confidence of its PR descriptions"],
+ "Watch the measures that show how the agent is really doing, not a single gut feeling.");
+
+Q("g",3,"eval-signals",
+ "Which combination of signals most reliably indicates the agent's output quality over many tasks?",
+ "Pull-request merge versus rejection outcomes, code review change-request frequency, and CI/test pass rates",
+ ["The total token count the agent consumed per task",
+  "How quickly the agent produced its first draft",
+  "The number of comments the agent left on its own PR"],
+ "Watch the measures that show how the agent is really doing, not a single gut feeling.");
+
+Q("g",3,"eval-signals",
+ "Over a month, the agent's PRs increasingly get 'changes requested' on review and fewer get merged. What does this trend tell you?",
+ "Output quality is degrading on a measurable signal, so it warrants investigation rather than continued trust",
+ ["Nothing actionable, since review feedback is subjective noise",
+  "The agent is fine because it is still opening the same number of PRs",
+  "Reviewers should simply approve faster to fix the merge rate"],
+ "Watch the measures that show how the agent is really doing, not a single gut feeling.");
+
+Q("g",3,"eval-signals",
+ "A manager judges the agent solely on one PR that looked great in a demo. Why is that a weak evaluation?",
+ "A single favorable case is anecdote; real performance shows up in measured outcomes across many runs",
+ ["One good PR proves the agent will always perform well",
+  "Demos are the most representative sample of real workloads",
+  "Aggregate metrics are less trustworthy than a memorable example"],
+ "Watch the measures that show how the agent is really doing, not a single gut feeling.");
+
+Q("g",3,"automated-scanning",
+ "You want a safety net that catches security vulnerabilities in agent-authored pull requests before they merge, beyond human eyes. GitHub-native approach?",
+ "Enable code scanning with CodeQL so analysis runs on the PR and surfaces vulnerabilities as checks",
+ ["Rely on reviewers to manually spot every injection or unsafe pattern",
+  "Trust that the agent would not introduce a vulnerability",
+  "Run the application once and assume no crash means it is secure"],
+ "Let tools like code scanning and CodeQL catch security and quality flaws a human reviewer would skim past.");
+
+Q("g",3,"automated-scanning",
+ "What does GitHub code scanning with CodeQL actually do when wired into a repository's pull-request workflow?",
+ "It statically analyzes the code for security and quality issues and reports findings as alerts and PR checks",
+ ["It rewrites the agent's code automatically to remove all bugs",
+  "It only counts lines changed and flags large diffs",
+  "It replaces the need for any unit or integration tests"],
+ "Let tools like code scanning and CodeQL catch security and quality flaws a human reviewer would skim past.");
+
+Q("g",3,"automated-scanning",
+ "An agent's PR introduces a SQL query built from unsanitized input. A reviewer skims past it. What best prevents this from merging?",
+ "A CodeQL code-scanning alert flagging the injection risk as a failing check on the pull request",
+ ["A longer review checklist that reviewers read more carefully",
+  "Increasing the agent's token budget so it writes safer code",
+  "Asking the agent to confirm in prose that its code is secure"],
+ "Let tools like code scanning and CodeQL catch security and quality flaws a human reviewer would skim past.");
+
+Q("g",3,"automated-scanning",
+ "Why pair automated scanning with human review for agent-generated code rather than relying on review alone?",
+ "Tools systematically catch security and quality flaws that a human reviewer can easily skim past",
+ ["Automated scanning makes human review entirely unnecessary",
+  "Humans never miss vulnerabilities, so scanning is purely decorative",
+  "Scanners are only useful for formatting and style preferences"],
+ "Let tools like code scanning and CodeQL catch security and quality flaws a human reviewer would skim past.");
+
+Q("g",3,"trace-analysis",
+ "The Copilot coding agent's PR is wrong and you need to know where it went off the rails. Where do you look first?",
+ "The agent's session logs in the Actions run, reading its steps and tool calls to find where the failure originated",
+ ["The final diff alone, guessing the cause from the surface output",
+  "The issue title, assuming the prompt must have been bad",
+  "A fresh re-run, hoping the next attempt simply succeeds"],
+ "Read the agent's run, its logs and steps and tool calls, to see where a failure actually originated.");
+
+Q("g",3,"trace-analysis",
+ "An agent committed code that references a file that does not exist. The Actions logs show it ran a search that returned nothing, then proceeded anyway. What did tracing reveal?",
+ "The failure originated when the agent acted on an empty search result instead of stopping, visible in its run steps",
+ ["Nothing, since logs cannot show what the agent did internally",
+  "That the model weights are corrupted and must be replaced",
+  "That the repository itself is broken, unrelated to the agent"],
+ "Read the agent's run, its logs and steps and tool calls, to see where a failure actually originated.");
+
+Q("g",3,"trace-analysis",
+ "Two engineers debate why the agent's change broke the build. One guesses from the diff; the other opens the agent's run logs. Which approach is vendor-correct?",
+ "Reading the run logs and tool-call sequence, because it shows where the failure actually started rather than guessing",
+ ["Guessing from the diff, since the surface output implies the cause",
+  "Asking the agent to re-explain its reasoning after the fact",
+  "Comparing the diff to an unrelated PR for stylistic clues"],
+ "Read the agent's run, its logs and steps and tool calls, to see where a failure actually originated.");
+
+Q("g",3,"trace-analysis",
+ "In the agent's Actions session log you see it called the test tool, got a clear failure message, then ignored it and opened the PR. What is the value of having read the trace?",
+ "It pinpoints the exact step where behavior diverged, so you fix the real cause instead of inferring from the end result",
+ ["It proves logs are unnecessary because the PR already showed a problem",
+  "It tells you the model needs a completely different architecture",
+  "It confirms you should always just rerun until it works"],
+ "Read the agent's run, its logs and steps and tool calls, to see where a failure actually originated.");
+
+Q("g",3,"root-cause",
+ "Tracing showed the agent edited the wrong module. You found it was working from an outdated assumption about the project's folder layout. What is the root cause to name?",
+ "Stale or wrong context: the agent operated on out-of-date information about the repository structure",
+ ["Bad luck that will not recur, so no cause needs naming",
+  "The reviewer was too slow, which caused the wrong edit",
+  "The programming language was a poor fit for the task"],
+ "Name why it failed, flawed reasoning, a misused tool, or stale context, because the same root reappears until named and addressed.");
+
+Q("g",3,"root-cause",
+ "The agent repeatedly produced a fix that passed locally but failed in CI because it kept calling a deprecated build command that errors in the pipeline. Root cause?",
+ "A misused or broken tool: the agent invoked a build command that does not work in the real environment",
+ ["The CI servers are simply too slow for the agent",
+  "The agent's reasoning was perfect and the failure is unexplainable",
+  "Stale context about an unrelated feature caused the build error"],
+ "Name why it failed, flawed reasoning, a misused tool, or stale context, because the same root reappears until named and addressed.");
+
+Q("g",3,"root-cause",
+ "Why does identifying the root cause of an agent failure matter, rather than just patching the one bad PR?",
+ "The same root cause will keep producing failures until it is named and addressed at its source",
+ ["Naming the cause is paperwork that has no effect on future runs",
+  "Patching one PR permanently prevents all related failures",
+  "Root causes are unknowable, so effort is better spent retrying"],
+ "Name why it failed, flawed reasoning, a misused tool, or stale context, because the same root reappears until named and addressed.");
+
+Q("g",3,"root-cause",
+ "The agent confidently concluded a function was unused and deleted it, but the trace shows its reasoning ignored a dynamic call site. Which root-cause category fits?",
+ "Flawed reasoning: the agent drew an incorrect conclusion from the evidence it had",
+ ["A broken tool, even though every tool returned correct results",
+  "Stale context, even though the repository information was current",
+  "An environment outage unrelated to the agent's logic"],
+ "Name why it failed, flawed reasoning, a misused tool, or stale context, because the same root reappears until named and addressed.");
+
+Q("g",3,"instruction-tuning",
+ "You discovered the agent keeps adding code without matching tests, and you traced it to a recurring habit. Vendor-correct way to stop it recurring?",
+ "Add a rule to the repository custom instructions requiring a passing test for every code change",
+ ["Manually remind the agent in the prompt of every single future task",
+  "Reject each PR by hand forever without changing any guidance",
+  "Disable the agent entirely so the problem cannot happen again"],
+ "Feed what you learn back into the agent's standing instructions so a known failure stops recurring.");
+
+Q("g",3,"instruction-tuning",
+ "A retrospective found the agent repeatedly used the wrong package manager for this repo. Where should that lesson be encoded so the agent stops repeating it?",
+ "In the repository custom instructions, stating which package manager and commands this project uses",
+ ["In a private note the maintainer keeps but never shares with the agent",
+  "Only in the closing comment of the one PR where it happened",
+  "Nowhere, since the agent will eventually infer it on its own"],
+ "Feed what you learn back into the agent's standing instructions so a known failure stops recurring.");
+
+Q("g",3,"instruction-tuning",
+ "What is the point of repository custom instructions in the loop of improving an agent over time?",
+ "They persist learned guidance so a known, recurring failure mode is prevented on future tasks automatically",
+ ["They are a one-time setup that cannot be updated after creation",
+  "They replace the need to review the agent's pull requests at all",
+  "They only affect chat suggestions, never the coding agent's work"],
+ "Feed what you learn back into the agent's standing instructions so a known failure stops recurring.");
+
+Q("g",3,"instruction-tuning",
+ "After several runs, you notice the agent keeps ignoring the project's required commit-message format. Most durable fix?",
+ "Document the required commit-message format in the repository custom instructions so the agent follows it on every run",
+ ["Fix the message by hand after each PR and move on",
+  "Add the format only to one specific prompt and reuse that prompt",
+  "Accept that commit messages will always be inconsistent"],
+ "Feed what you learn back into the agent's standing instructions so a known failure stops recurring.");
+
+Q("g",3,"tool-misuse",
+ "The agent keeps reaching for a generic shell command to search code when a purpose-built search tool exists, and it often gets noisy, wrong results. Best source-level fix?",
+ "Improve the tool guidance and descriptions so the agent reliably picks the right search tool for the job",
+ ["Tell the agent in chat to try harder each time it searches",
+  "Accept the noisy results since the agent eventually finds something",
+  "Increase the agent's token limit so it can wade through the noise"],
+ "When the agent repeatedly reaches for the wrong tool, fix it at the source with clearer descriptions, a tighter tool set, and better guidance.");
+
+Q("g",3,"tool-misuse",
+ "An agent has access to many overlapping tools and frequently calls the wrong one with malformed arguments. Which change attacks the root of the misuse?",
+ "Tighten the tool set and clarify each tool's description and expected inputs so the right one is obvious",
+ ["Leave all tools available and hope the agent guesses correctly",
+  "Add even more tools so the agent has more options to choose from",
+  "Retry the same task repeatedly until a call happens to succeed"],
+ "When the agent repeatedly reaches for the wrong tool, fix it at the source with clearer descriptions, a tighter tool set, and better guidance.");
+
+Q("g",3,"tool-misuse",
+ "Traces show the agent calling a deployment tool when the task only required running tests. What is the vendor-correct durable remedy?",
+ "Constrain the available tools and sharpen guidance so the agent only reaches for tools appropriate to the task",
+ ["Punish the agent in the prompt and otherwise leave the tools unchanged",
+  "Remove all tools so the agent must work with none",
+  "Ignore it, since calling extra tools is harmless overhead"],
+ "When the agent repeatedly reaches for the wrong tool, fix it at the source with clearer descriptions, a tighter tool set, and better guidance.");
+
+Q("g",3,"tool-misuse",
+ "The agent calls a working tool but consistently passes it badly formed parameters. Where is the most effective place to fix repeated tool misuse?",
+ "At the source: clearer tool descriptions and input guidance so the agent calls the tool correctly",
+ ["Only in a manual correction after each failed call",
+  "By assuming the tool itself is broken and replacing it",
+  "By telling the agent to simply avoid using tools entirely"],
+ "When the agent repeatedly reaches for the wrong tool, fix it at the source with clearer descriptions, a tighter tool set, and better guidance.");
+
+Q("g",4,"multi-agent-orchestration",
+ "You want to ship a feature that spans three independent issues. You assign Copilot coding agent to all three at once with no coordination, and they overlap and step on each other. What is the GitHub-recommended way to organize this?",
+ "Have a lead (you or a coordinating agent) assign and direct each agent to a specific scoped issue, rather than letting agents self-organize",
+ ["Let the three agents negotiate among themselves which issue each takes",
+  "Assign all three issues to a single agent run and hope it splits the work",
+  "Open one giant issue containing all three tasks and assign every agent to it"],
+ "A lead dispatches and directs agents across discrete issues; agents do not self-organize into chaos.");
+
+Q("g",4,"multi-agent-orchestration",
+ "A team lead has a backlog of well-scoped bug issues and wants Copilot coding agent to take several of them in parallel. What is the supported dispatch model on GitHub?",
+ "Assign the Copilot coding agent to each issue individually so each runs as its own directed task",
+ ["Tag every issue with the same label and let the agents claim work first-come-first-served",
+  "Paste all the issue numbers into one comment and ask one agent to do whatever it decides",
+  "Disable issue assignment and let agents poll the repository for anything that looks broken"],
+ "A lead directs agents by assigning each to a specific issue; work is dispatched, not improvised.");
+
+Q("g",4,"multi-agent-orchestration",
+ "Across a sprint you need multiple agent runs coordinated toward one release goal. Who or what should hold responsibility for breaking the goal into assignments?",
+ "A single coordinating lead breaks the goal into scoped issues and assigns agents to them",
+ ["Each agent independently decides what part of the release it owns",
+  "Whichever agent finishes first picks up the next undefined chunk of work",
+  "The CI pipeline randomly distributes uncategorized work to idle agents"],
+ "One lead owns decomposition and assignment; directed dispatch beats agent self-organization.");
+
+Q("g",4,"multi-agent-orchestration",
+ "Two stakeholders each independently assign Copilot coding agent to overlapping issues, and the agents duplicate effort. What organizational fix matches GitHub's coordination model?",
+ "Route assignments through a single lead who scopes issues so each agent gets distinct, non-overlapping work",
+ ["Let both agents continue and pick the better PR at random afterward",
+  "Increase the number of agents so the overlap averages out",
+  "Have the agents message each other mid-run to renegotiate scope"],
+ "A lead coordinates assignment to prevent overlap; agents are directed, not left to self-organize.");
+
+Q("g",4,"agent-isolation",
+ "When Copilot coding agent works on an issue, where does its code work actually happen?",
+ "In its own isolated, ephemeral development environment using GitHub Actions, where it creates and pushes to its own branch",
+ ["Directly on the repository default branch so changes apply immediately",
+  "In your local working copy on your laptop in real time",
+  "On a shared branch that every concurrent agent commits to together"],
+ "Each agent gets its own firewalled workspace and branch so work cannot silently corrupt another's.");
+
+Q("g",4,"agent-isolation",
+ "You run two Copilot coding agents on two different issues at the same time. Why is concurrent work safe by design?",
+ "Each agent operates in a separate isolated environment and commits to its own branch, so neither can overwrite the other's in-progress work",
+ ["Because GitHub locks the whole repository until the first agent finishes",
+  "Because both agents share one environment but take turns committing",
+  "Because the second agent waits and only starts once the first PR merges"],
+ "Per-agent environments and branches firewall the work so parallel runs do not collide.");
+
+Q("g",4,"agent-isolation",
+ "A security reviewer asks how the Copilot coding agent's runtime is constrained while it works. What is accurate about its environment?",
+ "It runs in an isolated environment with a configurable firewall that limits its network access during the run",
+ ["It runs with unrestricted internet access and full write access to every repository branch",
+  "It runs on the reviewer's own machine with their credentials",
+  "It runs inside the production deployment so it can self-test live"],
+ "The agent works in a firewalled, isolated workspace, not with open access to everything.");
+
+Q("g",4,"agent-isolation",
+ "You want the agent's experimental changes kept away from your protected default branch until reviewed. How does the Copilot coding agent handle this by default?",
+ "It pushes its changes to a dedicated branch and opens a pull request, never committing straight to the default branch",
+ ["It commits directly to the default branch and opens an issue to flag it",
+  "It edits files in place on whatever branch you currently have checked out",
+  "It force-pushes over the default branch and relies on you to revert if wrong"],
+ "Work lands on the agent's own branch behind a PR, isolated from the protected base branch.");
+
+Q("g",4,"multi-agent-conflict",
+ "Two Copilot coding agents edited the same file on separate branches, and now their pull requests conflict. What is the correct way to handle this?",
+ "Resolve the merge conflict deliberately in the pull request before merging, reconciling both sets of changes",
+ ["Merge both PRs without looking and let the last write win",
+  "Delete one PR unread so the other merges cleanly",
+  "Force-merge one branch over the other and discard the diff silently"],
+ "Conflicting changes are reconciled openly in the PR, never blind-merged.");
+
+Q("g",4,"multi-agent-conflict",
+ "While reviewing two agent PRs, you notice both implemented the same helper function in slightly different ways. What should you do?",
+ "Recognize the duplicated work and consolidate to a single implementation before merging, cutting the redundant one",
+ ["Merge both and leave two copies of the function in the codebase",
+  "Pick whichever PR was opened first and ignore the content of the other",
+  "Merge both and open a follow-up issue for some future agent to maybe clean up"],
+ "Duplicated work is caught in review and cut; you do not merge redundant copies.");
+
+Q("g",4,"multi-agent-conflict",
+ "An agent's pull request branch has fallen behind the base branch and now reports conflicts. What is the supported, transparent way to clear them?",
+ "Bring the branch up to date and resolve the conflicts in the open, for example via the PR conflict editor or by re-running the agent on the rebased branch",
+ ["Click merge anyway and let GitHub overwrite the base branch with the stale branch",
+  "Turn off branch protection so the conflicting branch can merge unchecked",
+  "Squash the history so the conflict markers disappear from view"],
+ "Conflicts are reconciled visibly on an up-to-date branch, not bypassed.");
+
+Q("g",4,"multi-agent-conflict",
+ "You assigned the same issue to two agents by mistake and both opened PRs solving it. What is the right resolution?",
+ "Review both, keep the better single solution, and close the duplicate so only one change merges",
+ ["Merge both PRs to be safe and reconcile the duplicate logic later in production",
+  "Merge whichever PR has more commits, assuming more work means better",
+  "Leave both open indefinitely so future agents can choose"],
+ "Duplicate solutions are caught and one is cut; you never blind-merge both.");
+
+Q("g",4,"audit-artifacts",
+ "An organization owner needs to confirm whether the Copilot coding agent feature was enabled, and by whom, last quarter. Where does GitHub record this?",
+ "In the audit log, which records administrative and configuration actions including who performed them and when",
+ ["Only in the memory of the person who flipped the setting",
+  "In the README of the repository as a manual note",
+  "Nowhere; enablement changes are not tracked by GitHub"],
+ "Actions are recorded in audit logs so who-did-what stays recoverable.");
+
+Q("g",4,"audit-artifacts",
+ "After an agent run, you want to inspect exactly what steps the agent took and what commands ran during its session. What does GitHub provide?",
+ "The agent's session logs and the workflow run history in Actions, which capture the steps it executed",
+ ["A single pass/fail emoji with no underlying detail",
+  "Only the final diff, with all intermediate steps permanently discarded",
+  "A verbal summary the agent emails you with no stored record"],
+ "Run histories and session logs preserve a recoverable record of what the agent did.");
+
+Q("g",4,"audit-artifacts",
+ "Months after several agents touched a repository, a compliance reviewer asks for evidence of who authored each change. What durable artifacts answer this?",
+ "The commit history and pull request records, which attribute each change and remain in the repository",
+ ["The reviewer must rely on team members' recollection",
+  "Nothing persists once the agent's environment is torn down",
+  "Only the currently open PRs, since merged ones are erased"],
+ "Commit and PR history keep authorship recoverable long after the agents are gone.");
+
+Q("g",4,"audit-artifacts",
+ "Your security team wants to monitor agent-related activity at the enterprise level over time. Which GitHub capability supports that?",
+ "Streaming or exporting the audit log so agent and administrative events are retained and reviewable",
+ ["Screenshotting the dashboard occasionally and saving the images",
+  "Trusting that GitHub will email an alert if anything notable happens",
+  "Asking each agent to self-report its own activity in a chat message"],
+ "Audit logs (exportable/streamable) keep a recoverable record of activity over time.");
+
+Q("g",4,"decision-records",
+ "During PR review, you decide to reject the agent's proposed approach and ask for a different one. How do you make sure the reasoning survives for future maintainers?",
+ "Write the reasoning into the pull request review comments so the decision and its rationale are preserved in the PR history",
+ ["Tell the agent verbally in a meeting and rely on memory",
+  "Delete the rejected commits so no one is confused later",
+  "Approve it anyway to avoid leaving a paper trail"],
+ "Consequential choices are written down in PR reviews so the reasoning outlives the agents.");
+
+Q("g",4,"decision-records",
+ "Six months from now, someone asks why a particular tradeoff was accepted in an agent-authored change. Where should that explanation already live?",
+ "In the pull request's review thread and description, which remain attached to the merged change",
+ ["In a chat thread that is purged after 30 days",
+  "In the agent's temporary environment, which no longer exists",
+  "Nowhere in particular; the merge itself is sufficient explanation"],
+ "Decisions recorded in PR history survive the agent that made the change.");
+
+Q("g",4,"decision-records",
+ "A reviewer requests changes on an agent PR and explains the why in detail. What is the value of capturing that explanation in the review rather than out-of-band?",
+ "It ties the rationale to the exact code and commit, so the decision record stays discoverable in the PR history",
+ ["It hides the rationale from future contributors to keep the PR tidy",
+  "It lets you avoid leaving any written record of disagreement",
+  "It moves accountability off GitHub onto a private channel"],
+ "Writing the why into PR reviews keeps consequential reasoning recoverable in context.");
+
+Q("g",4,"decision-records",
+ "Your team adopts a rule that any non-obvious architectural choice an agent makes must be justified. Where does GitHub make that justification durable?",
+ "In the pull request review and discussion, recorded alongside the change for anyone who later reads the history",
+ ["In an ephemeral comment that auto-deletes after merge",
+  "In the agent's session log only, which reviewers rarely open",
+  "In a separate spreadsheet disconnected from the code"],
+ "PR reviews and history are where consequential reasoning is written down and preserved.");
+
+Q("g",4,"loop-control",
+ "You keep leaving follow-up comments on an agent's PR and it keeps making more edits, with no clear stopping point. What is the healthier pattern?",
+ "Define a clear done-condition (the issue's acceptance criteria are met) and end the run there instead of iterating indefinitely",
+ ["Keep requesting tweaks forever so the PR is always improving",
+  "Raise the agent's iteration limit so it can loop more times",
+  "Re-open the issue after every merge to keep the agent busy"],
+ "Each run must end on a real done-condition; iterating on feedback should not become endless redoing.");
+
+Q("g",4,"loop-control",
+ "An agent run finishes the requested task and opens its PR, but you are tempted to send it back repeatedly for cosmetic changes. What does disciplined loop control look like?",
+ "Stop once the defined acceptance criteria are satisfied; further work should be a new, scoped task rather than an open-ended loop",
+ ["Keep the same run alive and pile unrelated requests onto it",
+  "Refuse to merge until the agent has made at least ten more passes",
+  "Let the agent decide on its own to keep editing after the task is done"],
+ "A run ends at its done-condition; new work becomes a new task, not an endless loop.");
+
+Q("g",4,"loop-control",
+ "An agent's automated tests already pass and the issue requirements are fully addressed. Why is it wrong to send it back through another iteration anyway?",
+ "Because the done-condition is met, and re-running it risks redoing finished work without adding value",
+ ["Because each extra iteration permanently deletes the prior commits",
+  "Because the agent is physically unable to run more than once",
+  "Because more iterations always make the code worse by design"],
+ "When the done-condition is reached, the loop should stop rather than redo completed work.");
+
+Q("g",4,"loop-control",
+ "You scope an agent task and want to be sure the run terminates cleanly rather than churning. What should you specify up front?",
+ "Explicit acceptance criteria that define when the task is complete, so the run has a concrete stopping point",
+ ["A vague goal like 'make it better' so the agent keeps trying",
+  "No criteria at all, trusting the agent to know when to stop",
+  "A requirement to keep iterating until you manually kill the process"],
+ "A real done-condition, set in advance, keeps feedback loops from becoming endless redoing.");
+
+Q("g",4,"agent-lifecycle",
+ "How is a Copilot coding agent session normally started so it has a clear beginning and defined scope?",
+ "By assigning it to a specific GitHub issue (or asking it to open a PR for a scoped task), which launches a tracked run bounded by that work",
+ ["By leaving it running continuously in the background watching the whole repo",
+  "By granting it standing access and letting it pick up work whenever it wants",
+  "By starting it once and never closing it so it is always available"],
+ "Each session has a clear start and scope; it is launched against defined work, not left running unbounded.");
+
+Q("g",4,"agent-lifecycle",
+ "An agent has opened its pull request for the assigned issue and the work is reviewed and merged. What happens to that agent session?",
+ "The session concludes; its isolated environment is ephemeral and is torn down, so it does not linger",
+ ["It keeps running indefinitely, holding its environment open in case you need it again",
+  "It automatically grabs the next unassigned issue without anyone directing it",
+  "It persists as a long-lived background process you must remember to stop later"],
+ "A session is launched, tracked, and closed; environments are ephemeral, not left running unbounded.");
+
+Q("g",4,"agent-lifecycle",
+ "You want visibility into agent sessions while they are active so none run unnoticed. What does GitHub give you to track them?",
+ "The pull request and its linked Actions run, which let you watch the session's progress from start to completion",
+ ["Nothing; once launched an agent is invisible until it happens to finish",
+  "Only an email at the very end with no way to observe progress",
+  "A requirement to SSH into the agent's machine to check on it manually"],
+ "Sessions are trackable through their PR and run, so each is observed start to end, not left unbounded.");
+
+Q("g",4,"agent-lifecycle",
+ "An agent run is going in the wrong direction partway through. Consistent with bounded lifecycles, what is an appropriate action?",
+ "Stop or close that session and re-scope the task, rather than letting the run continue unbounded",
+ ["Let it keep running indefinitely since it might recover on its own",
+  "Open five more agents on the same issue and ignore the first",
+  "Leave the session open forever as a placeholder for later"],
+ "Each session has a clear end; a misdirected run is closed and re-scoped, not left running unbounded.");
+
+Q("g",5,"risk-tiering",
+ "An org wants the Copilot coding agent to operate with sensible autonomy. Which approach best classifies the actions it may take?",
+ "Sort actions by operational, security, and compliance impact and grant more autonomy only to the low-impact tiers, with the strongest controls on the dangerous ones",
+ ["Give every action the same single approval step so the workflow stays uniform",
+  "Allow all actions automatically until something breaks, then add controls reactively",
+  "Block every action by default and require manual approval for each one regardless of impact"],
+ "Tier actions by operational, security, and compliance consequence; autonomy and gating follow the tier.");
+
+Q("g",5,"risk-tiering",
+ "Two agent actions: (a) opening a draft pull request, (b) force-pushing to the default branch. How should their risk tiers shape controls?",
+ "Treat the force-push to the default branch as a high-consequence action with strong gating, and let the draft PR proceed with light controls",
+ ["Apply identical required-reviewer rules to both since both touch the repository",
+  "Gate the draft PR heavily because it is visible, and let the force-push run freely",
+  "Leave both ungated because the agent already passed authentication"],
+ "Match control strength to consequence: the most dangerous deeds get the strongest gating.");
+
+Q("g",5,"risk-tiering",
+ "A team is deciding which agent operations need branch protection versus none at all. What principle should drive that mapping?",
+ "Anchor each control to the action's blast radius so security- and compliance-sensitive operations carry the heaviest gates",
+ ["Map controls to how often an action runs, gating only the most frequent ones",
+  "Apply the heaviest controls to whichever actions are easiest to configure",
+  "Give every repository the exact same protections to avoid having to assess impact"],
+ "Let autonomy and gating follow the risk tier, anchored to consequence and blast radius.");
+
+Q("g",5,"risk-tiering",
+ "While tiering agent actions, a reviewer says merging to production and editing a README should share the same control tier. Why is that wrong?",
+ "Their consequences differ sharply, so they belong in different tiers with the production merge getting far stronger controls",
+ ["They should share a tier because both are git operations performed by the agent",
+  "They should share a tier because tiering by consequence is too subjective to apply",
+  "They should share a tier so reviewers only have to learn one approval process"],
+ "Classify by operational, security, and compliance consequence, not by surface similarity.");
+
+Q("g",5,"human-approval",
+ "The Copilot coding agent opens a PR that deletes a production database migration. All CI checks pass green. What is the vendor-correct gate?",
+ "Require explicit, case-by-case human sign-off before merging because CI measures correctness, not the consequence of the change",
+ ["Auto-merge it since a green CI run proves the change is safe",
+  "Merge it because the agent was the author and is trusted",
+  "Skip human review whenever the test suite reports full coverage"],
+ "Gate irreversible or high-impact changes behind explicit human sign-off; green CI is never enough alone.");
+
+Q("g",5,"human-approval",
+ "A maintainer argues that once required status checks pass, agent PRs touching billing logic can merge automatically. What is the correct position?",
+ "Keep an explicit human approval on high-impact changes, since passing checks confirm correctness but not whether the consequence is acceptable",
+ ["Agree, because required status checks are a complete substitute for human review",
+  "Agree, but only if the agent also writes its own tests for the change",
+  "Disagree only for changes larger than a fixed line-count threshold"],
+ "Green CI measures correctness, not consequence; high-impact changes need case-by-case human sign-off.");
+
+Q("g",5,"human-approval",
+ "How should an agent's pull requests be configured so a person must approve high-impact merges, using GitHub's own platform controls?",
+ "Enable required pull request reviews on the protected branch so a human approval is mandatory before the agent's PR can merge",
+ ["Rely on the agent to self-approve its PR after its checks pass",
+  "Allow the agent's token to dismiss reviews so merges are never blocked",
+  "Configure auto-merge to land the PR the moment checks go green"],
+ "Use required reviews to put explicit human sign-off in front of high-impact merges.");
+
+Q("g",5,"human-approval",
+ "An agent proposes rewriting an authentication module and the diff looks clean with passing tests. Why still require a human to approve case by case?",
+ "Because correctness checks cannot judge consequence, and an irreversible or high-impact change deserves a deliberate human decision each time",
+ ["Because the agent cannot open pull requests without a human present",
+  "Because passing tests are unreliable and should generally be ignored",
+  "Because every agent change of any size must be manually rewritten by a person"],
+ "Explicit, case-by-case human sign-off is the gate for high-impact changes; CI is not a substitute.");
+
+Q("g",5,"guardrails",
+ "You do not want the coding agent to ever push directly to main, no matter what its prompt says. What is the durable way to ensure this?",
+ "Enforce branch protection or a ruleset on main that blocks direct pushes, so the rule holds regardless of any instruction the agent receives",
+ ["Add a sentence to the agent's instructions asking it not to push to main",
+  "Trust the agent to remember the policy across sessions",
+  "Review the agent's commits after the fact and revert any direct pushes"],
+ "Encode rules where they are enforced, not advised: branch protection and rulesets block forbidden actions.");
+
+Q("g",5,"guardrails",
+ "A policy says no commit may reach the release branch without passing a security scan. How do you make this non-negotiable for an agent?",
+ "Configure the branch ruleset to require the security status check, so a failing or missing scan blocks the merge automatically",
+ ["Document the requirement in CONTRIBUTING.md and rely on the agent reading it",
+  "Ask the agent to run the scan itself and report whether it passed",
+  "Have a reviewer mentally check that a scan ran before approving"],
+ "Put the rule where it is enforced: a required status check in a ruleset blocks the forbidden action.");
+
+Q("g",5,"guardrails",
+ "An agent is instructed by a cleverly worded prompt to bypass review and merge its own work. Which control actually stops this?",
+ "A branch protection rule requiring an independent approval, which blocks the merge no matter what the prompt told the agent to do",
+ ["A stronger system prompt telling the agent never to bypass review",
+  "A logging step that records the attempt after the merge succeeds",
+  "A convention that contributors should not write prompts like that"],
+ "Guardrails are enforced controls, not advice; they block forbidden actions regardless of instructions.");
+
+Q("g",5,"guardrails",
+ "What is the key difference between writing 'do not delete the release tag' in agent instructions versus a GitHub ruleset that restricts tag deletion?",
+ "The instruction is advisory and can be ignored or overridden, while the ruleset enforces the restriction at the platform level so the action is blocked",
+ ["There is no difference; both stop the deletion equally well",
+  "The instruction is stronger because it is closer to the agent's reasoning",
+  "The ruleset only logs deletions, while the instruction actually prevents them"],
+ "Encode rules where they are enforced. Rulesets block; instructions merely advise.");
+
+Q("g",5,"least-privilege",
+ "An agent's only job is to open documentation pull requests in one repository. What token should it use?",
+ "A fine-grained personal access token scoped to that single repository with only the minimum permissions its task needs",
+ ["A classic personal access token with full repo and org scopes for flexibility",
+  "A token with admin rights so it never hits a permission wall mid-task",
+  "A shared organization-wide token reused across every automation"],
+ "Grant exactly the permissions the task requires using fine-grained, scoped tokens.");
+
+Q("g",5,"least-privilege",
+ "Why is handing a broad, all-repos token to a fleet of agents especially dangerous compared to a single manual operator using one?",
+ "Because excess permission multiplied by automation speed and scale turns one mistake or compromise into a huge blast radius across many repositories",
+ ["Because automated tools are slower, so the damage accumulates gradually",
+  "Because agents cannot use fine-grained tokens, only classic ones",
+  "Because broad tokens expire faster and must be rotated more often"],
+ "Speed times scale times excess permission is blast radius; scope each agent's token tightly.");
+
+Q("g",5,"least-privilege",
+ "A fine-grained PAT for an agent currently grants read and write on contents, issues, pull requests, and actions, but the task only opens issues. What is the fix?",
+ "Reduce the token to the single permission the task needs, such as read and write on issues only, and remove the rest",
+ ["Leave the extra permissions in place so future tasks do not need a new token",
+  "Switch to a classic token so all scopes are available just in case",
+  "Keep the permissions but lengthen the token's expiration to reduce churn"],
+ "Grant each agent exactly the permissions its task requires, nothing more.");
+
+Q("g",5,"least-privilege",
+ "Two separate agents handle two separate repositories. What token arrangement follows least privilege?",
+ "Issue each agent its own fine-grained token scoped only to the repository it works on",
+ ["Share one organization-wide token between both agents for simplicity",
+  "Give both a token scoped to the whole organization so either can cover for the other",
+  "Use one admin token and rely on the agents to stay within their own repository"],
+ "Scope each agent's credential to exactly the resource its task needs; isolate blast radius.");
+
+Q("g",5,"approval-fatigue",
+ "A team adds a required human approval to every agent action, including formatting-only commits. Months later, dangerous merges slip through. What went wrong?",
+ "Gating harmless actions trained reviewers to rubber-stamp, so the approvals on truly dangerous actions lost their meaning",
+ ["The approval gates were too few; every commit should require two approvers",
+  "Reviewers simply needed more training on how to click approve",
+  "The agent should have been given more autonomy to skip the gates itself"],
+ "Do not gate everything; approvals on harmless actions erode scrutiny of the dangerous ones.");
+
+Q("g",5,"approval-fatigue",
+ "You are designing approval gates for an agent. Where should the mandatory human sign-offs be concentrated?",
+ "On the actions where consequence lives, such as production deploys and history rewrites, leaving low-risk actions to flow without a gate",
+ ["On every action equally, so reviewers stay constantly engaged",
+  "On the most frequent actions, since those represent most of the agent's work",
+  "On whichever actions are quickest to approve, to keep throughput high"],
+ "Keep gates where consequence lives; gating everything breeds rubber-stamping.");
+
+Q("g",5,"approval-fatigue",
+ "A reviewer complains they approve fifty trivial agent PRs a day and barely glance at each one. What is the right structural fix?",
+ "Remove the approval requirement from the low-risk PRs so review attention is reserved for high-consequence changes",
+ ["Tell the reviewer to read each trivial PR more carefully",
+  "Add a second reviewer to every trivial PR for redundancy",
+  "Speed up approvals by letting the agent approve the trivial PRs itself, including risky ones"],
+ "Approvals on harmless actions train rubber-stamping; gate where the consequence actually is.");
+
+Q("g",5,"approval-fatigue",
+ "Why can over-gating an agent's workflow paradoxically make a system less safe?",
+ "Because constant low-stakes approvals desensitize reviewers, so when a genuinely risky change appears they approve it on autopilot too",
+ ["Because more gates always make a system measurably safer, with no downside",
+  "Because gates slow the agent down and slowness is the main safety risk",
+  "Because reviewers will quit, leaving no one to approve anything at all"],
+ "Indiscriminate approvals breed rubber-stamping; reserve gates for where consequence lives.");
+
+Q("g",5,"irreversible-actions",
+ "When deciding which agent operations deserve the strictest controls, which set should be treated as a category apart?",
+ "Operations that cannot be rolled back, such as destructive deletes, force-pushed history rewrites, and production changes",
+ ["Operations that produce the largest diffs, regardless of whether they can be undone",
+  "Operations the agent performs most often during a typical workday",
+  "Operations that touch the most files, since file count signals importance"],
+ "Identify what cannot be rolled back and treat it as a distinct, most-protected category.");
+
+Q("g",5,"irreversible-actions",
+ "An agent wants to force-push a rewritten commit history over the shared main branch. Why does this warrant special handling beyond a normal commit?",
+ "Because rewriting published history is effectively irreversible for collaborators, so it belongs in the protected category of unrollback-able actions",
+ ["Because force-pushes are simply slower than normal pushes",
+  "Because the agent needs a larger token scope to perform it",
+  "Because it only affects the agent's local clone and nothing shared"],
+ "History rewrites cannot be cleanly rolled back; treat them as a category apart with the strongest gates.");
+
+Q("g",5,"irreversible-actions",
+ "Among these agent actions, which should be flagged as irreversible and gated most strictly: opening a PR, adding a label, deleting a branch with unmerged work, or commenting on an issue?",
+ "Deleting a branch that holds unmerged work, because that loss cannot be cleanly undone",
+ ["Opening a PR, because it makes the change publicly visible",
+  "Adding a label, because it changes the repository's metadata",
+  "Commenting on an issue, because it notifies other collaborators"],
+ "Destructive deletes that lose unmerged work are irreversible and belong in the most-protected tier.");
+
+Q("g",5,"irreversible-actions",
+ "Why should pushing a change directly to the live production environment be treated differently from merging into a staging branch?",
+ "Because the production change takes immediate real-world effect that may be impossible to fully undo, while staging can be corrected before release",
+ ["Because production branches always have longer names that are harder to type",
+  "Because staging changes are inherently larger and therefore riskier",
+  "Because production pushes are faster and speed is the only concern"],
+ "Production changes can be irreversible in effect; treat them as a category apart from recoverable steps.");
+
 
 Q("c",0,"session-scope",
  "One long-lived session handles billing tasks, then HR questions, then code review. Quality degrades and details bleed between tasks. Fix?",
@@ -2403,10 +4473,16 @@ function pickQuestion(cert,pool,avoidConcepts){
   const concept=pickConcept(cert,p);
   const dom=CONCEPT_DOM[cert][concept];
   const qs=QIDX[cert][dom][concept];
-  const lastId=S.lastQ[srKey(cert,concept)];
-  const fresh=qs.filter(q=>q.id!==lastId);
+  const key=srKey(cert,concept);
+  let recent=S.lastQ[key];
+  recent=Array.isArray(recent)?recent.slice():(recent==null?[]:[recent]); // migrate single-id saves
+  const w=Math.max(0,qs.length-1);                 // avoid up to (pool-1) recent ids: cycle the pool before repeating
+  const ban=w?recent.slice(-w):[];
+  const fresh=qs.filter(q=>!ban.includes(q.id));
   const q=pick(fresh.length?fresh:qs);
-  S.lastQ[srKey(cert,concept)]=q.id;
+  recent.push(q.id);
+  recent=w?recent.slice(-w):[q.id];
+  S.lastQ[key]=recent;
   return q;
 }
 function regionPool(cert,region){
@@ -3828,6 +5904,12 @@ function atkBonusOf(m){
   return 4+wieldHitBonus(m)+gearHitBonus(m)+(r?Math.round(r.atk/12):0)
     +(typeof summonHitBonus==="function"?summonHitBonus():0);
 }
+/* A *chosen* deep recall (harder draw — 6 options, no hints) lands more
+   reliably: +2 to hit (~+10% on the d20). Boss "exam recall" is forced, not
+   chosen, so it earns no bonus — there's no higher-risk decision to reward. */
+function depthHitBonus(){
+  return (B&&B.sel&&B.sel.depth==="deep"&&!B.boss)?2:0;
+}
 function guardBonusOf(m){
   const r=eaCompRec(m)||(m&&m.kind==="hero"?legendRec():null);
   return 3+(m&&m.cls==="vanguard"?2:0)+wieldGuardBonus(m)+gearGuardBonus(m)+(r?Math.round(r.df/12):0);
@@ -3931,7 +6013,7 @@ function showStrikes(){
     const rm=B.sel.rowMult||rowMultOf(m.cell.col);
     const shown=Math.round(dmgPreview(sk,m)*rm);
     const tf=B.foes[B.target];
-    const need=tf?Math.max(2,foeGuard(tf)-atkBonusOf(m)):2;
+    const need=tf?Math.max(2,foeGuard(tf)-atkBonusOf(m)-depthHitBonus()):2;
     const bits=[fmtH(shown)+(sk.all?" all foes":(sk.aoeCol?" column":"")),"hits on "+need+"+","crits on "+critRangeOf(m,sk)+"+"];
     if(sk.stun)bits.push("stuns");
     if(sk.mana)bits.push(sk.mana+"☄ mana");
@@ -3990,7 +6072,7 @@ function diceTerms(){
   if(!B||!B.roll)return null;
   if(B.roll.for==="attack"){
     const m=B.party[B.sel.member],f=B.foes[B.target],sk=B.sel.sk;
-    return {bonus:atkBonusOf(m),need:(sk&&sk.bomb)?2:foeGuard(f),critOn:critRangeOf(m,sk),
+    return {bonus:atkBonusOf(m)+depthHitBonus(),need:(sk&&sk.bomb)?2:foeGuard(f),critOn:critRangeOf(m,sk),
       label:"⚔ "+B.sel.name+" vs "+(f?f.e.name:"—")};
   }
   const f=B.foes[B.defFoe];
@@ -5504,11 +7586,38 @@ function showBanner(r){
   bannerTimer=setTimeout(()=>b.classList.remove("show"),2400);
   if(!regState(r.id).introSeen){
     regState(r.id).introSeen=true;
-    toast(r.intro);
-    const oq=(questChainOf(r)||[])[0];
-    if(oq){Sfx.ea("QuestStart",0.8);
-      setTimeout(()=>{toast("Original campaign — “"+oq.n+"”: "+(oq.t||"the road opens."),true)},1700)}
+    const L=DATA.lessons[r.cert+r.dom];
+    if(L)openBriefing(L,r.cert,()=>regionEntryToasts(r));   // first entry: the lesson, then the quest toast
+    else regionEntryToasts(r);
   }
+}
+/* The pre-battle briefing: a story-driven, doc-grounded lesson shown once on
+   first entry to a region. Pure teaching — no xp, mastery, or combat edge. */
+function regionEntryToasts(r){
+  toast(r.intro);
+  const oq=(questChainOf(r)||[])[0];
+  if(oq){Sfx.ea("QuestStart",0.8);
+    setTimeout(()=>{toast("Original campaign — “"+oq.n+"”: "+(oq.t||"the road opens."),true)},1700)}
+}
+function conceptDocLink(cert,concept){
+  const u=(DATA.docs[cert]||{})[concept];
+  const name=concept.replace(/-/g," ").replace(/\b\w/g,c=>c.toUpperCase());
+  return u?"<a class='doclink' target='_blank' rel='noopener noreferrer' href='"+u+"'>"+esc(name)+" ▸</a>"
+          :"<span class='doclink' style='opacity:.55'>"+esc(name)+"</span>";
+}
+function lessonHtml(L,cert){
+  let h="<h2>"+esc(L.title)+"</h2>";
+  if(L.sub)h+="<p class='lsub'>"+esc(L.sub)+"</p>";
+  L.movements.forEach(mv=>{
+    h+="<div class='lmove'><h3>"+esc(mv.h)+"</h3><div class='lstory'>"+mv.story+"</div>"+
+       "<div class='lmark'><b>Maker’s Marginalia — </b>"+mv.mark+
+       "<div class='ldocs'>"+mv.concepts.map(c=>conceptDocLink(cert,c)).join("")+"</div></div></div>";
+  });
+  return h;
+}
+function openBriefing(L,cert,after){
+  Sfx.ea("QuestStart",0.8);
+  showModal(lessonHtml(L,cert),[{label:"Begin ▸",cls:"primary",fn:after}]);
 }
 
 /* ---- HUD ---- */
@@ -7090,7 +9199,7 @@ window.__wf={
   get SHAPE_SPRITE(){return SHAPE_SPRITE}, get CLASS_SPRITE(){return CLASS_SPRITE}, get EARIG(){return EARIG},
   MASTER_REPS, MASTER_IV, GAME_DAY,
   get ALLCONCEPTS(){return ALLCONCEPTS}, get CONCEPT_DOM(){return CONCEPT_DOM},
-  get QIDX(){return QIDX}, get DATA(){return DATA}
+  get QIDX(){return QIDX}, get DATA(){return DATA}, lessonHtml
 };
 
 /* all overrides are defined: build the road and start the game */
