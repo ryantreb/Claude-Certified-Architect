@@ -1,0 +1,41 @@
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Soren Johnson (Electronic Arts) -->
+<StringData>
+	<String key="E_START_NAME">Starting Node</String>
+	<String key="E_EXIT_NAME">Exit Node</String>
+	<String key="E_STORY_NAME">World Lore</String>
+	<String key="COMBAT_NAME">Combat Encounter</String>
+	<String key="YOU_DEFEATED_MONSTERS">You have defeated the monsters!</String>
+	<String key="YOU_FINISHED_ENCOUNTER">You have finished the Encounter!</String>
+	<!-- RACHEL"S TEST REGION -->
+	<String key="E_RACHEL_FIRE">Enemy is weak versus fire</String>
+	<String key="E_RACHEL_COLD">Enemy is weak versus cold</String>
+	<String key="E_RACHEL_NATURE">Enemy is weak versus nature</String>
+	<String key="E_RACHEL_ELECTRIC">Enemy is weak versus electric</String>
+	<String key="E_RACHEL_MELEE">Enemy is weak versus melee</String>
+	<String key="E_RACHEL_RANGED">Enemy is weak versus ranged</String>
+	<String key="E_RACHEL_MAGIC">Enemy is weak versus magic</String>
+	<String key="E_RACHEL_FIRE_DMG">Enemy deals fire damage</String>
+	<String key="E_RACHEL_COLD_DMG">Enemy deals cold damage</String>
+	<String key="E_RACHEL_NATURE_DMG">Enemy deals nature damage</String>
+	<String key="E_RACHEL_ELECTRIC_DMG">Enemy deals electric damage</String>
+	<String key="E_RACHEL_MELEE_DMG">Enemy deals melee damage</String>
+	<String key="E_RACHEL_RANGED_DMG">Enemy deals ranged damage</String>
+	<String key="E_RACHEL_MAGIC_DMG">Enemy deals magic damage</String>
+	<String key="E_RACHEL_FRONT_ROW">Enemies in the front row</String>
+	<String key="E_RACHEL_BACK_ROW">Enemies in the back row</String>
+	<!--MONSTER TIER TEST REGION -->
+	<String key="D_TIER_GENLOCK">Genlock Runt</String>
+	<String key="D_TIER_HURLOCK">Hurlock Runt</String>
+	<String key="D_TIER_AXEMAN">Hurlock Axeman Runt</String>
+	<String key="D_TIER_ASSASSIN">Hurlock Assassin Runt</String>
+	<String key="D_TIER_COMMANDER">Hurlock Commander Runt</String>
+	<String key="D_TIER_BOLTER">Hurlock Bolter Runt</String>
+	<String key="D_TIER_SAPPER">Hurlock Sapper Runt</String>
+	<String key="D_TIER_EMISSARY">Hurlock Emissary Runt</String>
+	<String key="D_TIER_CONJURER">Hurlock Conjuror Runt</String>
+	<String key="D_TIER_SHAMAN">Hurlock Shaman Runt</String>
+	<String key="D_TIER_SHRIEK">Shriek Runt</String>
+	<String key="D_TIER_OGRE">Ogre Runt</String>
+	<String key="D_TIER_BLIGHT_WOLF_CUB">Blight Wolf Cub</String>
+	<String key="D_TIER_CORRUPTED_SPIDERLING">Corrupted Spiderling</String>
+</StringData>

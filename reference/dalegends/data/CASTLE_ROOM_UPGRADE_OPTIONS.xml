@@ -1,0 +1,91 @@
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Soren Johnson (Electronic Arts) -->
+<!-- DAJFB Skill Tree Data -->
+<Root>
+	<Entry>
+		<ID>THRONE_ROOM_UPGRADE_OPTIONS</ID>
+		<Name>Throne Room Upgrade Options</Name>
+
+		<!-- Tree 1 -->
+		<!-- Level 1 Option -->
+		<Option>
+			<NodeID>0</NodeID>
+			<Type>TRAINING_ROOM</Type>
+			<UnlockType>FENCING_ROOM</UnlockType>
+		</Option>
+		<!-- Level 2 Options -->
+		<Option>
+			<NodeID>1</NodeID>
+			<Type>FENCING_ROOM</Type>
+			<UnlockType>TREASURY</UnlockType>
+			<UnlockType>MAGE_CIRCLE</UnlockType>
+		</Option>
+		<!-- Level 3 Options -->
+		<Option>
+			<NodeID>2</NodeID>
+			<Type>TREASURY</Type>
+		</Option>
+		<Option>
+			<NodeID>3</NodeID>
+			<Type>MAGE_CIRCLE</Type>
+		</Option>
+
+		<!-- Tree 2 -->
+		<!-- Level 1 Option -->
+		<Option>
+			<NodeID>4</NodeID>
+			<Type>TAVERN</Type>
+			<UnlockType>CHANTRY</UnlockType>
+			<UnlockType>LIBRARY</UnlockType>
+			<UnlockType>KENNEL_ROOM</UnlockType>
+		</Option>
+		<!-- Level 2 Options -->
+		<Option>
+			<NodeID>5</NodeID>
+			<Type>CHANTRY</Type>
+			<UnlockType>GREAT_HALL</UnlockType>
+		</Option>
+		<Option>
+			<NodeID>6</NodeID>
+			<Type>LIBRARY</Type>
+		</Option>
+		<Option>
+			<NodeID>7</NodeID>
+			<Type>KENNEL_ROOM</Type>
+		</Option>
+		<!-- Level 3 Option -->
+		<Option>
+			<NodeID>8</NodeID>
+			<Type>GREAT_HALL</Type>
+		</Option>
+		
+		<!-- Tree 3 -->
+		<!-- Level 1 Option -->
+		<Option>
+			<NodeID>9</NodeID>
+			<Type>FURNACE</Type>
+			<UnlockType>MORRIGAN_ROOM</UnlockType>
+			<UnlockType>SHALE_ROOM</UnlockType>
+			<UnlockType>DRAGON_ROOST</UnlockType>
+		</Option>
+		<!-- Level 2 Options -->
+		<Option>
+			<NodeID>10</NodeID>
+			<Type>MORRIGAN_ROOM</Type>
+			<UnlockType>GOLDSMITH</UnlockType>
+		</Option>
+		<Option>
+			<NodeID>11</NodeID>
+			<Type>SHALE_ROOM</Type>
+		</Option>
+		<Option>
+			<NodeID>12</NodeID>
+			<Type>DRAGON_ROOST</Type>
+		</Option>
+		<!-- Level 3 Option -->
+		<Option>
+			<NodeID>13</NodeID>
+			<Type>GOLDSMITH</Type>
+		</Option>
+		
+	</Entry>
+</Root>

@@ -1,0 +1,14 @@
+<!-- ==============================================================
+  This is the list of crowns to gold conversion offers available in 
+  the game. 
+=============================================================== -->
+<Root>
+
+	<Offer ID="CONVERT_CROWNS_TO_GOLD_2000" crownsAmount="99" />
+    
+    <Offer ID="CONVERT_CROWNS_TO_GOLD_4500" crownsAmount="199" />
+    
+    <Offer ID="CONVERT_CROWNS_TO_GOLD_10000" crownsAmount="399" />
+
+</Root>
+

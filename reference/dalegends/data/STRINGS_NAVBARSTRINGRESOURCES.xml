@@ -1,0 +1,13 @@
+<StringData>
+	<String key="HERO_BUTTON_TOOLTIP">View your character</String>
+	<String key="SKILLS_BUTTON_TOOLTIP">View your skills</String>
+	<String key="INVENTORY_BUTTON_TOOLTIP">View your inventory</String>
+	<String key="BUILD_BUTTON_TOOLTIP">Construct your castle</String>
+	<String key="CASTLE_BUTTON_TOOLTIP">View your castle and assign tasks to workers</String>
+	<String key="STORE_BUTTON_TOOLTIP">Purchase items</String>
+	<String key="WORLD_BUTTON_TOOLTIP">View the world map</String>
+	<String key="REGION_BUTTON_TOOLTIP">Continue your epic journey</String>
+	<String key="GUILD_BUTTON_TOOLTIP">View your guild</String>
+	<String key="GUILD_VS_GUILD_BUTTON_TOOLTIP">Play Guild vs Guild Arena</String>
+	<String key="RAID_BUTTON_TOOLTIP">Fight epic raid battles to earn awesome loot</String>
+</StringData>

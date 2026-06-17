@@ -1,0 +1,203 @@
+<!-- edited with XMLSpy v2010 rel. 3 sp1 (http://www.altova.com) by BOBBY MOLDAVON (ELECTRONIC ARTS) -->
+<!-- DAJFB Char Anim Skin Definitions
+	Created 7.29.2010
+-->
+<RigData>
+	<DefaultChunkName>
+		ANIM_SKINS_HUMANELF_NPC
+	</DefaultChunkName>
+	<!-- NPC -->
+
+	<!-- DAL -->
+	<Entry>
+		<ID>skNPCraviArmor</ID>
+		<AssetPrefix>raviArmor</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skNPClukeshArmor</ID>
+		<AssetPrefix>lukeshArmor</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skNPCiselleArmor</ID>
+		<AssetPrefix>lukeshArmor</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skNPCeitonArmor</ID>
+		<AssetPrefix>raviArmor</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skNPCtovezArmor</ID>
+		<AssetPrefix>tovezArmor</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>TRUE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skNPCkhedraArmor</ID>
+		<AssetPrefix>raviArmor</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skNPCsendisArmor</ID>
+		<AssetPrefix>sendisArmor</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skNPChagenArmor</ID>
+		<AssetPrefix>hagenArmor</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skNPCantorArmor</ID>
+		<AssetPrefix>antorArmor</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skNPCkorznikArmorr</ID>
+		<AssetPrefix>korznikArmor</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	
+	<!-- DAO and DA2 -->
+	<Entry>
+		<ID>skNPCisabelaArmor</ID>
+		<AssetPrefix>isabelaSuit</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skNPCmorriganArmor</ID>
+		<AssetPrefix>morriganRobes</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plClothBodyStandard"/>
+		</RigPieceSet>
+		<IconPiece>chest</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+	
+	<!-- Barkspawn Armors -->
+	<Entry>
+		<ID>skNPCWardogNoArmor</ID>
+		<AssetPrefix>wardogSansArmor</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari"/>
+		</RigPieceSet>
+		<IconPiece>body</IconPiece>
+		<IconSecondaryPiece>foreArmNear</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skNPCWardogPupArmor</ID>
+		<AssetPrefix>wardogPup</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari"/>
+		</RigPieceSet>
+		<IconPiece>body</IconPiece>
+		<IconSecondaryPiece>foreArmNear</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skNPCWardogNormalArmor</ID>
+		<AssetPrefix>wardogNormal</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari"/>
+		</RigPieceSet>
+		<IconPiece>body</IconPiece>
+		<IconSecondaryPiece>foreArmNear</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skNPCWardogAlphaArmor</ID>
+		<AssetPrefix>wardogAlpha</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plMabari"/>
+		</RigPieceSet>
+		<IconPiece>body</IconPiece>
+		<IconSecondaryPiece>foreArmNear</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skNPCEmissaryHurlockArmor</ID>
+		<AssetPrefix>emissHurlock</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<PieceList ID="plEmissHurlock"/>
+		</RigPieceSet>
+		<IconPiece>torso</IconPiece>
+		<IconSecondaryPiece>armUpperL</IconSecondaryPiece>
+	</Entry>
+</RigData>

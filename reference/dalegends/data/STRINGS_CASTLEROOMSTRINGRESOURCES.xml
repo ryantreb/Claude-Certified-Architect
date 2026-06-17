@@ -1,0 +1,139 @@
+<StringData>
+	<!-- =================================================
+
+	   General Strings
+
+	================================================== -->
+	<String key="SELL_CONFIRM_TITLE">Warning</String>
+	<String key="SELL_CONFIRM_CONTENT"><![CDATA[Are you sure you want to sell this room for  {%sellPrice%} {COIN} ?]]></String>
+	<String key="SELL_CONFIRM_BUTTON">Sell</String>
+	<String key="EXPANSION_UPGRADE_DESC">This is a placeholder string. If you are seeing it, there is an error (expnsn).</String>
+	<!-- =================================================
+
+	   Room info strings
+
+	================================================== -->
+	<String key="EXPANSION_DESC">Place expansions to add rooms to your castle.</String>
+	<String key="EXPANSION_UPGRADE_DESC">This is a placeholder string. If you are seeing it, there is an error (expnsn).</String>
+	<String key="WORKER_ROOM_DESC">Buy a bedroom to add an additional worker to your castle.</String>
+	<String key="WORKER_ROOM_UPGRADE_DESC">This is a placeholder string. If you are seeing it, there is an error (wrkr).</String>
+	<String key="TAVERN_DESC">A Tavern increases the happiness of workers who live nearby.</String>
+	<String key="TAVERN_UPGRADE_DESC">+1 Happiness to each adjacent worker room.</String>
+	<String key="TAVERN_PREMIUM_UPGRADE_DESC">+1 range increase to this Tavern's happiness boost.</String>
+	<String key="APOTHECARY_DESC">In the Apothecary, workers craft potions for combat.</String>
+	<String key="APOTHECARY_UPGRADE_DESC">Unlock a new potion or boost this room's productivity.</String>
+	<String key="APOTHECARY_PREMIUM_UPGRADE_DESC">Add an extra crafting station to your Apothecary.</String>
+	<String key="APOTHECARY_PROGRESSBAR_TOOLTIP">Unlock new potions to help you in battle.</String>
+	<String key="APOTHECARY_MAX_STOOLS_MAX_PRODUCTIVITY">Unlock and craft new potions to help you in battle.</String>
+	<String key="ALCHEMY_LAB_DESC">In the Alchemy Lab, workers craft bombs for combat.</String>
+	<String key="ALCHEMY_LAB_UPGRADE_DESC">Unlock a new bomb or increase this room's productivity.</String>
+	<String key="ALCHEMY_LAB_PREMIUM_UPGRADE_DESC">Add an extra crafting station to your Alchemy Lab.</String>
+	<String key="ALCHEMY_PROGRESSBAR_TOOLTIP">Unlock new bombs to help you in battle.</String>
+	<String key="ALCHEMY_MAX_STOOLS_MAX_PRODUCTIVITY">Unlock and craft new bombs to help you in battle.</String>
+	<String key="INFIRMARY_DESC">In the Infirmary, workers craft kits for combat.</String>
+	<String key="INFIRMARY_UPGRADE_DESC">Unlock a new kit or increase this room's productivity.</String>
+	<String key="INFIRMARY_PREMIUM_UPGRADE_DESC">Add an extra crafting station to your Infirmary.</String>
+	<String key="INFIRMARY_PROGRESSBAR_TOOLTIP">Unlock new kits to help you in battle.</String>
+	<String key="INFIRMARY_MAX_STOOLS_MAX_PRODUCTIVITY">Unlock and craft new kits to help you in battle.</String>
+	<String key="MARKET_DESC">This is a placeholder string. If you are seeing it, there is an error (mrkt).</String>
+	<!--
+	<String key="THEATER_DESC">In the Theater, visiting friends can perform shows to boost your castle's Happiness.</String>
+	<String key="THEATER_UPGRADE_DESC">+50% Happiness boost while a friend is performing.</String>
+	<String key="THEATER_PREMIUM_UPGRADE_DESC">Collect Gold from the receipts of your friends' performances.</String>
+	-->
+	<String key="CHANTRY_DESC">The Chantry unlocks new skills! [Templar - Warrior] [Spirit - Mage] [Bard - Rogue]</String>
+	<String key="CHANTRY_UPGRADE_DESC">This upgrade gives you an additional stat point (repeatable 3 times).</String>
+	<String key="CHANTRY_PREMIUM_UPGRADE_DESC">This upgrade gives you an additional skill point (repeatable 3 times).</String>
+	<String key="FURNACE_DESC">A Furnace adds +1 Productivity to adjacent workshops.</String>
+	<String key="FURNACE_UPGRADE_DESC">+1 Productivity to each adjacent workshop.</String>
+	<String key="FURNACE_PREMIUM_UPGRADE_DESC">+1 range increase to this Furnace's productivity boost.</String>
+	<String key="TREASURY_DESC">Use the Treasury to send a worker to your friends' castles to collect your gold.</String>
+	<String key="TREASURY_UPGRADE_DESC">Treasurer collects Friend Gold +10% faster.</String>
+	<String key="TREASURY_PREMIUM_UPGRADE_DESC">Increases Friend Gold earned by +10%.</String>
+	<String key="HERO_ROOM_DESC">Your hero's bedroom.</String>
+	<String key="HERO_ROOM_UPGRADE_DESC">Increase the level cap of your hero by 10.</String>
+	<String key="HERO_ROOM_PREMIUM_UPGRADE_DESC">+1 Mana at the start of each combat.</String>
+	<String key="STOREHOUSE_DESC">Can be upgraded to bring more consumables into battle. Must be underground.</String>
+	<String key="STOREHOUSE_UPGRADE_DESC">Upgrade the storehouse to raise your inventory cap by {%value%}.</String>
+	<String key="STOREHOUSE_PREMIUM_UPGRADE_DESC">Bring +1 consumable of each type into battle.</String>
+	<String key="THRONE_ROOM_DESC">The Throne Room allows you to unlock new rooms for construction.</String>
+	<String key="THRONE_ROOM_UPGRADE_DESC">Unlock one new room for construction.</String>
+	<String key="THRONE_ROOM_PREMIUM_UPGRADE_DESC">Increase the width of your castle +1 (repeatable 12 times).</String>
+	<String key="LIBRARY_DESC">The Library unlocks new skills! [Vanguard - Warrior] [Arcane - Mage] [Assassin - Rogue]</String>
+	<String key="LIBRARY_UPGRADE_DESC">This upgrade gives you an additional starting mana in combat (repeatable 3 times).</String>
+	<String key="LIBRARY_PREMIUM_UPGRADE_DESC">This upgrade gives you an additional skill point (repeatable 3 times).</String>
+	<String key="TRAINING_ROOM_DESC">The Training Room unlocks new skills! [Berserker - Warrior] [Elemental - Mage] [Duelist - Rogue]</String>
+	<String key="TRAINING_ROOM_UPGRADE_DESC">This upgrade gives you an additional stat point (repeatable 3 times).</String>
+	<String key="TRAINING_ROOM_PREMIUM_UPGRADE_DESC">This upgrade gives you an additional skill point (repeatable 3 times).</String>
+	<String key="TROPHY_ROOM_DESC">Display achievements and increase happiness</String>
+	<String key="GREAT_HALL_DESC">The Great Hall increases the number of friends you can have in your Guild. Must be aboveground.</String>
+	<String key="GREAT_HALL_UPGRADE_DESC">Expand your Guild with room for 1 more friend.</String>
+	<String key="GREAT_HALL_PREMIUM_UPGRADE_DESC">Decreases Guild Members’ rest time by 10%.</String>
+	<!-- =================================================
+
+		Strings for rooms that are not currently implemented
+
+	================================================== -->
+	<String key="BOULDER_DESC">You need to destroy boulders if you wish to expand underground.</String>
+	<String key="MAGE_CIRCLE_DESC">Craft spell scrolls and magical items for use in battle</String>
+	<String key="MAGE_CIRCLE_UPGRADE_DESC">Redeem points to unlock additional scrolls</String>
+	<String key="MAGE_CIRCLE_PREMIUM_UPGRADE_DESC">Purchase upgrade to increase worker capacity</String>
+	<String key="BLACKSMITH_DESC">Create weapon and armor coatings</String>
+	<String key="BLACKSMITH_UPGRADE_DESC">Redeem points to unlock additional coatings</String>
+	<String key="BLACKSMITH_PREMIUM_UPGRADE_DESC">Purchase upgrade to increase worker capacity</String>
+	<String key="GOLDSMITH_DESC">PLACEHOLDER</String>
+	<String key="GOLDSMITH_UPGRADE_DESC">PLACEHOLDER</String>
+	<String key="GOLDSMITH_PREMIUM_UPGRADE_DESC">PLACEHOLDER</String>
+	<String key="KITCHEN_DESC">Kitchen:&#xA; Fill the orders of visiting players to make money</String>
+	<String key="STABLE_DESC">Stable:&#xA; Send caravans to other castles in search of wealth</String>
+	<String key="DUNGEON_DESC">Imprison other player's workers to increase castle happiness</String>
+	<!-- =================================================
+
+	   Room dialog related strings
+
+	================================================== -->
+	<String key="CASTLE_ROOM_UPGRADE_TITLE">Upgrade {%roomName%}</String>
+	<String key="CASTLE_ROOM_PREMIUM_UPGRADE_TITLE">Ravi's Upgrade</String>
+	<String key="WORKSHOP_STOOL_TOOLTIP">Craft {%taskTypeName%}?</String>
+	<String key="WORKSHOP_STOOL_TOOLTIP_WARNING">Click this stool to select a crafting task for one of your workers.</String>
+	<String key="WORKSHOP_PREMIUM_UPGRADE_PROTIP">Want to increase your number of work stations? Purchase my upgrade to get an additional stool.</String>
+	<String key="WORKSHOP_PREMIUM_UPGRADE_MAX_PROTIP">There is no more room for additional work stations. Try upgrading your productivity to decrease crafting times.</String>
+	<String key="WORKSHOP_MAX_STOOLS_MAX_PRODUCTIVITY">Unlock and craft new potions to help you in battle.</String>
+	<String key="WORKSHOP_PROGRESSBAR_TOOLTIP">Unlock new potions to help you in battle.</String>
+	<String key="UTILITY_ROOM_STOOL_TOOLTIP">Start an appointment</String>
+	<String key="UTILITY_ROOM_NO_WORKER_WARNING">You don't have available worker</String>
+	<String key="TREASURY_TASK_OPTION_DIALOG_TITLE">Friend Gold</String>
+	<String key="TREASURY_TASK_OPTION_DIALOG_DESCRIPTION">Gather {%amount%} friend gold?</String>
+	<String key="TREASURY_NO_FRIENDGOLD_WARNING">You don't have available friend gold</String>
+	<String key="THRONE_ROOM_PROGRESSBAR_TOOLTIP">Unlock new rooms to build in your castle</String>
+	<String key="THRONE_ROOM_PREMIUM_UPGRADE_PROTIP">Want to expand your castle for less gold? Purchase my upgrade to increase your castle's width by 1.</String>
+	<String key="THRONE_ROOM_PREMIUM_UPGRADE_BLOCK_UI_STRING">Expanding castle...</String>
+	<String key="THRONE_ROOM_PREMIUM_UPGRADE_MAX_PROTIP">There is no more space to expand your castle. Try building upwards instead.</String>
+	<String key="LIBRARY_PREMIUM_UPGRADE_PROTIP">Combat isn’t the only way to learn skills: much knowledge comes from books. Unlock 1 additional Skill Point?</String>
+	<String key="LIBRARY_PREMIUM_UPGRADE_MAX_PROTIP">You have learned all the extra skill points and mana you can from this room.</String>
+	<String key="CHANTRY_PREMIUM_UPGRADE_PROTIP">Focus your energy and become more powerful through concentration and mediation. Unlock 1 additional Skill Point?</String>
+	<String key="CHANTRY_PREMIUM_UPGRADE_MAX_PROTIP">You've learned all the extra skill and stat points from this room.</String>
+	<String key="TRAINING_ROOM_PREMIUM_UPGRADE_PROTIP">Put your skills to the test and exercise your training! Unlock 1 skill point?</String>
+	<String key="TRAINING_ROOM_PREMIUM_UPGRADE_MAX_PROTIP">You've learned all the extra skill and stat points from this room.</String>
+	<String key="SKILL_ROOM_PROGRESSBAR_TOOLTIP">Unlock new skills to increase your might!</String>
+	<!--
+	|
+	|   NPC Rooms
+	|
+	-->
+	<String key="KENNEL_ROOM_DESC">The Kennel gives you a mabari war hound you can bring into battle.</String>
+	<String key="KENNEL_ROOM_UPGRADE_DESC">Upgrade the Kennel room to upgrade Barkspawn's stats.</String>
+	<String key="KENNEL_ROOM_PREMIUM_UPGRADE_DESC">Premium upgrade the Kennel room to upgrade Barkspawn's stats.</String>
+	<String key="FENCING_ROOM_DESC">This Practice Room entices Isabela to bring her dual blades to your cause.</String>
+	<String key="FENCING_ROOM_UPGRADE_DESC">Upgrade the Practice Room to upgrade Isabela's stats.</String>
+	<String key="FENCING_ROOM_PREMIUM_UPGRADE_DESC">Premium upgrade Practice Room to upgrade Isabela's stats.</String>
+	<String key="DRAGON_ROOST_DESC">Dragons need a lot of space. Giving one space in your castle may not be wise, but will let you bring one into battle.</String>
+	<String key="DRAGON_ROOST_UPGRADE_DESC">Upgrade Dragon's Roost to upgrade the Fire Drake's stats.</String>
+	<String key="DRAGON_ROOST_PREMIUM_UPGRADE_DESC">Premium upgrade the Dragon's Roost to upgrade the Fire Drake's stats.</String>
+	<String key="SHALE_ROOM_DESC">Shale is at peace in this room. Build it to add the rock golem to your party.</String>
+	<String key="SHALE_ROOM_UPGRADE_DESC">Upgrade Shale's Room to increase Shale's stats.</String>
+	<String key="SHALE_ROOM_PREMIUM_UPGRADE_DESC">Premium upgrade Shale's Room to increase Shale's stats and mana.</String>
+	<String key="MORRIGAN_ROOM_DESC">This room allows Morrigan, a witch of the wilds, to stay with you.</String>
+	<String key="MORRIGAN_ROOM_UPGRADE_DESC">Upgrade Morrigan's Room to increase Morrigan's stats.</String>
+	<String key="MORRIGAN_ROOM_PREMIUM_UPGRADE_DESC">Premium upgrade Morrigan's Room to increase Morrigan's stats.</String>
+</StringData>

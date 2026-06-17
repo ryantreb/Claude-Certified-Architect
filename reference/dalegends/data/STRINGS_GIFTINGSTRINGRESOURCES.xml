@@ -1,0 +1,7 @@
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Soren Johnson (Electronic Arts) -->
+<StringData>
+	<String key="GOLD_BOX_TOOLTIP">Click to receive {%amount%} gold from {%friendName%}.</String>
+	<String key="GIFT_BOX_TOOLTIP">Click to receive gifts from your friends.</String>
+
+	<String key="GIFT_ENTRY_TITLE">{%friendName%}'s Gift</String>
+</StringData>

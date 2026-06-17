@@ -1,0 +1,1340 @@
+<!-- edited with XMLSpy v2010 rel. 3 sp1 (http://www.altova.com) by BOBBY MOLDAVON (ELECTRONIC ARTS) -->
+<!-- DAJFB Char Anim Skin Definitions
+	Created 7.29.2010
+	Consult the DAL Equipment doc
+-->
+<RigData>
+	<DefaultChunkName>
+		ANIM_SKINS_HELMETS
+	</DefaultChunkName>
+	<!-- ROBE -->
+	<Entry>
+		<ID>skHmLvl1Helmet</ID>
+		<AssetPrefix>lvl1</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<!--helmet rig -->
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmLuckyHelmet</ID>
+		<AssetPrefix>lucky</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmPowerHelmet</ID>
+		<AssetPrefix>power</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmLvl2Helmet</ID>
+		<AssetPrefix>lvl2</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmHeavyHelmet</ID>
+		<AssetPrefix>heavy</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmLvl3Helmet</ID>
+		<AssetPrefix>lvl3</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmSlowHelmet</ID>
+		<AssetPrefix>sloth</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmLvl4Helmet</ID>
+		<AssetPrefix>lvl4</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmFastHelmet</ID>
+		<AssetPrefix>fast</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmLvl5Helmet</ID>
+		<AssetPrefix>lvl5</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmEvilHelmet</ID>
+		<AssetPrefix>evil</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmLvl6Helmet</ID>
+		<AssetPrefix>lvl6</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmLightHelmet</ID>
+		<AssetPrefix>light</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<!-- PREMIUM ITEMS -->
+	<Entry>
+		<ID>skHmPrNastyHelmet</ID>
+		<AssetPrefix>prNasty</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmPrExtraHelmet</ID>
+		<AssetPrefix>prExtra</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmPrBerserkHelmet</ID>
+		<AssetPrefix>prBerserk</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmPrDemonHelmet</ID>
+		<AssetPrefix>prDemon</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmPrloot</ID>
+		<AssetPrefix>loot</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmAggroHelmet</ID>
+		<AssetPrefix>prAggro</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmMageHelmet</ID>
+		<AssetPrefix>prMage</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmGorillaHelmet</ID>
+		<AssetPrefix>prGorilla</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmPrBiteyHelmet</ID>
+		<AssetPrefix>prBitey</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmPrSmilyHelmet</ID>
+		<AssetPrefix>prSmiley</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmPrFancyHelmet</ID>
+		<AssetPrefix>prFancy</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmPrCapHelmet</ID>
+		<AssetPrefix>prCap</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmHurlockBolterHelmet</ID>
+		<AssetPrefix>hurlockBolter</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmTenticleHelmet</ID>
+		<AssetPrefix>prTenticle</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmMagnetHelmet</ID>
+		<AssetPrefix>prMagnetHelmet</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<!-- PROMO HELMETS -->
+	<!-- blood dragon Dragon Age helmets -->
+	<Entry>
+		<ID>skHvPrmBloodDragonHeavyHelmet</ID>
+		<AssetPrefix>prmBloodDragonHeavy</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrmBloodDragonLeatherHelmet</ID>
+		<AssetPrefix>prmBloodDragonLeather</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrmBloodDragonRobeHelmet</ID>
+		<AssetPrefix>prmBloodDragonRobe</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<!-- N7 Mass Effect helmets -->
+	<Entry>
+		<ID>skHvPrmN7HeavyHelmet</ID>
+		<AssetPrefix>prmN7Heavy</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrmN7LeatherHelmet</ID>
+		<AssetPrefix>prmN7Leather</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrmN7RobeHelmet</ID>
+		<AssetPrefix>prmN7Robe</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<!-- Deaths Hand - Jade Empire helmets -->
+	<Entry>
+		<ID>skHvPrmJadeEmpireHelmet</ID>
+		<AssetPrefix>prmJadeEmpire</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<!-- Sir Isaac Dead Space helmets -->
+	<Entry>
+		<ID>skHvPrmIsaacHeavyHelmet</ID>
+		<AssetPrefix>prmIsaacHeavy</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrmIsaacLeatherHelmet</ID>
+		<AssetPrefix>prmIsaacLeather</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHvPrmIsaacRobeHelmet</ID>
+		<AssetPrefix>prmIsaacRobe</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<!-- Dragon Age II helmets -->
+	<Entry>
+		<ID>skHmDA2ChainHelmet</ID>
+		<AssetPrefix>da2Chain</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmDA2CrownHelmet</ID>
+		<AssetPrefix>da2Crown</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmDA2CrownThinHelmet</ID>
+		<AssetPrefix>da2CrownThin</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmDA2DragonHelmet</ID>
+		<AssetPrefix>da2Dragon</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmDA2MaskBlueHelmet</ID>
+		<AssetPrefix>da2MaskBlue</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmDA2MetalHelmet</ID>
+		<AssetPrefix>da2Metal</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmDA2MaskHelmet</ID>
+		<AssetPrefix>da2Mask</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmDA2RobeHelmet</ID>
+		<AssetPrefix>da2Robe</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmDA2RobePurpleHelmet</ID>
+		<AssetPrefix>da2RobePurple</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<!-- more DA2 helmets -->
+	<Entry>
+		<ID>skHmCresentClothHelmet</ID>
+		<AssetPrefix>cresentCloth</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmDarkPlateHelmet</ID>
+		<AssetPrefix>darkPlate</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmLeatherMaskedHelmet</ID>
+		<AssetPrefix>leatherMasked</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmLeatherOpenHelmet</ID>
+		<AssetPrefix>leatherOpen</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmMaskedMailHelmet</ID>
+		<AssetPrefix>maskedMail</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmMaskedOpenHelmet</ID>
+		<AssetPrefix>maskedOpen</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmScaleHelmet</ID>
+		<AssetPrefix>scale</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmTurbanDarkHelmet</ID>
+		<AssetPrefix>turbanDark</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmTurbanMaskHelmet</ID>
+		<AssetPrefix>turbanMask</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmTurbanOpenHelmet</ID>
+		<AssetPrefix>turbanOpen</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmWrappedClothHelmet</ID>
+		<AssetPrefix>wrappedCloth</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmElvenMage</ID>
+		<AssetPrefix>elvenMage</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmElvenBandit</ID>
+		<AssetPrefix>elvenBandit</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmElvenRanger</ID>
+		<AssetPrefix>elvenRanger</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	
+	<Entry>
+		<ID>skHmLorekeeper</ID>
+		<AssetPrefix>lorekeeper</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmLorekeeperMask</ID>
+		<AssetPrefix>lorekeeperMask</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmSoulbinder</ID>
+		<AssetPrefix>soulBinder</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetBackStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmSubversion</ID>
+		<AssetPrefix>subversion</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmSteady</ID>
+		<AssetPrefix>steady</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<!-- promo sims helmet -->
+	<Entry>
+		<ID>skHmSimsMedivalPlumbobHelmet</ID>
+		<AssetPrefix>prmPlumbob</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RasterizeIcon>FALSE</RasterizeIcon>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<!-- promo dark spore helmets -->
+	<Entry>
+		<ID>skHmDarkSporeHelmet</ID>
+		<AssetPrefix>darkSpore</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmDarkSporeSharkHelmet</ID>
+		<AssetPrefix>darkSporeShark</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<!-- promo battlefield 3 helmets -->
+	<Entry>
+		<ID>skHmBattlefield3mageHelmet</ID>
+		<AssetPrefix>battlefieldMage</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmBattlefield3rogueHelmet</ID>
+		<AssetPrefix>battlefieldRogue</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmBattlefield3warriorHelmet</ID>
+		<AssetPrefix>battlefieldWarrior</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<!-- promo helmet Lode Moore's bowler hat -->
+	<Entry>
+		<ID>skHmLodeMooreHelmet</ID>
+		<AssetPrefix>hat</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	
+	<!-- monster helmets -->
+	<Entry>
+		<ID>skHmRaiderScoundrelMaster</ID>
+		<AssetPrefix>raiderScoundrelMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmRaiderHereticMaster</ID>
+		<AssetPrefix>raiderHereticMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmRaiderBerserkerMaster</ID>
+		<AssetPrefix>raiderBerserkerMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmCultistCripplingVeteran</ID>
+		<AssetPrefix>cultistCripplingVeteran</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmCoterieFootpadMaster</ID>
+		<AssetPrefix>coterieFootpadMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmCoterieArsonistMaster</ID>
+		<AssetPrefix>coterieArsonistMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmHighDragonHelmet</ID>
+		<AssetPrefix>highDragon</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmDarkspawnShaman</ID>
+		<AssetPrefix>hurlockShamanOmega</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmDarkspawnHurlockAlpha</ID>
+		<AssetPrefix>hurlockAlphaNormal</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmHighDarkspawnHurlockAssassin</ID>
+		<AssetPrefix>hurlockAssassinOmega</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<!-- Monster Masks -->
+	<Entry>
+		<ID>skHmHurlockAssassinRuntMask</ID>
+		<AssetPrefix>hurlockAssassinRunt</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmOgreMask</ID>
+		<AssetPrefix>ogreMask</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmShriekMask</ID>
+		<AssetPrefix>shriekMask</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShadowWerewolfMask</ID>
+		<AssetPrefix>shadowWerewolfMask</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmSkeletonRuntMask</ID>
+		<AssetPrefix>skeletonNormalRunt</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmGenlockRuntMask</ID>
+		<AssetPrefix>genlockRuntMask</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmCorpseMask</ID>
+		<AssetPrefix>corpseMask</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmDrakeMask</ID>
+		<AssetPrefix>drakeMask</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmCartaDwarfMask</ID>
+		<AssetPrefix>cartaDwarfMask</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmTovezDisguise</ID>
+		<AssetPrefix>tovezDisguise</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmSendisDisguise</ID>
+		<AssetPrefix>sendisDisguise</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmLukeshDisguise</ID>
+		<AssetPrefix>lukeshDisguise</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmHawkeDisguise</ID>
+		<AssetPrefix>hawkeDisguise</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmHawkeDisguiseHair</ID>
+		<AssetPrefix>hawkeDisguiseHair</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmWitchHat</ID>
+		<AssetPrefix>WitchHat</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmJackOLantern</ID>
+		<AssetPrefix>JackOLantern</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmJackOLantern2</ID>
+		<AssetPrefix>JackOLantern2</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmBrettBatesMask</ID>
+		<AssetPrefix>BrettBates</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmPumpkinHat</ID>
+		<AssetPrefix>pumpkinHat</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmRaspinDisguise</ID>
+		<AssetPrefix>raspinDisguise</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmCarthrissDisguise</ID>
+		<AssetPrefix>spiderCultistDisguise</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmElfEars</ID>
+		<AssetPrefix>elfEars</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmElfEars2</ID>
+		<AssetPrefix>elfEars2</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmElfEars3</ID>
+		<AssetPrefix>elfEars3</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmMoustache1</ID>
+		<AssetPrefix>moustache1</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmBeard1</ID>
+		<AssetPrefix>legendaryBeard</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmBeard2</ID>
+		<AssetPrefix>legendaryBeard2</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmBeardMoustache1</ID>
+		<AssetPrefix>moustacheBeard1</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmCatEars</ID>
+		<AssetPrefix>catEar</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmCatNose</ID>
+		<AssetPrefix>catNose</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmCatDisguise</ID>
+		<AssetPrefix>catDisguise</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmCrown</ID>
+		<AssetPrefix>crown</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmHallaHelm</ID>
+		<AssetPrefix>hallaHat</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmBereskarnBlack</ID>
+		<AssetPrefix>berzerkanHat</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmSnowHood</ID>
+		<AssetPrefix>snowHood</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmIceCrown</ID>
+		<AssetPrefix>iceCrown</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmIceCrystalCrown</ID>
+		<AssetPrefix>iceCrystalCrown</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmSantaHat</ID>
+		<AssetPrefix>santaHat</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmSantaBeard</ID>
+		<AssetPrefix>santaBeard</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmWhiteBeard</ID>
+		<AssetPrefix>whiteBeard</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmSantaCombo</ID>
+		<AssetPrefix>santaCombo</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmSantaCombo2</ID>
+		<AssetPrefix>santaCombo2</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmWorkerElf</ID>
+		<AssetPrefix>elfWorker</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<!-- NO ART -->
+	<Entry>
+		<ID>skHmNoHelmet</ID>
+		<AssetPrefix>noHelmetThisDoesntExist</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<!-- Shadow Elf Helmet -->
+	<Entry>
+		<ID>skHmShadowSlayerMaster</ID>
+		<AssetPrefix>shadowSlayerMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmShadowSapperMaster</ID>
+		<AssetPrefix>shadowSapperMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmShadowEnchanterMaster</ID>
+		<AssetPrefix>shadowEnchanterMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+		<IconSecondaryPiece>helmetBack</IconSecondaryPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmShadowCasterMaster</ID>
+		<AssetPrefix>shadowCasterMaster</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmPrideDemon</ID>
+		<AssetPrefix>prideDemon</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmPrankster</ID>
+		<AssetPrefix>prankster</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmTemplarSent</ID>
+		<AssetPrefix>templarSent</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	
+	<Entry>
+		<ID>skHmGolemMageMask</ID>
+		<AssetPrefix>golemMageHelm</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmGolemDwarfHelm</ID>
+		<AssetPrefix>golemCorruptedDwarfHelm</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmSapperMask</ID>
+		<AssetPrefix>sapperMask</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skHmCarrotHat</ID>
+		<AssetPrefix>carrotHat</AssetPrefix>
+		<ModByGender>TRUE</ModByGender>
+		<RigPieceSet>
+			<PieceList ID="plHumanoidHelmetStandard"/>
+		</RigPieceSet>
+		<IconPiece>helmet</IconPiece>
+	</Entry>
+</RigData>

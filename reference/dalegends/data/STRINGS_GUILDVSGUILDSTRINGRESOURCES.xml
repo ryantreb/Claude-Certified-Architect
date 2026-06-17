@@ -1,0 +1,73 @@
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Soren Johnson (Electronic Arts) -->
+<StringData>
+	<String key="DEFAULT_PLAYER_NAME">you</String>
+	<String key="DEFAULT_PLAYER_PRONOUN">your</String>
+	<String key="DEFAULT_CHALLENGER_PRONOUN">their</String>
+
+	<!-- Challenge token related strings -->
+	<String key="BUY_TOKEN_TOOLTIP">You have used all your {CTOKEN} for now. Would you like to refill +{%quantity%} {CTOKEN} so you can challenge more friends? Click the button to the left for more tokens, or come back later for more fun.</String>
+	<String key="BUY_TOKEN_SLOT_TOOLTIP">View a friend, then use a {CTOKEN} to challenge them in battle. If you want to fight more challenges at a time, spend {COIN} to increase your maximum {CTOKEN} up to {%tokenCap%}.</String>
+	<String key="MAX_TOKEN_SLOT_TOOLTIP">Congratulations! You’ve unlocked all challenge tokens, enabling the maximum amount of free plays per session. Now challenge your friends and see what you can achieve!</String>
+	<String key="GOLD_BTN_TEXT"><![CDATA[+ {CTOKEN} Max
+{COIN} {%amount%}]]></String>
+	<String key="CROWN_BTN_TEXT"><![CDATA[+{%quantity%} {CTOKEN}
+{COIN}    {%amount%}]]></String>
+	<String key="CHALLENGE_BTN_TEXT"><![CDATA[Challenge
+{CTOKEN}]]></String>
+	<String key="CHALLENGE_BTN_NOT_ENOUGH_MEMBERS_TEXT"><![CDATA[Nag]]></String>
+	<String key="CHALLENGE_BTN_TOOLTIP">Click to challenge {%friendName%}'s guild</String>
+	<String key="CHALLENGE_BTN_NOT_ENOUGH_MEMBERS_TOOLTIP">{%friendName%} needs to add more friends to their guild before you can challenge them.</String>
+	<String key="CHALLENGER_TOOLTIP">View {%guildName%}?</String>
+	<String key="NEWSFEED_TITLE">News Feed</String>
+	<String key="NEMESIS_TITLE">Your Nemesis This Week</String>
+	<String key="NEMESIS_PLAYER_TOOLTIP">Defeated {%playerName%} more times than anyone else to become {%playerPronoun%} nemesis.</String>
+	<String key="NEMESIS_TOOLTIP">Defeat {%playerName%} more times than anyone else to become {%playerPronoun%} nemesis.</String>
+	<String key="NO_NEMESIS_TEXT">No nemesis yet.</String>
+	<String key="CHALLENGE_NEMESIS_TEXT">Challenge to claim this spot!</String>
+	<String key="LEADERBOARD_TITLE">Your Challengers This Week</String>
+	<String key="FRIEND_LEADERBOARD_TITLE">{%heroName%}'s Challengers This Week</String>
+	<String key="NO_LEADERBOARD_ENTRY_TEXT"><![CDATA[{%friendName%}'s guild is waiting to be challenged!
+
+Are you up for it?]]></String>
+	<String key="NO_LEADERBOARD_ENTRY_NOT_ENOUGH_MEMBERS_TEXT"><![CDATA[{%friendName%}'s guild doesn't have enough members to challenge.
+
+Prompt them to add more guild members?]]></String>
+	<String key="FRIEND_HERO_GEAR_TITLE">{%heroName%}'s Gear</String>
+	<String key="FRIEND_NEMESIS_TITLE">{%heroName%}'s Nemesis This Week</String>
+	<String key="HIGH_SCORE_TITLE">High score</String>
+
+	<String key="DEFENDED_ICON_TOOLTIP">{%guildName%} has successfully defended itself {%numWins%} times!</String>
+	<String key="DEFEATED_ICON_TOOLTIP">{%guildName%} has been defeated {%numLosses%} times.</String>
+	<String key="GUILD_MATE_ICON_TOOLTIP">{%numGuildMates%} friends in this guild</String>
+	<String key="WIN_ICON_TOOLTIP">{%numWins%} wins vs this guild</String>
+	<String key="LOSS_ICON_TOOLTIP">{%numLosses%} losses vs this guild</String>
+
+	<String key="GUILD_VS_GUILD_TITLE">Guild vs Guild</String>
+	<String key="GUILD_VS_GUILD_RAVI_TEXT">Check out {%hero_name%}'s record below, then challenge a friend to take on their guild in combat.</String>
+	<String key="GUILD_VS_GUILD_CHALLENGE">View</String>
+	
+	<String key="NO_NEMESIS">No Nemesis Yet</String>
+
+	<String key="GVG_FRIEND_DIED_PROTIP">If a friend falls in battle, you can use gold to recruit a replacement by clicking the "Recruit" button below another friend's name.</String>
+
+	<String key="NO_SCORE">No Score</String>
+	
+	<!-- Results screen -->
+	<String key="GUILD_VS_GUILD_YOU_CONQUERED">You conquered {%heroName%}'s guild!</String>
+	<String key="GUILD_VS_GUILD_YOU_WERE_DEFEATED">You were defeated by {%heroName%}!</String>
+	
+	<!-- Result screen share options -->
+	<String key="GUILD_VS_GUILD_WALLPOST_TOPPED_FRIEND">You just annihilated {%toppedFriendName%}'s high score against {%challengedFriendName%}! Brag on their wall!</String>
+	<String key="GUILD_VS_GUILD_WALLPOST_BECAME_NEMESIS">You just became {%challengedFriendName%}'s nemesis! Put them on notice!</String>
+	<String key="GUILD_VS_GUILD_WALLPOST_NUMBER_ONE">You just fought your way to the top of {%challengedFriendName%}'s leaderboard! Celebrate your victory!</String>
+	<String key="GUILD_VS_GUILD_WALLPOST_NEW_HIGH_SCORE">You just beat your personal high score against {%challengedFriendName%}! Share your feat!</String>
+	<String key="GUILD_VS_GUILD_WALLPOST_WON">You conquered {%challengedFriendName%}'s forces! Let them know!</String>
+	<String key="GUILD_VS_GUILD_WALLPOST_LOST">{%challengedFriendName%}'s forces managed to withstand your attack! Congratulate them!</String>
+	
+	<!--Victory bonuses -->
+	<String key="BONUS_NO_GUILDMATES_SLAIN_TOOLTIP">Win with no guildmates slain</String>
+	<String key="BONUS_NO_DAMAGE_TAKEN_TOOLTIP">Win without taking damage</String>
+	<String key="BONUS_PLAYER_WON_TOOLTIP">You won the battle</String>
+	<String key="BONUS_NO_EXTRA_RECRUITS_TOOLTIP">Win with no extra recruits</String>
+	<String key="BONUS_NO_REVIVES_TOOLTIP">Win without reviving your hero</String>
+</StringData>

@@ -1,0 +1,34 @@
+<StringData>
+	<!-- =================================================
+	   Castle Background Names
+	================================================== -->
+	<String key="CASTLE_BACKGROUND_TYPE_1">Vimmark Mountains</String>
+	<String key="CASTLE_BACKGROUND_TYPE_2">Starkhaven Ridge</String>
+	<String key="CASTLE_BACKGROUND_TYPE_3">Wildervale Hills</String>
+	<String key="CASTLE_BACKGROUND_TYPE_4">Kaiten Plains</String>
+	<String key="CASTLE_BACKGROUND_TYPE_5">Markham Coast</String>
+	
+	<!-- =================================================
+	   Castle Style Names
+	================================================== -->
+	<String key="CASTLE_STYLE_TYPE_1">Hewn</String>
+	<String key="CASTLE_STYLE_TYPE_2">Buttressed</String>
+	<String key="CASTLE_STYLE_TYPE_3">Stygian</String>
+	<String key="CASTLE_STYLE_TYPE_4">Arched</String>
+	<String key="CASTLE_STYLE_TYPE_5">Columnar</String>
+	
+	<String key="CASTLE_DEFAULT_NAME_1">{%first_name%}'s Castle</String>
+	<String key="CASTLE_DEFAULT_NAME_2">{%first_name%}'s Keep</String>
+	<String key="CASTLE_DEFAULT_NAME_3">{%first_name%}'s Den</String>
+	<String key="CASTLE_DEFAULT_NAME_4">{%first_name%}'s Hall</String>
+	<String key="CASTLE_DEFAULT_NAME_5">Fort {%first_name%}</String>
+	<String key="CASTLE_DEFAULT_NAME_6">{%first_name%}'s Palace</String>
+	<String key="CASTLE_DEFAULT_NAME_7">{%first_name%}'s Estate</String>
+	<String key="CASTLE_DEFAULT_NAME_8">{%first_name%}'s Villa</String>
+	
+	<!-- =================================================
+	   Castle creation strings
+	================================================== -->
+	<String key="CASTLE_CREATION_YES_BUTTON_TEXT">Ok</String>
+	<String key="CASTLE_CREATION_NO_BUTTON_TEXT">Cancel</String>
+</StringData>

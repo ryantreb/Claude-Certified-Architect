@@ -1,0 +1,24 @@
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Soren Johnson (Electronic Arts) -->
+<StringData>
+	<String key="CREDITS_TITLE">Credits</String>
+	<String key="LAUNCH_TAB">Launch Team</String>
+	<String key="LIVE_TAB">Live Additions</String>
+	<String key="SPECIAL_THANKS_TAB">Special Thanks</String>
+	<String key="ART_TEAM">Art Team</String>
+	<String key="GENERAL_MANAGER">General Manager</String>
+	<String key="ENGINEERING_TEAM">Engineering Team</String>
+	<String key="PRODUCTION_TEAM">Production Team</String>
+	<String key="PRODUCT_MANAGEMENT_TEAM">Product Management Team</String>
+	<String key="PLATFORM_TEAM">Platform</String>
+	<String key="DESIGN_TEAM">Design</String>
+	<String key="ART_DESIGN_&amp;_ANIMATION"><![CDATA[Art Design & Animation]]></String>
+	<String key="CINEMATIC">Cinematic</String>
+	<String key="ADDITIONAL_PLATFORM_SUPPORT">Additional Platform Support</String>
+	<String key="QUALITY_ASSURANCE">Quality Assurance</String>
+	<String key="INTERN_THANKS">Intern Thanks</String>
+	<String key="SPECIAL_THANKS">Special Thanks</String>
+	<String key="2011">2011</String>
+	<String key="GREY_WARDENS">The Grey Wardens</String>
+	<String key="DAL_TEAM_INCREASE">DAL Team Increase</String>
+	<String key="ALL_FANS">All Our Fans</String>
+</StringData>

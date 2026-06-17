@@ -1,0 +1,525 @@
+<!-- edited with XMLSpy v2010 rel. 3 sp1 (http://www.altova.com) by BOBBY MOLDAVON (ELECTRONIC ARTS) -->
+<!-- DAJFB Char Anim Skin Definitions
+	Created 7.29.2010
+-->
+<RigData>
+	<DefaultChunkName>
+		ANIM_SKINS_CONSUMABLES
+	</DefaultChunkName>
+	<!-- BOMBS -->
+	<Entry>
+		<ID>skBombFire</ID>
+		<AssetPrefix>bomb_fire</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBombFrost</ID>
+		<AssetPrefix>bomb_frost</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBombShock</ID>
+		<AssetPrefix>bomb_shock</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBombShard</ID>
+		<AssetPrefix>bomb_shard</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBombTime</ID>
+		<AssetPrefix>bomb_time</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBombAcid</ID>
+		<AssetPrefix>bomb_acid</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBombGrease</ID>
+		<AssetPrefix>bomb_grease</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBombPoison</ID>
+		<AssetPrefix>bomb_poison</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBombConfusion</ID>
+		<AssetPrefix>bomb_confusion</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBombSwarm</ID>
+		<AssetPrefix>bomb_swarm</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBombFlame</ID>
+		<AssetPrefix>bomb_flame</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBombTorrent</ID>
+		<AssetPrefix>bomb_torrent</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBombDispel</ID>
+		<AssetPrefix>bomb_dispel</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBombSmoke</ID>
+		<AssetPrefix>bomb_smoke</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBombCloud</ID>
+		<AssetPrefix>bomb_cloud</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<!-- POTIONS -->
+	<Entry>
+		<ID>skPotionManaSmall</ID>
+		<AssetPrefix>potion_mana_small</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPotionManaLarge</ID>
+		<AssetPrefix>potion_mana_large</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPotionAntidote</ID>
+		<AssetPrefix>potion_antidote</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPoulticeHealth</ID>
+		<AssetPrefix>poultice_health</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPotionPower</ID>
+		<AssetPrefix>potion_power</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPotionDefense</ID>
+		<AssetPrefix>potion_defense</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPotionHealthSmall</ID>
+		<AssetPrefix>potion_health_small</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPotionHealthLarge</ID>
+		<AssetPrefix>potion_health_large</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPotionConcentration</ID>
+		<AssetPrefix>potion_concentration</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPotionRestoration</ID>
+		<AssetPrefix>potion_restoration</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPotionLuck</ID>
+		<AssetPrefix>potion_luck</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPotionAgility</ID>
+		<AssetPrefix>potion_agility</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPotionEnergyLesser</ID>
+		<AssetPrefix>potion_energy_lesser</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>	
+	<Entry>
+		<ID>skPotionEnergy</ID>
+		<AssetPrefix>potion_energy</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPotionEnergyGreater</ID>
+		<AssetPrefix>potion_energy_greater</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPotionEnergyPill</ID>
+		<AssetPrefix>pill_energy</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPotionEnergyPillLesser</ID>
+		<AssetPrefix>pill_lesser_energy</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>		
+	<Entry>
+		<ID>skHornEvras</ID>
+		<AssetPrefix>horn_evras</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPotionFocus</ID>
+		<AssetPrefix>potion_focus</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPotionResistance</ID>
+		<AssetPrefix>potion_resistance</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPotionWard</ID>
+		<AssetPrefix>potion_ward</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPotionRevitalize</ID>
+		<AssetPrefix>potion_revitalize</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<!-- KITS -->
+	<Entry>
+		<ID>skKitTeamBattle</ID>
+		<AssetPrefix>kit_team_battle</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skKitTeamTalent</ID>
+		<AssetPrefix>kit_team_talent</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skKitManaSmall</ID>
+		<AssetPrefix>kit_mana_small</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skKitManaLarge</ID>
+		<AssetPrefix>kit_mana_large</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skKitManaTeam</ID>
+		<AssetPrefix>kit_mana_team</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skKitAntidote</ID>
+		<AssetPrefix>kit_antidote</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skKitSmellingSalts</ID>
+		<AssetPrefix>kit_smelling_salts</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skKitHealingSmall</ID>
+		<AssetPrefix>kit_healing_small</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skKitHealingLarge</ID>
+		<AssetPrefix>kit_healing_large</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skKitTeamInjury</ID>
+		<AssetPrefix>kit_team_injury</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skKitAidTeam</ID>
+		<AssetPrefix>kit_aid_team</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skKitDragon</ID>
+		<AssetPrefix>kit_dragon</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skKitBracing</ID>
+		<AssetPrefix>kit_bracing</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skKitInvulnerability</ID>
+		<AssetPrefix>kit_invulnerability</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skKitCleansing</ID>
+		<AssetPrefix>kit_cleansing</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skKitManaGreaterTeam</ID>
+		<AssetPrefix>kit_mana_greaterteam</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skKitBattleGreaterTeam</ID>
+		<AssetPrefix>kit_battle_greaterteam</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<!-- PERKS -->
+	<Entry>
+		<ID>skPerkXPBonus</ID>
+		<AssetPrefix>perk_xp_bonus</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPerkXPBonusGreater</ID>
+		<AssetPrefix>perk_xp_bonus_greater</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPerkHappinessBonus</ID>
+		<AssetPrefix>perk_castle_happiness_bonus</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPerkProductivityBonus</ID>
+		<AssetPrefix>perk_castle_productivity_bonus</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPerkFireworks</ID>
+		<AssetPrefix>perk_fireworks</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPerkScratchcardDay1</ID>
+		<AssetPrefix>perk_dailyScratchercard1</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPerkScratchcardDay2</ID>
+		<AssetPrefix>perk_dailyScratchercard2</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPerkScratchcardDay3</ID>
+		<AssetPrefix>perk_dailyScratchercard3</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPerkScratchcardDay4</ID>
+		<AssetPrefix>perk_dailyScratchercard4</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skPerkScratchcardDay5</ID>
+		<AssetPrefix>perk_dailyScratchercard5</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+</RigData>

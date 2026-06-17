@@ -1,0 +1,112 @@
+<StringData>
+	<!-- =================================================
+	   turn queue
+	================================================== -->
+	<String key="TURN_QUEUE_CURRENT_LABEL">Current</String>
+	<String key="TURN_QUEUE_NEXT_LABEL">Next</String>
+
+	<!-- =================================================
+	   buttons
+	================================================== -->
+	<String key="RECRUIT_BUTTON_LABEL">Recruit!</String>
+	<String key="RECRUITED_BUTTON_LABEL">In Battle</String>
+	<String key="PARTY_FULL_BUTTON_LABEL">Party Full</String>
+	<String key="CHALLENGE_BUTTON_LABEL">Challenge</String>
+	<String key="ALREADY_USED_BUTTON_LABEL">Fallen</String>
+	<String key="CALL_BUTTON_LABEL">{CROWN,1,-3}     Call</String>
+	<String key="RECRUIT_CROWN_BUTTON_LABEL">{COIN}   Recruit</String>
+	<String key="RECRUIT_COIN_BUTTON_LABEL">{COIN}   Recruit</String>
+	<String key="SKILL_IMMUNITY_ICON_LABEL">Immune</String>
+	<String key="ADVANCE_BTN_LABEL">Fight!</String>
+	<String key="RETREAT_BTN_LABEL">Retreat?</String>
+	<String key="DISMISS_BTN_LABEL">Dismiss</String>
+
+	<!-- =================================================
+	   rest time info
+	================================================== -->
+	<String key="FULL_HEALTH_TEXT"><![CDATA[Full health!
+{%timeStr%}]]></String>
+	<String key="MINOR_WOUNDS_TEXT"><![CDATA[Minor wounds
+{%timeStr%}]]></String>
+	<String key="WOUNDED_TEXT"><![CDATA[Wounded
+{%timeStr%}]]></String>
+	<String key="HEAVY_WOUNDS_TEXT"><![CDATA[Heavy wounds
+{%timeStr%}]]></String>
+	<String key="SEVERE_WOUNDS_TEXT"><![CDATA[Severe wounds
+{%timeStr%}]]></String>
+	
+	<!-- =================================================
+	   battle rewards
+	================================================== -->
+	<String key="CHEST_TOOLTIP">Defeat all monsters to unlock chest</String>
+	<String key="COMBAT_TOGGLE_WEAPON_TOOLTIP">Toggle Weapon ({%hotkey%})</String>
+	<String key="ALREADY_USED_SKILL">Already used this turn</String>
+	<String key="XP_TOOLTIP">+ {%amount%} XP</String>
+	
+	<!-- =================================================
+	   consumable upsell
+	================================================== -->
+	<String key="UPSELL_TITLE"><![CDATA[Refill {%itemName%}s?]]></String>
+	<String key="UPSELL_DESC1"><![CDATA[Would you like to refill your supply of {%itemName%}s?]]></String>
+	<String key="UPSELL_DESC2"><![CDATA[Refill your supply and 5 {%itemName%}s will be instantly added to your Battle Menu.]]></String>
+	<String key="UPSELL_YES_BTN_TEXT"><![CDATA[Yes]]></String>
+	<String key="UPSELL_NO_BTN_TEXT"><![CDATA[Not Now]]></String>
+	<String key="UPSELL_TOOLTIP"><![CDATA[Click to buy more {%itemName%}s]]></String>
+	
+	<!-- =================================================
+	   battle slot upsell
+	================================================== -->
+	<String key="BATTLE_SLOT_BTN_TEXT"><![CDATA[+1 Party Size
+{COIN}    {%amount%}]]></String>
+	<String key="BATTLE_SLOT_BTN_TOOLTIP"><![CDATA[Recruit up to 3 additional friends for 1 battle.]]></String>
+
+<!-- =================================================
+	   tooltip
+	================================================== -->
+	<String key="STAT_SEGMENT_TITLE">Skill</String>
+	<String key="RESISTANCE_SEGMENT_TITLE">Resistance</String>
+	<String key="STATUS_EFFECT_SEGMENT_TITLE">Status Effects</String>
+	<String key="STRONG_VS">Strong vs.</String>
+	<String key="WEAK_VS">Weak vs.</String>
+
+	<!-- =================================================
+	   scoring
+	================================================== -->
+	<String key="MULTIKILL_2">Double Kill Bonus!</String>
+	<String key="MULTIKILL_3">Triple Kill Bonus!</String>
+	<String key="MULTIKILL_4">Mega Kill Bonus!</String>
+	<String key="MULTIKILL_5">Ultra Kill Bonus!</String>
+	<String key="MULTIKILL_6">Legendary Kill Bonus!</String>
+	
+	<String key="BONUS_NO_GUILDMATES_SLAIN">Stalwart</String>
+	<String key="BONUS_NO_DAMAGE_TAKEN">Invincible</String>
+	<String key="BONUS_NO_CONSUMABLES_USED">Evra's Test</String>
+	<String key="BONUS_NO_SKILLS_USED">Evra's Blessing</String>
+	<String key="BONUS_PLAYER_WON">Victory</String>
+	<String key="BONUS_NO_EXTRA_RECRUITS">Frugal</String>
+	<String key="BONUS_NO_REVIVES">Legendary</String>
+	
+	<String key="COMBAT_SCORE">Score</String>
+	<String key="COMBAT_SCORE_AMT">{%amt%}</String>
+	<String key="COMBAT_HIGH_SCORE">{%amt%}</String>
+	<String key="COMBAT_HIGH_SCORE_FRIEND">High Score vs {%friend_name%}</String>
+	<String key="COMBAT_MULTIPLIER_DESC">Multiplier Activated!</String>
+	<String key="COMBAT_MULTIPLIER_DESC2">Avoid damage to increase</String>
+	<String key="COMBAT_SCORE_MOLECULE_PTS">+ {%amt%}</String>
+	<String key="COMBAT_SCORE_MOLECULE_MULTIKILL">{%bonus_name%}</String>
+	<String key="COMBAT_SCORE_MULTIPLIER_AMT">x{%amt%}</String>
+
+	<String key="WAVE_TITLE">Wave {%cur%} of {%max%}</String>
+	<String key="ONE_MORE_WAVE_TITLE">{%number%} more wave</String>
+	<String key="TWO_OR_MORE_WAVE_TITLE">{%number%} more waves</String>
+	
+	<!-- =================================================
+	   heal widget
+	================================================== -->
+	<String key="HEAL_WIDGET_FULL">Full</String>
+	<String key="HEAL_WIDGET_TITLE">Heal Me?</String>
+	<String key="HEAL_WIDGET_USE">Drink</String>
+	<String key="HEAL_WIDGET_BUY"><![CDATA[Buy & Drink
+{CROWN,1,-4}      {%amount%}]]></String>
+	
+</StringData>

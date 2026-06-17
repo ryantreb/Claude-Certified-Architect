@@ -1,0 +1,517 @@
+<!-- edited with XMLSpy v2010 rel. 3 sp1 (http://www.altova.com) by BOBBY MOLDAVON (ELECTRONIC ARTS) -->
+<!-- DAJFB Char Anim Skin Definitions
+	Created 7.29.2010
+	Consult the DAL Equipment doc
+-->
+<RigData>
+	<DefaultChunkName>
+		ANIM_SKINS_SHIELDS
+	</DefaultChunkName>
+	<!-- ROBE -->
+	<Entry>
+		<ID>skShRoundMetalShield</ID>
+		<AssetPrefix>roundMetal</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShRoundShield</ID>
+		<AssetPrefix>round</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<!-- total place holder art -->
+		<ID>skShEmblemShield</ID>
+		<AssetPrefix>emblem</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShKiteShield</ID>
+		<AssetPrefix>kite</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<!-- PREMIUM -->
+	<Entry>
+		<ID>skShPrHurlockDarkShield</ID>
+		<AssetPrefix>hurlockDark</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<!-- only shieldBack makes sense -->
+		<ID>skShPrGenlockTowerShield</ID>
+		<AssetPrefix>genlockTower</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrRiotShield</ID>
+		<AssetPrefix>riot</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrTribalShield</ID>
+		<AssetPrefix>tribalMask</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrDragonShield</ID>
+		<AssetPrefix>dragon</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<!-- new shields from wonsul -->
+	<Entry>
+		<ID>skShPrBanded</ID>
+		<AssetPrefix>Banded</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrBroadSimple</ID>
+		<AssetPrefix>BroadSimple</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrBroad</ID>
+		<AssetPrefix>Broad</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrBuckler</ID>
+		<AssetPrefix>Buckle</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrBurden</ID>
+		<AssetPrefix>Burden</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrFortune</ID>
+		<AssetPrefix>Fortune</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrGrounded</ID>
+		<AssetPrefix>Grounded</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrHealthy</ID>
+		<AssetPrefix>Healthy</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrMassive</ID>
+		<AssetPrefix>Massive</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrNimbleness</ID>
+		<AssetPrefix>Nimbleness</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrNotched</ID>
+		<AssetPrefix>Notched</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrOrnate</ID>
+		<AssetPrefix>Ornate</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrPower</ID>
+		<AssetPrefix>Power</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrSecurity</ID>
+		<AssetPrefix>Security</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrSloth</ID>
+		<AssetPrefix>Sloth</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrSpiked</ID>
+		<AssetPrefix>Spiked</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrTemplar</ID>
+		<AssetPrefix>Templar</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrTower</ID>
+		<AssetPrefix>Tower</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrWarming</ID>
+		<AssetPrefix>Warming</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrWoodenA</ID>
+		<AssetPrefix>WoodenA</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrWoodenB</ID>
+		<AssetPrefix>WoodenB</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShRoundWoodMetal</ID>
+		<AssetPrefix>roundWoodMetal</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShSafe</ID>
+		<AssetPrefix>Safe</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShSafeWood</ID>
+		<AssetPrefix>SafeWood</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShRoundMetalPower</ID>
+		<AssetPrefix>roundMetalPower</AssetPrefix>
+		<ModByGender>FALSE</ModByGender>
+		<ModByRace>FALSE</ModByRace>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<!--monster shields-->
+	<Entry>
+		<ID>skShPrHurlockOffHandThrown</ID>
+		<AssetPrefix>hurlockAxemanShield</AssetPrefix>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<!-- New Premium Art -->
+	<Entry>
+		<ID>skShPrOrlesian</ID>
+		<AssetPrefix>Orlesian</AssetPrefix>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrChitin</ID>
+		<AssetPrefix>Chitin</AssetPrefix>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrBrutal</ID>
+		<AssetPrefix>Brutal</AssetPrefix>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrDrudge</ID>
+		<AssetPrefix>Drudge</AssetPrefix>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrGarnet</ID>
+		<AssetPrefix>garnetEdge</AssetPrefix>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrFereldenMarker</ID>
+		<AssetPrefix>fereldenMarker</AssetPrefix>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrFereldenWall</ID>
+		<AssetPrefix>fereldenWall</AssetPrefix>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrLightAegis</ID>
+		<AssetPrefix>lightAegis</AssetPrefix>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrDemonic</ID>
+		<AssetPrefix>demonic</AssetPrefix>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrDragonHead</ID>
+		<AssetPrefix>dragonHead</AssetPrefix>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPumpkin</ID>
+		<AssetPrefix>pumpkin</AssetPrefix>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShWinter</ID>
+		<AssetPrefix>winterShield</AssetPrefix>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skShPrideDemon</ID>
+		<AssetPrefix>prideDemon</AssetPrefix>
+		<RigPieceSet>
+			<!--human rig -->
+			<PieceList ID="plHumanoidShieldStandard"/>
+		</RigPieceSet>
+		<IconPiece>shieldFront</IconPiece>
+	</Entry>
+</RigData>

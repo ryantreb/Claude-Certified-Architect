@@ -1,0 +1,18 @@
+
+<ErrorDatabase>
+<Error>
+    <IDStr>ERROR_GENERIC</IDStr>
+    <ID>101</ID>
+    <DescriptionID>STRING_ERROR_GENERIC</DescriptionID>
+    <RequiresRefresh>False</RequiresRefresh>
+    <RequiresServerSync>True</RequiresServerSync>
+</Error>
+<Error>
+    <IDStr>ERROR_FATAL_REFRESH</IDStr>
+    <ID>102</ID>
+    <DescriptionID>STRING_ERROR_FATAL_REFRESH</DescriptionID>
+    <RequiresRefresh>True</RequiresRefresh>
+    <RequiresServerSync>False</RequiresServerSync>
+</Error>
+</ErrorDatabase>
+

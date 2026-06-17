@@ -1,0 +1,8 @@
+<ContinentRegistry>
+	<Continent>
+		<Name>DefaultContinent</Name>
+		<Region>1</Region>
+		<Region>2</Region>
+		<Region>3</Region>	
+	</Continent>
+</ContinentRegistry>

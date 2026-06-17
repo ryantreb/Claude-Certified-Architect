@@ -1,0 +1,45 @@
+<Root>
+	<!-- =====================================================
+				News
+	====================================================== -->
+	<MainNews>
+		<Title>W1_NEWS_1_TITLE</Title>
+		<Desc>W1_NEWS_1_DESC</Desc>
+		<HoverOver>W1_NEWS_1_HOVER</HoverOver>
+		<CallbackURL>W1_NEWS_1_URL</CallbackURL>
+	</MainNews>
+	<AdBanner>
+		<ImageURL>http://com-ea2d-static-dal.s3.amazonaws.com/600x50_dragonAge2DLClegacy.png</ImageURL>
+		<HoverOver>DA2DLCLEGADCY_AD_HOVER</HoverOver>
+		<CallbackURL>http://dragonage.bioware.com/da2/addon/legacy/</CallbackURL>
+	</AdBanner>
+	<AdBanner>
+		<ImageURL>http://com-ea2d-static-dal.s3.amazonaws.com/600x50_massEffect3.png</ImageURL>
+		<HoverOver>MASSEFFECT3_AD_HOVER</HoverOver>
+		<CallbackURL>http://masseffect.com</CallbackURL>
+	</AdBanner>
+	<!--<AdBanner>
+		<ImageURL>http://com-ea2d-static-dal.s3.amazonaws.com/600x50_darkSpore.png</ImageURL>
+		<HoverOver>DARKSPORE_AD_HOVER</HoverOver>
+		<CallbackURL>http://bit.ly/daldarkspore</CallbackURL>
+	</AdBanner>
+	<AdBanner>
+		<ImageURL>http://com-ea2d-static-dal.s3.amazonaws.com/600x50_da2.gif</ImageURL>
+		<HoverOver>DA2_AD_HOVER</HoverOver>
+		<CallbackURL>http://bit.ly/htHZ0g</CallbackURL>
+	</AdBanner>-->
+	<AdBanner>
+		<ImageURL>http://com-ea2d-static-dal.s3.amazonaws.com/MaddenSS_604x44_round_player_simpler.gif</ImageURL>
+		<HoverOver>MADDEN_AD_HOVER</HoverOver>
+		<CallbackURL>http://on.fb.me/dF1gCV</CallbackURL>
+	</AdBanner>
+	<AdBanner>
+		<ImageURL>http://com-ea2d-static-dal.s3.amazonaws.com/600x50_vistasVanquish.png</ImageURL>
+		<HoverOver>STORE_AD_HOVER</HoverOver>
+	</AdBanner>
+	<AdBanner>
+		<ImageURL>http://com-ea2d-static-dal.s3.amazonaws.com/600x50_darkSpore.png</ImageURL>
+		<HoverOver>DARKSPORE_AD_HOVER</HoverOver>
+		<CallbackURL>http://bit.ly/daldarkspore</CallbackURL>
+	</AdBanner>
+</Root>

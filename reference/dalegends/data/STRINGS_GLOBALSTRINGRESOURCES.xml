@@ -1,0 +1,272 @@
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Soren Johnson (Electronic Arts) -->
+<StringData>
+	<!-- =================================================
+	   General UI
+	================================================== -->
+	<String key="CLOSE">Close</String>
+	<String key="SHARE">Share</String>
+	<String key="SKIP">Skip</String>
+	<String key="ACCEPT">Accept</String>
+	<String key="CONTINUE">Continue</String>
+	<String key="BEGIN">Begin</String>
+	<String key="NOT_NOW">Not Now</String>
+	<String key="ACCEPT_AND_SHARE"><![CDATA[Accept & Share]]></String>
+	<String key="COLLECT"><![CDATA[Collect]]></String>
+	<String key="COLLECT_AND_SHARE"><![CDATA[Collect & Share]]></String>
+	<String key="ADD_CROWNS">Add Crowns</String>
+	<String key="ADD_GOLD">Add Gold</String>
+	<String key="THANK">Thank</String>
+	<String key="CONGRATULATE">Congratulate</String>
+	<String key="WELCOME">Welcome</String>
+	<String key="INQUIRE">Inquire</String>
+	<String key="SCOLD">Scold</String>
+	<String key="BRAG">Brag</String>
+	<String key="CELEBRATE">Celebrate</String>
+	<String key="GLOAT">Gloat</String>
+	<String key="VIEW">View</String>
+	<String key="APPLAUD">Applaud</String>
+	<String key="INTIMIDATE">Intimidate</String>
+	<!-- =================================================
+	   Buttons
+	================================================== -->
+	<String key="PREV">Prev</String>
+	<String key="NEXT">Next</String>
+	<String key="DONE">Done!</String>
+	<String key="OPTIONS_TOOLTIP">Options</String>
+	<String key="MUSIC_TOOLTIP">Toggle Music</String>
+	<String key="SOUND_TOOLTIP">Toggle Sound Effects</String>
+	<String key="NEWS_TOOLTIP">Town Crier</String>
+	<String key="CREDITS_TOOLTIP">Credits</String>
+	<String key="UNLOCKS_TOOLTIP">Dragon Age 2 Unlocks</String>
+	<String key="DA2_TOOLTIP">www.DragonAge.com</String>
+	<String key="QUIT_TOOLTIP">Back to main menu</String>
+	<String key="CRATES_TOOLTIP">Promo Pack</String>
+	<String key="FORUMS_TOOLTIP">Forums</String>
+	<String key="FAQ_TOOLTIP">FAQ</String>
+	<String key="AOC_TOOLTIP">Play Age of Champions</String>
+	<!-- =================================================
+	   General values for parameter replacement
+	================================================== -->
+	<String key="POSSESSIVE_PRONOUN_FEMALE">her</String>
+	<String key="POSSESSIVE_PRONOUN_MALE">his</String>
+	<String key="POSSESSIVE_PRONOUN_UNKNOWN">their</String>
+	<String key="CLASS_WARRIOR">Warrior</String>
+	<String key="CLASS_ROGUE">Rogue</String>
+	<String key="CLASS_MAGE">Mage</String>
+	<!-- =================================================
+	   warcries
+	================================================== -->
+	<String key="DEF_WARCRY_1">For the Maker!</String>
+	<String key="DEF_WARCRY_2">Maker have mercy!</String>
+	<String key="DEF_WARCRY_3">For honor</String>
+	<String key="DEF_WARCRY_4">For Viscount Ravi</String>
+	<String key="DEF_WARCRY_5">By Andraste's Grace</String>
+	<String key="DEF_WARCRY_6">I have no equal in battle</String>
+	<String key="DEF_WARCRY_7">Another one for the trophy wall</String>
+	<String key="DEF_WARCRY_8">Evra would be proud!</String>
+	<!-- =================================================
+	   General strings
+	================================================== -->
+	<String key="NOT_IMPLEMENTED">Not implemented</String>
+	<String key="QUEST_COMPLETED_UPDATE">Has been completed.</String>
+	<String key="EXIT_TEXT">Close</String>
+	<!-- =================================================
+	   Hero attribute description strings
+	================================================== -->
+	<String key="HERO_ATTRIBUTE_DESCRIPTION_ATTACK"><![CDATA[Deal more damage
+Break through armor]]></String>
+	<String key="HERO_ATTRIBUTE_DESCRIPTION_DEFENSE"><![CDATA[Take less damage
+Protect your hero]]></String>
+	<String key="HERO_ATTRIBUTE_DESCRIPTION_STAMINA"><![CDATA[Invest to increase  {HEART,2,1.5,0}]]></String>
+	<String key="HERO_ATTRIBUTE_DESCRIPTION_AGILITY"><![CDATA[More turns in combat
+Dodge more attacks]]></String>
+	<String key="HERO_ATTRIBUTE_DESCRIPTION_LUCK"><![CDATA[More Hits and Crits
+Find more  {COIN,1.5,0}]]></String>
+	<!-- =================================================
+	   Hero resistance description strings
+	================================================== -->
+	<String key="HERO_RESISTANCE_DESCRIPTION_0">Melee Resistance</String>
+	<String key="HERO_RESISTANCE_DESCRIPTION_1">Ranged Resistance</String>
+	<String key="HERO_RESISTANCE_DESCRIPTION_2">Magic Resistance</String>
+	<String key="HERO_RESISTANCE_DESCRIPTION_3">Fire Resistance</String>
+	<String key="HERO_RESISTANCE_DESCRIPTION_4">Cold Resistance</String>
+	<String key="HERO_RESISTANCE_DESCRIPTION_5">Nature Resistance</String>
+	<String key="HERO_RESISTANCE_DESCRIPTION_6">Electric Resistance</String>
+	<!-- =================================================
+	   Welcome screen strings
+	================================================== -->
+	<String key="WELCOME_SCREEN_TITLE">Be Legendary!</String>
+	<String key="WELCOME_SCREEN_INFO_HEADER"><![CDATA["13 years ago...]]></String>
+	<String key="WELCOME_SCREEN_INFORMATION"><![CDATA[you were there in the shadows, watching as we faced the abomination Khedra. Since that time, I've watched you grow into a promising hero.
+
+I am giving you an estate as a reward for your years of service and heroism. You have certainly earned it. I trust you will make good use of the space and your servants. We are nearly there..."]]></String>
+	<String key="WELCOME_SCREEN_CONTINUE_BUTTON_TOOLTIP">Begin your legendary adventure!</String>
+	<String key="WELCOME_SCREEN_BUTTON_TEXT">Begin Your Legend</String>
+	<!-- =================================================
+	   Castle strings
+	================================================== -->
+	<String key="CASTLE_CRAFTING_ROOM_TOOLTIP_HEADER">Productivity</String>
+	<String key="CASTLE_WORKER_ROOM_TOOLTIP_HEADER">Happiness</String>
+	<String key="CASTLE_CRAFTING_ROOM_TOOLTIP_CONTENTS">This room is working at {%productivity%} productivity</String>
+	<String key="CASTLE_WORKER_ROOM_TOOLTIP_CONTENTS">Your worker has a happiness rating of {%happiness%}.</String>
+	<String key="CASTLE_WORKER_TASK_READY_TO_COLLECT">{%task%} Ready</String>
+	<String key="CASTLE_WORKER_TASK_COLLECT_PROMPT">Click to Collect!</String>
+	<String key="CASTLE_WORKER_TASK_COLLECT_ALL">Collect all</String>
+	<String key="CASTLE_WORKER_IDLE">Idle</String>
+	<String key="CASTLE_BUILD_MODE_CLOSE_BUTTON">Done Building</String>
+	<String key="HERO_SCREEN_HERO_TAB">Coming soon!</String>
+	<String key="HERO_SCREEN_CASTLE_TAB">Coming soon!</String>
+	<!-- =================================================
+	   Castle room info strings
+	================================================== -->
+	<String key="CASTLE_ROOM_UPGRADE_FUND_NOT_ENOUGH">You need {%roomUpgradeFundNotEnough%} more gold to upgrade</String>
+	<String key="CASTLE_ROOM_PREMIUM_UPGRADE_FUND_NOT_ENOUGH">You need {%roomPremiumUpgradeFundNotEnough%} more crowns to upgrade</String>
+	<String key="CASTLE_ROOM_UPGRADE_HEADER">Upgrade to Level {%roomUpgradeNextLevel%}</String>
+	<String key="CASTLE_ROOM_UPGRADE_MAX_LEVEL_HEADER">Max Level Reached</String>
+	<String key="CASTLE_ROOM_UPGRADE_DESCRIPTION">{%roomIdleUpgradeStr%}</String>
+	<String key="CASTLE_ROOM_UPGRADE_MAX_LEVEL_DESCRIPTION">This room is not upgradable</String>
+	<String key="CASTLE_ROOM_PREMIUM_UPGRADE_HEADER">Premium Upgrade</String>
+	<String key="CASTLE_ROOM_PREMIUM_UPGRADE_MAX_LEVEL_HEADER">Max Premium Level Reached</String>
+	<String key="CASTLE_ROOM_PREMIUM_UPGRADE_DESCRIPTION">{%roomIdlePremiumUpgradeStr%}</String>
+	<String key="CASTLE_ROOM_PREMIUM_UPGRADE_MAX_LEVEL_DESCRIPTION">This room is not premium upgradable</String>
+	<String key="HAPPINESS_ICON_HEADER">Room Happiness</String>
+	<String key="HAPPINESS_FROM_WINDOWS">+{%happinessFromWindows%} from windows</String>
+	<String key="HAPPINESS_FROM_TAVERN">+{%happinessFromTavern%} from tavern</String>
+	<String key="HAPPINESS_FROM_PERK">+{%happinessFromPerks%} from perks</String>
+	<String key="HAPPINESS_DESCRIPTION">Happier craftsmen complete tasks faster</String>
+	<String key="PRODUCTIVITY_ICON_HEADER">Room Productivity</String>
+	<String key="PRODUCTIVITY_FROM_UPGRADE">+{%prodFromUpgrades%} from upgrades</String>
+	<String key="PRODUCTIVITY_FROM_FURNACE">+{%prodFromFurnace%} from furnace</String>
+	<String key="PRODUCTIVITY_FROM_PERK">+{%productivityFromPerks%} from perks</String>
+	<String key="PRODUCTIVITY_DESCRIPTION">Items are crafted faster in more productive rooms.</String>
+	<String key="PRODUCTIVITY_UPGRADE">Upgrade productivity</String>
+	<String key="WORKER_ICON_HEADER">Available Workers</String>
+	<String key="WORKER_ICON_DESCRIPTION">Number of workers available for crafting.</String>
+	<String key="WORKER_NONE">There are no workers available</String>
+	<String key="STOOL_ICON_HEADER">Work Stations</String>
+	<String key="STOOL_ICON_DESCRIPTION">Upgrade work stations to craft more potions at a time.</String>
+	<String key="STOOL_FULL">All of your stools are currently in use.</String>
+	<String key="STOOL_UPGRADE">Upgrade work station</String>
+	<String key="TASK_HOVER">Unlock {%taskName%}</String>
+	<String key="HAPPINESS_INDICATOR_HEADER">Castle Happiness</String>
+	<String key="MANA_ICON_HEADER">Extra Mana Point</String>
+	<String key="MANA_DESCRIPTION">+1 Mana at the start of each combat.</String>
+	<String key="SKILL_ICON_HEADER">Extra Skill Point</String>
+	<String key="SKILL_DESCRIPTION">Purchase an additional point to place in a skill.</String>
+	<String key="STAT_ICON_HEADER">Extra Stat Point</String>
+	<String key="STAT_DESCRIPTION">Purchase an additional point to place in a stat.</String>
+	<String key="NEW_SKILL_LABEL">Coming Soon</String>
+	<String key="EXTRA_MANA_LABEL">Extra Mana&#xD;in Combat</String>
+	<String key="EXTRA_SKILL_LABEL">Extra Skill Point</String>
+	<String key="EXTRA_STAT_LABEL">Extra Stat Point</String>
+	<String key="EXTRA_MANA_TOOLTIP">Click here to purchase</String>
+	<String key="EXTRA_SKILL_TOOLTIP">Click here to purchase</String>
+	<String key="EXTRA_STAT_TOOLTIP">Click here to purchase</String>
+	<!-- =================================================
+	   Build Mode Castle strings
+	================================================== -->
+	<String key="CASTLE_ROOM_NOT_PURCHASABLE_TOOLTIP">You need more gold to purchase this room.</String>
+	<String key="CASTLE_ROOM_UNLOCK_WITHOUT_THRONE_ROOM_TOOLTIP">Unlock the {%roomName%} by purchasing the Throne Room.</String>
+	<String key="CASTLE_ROOM_UNLOCK_WITH_THRONE_ROOM_TOOLTIP">Unlock the {%roomName%} in the Throne Room.</String>
+	<String key="CASTLE_ROOM_UNIQUE_TOOLTIP">You can only purchase one room of this type in your castle.</String>
+	<String key="CASTLE_ROOM_SELLABLE_TOOLTIP">Drag here to Sell</String>
+	<String key="CASTLE_ROOM_NOT_SELLABLE_TOOLTIP">Room cannot be Sold</String>
+	<!-- =================================================
+	   Bottom bar strings
+	================================================== -->
+	<String key="BOTTOM_BAR_LEFT_BUTTON_TOOLTIP">Scroll to the previous page</String>
+	<String key="BOTTOM_BAR_RIGHT_BUTTON_TOOLTIP">Scroll to the next page</String>
+	<String key="BOTTOM_BAR_LEFT_END_BUTTON_TOOLTIP">Scroll to the first page</String>
+	<String key="BOTTOM_BAR_RIGHT_END_BUTTON_TOOLTIP">Scroll to the last page</String>
+	<!-- =================================================
+	   News feed strings / Town Crier
+	================================================== -->
+	<String key="NEWS_FEED_TITLE">Welcome Back!</String>
+	<String key="NEWS_FEED_SUB_TITLE">While you were gone ...</String>
+	<String key="NEWS_FEED_CRAFTED_STR_PART_1">Your workers finished crafting</String>
+	<String key="NEWS_FEED_CRAFTING_STR_PART_1">Your workers are currently crafting</String>
+	<String key="W1_NEWS_1_TITLE">Final Map Released!</String>
+	<String key="W1_NEWS_1_DESC">Take the fight to Kaiten and witness the exciting conclusion to your hero's epic story! Thanks to everyone for supporting us during development.</String>
+	<String key="W1_NEWS_1_HOVER"/>
+	<String key="W1_NEWS_1_URL"/>
+	<String key="DA2_AD_HOVER">Get your copy of BioWare's latest masterpiece today!</String>
+	<String key="MADDEN_AD_HOVER">Are you ready to coach your own NFL team to glory in Madden NFL Superstars?</String>
+	<String key="STORE_AD_HOVER">Visit the store to check it out!</String>
+	<String key="DARKSPORE_AD_HOVER">A new breed of Action RPG</String>
+	<String key="DA2DLCLEGADCY_AD_HOVER">Download Now!</String>
+	<String key="MASSEFFECT3_AD_HOVER">The war for Earth, has begun.</String>
+	
+	<String key="GIVE_FRIEND_A_GIFT"></String> <!-- disabled for time being. -bh, 3.6.2011 -->
+	<!--<String key="GIVE_FRIEND_A_GIFT">Click to send them a gift!</String>-->
+	<String key="COLLECT_FRIEND_GIFT">Click to go to their castle and collect your gift.</String>
+	<String key="COLLECT_FRIEND_GOLD">Click to go to their castle and collect your gold.</String>
+	<String key="SHARE_WITH_FRIENDS">Click to share with your friends!</String>
+	<String key="SHARE_CRAFTING_UPDATE">Sharing a crafting update.</String>
+	<String key="SHARE_QUEST_UPDATE">Sharing a quest completion.</String>
+	<!-- =================================================
+	   Daily Bonus Game strings
+	================================================== -->
+	<String key="DAILYBONUS_TITLE">Daily Bonus Game!</String>
+	<!-- =================================================
+	   Hero Display Strings
+	================================================== -->
+	<String key="HERO_DISPLAY_RESET_DATA_BUTTON">Start Over</String>
+	<String key="HERO_DISPLAY_RESPEC_HERO_BUTTON">Re-spec</String>
+	<String key="SHOW_CASTLE_CREATOR_BUTTON_LABEL">Edit Castle</String>
+	<String key="SHOW_CHARACTER_CREATOR_BUTTON_LABEL">Edit Hero</String>
+	<String key="HERO_DISPLAY_RESET_DATA_BLOCK_WAIT_TEXT">Please wait a moment...</String>
+	<String key="HERO_DISPLAY_RESPEC_HERO_BLOCK_WAIT_TEXT">Please wait a moment...</String>
+	<String key="HERO_DISPLAY_RESET_DATA_BLOCK_READY_TEXT">A new day, a new legend! Refresh your browser to begin your journey once more.</String>
+	<String key="HERO_DISPLAY_XP_BAR_TEXT">{%currDelta%}/{%nextDelta%} xp</String>
+	<String key="HERO_DISPLAY_XP_BAR_TOOLTIP">{%currXP%}/{%nextLevelXP%} xp</String>
+	<!-- Screen titles -->
+	<String key="HERO_DISPLAY_STATS_SCREEN_NORMAL_TITLE">Hero Attributes</String>
+	<String key="HERO_DISPLAY_SKILL_SCREEN_NORMAL_TITLE">Select Skills</String>
+	<String key="HERO_DISPLAY_SKILL_SCREEN_LEVELUP_TITLE">Choose a Skill</String>
+	<String key="HERO_DISPLAY_INVENTORY_SCREEN_NORMAL_TITLE">Inventory</String>
+	<String key="HERO_DISPLAY_INVENTORY_SCREEN_OVERFULL_TITLE">Clear Inventory</String>
+	<String key="HERO_DISPLAY_STORE_SCREEN_NORMAL_TITLE">Store</String>
+	<String key="HERO_DISPLAY_TASKS_SCREEN_NORMAL_TITLE"/>
+	<!-- intentionally blank -->
+	<String key="HERO_DISPLAY_LEVELUP_SCREEN_NORMAL_TITLE">Level Up</String>
+	<String key="HERO_DISPLAY_LEVELUP_SCREEN_STAT_TOOLTIP">Base stat + gear</String>
+	<String key="HERO_DISPLAY_LEVELUP_SCREEN_UNDO_BUTTON_TOOLTIP">Undo last change</String>
+	<String key="HERO_DISPLAY_LEVELUP_SCREEN_RESET_BUTTON_TOOLTIP">Reset stats</String>
+	<!-- =================================================
+	   Map screen strings
+	================================================== -->
+	<String key="MAP_SCREEN_ENCOUNTER_ACTIVE_BATTLE_TOOLTIP">You are engaged in a battle. Click to resume!</String>
+	<String key="MAP_SCREEN_ENCOUNTER_IN_COOLDOWN_TOOLTIP">Encounter completed!</String>
+	<String key="MAP_SCREEN_ENCOUNTER_MORE_ENERGY_NEEDED_TOOLTIP">You need {%energy_shortage%} more energy to enter this encounter.</String>
+	<String key="MAP_SCREEN_ENCOUNTER_TRANSITION_NODE_TOOLTIP">Move to a new area?</String>
+	<String key="MAP_SCREEN_REGION_CANNOT_TRAVEL_ACTIVE_ENCOUNTER_TOOLTIP">You are currently in battle</String>
+	<String key="MAP_SCREEN_REGION_CANNOT_TRAVEL_NO_PATH_TOOLTIP">Cannot travel to this region</String>
+	<String key="MAP_SCREEN_REGION_CANNOT_TRAVEL_NOT_ENOUGH_ENERGY_TOOLTIP">Not enough energy</String>
+	<String key="MAP_SCREEN_FRIENDS_AT_LOCATION_TOOLTIP">Friends at this location: </String>
+	<!-- =================================================
+	   Inventory Screen strings
+	================================================== -->
+	<String key="INVENTORY_SCREEN_EQUIPMENT_TITLE">Equipped</String>
+	<String key="INVENTORY_SCREEN_VANITY_ITEM_TITLE">Vanity Items</String>
+	<String key="INVENTORY_SCREEN_SELLABLE_TOOLTIP">Drag here to Sell</String>
+	<String key="INVENTORY_SCREEN_NOT_SELLABLE_TOOLTIP">Item cannot be Sold</String>
+	<!-- =================================================
+	   Friend bar strings
+	================================================== -->
+	<String key="FRIEND_BAR_TAB_TOOLTIP">{%number%} {%type%} available</String>
+	<String key="FRIEND_BAR_GUILD_TAB_TOOLTIP">{%number%} {%type%}</String>
+	<String key="FRIEND_BAR_INVITE_FRIEND_BUTTON_TEXT">Invite Friends</String>
+	<String key="FRIEND_BAR_SEND_GIFT_BUTTON_TEXT">Send Gifts</String>
+	<String key="INVITE_BUTTON_LABEL">Invite Friends</String>
+	<String key="ADD_FRIEND_ICON_LABEL">Add Hero</String>
+	<String key="ALL_TAB">All</String>
+	<String key="GUILD_TAB">Guild</String>
+	<String key="AVAILABLE_ICON_LABEL">Available</String>
+	<String key="UNLOCK_ICON_LABEL">Unlock?</String>
+	<String key="UNKNOWN_ICON_LABEL">Unknown</String>
+	<!-- =================================================
+	   LEGAL STRINGS
+	================================================== -->
+	<String key="OZ_LEGAL_INTRO_HEADER">Get Ready to Play!</String>
+	<String key="OZ_LEGAL_INTRO_CONTENT">By continuing, you agree that EA can send you emails about EA products, news and events and that EA shall use information that you gave EA access to view via the Permissions Screen for purposes consistent with EA\\'s REPLACE_TEXT.  If you do not agree you can remove the game through your Account Settings and all of your data will be deleted.</String>
+</StringData>

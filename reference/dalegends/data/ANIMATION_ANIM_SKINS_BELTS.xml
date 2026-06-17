@@ -1,0 +1,258 @@
+<!-- edited with XMLSpy v2010 rel. 3 sp1 (http://www.altova.com) by BOBBY MOLDAVON (ELECTRONIC ARTS) -->
+<!-- DAJFB Char Anim Skin Definitions
+	Created 7.29.2010
+-->
+<RigData>
+	<DefaultChunkName>
+		ANIM_SKINS_ACCESSORIES
+	</DefaultChunkName>
+	<!-- BELTS -->
+	<Entry>
+		<ID>skTestBelt</ID>
+		<AssetPrefix>test_belt</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltPower</ID>
+		<AssetPrefix>belt_of_power</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltParrying</ID>
+		<AssetPrefix>belt_of_parrying</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltEndurance</ID>
+		<AssetPrefix>belt_of_endurance</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltFortune</ID>
+		<AssetPrefix>belt_of_fortune</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltConstitution</ID>
+		<AssetPrefix>belt_of_constitution</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltNimbleness</ID>
+		<AssetPrefix>belt_of_nimbleness</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltPowerGreater</ID>
+		<AssetPrefix>belt_power_greater</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltProwess</ID>
+		<AssetPrefix>belt_of_prowess</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltBurden</ID>
+		<AssetPrefix>belt_of_burden</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltSloth</ID>
+		<AssetPrefix>belt_of_sloth</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltSecurity</ID>
+		<AssetPrefix>belt_of_security</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltHaste</ID>
+		<AssetPrefix>belt_of_haste</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltEvil</ID>
+		<AssetPrefix>belt_of_evil</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltExecutioners</ID>
+		<AssetPrefix>belt_executioners_waistband</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltAegis</ID>
+		<AssetPrefix>belt_aegis</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltTricky</ID>
+		<AssetPrefix>belt_tricky_sash</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltWoodman</ID>
+		<AssetPrefix>belt_woodman</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltBloodlust</ID>
+		<AssetPrefix>belt_bloodlust</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltGrounding</ID>
+		<AssetPrefix>belt_grounding_strap</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltPremium1</ID>
+		<AssetPrefix>belt_superPremium1</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltPremium2</ID>
+		<AssetPrefix>belt_superPremium2</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltPremium3</ID>
+		<AssetPrefix>belt_superPremium3</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltDeadHead</ID>
+		<AssetPrefix>belt_deadhead</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltCleric</ID>
+		<AssetPrefix>belt_cleric</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltQuartz</ID>
+		<AssetPrefix>belt_quartz</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltEagle</ID>
+		<AssetPrefix>belt_eagle</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltSpider</ID>
+		<AssetPrefix>belt_spider</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltDragonEye</ID>
+		<AssetPrefix>belt_dragoneye</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltPrideDemon</ID>
+		<AssetPrefix>belt_prideDemon</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+	<Entry>
+		<ID>skBeltPrideDemon2</ID>
+		<AssetPrefix>belt_prideDemon2</AssetPrefix>
+		<RigPieceSet>
+			<Piece DestSegment="icon"/>
+		</RigPieceSet>
+		<IconPiece>icon</IconPiece>
+	</Entry>
+</RigData>

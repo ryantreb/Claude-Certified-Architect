@@ -1,0 +1,266 @@
+<CreditsData>
+	<Tab>
+		<Title>LAUNCH_TAB</Title>
+		<Type>NAME</Type>
+		<TabName>launchTab</TabName>
+		<Category>
+			<Title>GENERAL_MANAGER</Title>
+			<Names>
+				<NameEntry>Mark Spenner</NameEntry>
+			</Names>
+		</Category>
+		<Category>
+			<Title>PRODUCTION_TEAM</Title>
+			<Names>
+				<NameEntry>Doug Cherner</NameEntry>
+				<NameEntry>Alex Kohlhofer</NameEntry>
+				<NameEntry>Ethan Levy</NameEntry>
+			</Names>
+		</Category>
+		<Category>
+			<Title>DESIGN_TEAM</Title>
+			<Names>
+				<NameEntry>Soren Johnson</NameEntry>
+				<NameEntry>Reed Lakefield</NameEntry>
+				<NameEntry>Mike Rossmassler</NameEntry>
+			</Names>
+		</Category>
+		<Category>
+			<Title>ENGINEERING_TEAM</Title>
+			<Names>
+				<NameEntry>Ben Humberston</NameEntry>
+				<NameEntry>TsungHan Lee</NameEntry>
+				<NameEntry>Rachel Reynolds</NameEntry>
+				<NameEntry>Daniel Rodriguez</NameEntry>
+				<NameEntry>Steve Sedlmayr</NameEntry>
+				<NameEntry>Kirk Sexton</NameEntry>
+			</Names>
+		</Category>
+		<Category>
+			<Title>ART_TEAM</Title>
+			<Names>
+				<NameEntry>Wonsul Hyun</NameEntry>
+				<NameEntry>Carlyn Lim</NameEntry>
+				<NameEntry>Ivan Ortega</NameEntry>
+				<NameEntry>Dionne Phua</NameEntry>
+				<NameEntry>Cecile Plattner</NameEntry>
+				<NameEntry>Derek Smith</NameEntry>
+			</Names>
+			<Names>
+				<Title>ART_DESIGN_&_ANIMATION</Title>
+				<NameEntry>Adam Phillips</NameEntry>
+			</Names>
+            <Names>
+				<Title>CINEMATIC</Title>
+				<NameEntry>Patrick Biason</NameEntry>
+				<NameEntry>Steve Bigras</NameEntry>
+				<NameEntry>Tanner Boyajian</NameEntry>
+				<NameEntry>Andrew Gray</NameEntry>
+				<NameEntry>Michael Kent</NameEntry>
+				<NameEntry>Ethan Levy</NameEntry>
+				<NameEntry>Adam Phillips</NameEntry>
+			</Names>
+		</Category>
+		<Category>
+			<Title>PRODUCT_MANAGEMENT_TEAM</Title>
+			<Names>
+				<NameEntry>John Coligan</NameEntry>
+				<NameEntry>Elliot Wang</NameEntry>
+			</Names>
+		</Category>
+		<Category>
+			<Title>PLATFORM_TEAM</Title>
+			<Names>
+				<NameEntry>Michael Babineau</NameEntry>
+				<NameEntry>Henry Clay</NameEntry>
+				<NameEntry>Aaron Cummings</NameEntry>
+				<NameEntry>Mike Green</NameEntry>
+				<NameEntry>Bert Van Heukelom</NameEntry>
+				<NameEntry>Walter King</NameEntry>			
+				<NameEntry>Paul Zielinski</NameEntry>
+			</Names>
+			<Names>
+				<Title>ADDITIONAL_PLATFORM_SUPPORT</Title>
+				<NameEntry>Andrew Sega</NameEntry>
+			</Names>
+		</Category>
+		<Category>
+			<Title>QUALITY_ASSURANCE</Title>
+			<Names>
+				<NameEntry>Brian Battistini</NameEntry>
+				<NameEntry>Murali Chavali</NameEntry>
+				<NameEntry>Kashif Abdul Hadi</NameEntry>
+				<NameEntry>Karthik Reddy</NameEntry>
+				<NameEntry>Steve Schmidt</NameEntry>
+			</Names>
+		</Category>
+		<Category>
+			<Title>INTERN_THANKS</Title>
+			<Names>
+				<NameEntry>Ryan Brady</NameEntry>
+				<NameEntry>Lillian Chou</NameEntry>
+				<NameEntry>John Lee</NameEntry>
+				<NameEntry>Xiaoxi Liu</NameEntry>
+				<NameEntry>Nite Luo</NameEntry>
+				<NameEntry>Ryan Ly</NameEntry>
+				<NameEntry>Damon Rocco</NameEntry>
+				<NameEntry>Brandon Risberg</NameEntry>
+				<NameEntry>Daniel Yaroslavski</NameEntry>
+			</Names>
+		</Category>
+		<Category>
+			<Title>SPECIAL_THANKS</Title>
+			<Names>		
+				<NameEntry>Rahul Agarwal</NameEntry>
+				<NameEntry>Shrivathsa Ballal</NameEntry>
+				<NameEntry>Jennie Chang</NameEntry>
+				<NameEntry>Mark Darrah</NameEntry>
+				<NameEntry>Kirsten Daru</NameEntry>
+				<NameEntry>Sean Decker</NameEntry>
+				<NameEntry>Fred Fang</NameEntry>
+				<NameEntry>Sue Garfield</NameEntry>
+				<NameEntry>Frank Gibeau</NameEntry>
+				<NameEntry>Matt Goldman</NameEntry>
+				<NameEntry>William Grosso</NameEntry>
+				<NameEntry>Lisa Ann Hall</NameEntry>
+				<NameEntry>Richard Hilleman</NameEntry>
+				<NameEntry>Lucas Huizar</NameEntry>
+				<NameEntry>Joe Iloreta</NameEntry>
+				<NameEntry>Jarrett Jamili</NameEntry>
+				<NameEntry>Ben Jones</NameEntry>
+				<NameEntry>Josie Kastelic</NameEntry>
+				<NameEntry>Michael Kent</NameEntry>
+				<NameEntry>Marina Kobayashi</NameEntry>
+				<NameEntry>Stephanie Koutoulas</NameEntry>
+				<NameEntry>Mike Laidlaw</NameEntry>
+				<NameEntry>Tim Lander</NameEntry>
+				<NameEntry>Derek Larke</NameEntry>
+				<NameEntry>Brandon Lukach</NameEntry>
+				<NameEntry>Cindy Lum</NameEntry>
+				<NameEntry>Colin McLaughlan</NameEntry>
+				<NameEntry>Fernando Melo</NameEntry>
+				<NameEntry>Bobby Moldavon</NameEntry>
+				<NameEntry>Karen Morris</NameEntry>
+				<NameEntry>Ray Muzyka</NameEntry>
+				<NameEntry>Marcelo Poppi</NameEntry>
+				<NameEntry>Chris Priestly</NameEntry>
+				<NameEntry>Jessie Reid</NameEntry>
+				<NameEntry>Elena Rente</NameEntry>
+				<NameEntry>John Riccitiello</NameEntry>
+				<NameEntry>Tom Rima</NameEntry>
+				<NameEntry>Kenneth Scott</NameEntry>
+				<NameEntry>Elizabeth Selby</NameEntry>
+				<NameEntry>David Silverman</NameEntry>
+				<NameEntry>Kimberly Simpson</NameEntry>
+				<NameEntry>Albert So</NameEntry>
+				<NameEntry>Daniel Stradwick</NameEntry>
+				<NameEntry>Neel Upadhye</NameEntry>
+				<NameEntry>Eric Vaughn</NameEntry>
+				<NameEntry>Lily Weiss</NameEntry>
+				<NameEntry>Mike Williams</NameEntry>
+				<NameEntry>Tina Wellner</NameEntry>
+				<NameEntry>Andrew Wong</NameEntry>
+				<NameEntry>Greg Zeschuk</NameEntry>		
+			</Names>
+		</Category>
+	</Tab>
+	<Tab>
+		<Title>LIVE_TAB</Title>
+		<Type>NAME</Type>
+		<TabName>liveTab</TabName>
+		<Category>
+			<Title>2011</Title>
+			<Names>
+				<NameEntry>Chase Swanson - QA Project Lead (Joined February 2011)</NameEntry>
+				<NameEntry>Matthew Sartain - Quality Assurance (Joined February 2011)</NameEntry>
+				<NameEntry>Brett Bates - Community Manager (Joined April 2011)</NameEntry>
+				<NameEntry>Paul Gunn - Game Designer (Joined April 2011)</NameEntry>
+				<NameEntry>Peter Iliev - Game Engineer (Joined April 2011)</NameEntry>
+				<NameEntry>John Lee - Game Engineer (Joined April 2011)</NameEntry>
+				<NameEntry>Brandon Primes - Quality Assurance (Joined April 2011)</NameEntry>
+				<NameEntry>Brad Broadhurst - Quality Assurance (Joined April 2011)</NameEntry>
+				<NameEntry>Brian Dowling - Quality Assurance (Joined April 2011)</NameEntry>
+				<NameEntry>Dustin Ravare - Quality Assurance (Joined April 2011)</NameEntry>
+				<NameEntry>Christine Tseng - Marketing Manager (Joined April 2011)</NameEntry>
+				<NameEntry>Sam Kolb - Director of Technology (Joined May 2011)</NameEntry>
+				<NameEntry>Lance Hymel - Quality Assurance (Joined May 2011)</NameEntry>
+				<NameEntry>Andy Korzik - Game Designer (Joined May 2011)</NameEntry>
+				<NameEntry>Ariel Evnine - Data Analyst (Joined May 2011)</NameEntry>
+				<NameEntry>Govind Nair - Game Designer (Joined May 2011)</NameEntry>
+				<NameEntry>Tyler Hatch - Platform Engineer (Joined May 2011)</NameEntry>
+				<NameEntry>Hyungchul Jung - Game Engineer (Joined May 2011)</NameEntry>
+				<NameEntry>Ian Lilley - Game Engineer (Joined May 2011)</NameEntry>
+				<NameEntry>Sean Lilley - Game Engineer (Joined May 2011)</NameEntry>
+				<NameEntry>Chris Steiner - Game Engineer (Joined June 2011)</NameEntry>
+				<NameEntry>Peter Landwehr - Game Engineer (Joined June 2011)</NameEntry>
+				<NameEntry>Thomas Feng - Game Designer (Joined June 2011)</NameEntry>
+				<NameEntry>Lillian Chou - Product Manager (Joined July 2011)</NameEntry>
+				<NameEntry>Nite Luo - Game Engineer (Joined July 2011)</NameEntry>
+				<NameEntry>Damon Rocco - Game Engineer (Joined July 2011)</NameEntry>
+				<NameEntry>Diyu Liu - Game Engineer (Joined July 2011)</NameEntry>
+				<NameEntry>Xiaoxi Liu - Technical Artist (Joined July 2011)</NameEntry>
+				<NameEntry>Jon Motz - Embedded QA (Joined August 2011)</NameEntry>
+				<NameEntry>Heather Franklin - Embedded QA (Joined October 2011)</NameEntry>
+				<NameEntry>Matt Luytjes - Quality Assurance (Joined November 2011)</NameEntry>
+				<NameEntry>Heather Powers - Sr. Marketing Manager (Joined November 2011)</NameEntry>
+				<NameEntry>Nya Shirzad - Production (Joined November 2011)</NameEntry>
+				
+			</Names>
+		</Category>
+	</Tab>
+	<Tab>
+		<Title>SPECIAL_THANKS_TAB</Title>
+		<Type>NAME</Type>
+		<TabName>specialTab</TabName>
+		<!--
+		<Category>
+			<Title>Game Babies</Title>
+			<Names>
+				<NameEntry>Catherine & Connor</NameEntry>
+			</Names>
+		</Category>
+		-->
+		<Category>
+			<Title>GREY_WARDENS</Title>
+			<Names>
+				<NameEntry>Tracy Aardsma</NameEntry>
+				<NameEntry>Jason Burns</NameEntry>
+				<NameEntry>Katsu Don</NameEntry>
+				<NameEntry>Teriyaki Don</NameEntry>
+				<NameEntry>Joshua Fancher</NameEntry>
+				<NameEntry>Philip Field</NameEntry>
+				<NameEntry>James Gardiner</NameEntry>
+				<NameEntry>Alex Guo</NameEntry>
+				<NameEntry>Christa Haight</NameEntry>
+				<NameEntry>Jessie Herochat</NameEntry>
+				<NameEntry>Karl Hummond</NameEntry>
+				<NameEntry>Angela Kimzey</NameEntry>
+				<NameEntry>Pamela Koo</NameEntry>
+				<NameEntry>Paul-letta Kooning</NameEntry>
+				<NameEntry>Maria Laine</NameEntry>
+				<NameEntry>Jeremy Martin</NameEntry>
+				<NameEntry>Govind Nair</NameEntry>
+				<NameEntry>Dave Napack</NameEntry>
+				<NameEntry>Scott Orlando</NameEntry>
+				<NameEntry>Esther Patterson</NameEntry>
+				<NameEntry>Michael Shaneman</NameEntry>
+				<NameEntry>Ron Shaw</NameEntry>
+				<NameEntry>NiMage Sho</NameEntry>
+				<NameEntry>Andrew Stuart</NameEntry>
+				<NameEntry>Zombified Veggies</NameEntry>
+				<NameEntry>Tim Wauters</NameEntry>
+				<NameEntry>Julian Yun</NameEntry>
+			</Names>
+		</Category>
+		<Category>
+			<Title>DAL_TEAM_INCREASE</Title>
+			<Names>
+			</Names>
+		</Category>
+		<Category>
+			<Title>ALL_FANS</Title>
+			<Names>
+			</Names>
+		</Category>
+	</Tab>
+</CreditsData>
