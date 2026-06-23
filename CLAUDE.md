@@ -1,8 +1,57 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 # Weavefall — DA Legends study build
 
 A personal, single-file browser study RPG for two certifications (Claude Certified
 Architect – Foundations; GitHub GH-600). Private repo, personal use only — never
 make it public and never publish the EA-derived assets.
+
+## Commands
+
+```sh
+npx playwright test                        # run all tests (headless)
+npx playwright test tests/smoke.spec.js    # run a single spec
+npm run test:headed                        # run with a visible browser
+npm run serve                              # Python HTTP server on :8753 (for manual play / Playwright)
+python3 tools/build-mobile.py             # regenerate mobile/ from index.html
+```
+
+Playwright requires the server to be running before tests execute — `playwright.config.js` handles this via `webServer`. Tests use `http://localhost:8753`.
+
+## Architecture
+
+`index.html` is the entire game: ~7 400 lines of CSS + one `<script>` block. No build step; no modules; no npm runtime dependencies. The script is laid out in this order:
+
+1. **Utilities** — `$()`, `clamp`, `lerp`, `mulberry32` RNG, `store` (localStorage wrapper), `Sfx` (Web Audio)
+2. **Content data** — `ALLCONCEPTS`, `CONCEPT_DOM`, and per-domain question banks for both tracks
+3. **Question bank** — two tracks of exam questions keyed by domain index
+4. **Spaced-repetition core** — `srKey`, `srGet`, `srState`, `srAnswer`, `meterOf`, `conceptScore`, `applyDecay`
+5. **Overworld engine** — isometric tile map (`MAP`, `P`), pathfinding, entity spawning, rendering loop on `<canvas id="cv">`
+6. **Battle engine** — 2×3 grid fight system (`B`), skill resolution, positioning, AoE telegraphs, boss phases
+7. **Keep / UI layer** — `showModal`, HUD, Kaiten Castle screen, codex, merchant, quest chains, settings
+8. **`window.__wf` bridge** — exposes all pure-logic functions and live state getters/setters for the Playwright suite (read/write plumbing only; changes no gameplay rule)
+9. **`boot()`** — final call that wires up and starts the game
+
+### Two learning tracks
+
+| Track key | Name | Certification |
+|-----------|------|---------------|
+| `'c'`     | Loom / *The Architect's Vigil* | Claude Certified Architect — Foundations (pass 720/1000) |
+| `'g'`     | Forge / *The Marcher Campaign* | GitHub GH-600 Agentic AI Developer (pass 700/1000) |
+
+Domain weights per track live in the question-bank section. Meter values are computed from `meterOf(track)` which reads only from earned mastery — never from combat outcomes.
+
+### State
+
+All live game state is in `S` (player/world) and `B` (current battle, `null` between fights). The current screen is `MODE` (`"title"`, `"world"`, `"battle"`, `"keep"`, …). `localStorage` is wrapped in `store`; the game degrades gracefully when it's blocked.
+
+### Tests
+
+`tests/helpers.js` exports `loadGame`, `freshGame`, `aConcept`, and `forceMaster`. All specs drive the engine through `window.__wf` rather than clicking the canvas, which means they test logic, not rendering. `smoke.spec.js` encodes the five immutable honesty rules and must stay green.
+
+The `mobile/` folder is generated — never hand-edit it. Edit `index.html` and re-run `tools/build-mobile.py`.
 
 ## Art direction — GROUND TRUTH (overrides all earlier art instructions)
 
