@@ -87,6 +87,27 @@ positioning controls how much each action is worth.
   locks the honesty rules — never delete or skip those assertions.
 - Commit in logical steps with clear messages. No PRs unless asked.
 
+## Vendored skills (`.claude/skills/`)
+
+These skills are **vendored** (committed into this repo), not installed via
+`npx skills add`. Personal installs live in `~/.claude/skills`, which is outside
+git and so is wiped every time a Claude Code on the web session spins up a fresh
+container — and never reaches a new branch. Committing them to `.claude/skills/`
+makes git carry them to every branch off `main` and every fresh session
+automatically.
+
+Currently vendored from [`mattpocock/skills`](https://github.com/mattpocock/skills)
+(upstream v1.0.1): `tdd`, `diagnosing-bugs`, `git-guardrails-claude-code`, `handoff`.
+
+To refresh from upstream (run where GitHub is reachable, e.g. the workstation):
+
+```sh
+npx skills@latest add mattpocock/skills   # pick the same skills, target .claude/skills/
+# then commit the changes to main so every branch inherits them
+```
+
+Updates are manual by design — nothing here re-pulls upstream on its own.
+
 ## Two-machine workflow
 
 Work happens on branch `claude/confident-brahmagupta-ke5dro` from both the
