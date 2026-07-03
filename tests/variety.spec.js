@@ -1,22 +1,27 @@
 // @ts-check
 /* Question variety. Two guarantees against the "same 5 questions" problem:
-   1. depth    — every Orchestration (c0) concept has enough variants that spaced
-                 review can't ping-pong between two items.
-   2. spread   — the variant selector cycles a concept's whole pool before any
-                 question repeats (avoids a window of recent ids, not just one). */
+   1. depth   — every quizzed concept (both tracks, every domain) has enough
+                variants that spaced review can't ping-pong between a few items.
+   2. spread  — the variant selector cycles a concept's whole pool before any
+                question repeats (avoids a window of recent ids, not just one). */
 const { test, expect } = require('@playwright/test');
 const { loadGame } = require('./helpers');
 
-test('every Orchestration (c0) concept has at least 4 question variants', async ({ page }) => {
+const FLOOR = 6; // minimum question variants per concept
+
+test('every quizzed concept has at least the floor of question variants', async ({ page }) => {
   await loadGame(page);
-  const counts = await page.evaluate(() => {
-    const q = window.__wf.QIDX.c[0], out = {};
-    for (const c of Object.keys(q)) out[c] = q[c].length;
+  const thin = await page.evaluate((FLOOR) => {
+    const wf = window.__wf, out = [];
+    for (const cert of ['c', 'g'])
+      for (const dom of Object.keys(wf.QIDX[cert] || {}))
+        for (const concept of Object.keys(wf.QIDX[cert][dom])) {
+          const n = wf.QIDX[cert][dom][concept].length;
+          if (n < FLOOR) out.push(`${cert}${dom}/${concept}=${n}`);
+        }
     return out;
-  });
-  for (const [concept, n] of Object.entries(counts)) {
-    expect(n, `c0 concept "${concept}" should have >=4 variants (has ${n})`).toBeGreaterThanOrEqual(4);
-  }
+  }, FLOOR);
+  expect(thin, `these concepts are below ${FLOOR} variants: ${thin.join(', ')}`).toEqual([]);
 });
 
 test('the variant selector cycles a concept pool before repeating any question', async ({ page }) => {
