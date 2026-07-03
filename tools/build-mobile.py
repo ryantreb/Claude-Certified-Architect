@@ -184,6 +184,39 @@ def main() -> None:
 
     slim = PATTERN.sub(replace, src)
 
+    # ---- PWA shell (phone-only path) ------------------------------------
+    # Home Screen installability: a standalone manifest plus the iOS head
+    # tags. The icon is the hero PNG the extraction pass already wrote out —
+    # an EA asset byte-for-byte, never new art (iOS scales it for the icon).
+    m = re.search(r'DATA\.heroImg="(assets/[^"]+\.png)"', slim)
+    if not m:
+        raise SystemExit("build-mobile: hero image not found for the app icon")
+    icon = m.group(1)
+    (OUT / "manifest.webmanifest").write_text(
+        json.dumps({
+            "name": "Weavefall",
+            "short_name": "Weavefall",
+            "display": "standalone",
+            "start_url": "./",
+            "scope": "./",
+            "background_color": "#14111e",
+            "theme_color": "#14111e",
+            "icons": [{"src": icon, "sizes": "any", "type": "image/png"}],
+        }),
+        encoding="utf-8",
+    )
+    head_tags = (
+        '<link rel="manifest" href="manifest.webmanifest">'
+        f'<link rel="apple-touch-icon" href="{icon}">'
+        '<meta name="apple-mobile-web-app-capable" content="yes">'
+        '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">'
+        '<meta name="apple-mobile-web-app-title" content="Weavefall">'
+    )
+    hidx = slim.find("</head>")
+    if hidx == -1:
+        raise SystemExit("build-mobile: no </head> to attach the PWA shell")
+    slim = slim[:hidx] + head_tags + slim[hidx:]
+
     # ---- mobile offline cache (phone-only path) -------------------------
     # iOS suspends the local a-Shell server shortly after you switch away, so
     # the ~50MB of EA art can't finish streaming and the canvas paints its

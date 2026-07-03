@@ -2,7 +2,7 @@
    Caches the app shell and every EA asset so the game keeps running after the
    local dev server (a-Shell on iOS) is suspended. Cache-first: a GET that once
    succeeds is served from cache forever, until the build version changes. */
-const VERSION = "14bad2b51a9d";
+const VERSION = "d07046d496a9";
 const CACHE = "weavefall-mobile-" + VERSION;
 
 self.addEventListener("install", () => self.skipWaiting());
