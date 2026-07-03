@@ -4324,8 +4324,41 @@ function save(){
     const copy=Object.assign({},S,{session:undefined});
     store.set(SAVE_KEY,JSON.stringify(copy));
   }catch(e){}
+  Sync.push();
 }
 function queueSave(){if(saveTimer)return;saveTimer=setTimeout(()=>{saveTimer=null;save()},800)}
+/* ---- cross-device save sync: silent plumbing to the tailnet save endpoint
+   (contract: docs/save-endpoint.md). localStorage remains the state the game
+   runs from; the endpoint mirrors S.sr so every device shares one earned
+   state. Absent or unreachable endpoint → local-only, exactly as before. */
+const Sync={remote:null,timer:null,
+  pull(){
+    try{
+      fetch("save",{cache:"no-store"}).then(r=>(r.ok&&r.status===200)?r.json():null)
+        .then(d=>{if(d&&d.v===1&&d.sr&&typeof d.sr==="object"){Sync.remote=d;Sync.adopt()}})
+        .catch(()=>{});
+    }catch(e){}
+  },
+  adopt(){
+    /* the no-conflict half: concepts only the other device has studied come
+       across whole; keys both devices hold are the merge's job (see mergeSr).
+       Never invents a record neither device earned. */
+    if(!Sync.remote||!S||!S.started)return;
+    let took=0;
+    for(const k in Sync.remote.sr)if(!S.sr[k]){S.sr[k]=Sync.remote.sr[k];took++}
+    if(took)queueSave();
+  },
+  push(){
+    if(!S||!S.started)return;
+    if(Sync.timer)return;
+    Sync.timer=setTimeout(()=>{
+      Sync.timer=null;
+      try{
+        fetch("save",{method:"PUT",body:JSON.stringify({v:1,savedAt:Date.now(),sr:S.sr})}).catch(()=>{});
+      }catch(e){}
+    },1500);
+  }
+};
 function load(){
   const raw=store.get(SAVE_KEY);
   if(!raw)return null;
@@ -8600,6 +8633,8 @@ function startGame(isNew){
   MODE="world";
   Music.sync();
   S.session=freshSession();
+  S.started=true;
+  Sync.adopt();               /* fold in whatever the other device studied */
   if(!isNew){
     const decayed=applyDecay();
     if(decayed>0)toast(decayed+" long-neglected concept"+(decayed>1?"s":"")+" slipped toward forgetting — they await review.");
@@ -8687,6 +8722,7 @@ function boot(){
   $("btnContinueGame").style.display=saved?"":"none";
   if(saved)S.track=saved.track;
   toTitle();
+  Sync.pull();                /* fetch the other device's save while titling */
   requestAnimationFrame(frame);
 }
 /* boot() is invoked at the end of the road block, once all overrides are defined */
