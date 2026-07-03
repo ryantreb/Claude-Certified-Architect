@@ -19,10 +19,13 @@ import json
 import pathlib
 import re
 import shutil
+import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "index.html"
-OUT = ROOT / "mobile"
+# optional argv[1]: output folder (deploy-mobile.sh builds into a staging dir
+# and swaps only on success, so a failed build never breaks the served copy)
+OUT = ROOT / (sys.argv[1] if len(sys.argv) > 1 else "mobile")
 ASSETS = OUT / "assets"
 
 EXT = {

@@ -61,13 +61,13 @@ tailscale serve status                # shows the exact URL
 ## 6. Ship an update (weekly, or whenever)
 
 ```sh
-git pull origin <branch>
-python3 tools/build-mobile.py
+tools/deploy-mobile.sh          # pull → rebuild → swap live, one command
 ```
 
-That's the whole deploy — the static server picks up the new files in place,
-and the phone's service worker adopts the new build version on its next open.
-(A one-command wrapper for this is Slice 7, #13.)
+It builds into a staging folder and swaps only on success — a broken build
+aborts loudly with the old build still served. The phone's service worker
+adopts the new version on its next open (one automatic reload). Pass a branch
+name to pull a specific branch; `SKIP_PULL=1` deploys the working tree as-is.
 
 ## Troubleshooting
 
