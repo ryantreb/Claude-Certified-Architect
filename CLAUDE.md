@@ -96,13 +96,18 @@ container — and never reaches a new branch. Committing them to `.claude/skills
 makes git carry them to every branch off `main` and every fresh session
 automatically.
 
-Currently vendored from [`mattpocock/skills`](https://github.com/mattpocock/skills)
-(upstream v1.0.1): `tdd`, `diagnosing-bugs`, `git-guardrails-claude-code`, `handoff`.
+Currently vendored: **all 38 skills** from
+[`mattpocock/skills`](https://github.com/mattpocock/skills), installed with the
+`skills` CLI (v1.5.x). The CLI's layout: real files live in `.agents/skills/`,
+and `.claude/skills/<name>` symlinks into them (both are committed, plus
+`skills-lock.json`). The git-guardrails *hook* is a separate copy in
+`.claude/hooks/` wired via `.claude/settings.json` — the installer does not
+manage it.
 
 To refresh from upstream (run where GitHub is reachable, e.g. the workstation):
 
 ```sh
-npx skills@latest add mattpocock/skills   # pick the same skills, target .claude/skills/
+npx skills@latest add mattpocock/skills -y   # reinstalls all skills, project scope
 # then commit the changes to main so every branch inherits them
 ```
 
