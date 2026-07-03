@@ -152,9 +152,14 @@ REGISTER_SNIPPET = r"""<script>
 
 
 def main() -> None:
+    # mobile/README.md is hand-written docs, not build output — carry it across
+    readme = OUT / "README.md"
+    readme_text = readme.read_text(encoding="utf-8") if readme.exists() else None
     if OUT.exists():
         shutil.rmtree(OUT)
     ASSETS.mkdir(parents=True)
+    if readme_text is not None:
+        readme.write_text(readme_text, encoding="utf-8")
 
     src = SRC.read_text(encoding="utf-8")
 
