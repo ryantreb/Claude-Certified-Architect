@@ -4,15 +4,12 @@
    palettes, no tinting); the party are the game's own companions. These tests
    cover the mapping, the frame metadata, and action_frame timing — not pixels. */
 const { test } = require('@playwright/test');
-const { loadGame, expect } = require('./helpers');
+const { loadGame, wakeRigs, expect } = require('./helpers');
 
 test('mapped foe shapes resolve to a loaded verbatim rig', async ({ page }) => {
   await loadGame(page);
-  // wait for the genlock idle frame 0 to finish decoding
-  await page.waitForFunction(() => {
-    const r = window.__wf.EARIG.genlock;
-    return r && r.anims.idle && r.anims.idle[0].complete && r.anims.idle[0].naturalWidth > 0;
-  }, null, { timeout: 8000 });
+  // rig art demand-loads: ask for the genlock rig, then wait for frame 0
+  await wakeRigs(page, ['genlock']);
   const out = await page.evaluate(() => ({
     mapped: window.__wf.foeSpriteKey({ shape: 'goblin' }),
     unmapped: window.__wf.foeSpriteKey({ shape: 'totally-made-up' }),
@@ -63,11 +60,9 @@ test('hits land on the strike action_frame, never at time zero', async ({ page }
 
 test('the party companions wear their own guild looks; villains keep their rigs', async ({ page }) => {
   await loadGame(page);
-  await page.waitForFunction(() => ['deymour', 'compVan', 'compSha', 'compCas', 'compRng']
-    .every(k => {
-      const r = window.__wf.EARIG[k];
-      return r && r.anims.idle && r.anims.idle[0].complete && r.anims.idle[0].naturalWidth > 0;
-    }), null, { timeout: 12000 });
+  // everyone this test inspects: the party, Tovez's dwarf rig, and the villains
+  await wakeRigs(page, ['deymour', 'compVan', 'compSha', 'compCas', 'compRng',
+    'carta2H', 'tianne', 'soleil', 'beirus']);
   const out = await page.evaluate(() => {
     const wf = window.__wf;
     return {
@@ -111,11 +106,9 @@ test('battle slots sit on the original BattleDisplay grid', async ({ page }) => 
 
 test('the four original hero loadouts are riggable and steer the party', async ({ page }) => {
   await loadGame(page);
-  await page.waitForFunction(() => ['heroWar', 'heroRog', 'heroMag', 'heroArc']
-    .every(k => {
-      const r = window.__wf.EARIG[k];
-      return r && r.anims.idle && r.anims.idle[0].complete && r.anims.idle[0].naturalWidth > 0;
-    }), null, { timeout: 8000 });
+  // every loadout the assertions sweep, plus deymour for the legacy-save fallback
+  await wakeRigs(page, ['heroWar', 'heroRog', 'heroMag', 'heroArc',
+    'heroRog2', 'heroMag2', 'deymour']);
   const out = await page.evaluate(() => {
     const wf = window.__wf;
     const rigs = wf.HERO_CHOICES.map(c => c.rig);

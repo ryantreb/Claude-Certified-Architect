@@ -50,4 +50,17 @@ async function forceMaster(page, track, concept) {
   }, { tk: track, c: concept });
 }
 
-module.exports = { loadGame, freshGame, aConcept, forceMaster, expect };
+/** Rig art demand-loads (a rig starts fetching the first time a draw path asks
+    for it). Tests that inspect rig frames or portraits must ask first, exactly
+    like the game does: wake the rigs, then wait until frame 0 is drawable. */
+async function wakeRigs(page, keys, timeout = 20000) {
+  await page.evaluate((ks) => ks.forEach((k) => window.__wf.wakeRig(k)), keys);
+  await page.waitForFunction((ks) => ks.every((k) => {
+    const r = window.__wf.EARIG[k];
+    const f = r && r.anims.idle && r.anims.idle[0];
+    return f && f.complete && f.naturalWidth > 0 &&
+      (!r.portrait || (r.portrait.complete && r.portrait.naturalWidth > 0));
+  }), keys, { timeout });
+}
+
+module.exports = { loadGame, freshGame, aConcept, forceMaster, wakeRigs, expect };

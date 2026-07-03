@@ -4,7 +4,7 @@
    companions as themselves, and the mage's Summon Spider. All tactical —
    SM-2 state and the meters never move. */
 const { test } = require('@playwright/test');
-const { freshGame, expect } = require('./helpers');
+const { freshGame, wakeRigs, expect } = require('./helpers');
 
 test('the campaign villains hold the rifts on both tracks', async ({ page }) => {
   await freshGame(page, 'c');
@@ -84,6 +84,7 @@ test('the original leveling ledger pays what the foes were worth', async ({ page
 
 test('Summon Spider seats an ally that flanks; Tovez fights as a Carta dwarf', async ({ page }) => {
   await freshGame(page, 'c');
+  await wakeRigs(page, ['carta2H']);   // Tovez's dwarf rig demand-loads
   const out = await page.evaluate(() => {
     const wf = window.__wf;
     const srBefore = JSON.stringify(wf.S.sr);
@@ -107,6 +108,8 @@ test('Summon Spider seats an ally that flanks; Tovez fights as a Carta dwarf', a
 
 test('the champion visibly re-dresses at Standard-grade armor', async ({ page }) => {
   await freshGame(page, 'c');
+  // both outfits demand-load; the readiness gate steers which one dresses
+  await wakeRigs(page, ['heroWar', 'heroWarStd']);
   const out = await page.evaluate(() => {
     const wf = window.__wf;
     wf.S.hero = { rig: 'heroWar', cls: 'vanguard' };

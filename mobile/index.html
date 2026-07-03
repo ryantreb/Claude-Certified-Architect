@@ -4751,10 +4751,20 @@ DATA.eaMap={"PP":[{"set":"L_PP_1","w":1300,"h":800,"pts":[[156,189],[230,229],[3
 
 /* DA Legends rigs: per-frame verbatim rasters from the original SWFs */
 const EARIG={};
-try{for(const k in DATA.eaRig){const e=DATA.eaRig[k],r={anims:{},portrait:null};
-  if(e.portrait){r.portrait=new Image();r.portrait.src=e.portrait}
-  for(const a in e.anims)r.anims[a]=e.anims[a].f.map(function(fr){const im=new Image();im.decoding="async";if(fr.d)im.src=fr.d;return im});
+/* The rigs are ~3,300 frames — nearly all the art. Decoding them all at boot
+   kills a phone tab, so each frame parks its source in __wfd and only starts
+   loading when wakeRig() is asked for that rig (rigReady / portraitSquare). */
+try{for(const k in DATA.eaRig){const e=DATA.eaRig[k],r={anims:{},portrait:null,woken:false};
+  if(e.portrait){r.portrait=new Image();r.portrait.__wfd=e.portrait}
+  for(const a in e.anims)r.anims[a]=e.anims[a].f.map(function(fr){const im=new Image();im.decoding="async";if(fr.d)im.__wfd=fr.d;return im});
   EARIG[k]=r;}}catch(e){}
+function wakeRig(k){
+  const r=EARIG[k];
+  if(!r||r.woken)return;
+  r.woken=true;
+  if(r.portrait&&r.portrait.__wfd){r.portrait.src=r.portrait.__wfd;delete r.portrait.__wfd}
+  for(const a in r.anims)for(const im of r.anims[a])if(im.__wfd){im.src=im.__wfd;delete im.__wfd}
+}
 const ENVBG={meadow:"Grassland",forest:"Forest",desert:"Wasteland",volcano:"larvaCaves",
   ruins:"RuinCaves",crystal:"murkycaves",sky:"Mountain",
   /* the original waveset tilesets, straight through */
@@ -7147,6 +7157,7 @@ function heroRigKey(){
 }
 function rigReady(k){
   if(!k||!DATA.eaRig||!DATA.eaRig[k]||!EARIG[k])return null;
+  wakeRig(k);                     /* demand-load: first ask starts the fetch */
   const f=EARIG[k].anims.idle&&EARIG[k].anims.idle[0];
   return (f&&f.complete&&f.naturalWidth>0)?k:null;
 }
@@ -8502,6 +8513,7 @@ function pickTrackIntro(){
 const PORTCACHE={};
 function portraitSquare(rigKey){
   if(PORTCACHE[rigKey])return PORTCACHE[rigKey];
+  wakeRig(rigKey);                /* hero cards take raw keys, not rigReady */
   const rec=EARIG[rigKey];
   let img=rec&&rec.portrait;
   if(!img||!img.src)img=rec&&rec.anims&&rec.anims.idle&&rec.anims.idle[0];   /* no portrait shipped: the idle frame stands in */
@@ -9195,7 +9207,7 @@ window.__wf={
   bossRec, bossPhaseReady, bossCooldownLeft, bossRecallsLeft, bossPhasesTotal,
   creditBossRecall, regState, trackRegions,
   BOSS_PHASES,
-  foeSpriteKey, memberSpriteKey, rigPose, drawRig, rigActionDelay, rigDur, slotPos, cellPos,
+  foeSpriteKey, memberSpriteKey, rigPose, drawRig, rigActionDelay, rigDur, slotPos, cellPos, wakeRig,
   get SHAPE_SPRITE(){return SHAPE_SPRITE}, get CLASS_SPRITE(){return CLASS_SPRITE}, get EARIG(){return EARIG},
   MASTER_REPS, MASTER_IV, GAME_DAY,
   get ALLCONCEPTS(){return ALLCONCEPTS}, get CONCEPT_DOM(){return CONCEPT_DOM},
