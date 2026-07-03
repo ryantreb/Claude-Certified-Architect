@@ -4331,6 +4331,22 @@ function queueSave(){if(saveTimer)return;saveTimer=setTimeout(()=>{saveTimer=nul
    (contract: docs/save-endpoint.md). localStorage remains the state the game
    runs from; the endpoint mirrors S.sr so every device shares one earned
    state. Absent or unreachable endpoint → local-only, exactly as before. */
+/* per-concept newest-wins merge of two SR maps. A concept one device studied
+   comes across whole; a concept both hold keeps whichever record reflects the
+   most recent review (ties keep local). Every record in the output IS one of
+   the inputs' records — a merge can never mint reps, intervals, or mastery
+   that neither device earned, so the honesty rules survive syncing. Pure. */
+function mergeSr(local,remote){
+  const out={};
+  for(const k in local)out[k]=local[k];
+  for(const k in remote){
+    const l=out[k],r=remote[k];
+    if(!l){out[k]=r;continue}
+    const lt=Math.max(l.last||0,l.seen||0),rt=Math.max(r.last||0,r.seen||0);
+    if(rt>lt)out[k]=r;
+  }
+  return out;
+}
 const Sync={remote:null,timer:null,
   pull(){
     try{
@@ -4340,13 +4356,9 @@ const Sync={remote:null,timer:null,
     }catch(e){}
   },
   adopt(){
-    /* the no-conflict half: concepts only the other device has studied come
-       across whole; keys both devices hold are the merge's job (see mergeSr).
-       Never invents a record neither device earned. */
     if(!Sync.remote||!S||!S.started)return;
-    let took=0;
-    for(const k in Sync.remote.sr)if(!S.sr[k]){S.sr[k]=Sync.remote.sr[k];took++}
-    if(took)queueSave();
+    const merged=mergeSr(S.sr,Sync.remote.sr);
+    if(JSON.stringify(merged)!==JSON.stringify(S.sr)){S.sr=merged;queueSave()}
   },
   push(){
     if(!S||!S.started)return;
@@ -9219,7 +9231,7 @@ window.__wf={
   get B(){return B}, set B(v){B=v},
   get MODE(){return MODE}, set MODE(v){MODE=v},
   newState, freshSession,
-  srKey, srGet, srState, srAnswer, conceptScore, meterOf, applyDecay,
+  srKey, srGet, srState, srAnswer, conceptScore, meterOf, applyDecay, mergeSr,
   dueConcepts, conceptMeta, pickConcept, pickQuestion, regionPool,
   battleDom, domMastery, isSuperEffective, domDanger, attackDamage,
   rowPool, rowMultOf, rowLabel, memberStaggered,
