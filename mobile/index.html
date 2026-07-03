@@ -9225,6 +9225,15 @@ boot();
   if (!("serviceWorker" in navigator) || !window.isSecureContext) return;
   navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).catch(function () {});
 
+  /* a new build's worker takes control (skipWaiting + claim) — reload once so
+     the fresh shell runs now, not on the open after. Guarded on a previous
+     controller existing, so the very first install never reload-loops. */
+  var hadSW = !!navigator.serviceWorker.controller;
+  navigator.serviceWorker.addEventListener("controllerchange", function () {
+    if (hadSW) location.reload();
+    hadSW = true;
+  });
+
   var pill;
   function say(t) {
     if (!pill) {
