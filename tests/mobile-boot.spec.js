@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+const { IPHONE_13_PRO_MAX } = require('./helpers');
 
 /* The phone boot budget. iOS Safari kills a tab that decodes too much art at
    once, and the DA Legends rigs alone are ~3,300 frames — far beyond what an
@@ -8,16 +9,6 @@ const { test, expect } = require('@playwright/test');
    backgrounds, hero, UI), and leave every battle rig un-fetched until a fight
    asks to draw it. This spec locks that budget against the generated mobile/
    build under iPhone 13 Pro Max emulation. */
-
-const IPHONE_13_PRO_MAX = {
-  viewport: { width: 428, height: 926 },
-  deviceScaleFactor: 3,
-  isMobile: true,
-  hasTouch: true,
-  userAgent:
-    'Mozilla/5.0 (iPhone; CPU iPhone OS 26_0 like Mac OS X) ' +
-    'AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1',
-};
 
 /* Boot may request at most this many images. The full asset set is ~3,800;
    the first screen legitimately needs well under 400 (terrain 10, props 8,
