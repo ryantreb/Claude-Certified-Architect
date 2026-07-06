@@ -3,7 +3,7 @@
    portraits, the earned drink (consumables spend a recall-bought action),
    the labeled streak chip, and the question-card size setting. */
 const { test } = require('@playwright/test');
-const { freshGame, expect } = require('./helpers');
+const { freshGame, wakeRigs, expect } = require('./helpers');
 
 test('legends join the roster with their original stat rows on the d20', async ({ page }) => {
   await freshGame(page, 'c');
@@ -79,10 +79,7 @@ test('the streak chip names itself and the card resizes', async ({ page }) => {
 test('the hero screen portraits resolve sharp, not thumbnail-sized', async ({ page }) => {
   await freshGame(page, 'c');
   const keys = ['heroWar', 'heroRog', 'heroMag', 'heroArc', 'heroRog2', 'heroMag2', 'werewolf', 'desire'];
-  await page.waitForFunction((ks) => {
-    const E = window.__wf.EARIG;
-    return ks.every(k => E[k] && E[k].portrait && E[k].portrait.complete && E[k].portrait.naturalWidth > 0);
-  }, keys, { timeout: 20000 });
+  await wakeRigs(page, keys);   // portraits demand-load with their rig
   const out = await page.evaluate(async (ks) => {
     const wf = window.__wf;
     const sizes = {};
@@ -121,10 +118,7 @@ test('the half-elf rogue and the red wizard stand in the hall with full hero rig
 
 test('portraits crop to content and land centered on a square', async ({ page }) => {
   await freshGame(page, 'c');
-  await page.waitForFunction(() => {
-    const E = window.__wf.EARIG;
-    return E.heroWar && E.heroWar.portrait && E.heroWar.portrait.complete && E.heroWar.portrait.naturalWidth > 0;
-  }, null, { timeout: 15000 });
+  await wakeRigs(page, ['heroWar']);   // the portrait demand-loads with its rig
   const out = await page.evaluate(async () => {
     const wf = window.__wf;
     const url = wf.portraitSquare('heroWar');

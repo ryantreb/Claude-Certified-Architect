@@ -19,10 +19,13 @@ import json
 import pathlib
 import re
 import shutil
+import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "index.html"
-OUT = ROOT / "mobile"
+# optional argv[1]: output folder (deploy-mobile.sh builds into a staging dir
+# and swaps only on success, so a failed build never breaks the served copy)
+OUT = ROOT / (sys.argv[1] if len(sys.argv) > 1 else "mobile")
 ASSETS = OUT / "assets"
 
 EXT = {
@@ -94,6 +97,15 @@ REGISTER_SNIPPET = r"""<script>
   if (!("serviceWorker" in navigator) || !window.isSecureContext) return;
   navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).catch(function () {});
 
+  /* a new build's worker takes control (skipWaiting + claim) — reload once so
+     the fresh shell runs now, not on the open after. Guarded on a previous
+     controller existing, so the very first install never reload-loops. */
+  var hadSW = !!navigator.serviceWorker.controller;
+  navigator.serviceWorker.addEventListener("controllerchange", function () {
+    if (hadSW) location.reload();
+    hadSW = true;
+  });
+
   var pill;
   function say(t) {
     if (!pill) {
@@ -152,9 +164,14 @@ REGISTER_SNIPPET = r"""<script>
 
 
 def main() -> None:
+    # mobile/README.md is hand-written docs, not build output — carry it across
+    readme = OUT / "README.md"
+    readme_text = readme.read_text(encoding="utf-8") if readme.exists() else None
     if OUT.exists():
         shutil.rmtree(OUT)
     ASSETS.mkdir(parents=True)
+    if readme_text is not None:
+        readme.write_text(readme_text, encoding="utf-8")
 
     src = SRC.read_text(encoding="utf-8")
 
@@ -178,6 +195,39 @@ def main() -> None:
         return rel
 
     slim = PATTERN.sub(replace, src)
+
+    # ---- PWA shell (phone-only path) ------------------------------------
+    # Home Screen installability: a standalone manifest plus the iOS head
+    # tags. The icon is the hero PNG the extraction pass already wrote out —
+    # an EA asset byte-for-byte, never new art (iOS scales it for the icon).
+    m = re.search(r'DATA\.heroImg="(assets/[^"]+\.png)"', slim)
+    if not m:
+        raise SystemExit("build-mobile: hero image not found for the app icon")
+    icon = m.group(1)
+    (OUT / "manifest.webmanifest").write_text(
+        json.dumps({
+            "name": "Weavefall",
+            "short_name": "Weavefall",
+            "display": "standalone",
+            "start_url": "./",
+            "scope": "./",
+            "background_color": "#14111e",
+            "theme_color": "#14111e",
+            "icons": [{"src": icon, "sizes": "any", "type": "image/png"}],
+        }),
+        encoding="utf-8",
+    )
+    head_tags = (
+        '<link rel="manifest" href="manifest.webmanifest">'
+        f'<link rel="apple-touch-icon" href="{icon}">'
+        '<meta name="apple-mobile-web-app-capable" content="yes">'
+        '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">'
+        '<meta name="apple-mobile-web-app-title" content="Weavefall">'
+    )
+    hidx = slim.find("</head>")
+    if hidx == -1:
+        raise SystemExit("build-mobile: no </head> to attach the PWA shell")
+    slim = slim[:hidx] + head_tags + slim[hidx:]
 
     # ---- mobile offline cache (phone-only path) -------------------------
     # iOS suspends the local a-Shell server shortly after you switch away, so

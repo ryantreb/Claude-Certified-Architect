@@ -7,15 +7,28 @@
 
 const { expect } = require('@playwright/test');
 
+/** The phone the mobile build targets. Hand-rolled rather than Playwright's
+    devices[] descriptor: that descriptor pins defaultBrowserType to webkit,
+    which would silently switch the browser out from under the chromium project. */
+const IPHONE_13_PRO_MAX = {
+  viewport: { width: 428, height: 926 },
+  deviceScaleFactor: 3,
+  isMobile: true,
+  hasTouch: true,
+  userAgent:
+    'Mozilla/5.0 (iPhone; CPU iPhone OS 26_0 like Mac OS X) ' +
+    'AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1',
+};
+
 /** Load the game and wait until boot() has populated the bridge. */
-async function loadGame(page) {
-  await page.goto('/index.html');
+async function loadGame(page, path = '/index.html') {
+  await page.goto(path);
   await page.waitForFunction(() => !!window.__wf && !!window.__wf.S);
 }
 
 /** Reset to a clean, started game on the given track ('c' = Loom, 'g' = Forge). */
-async function freshGame(page, track = 'c') {
-  await loadGame(page);
+async function freshGame(page, track = 'c', path = '/index.html') {
+  await loadGame(page, path);
   await page.evaluate((tk) => {
     try { localStorage.clear(); } catch (e) {}
     const wf = window.__wf;
@@ -50,4 +63,17 @@ async function forceMaster(page, track, concept) {
   }, { tk: track, c: concept });
 }
 
-module.exports = { loadGame, freshGame, aConcept, forceMaster, expect };
+/** Rig art demand-loads (a rig starts fetching the first time a draw path asks
+    for it). Tests that inspect rig frames or portraits must ask first, exactly
+    like the game does: wake the rigs, then wait until frame 0 is drawable. */
+async function wakeRigs(page, keys, timeout = 20000) {
+  await page.evaluate((ks) => ks.forEach((k) => window.__wf.wakeRig(k)), keys);
+  await page.waitForFunction((ks) => ks.every((k) => {
+    const r = window.__wf.EARIG[k];
+    const f = r && r.anims.idle && r.anims.idle[0];
+    return f && f.complete && f.naturalWidth > 0 &&
+      (!r.portrait || (r.portrait.complete && r.portrait.naturalWidth > 0));
+  }), keys, { timeout });
+}
+
+module.exports = { loadGame, freshGame, aConcept, forceMaster, wakeRigs, IPHONE_13_PRO_MAX, expect };
