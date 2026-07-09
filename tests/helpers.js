@@ -1,5 +1,5 @@
 // @ts-check
-/* Shared helpers for Weavefall tests.
+/* Shared helpers for Sigilbound tests.
    The game is non-module <script> blocks, so its `let`/`const` globals are NOT
    window properties. index.html exposes a gameplay-inert `window.__wf` bridge
    with live getters/setters; the tests drive the pure spaced-repetition / combat

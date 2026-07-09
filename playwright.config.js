@@ -1,7 +1,7 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
 
-/* Weavefall is a single static index.html with no build step. We serve the
+/* Sigilbound is a single static index.html with no build step. We serve the
    repo over http (not file://) so localStorage and module-scope globals behave
    exactly as they do in a real browser tab. */
 const PORT = 8753;

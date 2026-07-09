@@ -15,7 +15,7 @@ Storage is a single JSON file, replaced atomically so a crash mid-write can
 never corrupt the save.
 
 Usage: python3 tools/save-server.py [save-file] [port]
-       defaults: ~/.local/share/weavefall/save.json, 8754
+       defaults: ~/.local/share/sigilbound/save.json, 8754
 """
 import json
 import os
@@ -24,7 +24,7 @@ import sys
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 PATH = (pathlib.Path(sys.argv[1]) if len(sys.argv) > 1
-        else pathlib.Path.home() / ".local/share/weavefall/save.json")
+        else pathlib.Path.home() / ".local/share/sigilbound/save.json")
 PORT = int(sys.argv[2]) if len(sys.argv) > 2 else 8754
 LIMIT = 1 << 20
 

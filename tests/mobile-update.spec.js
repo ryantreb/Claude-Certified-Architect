@@ -24,7 +24,7 @@ test.describe('mobile build update flow', () => {
 
     // plant a stale build's cache, then force a fresh install+activate cycle
     await page.evaluate(async () => {
-      const stale = await caches.open('weavefall-mobile-stale0000');
+      const stale = await caches.open('sigilbound-mobile-stale0000');
       await stale.put('/mobile/planted', new Response('old build leftovers'));
       const reg = await navigator.serviceWorker.ready;
       await reg.unregister();
@@ -34,7 +34,7 @@ test.describe('mobile build update flow', () => {
 
     await expect
       .poll(async () => page.evaluate(() => caches.keys()), { timeout: 15000 })
-      .not.toContain('weavefall-mobile-stale0000');
+      .not.toContain('sigilbound-mobile-stale0000');
 
     // the live cache is opened lazily by the first fetch the worker handles —
     // push one through, then the current build's cache must exist
@@ -45,7 +45,7 @@ test.describe('mobile build update flow', () => {
     await expect
       .poll(async () =>
         page.evaluate(async () =>
-          (await caches.keys()).some((k) => k.startsWith('weavefall-mobile-'))
+          (await caches.keys()).some((k) => k.startsWith('sigilbound-mobile-'))
         ), { timeout: 15000 })
       .toBe(true);
   });
