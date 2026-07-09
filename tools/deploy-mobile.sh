@@ -29,6 +29,6 @@ mv "$STAGING" mobile
 rm -rf mobile.old
 
 # the unit serves by working directory, which followed the old inode — restart
-systemctl --user try-restart weavefall-mobile 2>/dev/null || true
+systemctl --user try-restart sigilbound-mobile 2>/dev/null || true
 
 echo "deployed build $(python3 -c "import json;print(json.load(open('mobile/asset-manifest.json'))['version'])")"
