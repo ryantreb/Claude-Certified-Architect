@@ -38,8 +38,13 @@ The endpoint treats the blob as opaque; the *client* writes this shape:
 ## Serving it (workstation)
 
 ```sh
-python3 tools/save-server.py &                      # or a systemd unit later
-tailscale serve --bg https /save http://127.0.0.1:8754/save
+mkdir -p ~/.config/systemd/user
+cp tools/sigilbound-save.service ~/.config/systemd/user/
+systemctl --user daemon-reload
+systemctl --user enable --now sigilbound-save
+loginctl enable-linger "$USER"        # survives logout and reboot
+
+tailscale serve --bg --set-path=/save http://127.0.0.1:8754/save
 ```
 
 Same tailnet origin as the game, so the client fetch is same-origin (`/save`).
