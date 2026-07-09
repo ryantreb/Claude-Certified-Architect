@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-# Weavefall — DA Legends study build
+# Sigilbound — DA Legends study build
 
 A personal, single-file browser study RPG for two certifications (Claude Certified
 Architect – Foundations; GitHub GH-600). Private repo, personal use only — never
@@ -62,7 +62,7 @@ single source of truth for look, feel, and layout.
   backgrounds, original UI framing. Decompile the SWFs (JPEXS/ffdec) to export
   real frames and coordinates rather than approximating.
 - **Never** recolor, restyle, palette-shift, procedurally substitute, or blend
-  EA art with Weavefall-original art. No hybrid styles. If an EA asset exists
+  EA art with Sigilbound-original art. No hybrid styles. If an EA asset exists
   for a thing, the EA asset is the only acceptable art for it.
 - Battle screens must match DA Legends screen-for-screen (2×3 grids facing each
   other, bottom action bar, portrait framing). When in doubt, open the reference

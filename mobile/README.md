@@ -1,4 +1,4 @@
-# Weavefall — mobile / offline build
+# Sigilbound — mobile / offline build
 
 This folder is the slim build for phones, generated from the canonical
 single-file `../index.html` by `../tools/build-mobile.py`. The base64 data URIs
