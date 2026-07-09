@@ -38,13 +38,21 @@ In the [Tailscale admin console](https://login.tailscale.com/admin/dns):
 ```sh
 # static file server, loopback-only (the LAN can never reach it directly)
 mkdir -p ~/.config/systemd/user
-cp tools/weavefall-mobile.service ~/.config/systemd/user/
+cp tools/sigilbound-mobile.service ~/.config/systemd/user/
 systemctl --user daemon-reload
-systemctl --user enable --now weavefall-mobile
+systemctl --user enable --now sigilbound-mobile
 loginctl enable-linger "$USER"        # survives logout and reboot
 
+# tailscale serve needs to be approved once for this tailnet before it will
+# accept any config — if the next command replies "Access denied: serve
+# config denied", it's either this or the operator line below, not a bug:
+#   1. It'll print a login.tailscale.com/f/serve?node=... URL — open it on
+#      any device signed into the tailnet and approve.
+#   2. Grant your user operator rights so serve doesn't need sudo each time:
+#      sudo tailscale set --operator="$USER"
+
 # front it with HTTPS on the tailnet (config persists across reboots)
-tailscale serve --bg https / http://127.0.0.1:8753
+tailscale serve --bg http://127.0.0.1:8753
 tailscale serve status                # shows the exact URL
 ```
 
@@ -77,4 +85,4 @@ name to pull a specific branch; `SKIP_PULL=1` deploys the working tree as-is.
 | Certificate warning in Safari | HTTPS Certificates not enabled in the admin DNS page (step 3) |
 | Game loads but no offline pill | You're not on the HTTPS ts.net origin (plain http is not a secure context) |
 | Stale build on the phone | Confirm `build-mobile.py` ran on the workstation; pull-to-refresh once in Safari / reopen the Home Screen app |
-| Server dead after reboot | `systemctl --user status weavefall-mobile`; confirm `loginctl enable-linger` was run |
+| Server dead after reboot | `systemctl --user status sigilbound-mobile`; confirm `loginctl enable-linger` was run |
