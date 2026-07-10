@@ -7,7 +7,7 @@ independent asset set. `reference/dalegends/` is the extraction reference, not u
 
 | Store | Images | Type | Formats | Alpha | Notes |
 |---|---|---|---|---|---|
-| `DATA.eaRig` | 3340 | Animation-frame sequences | WEBP | 3340/3340 | 45 characters × 4–8 anims (idle/strike/dmg/death/fwd/special/evade/block); each frame has per-frame x/y registration offsets; 30 embedded portraits ride along |
+| `DATA.eaRig` | 3340 | Animation-frame sequences | WEBP | 3340/3340 | 45 characters × 4–8 anims (idle/strike/dmg/death/fwd/special/evade/block); each frame has per-frame x/y registration offsets; 34 embedded portraits ride along |
 | `DATA.eaFx` | 224 | Animation-frame sequences | WEBP | 224/224 | 20 effect sets (fireball, bolt, lightning, frost, heal, buff, banner text) |
 | `DATA.eaBg` | 54 | Layered battle backdrops | WEBP | 54/54 | 18 environments × 3 parallax layers (bg/mid/fg), fg+mid are alpha cutouts |
 | `DATA.eaMap` | 44 | Overworld map paintings | WEBP | 0/44 | 7 regions (PP/PF/GD/WS/OR/WC/KW), 1200–2700 px, opaque |
@@ -21,11 +21,24 @@ independent asset set. `reference/dalegends/` is the extraction reference, not u
 | `DATA.eaWorldMap` | 3 | UI images | WEBP | 2/3 | world-map backdrop + node + castle marker |
 | `DATA.heroImg` | 1 | Standalone image | PNG | 1/1 | single 324×340 hero PNG with alpha |
 
+## Replacement status (high-fantasy cel-shaded restyle)
+
+- **Replaced: 181 static images** — all `sprites` (29), `eaBg` (54), `eaRooms` (10), `props` (8),
+  `terrain` (10), `eaComp` (20), `eaPartIcon` (7), `eaVillainPort` (5), `eaWorldMap` (3),
+  `heroImg` (1), plus all 34 `eaRig` character portraits (including the 4 hero `*Std` variants).
+- **Skipped: 3,574 images**, kept as original EA art:
+  - **3,306 `eaRig` animation frames + 224 `eaFx` effect frames** — these are baked per-frame
+    bitmaps carrying `x/y` registration offsets and action-frame timing, not a redrivable
+    part-based rig. Independent per-frame regeneration would desync animation registration and
+    break combat, so they were skipped per the "skip it and report why" rule rather than broken.
+  - **44 `eaMap` overworld region paintings** — large multi-thousand-pixel scans; out of the
+    available image-generation budget this pass.
+
 ## Per-asset detail
 
 Full machine-readable catalog: `docs/art-inventory.csv` (group, key path, format, WxH, alpha, bytes).
 
-### `DATA.eaRig` — 45 characters (3,310 anim frames + 30 portraits)
+### `DATA.eaRig` — 45 characters (3,306 anim frames + 34 portraits)
 
 | Character | Frames | Animations | Frame box (w×h) |
 |---|---|---|---|
