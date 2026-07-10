@@ -1,4 +1,4 @@
-# Weavefall on the iPhone — Tailscale runbook
+# Sigilbound on the iPhone — Tailscale runbook
 
 From zero to the game loading in iPhone Safari at a private HTTPS URL. Run the
 workstation steps on the Linux box that hosts this repo; total setup is about
@@ -38,9 +38,9 @@ In the [Tailscale admin console](https://login.tailscale.com/admin/dns):
 ```sh
 # static file server, loopback-only (the LAN can never reach it directly)
 mkdir -p ~/.config/systemd/user
-cp tools/weavefall-mobile.service ~/.config/systemd/user/
+cp tools/sigilbound-mobile.service ~/.config/systemd/user/
 systemctl --user daemon-reload
-systemctl --user enable --now weavefall-mobile
+systemctl --user enable --now sigilbound-mobile
 loginctl enable-linger "$USER"        # survives logout and reboot
 
 # front it with HTTPS on the tailnet (config persists across reboots)
@@ -77,4 +77,4 @@ name to pull a specific branch; `SKIP_PULL=1` deploys the working tree as-is.
 | Certificate warning in Safari | HTTPS Certificates not enabled in the admin DNS page (step 3) |
 | Game loads but no offline pill | You're not on the HTTPS ts.net origin (plain http is not a secure context) |
 | Stale build on the phone | Confirm `build-mobile.py` ran on the workstation; pull-to-refresh once in Safari / reopen the Home Screen app |
-| Server dead after reboot | `systemctl --user status weavefall-mobile`; confirm `loginctl enable-linger` was run |
+| Server dead after reboot | `systemctl --user status sigilbound-mobile`; confirm `loginctl enable-linger` was run |

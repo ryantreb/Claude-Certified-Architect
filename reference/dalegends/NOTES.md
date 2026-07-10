@@ -38,7 +38,7 @@ Backgrounds render at 800×600 (battleBG*.swf, frame 1).
   `animSkins_*.swf` files carry per-equipment part art attached onto rigs.
   `data/ANIMATION_ANIM_RIGS.xml`, `ANIM_PIECE_LISTS.xml`, `ANIM_SKINS*.xml`
   define the assembly; `ANIMATION_ANIMATIONS.xml` is the registry.
-- Practical export for Weavefall: render whole symbols to PNG frame
+- Practical export for Sigilbound: render whole symbols to PNG frame
   sequences (verbatim palettes) rather than re-implementing rig assembly.
 
 ## Data layer (data/ — 115 files, the embedded server data)
@@ -83,7 +83,7 @@ Corpse_Normal::corpseNormal, ShadeRageDemons::shadeDemon|rageDemon,
 Mabari::mhA, Biped::golemShale, Spirit_Corrupted::bronto.
 The "dragon" payload key uses the baked `anims_drakeFire.swf`.
 
-## EA stat medians per Weavefall foe shape (CHARCLASS, by rig)
+## EA stat medians per Sigilbound foe shape (CHARCLASS, by rig)
 
 goblin hp12 atk25 · ghost 16/55 · golem 12/26 · zombie 10/18 · spider 11/30 ·
 ogre 24/60 · skeleton 10/20 · wisp 12/28 · banshee 18/60 · slime 10/26 ·

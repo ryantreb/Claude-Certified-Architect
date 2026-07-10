@@ -1,6 +1,6 @@
 # Dragon Age: Legends — an Architect's Study Saga
 
-A single-file, dark-fantasy browser RPG (codename *Weavefall*) that retells the official
+A single-file, dark-fantasy browser RPG (*Sigilbound*) that retells the official
 Dragon Age Legends campaign — defending Kaiten for Viscount Ravi against a demon of Pride —
 while drilling two agentic-AI certifications through turn-based combat, an explorable
 isometric overworld, and a keep you rebuild:
