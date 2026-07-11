@@ -43,8 +43,16 @@ systemctl --user daemon-reload
 systemctl --user enable --now sigilbound-mobile
 loginctl enable-linger "$USER"        # survives logout and reboot
 
+# tailscale serve needs to be approved once for this tailnet before it will
+# accept any config — if the next command replies "Access denied: serve
+# config denied", it's either this or the operator line below, not a bug:
+#   1. It'll print a login.tailscale.com/f/serve?node=... URL — open it on
+#      any device signed into the tailnet and approve.
+#   2. Grant your user operator rights so serve doesn't need sudo each time:
+#      sudo tailscale set --operator="$USER"
+
 # front it with HTTPS on the tailnet (config persists across reboots)
-tailscale serve --bg https / http://127.0.0.1:8753
+tailscale serve --bg http://127.0.0.1:8753
 tailscale serve status                # shows the exact URL
 ```
 

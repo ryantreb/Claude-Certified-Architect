@@ -1,0 +1,26 @@
+# Sigilbound save endpoint — cross-device save sync (systemd user unit).
+#
+# Serves tools/save-server.py on 127.0.0.1:8754. Loopback-only on purpose;
+# `tailscale serve --set-path=/save` fronts it at the same origin as the
+# mobile game (docs/save-endpoint.md is the canonical contract). Install:
+#
+#   mkdir -p ~/.config/systemd/user
+#   cp tools/sigilbound-save.service ~/.config/systemd/user/
+#   systemctl --user daemon-reload
+#   systemctl --user enable --now sigilbound-save
+#   loginctl enable-linger "$USER"     # keep it running when logged out
+#
+# If the repo lives somewhere other than ~/Claude-Certified-Architect, edit
+# ExecStart before installing.
+
+[Unit]
+Description=Sigilbound save endpoint (tailnet-only)
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 %h/Claude-Certified-Architect/tools/save-server.py
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target
