@@ -1,4 +1,4 @@
-# Weavefall on the iPhone — Tailscale runbook
+# Sigilbound on the iPhone — Tailscale runbook
 
 From zero to the game loading in iPhone Safari at a private HTTPS URL. Run the
 workstation steps on the Linux box that hosts this repo; total setup is about

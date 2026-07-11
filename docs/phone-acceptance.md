@@ -9,7 +9,7 @@ Record a run by copying the table and filling the date column.
 
 | # | Do this | Pass means | Run 2026-__-__ |
 | --- | --- | --- | --- |
-| 1 | **Install.** Safari → the tailnet URL → let it load once → Share → Add to Home Screen. | The icon appears with the hero art and the name "Weavefall"; tapping it opens full-screen with no Safari chrome. | |
+| 1 | **Install.** Safari → the tailnet URL → let it load once → Share → Add to Home Screen. | The icon appears with the hero art and the name "Sigilbound"; tapping it opens full-screen with no Safari chrome. | |
 | 2 | **Cold boot.** Force-quit the app (swipe away), relaunch from the icon. | Title screen interactive in ≤ 5 seconds; no blank canvas, no "problem repeatedly occurred". | |
 | 3 | **Battle art.** Start or continue a game, walk to a node, enter a battle. | The fight opens promptly; DA Legends sprites appear within ~2 seconds of the battle starting (stand-ins may flash first — that's the demand-load working, not a failure). | |
 | 4 | **Notch / home bar.** In world and battle, look at the top HUD and bottom action bar. | Nothing hides under the notch or the home indicator; every button is tappable without fighting the system gestures. | |
