@@ -1,1 +1,1 @@
-{"name": "Sigilbound", "short_name": "Sigilbound", "display": "standalone", "start_url": "./", "scope": "./", "background_color": "#14111e", "theme_color": "#14111e", "icons": [{"src": "assets/img0048.png", "sizes": "any", "type": "image/png"}]}
+{"name": "Weavefall", "short_name": "Weavefall", "display": "standalone", "start_url": "./", "scope": "./", "background_color": "#14111e", "theme_color": "#14111e", "icons": [{"src": "assets/img0048.png", "sizes": "any", "type": "image/png"}]}
