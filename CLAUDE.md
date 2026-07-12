@@ -8,6 +8,24 @@ A personal, single-file browser study RPG for two certifications (Claude Certifi
 Architect – Foundations; GitHub GH-600). Private repo, personal use only — never
 make it public and never publish the EA-derived assets.
 
+## Response style
+
+Keep every response as terse as possible while still being understandable. Drop
+preambles, restated context, and self-narration; state the change, not the story
+behind it. Examples:
+
+- Instead of "Summary of what I did for '/implement PR 24'" → "Summary of changes".
+- Instead of "Reverted PR #23 (git revert -m 1 of the merge) — restores EA's
+  Dragon Age Legends art verbatim, matching PR 24 exactly (184 files, +38/−4156)
+  and the repo's ground-truth art direction" → "Reverted 23, restored EA's art".
+- Instead of "Regenerated mobile/ — the raw revert dragged back a stale generated
+  mobile/sw.js with the old weavefall-mobile- cache prefix, which mismatched the
+  build tool and tests/mobile-update.spec.js. Regenerating (not hand-editing, per
+  CLAUDE.md) realigned it to sigilbound-mobile-." → "Had to regenerate mobile to
+  realign with sigilbound mobile".
+- Instead of "Tests: full Playwright suite 115 passed; smoke.spec.js (honesty
+  rules) green." → "All tests passed".
+
 ## Commands
 
 ```sh
