@@ -93,7 +93,7 @@ constraint.
 2. A single correct answer never grants mastery.
 3. Mastery = 3+ correct recalls on separate due reviews with interval ≥ 3 weave-days.
 4. Wrong answers reset that concept's reps.
-5. Hinted answers earn zero mastery credit (in combat: glancing hit only).
+5. Hinted answers earn zero mastery credit; a correct combat action still resolves at full strength.
 6. Meters/progress derive only from earned mastery — never from tactical play.
 
 Combat design principle: knowledge controls the action economy (whether you act);
