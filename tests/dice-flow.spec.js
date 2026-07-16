@@ -245,17 +245,17 @@ test('the card minimizes to its title bar and comes back, like a window', async 
   expect(out.handReset.saved).toBe(false);
 });
 
-test('edges resize one axis at a time — width scales the words, height stays free — and the scrollbar is clear', async ({ page }) => {
+test('edges resize card dimensions without scaling its words, and the scrollbar is clear', async ({ page }) => {
   await freshGame(page, 'c');
   await startBattle(page);
   const out = await page.evaluate(() => {
     const wf = window.__wf, box = document.getElementById('battleBox');
     const handles = box.querySelectorAll('.bResize').length;
     const zoom = () => parseFloat(box.style.zoom) || 1;
-    // rendered height from layout × zoom — free of the docked card's 1.4° tilt, which
-    // would otherwise inflate a getBoundingClientRect reading.
-    const renderedH = () => box.offsetHeight * zoom();
-    wf.S.settings.qscale = 'm'; wf.S.settings.qzoom = 1; wf.S.settings.cardH = null; wf.applySettings();
+    const renderedH = () => box.offsetHeight;
+    const renderedW = () => box.offsetWidth;
+    const questionPx = () => parseFloat(getComputedStyle(document.getElementById('qScen')).fontSize) * zoom();
+    wf.S.settings.cardW = null; wf.S.settings.cardH = null; wf.applySettings();
     const ev = (x, y) => ({ pointerId: 5, clientX: x, clientY: y, bubbles: true });
     const drag = (cls, fromX, fromY, toX, toY) => {
       const h = box.querySelector('.bResize.' + cls);
@@ -267,12 +267,12 @@ test('edges resize one axis at a time — width scales the words, height stays f
     const ecs = getComputedStyle(box.querySelector('.bResize.e'));
     const insideOverlap = parseFloat(ecs.width) + parseFloat(ecs.right);  // right is negative → outside
     const scrollbarClear = insideOverlap <= 3;
-    // HORIZONTAL: drag the east edge out → words scale up (zoom), height held
+    // HORIZONTAL: drag the east edge out → card widens, words and height stay fixed
     let r = box.getBoundingClientRect();
-    const z0 = zoom(), h0 = renderedH();
+    const w0 = renderedW(), h0 = renderedH(), q0 = questionPx();
     drag('e', r.right, (r.top + r.bottom) / 2, r.right + r.width * 0.3, (r.top + r.bottom) / 2);
-    const horiz = { zoomUp: zoom() > z0 + 0.05, heightHeld: Math.abs(renderedH() - h0) < 8 };
-    // VERTICAL: drag the south edge down → taller only, words (zoom) unchanged
+    const horiz = { wider: renderedW() > w0 + 40, heightHeld: Math.abs(renderedH() - h0) < 8, wordsHeld: Math.abs(questionPx() - q0) < .01 };
+    // VERTICAL: drag the south edge down → taller only, words unchanged
     r = box.getBoundingClientRect();
     const zBefore = zoom(), hBefore = renderedH();
     drag('s', r.right - 40, r.bottom, r.right - 40, r.bottom + 130);
@@ -280,15 +280,18 @@ test('edges resize one axis at a time — width scales the words, height stays f
     // hand-return wipes both the scale and the dragged height
     document.getElementById('bHead').dispatchEvent(new MouseEvent('dblclick', { bubbles: true }));
     return { handles, scrollbarClear, horiz, vert,
-      reset: { zoom: zoom(), cardH: wf.S.settings.cardH, height: box.style.height } };
+      reset: { zoom: zoom(), cardW: wf.S.settings.cardW, cardH: wf.S.settings.cardH, width: box.style.width, height: box.style.height } };
   });
   expect(out.handles).toBe(8);                  // four edges + four corners
   expect(out.scrollbarClear).toBe(true);        // the east handle no longer blankets the scrollbar
-  expect(out.horiz.zoomUp).toBe(true);          // dragging width scales the words up
-  expect(out.horiz.heightHeld).toBe(true);      // …without changing height (horizontal-only)
+  expect(out.horiz.wider).toBe(true);            // dragging width widens the card
+  expect(out.horiz.heightHeld).toBe(true);       // …without changing height (horizontal-only)
+  expect(out.horiz.wordsHeld).toBe(true);        // …or scaling the question
   expect(out.vert.tallerNow).toBe(true);        // dragging the bottom edge grows the height
   expect(out.vert.zoomHeld).toBe(true);         // …without rescaling the words (vertical-only)
   expect(out.reset.zoom).toBeCloseTo(1);
+  expect(out.reset.cardW).toBeNull();
   expect(out.reset.cardH).toBeNull();
+  expect(out.reset.width).toBe('');
   expect(out.reset.height).toBe('');
 });
