@@ -467,6 +467,7 @@ body.nomotion *{animation:none !important;transition:none !important}
   box-shadow:4px 4px 0 rgba(0,0,0,.55);transform:rotate(-1deg);pointer-events:auto}
 #combatAbilityTray .combat-slot{flex:0 0 58px;width:58px;height:52px;aspect-ratio:auto}
 #combatHotbarWrap.dimmed{filter:brightness(.5);pointer-events:none}
+#app.combat-gated #cv{filter:brightness(.52);pointer-events:none}
 #battleBox{--paper:#fff7de;position:absolute;z-index:48;left:8%;top:10%;bottom:auto;width:min(84vw,760px);max-width:none;max-height:calc(100dvh - 190px);overflow:auto;
   display:block;border:0;border-radius:0;background:transparent;box-shadow:none;transform:none!important;backdrop-filter:none;-webkit-backdrop-filter:none;color:#24191f}
 #battleBox #bHead,#battleBox .bResize,#battleBox #skillRow,#battleBox #dicePanel,#battleBox #bIntro{display:none!important}
@@ -497,7 +498,7 @@ body.nomotion *{animation:none !important;transition:none !important}
   border:3px solid #17121c;font:900 11px/1 Impact,"Arial Black",sans-serif;letter-spacing:.1em}
 #ruleBar #rbRule::before{content:"WHY"}#ruleBar #rbExample::before{content:"EXAMPLE"}
 #ruleBar .rb-doc,#ruleBar .rb-srnote{display:none!important}
-#bActions{grid-column:1/-1;justify-content:flex-end;margin:0}#bActions .btn{flex:0 1 280px;border:3px solid #17121c;border-radius:20px 20px 4px 20px;box-shadow:4px 4px 0 hsl(var(--region-hue),68%,58%);font:900 15px Impact,"Arial Black",sans-serif;text-transform:uppercase}
+#bActions{grid-column:1/-1;justify-content:flex-end;margin:0;position:sticky;bottom:0;z-index:6;padding:8px 0 4px;background:linear-gradient(transparent,rgba(17,12,19,.86) 42%)}#bActions .btn{flex:0 1 280px;border:3px solid #17121c;border-radius:20px 20px 4px 20px;box-shadow:4px 4px 0 hsl(var(--region-hue),68%,58%);font:900 15px Impact,"Arial Black",sans-serif;text-transform:uppercase}
 #combatThreat{position:absolute;z-index:50;left:50%;top:27%;transform:translate(-50%,-50%) rotate(-4deg);max-width:min(90vw,760px);padding:15px 24px;
   background:#fff4cb;color:#21151b;border:5px solid #160f15;box-shadow:9px 9px 0 rgba(0,0,0,.68);font:900 clamp(25px,5vw,46px)/1 Impact,"Arial Black",sans-serif;
   text-align:center;text-transform:uppercase;clip-path:polygon(3% 8%,15% 0,24% 7%,39% 0,51% 8%,66% 0,77% 7%,94% 2%,100% 20%,95% 37%,100% 53%,95% 70%,100% 91%,84% 86%,72% 100%,57% 91%,43% 100%,28% 91%,12% 98%,0 82%,5% 63%,0 44%,6% 27%,0 12%);animation:combatCall .16s cubic-bezier(.2,1.4,.3,1)}
@@ -5623,14 +5624,13 @@ function rowPool(cert,dom,row){
   const hard=base.filter(c=>stOf(c)!=="mastered"||isDue(c));   // front: not-yet-mastered or due-for-maintenance
   return hard.length?hard:base;
 }
-/* the single damage funnel: super-effective doubling, the row dial, and glancing
-   (hinted) hits all compose here so combat math stays in one place. */
+/* the single damage funnel: super-effective doubling and the row dial compose
+   here. Hints affect recall credit only, never the resolved combat effect. */
 function attackDamage(base,cert,concept,opt){
   opt=opt||{};
   let d=base;
   if(isSuperEffective(cert,concept))d*=2;
   if(opt.rowMult)d*=opt.rowMult;
-  if(opt.hinted)d=Math.floor(d*0.5);
   d=Math.round(d);
   return base>0?Math.max(1,d):Math.max(0,d);
 }
@@ -5932,6 +5932,7 @@ function retarget(sk){
 }
 function setTarget(i){
   if(!B||!B.foes[i]||B.foes[i].halves<=0)return;
+  if(B.intent&&B.intent.target&&B.phase!=="target")return false;
   if(B.roll&&B.roll.done)return;
   if(B.sel&&B.sel.sk&&!skillReaches(B.sel.sk,B.foes[i])){toast("That line is out of reach for this skill.");return}
   B.target=i;
@@ -5982,8 +5983,12 @@ function renderCombatHotbar(){
 function activeMember(){return B&&B.party[B.active]&&B.party[B.active].halves>0?B.party[B.active]:livingParty()[0]}
 function activeMana(){const m=activeMember();return m?(m.mana||0):0}
 function setActiveCombatant(i){
-  if(!B||B.phase!=="act"||!B.party[i]||B.party[i].halves<=0||memberStaggered(B.party[i]))return false;
-  B.active=i;B.mana=B.party[i].mana;B.manaMax=B.party[i].manaMax;B.intent=null;renderCombatTray();updateBattleHUD();Sfx.play("click");return true;
+  if(!B||!["act","tray"].includes(B.phase)||!B.party[i]||B.party[i].halves<=0||memberStaggered(B.party[i]))return false;
+  const trayKind=B.phase==="tray"&&B.intent?B.intent.hotbar:null;
+  B.active=i;B.mana=B.party[i].mana;B.manaMax=B.party[i].manaMax;B.intent=null;
+  if(trayKind){B.phase="act";selectCombatAction(trayKind)}
+  else{renderCombatTray();updateBattleHUD()}
+  Sfx.play("click");return true;
 }
 function renderCombatTray(items){
   const tray=$("combatAbilityTray");if(!tray)return;
@@ -6487,14 +6492,17 @@ function foePainSnd(f){
 /* ---- resolution (damage stays in the one funnel: attackDamage) ---- */
 function applyAttackHit(crit){
   const battle=B,sel=B.sel,cert=B.qCert,q=B.q;
-  retarget(sel.sk);
+  const confirmed=B.intent&&B.intent.target&&B.intent.target.side==="foe"?B.intent.target.index:null;
+  if(confirmed!==null&&B.foes[confirmed]&&B.foes[confirmed].halves>0)B.target=confirmed;
+  else retarget(sel.sk);
+  const primary=B.target;
   let dmg=sel.dmg+(crit?1:0);
   const superEff=isSuperEffective(cert,q.concept);
-  const glancing=B.hintUsed;
-  dmg=attackDamage(dmg,cert,q.concept,{rowMult:(sel.rowMult||1),hinted:glancing});
-  let targets=[B.target];
+  const hinted=B.hintUsed;
+  dmg=attackDamage(dmg,cert,q.concept,{rowMult:(sel.rowMult||1)});
+  let targets=[primary];
   if(sel.sk.all)targets=B.foes.map((f,j)=>f.halves>0?j:-1).filter(j=>j>=0);
-  else if(sel.sk.aoeCol){const col=B.foes[B.target].cell.col;
+  else if(sel.sk.aoeCol){const col=B.foes[primary].cell.col;
     targets=B.foes.map((f,j)=>(f.halves>0&&f.cell.col===col)?j:-1).filter(j=>j>=0)}
   const atkKey=memberSpriteKey(B.party[sel.member]);
   const afD=atkKey?rigActionDelay(atkKey):0.55;
@@ -6505,12 +6513,12 @@ function applyAttackHit(crit){
     if(f.halves<=0)f.dieT=nowSec()+afD+0.12;
     const at=fxAtFoe(j);if(at)setTimeout(()=>{if(B===battle)connectedFoeImpact(f,at)},afD*1000);
   });
-  if(sel.sk.stun&&B.foes[B.target].halves>0){B.foes[B.target].stun=1;addFloater("STUNNED",0.66,-104,"#ffe49a",14)}
-  setSeq({t0:nowSec(),dur:Math.max(1.2,(atkKey?rigDur(atkKey,"strike"):1.2)+0.15),kind:sel.sk.anim||"strike",mi:sel.member,fi:B.target,targets,crit});
+  if(sel.sk.stun&&B.foes[primary].halves>0){B.foes[primary].stun=1;addFloater("STUNNED",0.66,-104,"#ffe49a",14)}
+  setSeq({t0:nowSec(),dur:Math.max(1.2,(atkKey?rigDur(atkKey,"strike"):1.2)+0.15),kind:sel.sk.anim||"strike",mi:sel.member,fi:primary,targets,crit});
   B.fx.shake=S.settings.motion?4:0;
   addFloater((crit?"CRIT -":"-")+fmtH(dmg)+(targets.length>1?" ×"+targets.length:""),0.64,-88,crit?"#ffb36b":"#ffd98f",crit?19:17);
   if(superEff)addFloater("SUPER EFFECTIVE",0.5,-112,"#9fe0ff",15);
-  if(glancing)addFloater("GLANCING — no mastery",0.42,-130,"#c9b890",13);
+  if(hinted)addFloater("HINT — no mastery",0.42,-130,"#c9b890",13);
   Sfx.play("hit");
   const atkM=B.party[sel.member];
   strikeFx(atkM&&atkM.cls,sel.sk.anim,sel.member,targets,crit);
@@ -6520,7 +6528,7 @@ function applyAttackHit(crit){
   else if(acls==="caster")Sfx.ea(crit?"ArcaneBolt":"Bolt",0.65);
   else Sfx.ea(crit?"MAIMSwordOrBayonetPE10_24":"Slash",0.75);
   if(crit)Sfx.ea("Xplode",0.45);
-  foePainSnd(B.foes[B.target]);
+  foePainSnd(B.foes[primary]);
 }
 function attackMisses(fumble){
   const sel=B.sel;
@@ -7021,6 +7029,7 @@ function withdraw(){
 }
 function endBattleUI(){
   B=null;MODE="world";
+  $("app").classList.remove("combat-gated");
   if(typeof layoutRoads==="function")layoutRoads();   /* quest pages may have turned */
   Music.sync();
   $("battleUI").classList.add("hidden");
@@ -7209,6 +7218,7 @@ function addFloater(text,xf,dy,color,size){
 }
 function updateBattleHUD(){
   if(!B)return;
+  $("app").classList.toggle("combat-gated",B.phase==="q"||B.phase==="fb");
   const tf=B.foes[B.target];
   const enemy=(B.boss?"☠ ":"")+(B.gauntlet?(B.enemy&&B.enemy.name?B.enemy.name:"Trial Warden"):(tf?tf.e.name:""));
   $("bFoeName").textContent=enemy+(B.foes.length>1?" · pack of "+B.foes.length:"");
@@ -8430,6 +8440,7 @@ function openSettingsModal(){
 }
 function toTitle(){
   MODE="title";B=null;
+  $("app").classList.remove("combat-gated");
   Music.sync();
   $("mapScr").classList.add("hidden");
   $("battleUI").classList.add("hidden");
@@ -8477,7 +8488,7 @@ const KEYMAP={ArrowUp:"up",w:"up",W:"up",ArrowDown:"down",s:"down",S:"down",Arro
 window.addEventListener("keydown",e=>{
   Sfx.unlock();
   if(MODE==="battle"&&B){
-    if(e.key==="Tab"&&!B.gauntlet){
+    if(e.key==="Tab"&&!B.gauntlet&&!["q","fb"].includes(B.phase)){
       e.preventDefault();
       for(let k=1;k<=B.foes.length;k++){const j=(B.target+k)%B.foes.length;if(B.foes[j].halves>0){setTarget(j);break}}
       return;

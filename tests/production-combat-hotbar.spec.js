@@ -89,6 +89,97 @@ test('an attack is chosen and targeted before its question, then resolves only a
   expect(await page.evaluate(() => window.__wf.B.foes[window.__wf.B.intent.target.index].halves)).toBeLessThan(before);
 });
 
+test('a knowledge gate dims and disables battlefield input', async ({ page }) => {
+  await freshGame(page, 'c');
+  await startBattle(page);
+  await page.evaluate(() => {
+    const wf = window.__wf;
+    wf.selectCombatAction('attack');
+    for (let i = 0; i < wf.B.foes.length && wf.B.phase === 'target'; i++) wf.chooseCombatTarget('foe', i);
+  });
+
+  const gate = await page.evaluate(() => {
+    const canvas = document.getElementById('cv');
+    const style = getComputedStyle(canvas);
+    return {
+      phase: window.__wf.B.phase,
+      dimmed: style.filter !== 'none' && style.filter.includes('brightness'),
+      pointerEvents: style.pointerEvents,
+    };
+  });
+  expect(gate).toEqual({ phase: 'q', dimmed: true, pointerEvents: 'none' });
+});
+
+test('the target confirmed before recall cannot change while the gate is open', async ({ page }) => {
+  await freshGame(page, 'c');
+  await page.evaluate(() => {
+    const wf = window.__wf;
+    wf.S.hero = { rig: 'heroMag', cls: 'caster' };
+    window.startBattle({
+      enemyKey: 'parsewraith',
+      region: wf.DATA.regions[0],
+      spawn: null,
+      boss: false,
+      eaWave: [{ n: 'First Target', s: 'zombie' }, { n: 'Second Target', s: 'zombie' }],
+    });
+    wf.selectCombatAction('attack');
+    wf.chooseCombatTarget('foe', 0);
+  });
+  const before = await page.evaluate(() => window.__wf.B.foes.map(foe => foe.halves));
+
+  await page.keyboard.press('Tab');
+  expect(await page.evaluate(() => ({ live: window.__wf.B.target, confirmed: window.__wf.B.intent.target.index })))
+    .toEqual({ live: 0, confirmed: 0 });
+
+  const after = await page.evaluate(() => {
+    const wf = window.__wf;
+    wf.onAnswer(wf.B.opts.findIndex(option => option.ok));
+    wf.onContinueResolve();
+    return wf.B.foes.map(foe => foe.halves);
+  });
+  expect(after[0]).toBeLessThan(before[0]);
+  expect(after[1]).toBe(before[1]);
+});
+
+test('switching the active combatant while a tray is open refreshes that tray', async ({ page }) => {
+  await freshGame(page, 'c');
+  const state = await page.evaluate(() => {
+    const wf = window.__wf;
+    const companion = wf.DATA.companions.find(candidate => candidate.cert === 'c');
+    wf.S.companions = [companion.id];
+    window.startBattle({ enemyKey: 'parsewraith', region: wf.DATA.regions[0], spawn: null, boss: false });
+    wf.selectCombatAction('skills');
+    const switched = wf.setActiveCombatant(1);
+    return {
+      switched,
+      active: wf.B.active,
+      phase: wf.B.phase,
+      hotbar: wf.B.intent && wf.B.intent.hotbar,
+      trayNames: wf.B.trayItems.map(item => item.name),
+      expectedAbility: companion.ability,
+    };
+  });
+  expect(state.switched).toBe(true);
+  expect(state.active).toBe(1);
+  expect(state.phase).toBe('tray');
+  expect(state.hotbar).toBe('skills');
+  expect(state.trayNames.length).toBeGreaterThan(0);
+  expect(state.trayNames).toContain(state.expectedAbility);
+});
+
+test('a hint can forfeit recall credit without weakening correct attack damage', async ({ page }) => {
+  await freshGame(page, 'c');
+  const damage = await page.evaluate(() => {
+    const wf = window.__wf;
+    const concept = wf.ALLCONCEPTS.c[0];
+    return {
+      normal: wf.attackDamage(4, 'c', concept, { rowMult: 1, hinted: false }),
+      hinted: wf.attackDamage(4, 'c', concept, { rowMult: 1, hinted: true }),
+    };
+  });
+  expect(damage.hinted).toBe(damage.normal);
+});
+
 test('a failed poultice question consumes nothing and performs no healing', async ({ page }) => {
   await freshGame(page, 'c');
   await startBattle(page);

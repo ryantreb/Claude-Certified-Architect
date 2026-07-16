@@ -1,7 +1,7 @@
 // @ts-check
 /* Failure and hint invariants under the action-first combat flow. A wrong
    answer fails the selected action without inventing a second, hidden action
-   penalty. Hints affect learning credit and tactical damage only. */
+   penalty. Hints affect learning credit only. */
 const { test } = require('@playwright/test');
 const { freshGame, expect } = require('./helpers');
 
@@ -43,21 +43,21 @@ test('changing the active combatant is free before choosing an intent', async ({
   expect(out.active).toBe(out.expected);
 });
 
-test('a glancing (hinted) hit deals half damage', async ({ page }) => {
+test('a hinted correct hit deals full tactical damage', async ({ page }) => {
   await freshGame(page, 'c');
-  // unmastered concept, no super-effective: base 4 -> glancing floor(4*0.5) = 2
+  // unmastered concept, no super-effective: base 4 stays 4 even with a hint
   const { concept } = await page.evaluate(() => {
     const wf = window.__wf;
     wf.B = { region: { dom: 0, cert: 'c' }, cert: 'c', q: null, qCert: 'c' };
     return { concept: wf.ALLCONCEPTS.c[0] };
   });
   const full = await page.evaluate((c) => window.__wf.attackDamage(4, 'c', c, {}), concept);
-  const glancing = await page.evaluate((c) => window.__wf.attackDamage(4, 'c', c, { hinted: true }), concept);
+  const hinted = await page.evaluate((c) => window.__wf.attackDamage(4, 'c', c, { hinted: true }), concept);
   expect(full).toBe(4);
-  expect(glancing).toBe(2);
+  expect(hinted).toBe(4);
 });
 
-test('a glancing hit earns zero mastery credit (hinted path)', async ({ page }) => {
+test('a hinted correct answer earns zero mastery credit', async ({ page }) => {
   await freshGame(page, 'c');
   const out = await page.evaluate(() => {
     const wf = window.__wf, c = wf.ALLCONCEPTS.c[0], key = wf.srKey('c', c);
