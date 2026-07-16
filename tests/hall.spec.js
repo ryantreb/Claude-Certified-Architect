@@ -57,7 +57,7 @@ test('a poultice is earned: refused before a correct answer, spends the action a
   expect(out.srSame).toBe(true);
 });
 
-test('the streak chip names itself and the card resizes', async ({ page }) => {
+test('the streak chip names itself and legacy size settings cannot scale the words', async ({ page }) => {
   await freshGame(page, 'c');
   const out = await page.evaluate(() => {
     const wf = window.__wf;
@@ -72,8 +72,8 @@ test('the streak chip names itself and the card resizes', async ({ page }) => {
   });
   expect(out.chip).toContain('streak ×');
   expect(out.title).toContain('tactical damage only');
-  expect(parseFloat(out.zx)).toBeCloseTo(1.35);
-  expect(parseFloat(out.zs)).toBeCloseTo(0.85);
+  expect(parseFloat(out.zx)).toBeCloseTo(1);
+  expect(parseFloat(out.zs)).toBeCloseTo(1);
 });
 
 test('the hero screen portraits resolve sharp, not thumbnail-sized', async ({ page }) => {
