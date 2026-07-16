@@ -1,127 +1,88 @@
 // @ts-check
-/* Commit 5 — telegraphed AoE sweeps with a free dodge.
-   A foe winds up a sweep at the front or back LINE. Repositioning out of that
-   line is free (does not consume the round's formation move and never costs a
-   recall); the counterattack riposte still requires a correct answer. A correct
-   riposte turns the whole sweep aside; a wrong one lands it on whoever stayed. */
+/* Sweeps use the same production defense contract as single-target attacks:
+   threat first, knowledge feedback second, battlefield resolution last. */
 const { test } = require('@playwright/test');
 const { freshGame, expect } = require('./helpers');
 
-async function startBattle(page, enemyKey = 'parsewraith', regionIdx = 0) {
-  await page.evaluate(({ ek, ri }) => {
+async function startBattle(page) {
+  await page.evaluate(() => {
     const wf = window.__wf;
-    window.startBattle({ enemyKey: ek, region: wf.DATA.regions[ri], spawn: null, boss: false });
-  }, { ek: enemyKey, ri: regionIdx });
+    window.startBattle({ enemyKey: 'parsewraith', region: wf.DATA.regions[0], spawn: null, boss: false });
+  });
 }
 
-/* force a telegraphed sweep at a known column and return to a clean dodge phase */
-async function forceTelegraph(page, col) {
-  await page.evaluate((c) => {
-    const wf = window.__wf, B = wf.B;
-    B.round = 2;                               // a mid-fight round so sweeps are allowed
-    const attacker = B.foes.find(f => f.halves > 0);
-    B.defFoe = B.foes.indexOf(attacker);
-    wf.telegraphAoE(attacker);
-    B.aoe.col = c;                             // pin the threatened line for the test
-    wf.showDodge();
-  }, col);
+async function forceSweepQuestion(page, rollsEnabled, clearLine = false) {
+  await page.evaluate(({ rollsEnabled, clearLine }) => {
+    const wf = window.__wf, B = wf.B, attacker = B.foes.find(f => f.halves > 0);
+    B.turn = 'defend'; B.defFoe = B.foes.indexOf(attacker); B.defMember = 0;
+    B.aoe = { col: 0, dmg: Math.max(1, B.foeDmg), foe: B.defFoe, foeName: attacker.e.name };
+    if (clearLine) B.party.forEach((m, i) => { if (m.halves > 0) m.cell = { col: 1, row: i }; });
+    else B.party[0].cell = { col: 0, row: 0 };
+    B.intent = { type: 'defend', member: B.defMember, target: { side: 'party', index: B.defMember }, rollsEnabled, move: 'Overrun' };
+    B.phase = 'q'; window.serveQuestion();
+  }, { rollsEnabled, clearLine });
 }
 
-test('a telegraphed sweep enters a dodge phase that threatens one line', async ({ page }) => {
+test('a wrong sweep answer changes no HP until Continue, then hits everyone still in the line', async ({ page }) => {
   await freshGame(page, 'c');
   await startBattle(page);
-  await forceTelegraph(page, 0);
-  const out = await page.evaluate(() => ({
-    phase: window.__wf.B.phase,
-    aoeCol: window.__wf.B.aoe.col,
-    free: window.__wf.B.moved === false,       // the dodge reposition is free
-  }));
-  expect(out.phase).toBe('dodge');
-  expect(out.aoeCol).toBe(0);
-  expect(out.free).toBe(true);
-});
-
-test('dodging the whole line then a WRONG riposte costs no HP', async ({ page }) => {
-  await freshGame(page, 'c');
-  await startBattle(page);
-  await forceTelegraph(page, 0);
+  await forceSweepQuestion(page, false);
   const out = await page.evaluate(() => {
     const wf = window.__wf, B = wf.B;
-    // move every living unit OFF the threatened front line (col 0) to the back (col 1)
-    B.party.forEach((m, i) => { if (m.halves > 0 && m.cell.col === 0) m.cell = { col: 1, row: i }; });
-    const hpBefore = B.party.reduce((s, m) => s + m.halves, 0);
-    const threatened = wf.aoeThreatened().length;
-    // brace + answer WRONG
-    B.phase = 'q'; window.serveQuestion();
-    const wrongI = B.opts.findIndex(o => !o.ok);
-    window.onAnswer(wrongI);
-    const hpAfter = B.party.reduce((s, m) => s + m.halves, 0);
-    return { threatened, hpBefore, hpAfter, aoeCleared: B.aoe === null };
+    const hp = () => B.party.reduce((sum, member) => sum + member.halves, 0);
+    const before = hp();
+    wf.onAnswer(B.opts.findIndex(option => !option.ok));
+    const afterAnswer = hp();
+    wf.onContinueResolve();
+    return { before, afterAnswer, afterResolve: hp(), aoeCleared: B.aoe === null };
   });
-  expect(out.threatened).toBe(0);              // nobody left in the path
-  expect(out.hpAfter).toBe(out.hpBefore);      // free dodge => no damage even on a wrong riposte
+  expect(out.afterAnswer).toBe(out.before);
+  expect(out.afterResolve).toBeLessThan(out.before);
   expect(out.aoeCleared).toBe(true);
 });
 
-test('staying in the line and a WRONG riposte lets the sweep land', async ({ page }) => {
+test('a cleared line makes a failed sweep harmless and still clears the telegraph', async ({ page }) => {
   await freshGame(page, 'c');
   await startBattle(page);
-  await forceTelegraph(page, 0);
+  await forceSweepQuestion(page, false, true);
   const out = await page.evaluate(() => {
     const wf = window.__wf, B = wf.B;
-    // force at least one unit INTO the threatened line
-    B.party[0].cell = { col: 0, row: 1 };
-    const hpBefore = B.party.reduce((s, m) => s + m.halves, 0);
-    const threatened = wf.aoeThreatened().length;
-    B.phase = 'q'; window.serveQuestion();
-    const wrongI = B.opts.findIndex(o => !o.ok);
-    window.onAnswer(wrongI);
-    const hpAfter = B.party.reduce((s, m) => s + m.halves, 0);
-    return { threatened, dmg: hpBefore - hpAfter };
+    const before = B.party.reduce((sum, member) => sum + member.halves, 0);
+    wf.onAnswer(B.opts.findIndex(option => !option.ok));
+    wf.onContinueResolve();
+    return { before, after: B.party.reduce((sum, member) => sum + member.halves, 0), aoeCleared: B.aoe === null };
   });
-  expect(out.threatened).toBeGreaterThan(0);
-  expect(out.dmg).toBeGreaterThan(0);          // the sweep landed on whoever stayed
-});
-
-test('a correct riposte earns the roll; a held roll turns the sweep aside for the whole line', async ({ page }) => {
-  await freshGame(page, 'c');
-  await startBattle(page);
-  await forceTelegraph(page, 0);
-  const out = await page.evaluate(() => {
-    const wf = window.__wf, B = wf.B;
-    B.party[0].cell = { col: 0, row: 1 };       // someone is in the path
-    const hpBefore = B.party.reduce((s, m) => s + m.halves, 0);
-    B.phase = 'q'; window.serveQuestion();
-    const rightI = B.opts.findIndex(o => o.ok);
-    window.onAnswer(rightI);
-    const phaseAfterAnswer = B.phase;           // correct answer arms the d20, nothing landed yet
-    const hpMid = B.party.reduce((s, m) => s + m.halves, 0);
-    window.resolveRoll(20);                     // the die holds
-    const hpAfter = B.party.reduce((s, m) => s + m.halves, 0);
-    return { phaseAfterAnswer, midDmg: hpBefore - hpMid, dmg: hpBefore - hpAfter, aoeCleared: B.aoe === null };
-  });
-  expect(out.phaseAfterAnswer).toBe('roll');
-  expect(out.midDmg).toBe(0);                   // the answer alone never resolves the sweep
-  expect(out.dmg).toBe(0);                      // the held roll protected everyone
+  expect(out.after).toBe(out.before);
   expect(out.aoeCleared).toBe(true);
 });
 
-test('a correct riposte whose die breaks still lets the sweep land — but never staggers', async ({ page }) => {
+test('correct knowledge turns the sweep automatically when optional rolls are off', async ({ page }) => {
   await freshGame(page, 'c');
   await startBattle(page);
-  await forceTelegraph(page, 0);
+  await forceSweepQuestion(page, false);
   const out = await page.evaluate(() => {
     const wf = window.__wf, B = wf.B;
-    B.party[0].cell = { col: 0, row: 1 };
-    const hpBefore = B.party.reduce((s, m) => s + m.halves, 0);
-    B.phase = 'q'; window.serveQuestion();
-    window.onAnswer(B.opts.findIndex(o => o.ok));
-    window.resolveRoll(1);                      // the die always fails on a 1
-    const hpAfter = B.party.reduce((s, m) => s + m.halves, 0);
-    const staggered = B.party.some(m => (m.staggerRound | 0) > 0);
-    return { dmg: hpBefore - hpAfter, staggered, aoeCleared: B.aoe === null };
+    const before = B.party.reduce((sum, member) => sum + member.halves, 0);
+    wf.onAnswer(B.opts.findIndex(option => option.ok));
+    wf.onContinueResolve();
+    return { before, after: B.party.reduce((sum, member) => sum + member.halves, 0), aoeCleared: B.aoe === null };
   });
-  expect(out.dmg).toBeGreaterThan(0);           // the sweep crashed through
-  expect(out.staggered).toBe(false);            // a broken die is not a failed recall
+  expect(out.after).toBe(out.before);
+  expect(out.aoeCleared).toBe(true);
+});
+
+test('with optional rolls on, correct knowledge earns the external guard roll', async ({ page }) => {
+  await freshGame(page, 'c');
+  await startBattle(page);
+  await forceSweepQuestion(page, true);
+  const out = await page.evaluate(() => {
+    const wf = window.__wf, B = wf.B;
+    wf.onAnswer(B.opts.findIndex(option => option.ok));
+    wf.onContinueResolve();
+    const phase = B.phase;
+    wf.resolveRoll(20);
+    return { phase, aoeCleared: B.aoe === null };
+  });
+  expect(out.phase).toBe('roll');
   expect(out.aoeCleared).toBe(true);
 });

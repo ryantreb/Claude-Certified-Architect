@@ -49,7 +49,7 @@ A compact image-only chooser opened from the Utility hotbar slot. It contains av
 _Avoid_: Inventory screen, second hotbar, item card
 
 **Hotbar Iconography**:
-A cohesive pixel-art image family created specifically for the Combat Hotbar using the game's existing palette. The core symbols are Sword, Spellbook/Rune, Poultice, blue Mana Draught, and Utility Satchel/Bomb. Slots contain no visible action names; small numeric badges communicate cost or quantity, with accessible names and tooltips supplied outside the artwork.
+A cohesive illustrated image family created specifically for the Combat Hotbar using the game's existing palette and crisp vector edges at every display density. The core symbols are Sword, Lightning Bolt, Poultice, blue Mana Draught, and Utility Satchel/Bomb. Slots contain no visible action names; small numeric badges communicate cost or quantity, with accessible names and tooltips supplied outside the artwork.
 _Avoid_: Emoji actions, text buttons, cropped character art
 
 **Mana Bar**:
@@ -57,7 +57,7 @@ A blue resource bar displayed above each player character's head, immediately be
 _Avoid_: Mana button, mana slot, magic health
 
 **Targeting**:
-The step between choosing a targeted hotbar action and opening its knowledge gate. The player selects among valid battlefield targets; when exactly one valid target exists, the game selects it automatically and opens the knowledge gate.
+The explicit step between choosing a targeted hotbar action and opening its knowledge gate. The player always confirms a valid battlefield target before the question appears, including when only one valid target remains.
 _Avoid_: Answer target, question target, action resolution
 
 **Question Panel**:
@@ -73,7 +73,7 @@ Display lettering reserved for threat callouts, compact headers, and outcome wor
 _Avoid_: Comic body copy, per-question font scaling, oversized metadata
 
 **Answer Feedback**:
-The right-or-wrong result, short reviewed explanation, and concrete reviewed example stored with and shown for every question. Feedback is authored as part of the region recall data rather than generated at runtime. The combat outcome is determined when the answer is chosen, but its animation waits until the player presses Continue and the panel closes. Using a hint may reduce learning or mastery rewards but never weakens the combat result of a correct answer.
+The right-or-wrong result, authored explanation, and a deterministic example of the correct application shown for every question. The combat outcome is determined when the answer is chosen, but its animation waits until the player presses Continue and the panel closes. Using a hint may reduce learning or mastery rewards but never weakens the combat result of a correct answer.
 _Avoid_: Combat result, attack animation, answer toast
 
 **Failure Beat**:
@@ -85,5 +85,5 @@ A target-aware burst synchronized to a connected hit. Player characters and orga
 _Avoid_: Blood on constructs, generic impact flash, persistent gore decal
 
 **Threat Callout**:
-An energetic comic-book announcement shown on the battlefield for about one second before an enemy defense knowledge gate, naming the targeted party member, attacking enemy, and incoming move—for example, “Defend Aria from Scopecreep's Overrun!” It automatically advances into the question without another tap, and its context is not repeated as descriptive copy inside the question panel.
+An energetic comic-book announcement shown on the battlefield for five seconds before an enemy defense knowledge gate, naming the targeted party member, attacking enemy, and incoming move—for example, “Defend Aria from Scopecreep's Overrun!” It automatically advances into the question without another tap, and its context is not repeated as descriptive copy inside the question panel.
 _Avoid_: Defense-card header, enemy metadata, combat log

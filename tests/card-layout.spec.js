@@ -20,24 +20,41 @@ test('the question keeps an 18px rendered size regardless of legacy card scale s
   expect(sizes).toEqual([18, 18, 18]);
 });
 
-test('the production card uses the question-first hierarchy selected in prototype B', async ({ page }) => {
+test('the production question uses the selected speech-stack hierarchy', async ({ page }) => {
   await freshGame(page, 'c', '/index.html');
   const order = await page.evaluate(() => {
     const box = document.getElementById('battleBox');
     const ids = [...box.querySelectorAll('[id]')].map(el => el.id);
-    return ['qDomain', 'qScen', 'qOpts', 'qContext', 'bHead'].map(id => ids.indexOf(id));
+    return ['qDomain', 'qScen', 'qOpts', 'qContext', 'ruleBar', 'bActions'].map(id => ids.indexOf(id));
   });
   expect(order.every(i => i >= 0)).toBe(true);
   expect(order).toEqual([...order].sort((a, b) => a - b));
 });
 
-test('a battle applies its region hue to the card rail', async ({ page }) => {
+test('the question disappears outside knowledge gates and exposes no minimize control', async ({ page }) => {
+  await freshGame(page, 'c', '/index.html');
+  const out = await page.evaluate(() => {
+    const wf = window.__wf, region = wf.DATA.regions[0];
+    window.startBattle({ enemyKey: 'scopecreep', region, spawn: null, boss: false });
+    const box = document.getElementById('battleBox'), min = document.getElementById('bMin');
+    const before = box.classList.contains('hidden');
+    wf.selectCombatAction('attack');
+    for (let i = 0; i < wf.B.foes.length && wf.B.phase === 'target'; i++) wf.chooseCombatTarget('foe', i);
+    return { before, during: !box.classList.contains('hidden'), minimizeVisible: min.getClientRects().length > 0 };
+  });
+  expect(out).toEqual({ before: true, during: true, minimizeVisible: false });
+});
+
+test('a battle applies its region hue to the comic marks without a long region label', async ({ page }) => {
   await freshGame(page, 'c', '/index.html');
   const hue = await page.evaluate(() => {
     const wf = window.__wf;
     const region = wf.DATA.regions[0];
     window.startBattle({ enemyKey: 'scopecreep', region, spawn: null, boss: false });
-    return document.getElementById('battleBox').style.getPropertyValue('--region-hue');
+    return {
+      hue: document.getElementById('battleBox').style.getPropertyValue('--region-hue'),
+      areaVisible: getComputedStyle(document.getElementById('qArea')).display !== 'none',
+    };
   });
-  expect(hue).toBe('36');
+  expect(hue).toEqual({ hue: '36', areaVisible: false });
 });

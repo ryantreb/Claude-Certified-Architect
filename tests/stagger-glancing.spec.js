@@ -1,8 +1,7 @@
 // @ts-check
-/* Commit 4 — stagger + glancing.
-   A wrong answer benches the acting unit for its next round (the same failure
-   that resets the concept's reps). A hinted-but-correct answer still lands, but
-   as a glancing half-damage hit that earns zero mastery. */
+/* Failure and hint invariants under the action-first combat flow. A wrong
+   answer fails the selected action without inventing a second, hidden action
+   penalty. Hints affect learning credit and tactical damage only. */
 const { test } = require('@playwright/test');
 const { freshGame, expect } = require('./helpers');
 
@@ -14,42 +13,34 @@ async function startBattle(page, enemyKey = 'parsewraith', regionIdx = 0) {
   }, { ek: enemyKey, ri: regionIdx });
 }
 
-test('a wrong attack answer staggers the acting unit for the next round only', async ({ page }) => {
+test('a wrong attack answer fails the intent without benching the active combatant', async ({ page }) => {
   await freshGame(page, 'c');
   await startBattle(page);
   const res = await page.evaluate(() => {
     const wf = window.__wf;
-    window.pickAction(0);                       // first available skill
-    const mi = wf.B.actions[0].mi;
-    const round = wf.B.round;
-    const wrongI = wf.B.opts.findIndex(o => !o.ok);
-    window.onAnswer(wrongI);
-    const m = wf.B.party[mi];
-    const stamp = m.staggerRound;
-    // simulate arriving at the next player round
-    wf.B.round = round + 1;
-    const staggeredNext = wf.memberStaggered(m);
-    wf.B.round = round + 2;
-    const clearedAfter = wf.memberStaggered(m);
-    return { stamp, expected: round + 1, staggeredNext, clearedAfter };
+    wf.selectCombatAction('attack');
+    for (let i = 0; i < wf.B.foes.length && wf.B.phase === 'target'; i++) wf.chooseCombatTarget('foe', i);
+    const m = wf.B.party[wf.B.active], before = wf.B.foes[wf.B.target].halves;
+    wf.onAnswer(wf.B.opts.findIndex(o => !o.ok));
+    wf.onContinueResolve();
+    return { staggered: wf.memberStaggered(m), foeHp: wf.B.foes[wf.B.target].halves, before };
   });
-  expect(res.stamp).toBe(res.expected);
-  expect(res.staggeredNext).toBe(true);
-  expect(res.clearedAfter).toBe(false);
+  expect(res.staggered).toBe(false);
+  expect(res.foeHp).toBe(res.before);
 });
 
-test('when every living unit is staggered, no attack actions are offered', async ({ page }) => {
+test('changing the active combatant is free before choosing an intent', async ({ page }) => {
   await freshGame(page, 'c');
   await startBattle(page);
   const out = await page.evaluate(() => {
     const wf = window.__wf;
-    wf.S.consume.bomb = 0;                       // remove the item out so only units could act
-    wf.B.round = 1;                              // a normal mid-fight round (engine never stamps round 0)
-    wf.B.party.forEach(m => { if (m.halves > 0) m.staggerRound = 1; });  // staggered THIS round
-    window.showActions();
-    return { actions: wf.B.actions.length };
+    const next = wf.B.party.findIndex((m, i) => i > 0 && m.halves > 0);
+    const changed = next >= 0 ? wf.setActiveCombatant(next) : true;
+    return { changed, phase: wf.B.phase, active: wf.B.active, expected: next >= 0 ? next : 0 };
   });
-  expect(out.actions).toBe(0);                   // soft-lock guard => a "hold the line" pass is shown instead
+  expect(out.changed).toBe(true);
+  expect(out.phase).toBe('act');
+  expect(out.active).toBe(out.expected);
 });
 
 test('a glancing (hinted) hit deals half damage', async ({ page }) => {

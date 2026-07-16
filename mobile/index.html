@@ -444,225 +444,73 @@ body.nomotion *{animation:none !important;transition:none !important}
 }
 @media (max-width:620px){#qOpts{grid-template-columns:1fr}.opt{min-height:44px}#qArea{max-width:38%}}
 
-/* ==========================================================================
-   PROTOTYPE — comic combat hotbar
-   Three variants of the battle question flow, switchable via ?variant=, on the
-   existing app route when ?prototype=hotbar is present. Throw away or absorb
-   after the user selects a direction.
-   ========================================================================== */
-body.proto-mode{background:#11101b}
-#combatPrototype{--proto-region:#e3a52f;--proto-ink:#17121c;position:fixed;inset:0;z-index:500;
-  overflow:hidden;background:#181524;color:#241b20;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
-  user-select:none}
-.proto-stage{position:absolute;inset:0 0 0;background:#567f9a;overflow:hidden}
-.proto-bg{position:absolute;inset:0;overflow:hidden;background:linear-gradient(#739fc0 0 44%,#789c43 44% 100%)}
-.proto-bg img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover}
-.proto-bg img:nth-child(2){z-index:2}.proto-bg img:nth-child(3){z-index:8}
-.proto-vignette{position:absolute;inset:0;z-index:9;pointer-events:none;
-  background:linear-gradient(180deg,rgba(8,7,14,.25),transparent 28%,transparent 72%,rgba(8,7,14,.45)),
-    radial-gradient(ellipse at center,transparent 45%,rgba(9,7,15,.42) 110%)}
-.proto-topbar{position:absolute;z-index:30;left:10px;right:10px;top:calc(8px + env(safe-area-inset-top));
-  display:flex;align-items:flex-start;gap:8px;pointer-events:none}
-.proto-logo,.proto-state{background:rgba(20,17,28,.9);color:#f4e7c8;border:2px solid #110e15;
-  box-shadow:3px 3px 0 rgba(0,0,0,.45);padding:7px 10px}
-.proto-logo{font:900 13px/1 Impact,"Arial Black",system-ui;letter-spacing:.09em;text-transform:uppercase;
-  transform:rotate(-1deg)}
-.proto-logo small{display:block;color:#e5a932;font:700 9px/1.2 system-ui;letter-spacing:.05em;margin-top:3px}
-.proto-state{margin-left:auto;font:800 11px/1.15 system-ui;text-transform:uppercase;letter-spacing:.08em;
-  border-color:var(--proto-region);color:#fff}
-.proto-state b{display:block;color:#ffd96b;margin-top:3px;font-size:12px}
-.proto-roster{position:absolute;z-index:15;left:5%;right:5%;top:16%;bottom:170px;pointer-events:none}
-.proto-unit{position:absolute;width:150px;text-align:center;pointer-events:auto;cursor:pointer;transition:filter .18s,transform .18s}
-.proto-unit.pc{bottom:4%}.proto-unit.enemy{right:4%;top:16%}
-.proto-unit.pc:nth-child(1){left:3%}.proto-unit.pc:nth-child(2){left:24%;bottom:17%}.proto-unit.pc:nth-child(3){left:43%}
-.proto-unit img{display:block;margin:0 auto;width:108px;height:144px;object-fit:contain;object-position:center bottom;
-  filter:drop-shadow(0 9px 5px rgba(0,0,0,.55));transform-origin:50% 90%;pointer-events:none}
-.proto-unit.enemy img{width:150px;height:190px}
-.proto-unit.active img{filter:drop-shadow(0 0 5px #ffd85b) drop-shadow(0 9px 5px rgba(0,0,0,.6))}
-.proto-unit.active::after{content:"";position:absolute;left:50%;bottom:15px;width:94px;height:28px;transform:translateX(-50%);
-  border:4px solid #ffd85b;border-radius:50%;box-shadow:0 0 14px #ffd85b;z-index:-1}
-.proto-unit.valid-target{filter:drop-shadow(0 0 10px #fff)}
-.proto-unit.valid-target::before{content:"TAP";position:absolute;left:50%;top:-18px;transform:translateX(-50%) rotate(-4deg);
-  background:#fff;color:#15111a;border:3px solid #15111a;padding:3px 9px;font:900 12px Impact,"Arial Black",sans-serif;
-  animation:protoBob .7s ease-in-out infinite alternate}
-@keyframes protoBob{to{transform:translateX(-50%) translateY(-4px) rotate(3deg)}}
-.proto-name{display:inline-block;position:relative;margin-top:-20px;background:#17131d;color:#fff;border:2px solid #08070a;
-  padding:3px 8px;font:900 11px/1 Impact,"Arial Black",system-ui;letter-spacing:.05em;text-transform:uppercase;
-  box-shadow:2px 2px 0 rgba(0,0,0,.45)}
-.proto-status{position:absolute;left:50%;top:-26px;transform:translateX(-50%);width:108px}
-.proto-hearts{height:15px;color:#ff5862;font-size:14px;line-height:14px;text-shadow:1px 1px 0 #341014,-1px -1px 0 #341014;white-space:nowrap}
-.proto-mana{height:8px;margin-top:3px;background:#152036;border:2px solid #090d15;box-shadow:2px 2px 0 rgba(0,0,0,.35)}
-.proto-mana i{display:block;height:100%;background:linear-gradient(90deg,#1685e8,#61d1ff);box-shadow:inset 0 1px rgba(255,255,255,.55)}
-.proto-intent-line{position:absolute;z-index:12;left:0;top:0;width:100%;height:100%;pointer-events:none}
-.proto-target-glow{animation:protoTargetPulse .7s ease-in-out infinite alternate}
-@keyframes protoTargetPulse{to{filter:brightness(1.3) drop-shadow(0 0 16px var(--proto-region))}}
-
-.proto-hotbar-wrap{position:absolute;z-index:42;left:50%;bottom:58px;transform:translateX(-50%);width:min(96vw,590px);
-  display:flex;flex-direction:column;align-items:center;gap:7px}
-.proto-tray{display:flex;gap:7px;padding:7px;background:rgba(19,15,24,.94);border:3px solid #100c13;
-  box-shadow:4px 4px 0 rgba(0,0,0,.55);transform:rotate(-1deg)}
-.proto-tray[hidden]{display:none}
-.proto-tray .proto-slot{width:58px;height:52px}
-.proto-hotbar{display:grid;grid-template-columns:repeat(5,clamp(54px,15vw,78px));gap:7px;padding:8px;
+/* Production combat hotbar: fixed, image-led action slots stay on the
+   battlefield while the temporary knowledge gate comes and goes. */
+#combatHotbarWrap{position:absolute;z-index:45;left:50%;bottom:calc(12px + env(safe-area-inset-bottom));
+  transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:7px;width:min(96vw,590px);pointer-events:auto}
+#battleUI{top:0;align-items:stretch;padding:0;pointer-events:none}
+#combatHotbar{display:grid;grid-template-columns:repeat(5,clamp(54px,15vw,78px));gap:7px;padding:8px;
   background:linear-gradient(#3b2932,#211820);border:4px solid #110d12;box-shadow:0 7px 0 #09070a,0 12px 24px rgba(0,0,0,.5);
   clip-path:polygon(2% 0,98% 0,100% 18%,98% 100%,2% 100%,0 82%,0 18%)}
-.proto-slot{position:relative;display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:1;border:3px solid #171017;
-  background:linear-gradient(145deg,#c79258,#7e4f39);box-shadow:inset 3px 3px rgba(255,226,160,.25),inset -4px -4px rgba(50,22,29,.42);
-  color:#170f15;transition:transform .08s,filter .15s;overflow:visible}
-.proto-slot:active{transform:translateY(3px)}
-.proto-slot.selected{outline:4px solid #ffe05d;outline-offset:1px;filter:brightness(1.18);transform:translateY(-5px)}
-.proto-slot[disabled],.proto-slot.disabled{filter:grayscale(.85) brightness(.55);cursor:not-allowed}
-.proto-slot svg{display:block;width:76%;height:76%;filter:drop-shadow(2px 2px 0 rgba(255,255,255,.12))}
-.proto-slot .proto-badge{position:absolute;right:-5px;bottom:-6px;min-width:22px;height:22px;display:flex;align-items:center;justify-content:center;
+.combat-slot{position:relative;display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:1;border:3px solid #171017;
+  background:linear-gradient(145deg,#c79258,#7e4f39);box-shadow:inset 3px 3px rgba(255,226,160,.25),inset -4px -4px rgba(50,22,29,.42);color:#170f15}
+.combat-slot svg{display:block;width:76%;height:76%;filter:drop-shadow(2px 2px 0 rgba(255,255,255,.12))}
+.combat-slot svg.combat-seal{position:absolute;inset:4%;width:92%;height:92%;filter:drop-shadow(2px 2px #100b11)}
+.combat-slot:active{transform:translateY(3px)}
+.combat-slot[disabled]{filter:grayscale(.85) brightness(.55)}
+.combat-slot.selected{outline:4px solid #ffe05d;outline-offset:1px;filter:brightness(1.18);transform:translateY(-5px)}
+.combat-slot.bounced{animation:itemBounce .55s ease}
+@keyframes itemBounce{0%,100%{transform:translateY(0) rotate(0)}35%{transform:translateY(-18px) rotate(-12deg)}70%{transform:translateY(4px) rotate(7deg)}}
+.combat-badge{position:absolute;right:-5px;bottom:-6px;min-width:22px;height:22px;display:flex;align-items:center;justify-content:center;
   border-radius:50%;background:#17121c;color:#fff;border:2px solid #f1d18a;font:900 11px system-ui;z-index:2}
-.proto-slot .proto-cost{background:#1469b8;border-color:#67cfff}
-.proto-lock{position:absolute;inset:0;display:grid;place-items:center;background:rgba(20,15,22,.62);font-size:28px;color:#d6c3a5}
+#combatAbilityTray{display:flex;gap:7px;max-width:94vw;overflow-x:auto;padding:7px;background:rgba(19,15,24,.94);border:3px solid #100c13;
+  box-shadow:4px 4px 0 rgba(0,0,0,.55);transform:rotate(-1deg);pointer-events:auto}
+#combatAbilityTray .combat-slot{flex:0 0 58px;width:58px;height:52px;aspect-ratio:auto}
+#combatHotbarWrap.dimmed{filter:brightness(.5);pointer-events:none}
+#battleBox{--paper:#fff7de;position:absolute;z-index:48;left:8%;top:10%;bottom:auto;width:min(84vw,760px);max-width:none;max-height:calc(100dvh - 190px);overflow:auto;
+  display:block;border:0;border-radius:0;background:transparent;box-shadow:none;transform:none!important;backdrop-filter:none;-webkit-backdrop-filter:none;color:#24191f}
+#battleBox #bHead,#battleBox .bResize,#battleBox #skillRow,#battleBox #dicePanel,#battleBox #bIntro{display:none!important}
+#bScroll{overflow:auto;padding:0;display:grid;grid-template-columns:minmax(240px,1.15fr) minmax(230px,.85fr);gap:16px;align-items:start}
+#qDomain{grid-column:1;display:inline-flex!important;width:max-content;background:hsl(var(--region-hue),68%,58%);border:3px solid #17121c;padding:5px 9px;
+  margin:0 0 -3px 14px;position:relative;z-index:2;transform:rotate(-2deg);color:#17121c;font:900 12px/1 Impact,"Arial Black",sans-serif;letter-spacing:.1em}
+#qSigil{font-size:16px;line-height:10px;margin-right:3px}
+#qDueTag{color:#17121c}
+#qScen{grid-column:1;position:relative;background:#fff8df;color:#24191f;border:4px solid #17121c;border-radius:28px;padding:18px 22px;
+  box-shadow:6px 6px 0 rgba(0,0,0,.58);margin:0;font:800 18px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif}
+#qScen::after{content:"";position:absolute;left:58px;bottom:-24px;border:14px solid transparent;border-top-color:#17121c;transform:rotate(12deg)}
+#qOpts{grid-column:2;grid-row:1/4;display:grid;grid-template-columns:1fr;gap:9px;padding-top:20px;transform:rotate(1deg)}
+#qOpts .opt{min-height:48px;background:#fffdfa;color:#24191f;border:3px solid #24191f;border-radius:20px;padding:10px 13px;box-shadow:4px 4px 0 rgba(0,0,0,.62);font:700 14px/1.3 system-ui}
+#qOpts .opt .okey{background:#ffe7a0;color:#24191f;border:2px solid #24191f}
+#qOpts .opt.correct{background:#9bea9e;color:#15321c;border-color:#15321c}
+#qOpts .opt.wrong{background:#f58b81;color:#421411;border-color:#421411}
+#qContext{grid-column:1/-1;border:0;margin:0 0 0 18px;padding:5px 9px;width:max-content;max-width:90%;background:#17121c;color:#fff;transform:rotate(1deg)}
+#qEnemy,.qContextChip{font-size:10px;color:#fff;border:0;background:transparent;padding:0}#qArea{display:none}
+#ruleBar{grid-column:1/-1;display:grid;gap:11px;margin:0;padding:0;background:transparent;border:0;color:#24191f}
+#ruleBar .rb-verdict{justify-self:start;margin:0 0 -2px 14px;padding:6px 12px;position:relative;z-index:3;border:3px solid #181118;border-radius:16px 16px 16px 4px;
+  box-shadow:5px 5px 0 #17121c;background:#66d278;color:#132819;font:900 22px/1 Impact,"Arial Black",sans-serif;transform:rotate(-2deg)}
+#ruleBar.v-good .rb-verdict{background:#66d278;color:#132819}
+#ruleBar.v-bad .rb-verdict{background:#f05d58;color:#35100f}
+#ruleBar #rbRule,#ruleBar #rbExample{position:relative;display:block;background:#fffdfa;color:#24191f;border:4px solid #17121c;border-radius:24px;padding:14px 18px;
+  box-shadow:5px 5px 0 rgba(0,0,0,.62);font:650 14px/1.45 system-ui}
+#ruleBar #rbRule{margin-right:10%}#ruleBar #rbExample{margin-left:9%}
+#ruleBar #rbRule::before,#ruleBar #rbExample::before{display:block;width:max-content;margin:-25px 0 7px 8px;padding:4px 9px;background:hsl(var(--region-hue),68%,58%);
+  border:3px solid #17121c;font:900 11px/1 Impact,"Arial Black",sans-serif;letter-spacing:.1em}
+#ruleBar #rbRule::before{content:"WHY"}#ruleBar #rbExample::before{content:"EXAMPLE"}
+#ruleBar .rb-doc,#ruleBar .rb-srnote{display:none!important}
+#bActions{grid-column:1/-1;justify-content:flex-end;margin:0}#bActions .btn{flex:0 1 280px;border:3px solid #17121c;border-radius:20px 20px 4px 20px;box-shadow:4px 4px 0 hsl(var(--region-hue),68%,58%);font:900 15px Impact,"Arial Black",sans-serif;text-transform:uppercase}
+#combatThreat{position:absolute;z-index:50;left:50%;top:27%;transform:translate(-50%,-50%) rotate(-4deg);max-width:min(90vw,760px);padding:15px 24px;
+  background:#fff4cb;color:#21151b;border:5px solid #160f15;box-shadow:9px 9px 0 rgba(0,0,0,.68);font:900 clamp(25px,5vw,46px)/1 Impact,"Arial Black",sans-serif;
+  text-align:center;text-transform:uppercase;clip-path:polygon(3% 8%,15% 0,24% 7%,39% 0,51% 8%,66% 0,77% 7%,94% 2%,100% 20%,95% 37%,100% 53%,95% 70%,100% 91%,84% 86%,72% 100%,57% 91%,43% 100%,28% 91%,12% 98%,0 82%,5% 63%,0 44%,6% 27%,0 12%);animation:combatCall .16s cubic-bezier(.2,1.4,.3,1)}
+#combatThreat.hit{background:#ffdb44;color:#411315}#combatThreat.fail{background:#f15c54;color:#fff}
+@keyframes combatCall{from{transform:translate(-50%,-50%) scale(.2) rotate(8deg)}}
+#combatDieScene{position:absolute;z-index:51;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;background:rgba(10,7,13,.6);pointer-events:auto}
+#combatD20{position:relative;width:154px;height:140px;border:0;background:transparent;filter:drop-shadow(10px 13px 0 rgba(0,0,0,.55));cursor:pointer}
+#combatD20 canvas{display:block;width:154px;height:140px;image-rendering:pixelated}#combatD20.rolling{animation:combatRoll .12s steps(2) infinite}
+@keyframes combatRoll{0%{transform:rotate(-12deg) scale(.9)}33%{transform:rotate(9deg) scale(1.08)}66%{transform:rotate(25deg) scale(.95)}}
+#combatRollHelp{background:#fff2ca;color:#24171d;border:4px solid #171019;box-shadow:5px 5px 0 #000;padding:8px 15px;font:900 18px Impact,"Arial Black",sans-serif;text-transform:uppercase}
+@media (max-width:760px){#combatHotbar{grid-template-columns:repeat(5,min(16vw,68px));gap:5px;padding:6px}.combat-slot{border-width:2px}}
+@media (max-width:760px){#battleBox{left:5%;top:8%;width:90%}#bScroll{grid-template-columns:1fr;gap:8px}#qOpts{grid-column:1;grid-row:auto;padding-top:12px}#qContext,#ruleBar,#bActions{grid-column:1}#qScen{padding:14px 17px}}
 
-.proto-shade{position:absolute;z-index:34;inset:0;background:rgba(10,8,14,.57);backdrop-filter:blur(1px);pointer-events:none}
-.proto-hotbar-wrap.dimmed{filter:brightness(.5);pointer-events:none}
-.proto-hotbar-wrap.dimmed .selected{filter:brightness(1.5);z-index:2}
-.proto-question{--paper:#fff7de;position:absolute;z-index:40;background:var(--paper);color:#24191f;border:4px solid var(--proto-ink);
-  box-shadow:8px 8px 0 rgba(8,6,10,.72);max-height:calc(100dvh - 180px);display:flex;flex-direction:column;
-  animation:protoPanelIn .18s cubic-bezier(.2,.9,.25,1.2)}
-@keyframes protoPanelIn{from{opacity:0;filter:brightness(1.35)}}
-.proto-region-mark{position:absolute;display:grid;place-items:center;background:var(--proto-region);color:#1b1318;border:3px solid var(--proto-ink);
-  font:900 20px Impact,"Arial Black",sans-serif;z-index:2}
-.proto-qscroll{overflow:auto;padding:18px 20px 16px}
-.proto-kicker{font:900 12px/1 Impact,"Arial Black",sans-serif;text-transform:uppercase;letter-spacing:.12em;color:#764b29;
-  margin-bottom:8px}
-.proto-question h2{font:800 18px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;color:#24191f;letter-spacing:0;margin:0 0 15px}
-.proto-answers{display:grid;gap:9px}
-.proto-answer{position:relative;background:#fffdfa;color:#24191f;border:3px solid #24191f;padding:11px 13px;text-align:left;
-  box-shadow:3px 3px 0 #a26c4a;font:700 15px/1.3 system-ui;transition:transform .08s,background .12s}
-.proto-answer:hover{background:#fff0b8;transform:translate(-2px,-2px);box-shadow:5px 5px 0 #a26c4a}
-.proto-answer:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #a26c4a}
-.proto-feedback{padding:2px 0 0}
-.proto-verdict{display:inline-block;margin-bottom:10px;padding:6px 12px;border:3px solid #181118;box-shadow:4px 4px 0 #181118;
-  font:900 24px/1 Impact,"Arial Black",sans-serif;letter-spacing:.05em;text-transform:uppercase;transform:rotate(-2deg)}
-.proto-verdict.good{background:#66d278;color:#132819}.proto-verdict.bad{background:#f05d58;color:#35100f}
-.proto-feedback p{margin:7px 0;font:650 14px/1.45 system-ui}
-.proto-example{margin-top:10px;padding:9px 11px;background:#ffeab3;border-left:6px solid var(--proto-region)}
-.proto-example b{font:900 12px Impact,"Arial Black",sans-serif;letter-spacing:.08em;text-transform:uppercase}
-.proto-topic{display:inline-block;margin-top:10px;color:#7a5e4b;font:800 10px/1 system-ui;text-transform:uppercase;letter-spacing:.1em}
-.proto-continue{margin-top:13px;width:100%;min-height:46px;background:#17121c;color:#fff;border:3px solid #17121c;
-  box-shadow:4px 4px 0 var(--proto-region);font:900 16px Impact,"Arial Black",sans-serif;text-transform:uppercase;letter-spacing:.08em}
-.proto-hint{position:absolute;right:10px;top:10px;width:34px;height:34px;border:3px solid #211820;background:#ffdd62;color:#211820;
-  font:900 17px system-ui}
-
-/* Variant A — centered splash panel: a classic modal comic panel. */
-.variant-a .proto-question{left:50%;top:12%;transform:translateX(-50%) rotate(-.7deg);width:min(92vw,610px)}
-.variant-a .proto-region-mark{left:-13px;top:18px;width:38px;height:54px;transform:rotate(-5deg)}
-.variant-a .proto-kicker{padding-left:17px}
-/* Variant B — edge panel: battlefield and learning panel share the frame. */
-.variant-b .proto-roster{right:36%;left:2%}
-.variant-b .proto-unit.pc:nth-child(1){left:0}.variant-b .proto-unit.pc:nth-child(2){left:27%}.variant-b .proto-unit.pc:nth-child(3){left:54%}
-.variant-b .proto-unit.enemy{right:0}
-.variant-b .proto-question{right:14px;top:74px;width:min(37vw,470px);max-height:calc(100dvh - 260px);
-  border-width:5px;clip-path:polygon(4% 0,100% 0,100% 96%,94% 100%,0 100%,0 5%)}
-.variant-b .proto-region-mark{right:15px;top:-14px;width:66px;height:40px;transform:rotate(3deg)}
-.variant-b .proto-qscroll{padding:24px 20px 18px}
-.variant-b .proto-answers{grid-template-columns:1fr}
-/* Variant C — speech stack: no card, question and choices float as comic balloons. */
-.variant-c .proto-question{left:8%;top:11%;width:min(84vw,760px);background:transparent;border:0;box-shadow:none;max-height:none;
-  overflow:visible;animation:none}
-.variant-c .proto-qscroll{overflow:visible;padding:0;display:grid;grid-template-columns:minmax(240px,1.15fr) minmax(230px,.85fr);gap:16px;align-items:start}
-.variant-c .proto-kicker{display:inline-block;width:max-content;background:var(--proto-region);border:3px solid #17121c;padding:5px 9px;
-  margin:0 0 -3px 14px;position:relative;z-index:2;transform:rotate(-2deg);color:#17121c}
-.variant-c .proto-question h2{position:relative;background:#fff8df;border:4px solid #17121c;border-radius:28px;padding:18px 22px;
-  box-shadow:6px 6px 0 rgba(0,0,0,.58);margin:0;font-size:18px}
-.variant-c .proto-question h2::after{content:"";position:absolute;left:58px;bottom:-24px;border:14px solid transparent;
-  border-top-color:#17121c;transform:rotate(12deg)}
-.variant-c .proto-answers{padding-top:20px;transform:rotate(1deg)}
-.variant-c .proto-answer{border-radius:20px;background:#fffdfa;box-shadow:4px 4px 0 rgba(0,0,0,.62)}
-.variant-c .proto-region-mark{display:none}
-.variant-c .proto-feedback{grid-column:1/-1;display:grid;gap:11px;background:transparent;border:0;border-radius:0;padding:0;
-  box-shadow:none;overflow:visible}
-.variant-c .proto-feedback .proto-verdict{justify-self:start;margin:0 0 -2px 14px;position:relative;z-index:3;
-  border-radius:16px 16px 16px 4px;box-shadow:5px 5px 0 #17121c;transform:rotate(-2deg)}
-.variant-c .proto-feedback p,.variant-c .proto-feedback .proto-example{position:relative;margin:0;background:#fffdfa;color:#24191f;
-  border:4px solid #17121c;border-radius:24px;padding:14px 18px;box-shadow:5px 5px 0 rgba(0,0,0,.62)}
-.variant-c .proto-feedback p{margin-right:10%;font-size:15px}
-.variant-c .proto-feedback p::before{content:"WHY";display:block;width:max-content;margin:-25px 0 7px 8px;padding:4px 9px;
-  background:var(--proto-region);border:3px solid #17121c;font:900 11px/1 Impact,"Arial Black",sans-serif;letter-spacing:.1em;
-  transform:rotate(2deg)}
-.variant-c .proto-feedback p::after{content:"";position:absolute;left:46px;bottom:-22px;border:13px solid transparent;
-  border-top-color:#17121c;transform:rotate(10deg)}
-.variant-c .proto-feedback .proto-example{margin-left:9%;border-left:4px solid #17121c;font-size:14px}
-.variant-c .proto-feedback .proto-example::after{content:"";position:absolute;right:48px;bottom:-22px;border:13px solid transparent;
-  border-top-color:#17121c;transform:rotate(-12deg)}
-.variant-c .proto-feedback .proto-example b{display:inline-block;margin:-25px 0 7px 8px;padding:4px 9px;background:var(--proto-region);
-  border:3px solid #17121c;transform:rotate(-2deg)}
-.variant-c .proto-feedback .proto-topic{justify-self:start;margin:1px 0 0 18px;padding:5px 9px;background:#17121c;color:#fff;
-  border:2px solid var(--proto-region);transform:rotate(1deg)}
-.variant-c .proto-feedback .proto-continue{justify-self:end;width:min(62%,280px);margin:0 12px 0 0;border-radius:20px 20px 4px 20px;
-  transform:rotate(-1deg)}
-.variant-c .proto-hint{right:auto;left:-8px;top:58px;border-radius:50%}
-
-.proto-callout{position:absolute;z-index:46;left:50%;top:27%;transform:translate(-50%,-50%) rotate(-4deg);
-  max-width:min(90vw,760px);padding:15px 24px;background:#fff4cb;color:#21151b;border:5px solid #160f15;
-  box-shadow:9px 9px 0 rgba(0,0,0,.68);font:900 clamp(25px,5vw,46px)/1 Impact,"Arial Black",sans-serif;
-  text-align:center;text-transform:uppercase;letter-spacing:.02em;clip-path:polygon(3% 8%,15% 0,24% 7%,39% 0,51% 8%,66% 0,77% 7%,94% 2%,100% 20%,95% 37%,100% 53%,95% 70%,100% 91%,84% 86%,72% 100%,57% 91%,43% 100%,28% 91%,12% 98%,0 82%,5% 63%,0 44%,6% 27%,0 12%);
-  animation:protoCall .16s cubic-bezier(.2,1.4,.3,1)}
-@keyframes protoCall{from{transform:translate(-50%,-50%) scale(.2) rotate(8deg)}}
-.proto-callout.hit{background:#ffdb44;color:#411315}.proto-callout.fail{background:#f15c54;color:#fff}
-.proto-impact{position:absolute;z-index:28;width:170px;height:130px;pointer-events:none;animation:protoImpact .72s ease-out forwards}
-.proto-impact::before{content:"";position:absolute;left:40px;top:38px;width:88px;height:60px;background:#b20e23;
-  clip-path:polygon(0 42%,33% 33%,11% 4%,45% 27%,52% 0,60% 30%,100% 11%,72% 42%,97% 54%,68% 58%,85% 100%,57% 69%,44% 94%,42% 66%,5% 80%,30% 55%)}
-.proto-impact::after{content:"";position:absolute;inset:0;background:
-  radial-gradient(circle at 12% 28%,#d91b31 0 4px,transparent 5px),
-  radial-gradient(circle at 84% 18%,#a90820 0 5px,transparent 6px),
-  radial-gradient(circle at 92% 73%,#d91b31 0 3px,transparent 4px),
-  radial-gradient(circle at 25% 88%,#7e0718 0 4px,transparent 5px)}
-@keyframes protoImpact{0%{opacity:0;transform:scale(.2) rotate(-20deg)}20%{opacity:1;transform:scale(1.12) rotate(4deg)}100%{opacity:0;transform:scale(1.35) translateX(28px)}}
-.proto-shake img{animation:protoHit .42s ease}
-@keyframes protoHit{20%{transform:translateX(13px) rotate(5deg)}45%{transform:translateX(-7px) rotate(-3deg)}100%{transform:none}}
-.proto-fizzle img{animation:protoFizzle .65s ease}
-@keyframes protoFizzle{25%{filter:grayscale(1) brightness(1.8);transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
-
-.proto-die-scene{position:absolute;z-index:48;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;
-  gap:16px;background:rgba(10,7,13,.6)}
-.proto-d20{position:relative;width:154px;height:140px;border:0;filter:drop-shadow(10px 13px 0 rgba(0,0,0,.55));cursor:pointer;
-  transition:transform .12s}
-.proto-d20 svg{width:100%;height:100%;image-rendering:pixelated}
-.proto-d20:hover{transform:translateY(-5px) rotate(-3deg)}
-.proto-d20.rolling{animation:protoRoll .12s steps(2) infinite}
-@keyframes protoRoll{0%{transform:rotate(-12deg) scale(.9)}33%{transform:rotate(9deg) scale(1.08)}66%{transform:rotate(25deg) scale(.95)}}
-.proto-roll-help{background:#fff2ca;color:#24171d;border:4px solid #171019;box-shadow:5px 5px 0 #000;padding:8px 15px;
-  font:900 18px Impact,"Arial Black",sans-serif;text-transform:uppercase;transform:rotate(-2deg)}
-.proto-die-result{position:absolute;z-index:49;left:50%;top:15%;transform:translateX(-50%) rotate(-3deg);background:#ffda42;
-  border:5px solid #171019;box-shadow:7px 7px 0 #000;padding:11px 22px;font:900 34px Impact,"Arial Black",sans-serif;color:#30141a}
-
-.proto-switcher{position:fixed;z-index:600;left:50%;bottom:calc(7px + env(safe-area-inset-bottom));transform:translateX(-50%);
-  display:flex;align-items:center;gap:4px;background:#0f0d14;color:#fff;border:1px solid #766c86;border-radius:22px;
-  box-shadow:0 7px 24px rgba(0,0,0,.65);padding:4px;white-space:nowrap;font:700 11px system-ui}
-.proto-switcher button{min-width:34px;height:32px;border-radius:17px;color:#fff;background:#292332;padding:0 9px}
-.proto-switcher button:hover{background:#4b3f5e}
-.proto-switch-label{min-width:126px;text-align:center;padding:0 5px}
-.proto-switch-label b{color:#ffd75b}
-.proto-roll-toggle.on{background:#185d9a;border:1px solid #65c7ff}
-
-@media (max-width:760px){
-  .proto-roster{top:18%;bottom:180px;left:1%;right:1%}
-  .proto-unit{width:100px}.proto-unit img{width:78px;height:108px}.proto-unit.enemy img{width:102px;height:140px}
-  .proto-unit.pc:nth-child(1){left:0}.proto-unit.pc:nth-child(2){left:22%}.proto-unit.pc:nth-child(3){left:44%}
-  .proto-unit.enemy{right:0;top:8%}.proto-status{width:82px}.proto-name{font-size:9px}
-  .proto-hearts{font-size:11px}.proto-hotbar{grid-template-columns:repeat(5,min(16vw,68px));gap:5px;padding:6px}
-  .proto-hotbar-wrap{bottom:55px}.proto-slot{border-width:2px}.proto-switcher{max-width:96vw}
-  .variant-a .proto-question{top:10%;max-height:calc(100dvh - 190px)}
-  .variant-b .proto-roster{left:0;right:0;top:10%;bottom:58%}
-  .variant-b .proto-question{left:8px;right:8px;top:auto;bottom:174px;width:auto;max-height:54dvh}
-  .variant-c .proto-question{left:5%;top:10%;width:90%;max-height:calc(100dvh - 190px);overflow:auto}
-  .variant-c .proto-qscroll{grid-template-columns:1fr;gap:8px}
-  .variant-c .proto-answers{padding-top:12px}
-  .variant-c .proto-question h2{padding:14px 17px}
-  .proto-question h2{font-size:18px}.proto-answer{font-size:14px;padding:9px 11px}
-  .proto-callout{top:25%;font-size:clamp(23px,8vw,36px)}
-}
-@media (max-height:620px){
-  .proto-roster{top:12%;bottom:132px}.proto-unit img{height:105px}.proto-unit.enemy img{height:125px}
-  .proto-hotbar-wrap{bottom:51px}.proto-question{max-height:calc(100dvh - 142px)}
-  .variant-b .proto-question{bottom:134px}.variant-c .proto-question{max-height:calc(100dvh - 142px)}
-}
 </style>
 <link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="assets/img0048.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Sigilbound"></head>
 <body>
@@ -699,16 +547,23 @@ body.proto-mode{background:#11101b}
   <div id="toasts"></div>
 
   <div id="battleUI" class="hidden">
-    <div id="battleBox" class="panel">
+    <div id="combatThreat" class="hidden" role="status" aria-live="assertive"></div>
+    <div id="combatDieScene" class="hidden" aria-label="Combat roll">
+      <button id="combatD20" aria-label="Roll the d20">
+        <canvas id="combatD20Art" width="77" height="70" aria-hidden="true"></canvas>
+      </button>
+      <div id="combatRollHelp">Click the d20 to seal the action</div>
+    </div>
+    <div id="battleBox" class="panel hidden">
       <div id="bScroll">
         <div id="bIntro"></div>
         <div id="skillRow" class="hidden"></div>
-        <div id="qDomain"><img id="qPort" class="hidden" alt=""><span id="qDomText"></span><span id="qDueTag"></span></div>
+        <div id="qDomain"><img id="qPort" class="hidden" alt=""><span id="qSigil" aria-hidden="true">◆</span><span id="qDomText"></span><span id="qDueTag"></span></div>
         <div id="qScen"></div>
         <div id="qOpts"></div>
         <div id="qContext" class="hidden"><span id="qRegionDot"></span><strong id="qEnemy"></strong><span id="qTopic" class="qContextChip"></span><span id="qArea"></span></div>
         <div id="dicePanel" class="hidden"><div id="diceCtx"></div><div id="diceRow"><div id="dieFace">?</div><button class="btn primary" id="btnRoll">🎲 Roll the d20</button></div><div id="diceOut"></div></div>
-        <div id="ruleBar" class="hidden"><span class="rb-verdict" id="rbVerdict"></span><span id="rbRule"></span><a id="rbDoc" class="rb-doc hidden" target="_blank" rel="noopener noreferrer">Consult the Archives ▸</a><span class="rb-srnote" id="rbSr"></span></div>
+        <div id="ruleBar" class="hidden"><span class="rb-verdict" id="rbVerdict"></span><span id="rbRule"></span><span id="rbExample"></span><a id="rbDoc" class="rb-doc hidden" target="_blank" rel="noopener noreferrer">Consult the Archives ▸</a><span class="rb-srnote" id="rbSr"></span></div>
         <div id="bActions">
           <button class="btn ghost hidden" id="btnHint">Hint (<span id="hintN">0</span>)</button>
           <button class="btn ghost hidden" id="btnReplay">↻ Replay</button>
@@ -729,6 +584,10 @@ body.proto-mode{background:#11101b}
       <div class="bResize nw" data-edge="nw"></div>
       <div class="bResize se" data-edge="se"></div>
       <div class="bResize sw" data-edge="sw"></div>
+    </div>
+    <div id="combatHotbarWrap">
+      <div id="combatAbilityTray" class="hidden"></div>
+      <nav id="combatHotbar" aria-label="Combat actions"></nav>
     </div>
   </div>
 
@@ -4529,7 +4388,7 @@ function newState(){
     flags:{intro:false,firstBattle:false,restNudge:0},
     road:{c:{at:0,done:{}},g:{at:0,done:{}}},   // node-path progress per track
     energy:{v:10,ts:0},                          // travel energy (regenerates in real time)
-    settings:{sound:true,music:true,motion:true,dpad:false},heroName:"",
+    settings:{sound:true,music:true,motion:true,dpad:false,d20Combat:false},heroName:"",
     pos:{x:DATA.keepPos.cx+2,y:DATA.keepPos.cy+3},
     session:null
   };
@@ -4940,6 +4799,12 @@ function drawHearts(cx,y,halves,max,s){
     }
     ctx.restore();x+=step;
   }
+}
+function drawManaBar(cx,y,mana,max,s){
+  const w=42*s,h=6*s,pct=max?clamp(mana/max,0,1):0;
+  ctx.save();ctx.fillStyle="#0a101b";ctx.strokeStyle="#05070c";ctx.lineWidth=2;ctx.fillRect(cx-w/2,y,w,h);ctx.strokeRect(cx-w/2,y,w,h);
+  ctx.fillStyle="#188ee8";ctx.fillRect(cx-w/2+2,y+2,Math.max(0,(w-4)*pct),Math.max(1,h-4));
+  ctx.fillStyle="rgba(130,225,255,.65)";ctx.fillRect(cx-w/2+2,y+2,Math.max(0,(w-4)*pct),1);ctx.restore();
 }
 /* ---- the hero & allies (side view, class-armed) ---- */
 function drawCorpseHeap(e,sc){
@@ -6013,12 +5878,13 @@ function startBattle(cfg){
     combo:1,hints:hintCharges(),hintUsed:false,sel:null,actions:[],
     moved:false,asked:[],counts:{asked:0,correct:0},xpEarned:0,
     turn:"attack",defFoe:0,defMember:0,contTimer:null,pendingSkills:[],
-    q:null,opts:[],phase:"act",result:null,lastSeq:null,roll:null,strikes:[],
+    q:null,opts:[],phase:"act",result:null,lastSeq:null,roll:null,strikes:[],active:0,intent:null,pendingResolution:null,advanceTimer:null,threatTimer:null,
     fx:{shake:0,seq:null,floaters:[],rnd:mulberry32((cfg.region?cfg.region.hue:262)*7+3)},
     gauntlet:cfg.gauntlet||null,
     exam:cfg.boss?[]:null
   };
   B.dom=battleDom();
+  B.party.forEach(m=>{m.manaMax=2+S.keepLvl+gearManaBonus();m.mana=m.manaMax});
   B.round=0;
   B.bossPhase=(cfg.boss&&cfg.region)?(bossRec(cfg.region).phase+1):0;
   if(!B.gauntlet)B.foeDmg+=domDanger(B.cert,B.dom);   // weak domains hit harder
@@ -6039,7 +5905,7 @@ function startBattle(cfg){
   if(typeof applyCardMin==="function")applyCardMin();
   if(typeof applyCardZoom==="function")applyCardZoom();
   $("bIntro").textContent="“"+B.enemy.taunt+"”";
-  $("btnFlee").classList.toggle("hidden",!!B.gauntlet||!!B.boss);
+  $("btnFlee").classList.add("hidden");
   Sfx.play("hit");
   retarget();
   if(B.gauntlet){B.phase="q";serveQuestion()}
@@ -6090,6 +5956,86 @@ function dmgPreview(sk,m){
   return d;
 }
 function fmtH(h){return (h/2)+"♥"}
+function combatIcon(kind){
+  const common="viewBox='0 0 64 64' aria-hidden='true' focusable='false'";
+  if(kind==="attack")return "<svg "+common+"><path fill='#ece4cf' stroke='#1a1117' stroke-width='4' d='M43 6l8 8-27 30-8-8z'/><path fill='#78b7cf' d='M42 11l4 4-23 25-3-3z'/><path fill='#e7b052' stroke='#1a1117' stroke-width='4' d='M10 37l17 17-6 6L4 43z'/><path fill='#9b5d34' stroke='#1a1117' stroke-width='4' d='M10 50l5 5-6 6-5-5z'/></svg>";
+  if(kind==="skills")return "<svg "+common+"><path fill='#e6aa32' stroke='#171019' stroke-width='4' stroke-linejoin='round' d='M39 5L11 37h18l-6 22 31-36H36z'/><path fill='#ffe37a' d='M38 12L20 33h15l-5 16 16-21H31z'/><path fill='none' stroke='#fff4b0' stroke-width='3' stroke-linecap='round' d='M38 13L25 29'/></svg>";
+  if(kind==="poultice")return "<svg "+common+"><path fill='#d9c6a7' stroke='#171019' stroke-width='4' d='M17 18h30l6 32-8 8H18L10 49z'/><path fill='#b65043' stroke='#171019' stroke-width='3' d='M17 24h30l-3 13-12 6-12-6z'/><path fill='#f0dfb8' stroke='#171019' stroke-width='3' d='M22 8h20l5 10H17z'/><path fill='#7d9c4f' d='M28 27h8v5h5v8h-5v5h-8v-5h-5v-8h5z'/></svg>";
+  if(kind==="mana")return "<svg "+common+"><path fill='#d9d6cf' stroke='#171019' stroke-width='4' d='M23 8h18v10l8 9v27H15V27l8-9z'/><path fill='#35a8ed' stroke='#171019' stroke-width='3' d='M19 31h26v19H19z'/><path fill='#83e2ff' d='M23 34h18v5H23z'/><path fill='#7a4c32' stroke='#171019' stroke-width='3' d='M22 13h20v7H22z'/></svg>";
+  return "<svg "+common+"><path fill='#9a633d' stroke='#171019' stroke-width='4' d='M12 21h40l5 34H7z'/><path fill='#d19a55' stroke='#171019' stroke-width='3' d='M18 10h28l5 13H13z'/><path fill='none' stroke='#f0c66e' stroke-width='4' d='M21 21q0-13 11-13t11 13'/><path fill='#63384d' stroke='#171019' stroke-width='3' d='M25 31h14v12H25z'/></svg>";
+}
+function renderCombatHotbar(){
+  const bar=$("combatHotbar");if(!bar||!B)return;
+  const badge=n=>"<span class='combat-badge'>"+n+"</span>";
+  const busy=!['act','target','tray'].includes(B.phase);
+  const selected=B.intent&&B.intent.hotbar;
+  const seal="<svg class='combat-seal' viewBox='0 0 64 64' aria-hidden='true'><path d='M10 13l44 38M54 13L10 51' stroke='#d8c3a2' stroke-width='8'/><path d='M10 13l44 38M54 13L10 51' stroke='#3c2931' stroke-width='3' stroke-dasharray='6 4'/></svg>";
+  const slot=(kind,label,extra,disabled)=>{const sealed=!!B.gauntlet&&["poultice","mana","utility"].includes(kind);return "<button class='combat-slot"+(selected===kind?" selected":"")+(B.failureSlot===kind?" bounced":"")+(sealed?" sealed":"")+"' data-combat-action='"+kind+"' aria-label='"+esc(label)+"' title='"+esc(label)+"' "+((busy||disabled||sealed)?"disabled":"")+">"+combatIcon(kind)+(extra||"")+(sealed?seal:"")+"</button>"};
+  bar.innerHTML=slot("attack","Basic attack")+
+    slot("skills","Skills and spells")+
+    slot("poultice","Poultice — "+S.consume.tonic+" held",badge(S.consume.tonic),S.consume.tonic<1)+
+    slot("mana","Mana draught — "+S.consume.draught+" held",badge(S.consume.draught),S.consume.draught<1)+
+    slot("utility","Utility and withdraw — "+S.consume.bomb+" clay bombs",badge(S.consume.bomb));
+  bar.querySelectorAll('[data-combat-action]').forEach(button=>button.addEventListener('click',()=>selectCombatAction(button.dataset.combatAction)));
+  $("combatHotbarWrap").classList.toggle("dimmed",busy);
+}
+function activeMember(){return B&&B.party[B.active]&&B.party[B.active].halves>0?B.party[B.active]:livingParty()[0]}
+function activeMana(){const m=activeMember();return m?(m.mana||0):0}
+function setActiveCombatant(i){
+  if(!B||B.phase!=="act"||!B.party[i]||B.party[i].halves<=0||memberStaggered(B.party[i]))return false;
+  B.active=i;B.mana=B.party[i].mana;B.manaMax=B.party[i].manaMax;B.intent=null;renderCombatTray();updateBattleHUD();Sfx.play("click");return true;
+}
+function renderCombatTray(items){
+  const tray=$("combatAbilityTray");if(!tray)return;
+  if(!items||!items.length){tray.classList.add("hidden");tray.innerHTML="";return}
+  tray.classList.remove("hidden");tray.innerHTML=items.map((item,i)=>"<button class='combat-slot' data-combat-skill='"+i+"' aria-label='"+esc(item.name)+"' title='"+esc(item.name)+"' "+(item.disabled?"disabled":"")+">"+combatIcon(item.icon||"skills")+(item.cost?"<span class='combat-badge'>"+item.cost+"</span>":"")+"</button>").join("");
+  tray.querySelectorAll('[data-combat-skill]').forEach(button=>button.addEventListener('click',()=>chooseCombatTrayItem(+button.dataset.combatSkill)));
+}
+function selectCombatAction(kind){
+  if(!B||B.gauntlet||!['act','target','tray'].includes(B.phase))return;
+  if(B.phase==="tray"&&B.intent&&B.intent.hotbar===kind){showActions();return}
+  const m=activeMember();if(!m)return;
+  B.active=B.party.indexOf(m);B.mana=m.mana;B.manaMax=m.manaMax;
+  if(kind==="skills"){
+    B.phase="tray";B.trayItems=skillsFor(m.cls).filter(sk=>sk.lv<=S.level).map(sk=>({name:(sk.lv===1&&m.kind==="comp")?m.ability:sk.n,icon:"skills",cost:sk.mana||0,disabled:(sk.mana||0)>activeMana(),sk}));
+    renderCombatTray(B.trayItems);B.intent={hotbar:"skills"};updateBattleHUD();return;
+  }
+  if(kind==="utility"){
+    B.phase="tray";B.trayItems=[];
+    if(S.consume.bomb>0)B.trayItems.push({name:"Clay Bomb",icon:"utility",cost:1,sk:{n:"Clay Bomb",mana:0,dmg:2,aoeCol:true,bomb:true,anim:"boom"}});
+    if(!B.boss)B.trayItems.push({name:"Withdraw",icon:"utility",withdraw:true});
+    renderCombatTray(B.trayItems);B.intent={hotbar:"utility"};updateBattleHUD();return;
+  }
+  if(kind==="attack"){
+    const sk=skillsFor(m.cls).find(sk=>sk.lv<=S.level&&!skillIsSpecial(sk))||skillsFor(m.cls)[0];
+    beginCombatIntent({type:"attack",hotbar:"attack",sk,name:(sk.lv===1&&m.kind==="comp")?m.ability:sk.n,side:"foe"});return;
+  }
+  if(kind==="poultice")beginCombatIntent({type:"poultice",hotbar:kind,side:"party"});
+  else if(kind==="mana")beginCombatIntent({type:"mana",hotbar:kind,side:"party"});
+}
+function chooseCombatTrayItem(i){
+  if(!B||B.phase!=="tray")return;const item=B.trayItems&&B.trayItems[i];if(!item)return;
+  if(item.withdraw){withdraw();return}
+  const type=item.sk&&item.sk.bomb?"utility":"skill";
+  if((item.sk.mana||0)>activeMana()){toast("Not enough mana.");return}
+  beginCombatIntent({type,hotbar:type==="utility"?"utility":"skills",sk:item.sk,name:item.name,side:"foe"});
+}
+function beginCombatIntent(spec){
+  const m=activeMember();if(!m)return;
+  B.intent=Object.assign({member:B.active,rollsEnabled:!!S.settings.d20Combat,target:null},spec);
+  if(spec.sk){const row=rowOfMember(B.active);B.sel={member:B.active,depth:"adaptive",row,rowMult:rowMultOf(row),sk:spec.sk,name:spec.name,dmg:dmgPreview(spec.sk,m),cost:spec.sk.mana||0}}
+  B.phase="target";renderCombatTray();$("battleBox").classList.add("hidden");
+  toast(spec.side==="foe"?"Choose a target.":"Choose a party member.");updateBattleHUD();
+}
+function chooseCombatTarget(side,index){
+  if(!B||B.phase!=="target"||!B.intent||side!==B.intent.side)return false;
+  const list=side==="foe"?B.foes:B.party,target=list[index];
+  if(!target||target.halves<=0)return false;
+  if(side==="foe"&&B.intent.sk&&!skillReaches(B.intent.sk,target)){toast("That target is out of reach.");return false}
+  B.intent.target={side,index};if(side==="foe")B.target=index;
+  $("toasts").innerHTML="";
+  B.phase="q";Sfx.play("click");serveQuestion();return true;
+}
 /* ---- the d20 contract ----
    Guard and threat numbers come straight from the original CHARCLASS
    Defense/Agility/Attack medians (DATA.eaStats). No roll ever touches
@@ -6181,12 +6127,9 @@ function atkBonusOf(m){
   return 4+wieldHitBonus(m)+gearHitBonus(m)+(r?Math.round(r.atk/12):0)
     +(typeof summonHitBonus==="function"?summonHitBonus():0);
 }
-/* A *chosen* deep recall (harder draw — 6 options, no hints) lands more
-   reliably: +2 to hit (~+10% on the d20). Boss "exam recall" is forced, not
-   chosen, so it earns no bonus — there's no higher-risk decision to reward. */
-function depthHitBonus(){
-  return (B&&B.sel&&B.sel.depth==="deep"&&!B.boss)?2:0;
-}
+/* Recall depth is adaptive and region-owned, so it never grants a tactical
+   bonus for choosing a particular skill. */
+function depthHitBonus(){return 0}
 function guardBonusOf(m){
   const r=eaCompRec(m)||(m&&m.kind==="hero"?legendRec():null);
   return 3+(m&&m.cls==="vanguard"?2:0)+wieldGuardBonus(m)+gearGuardBonus(m)+(r?Math.round(r.df/12):0);
@@ -6196,62 +6139,11 @@ function critRangeOf(m,sk){
   return Math.max(16,20-(sk&&sk.crit?4:0)-wieldCritBonus(m)-gearCritBonus(m)-(r&&r.agi>=16?1:0));
 }
 function showActions(){
-  B.phase="act";B.sel=null;B.roll=null;B.turn="attack";
-  $("qDomain").classList.add("hidden");
-  $("qContext").classList.add("hidden");
-  $("qScen").textContent="";
-  $("qOpts").innerHTML="";
-  $("dicePanel").classList.add("hidden");
-  $("ruleBar").classList.add("hidden");
-  $("btnContinue").classList.add("hidden");
-  $("btnReplay").classList.add("hidden");
-  $("btnHint").classList.add("hidden");
-  const row=$("skillRow");row.classList.remove("hidden");row.innerHTML="";
-  B.actions=[];
-  const mk=(html,dis,fn,isNew)=>{
-    const b=document.createElement("button");
-    b.className="skill"+(isNew?" newskill":"");b.innerHTML=html;if(dis)b.disabled=true;
-    b.addEventListener("click",fn);row.appendChild(b);
-  };
-  B.party.forEach((m,mi)=>{
-    if(m.halves<=0)return;
-    if(memberStaggered(m)){
-      mk("<b>✶ "+esc(m.name)+" — staggered</b><span>reeling from a failed recall · returns next round</span>",true,()=>{});
-      return;
-    }
-    const sks=skillsFor(m.cls);
-    const basics=sks.filter(s=>!skillIsSpecial(s)),specials=sks.filter(skillIsSpecial);
-    const rowNote=m.cell.col===0?"front · hard recall":"back · mastered recall";
-    const ico=m.cls==="caster"?"✦":"⚔";
-    const nameOf=s=>(s.lv===1&&m.kind==="comp")?m.ability:s.n;
-    if(!B.boss&&basics.length){
-      const idx=B.actions.length;B.actions.push({mi,depth:"std"});
-      mk("<b>"+ico+" "+esc(m.name)+" — Standard recall</b><span>"+rowNote+" · answer true to arm "+
-        esc(basics.map(nameOf).join(", "))+" · then the d20 decides</span>",false,()=>pickAction(idx));
-    }
-    if(specials.length||B.boss){
-      const idx=B.actions.length;B.actions.push({mi,depth:"deep"});
-      const armed=(B.boss?sks:specials).map(nameOf);
-      const isNew=!B.boss&&specials.some(s=>s.lv>1&&S.level-s.lv<2);
-      mk("<b>"+ico+" "+esc(m.name)+" — "+(B.boss?"Exam recall":"Deep recall")+(isNew?" <i class='newtag'>NEW</i>":"")+"</b><span>"+
-        (B.boss?"examination conditions · ":"harder draw · 6 choices · no hints · ")+rowNote+
-        " · arms "+esc(armed.join(", "))+"</span>",false,()=>pickAction(idx),isNew);
-    }
-  });
-  const fbtn=document.createElement("button");
-  fbtn.className="skill formbtn";
-  fbtn.innerHTML="<b>⇄ Formation</b><span>"+(B.moved?"already repositioned this round":"move or swap one character (free, once a round)")+"</span>";
-  if(B.moved)fbtn.disabled=true;
-  fbtn.addEventListener("click",openFormation);
-  row.appendChild(fbtn);
-  /* every unit staggered: let the round pass to the foe */
-  if(B.actions.length===0){
-    const pbtn=document.createElement("button");
-    pbtn.className="skill formbtn";
-    pbtn.innerHTML="<b>⚑ Hold the line ▸</b><span>your party reels — brace and let the blow come</span>";
-    pbtn.addEventListener("click",()=>{if(B&&B.phase==="act"){B.turn="attack";Sfx.play("click");startDefense()}});
-    row.appendChild(pbtn);
-  }
+  B.phase="act";B.sel=null;B.roll=null;B.intent=null;B.pendingResolution=null;B.failureSlot=null;B.turn="attack";
+  clearTimeout(B.advanceTimer);clearTimeout(B.threatTimer);
+  $("battleBox").classList.add("hidden");$("combatThreat").classList.add("hidden");$("combatDieScene").classList.add("hidden");
+  $("ruleBar").classList.add("hidden");$("btnContinue").classList.add("hidden");renderCombatTray();
+  {const active=activeMember();if(active)B.active=B.party.indexOf(active)}
   updateBattleHUD();
 }
 function pickAction(idx){
@@ -6367,30 +6259,32 @@ function updateDiceCtx(){
   $("diceCtx").innerHTML="<b>"+esc(t.label)+"</b><span>d20 +"+t.bonus+" vs "+t.need+" — succeeds on "+min+"+"+
     (t.critOn<=20?" · crits on "+t.critOn+"+":" · 20 is a perfect parry")+" · 1 always fails</span>";
 }
+function drawCombatD20(value){
+  const canvas=$("combatD20Art"),c=canvas&&canvas.getContext("2d");if(!c)return;
+  c.clearRect(0,0,77,70);c.lineJoin="miter";c.lineWidth=2;c.strokeStyle="#171019";
+  c.beginPath();c.moveTo(38,2);c.lineTo(73,26);c.lineTo(60,67);c.lineTo(17,67);c.lineTo(4,26);c.closePath();c.fillStyle="#684989";c.fill();c.stroke();
+  c.beginPath();c.moveTo(38,2);c.lineTo(38,67);c.lineTo(4,26);c.closePath();c.fillStyle="#9b75bd";c.fill();c.stroke();
+  c.beginPath();c.moveTo(38,2);c.lineTo(73,26);c.lineTo(38,67);c.closePath();c.fillStyle="#4b326b";c.fill();c.stroke();
+  c.beginPath();c.moveTo(4,26);c.lineTo(73,26);c.moveTo(17,67);c.lineTo(38,2);c.lineTo(60,67);c.strokeStyle="#d5b8ee";c.stroke();
+  c.fillStyle="#fff4c7";c.font="900 17px sans-serif";c.textAlign="center";c.textBaseline="middle";c.fillText(String(value),38,34);
+}
 function armRoll(kind){
   B.phase="roll";
   B.roll={for:kind,done:false,spinning:false,n:0};
-  $("skillRow").classList.add("hidden");
-  $("qScen").textContent="";
-  $("qOpts").innerHTML="";
-  $("qContext").classList.add("hidden");
-  $("btnHint").classList.add("hidden");
-  const dp=$("dicePanel");dp.classList.remove("hidden");
-  $("diceOut").textContent="";
-  const face=$("dieFace");face.textContent="?";face.className="";
-  $("btnRoll").disabled=false;
-  updateDiceCtx();
-  const r=$("btnRoll");if(r)r.focus();
+  $("battleBox").classList.add("hidden");
+  const scene=$("combatDieScene");scene.classList.remove("hidden");
+  const die=$("combatD20");die.classList.remove("rolling");die.disabled=false;drawCombatD20("?");
+  const terms=diceTerms();$("combatRollHelp").textContent=terms?terms.label:"Click the d20 to seal the action";
+  die.focus();updateBattleHUD();
 }
 function rollNow(){
   if(!B||B.phase!=="roll"||!B.roll||B.roll.done||B.roll.spinning)return;
   B.roll.spinning=true;
-  $("btnRoll").disabled=true;
-  const face=$("dieFace");face.classList.add("rolling");
+  const die=$("combatD20");die.disabled=true;die.classList.add("rolling");
   let k=0;
   const spins=S.settings.motion?9:1;
   const iv=setInterval(()=>{
-    face.textContent=String(1+Math.floor(Math.random()*20));
+    drawCombatD20(1+Math.floor(Math.random()*20));
     if(++k>=spins){clearInterval(iv);resolveRoll(1+Math.floor(Math.random()*20))}
   },S.settings.motion?70:10);
   Sfx.play("click");
@@ -6399,31 +6293,29 @@ function resolveRoll(n){
   if(!B||B.phase!=="roll"||!B.roll||B.roll.done)return;
   const t=diceTerms();if(!t)return;
   const R=B.roll;R.done=true;R.spinning=false;R.n=n;R.total=n+t.bonus;
-  const face=$("dieFace");face.classList.remove("rolling");face.textContent=String(n);
+  const die=$("combatD20");die.classList.remove("rolling");drawCombatD20(n);
   let outcome;
   const detail="d20 "+n+" + "+t.bonus+" = "+R.total+" vs "+t.need;
   if(n===20)Sfx.ea("DA_Sting_02",0.6);else if(n===1)Sfx.ea("Oops",0.7);
   if(R.for==="attack"){
     const crit=n>1&&n>=t.critOn;
     const hit=n>1&&(crit||R.total>=t.need);
-    face.classList.add(crit?"d-crit":hit?"d-hit":"d-miss");
     if(hit){applyAttackHit(crit);outcome=crit?"CRITICAL — the strike lands true!":"The strike lands."}
     else{attackMisses(n===1);outcome=n===1?"Fumble — the swing betrays itself.":"The strike goes wide — no fault of memory."}
   }else if(R.for==="aoe"){
     const held=n>1&&(n===20||R.total>=t.need);
-    face.classList.add(held?"d-hit":"d-miss");
     if(held){aoeTurned();outcome="The sweep is turned aside!"}
     else{aoeLands();outcome="The sweep crashes through."}
   }else{
     const parry=n===20,held=n>1&&(parry||R.total>=t.need);
-    face.classList.add(parry?"d-crit":held?"d-hit":"d-miss");
     if(held){defenseHolds(parry);outcome=parry?"PERFECT PARRY — and a riposte!":"The blow is turned aside."}
     else{defenseLands(n===1?1:0);outcome=n===1?"Caught flat — the blow bites deep.":"The guard breaks — the blow lands."}
   }
-  $("diceOut").textContent=detail+" — "+outcome;
-  const rb=$("rbVerdict");if(rb)rb.textContent=outcome;
-  B.phase="fb";
-  revealContinue();
+  $("combatRollHelp").textContent=detail+" — "+outcome;
+  B.phase="resolve";
+  {const battle=B;setTimeout(()=>{if(B===battle)$("combatDieScene").classList.add("hidden")},900)}
+  showCombatCallout(outcome,(outcome.includes("lands")||outcome.includes("turned")||outcome.includes("PARRY"))?"hit":"fail",5000);
+  scheduleCombatAdvance();
   updateBattleHUD();
   queueSave();
 }
@@ -6431,7 +6323,7 @@ function resolveRoll(n){
    Sprite anims play in screen space at their source fps; bursts integrate the
    original ParticleSys step (24fps): v=rand(velRand)/2+vel at a random 360°
    angle, gravity accumulates g·f/10 per frame, force lifts, size lerps to 0. */
-const FXQ={anims:[],parts:[]};
+const FXQ={anims:[],parts:[],blood:[]};
 const FXIMG={};
 function fxFrames(key){
   const e=DATA.eaFx&&DATA.eaFx[key];if(!e)return null;
@@ -6473,8 +6365,24 @@ function burstFx(kind,x,y,scale){
     gx:P.grav*Math.cos(P.gravAngle*rad),gy:-(P.grav*Math.sin(P.gravAngle*rad))});
   return true;
 }
+function isOrganicFoe(f){return !!(f&&!["golem","portal","skeleton","skelpair","ghost","wisp","banshee","slime"].includes(f.e.shape))}
+function bloodFx(x,y,dir){
+  if(!S.settings.motion)return;const drops=[];
+  for(let i=0;i<18;i++)drops.push({a:(dir||-1)*(2+Math.random()*7),b:-2-Math.random()*7,r:1.5+Math.random()*3});
+  FXQ.blood.push({x,y,t0:nowSec(),drops});
+}
+function connectedFoeImpact(f,at){
+  if(!f||!at)return;
+  if(isOrganicFoe(f))bloodFx(at.x,at.y,-1);
+  else burstFx(["ghost","wisp","banshee","portal"].includes(f.e.shape)?"magic":"melee",at.x,at.y,1.15);
+}
 function drawFxLayer(w,h,stageScale){
   const t=nowSec(),rad=Math.PI/180,P=EAPART_PHYS;
+  for(let i=FXQ.blood.length-1;i>=0;i--){
+    const splash=FXQ.blood[i],age=t-splash.t0;if(age>.85){FXQ.blood.splice(i,1);continue}
+    ctx.save();ctx.fillStyle="rgba(151,10,31,"+(1-age/.85)+")";
+    splash.drops.forEach(d=>{const x=splash.x+d.a*age*18,y=splash.y+d.b*age*18+120*age*age;ctx.beginPath();ctx.ellipse(x,y,d.r*(1+age),d.r*.65,age*4,0,7);ctx.fill()});ctx.restore();
+  }
   /* bursts */
   for(let i=FXQ.parts.length-1;i>=0;i--){
     const B2=FXQ.parts[i];
@@ -6578,7 +6486,7 @@ function foePainSnd(f){
 }
 /* ---- resolution (damage stays in the one funnel: attackDamage) ---- */
 function applyAttackHit(crit){
-  const sel=B.sel,cert=B.qCert,q=B.q;
+  const battle=B,sel=B.sel,cert=B.qCert,q=B.q;
   retarget(sel.sk);
   let dmg=sel.dmg+(crit?1:0);
   const superEff=isSuperEffective(cert,q.concept);
@@ -6595,6 +6503,7 @@ function applyAttackHit(crit){
     f.halves=Math.max(0,f.halves-dmg);
     f.hitT=nowSec()+afD;
     if(f.halves<=0)f.dieT=nowSec()+afD+0.12;
+    const at=fxAtFoe(j);if(at)setTimeout(()=>{if(B===battle)connectedFoeImpact(f,at)},afD*1000);
   });
   if(sel.sk.stun&&B.foes[B.target].halves>0){B.foes[B.target].stun=1;addFloater("STUNNED",0.66,-104,"#ffe49a",14)}
   setSeq({t0:nowSec(),dur:Math.max(1.2,(atkKey?rigDur(atkKey,"strike"):1.2)+0.15),kind:sel.sk.anim||"strike",mi:sel.member,fi:B.target,targets,crit});
@@ -6651,7 +6560,7 @@ function defenseLands(extra){
   Sfx.play("bad");
   Sfx.ea("impact23",0.7);
   {const at=fxAtMember(B.defMember);
-   if(at)burstFx("melee",at.x,at.y)}
+   if(at){burstFx("melee",at.x,at.y);bloodFx(at.x,at.y,1)}}
   if(victim.kind==="hero")heroBark(victim.halves<=0?"death":"pain");
 }
 function aoeTurned(){
@@ -6675,7 +6584,7 @@ function aoeLands(){
   Sfx.play("bad");
   Sfx.ea("fxe_shockwave_p",0.7);
   hit.forEach(m=>{const mi=B.party.indexOf(m);const at=fxAtMember(mi);
-    if(at)burstFx("melee",at.x,at.y)});
+    if(at){burstFx("melee",at.x,at.y);bloodFx(at.x,at.y,1)}});
   if(hit.some(m=>m.kind==="hero"))heroBark("pain");
 }
 /* ---- shared feedback plumbing ---- */
@@ -6685,6 +6594,7 @@ function fillRuleBar(correct,res,verdict){
   rb.classList.add(correct?"v-good":"v-bad");
   $("rbVerdict").textContent=verdict;
   $("rbRule").textContent=B.q.rule;
+  $("rbExample").textContent="Applied example — "+B.q.scen+" → "+B.q.correct;
   const docUrl=(DATA.docs[B.qCert]||{})[B.q.concept],rbd=$("rbDoc");
   if(docUrl){rbd.href=docUrl;rbd.classList.remove("hidden")}else rbd.classList.add("hidden");
   $("rbSr").textContent=srNoteText(res);
@@ -6816,39 +6726,34 @@ function buildOpts(cert,q,n){
   return shuffle(opts.slice(0,Math.max(4,n)));
 }
 function serveQuestion(){
+  $("battleBox").classList.remove("hidden");
+  $("qDomain").classList.remove("hidden");$("qScen").classList.remove("hidden");$("qOpts").classList.remove("hidden");
   let cert=B.cert,pool;
   const attackSel=(B.turn==="attack"&&B.sel&&!B.gauntlet);
   if(B.gauntlet){
     cert=gauntletNextCert();
     pool=domConcepts(cert,weightedDomain(cert));
-  }else if(attackSel){
-    /* positioning layer: the acting unit's row decides the recall it draws */
-    const row=rowOfMember(B.sel.member);
-    const dom=(B.region&&B.region.cert==="x")?-1:battleDom();
-    pool=rowPool(cert,dom,row);
-    B.sel.row=row;B.sel.rowMult=rowMultOf(row);
-    if(B.sel.depth==="deep")pool=deepenPool(cert,pool);
-  }else if(B.region&&B.region.cert==="x"){
-    pool=regionPool(cert,B.region);
   }else{
     pool=regionPool(cert,B.region);
-    if(B.tier==="strong"&&Math.random()<0.3)pool=mixedPool(cert);
   }
   const q=pickQuestion(cert,pool,B.asked.slice(-3));
   B.q=q;B.qCert=cert;B.asked.push(q.concept);
   B.hintUsed=false;
-  const deep=(!B.gauntlet)&&(!!B.boss||(attackSel&&B.sel.depth==="deep"));
+  const mastered=pool.filter(concept=>srState(srKey(cert,concept))==="mastered").length;
+  const deep=(!B.gauntlet)&&(!!B.boss||(((B.region&&B.region.tier)||1)>=3&&mastered>=Math.max(1,Math.ceil(pool.length*.25))));
+  if(attackSel)B.sel.depth=deep?"deep":"std";
   B.opts=buildOpts(cert,q,deep?6:4);
   const opts=B.opts;
   const meta=conceptMeta(cert,q.concept);
   $("dicePanel").classList.add("hidden");
   $("qDomain").classList.remove("hidden");
   $("qPort").classList.add("hidden");
-  $("qDomText").textContent=(B.turn==="defend"&&!B.gauntlet)?"⚔ DEFEND · CHOOSE THE GOVERNING RULE":"CHOOSE THE GOVERNING RULE";
-  $("qDueTag").textContent=(deep?"⬢ DEEP · ":"")+(meta.state==="unseen"?"NEW":(meta.due?"DUE FOR RECALL":(meta.state==="mastered"?"MASTERED":"")));
+  $("qDomText").textContent=(B.turn==="defend"&&!B.gauntlet)?"DEFENSE GATE":"KNOWLEDGE GATE";
+  $("qDueTag").textContent=(deep?"CHALLENGE · ":"")+(meta.state==="unseen"?"NEW":(meta.due?"DUE":(meta.state==="mastered"?"MASTERED":"")));
   $("qScen").textContent=q.scen;
   $("bIntro").textContent="";
   $("qTopic").textContent="Test: "+titleCase(q.concept);
+  $("qTopic").classList.add("hidden");
   $("qContext").classList.remove("hidden");
   const box=$("qOpts");box.innerHTML="";
   opts.forEach((o,i)=>{
@@ -6890,6 +6795,8 @@ function setSeq(seq){B.fx.seq=seq;B.lastSeq=Object.assign({},seq)}
 function onAnswer(i){
   if(!B||B.phase!=="q")return;
   B.phase="fb";
+  $("qDomain").classList.add("hidden");$("qScen").classList.add("hidden");$("qOpts").classList.add("hidden");$("btnHint").classList.add("hidden");
+  $("qTopic").classList.remove("hidden");
   const o=B.opts[i],q=B.q,cert=B.qCert;
   const correct=!!o.ok;
   document.querySelectorAll("#qOpts .opt").forEach(b=>{
@@ -6909,7 +6816,6 @@ function onAnswer(i){
     if(res.masteredNow)ses.masteredNow.push(titleCase(q.concept)+" ("+DATA.tracks[cert].short+")");}
   B.counts.asked++;
   if(B.exam)B.exam.push({concept:q.concept,dom:q.dom,correct,hinted:B.hintUsed});
-  const defending=B.turn==="defend"&&!B.gauntlet;
   let drop=null,ups=0;
   if(correct){
     B.counts.correct++;
@@ -6928,41 +6834,19 @@ function onAnswer(i){
       fillRuleBar(true,res,res.masteredNow?"Correct — concept mastered":"Correct");
       revealContinue();updateBattleHUD();queueSave();return;
     }
-    if(defending){
-      fillRuleBar(true,res,"Correct — now the die decides the blow");
-      armRoll(B.aoe?"aoe":"defend");
-      updateBattleHUD();queueSave();return;
-    }
-    /* attack: a true recall arms the strike menu; the d20 waits beyond it */
-    fillRuleBar(true,res,(res.masteredNow?"Correct — concept mastered. ":"Correct — ")+"choose your strike"+(B.hintUsed?" (hinted — it will land glancing)":""));
-    showStrikes();
+    B.pendingResolution={correct:true,intent:B.intent,resolved:false};
+    fillRuleBar(true,res,res.masteredNow?"Correct — concept mastered":"Correct — action armed");
+    revealContinue();
     updateBattleHUD();queueSave();return;
   }
-  /* wrong: the critical failure — no strike, no roll */
   B.combo=Math.max(1,B.combo-0.75);
   B.result={correct,drop,ups,res};
-  let staggeredMi=-1;
   if(B.gauntlet){
     B.gauntlet.asked[cert]++;B.gauntlet.idx++;
-  }else if(B.aoe){
-    /* the sweep lands on everyone who stayed in the threatened line */
-    aoeLands();
-  }else if(defending){
-    defenseLands(0);
-    if(B.party[B.defMember]&&B.party[B.defMember].halves>0)staggeredMi=B.defMember;
-  }else if(B.sel){
-    setSeq({t0:nowSec(),dur:0.95,kind:"fizzle",mi:B.sel.member,fi:B.target});
-    addFloater("CRITICAL FAILURE",0.6,-84,"#b9bcc4",15);
-    staggeredMi=B.sel.member;
   }
-  /* a wrong answer staggers the unit that answered — the same failure that
-     just reset the concept's reps benches the unit on the clock. */
-  if(staggeredMi>=0&&!B.gauntlet){
-    const sm=B.party[staggeredMi];
-    if(sm&&sm.halves>0){sm.staggerRound=(B.round||0)+1;addFloater("STAGGERED",0.5,-104,"#e0b070",14)}
-  }
+  if(!B.gauntlet)B.pendingResolution={correct:false,intent:B.intent,resolved:false};
   Sfx.play("bad");
-  fillRuleBar(false,res,defending?"Wrong — the blow lands unanswered":(B.gauntlet?"Wrong":"Wrong — a critical failure; the strike never comes"));
+  fillRuleBar(false,res,B.gauntlet?"Wrong":"Wrong — action denied");
   revealContinue();
   updateBattleHUD();
   queueSave();
@@ -6997,6 +6881,56 @@ function onContinue(){
   }
   onContinueResolve();
 }
+function showCombatCallout(text,kind,ms,after){
+  if(!B)return;const battle=B,el=$("combatThreat");clearTimeout(battle.threatTimer);
+  el.textContent=text;el.className=kind||"";
+  battle.threatTimer=setTimeout(()=>{if(B!==battle)return;el.classList.add("hidden");if(after)after()},ms||5000);
+}
+function scheduleCombatAdvance(){
+  const battle=B;clearTimeout(battle.advanceTimer);
+  battle.advanceTimer=setTimeout(()=>{
+    if(B!==battle)return;
+    if(livingFoes().length===0){winBattle();return}
+    if(livingParty().length===0){loseBattle();return}
+    if(B.turn==="attack")startDefense();
+    else{B.moved=false;B.round=(B.round||0)+1;retarget();showActions()}
+  },5000);
+}
+function resolveCombatIntent(){
+  const pending=B&&B.pendingResolution;if(!pending||pending.resolved)return false;
+  pending.resolved=true;const intent=pending.intent||B.intent,correct=pending.correct;
+  $("battleBox").classList.add("hidden");$("btnContinue").classList.add("hidden");
+  if(!intent){scheduleCombatAdvance();return true}
+  if(intent.type==="defend"){
+    if(correct&&intent.rollsEnabled){armRoll(B.aoe?"aoe":"defend");return true}
+    if(correct){if(B.aoe)aoeTurned();else defenseHolds(false);showCombatCallout("Guarded!", "hit",5000)}
+    else{if(B.aoe)aoeLands();else defenseLands(0);showCombatCallout("KRAK! The blow connects!", "fail",5000)}
+    B.phase="resolve";scheduleCombatAdvance();return true;
+  }
+  if(!correct){
+    if(intent.type==="attack"||intent.type==="skill"||intent.type==="utility")attackMisses(false);
+    B.failureSlot=intent.hotbar;renderCombatHotbar();
+    const failure=intent.type==="attack"?"WHIFF!":(intent.type==="skill"?"FIZZLE!":((intent.type==="poultice"||intent.type==="mana"||intent.type==="utility")?"NOPE!":"MISS!"));
+    showCombatCallout(failure, "fail",5000);
+    B.phase="resolve";scheduleCombatAdvance();return true;
+  }
+  if(intent.type==="poultice"){
+    const m=B.party[intent.target.index];S.consume.tonic--;m.halves=Math.min(m.max,m.halves+3);
+    const at=fxAtMember(intent.target.index);if(at)spawnFx("heal",at.x,at.y,{scale:.9});addFloater("+1.5♥",.3,-70,"#7fe09a",15);
+    showCombatCallout("Poultice takes hold!","hit",5000);
+  }else if(intent.type==="mana"){
+    const m=B.party[intent.target.index];S.consume.draught--;m.mana=Math.min(m.manaMax,m.mana+2);if(intent.target.index===B.active){B.mana=m.mana;B.manaMax=m.manaMax}
+    addFloater("+2 MANA",.3,-70,"#67cfff",15);showCombatCallout("Mana surges!","hit",5000);
+  }else{
+    const m=B.party[intent.member];
+    if(intent.sk&&intent.sk.bomb)S.consume.bomb=Math.max(0,S.consume.bomb-1);
+    if(intent.sk&&intent.sk.summon){B.mana=m.mana;B.manaMax=m.manaMax;castSummon(intent.sk);m.mana=B.mana;showCombatCallout("The spider answers!","hit",5000);B.phase="resolve";scheduleCombatAdvance();return true}
+    if(intent.sk&&intent.sk.mana){m.mana=Math.max(0,m.mana-intent.sk.mana);B.mana=m.mana;B.manaMax=m.manaMax}
+    if(intent.rollsEnabled){armRoll("attack");return true}
+    applyAttackHit(false);showCombatCallout((intent.name||"Attack")+" connects!","hit",5000);
+  }
+  B.phase="resolve";updateBattleHUD();queueSave();scheduleCombatAdvance();return true;
+}
 function onContinueResolve(){
   if(!B)return;
   if(B.gauntlet){
@@ -7004,6 +6938,7 @@ function onContinueResolve(){
     if(B.foes[0].halves<=0){B.foes[0].halves=1;B.foes[0].dieT=-9}
     B.phase="q";serveQuestion();return;
   }
+  if(B.pendingResolution&&!B.pendingResolution.resolved){resolveCombatIntent();return}
   if(livingFoes().length===0){winBattle();return}
   if(livingParty().length===0){loseBattle();return}
   if(B.turn==="attack"){startDefense();return}
@@ -7015,7 +6950,7 @@ function onContinueResolve(){
 function memberStaggered(m){return B&&m&&(m.staggerRound|0)===(B.round||0)&&m.staggerRound>0}
 /* the monster's turn: it lunges, and true recall is your shield */
 function startDefense(){
-  B.turn="defend";B.sel=null;
+  B.turn="defend";B.sel=null;B.intent=null;B.pendingResolution=null;B.aoe=null;
   const living=livingFoes();
   const ready=living.filter(f=>!f.stun);
   living.forEach(f=>{if(f.stun>0)f.stun--});
@@ -7026,9 +6961,6 @@ function startDefense(){
   }
   const attacker=pick(ready);
   B.defFoe=B.foes.indexOf(attacker);
-  /* some blows are telegraphed sweeps at a whole line — the player gets a free
-     reposition to dodge before answering the riposte */
-  if(shouldTelegraphAoE(attacker)){telegraphAoE(attacker);return}
   const melee=SHMELEE[attacker.e.shape];
   let pool=livingParty();
   if(melee){const fc=partyFrontCol();pool=pool.filter(m=>m.cell.col===fc)}
@@ -7036,10 +6968,13 @@ function startDefense(){
   let r=Math.random()*weights.reduce((a,b)=>a+b,0),victim=pool[0];
   for(let j=0;j<pool.length;j++){r-=weights[j];if(r<=0){victim=pool[j];break}}
   B.defMember=B.party.indexOf(victim);
-  B.phase="q";
-  $("bIntro").textContent="⚠ "+attacker.e.name+(melee?" lunges at ":" reaches through the line for ")+victim.name+" — answer true to earn the guard roll!";
+  if(shouldTelegraphAoE(attacker))B.aoe={col:victim.cell.col,dmg:Math.max(1,Math.round(B.foeDmg*(attacker.atkW||1))),foe:B.defFoe,foeName:attacker.e.name};
+  const move=B.aoe?"Overrun":(melee?"Savage Lunge":"Arcane Lash");
+  B.intent={type:"defend",hotbar:null,member:B.defMember,target:{side:"party",index:B.defMember},rollsEnabled:!!S.settings.d20Combat,move};
+  B.phase="threat";$("battleBox").classList.add("hidden");
   Sfx.play("hit");
-  serveQuestion();
+  showCombatCallout("Defend "+victim.name+" from "+attacker.e.name+"'s "+move+"!","",5000,()=>{if(B&&B.phase==="threat"){B.phase="q";serveQuestion()}});
+  updateBattleHUD();
 }
 /* AoE telegraph: tougher fights and bosses wind up line sweeps; never on round 0 */
 function shouldTelegraphAoE(attacker){
@@ -7278,6 +7213,8 @@ function updateBattleHUD(){
   const enemy=(B.boss?"☠ ":"")+(B.gauntlet?(B.enemy&&B.enemy.name?B.enemy.name:"Trial Warden"):(tf?tf.e.name:""));
   $("bFoeName").textContent=enemy+(B.foes.length>1?" · pack of "+B.foes.length:"");
   const card=$("battleBox");if(card)card.style.setProperty("--region-hue",String(B.region?B.region.hue:262));
+  const sigils=["◆","✦","⬢","▲","●","✸"],regionIndex=Math.max(0,DATA.regions.indexOf(B.region));
+  if($("qSigil"))$("qSigil").textContent=sigils[regionIndex%sigils.length];
   const qe=$("qEnemy");if(qe)qe.textContent=enemy;
   const qa=$("qArea");if(qa)qa.textContent=(B.region?B.region.name:"")+(B.gauntlet?" · question "+Math.min(B.gauntlet.idx+1,B.gauntlet.total)+"/"+B.gauntlet.total:"");
   $("comboChip").textContent="streak ×"+B.combo.toFixed(2).replace(/0$/,"");
@@ -7292,6 +7229,7 @@ function updateBattleHUD(){
   $("btnTonic").title=canAct?"Heals the most wounded ally +1.5 hearts — spends this action":"Earned by a correct answer — drink in place of your strike";
   $("btnDraught").title=canAct?"Restores 2 mana — spends this action":"Earned by a correct answer — drink in place of your strike";
   $("bItems").classList.toggle("hidden",!!B.gauntlet);
+  renderCombatHotbar();
 }
 /* ---- the daylight battlefield, painted in flats ---- */
 function battlePalette(){
@@ -7767,10 +7705,13 @@ function renderBattle(t){
       ctx.restore();
     }
   }
-  /* hearts drawn last */
+  /* battlefield status: hearts above each PC, then the blue mana bar */
   for(let i=0;i<B.party.length;i++){
     const m=B.party[i];
-    drawHearts(pHome[i].x,pHome[i].y+12,m.halves,m.max,Math.min(1,scale*0.78));
+    const ss=Math.min(1,scale*0.78),sy=pHome[i].y-82*scale;
+    drawHearts(pHome[i].x,sy,m.halves,m.max,ss);
+    drawManaBar(pHome[i].x,sy+9*ss,m.mana||0,m.manaMax||1,ss);
+    if(i===B.active&&m.halves>0)drawBrackets(pHome[i].x,pHome[i].y-38*scale,30*scale,45*scale,t,.92);
   }
   for(let i=0;i<B.foes.length;i++){
     const f=B.foes[i];
@@ -8252,6 +8193,7 @@ function settingsRows(){
   return row("music","Music","The original loops — castle, quest, battle")+
          row("sound","Sound","The original strikes, spells and voices")+
          row("motion","Motion & shake","Disable for reduced motion")+
+         row("d20Combat","Optional d20 rolls","Correct answers earn a clickable combat roll; off means knowledge resolves the action")+
          row("dpad","On-screen d-pad","Tap-to-move always works regardless");
 }
 function bindKeepActions(scope){
@@ -8514,10 +8456,14 @@ cv.addEventListener("pointerup",e=>{
   pDown=null;
   if(!wasTap||modalOpen())return;
   if(MODE==="battle"&&B&&!B.gauntlet&&B.foeScreen){
+    if(B.partyScreen)for(let i=0;i<B.partyScreen.length;i++){
+      const ps=B.partyScreen[i],m=B.party[i];if(!ps||!m||m.halves<=0)continue;
+      if(Math.hypot(e.clientX-ps.x,e.clientY-(ps.y-36))<46){if(B.phase==="target")chooseCombatTarget("party",i);else setActiveCombatant(i);return}
+    }
     for(let i=0;i<B.foeScreen.length;i++){
       const fs=B.foeScreen[i];
       if(!fs||B.foes[i].halves<=0)continue;
-      if(Math.hypot(e.clientX-fs.x,e.clientY-(fs.y-fs.r*0.6))<Math.max(36,fs.r)){setTarget(i);break}
+      if(Math.hypot(e.clientX-fs.x,e.clientY-(fs.y-fs.r*0.6))<Math.max(36,fs.r)){if(B.phase==="target")chooseCombatTarget("foe",i);else setTarget(i);break}
     }
     return;
   }
@@ -8604,6 +8550,7 @@ $("btnContinue").addEventListener("click",onContinue);
 $("btnFlee").addEventListener("click",withdraw);
 $("btnRoll").addEventListener("click",rollNow);
 $("dieFace").addEventListener("click",rollNow);
+$("combatD20").addEventListener("click",rollNow);
 
 /* ---- the held card: click-drag to move it anywhere, dblclick to take it back in hand ---- */
 /* Windows-style minimize: the card collapses to its title bar — foe name,
@@ -9437,6 +9384,7 @@ window.__wf={
   rowPool, rowMultOf, rowLabel, memberStaggered,
   shouldTelegraphAoE, telegraphAoE, aoeThreatened, showDodge,
   foeGuard, foeThreat, atkBonusOf, guardBonusOf, diceTerms, resolveRoll, rollNow,
+  selectCombatAction, chooseCombatTrayItem, chooseCombatTarget, setActiveCombatant, resolveCombatIntent, onAnswer, onContinueResolve, startDefense, updateBattleHUD,
   chooseStrike, showStrikes, skillIsSpecial, buildOpts, deepenPool, DEPTHS,
   applyCardPos, applyCardMin, get Music(){return Music}, heroBark, chooseHero, heroRigKey, heroChoice, wieldOf, rollWeaponDrop, armState, critRangeOf, activeCompanions,
   spawnFx, burstFx, get FXQ(){return FXQ}, get EAPART(){return EAPART}, get EAPART_PHYS(){return EAPART_PHYS},
@@ -9447,7 +9395,7 @@ window.__wf={
   questChainOf, regionQuestNow, currentQuest, get QUESTBIND(){return QUESTBIND},
   regionRoadPage, worldLoop, layoutRoads, heroMP, nodeEnc, mkFoeEa, mpOnPage,
   castSummon, summonHitBonus, battleXp, xpNeed,
-  portraitSquare, useTonic, useDraught, applySettings, buildParty, legendRec, legendHpBonus,
+  portraitSquare, useTonic, useDraught, applySettings, settingsRows, buildParty, legendRec, legendHpBonus,
   get LEGEND_CHOICES(){return LEGEND_CHOICES},
   get EAVILLAIN(){return EAVILLAIN},
   gradePractical, practicalReportHtml,
@@ -9462,289 +9410,7 @@ window.__wf={
   get QIDX(){return QIDX}, get DATA(){return DATA}, lessonHtml
 };
 
-/* ==========================================================================
-   PROTOTYPE — comic combat hotbar
-   Interactive throwaway UI for judging the action -> target -> question ->
-   feedback -> resolution flow. It mounts only with ?prototype=hotbar.
-   ========================================================================== */
-function mountCombatPrototype(){
-  document.body.classList.add("proto-mode");
-  const app=$("app");
-  const query=new URLSearchParams(location.search);
-  const variants=["A","B","C"];
-  const variantNames={A:"Splash panel",B:"Edge panel",C:"Speech stack"};
-  let variant=(query.get("variant")||"A").toUpperCase();
-  if(!variants.includes(variant))variant="A";
-  let timers=[],rollN=0;
-  const party=[
-    {name:"Aria",rig:"heroRog",hearts:"♥♥♥♥",mana:3,manaMax:4},
-    {name:"Rowan",rig:"heroWar",hearts:"♥♥♥",mana:1,manaMax:3},
-    {name:"Kestrel",rig:"heroMag",hearts:"♥♥♥♥",mana:4,manaMax:5}
-  ];
-  const enemy={name:"Scopecreep",rig:"hurlock2H"};
-  const state={
-    phase:"action",active:0,intent:null,target:null,tray:null,defense:false,
-    answer:null,correct:null,hint:false,rolls:false,actionRolls:false,
-    dieRolling:false,dieValue:null,rollSuccess:null,callout:null,
-    resolveClass:null,impact:false,items:{poultice:3,draught:2,bomb:2}
-  };
-  const question={
-    text:"A sub-agent loop may continue only while useful work remains. Which control prevents it from running forever?",
-    answers:[
-      "A real completion condition plus a hard maximum turn count",
-      "A larger context window and a higher token budget",
-      "A system prompt asking the agent to be careful"
-    ],
-    why:"Loop control needs an observable stopping condition and an independent upper bound. Instructions alone cannot guarantee termination.",
-    example:"Stop when the review reports no blocking findings, but also cap the workflow at 8 turns so a broken reviewer cannot loop forever."
-  };
-  function later(fn,ms){const id=setTimeout(fn,ms);timers.push(id);return id}
-  function clearTimers(){timers.forEach(clearTimeout);timers=[]}
-  function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-  function rigFrame(key){
-    try{
-      const r=DATA.eaRig[key],a=r&&r.anims&&(r.anims.idle||r.anims.strike);
-      return a&&a.f&&a.f[0]&&a.f[0].d||r.portrait||"";
-    }catch(e){return ""}
-  }
-  function backdrop(){
-    try{
-      const set=DATA.eaBg.Grassland;
-      return ["bg","mid","fg"].map(k=>set&&set[k]?"<img src='"+set[k].d+"' alt=''>":"").join("");
-    }catch(e){return ""}
-  }
-  function icon(kind){
-    const common="viewBox='0 0 64 64' aria-hidden='true' focusable='false'";
-    if(kind==="attack")return "<svg "+common+"><path fill='#ece4cf' stroke='#1a1117' stroke-width='4' d='M43 6l8 8-27 30-8-8z'/><path fill='#78b7cf' d='M42 11l4 4-23 25-3-3z'/><path fill='#e7b052' stroke='#1a1117' stroke-width='4' d='M10 37l17 17-6 6L4 43z'/><path fill='#9b5d34' stroke='#1a1117' stroke-width='4' d='M10 50l5 5-6 6-5-5z'/></svg>";
-    if(kind==="spell")return "<svg "+common+"><path fill='#e6aa32' stroke='#171019' stroke-width='4' stroke-linejoin='round' d='M39 5L11 37h18l-6 22 31-36H36z'/><path fill='#ffe37a' d='M38 12L20 33h15l-5 16 16-21H31z'/><path fill='none' stroke='#fff4b0' stroke-width='3' stroke-linecap='round' d='M38 13L25 29'/></svg>";
-    if(kind==="poultice")return "<svg "+common+"><path fill='#d9c6a7' stroke='#171019' stroke-width='4' d='M17 18h30l6 32-8 8H18L10 49z'/><path fill='#b65043' stroke='#171019' stroke-width='3' d='M17 24h30l-3 13-12 6-12-6z'/><path fill='#f0dfb8' stroke='#171019' stroke-width='3' d='M22 8h20l5 10H17z'/><path fill='#7d9c4f' d='M28 27h8v5h5v8h-5v5h-8v-5h-5v-8h5z'/></svg>";
-    if(kind==="mana")return "<svg "+common+"><path fill='#d9d6cf' stroke='#171019' stroke-width='4' d='M23 8h18v10l8 9v27H15V27l8-9z'/><path fill='#35a8ed' stroke='#171019' stroke-width='3' d='M19 31h26v19H19z'/><path fill='#83e2ff' d='M23 34h18v5H23z'/><path fill='#7a4c32' stroke='#171019' stroke-width='3' d='M22 13h20v7H22z'/></svg>";
-    if(kind==="utility")return "<svg "+common+"><path fill='#9a633d' stroke='#171019' stroke-width='4' d='M12 21h40l5 34H7z'/><path fill='#d19a55' stroke='#171019' stroke-width='3' d='M18 10h28l5 13H13z'/><path fill='none' stroke='#f0c66e' stroke-width='4' d='M21 21q0-13 11-13t11 13'/><path fill='#63384d' stroke='#171019' stroke-width='3' d='M25 31h14v12H25z'/></svg>";
-    if(kind==="bolt")return "<svg "+common+"><path fill='#46c7ff' stroke='#171019' stroke-width='4' d='M39 4L13 36h16l-5 24 27-35H35z'/><path fill='#d9f7ff' d='M37 14L21 32h12l-3 14 13-17H31z'/></svg>";
-    if(kind==="frost")return "<svg "+common+"><g stroke='#171019' stroke-width='5' stroke-linecap='square'><path d='M32 5v54M8 19l48 27M8 46l48-27'/></g><g stroke='#9de8ff' stroke-width='3'><path d='M32 5v54M8 19l48 27M8 46l48-27'/></g></svg>";
-    if(kind==="bomb")return "<svg "+common+"><path fill='#3b3a42' stroke='#171019' stroke-width='4' d='M12 35q0-19 20-19t20 19q0 21-20 25Q12 56 12 35z'/><path fill='#b1643e' stroke='#171019' stroke-width='4' d='M26 10h14v10H26z'/><path fill='none' stroke='#e7b54b' stroke-width='4' d='M35 10q5-9 13-5'/><path fill='#fff3a1' d='M48 1l4 5 7-1-4 6 4 6-7-2-5 5 1-7-6-4 7-1z'/></svg>";
-    return "";
-  }
-  function slot(kind,label,badge,extra){
-    return "<button class='proto-slot "+(extra||"")+"' data-action='"+kind+"' aria-label='"+esc(label)+"' title='"+esc(label)+"'>"+
-      icon(kind)+(badge!=null?"<span class='proto-badge "+(kind==="spell"?"proto-cost":"")+"'>"+badge+"</span>":"")+"</button>";
-  }
-  function hotbar(){
-    const selected=state.intent&&state.phase!=="action"?state.intent.slot||state.intent.type:"";
-    const sel=k=>selected===k?"selected":"";
-    let tray="";
-    if(state.tray==="spell")tray="<div class='proto-tray'>"+
-      slot("bolt","Arc Bolt — costs 1 mana","1","")+
-      slot("frost","Frostbite — costs 2 mana","2",party[state.active].mana<2?"disabled":"")+"</div>";
-    if(state.tray==="utility")tray="<div class='proto-tray'>"+
-      slot("bomb","Clay Bomb — "+state.items.bomb+" held",state.items.bomb,state.items.bomb<1?"disabled":"")+"</div>";
-    return "<div class='proto-hotbar-wrap "+(["question","feedback","d20"].includes(state.phase)?"dimmed":"")+"'>"+
-      tray+"<nav class='proto-hotbar' aria-label='Combat actions'>"+
-      slot("attack","Basic attack",null,sel("attack"))+
-      slot("spell","Spells and skills",null,sel("spell"))+
-      slot("poultice","Poultice — "+state.items.poultice+" held",state.items.poultice,sel("poultice")+(state.items.poultice<1?" disabled":""))+
-      slot("mana","Mana Draught — "+state.items.draught+" held",state.items.draught,sel("mana")+(state.items.draught<1?" disabled":""))+
-      slot("utility","Utility items",null,sel("utility"))+
-      "</nav></div>";
-  }
-  function unitHtml(p,i){
-    const active=i===state.active,valid=state.phase==="target"&&state.intent&&["poultice","mana"].includes(state.intent.type);
-    let cls="proto-unit pc"+(active?" active":"")+(valid?" valid-target":"");
-    if(state.phase==="resolve"&&state.defense&&state.target===i)cls+=" "+(state.resolveClass||"");
-    return "<button class='"+cls+"' data-pc='"+i+"' aria-label='"+esc(p.name)+(active?", active combatant":"")+"'>"+
-      "<span class='proto-status'><span class='proto-hearts'>"+p.hearts+"</span><span class='proto-mana'><i style='width:"+
-      Math.round(p.mana/p.manaMax*100)+"%'></i></span></span><img src='"+rigFrame(p.rig)+"' alt=''><span class='proto-name'>"+esc(p.name)+"</span></button>";
-  }
-  function roster(){
-    const validEnemy=state.phase==="target"&&state.intent&&!["poultice","mana"].includes(state.intent.type);
-    let ecls="proto-unit enemy"+(validEnemy?" valid-target":"");
-    if(state.phase==="resolve"&&!state.defense)ecls+=" "+(state.resolveClass||"");
-    return "<div class='proto-roster'>"+party.map(unitHtml).join("")+
-      "<button class='"+ecls+"' data-enemy='1' aria-label='Scopecreep, enemy target'><img src='"+rigFrame(enemy.rig)+"' alt=''><span class='proto-name'>"+
-      enemy.name+"</span></button></div>";
-  }
-  function questionPanel(){
-    if(!["question","feedback"].includes(state.phase))return "";
-    const isFeedback=state.phase==="feedback";
-    let body="";
-    if(!isFeedback){
-      body="<div class='proto-qcopy'><div class='proto-kicker'>Region III · Knowledge Gate</div><h2>"+question.text+"</h2>"+
-        (state.hint?"<div class='proto-example'><b>Hint</b><br>Look for both a meaningful ending and an independent hard bound.</div>":"")+"</div>"+
-        "<div class='proto-answers'>"+question.answers.map((a,i)=>"<button class='proto-answer' data-answer='"+i+"'>"+esc(a)+"</button>").join("")+"</div>";
-    }else{
-      body="<div class='proto-feedback'><span class='proto-verdict "+(state.correct?"good":"bad")+"'>"+
-        (state.correct?"Correct!":"Not quite!")+"</span><p>"+question.why+"</p><div class='proto-example'><b>Example</b><br>"+
-        question.example+"</div><span class='proto-topic'>Loop Control · "+(state.hint?"Hint used — reduced mastery":"Full mastery credit")+
-        "</span><button class='proto-continue' data-continue='1'>Continue</button></div>";
-    }
-    return "<div class='proto-shade'></div><section class='proto-question' role='dialog' aria-modal='true' aria-label='Knowledge question'>"+
-      "<span class='proto-region-mark' aria-hidden='true'>III</span>"+
-      (!isFeedback?"<button class='proto-hint' data-hint='1' aria-label='Show hint' title='Show hint'>?</button>":"")+
-      "<div class='proto-qscroll'>"+body+"</div></section>";
-  }
-  function dieScene(){
-    if(state.phase!=="d20")return "";
-    const value=state.dieValue==null?"?":state.dieValue;
-    return "<div class='proto-die-scene'><button class='proto-d20 "+(state.dieRolling?"rolling":"")+"' data-roll='1' "+
-      (state.dieRolling||state.dieValue!=null?"disabled":"")+" aria-label='Roll the d20'>"+
-      "<svg viewBox='0 0 160 145' role='img' aria-label='3D pixelated twenty-sided die'><defs><linearGradient id='pdg' x1='0' y1='0' x2='1' y2='1'><stop stop-color='#77d4ff'/><stop offset='1' stop-color='#244f9d'/></linearGradient></defs>"+
-      "<path fill='url(#pdg)' stroke='#100e19' stroke-width='7' stroke-linejoin='bevel' d='M80 5L143 37l10 69-73 34-72-34 9-69z'/>"+
-      "<path fill='#3d7ed0' stroke='#173464' stroke-width='3' d='M80 5L69 49 17 37zM80 5l11 44 52-12zM17 37l52 12-24 43zM143 37L91 49l24 43zM69 49h22l24 43-35 48-35-48z'/>"+
-      "<path fill='none' stroke='#b9ecff' stroke-width='3' d='M80 5L69 49 17 37M80 5l11 44 52-12M69 49h22l24 43-35 48-35-48-28-55M115 92l38 14M45 92L8 106'/>"+
-      "<text x='80' y='89' text-anchor='middle' fill='#fff8d5' stroke='#102044' stroke-width='2' paint-order='stroke' font-family='Impact,Arial Black,sans-serif' font-size='34'>"+
-      value+"</text></svg></button><div class='proto-roll-help'>"+(state.dieRolling?"Rolling…":state.dieValue!=null?"The die has spoken":"Click the d20")+"</div></div>"+
-      (state.dieValue!=null?"<div class='proto-die-result'>"+state.dieValue+"! "+(state.rollSuccess?(state.defense?"BLOCK!":"HIT!"):(state.defense?"BLOCK BROKEN!":"MISS!"))+"</div>":"");
-  }
-  function phaseLabel(){
-    const labels={action:"Choose an action",target:"Choose a target",question:"Answer the question",feedback:"Read the feedback",
-      d20:"Roll Resolution",resolve:"Combat resolves",threat:"Incoming attack"};
-    let detail=party[state.active].name;
-    if(state.intent)detail+=" · "+(state.intent.name||state.intent.type);
-    if(state.target==="enemy")detail+=" → "+enemy.name;
-    else if(Number.isInteger(state.target))detail+=" → "+party[state.target].name;
-    return "<div class='proto-state'>Prototype state<b>"+labels[state.phase]+"</b><small>"+esc(detail)+"</small></div>";
-  }
-  function evaluator(){
-    const i=variants.indexOf(variant);
-    return "<div class='proto-switcher' aria-label='Prototype variants'><button data-prev='1' aria-label='Previous variant'>←</button>"+
-      "<span class='proto-switch-label'><b>"+variant+"</b> — "+variantNames[variant]+"</span>"+
-      "<button data-next='1' aria-label='Next variant'>→</button><button class='proto-roll-toggle "+(state.rolls?"on":"")+
-      "' data-roll-toggle='1' title='Prototype control; the production toggle lives in Settings'>D20 "+(state.rolls?"ON":"OFF")+"</button></div>";
-  }
-  function impact(){
-    if(!state.impact)return "";
-    return "<div class='proto-impact' style='"+(state.defense?"left:18%;bottom:28%":"right:10%;top:31%")+"'></div>";
-  }
-  function render(){
-    app.innerHTML="<main id='combatPrototype' class='variant-"+variant.toLowerCase()+"'><div class='proto-stage'>"+
-      "<div class='proto-bg'>"+backdrop()+"</div><div class='proto-vignette'></div>"+
-      "<div class='proto-topbar'><div class='proto-logo'>Sigilbound<small>Agentic Architecture · Region III</small></div>"+phaseLabel()+"</div>"+
-      roster()+impact()+(state.phase==="threat"||state.callout?"<div class='proto-callout "+(state.phase==="resolve"?(state.correct?"hit":"fail"):"")+
-      "'>"+esc(state.callout||"Defend "+party[state.target].name+" from Scopecreep’s Overrun!")+"</div>":"")+
-      questionPanel()+dieScene()+hotbar()+evaluator()+"</div></main>";
-    bind();
-  }
-  function setVariant(next){
-    variant=next;
-    const q=new URLSearchParams(location.search);q.set("prototype","hotbar");q.set("variant",variant);
-    history.replaceState(null,"",location.pathname+"?"+q.toString()+location.hash);
-    render();
-  }
-  function chooseAction(kind){
-    if(state.phase!=="action")return;
-    if(kind==="spell"){state.tray=state.tray==="spell"?null:"spell";render();return}
-    if(kind==="utility"){state.tray=state.tray==="utility"?null:"utility";render();return}
-    if(kind==="poultice"&&state.items.poultice<1)return;
-    if(kind==="mana"&&state.items.draught<1)return;
-    if(kind==="frost"&&party[state.active].mana<2)return;
-    if(kind==="bomb"&&state.items.bomb<1)return;
-    const names={attack:"Basic Attack",bolt:"Arc Bolt",frost:"Frostbite",poultice:"Poultice",mana:"Mana Draught",bomb:"Clay Bomb"};
-    const slots={bolt:"spell",frost:"spell",bomb:"utility"};
-    state.intent={type:kind,name:names[kind]||kind,slot:slots[kind]||kind};
-    state.actionRolls=state.rolls;
-    state.tray=null;state.phase="target";state.target=null;render();
-  }
-  function chooseTarget(target){
-    if(state.phase==="action"&&Number.isInteger(target)){state.active=target;render();return}
-    if(state.phase!=="target"||!state.intent)return;
-    const friendly=["poultice","mana"].includes(state.intent.type);
-    if(friendly&&!Number.isInteger(target))return;
-    if(!friendly&&target!=="enemy")return;
-    state.target=target;beginQuestion(false);
-  }
-  function beginQuestion(defense){
-    clearTimers();
-    state.phase="question";state.defense=defense;state.answer=null;state.correct=null;state.hint=false;
-    if(defense){
-      state.intent={type:"defense",name:"Defend",slot:null};state.target=state.active;state.actionRolls=state.rolls;
-    }
-    state.callout=null;state.dieValue=null;state.dieRolling=false;state.rollSuccess=null;render();
-  }
-  function answer(i){
-    if(state.phase!=="question")return;
-    state.answer=i;state.correct=i===0;state.phase="feedback";
-    if(state.correct){
-      if(state.intent.type==="bolt")party[state.active].mana=Math.max(0,party[state.active].mana-1);
-      if(state.intent.type==="frost")party[state.active].mana=Math.max(0,party[state.active].mana-2);
-      if(state.intent.type==="poultice")state.items.poultice--;
-      if(state.intent.type==="mana")state.items.draught--;
-      if(state.intent.type==="bomb")state.items.bomb--;
-    }
-    render();
-  }
-  function continueFlow(){
-    if(state.phase!=="feedback")return;
-    const canRoll=state.actionRolls&&(state.defense||["attack","bolt","frost","bomb"].includes(state.intent.type));
-    if(state.correct&&canRoll){
-      state.phase="d20";state.dieValue=null;state.dieRolling=false;render();
-    }else resolve(state.correct);
-  }
-  function rollDie(){
-    if(state.phase!=="d20"||state.dieRolling||state.dieValue!=null)return;
-    state.dieRolling=true;render();
-    later(()=>{
-      const sequence=[18,6,14,20,11,3];
-      state.dieValue=sequence[rollN++%sequence.length];state.dieRolling=false;state.rollSuccess=state.dieValue>=9;render();
-      later(()=>resolve(state.rollSuccess),1000);
-    },850);
-  }
-  function resolve(success){
-    clearTimers();
-    state.phase="resolve";state.callout=null;state.impact=false;state.resolveClass=null;
-    if(state.defense){
-      state.callout=success?"BLOCKED!":"KRAK!";state.correct=success;
-      state.resolveClass=success?"":"proto-shake";state.impact=!success;
-      render();
-      later(()=>resetTurn(),1350);
-      return;
-    }
-    if(success){
-      const wins={attack:"THWAK!",bolt:"ZAP!",frost:"CRACK!",bomb:"KABOOM!",poultice:"PATCHED!",mana:"GLUG!"};
-      state.callout=wins[state.intent.type]||"HIT!";state.resolveClass=["poultice","mana"].includes(state.intent.type)?"":"proto-shake";
-      state.impact=["attack","bolt","frost","bomb"].includes(state.intent.type);
-      if(state.intent.type==="poultice"&&Number.isInteger(state.target))party[state.target].hearts="♥♥♥♥";
-      if(state.intent.type==="mana"&&Number.isInteger(state.target))party[state.target].mana=Math.min(party[state.target].manaMax,party[state.target].mana+2);
-    }else{
-      const fails={attack:"WHIFF!",bolt:"FIZZLE!",frost:"FIZZLE!",bomb:"FWOOP!",poultice:"NOPE!",mana:"NOPE!"};
-      state.callout=fails[state.intent.type]||"MISS!";state.resolveClass="proto-fizzle";
-    }
-    render();
-    later(()=>threat(),1450);
-  }
-  function threat(){
-    clearTimers();state.phase="threat";state.defense=true;state.intent=null;state.target=state.active;
-    state.callout="Defend "+party[state.target].name+" from Scopecreep’s Overrun!";state.impact=false;state.resolveClass=null;render();
-    later(()=>beginQuestion(true),5000);
-  }
-  function resetTurn(){
-    clearTimers();Object.assign(state,{phase:"action",intent:null,target:null,tray:null,defense:false,answer:null,correct:null,
-      hint:false,dieRolling:false,dieValue:null,rollSuccess:null,callout:null,resolveClass:null,impact:false});
-    render();
-  }
-  function bind(){
-    app.querySelectorAll("[data-action]").forEach(b=>b.addEventListener("click",()=>chooseAction(b.dataset.action)));
-    app.querySelectorAll("[data-pc]").forEach(b=>b.addEventListener("click",()=>chooseTarget(Number(b.dataset.pc))));
-    const foe=app.querySelector("[data-enemy]");if(foe)foe.addEventListener("click",()=>chooseTarget("enemy"));
-    app.querySelectorAll("[data-answer]").forEach(b=>b.addEventListener("click",()=>answer(Number(b.dataset.answer))));
-    const hint=app.querySelector("[data-hint]");if(hint)hint.addEventListener("click",()=>{state.hint=true;render()});
-    const cont=app.querySelector("[data-continue]");if(cont)cont.addEventListener("click",continueFlow);
-    const die=app.querySelector("[data-roll]");if(die)die.addEventListener("click",rollDie);
-    const prev=app.querySelector("[data-prev]");if(prev)prev.addEventListener("click",()=>setVariant(variants[(variants.indexOf(variant)+2)%3]));
-    const next=app.querySelector("[data-next]");if(next)next.addEventListener("click",()=>setVariant(variants[(variants.indexOf(variant)+1)%3]));
-    const rt=app.querySelector("[data-roll-toggle]");if(rt)rt.addEventListener("click",()=>{state.rolls=!state.rolls;render()});
-  }
-  addEventListener("keydown",e=>{
-    const tag=(document.activeElement&&document.activeElement.tagName||"").toLowerCase();
-    if(["input","textarea"].includes(tag)||(document.activeElement&&document.activeElement.isContentEditable))return;
-    if(e.key==="ArrowLeft")setVariant(variants[(variants.indexOf(variant)+2)%3]);
-    if(e.key==="ArrowRight")setVariant(variants[(variants.indexOf(variant)+1)%3]);
-  });
-  render();
-}
-
-/* all overrides are defined: build the road, or mount the throwaway prototype */
-if(new URLSearchParams(location.search).get("prototype")==="hotbar")mountCombatPrototype();
-else boot();
+boot();
 </script>
 <script>
 /* offline cache (phone-only path): cache every EA asset so the map paints even
