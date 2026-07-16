@@ -110,6 +110,44 @@ test('a knowledge gate dims and disables battlefield input', async ({ page }) =>
   expect(gate).toEqual({ phase: 'q', dimmed: true, pointerEvents: 'none' });
 });
 
+test('continuing feedback immediately restores the battlefield for resolution', async ({ page }) => {
+  await freshGame(page, 'c');
+  await startBattle(page);
+  const restored = await page.evaluate(() => {
+    const wf = window.__wf;
+    wf.selectCombatAction('attack');
+    for (let i = 0; i < wf.B.foes.length && wf.B.phase === 'target'; i++) wf.chooseCombatTarget('foe', i);
+    wf.onAnswer(wf.B.opts.findIndex(option => !option.ok));
+    wf.onContinueResolve();
+    const style = getComputedStyle(document.getElementById('cv'));
+    return { phase: wf.B.phase, filter: style.filter, pointerEvents: style.pointerEvents };
+  });
+  expect(restored).toEqual({ phase: 'resolve', filter: 'none', pointerEvents: 'auto' });
+});
+
+test('a resolved summon cannot reapply the knowledge-gate dimmer', async ({ page }) => {
+  await freshGame(page, 'c');
+  const restored = await page.evaluate(() => {
+    const wf = window.__wf;
+    wf.S.level = 15;
+    wf.S.hero = { rig: 'heroMag', cls: 'caster' };
+    window.startBattle({ enemyKey: 'parsewraith', region: wf.DATA.regions[0], spawn: null, boss: false });
+    wf.selectCombatAction('skills');
+    wf.chooseCombatTrayItem(wf.B.trayItems.findIndex(item => item.sk && item.sk.summon));
+    for (let i = 0; i < wf.B.foes.length && wf.B.phase === 'target'; i++) wf.chooseCombatTarget('foe', i);
+    wf.onAnswer(wf.B.opts.findIndex(option => option.ok));
+    wf.onContinueResolve();
+    const style = getComputedStyle(document.getElementById('cv'));
+    return {
+      phase: wf.B.phase,
+      summonPresent: wf.B.party.some(member => member.kind === 'summon'),
+      filter: style.filter,
+      pointerEvents: style.pointerEvents,
+    };
+  });
+  expect(restored).toEqual({ phase: 'resolve', summonPresent: true, filter: 'none', pointerEvents: 'auto' });
+});
+
 test('the target confirmed before recall cannot change while the gate is open', async ({ page }) => {
   await freshGame(page, 'c');
   await page.evaluate(() => {

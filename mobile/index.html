@@ -6493,9 +6493,9 @@ function foePainSnd(f){
 function applyAttackHit(crit){
   const battle=B,sel=B.sel,cert=B.qCert,q=B.q;
   const confirmed=B.intent&&B.intent.target&&B.intent.target.side==="foe"?B.intent.target.index:null;
-  if(confirmed!==null&&B.foes[confirmed]&&B.foes[confirmed].halves>0)B.target=confirmed;
-  else retarget(sel.sk);
-  const primary=B.target;
+  const confirmedAlive=confirmed!==null&&B.foes[confirmed]&&B.foes[confirmed].halves>0;
+  if(!confirmedAlive)retarget(sel.sk);
+  const primary=confirmedAlive?confirmed:B.target;
   let dmg=sel.dmg+(crit?1:0);
   const superEff=isSuperEffective(cert,q.concept);
   const hinted=B.hintUsed;
@@ -6908,6 +6908,7 @@ function resolveCombatIntent(){
   const pending=B&&B.pendingResolution;if(!pending||pending.resolved)return false;
   pending.resolved=true;const intent=pending.intent||B.intent,correct=pending.correct;
   $("battleBox").classList.add("hidden");$("btnContinue").classList.add("hidden");
+  B.phase="resolve";syncCombatGate();
   if(!intent){scheduleCombatAdvance();return true}
   if(intent.type==="defend"){
     if(correct&&intent.rollsEnabled){armRoll(B.aoe?"aoe":"defend");return true}
@@ -6932,7 +6933,7 @@ function resolveCombatIntent(){
   }else{
     const m=B.party[intent.member];
     if(intent.sk&&intent.sk.bomb)S.consume.bomb=Math.max(0,S.consume.bomb-1);
-    if(intent.sk&&intent.sk.summon){B.mana=m.mana;B.manaMax=m.manaMax;castSummon(intent.sk);m.mana=B.mana;showCombatCallout("The spider answers!","hit",5000);B.phase="resolve";scheduleCombatAdvance();return true}
+    if(intent.sk&&intent.sk.summon){B.mana=m.mana;B.manaMax=m.manaMax;castSummon(intent.sk);m.mana=B.mana;showCombatCallout("The spider answers!","hit",5000);B.phase="resolve";syncCombatGate();scheduleCombatAdvance();return true}
     if(intent.sk&&intent.sk.mana){m.mana=Math.max(0,m.mana-intent.sk.mana);B.mana=m.mana;B.manaMax=m.manaMax}
     if(intent.rollsEnabled){armRoll("attack");return true}
     applyAttackHit(false);showCombatCallout((intent.name||"Attack")+" connects!","hit",5000);
@@ -7029,7 +7030,7 @@ function withdraw(){
 }
 function endBattleUI(){
   B=null;MODE="world";
-  $("app").classList.remove("combat-gated");
+  syncCombatGate();
   if(typeof layoutRoads==="function")layoutRoads();   /* quest pages may have turned */
   Music.sync();
   $("battleUI").classList.add("hidden");
@@ -7216,9 +7217,13 @@ function openCache(c){
 function addFloater(text,xf,dy,color,size){
   B.fx.floaters.push({text,xf,dy,color,size,t0:nowSec()});
 }
+function syncCombatGate(){
+  const gated=!!(B&&MODE==="battle"&&(B.phase==="q"||B.phase==="fb"));
+  $("app").classList.toggle("combat-gated",gated);
+}
 function updateBattleHUD(){
   if(!B)return;
-  $("app").classList.toggle("combat-gated",B.phase==="q"||B.phase==="fb");
+  syncCombatGate();
   const tf=B.foes[B.target];
   const enemy=(B.boss?"☠ ":"")+(B.gauntlet?(B.enemy&&B.enemy.name?B.enemy.name:"Trial Warden"):(tf?tf.e.name:""));
   $("bFoeName").textContent=enemy+(B.foes.length>1?" · pack of "+B.foes.length:"");
@@ -8440,7 +8445,7 @@ function openSettingsModal(){
 }
 function toTitle(){
   MODE="title";B=null;
-  $("app").classList.remove("combat-gated");
+  syncCombatGate();
   Music.sync();
   $("mapScr").classList.add("hidden");
   $("battleUI").classList.add("hidden");
