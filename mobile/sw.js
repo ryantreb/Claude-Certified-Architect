@@ -2,7 +2,7 @@
    Caches the app shell and every EA asset so the game keeps running after the
    local dev server (a-Shell on iOS) is suspended. Cache-first: a GET that once
    succeeds is served from cache forever, until the build version changes. */
-const VERSION = "76490a2b195c";
+const VERSION = "613d223f3ce6";
 const CACHE = "sigilbound-mobile-" + VERSION;
 
 self.addEventListener("install", () => self.skipWaiting());

@@ -36,8 +36,9 @@ test('a boss battle logs every answer to the exam ledger; skirmishes log nothing
     const wf = window.__wf;
     const region = wf.DATA.regions.find(r => r.cert === 'c' && r.boss);
     window.startBattle({ enemyKey: region.boss, region, spawn: null, boss: true });
-    window.pickAction(0);
-    window.onAnswer(wf.B.opts.findIndex(o => o.ok));
+    wf.selectCombatAction('attack');
+    for (let i = 0; i < wf.B.foes.length && wf.B.phase === 'target'; i++) wf.chooseCombatTarget('foe', i);
+    wf.onAnswer(wf.B.opts.findIndex(o => o.ok));
     const afterCorrect = wf.B.exam.length;
     const entry = wf.B.exam[0];
     // a plain skirmish carries no ledger

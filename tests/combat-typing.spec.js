@@ -59,7 +59,7 @@ test('super-effective only fires for MASTERED knowledge in the battle domain', a
   expect(await page.evaluate((c) => window.__wf.isSuperEffective('c', c), conceptB)).toBe(false);
 });
 
-test('attackDamage doubles on super-effective and halves on a glancing (hinted) hit', async ({ page }) => {
+test('attackDamage doubles on super-effective and ignores hint status', async ({ page }) => {
   await freshGame(page, 'c');
   const { domA, conceptA } = await twoDomainConcepts(page, 'c');
   await setBattle(page, 'c', domA);
@@ -70,8 +70,8 @@ test('attackDamage doubles on super-effective and halves on a glancing (hinted) 
   await master(page, 'c', conceptA);
   // super-effective doubles 2 -> 4
   expect(await page.evaluate((c) => window.__wf.attackDamage(2, 'c', c, {}), conceptA)).toBe(4);
-  // glancing halves the doubled value 4 -> 2 (floor), and never below 1 for a real hit
-  expect(await page.evaluate((c) => window.__wf.attackDamage(2, 'c', c, { hinted: true }), conceptA)).toBe(2);
+  // hints change recall credit, not the successful combat result
+  expect(await page.evaluate((c) => window.__wf.attackDamage(2, 'c', c, { hinted: true }), conceptA)).toBe(4);
 });
 
 test('domDanger: a weak domain adds foe danger, a mastered domain does not', async ({ page }) => {

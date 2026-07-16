@@ -4,7 +4,7 @@ const { defineConfig, devices } = require('@playwright/test');
 /* Sigilbound is a single static index.html with no build step. We serve the
    repo over http (not file://) so localStorage and module-scope globals behave
    exactly as they do in a real browser tab. */
-const PORT = 8753;
+const PORT = Number(process.env.PLAYWRIGHT_PORT || 8753);
 
 module.exports = defineConfig({
   testDir: './tests',

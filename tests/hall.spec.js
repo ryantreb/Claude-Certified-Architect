@@ -29,32 +29,25 @@ test('legends join the roster with their original stat rows on the d20', async (
   expect(out.name).toBe('Beirus');
 });
 
-test('a poultice is earned: refused before a correct answer, spends the action after', async ({ page }) => {
+test('a poultice intent heals and spends stock only after correct feedback is continued', async ({ page }) => {
   await freshGame(page, 'c');
   const out = await page.evaluate(() => {
     const wf = window.__wf;
     const srBefore = JSON.stringify(wf.S.sr);
-    wf.S.consume.tonic = 2; wf.S.consume.draught = 2;
+    wf.S.consume.tonic = 2;
     window.startBattle({ enemyKey: 'scopecreep', region: wf.DATA.regions[0], spawn: null, boss: false });
-    wf.useTonic();                                  // intro/ask phase: refused
-    const refusedTonic = wf.S.consume.tonic === 2;
-    wf.useDraught();
-    const refusedDraught = wf.S.consume.draught === 2;
-    wf.B.phase = 'pick';                            // the action a recall bought
     wf.B.party[0].halves = 2;
-    wf.useTonic();
-    const spent = wf.S.consume.tonic === 1;
-    const healed = wf.B.party[0].halves === 5;
-    const actionConsumed = wf.B.phase === 'fb';
-    return { refusedTonic, refusedDraught, spent, healed, actionConsumed,
+    wf.selectCombatAction('poultice');wf.chooseCombatTarget('party', 0);
+    wf.onAnswer(wf.B.opts.findIndex(o => o.ok));
+    const gated = { stock: wf.S.consume.tonic, hp: wf.B.party[0].halves, phase: wf.B.phase };
+    wf.onContinueResolve();
+    const resolved = { stock: wf.S.consume.tonic, hp: wf.B.party[0].halves, phase: wf.B.phase };
+    return { gated, resolved,
       srSame: JSON.stringify(wf.S.sr) === srBefore };
   });
-  expect(out.refusedTonic).toBe(true);
-  expect(out.refusedDraught).toBe(true);
-  expect(out.spent).toBe(true);
-  expect(out.healed).toBe(true);
-  expect(out.actionConsumed).toBe(true);
-  expect(out.srSame).toBe(true);
+  expect(out.gated).toEqual({ stock: 2, hp: 2, phase: 'fb' });
+  expect(out.resolved).toEqual({ stock: 1, hp: 5, phase: 'resolve' });
+  expect(out.srSame).toBe(false);                 // the answered knowledge gate still updates recall state
 });
 
 test('the streak chip names itself and legacy size settings cannot scale the words', async ({ page }) => {

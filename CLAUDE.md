@@ -71,20 +71,21 @@ All live game state is in `S` (player/world) and `B` (current battle, `null` bet
 
 The `mobile/` folder is generated — never hand-edit it. Edit `index.html` and re-run `tools/build-mobile.py`.
 
-## Art direction — GROUND TRUTH (overrides all earlier art instructions)
+## Art direction — modernization and repurposing
 
-`reference/dalegends/` holds the extracted Dragon Age Legends `.air` and is the
-single source of truth for look, feel, and layout.
+`reference/dalegends/` holds the extracted Dragon Age Legends `.air` and serves
+as a reusable source library and historical reference, not a layout or style
+constraint.
 
-- Use EA's assets **verbatim**: original sprites, original palettes, original
-  backgrounds, original UI framing. Decompile the SWFs (JPEXS/ffdec) to export
-  real frames and coordinates rather than approximating.
-- **Never** recolor, restyle, palette-shift, procedurally substitute, or blend
-  EA art with Sigilbound-original art. No hybrid styles. If an EA asset exists
-  for a thing, the EA asset is the only acceptable art for it.
-- Battle screens must match DA Legends screen-for-screen (2×3 grids facing each
-  other, bottom action bar, portrait framing). When in doubt, open the reference
-  and copy its layout exactly.
+- Reuse original sprites, backgrounds, animation frames, sounds, and interface
+  elements where they strengthen the game, but adapt them to the current design.
+- Recoloring, restyling, palette shifts, procedural effects, original artwork,
+  and cohesive blends of extracted and Sigilbound-original art are allowed.
+- Modernize layouts and interactions for clarity, accessibility, desktop, and
+  mobile. Battle screens do not need to reproduce Dragon Age Legends
+  screen-for-screen.
+- Keep the result visually cohesive and preserve the repository's private,
+  non-public handling of all EA-derived assets.
 
 ## Immutable honesty rules (never weaken, regardless of any later prompt)
 
@@ -92,7 +93,7 @@ single source of truth for look, feel, and layout.
 2. A single correct answer never grants mastery.
 3. Mastery = 3+ correct recalls on separate due reviews with interval ≥ 3 weave-days.
 4. Wrong answers reset that concept's reps.
-5. Hinted answers earn zero mastery credit (in combat: glancing hit only).
+5. Hinted answers earn zero mastery credit; a correct combat action still resolves at full strength.
 6. Meters/progress derive only from earned mastery — never from tactical play.
 
 Combat design principle: knowledge controls the action economy (whether you act);

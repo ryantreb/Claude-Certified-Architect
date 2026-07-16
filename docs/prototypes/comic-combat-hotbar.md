@@ -1,8 +1,10 @@
 # Comic combat hotbar prototype
 
+Status: accepted and implemented in the production combat path. Variant C's speech stack, action-first knowledge gate, battlefield hotbar, optional d20, defense callout, per-character mana, rigged resolution animations, and target-aware impact effects now run without a prototype query flag. The throwaway route, losing variants, and evaluator were removed when production work began; the descriptions below are retained only as the design record.
+
 Question: which comic-book presentation best communicates the agreed Action Intent → Targeting → Knowledge Gate → Answer Feedback → Resolved Action flow without obscuring the battlefield?
 
-The three throwaway variants live on the existing app route behind `?prototype=hotbar`:
+The three throwaway variants were reviewed on the app route behind `?prototype=hotbar`:
 
 - `variant=A`: centered splash panel
 - `variant=B`: content-sized edge panel

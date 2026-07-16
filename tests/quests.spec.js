@@ -48,17 +48,16 @@ test('the campaign turns its pages on wins and never drives progression', async 
   expect(out.srSame).toBe(true);
 });
 
-test('the class skills wear their original SKILL_SKILLS names in the strike menu', async ({ page }) => {
+test('the image ability tray keeps the original SKILL_SKILLS names as accessible labels', async ({ page }) => {
   await freshGame(page, 'c');
   await page.evaluate(() => {
     const wf = window.__wf;
     wf.S.level = 10;                       // all three skills unlocked
     wf.S.hero = { rig: 'heroMag', cls: 'caster' };
     window.startBattle({ enemyKey: 'scopecreep', region: wf.DATA.regions[0], spawn: null, boss: false });
-    window.pickAction(0);
-    window.onAnswer(wf.B.opts.findIndex(o => o.ok));
+    wf.selectCombatAction('skills');
   });
-  const labels = await page.evaluate(() => [...document.querySelectorAll('#skillRow button')].map(b => b.textContent).join(' '));
+  const labels = await page.evaluate(() => [...document.querySelectorAll('#combatAbilityTray button')].map(b => b.getAttribute('aria-label')).join(' '));
   expect(labels).toContain('Bolt');        // the mage's original basic
   expect(labels).toContain('Frostbite');   // original "cripples target"
   expect(labels).toContain('Storm');       // original "hits all enemies"

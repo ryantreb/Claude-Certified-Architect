@@ -74,8 +74,15 @@ test('IMMUTABLE: a hinted correct answer earns no recall credit', async ({ page 
     const key = window.__wf.srKey('c', c);
     window.__wf.S.sr[key] = undefined;
     const res = window.__wf.srAnswer('c', c, true, true);   // correct but hinted
-    return { kind: res.kind, reps: (window.__wf.S.sr[key] || {}).reps };
+    window.__wf.B = { region: { dom: 0, cert: 'c' }, cert: 'c' };
+    return {
+      kind: res.kind,
+      reps: (window.__wf.S.sr[key] || {}).reps,
+      normalDamage: window.__wf.attackDamage(4, 'c', c, {}),
+      hintedDamage: window.__wf.attackDamage(4, 'c', c, { hinted: true }),
+    };
   }, concept);
   expect(out.kind).toBe('hinted');
   expect(out.reps).toBe(0);
+  expect(out.hintedDamage).toBe(out.normalDamage);
 });
