@@ -89,7 +89,7 @@ test('an attack is chosen and targeted before its question, then resolves only a
   expect(await page.evaluate(() => window.__wf.B.foes[window.__wf.B.intent.target.index].halves)).toBeLessThan(before);
 });
 
-test('a knowledge gate dims and disables battlefield input', async ({ page }) => {
+test('a knowledge gate disables battlefield input without dimming', async ({ page }) => {
   await freshGame(page, 'c');
   await startBattle(page);
   await page.evaluate(() => {
@@ -107,7 +107,7 @@ test('a knowledge gate dims and disables battlefield input', async ({ page }) =>
       pointerEvents: style.pointerEvents,
     };
   });
-  expect(gate).toEqual({ phase: 'q', dimmed: true, pointerEvents: 'none' });
+  expect(gate).toEqual({ phase: 'q', dimmed: false, pointerEvents: 'none' });
 });
 
 test('continuing feedback immediately restores the battlefield for resolution', async ({ page }) => {

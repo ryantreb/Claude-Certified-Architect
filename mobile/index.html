@@ -467,11 +467,11 @@ body.nomotion *{animation:none !important;transition:none !important}
   box-shadow:4px 4px 0 rgba(0,0,0,.55);transform:rotate(-1deg);pointer-events:auto}
 #combatAbilityTray .combat-slot{flex:0 0 58px;width:58px;height:52px;aspect-ratio:auto}
 #combatHotbarWrap.dimmed{filter:brightness(.5);pointer-events:none}
-#app.combat-gated #cv{filter:brightness(.52);pointer-events:none}
+#app.combat-gated #cv{pointer-events:none}
 #battleBox{--paper:#fff7de;position:absolute;z-index:48;left:8%;top:10%;bottom:auto;width:min(84vw,760px);max-width:none;max-height:calc(100dvh - 190px);overflow:auto;
   display:block;border:0;border-radius:0;background:transparent;box-shadow:none;transform:none!important;backdrop-filter:none;-webkit-backdrop-filter:none;color:#24191f}
 #battleBox #bHead,#battleBox .bResize,#battleBox #skillRow,#battleBox #dicePanel,#battleBox #bIntro{display:none!important}
-#bScroll{overflow:auto;padding:0;display:grid;grid-template-columns:minmax(240px,1.15fr) minmax(230px,.85fr);gap:16px;align-items:start}
+#bScroll{overflow-y:auto;overflow-x:hidden;padding:0;display:grid;grid-template-columns:minmax(240px,1.15fr) minmax(230px,.85fr);gap:16px;align-items:start}
 #qDomain{grid-column:1;display:inline-flex!important;width:max-content;background:hsl(var(--region-hue),68%,58%);border:3px solid #17121c;padding:5px 9px;
   margin:0 0 -3px 14px;position:relative;z-index:2;transform:rotate(-2deg);color:#17121c;font:900 12px/1 Impact,"Arial Black",sans-serif;letter-spacing:.1em}
 #qSigil{font-size:16px;line-height:10px;margin-right:3px}
