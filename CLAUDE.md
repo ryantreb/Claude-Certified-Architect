@@ -71,6 +71,26 @@ All live game state is in `S` (player/world) and `B` (current battle, `null` bet
 
 The `mobile/` folder is generated — never hand-edit it. Edit `index.html` and re-run `tools/build-mobile.py`.
 
+## Debugging
+
+Every claim about the code must be **hand-verifiable** — the reader should never
+have to take an assertion on trust.
+
+- **Path trace any claim made about code.** Cite the exact location
+  (`index.html:NNNN`, or `file:line`) and the chain that produces the behavior:
+  where the value is set → where it's read → where it's returned/rendered. Name
+  the function and the specific branch or condition, not just the file.
+- **Quote, don't paraphrase.** Back a claim with the actual line(s) verbatim so
+  the reader can match the quote against the file.
+- **Verified vs. inferred.** State as fact only what you have actually read this
+  session. Mark anything inferred, assumed, or remembered as such — never present
+  a guess as a trace.
+- **Prefer executable proof.** For a claim about behavior, demonstrate it through
+  the `window.__wf` bridge or a Playwright spec — a passing/failing assertion is
+  the strongest hand-verifiable trace — and give the exact command to reproduce.
+- **Leave a re-runnable trail.** Include the search you used (grep pattern, line
+  numbers) so the reader can repeat the same lookup and land on the same lines.
+
 ## Art direction — modernization and repurposing
 
 `reference/dalegends/` holds the extracted Dragon Age Legends `.air` and serves
