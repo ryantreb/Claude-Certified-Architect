@@ -105,7 +105,7 @@ Expected at the planning baseline:
 
 ```text
 105 animSkins SWFs
-182 anims SWFs
+77 anims SWFs
 15 ANIMATION_ANIM_SKINS XML files
 ```
 
