@@ -757,7 +757,7 @@ Expected: one JSON-only commit.
 - Read: `reference/dalegends/data/CHARACTER_CHARCLASS.xml`
 - Read: `reference/dalegends/data/ANIMATION_ANIM_RIGS.xml`
 - Read: all creature skin-definition XML
-- Read: all relevant `reference/dalegends/assets/anims*.swf`
+- Read: all relevant `reference/dalegends/assets/anims_*.swf`
 - Read: all relevant `reference/dalegends/assets/animSkins_Monsters_*.swf`
 
 **Step 1: Build character-class assembly chains**
