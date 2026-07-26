@@ -1,8 +1,8 @@
 # Original Character Creation Engine Implementation Plan
 
-**Goal:** Replace the preset-only Creation Hall with a faithful, performant implementation of Dragon Age: Legends' original Human character creator, delivered as lazy network assets from the existing private Tailscale host while preserving every current champion and every learning-state invariant.
+**Goal:** Establish the evidence-grounded contract required before a faithful, performant implementation of the original public Human character creator can be authorized, while preserving every current champion and every learning-state invariant.
 
-**Architecture:** A deterministic build-time compiler will extract the original head vectors and headless, gendered body animations from the recovered SWFs into content-hashed files under `assets/creator/`. The Tailscale-served runtime will fetch one small manifest, the selected gender/class rig metadata, and only the animation atlases it needs; a cached SVG head will be composed client-side and drawn between each frame's back and front layers using the original transform. The service worker becomes cache-on-demand rather than pre-warming the entire game, the existing modal becomes a responsive creator with a separate Champions tab, and old `{rig, cls}` saves remain valid.
+**Architecture:** The approved work is a deterministic inventory-consuming compiler contract and claim audit. A future source-faithful compiler may extract selected, content-hashed creator assets only after the deferred evidence is recorded and reapproved. Any future runtime must remain lazy, cache-bounded, accessible, compatible with legacy `{rig, cls}` saves, and separate from learning state; it must not receive the complete inventory.
 
 **Tech Stack:** Vanilla HTML/CSS/JavaScript in `index.html`, static content-hashed JSON/SVG/WebP assets, Node.js build tooling, JPEXS Free Flash Decompiler 26.2.1, Sharp as a development-only rasterizer, Python mobile/deployment tooling, Tailscale Serve over private HTTPS, browser HTTP caching, a cache-on-demand service worker, and Playwright.
 
@@ -91,7 +91,13 @@ and regression coverage.
 
 ---
 
-## Discovery record
+## Historical discovery record — non-executable
+
+The material below is preserved research and an archived implementation draft.
+It is not an evidence source or implementation authorization. Where it conflicts
+with the approval and deferral sections above, those sections win. In particular,
+the following text must not be used to infer selector mappings, Human layering,
+equipment/weapon/rig closure, placement matrices, or creator reachability.
 
 ### Current application
 
@@ -185,16 +191,20 @@ The `anims_HumanElf_*` timelines are bare rigs. Named placements such as limbs, 
 - `reference/dalegends/tools/hero_pipeline.js`
 - `reference/dalegends/tools/batch18.js`
 
-These scripts are valuable ground truth but are not production build tools: they depend on `/tmp/dal`, an out-of-repo `sharp`, and one-off generated inputs.
+These scripts are discovery aids, not ground truth or production build tools:
+they depend on `/tmp/dal`, an out-of-repo `sharp`, and one-off generated inputs.
 
 Human head symbols live in `DALFlashApp.swf`, not in an `animSkins` SWF. The creator-visible set consists of:
 
 - male/female `headSkin` variants 1–6;
 - male/female eyes;
-- 12 mapped hair choices per gender, including the required rear-hair symbols and the male bald option;
-- `hm_facial_1..5`, coupled to male face types 2–6.
+- candidate front/rear-hair component sets; their selector and bald mappings are
+  deferred;
+- `hm_facial_1..5` as an exact component set; its face coupling is deferred.
 
-The exact `CompositeHead` order is rear hair → skin (with beard as a child) → eyes → front hair. The exact creator palettes are:
+The inventory verifies the creator palettes and tint behavior below. It does
+not yet verify a Human-specific `CompositeHead` order, so this historical draft
+must not be used to establish one.
 
 ```text
 skin = [16441285, 16240275, 13668706, 15708306, 12548926,
@@ -205,7 +215,8 @@ hair = [0, 5915442, 15585637, 3751505, 10374456,
 
 Each exposed color uses Flash `setTint(color, 0.5)`: RGB output is `source * 0.5 + tint * 0.5`, with alpha unchanged. `CompositeHead` caches by class, race, gender, skin type/color, hair type/color, and NPC face override.
 
-Creator UI symbols are also inside `DALFlashApp.swf`:
+Exploratory creator UI symbol IDs inside `DALFlashApp.swf` are visual-reference
+notes only; the inventory does not establish them as compiler inputs:
 
 - character ID 1810 / `DMCreateCharSWF` — the full 600×600 “Customize Your Hero” panel.
 - character ID 1536 / `DMSimpleCharacterCreatorSWF` — the parchment “Choose Your Character” panel.
@@ -242,7 +253,13 @@ npx playwright test tests/sprites.spec.js tests/hall.spec.js
 
 The two failures are existing portrait-contract mismatches in `tests/sprites.spec.js:61-85` and `tests/sprites.spec.js:107-129`: the tests require dedicated portrait payloads for every villain/hero, while the current renderer and passing Hall tests deliberately fall back to idle frame 0 when a rig has no portrait. Task 0 records the rendered fallback in a separate baseline commit before creator work begins. Do not conceal or casually absorb that unrelated change into a creator commit.
 
-## Task 0: Stabilize the existing portrait fallback contract
+## Archived implementation draft — non-executable
+
+The remaining task-shaped material is a historical design record. It is
+explicitly superseded by the approved executable scope and must not be run until
+the deferred evidence work is complete and this plan is reapproved.
+
+### Archived Task 0: Stabilize the existing portrait fallback contract
 
 **Files:**
 
@@ -363,7 +380,7 @@ draw frame: back WebP → transformed head Image → front WebP
 
 This split is necessary. Drawing a new head after one flattened headless body would incorrectly place it over arms or weapons that the original display list puts in front. Atlases are a delivery optimization, not a visual compromise: opening the creator should request the manifest, the head library, one rig record, and two idle atlases—not dozens of frame files or the other eleven body rigs.
 
-## Task 1: Lock the recovered creator contract with failing tests
+### Archived Task 1: Lock the recovered creator contract with failing tests
 
 **Files:**
 
@@ -445,7 +462,7 @@ git add tests/character-creator.spec.js index.html
 git commit -m "test: lock original character creator contract"
 ```
 
-## Task 2: Implement the pure creator model and backward-compatible state normalization
+### Archived Task 2: Implement the pure creator model and backward-compatible state normalization
 
 **Files:**
 
@@ -536,7 +553,7 @@ git add index.html tests/character-creator.spec.js tests/sprites.spec.js
 git commit -m "feat: add original creator state model"
 ```
 
-## Task 3: Compile content-hashed creator assets for the Tailscale host
+### Archived Task 3: Compile content-hashed creator assets for the Tailscale host
 
 **Files:**
 
@@ -731,7 +748,7 @@ git add docs/adr/0002-tailnet-creator-assets.md package.json package-lock.json t
 git commit -m "build: compile tailnet creator assets"
 ```
 
-## Task 4: Implement the lazy network loader, exact head composition, and split-frame renderer
+### Archived Task 4: Implement the lazy network loader, exact head composition, and split-frame renderer
 
 **Files:**
 
@@ -881,7 +898,7 @@ git add index.html tests/creator-assets.spec.js tests/character-creator.spec.js 
 git commit -m "feat: stream modular original heroes"
 ```
 
-## Task 5: Build the responsive creation flow and preserve the champion roster
+### Archived Task 5: Build the responsive creation flow and preserve the champion roster
 
 **Files:**
 
@@ -989,7 +1006,7 @@ git add index.html tests/character-creator.spec.js tests/hall.spec.js
 git commit -m "feat: open the original character creator"
 ```
 
-## Task 6: Integrate custom identity with world, combat, equipment, and audio
+### Archived Task 6: Integrate custom identity with world, combat, equipment, and audio
 
 **Files:**
 
@@ -1079,7 +1096,7 @@ git add index.html tests/character-creator.spec.js tests/originals.spec.js tests
 git commit -m "feat: carry custom heroes through the game"
 ```
 
-## Task 7: Ship cache-on-demand creator bundles through the Tailscale host
+### Archived Task 7: Ship cache-on-demand creator bundles through the Tailscale host
 
 **Files:**
 
@@ -1221,7 +1238,7 @@ git add tools/build-mobile.py tools/deploy-mobile.sh tools/tailnet-static-server
 git commit -m "build: stream creator assets over tailscale"
 ```
 
-## Task 8: Full regression, visual QA, and documentation handoff
+### Archived Task 8: Full regression, visual QA, and documentation handoff
 
 **Files:**
 
@@ -1306,17 +1323,21 @@ git add README.md CONTEXT.md CLAUDE.md reference/dalegends/NOTES.md
 git commit -m "docs: explain the original character creator"
 ```
 
-## Acceptance criteria
+## Superseding acceptance criteria
 
-- The Creator tab exposes exactly the original Human options: 3 classes, 2 genders, 6 faces, 12 hair types, 9 skin colors, and 9 hair colors.
-- Face/hair mappings, beard coupling, layer order, tint math, cycling, startup weighting, Random behavior, edit-mode restrictions, and 12-character name limit match recovered original logic.
-- Character art comes from the original SWFs and is extracted reproducibly; no combinatorial full-rig generation or manual redraw is used.
-- Every custom hero renders correctly in preview, portrait, world, all combat animations, both facings, and Basic/Standard equipment.
-- The existing six hero presets, eight legends, Deymour fallback, and old `{rig, cls}` saves still work.
-- Appearance changes cannot alter `sr`, mastery, meters, badges, regions, quests, or combat math beyond the already selected class.
-- Canonical gameplay code lives in `index.html`; reproducibly generated, content-hashed creator assets live in `assets/creator/`; `mobile/` is generator-only.
-- The Tailscale-hosted title screen requests no creator assets. Opening the creator requests only the manifest, head library, selected Basic rig, and idle atlases; other rigs and animation kinds load only when selected or used.
-- Mutable manifests and entry points revalidate; content-hashed creator files are served immutable for one year.
-- The service worker caches requested same-origin assets and purges old build caches, but it never pre-warms the complete game and continuous offline play is not required.
-- Mobile title boot stays at or below the existing 400-image budget, creator composition caches stay bounded, failed loads are retryable, and unrelated class/gender assets are neither requested nor cached.
-- `node tools/build-character-creator.js --check`, `node tools/build-character-creator.js --verify-output`, the mobile deterministic build check, and the full Playwright suite pass.
+- The plan treats the committed inventory as authoritative for modular identity,
+  provenance, selector mappings, layers, tint, equipment, weapons, and rig
+  compatibility.
+- Every R01-R18 reconciliation disposition is recorded; unknown relationships
+  are deferred and no approved executable task or acceptance criterion depends
+  on one.
+- The compiler contract resolves exact `symbol_key` identities and validates
+  source, slot, applicable class/gender restrictions, reference status, and
+  evidence at build/check time without bundling the full inventory for runtime.
+- Generated metadata must record the inventory schema version and SHA-256 byte
+  digest; output verification must detect inventory drift.
+- Claim audit covers every source-qualified asset, selector, layer, tint,
+  equipment, weapon, rig, and creator-reachability assertion.
+- Human-only scope, existing champions, legacy saves, learning invariants, lazy
+  delivery, mobile generation boundaries, accessibility, and regression
+  coverage remain binding.

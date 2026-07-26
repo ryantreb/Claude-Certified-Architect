@@ -5,7 +5,7 @@
 - Authoritative inventory: `docs/visual-remaster/inventory/modular-skins-inventory.json`
 - Human-readable findings: `docs/visual-remaster/inventory/modular-skins-inventory.md`
 - Plan under review: `docs/plans/2026-07-25-character-creation-engine.md`
-- Revised-plan SHA-256: `06e0765fe985a5a7bc6ce0ffab51e5c338b058428cb99d0f9ca54b6505e2604b`
+- Revised-plan SHA-256: `25edaf245b471c81ae380ff1a8e997881f7189e20be8d95b8ac2c1cd802619ee`
 - Inventory schema version: `1.0.0`
 - Inventory generated at: `2026-07-25T17:39:37.262Z`
 - Inventory source baseline: 438 SHA-256-censused SWF/XML/CSV/JS sources. Identity is `source_path::exact_export_name`; generated names retain their physical `SymbolClassTag` evidence. See inventory `methodology` and `sources`.

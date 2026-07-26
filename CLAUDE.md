@@ -40,7 +40,7 @@ Playwright requires the server to be running before tests execute — `playwrigh
 
 ## Architecture
 
-`index.html` is the entire game: ~7 400 lines of CSS + one `<script>` block. No build step; no modules; no npm runtime dependencies. The script is laid out in this order:
+`index.html` is the entire game: ~7 400 lines of CSS + one `<script>` block. There are no modules or npm runtime dependencies. The current game needs no build step; a future evidence-validated character-creator compiler may generate only selected, content-hashed assets and metadata under `assets/creator/`. The script is laid out in this order:
 
 1. **Utilities** — `$()`, `clamp`, `lerp`, `mulberry32` RNG, `store` (localStorage wrapper), `Sfx` (Web Audio)
 2. **Content data** — `ALLCONCEPTS`, `CONCEPT_DOM`, and per-domain question banks for both tracks
@@ -101,7 +101,7 @@ positioning controls how much each action is worth.
 
 ## Architecture constraints
 
-- `index.html` stays a single self-contained file; preserve the script-block layout.
+- `index.html` stays a single self-contained gameplay file; preserve the script-block layout. The only permitted exception is future selected, reproducibly generated character-creator metadata/assets under `assets/creator/`, produced and verified from the committed inventory at build time. Do not bundle the complete inventory in runtime output.
 - Keep the Playwright suite green (`npx playwright test`); `tests/smoke.spec.js`
   locks the honesty rules — never delete or skip those assertions.
 - Commit in logical steps with clear messages. No PRs unless asked.
