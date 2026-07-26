@@ -97,7 +97,7 @@ git rev-parse HEAD
 git branch --show-current
 git status --short
 find reference/dalegends/assets -maxdepth 1 -type f -name 'animSkins*.swf' | sort | wc -l
-find reference/dalegends/assets -maxdepth 1 -type f -name 'anims*.swf' | sort | wc -l
+find reference/dalegends/assets -maxdepth 1 -type f -name 'anims_*.swf' | sort | wc -l
 find reference/dalegends/data -maxdepth 1 -type f -name 'ANIMATION_ANIM_SKINS*.xml' | sort | wc -l
 ```
 

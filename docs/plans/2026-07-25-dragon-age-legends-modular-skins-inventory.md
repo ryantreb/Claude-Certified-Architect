@@ -17,7 +17,7 @@ At planning time, the repository contains:
 - Git baseline `27079eb4185f56e2cb00e2e287d8dc62f9aab5f2`.
 - `reference/dalegends/DALFlashApp.swf`.
 - 105 `reference/dalegends/assets/animSkins*.swf` files.
-- 77 `reference/dalegends/assets/anims*.swf` files.
+- 77 `reference/dalegends/assets/anims_*.swf` files.
 - 15 `reference/dalegends/data/ANIMATION_ANIM_SKINS*.xml` files.
 - 11,997 non-`MainTimeline` `SymbolClass` rows across the 105 skin SWFs. This is a raw candidate count, not the final modular-symbol count.
 - 111 `DALFlashApp.swf` `SymbolClass` rows with `hf_`, `hm_`, `ef_`, `em_`, `df_`, or `dw_` prefixes. This is also a candidate count.
@@ -194,7 +194,7 @@ Run:
 
 ```bash
 find reference/dalegends/assets -maxdepth 1 -type f -iname 'animSkins*.swf' | wc -l
-find reference/dalegends/assets -maxdepth 1 -type f -iname 'anims*.swf' | wc -l
+find reference/dalegends/assets -maxdepth 1 -type f -name 'anims_*.swf' | wc -l
 find reference/dalegends/data -maxdepth 1 -type f -iname 'ANIMATION_ANIM_SKINS*.xml' | wc -l
 ```
 
