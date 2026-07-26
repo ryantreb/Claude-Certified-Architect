@@ -5,7 +5,7 @@
 - Authoritative inventory: `docs/visual-remaster/inventory/modular-skins-inventory.json`
 - Human-readable findings: `docs/visual-remaster/inventory/modular-skins-inventory.md`
 - Plan under review: `docs/plans/2026-07-25-character-creation-engine.md`
-- Reviewed-plan SHA-256: `ee3a405eab74adc2ba04099cc2a36b6af39c460cb2ab103101fd34fbcad24e35` (a user-owned working-tree input; this issue does not alter or stage it)
+- Revised-plan SHA-256: `06e0765fe985a5a7bc6ce0ffab51e5c338b058428cb99d0f9ca54b6505e2604b`
 - Inventory schema version: `1.0.0`
 - Inventory generated at: `2026-07-25T17:39:37.262Z`
 - Inventory source baseline: 438 SHA-256-censused SWF/XML/CSV/JS sources. Identity is `source_path::exact_export_name`; generated names retain their physical `SymbolClassTag` evidence. See inventory `methodology` and `sources`.
@@ -104,6 +104,46 @@ No implementation-plan edit is made in this issue, by design. Before the next ga
 - There are no inventory `missing_symbols`; 97 duplicate export names reinforce the need for source-qualified lookup.
 - UI, networking, cache policy, save compatibility, and learning-state protections require normal implementation review but are outside asset reconciliation.
 
+## Final dispositions
+
+| Reconciliation ID | Resolution in revised plan | Plan section | Status |
+|---|---|---|---|
+| R01 | Retained Human-only public scope and binary gender. | Approved executable scope | APPLIED |
+| R02 | Retained validated selector bounds and nine exposed color values; internal index 9 remains outside creator UI. | Approved executable scope | APPLIED |
+| R03 | Retained exact source-qualified Human face and eye component set; no unsupported selector mapping is implied. | Approved executable scope | APPLIED |
+| R04 | Deferred front-hair and bald mapping. | Deferred evidence work | DEFERRED |
+| R05 | Deferred rear-hair pairing. | Deferred evidence work | DEFERRED |
+| R06 | Deferred facial-hair coupling. | Deferred evidence work | DEFERRED |
+| R07 | Deferred Human layer order and any ears assertion. | Deferred evidence work | DEFERRED |
+| R08 | Retained verified tint behavior and 0.5 mix; eyes remain untinted. | Approved executable scope | APPLIED |
+| R09 | Removed preset-component comparison as a compiler/acceptance requirement. | Approved executable scope | REMOVED |
+| R10 | Deferred class-to-starter-equipment selection. | Deferred evidence work | DEFERRED |
+| R11 | Deferred class/equipment/weapon/rig closure. | Deferred evidence work | DEFERRED |
+| R12 | Retained Basic/Standard source families only as source-qualified inventory facts. | Compiler contract | APPLIED |
+| R13 | Deferred headless-rig splitting, timeline ordering, and matrix extraction. | Deferred evidence work | DEFERRED |
+| R14 | Removed creator UI character IDs from the compiler contract; they remain visual-reference notes only. | Authoritative inventory prerequisite | REMOVED |
+| R15 | Preserved scope, save, delivery, mobile, accessibility, and learning requirements outside the asset evidence gate. | Claim audit and preserved requirements | APPLIED |
+| R16 | Removed exploratory scripts as production proof. | Authoritative inventory prerequisite | APPLIED |
+| R17 | Deferred every unresolved creator-relevant candidate until it has direct inclusion/exclusion evidence. | Deferred evidence work; compiler contract | DEFERRED |
+| R18 | Required exact `symbol_key` resolution and prohibited bare export-name inputs. | Authoritative inventory prerequisite; compiler contract | APPLIED |
+
+## Plan-readiness gate
+
+- Unresolved creator-relevant blockers: 0 in the approved executable scope
+- Deferred creator-evidence workgroups: 5
+- Revised plan consumes the authoritative inventory: yes
+- Exact symbol identity uses `source_path::exact_export_name` / `symbol_key`: yes
+- Creator scope requires no missing or unknown source relationship: yes; deferred relationships are not executable scope
+- Generated metadata records inventory schema version and SHA-256 byte digest: required
+- Browser runtime bundles the complete inventory: prohibited
+
 ## Reconciliation conclusion
 
-The evidence boundary is sufficient to preserve the Human component inventory and palette bounds, but it is not sufficient to execute a source-faithful modular creator. Gate 2 therefore fails: R04-R07, R10-R11, R13, R16, and R17 are creator-relevant blockers. The implementation plan remains unchanged, as required; the next authorized work is to enrich and revalidate the inventory, not to repair the plan or runtime.
+The evidence boundary is sufficient for the approved inventory-consuming
+compiler contract and for the validated Human product constraints. It is not
+sufficient to execute a source-faithful modular creator. R04-R07, R10-R11,
+R13, and R17 are resolved by explicit deferral, while R16 and R18 are resolved
+by the evidence and identity rules above. The revised plan has no executable
+task or acceptance condition that depends on an unresolved relationship; the
+next source-faithful implementation gate opens only after the deferred evidence
+records exist and the claim audit passes.
