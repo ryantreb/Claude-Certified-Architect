@@ -467,11 +467,15 @@ body.nomotion *{animation:none !important;transition:none !important}
   box-shadow:4px 4px 0 rgba(0,0,0,.55);transform:rotate(-1deg);pointer-events:auto}
 #combatAbilityTray .combat-slot{flex:0 0 58px;width:58px;height:52px;aspect-ratio:auto}
 #combatHotbarWrap.dimmed{filter:brightness(.5);pointer-events:none}
-#app.combat-gated #cv{filter:brightness(.52);pointer-events:none}
+#app.combat-gated #cv{pointer-events:none}
 #battleBox{--paper:#fff7de;position:absolute;z-index:48;left:8%;top:10%;bottom:auto;width:min(84vw,760px);max-width:none;max-height:calc(100dvh - 190px);overflow:auto;
   display:block;border:0;border-radius:0;background:transparent;box-shadow:none;transform:none!important;backdrop-filter:none;-webkit-backdrop-filter:none;color:#24191f}
 #battleBox #bHead,#battleBox .bResize,#battleBox #skillRow,#battleBox #dicePanel,#battleBox #bIntro{display:none!important}
-#bScroll{overflow:auto;padding:0;display:grid;grid-template-columns:minmax(240px,1.15fr) minmax(230px,.85fr);gap:16px;align-items:start}
+#cardDragHandle{display:flex;align-items:center;justify-content:center;gap:7px;min-height:30px;margin:0 10px 5px;padding:5px 10px;
+  border:3px solid #17121c;border-radius:14px;background:#fff2ca;color:#24171d;box-shadow:3px 3px 0 rgba(0,0,0,.48);
+  cursor:grab;user-select:none;-webkit-user-select:none;touch-action:none;font:900 12px/1 Impact,"Arial Black",sans-serif;letter-spacing:.08em;text-transform:uppercase}
+#cardDragHandle::before{content:"⠿";font:900 19px/12px system-ui;letter-spacing:0}#cardDragHandle:active{cursor:grabbing}
+#bScroll{overflow-y:auto;overflow-x:hidden;padding:0;display:grid;grid-template-columns:minmax(240px,1.15fr) minmax(230px,.85fr);gap:16px;align-items:start}
 #qDomain{grid-column:1;display:inline-flex!important;width:max-content;background:hsl(var(--region-hue),68%,58%);border:3px solid #17121c;padding:5px 9px;
   margin:0 0 -3px 14px;position:relative;z-index:2;transform:rotate(-2deg);color:#17121c;font:900 12px/1 Impact,"Arial Black",sans-serif;letter-spacing:.1em}
 #qSigil{font-size:16px;line-height:10px;margin-right:3px}
@@ -498,7 +502,7 @@ body.nomotion *{animation:none !important;transition:none !important}
   border:3px solid #17121c;font:900 11px/1 Impact,"Arial Black",sans-serif;letter-spacing:.1em}
 #ruleBar #rbRule::before{content:"WHY"}#ruleBar #rbExample::before{content:"EXAMPLE"}
 #ruleBar .rb-doc,#ruleBar .rb-srnote{display:none!important}
-#bActions{grid-column:1/-1;justify-content:flex-end;margin:0;position:sticky;bottom:0;z-index:6;padding:8px 0 4px;background:linear-gradient(transparent,rgba(17,12,19,.86) 42%)}#bActions .btn{flex:0 1 280px;border:3px solid #17121c;border-radius:20px 20px 4px 20px;box-shadow:4px 4px 0 hsl(var(--region-hue),68%,58%);font:900 15px Impact,"Arial Black",sans-serif;text-transform:uppercase}
+#bActions{grid-column:1/-1;justify-content:flex-end;margin:0;position:sticky;bottom:0;z-index:6;padding:8px 0 4px;background:transparent}#bActions .btn{flex:0 1 280px;border:3px solid #17121c;border-radius:20px 20px 4px 20px;box-shadow:4px 4px 0 hsl(var(--region-hue),68%,58%);font:900 15px Impact,"Arial Black",sans-serif;text-transform:uppercase}
 #combatThreat{position:absolute;z-index:50;left:50%;top:27%;transform:translate(-50%,-50%) rotate(-4deg);max-width:min(90vw,760px);padding:15px 24px;
   background:#fff4cb;color:#21151b;border:5px solid #160f15;box-shadow:9px 9px 0 rgba(0,0,0,.68);font:900 clamp(25px,5vw,46px)/1 Impact,"Arial Black",sans-serif;
   text-align:center;text-transform:uppercase;clip-path:polygon(3% 8%,15% 0,24% 7%,39% 0,51% 8%,66% 0,77% 7%,94% 2%,100% 20%,95% 37%,100% 53%,95% 70%,100% 91%,84% 86%,72% 100%,57% 91%,43% 100%,28% 91%,12% 98%,0 82%,5% 63%,0 44%,6% 27%,0 12%);animation:combatCall .16s cubic-bezier(.2,1.4,.3,1)}
@@ -556,6 +560,7 @@ body.nomotion *{animation:none !important;transition:none !important}
       <div id="combatRollHelp">Click the d20 to seal the action</div>
     </div>
     <div id="battleBox" class="panel hidden">
+      <div id="cardDragHandle" title="Drag to move the card">Drag to move</div>
       <div id="bScroll">
         <div id="bIntro"></div>
         <div id="skillRow" class="hidden"></div>
@@ -5972,8 +5977,9 @@ function renderCombatHotbar(){
   const selected=B.intent&&B.intent.hotbar;
   const seal="<svg class='combat-seal' viewBox='0 0 64 64' aria-hidden='true'><path d='M10 13l44 38M54 13L10 51' stroke='#d8c3a2' stroke-width='8'/><path d='M10 13l44 38M54 13L10 51' stroke='#3c2931' stroke-width='3' stroke-dasharray='6 4'/></svg>";
   const slot=(kind,label,extra,disabled)=>{const sealed=!!B.gauntlet&&["poultice","mana","utility"].includes(kind);return "<button class='combat-slot"+(selected===kind?" selected":"")+(B.failureSlot===kind?" bounced":"")+(sealed?" sealed":"")+"' data-combat-action='"+kind+"' aria-label='"+esc(label)+"' title='"+esc(label)+"' "+((busy||disabled||sealed)?"disabled":"")+">"+combatIcon(kind)+(extra||"")+(sealed?seal:"")+"</button>"};
-  bar.innerHTML=slot("attack","Basic attack")+
-    slot("skills","Skills and spells")+
+  const m=activeMember();
+  bar.innerHTML=slot("attack",m&&m.cls==="caster"?"Sword attack — unavailable to spellcasters":"Sword attack",null,!canUseCombatAction(m,"attack"))+
+    slot("skills",m&&m.cls!=="caster"?"Spell — spellcasters only":"Spell",null,!canUseCombatAction(m,"skills"))+
     slot("poultice","Poultice — "+S.consume.tonic+" held",badge(S.consume.tonic),S.consume.tonic<1)+
     slot("mana","Mana draught — "+S.consume.draught+" held",badge(S.consume.draught),S.consume.draught<1)+
     slot("utility","Utility and withdraw — "+S.consume.bomb+" clay bombs",badge(S.consume.bomb));
@@ -5981,6 +5987,12 @@ function renderCombatHotbar(){
   $("combatHotbarWrap").classList.toggle("dimmed",busy);
 }
 function activeMember(){return B&&B.party[B.active]&&B.party[B.active].halves>0?B.party[B.active]:livingParty()[0]}
+function canUseCombatAction(m,kind){
+  if(!m)return false;
+  if(kind==="attack")return m.cls!=="caster";
+  if(kind==="skills")return m.cls==="caster";
+  return true;
+}
 function activeMana(){const m=activeMember();return m?(m.mana||0):0}
 function setActiveCombatant(i){
   if(!B||!["act","tray"].includes(B.phase)||!B.party[i]||B.party[i].halves<=0||memberStaggered(B.party[i]))return false;
@@ -6000,6 +6012,11 @@ function selectCombatAction(kind){
   if(!B||B.gauntlet||!['act','target','tray'].includes(B.phase))return;
   if(B.phase==="tray"&&B.intent&&B.intent.hotbar===kind){showActions();return}
   const m=activeMember();if(!m)return;
+  if(!canUseCombatAction(m,kind)){
+    B.phase="act";B.intent=null;B.trayItems=[];renderCombatTray();updateBattleHUD();
+    toast(kind==="attack"?"Spellcasters cannot use the sword action.":"Only spellcasters can use the spell action.");
+    return;
+  }
   B.active=B.party.indexOf(m);B.mana=m.mana;B.manaMax=m.manaMax;
   if(kind==="skills"){
     B.phase="tray";B.trayItems=skillsFor(m.cls).filter(sk=>sk.lv<=S.level).map(sk=>({name:(sk.lv===1&&m.kind==="comp")?m.ability:sk.n,icon:"skills",cost:sk.mana||0,disabled:(sk.mana||0)>activeMana(),sk}));
@@ -7486,9 +7503,19 @@ function renderBattle(t){
   const fHome=B.foes.map(f=>cellPos("f",f.cell.col,f.cell.row,w,groundY,scale));
   B.partyScreen=pHome;
   B.foeScreen=fHome.map((f,i)=>{
-    const k=SHAPE_SPRITE[B.foes[i].e.shape],a=k&&DATA.eaRig[k]&&DATA.eaRig[k].anims.idle;
-    const r=a?Math.max(26,a.h*(DATA.eaRig[k].ds||1)*0.55)*scale:30*scale*(B.foes[i].e.size||1);
-    return {x:f.x,y:f.y,r:r}});
+    const e=B.foes[i].e,k=SHAPE_SPRITE[e.shape],rig=k&&DATA.eaRig[k],a=rig&&rig.anims.idle;
+    const im=k&&EARIG[k]&&EARIG[k].anims.idle&&EARIG[k].anims.idle[0];
+    let cx=0,cy,top,hw,hh,r;
+    if(a&&im&&im.complete&&im.naturalWidth){
+      /* box the target on the sprite's real drawn bounds (feet-anchored rig frame 0) */
+      const ds=rig.ds||1,f0=a.f[0],dx0=(f0.x-a.ox)*ds,dy0=(f0.y-a.oy)*ds;
+      const dw=im.naturalWidth*ds,dh=im.naturalHeight*ds;
+      cx=(dx0+dw*0.5)*scale;cy=(dy0+dh*0.5)*scale;top=dy0*scale;
+      hw=dw*0.5*scale;hh=dh*0.5*scale;r=Math.max(hw,hh);
+    }else{
+      r=30*scale*(e.size||1);cy=-r;top=-r*1.7;hw=r;hh=r;
+    }
+    return {x:f.x,y:f.y,r:r,cx:cx,cy:cy,top:top,hw:hw,hh:hh}});
   function memberPose(i){
     const home=pHome[i];let x=home.x,y=home.y,atkK=0,guard=false,lean=0,hide=0;
     if(seq&&seq.mi===i){
@@ -7731,14 +7758,14 @@ function renderBattle(t){
   for(let i=0;i<B.foes.length;i++){
     const f=B.foes[i];
     if(f.halves<=0)continue;
-    drawHearts(fHome[i].x,fHome[i].y-52*scale*(f.e.size||1)*0.92,f.halves,Math.min(f.max,16),Math.min(1,scale*0.78));
+    const fsH=B.foeScreen[i];
+    drawHearts(fHome[i].x+fsH.cx,fHome[i].y+fsH.top-8*scale,f.halves,Math.min(f.max,16),Math.min(1,scale*0.78));
   }
   {
     const tf2=B.foes[B.target];
     if(tf2&&tf2.halves>0){
       const fs=B.foeScreen[B.target];
-      const half=30*scale*(tf2.e.size||1);
-      drawBrackets(fs.x,fs.y-half*0.62,half*0.78,half*0.72,t,0.92);
+      drawBrackets(fs.x+fs.cx,fs.y+fs.cy,fs.hw*0.82,fs.hh*0.9,t,0.92);
     }
   }
   drawFxLayer(w,h,scale);
@@ -8479,7 +8506,7 @@ cv.addEventListener("pointerup",e=>{
     for(let i=0;i<B.foeScreen.length;i++){
       const fs=B.foeScreen[i];
       if(!fs||B.foes[i].halves<=0)continue;
-      if(Math.hypot(e.clientX-fs.x,e.clientY-(fs.y-fs.r*0.6))<Math.max(36,fs.r)){if(B.phase==="target")chooseCombatTarget("foe",i);else setTarget(i);break}
+      if(Math.hypot(e.clientX-(fs.x+(fs.cx||0)),e.clientY-(fs.y+(fs.cy!=null?fs.cy:-fs.r*0.6)))<Math.max(36,fs.r)){if(B.phase==="target")chooseCombatTarget("foe",i);else setTarget(i);break}
     }
     return;
   }
@@ -8588,7 +8615,7 @@ function applyCardPos(){
   box.style.top=clamp(p[1],8,H-64)+"px";
 }
 (function(){
-  const box=$("battleBox"),head=$("bHead");
+  const box=$("battleBox"),head=$("cardDragHandle");
   if(!box||!head)return;
   let drag=null,pinch=null;
   head.addEventListener("pointerdown",e=>{

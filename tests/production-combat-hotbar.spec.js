@@ -37,6 +37,54 @@ test('production battle opens with a fixed five-slot image hotbar and rolls disa
   expect(state.d20).toBe(false);
 });
 
+test('the knowledge card has a visible drag handle that repositions it', async ({ page }) => {
+  await freshGame(page, 'c');
+  await startBattle(page);
+  await page.evaluate(() => {
+    const wf = window.__wf;
+    wf.selectCombatAction('attack');
+    for (let i = 0; i < wf.B.foes.length && wf.B.phase === 'target'; i++) wf.chooseCombatTarget('foe', i);
+  });
+
+  const handle = page.locator('#cardDragHandle');
+  await expect(handle).toBeVisible();
+  const before = await page.locator('#battleBox').boundingBox();
+  await handle.evaluate((element) => {
+    const rect = element.getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+    element.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, pointerId: 7, clientX: x, clientY: y }));
+    element.dispatchEvent(new PointerEvent('pointermove', { bubbles: true, pointerId: 7, clientX: x + 60, clientY: y + 50 }));
+    element.dispatchEvent(new PointerEvent('pointerup', { bubbles: true, pointerId: 7, clientX: x + 60, clientY: y + 50 }));
+  });
+  const after = await page.locator('#battleBox').boundingBox();
+
+  expect(after.x).not.toBeCloseTo(before.x, 0);
+  const savedPosition = await page.evaluate(() => window.__wf.S.settings.cardXY);
+  expect(savedPosition[0]).toBeCloseTo(before.x + 60, 2);
+  expect(savedPosition[1]).toBeCloseTo(before.y + 50, 2);
+});
+
+test('combat actions are restricted to the active combatant class', async ({ page }) => {
+  await freshGame(page, 'c');
+  const state = await page.evaluate(() => {
+    const wf = window.__wf;
+    wf.S.hero = { rig: 'heroMag', cls: 'caster' };
+    window.startBattle({ enemyKey: 'parsewraith', region: wf.DATA.regions[0], spawn: null, boss: false });
+    const swordDisabled = document.querySelector('[data-combat-action="attack"]').disabled;
+    wf.selectCombatAction('attack');
+    const magePhase = wf.B.phase;
+
+    wf.S.hero = { rig: 'heroWar', cls: 'vanguard' };
+    window.startBattle({ enemyKey: 'parsewraith', region: wf.DATA.regions[0], spawn: null, boss: false });
+    const spellDisabled = document.querySelector('[data-combat-action="skills"]').disabled;
+    wf.selectCombatAction('skills');
+    return { swordDisabled, magePhase, spellDisabled, warriorPhase: wf.B.phase };
+  });
+
+  expect(state).toEqual({ swordDisabled: true, magePhase: 'act', spellDisabled: true, warriorPhase: 'act' });
+});
+
 test('an attack is chosen and targeted before its question, then resolves only after feedback', async ({ page }) => {
   await freshGame(page, 'c');
   await startBattle(page);
@@ -89,7 +137,7 @@ test('an attack is chosen and targeted before its question, then resolves only a
   expect(await page.evaluate(() => window.__wf.B.foes[window.__wf.B.intent.target.index].halves)).toBeLessThan(before);
 });
 
-test('a knowledge gate dims and disables battlefield input', async ({ page }) => {
+test('a knowledge gate disables battlefield input without dimming', async ({ page }) => {
   await freshGame(page, 'c');
   await startBattle(page);
   await page.evaluate(() => {
@@ -107,7 +155,7 @@ test('a knowledge gate dims and disables battlefield input', async ({ page }) =>
       pointerEvents: style.pointerEvents,
     };
   });
-  expect(gate).toEqual({ phase: 'q', dimmed: true, pointerEvents: 'none' });
+  expect(gate).toEqual({ phase: 'q', dimmed: false, pointerEvents: 'none' });
 });
 
 test('continuing feedback immediately restores the battlefield for resolution', async ({ page }) => {
@@ -160,7 +208,8 @@ test('the target confirmed before recall cannot change while the gate is open', 
       boss: false,
       eaWave: [{ n: 'First Target', s: 'zombie' }, { n: 'Second Target', s: 'zombie' }],
     });
-    wf.selectCombatAction('attack');
+    wf.selectCombatAction('skills');
+    wf.chooseCombatTrayItem(0);
     wf.chooseCombatTarget('foe', 0);
   });
   const before = await page.evaluate(() => window.__wf.B.foes.map(foe => foe.halves));
@@ -183,7 +232,8 @@ test('switching the active combatant while a tray is open refreshes that tray', 
   await freshGame(page, 'c');
   const state = await page.evaluate(() => {
     const wf = window.__wf;
-    const companion = wf.DATA.companions.find(candidate => candidate.cert === 'c');
+    const companion = wf.DATA.companions.find(candidate => candidate.id === 'comp_c0');
+    wf.S.hero = { rig: 'heroMag', cls: 'caster' };
     wf.S.companions = [companion.id];
     window.startBattle({ enemyKey: 'parsewraith', region: wf.DATA.regions[0], spawn: null, boss: false });
     wf.selectCombatAction('skills');
@@ -203,6 +253,26 @@ test('switching the active combatant while a tray is open refreshes that tray', 
   expect(state.hotbar).toBe('skills');
   expect(state.trayNames.length).toBeGreaterThan(0);
   expect(state.trayNames).toContain(state.expectedAbility);
+});
+
+test('switching from a mage spell tray to a non-spellcaster disables and dismisses it', async ({ page }) => {
+  await freshGame(page, 'c');
+  const state = await page.evaluate(() => {
+    const wf = window.__wf;
+    const companion = wf.DATA.companions.find(candidate => candidate.id === 'comp_c1');
+    wf.S.hero = { rig: 'heroMag', cls: 'caster' };
+    wf.S.companions = [companion.id];
+    window.startBattle({ enemyKey: 'parsewraith', region: wf.DATA.regions[0], spawn: null, boss: false });
+    wf.selectCombatAction('skills');
+    wf.setActiveCombatant(1);
+    return {
+      phase: wf.B.phase,
+      spellDisabled: document.querySelector('[data-combat-action="skills"]').disabled,
+      trayHidden: document.getElementById('combatAbilityTray').classList.contains('hidden'),
+    };
+  });
+
+  expect(state).toEqual({ phase: 'act', spellDisabled: true, trayHidden: true });
 });
 
 test('a hint can forfeit recall credit without weakening correct attack damage', async ({ page }) => {

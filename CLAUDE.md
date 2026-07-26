@@ -106,6 +106,22 @@ positioning controls how much each action is worth.
   locks the honesty rules — never delete or skip those assertions.
 - Commit in logical steps with clear messages. No PRs unless asked.
 
+## Agent skills
+
+### Issue tracker
+
+Issues live in this repository's GitHub Issues. External pull requests are not a
+triage surface. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Use the canonical `needs-triage`, `needs-info`, `ready-for-agent`,
+`ready-for-human`, and `wontfix` labels. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+This is a single-context repository. See `docs/agents/domain.md`.
+
 ## Vendored skills (`.claude/skills/`)
 
 These skills are **vendored** (committed into this repo), not installed via
