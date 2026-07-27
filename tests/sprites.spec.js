@@ -6,6 +6,22 @@
 const { test } = require('@playwright/test');
 const { loadGame, wakeRigs, expect } = require('./helpers');
 
+async function publicPortraitChecks(page, keys) {
+  return page.evaluate(async (rigKeys) => {
+    const wf = window.__wf;
+    return Promise.all(rigKeys.map(async (key) => {
+      const img = new Image();
+      const url = wf.portraitSquare(key);
+      const decoded = await new Promise((resolve) => {
+        img.onload = () => resolve(true);
+        img.onerror = () => resolve(false);
+        img.src = url;
+      });
+      return { decoded, square: img.naturalWidth === img.naturalHeight, width: img.naturalWidth };
+    }));
+  }, keys);
+}
+
 test('mapped foe shapes resolve to a loaded verbatim rig', async ({ page }) => {
   await loadGame(page);
   // rig art demand-loads: ask for the genlock rig, then wait for frame 0
@@ -72,17 +88,20 @@ test('the party companions wear their own guild looks; villains keep their rigs'
       caster: wf.memberSpriteKey({ kind: 'comp', cls: 'caster' }),
       ranger: wf.memberSpriteKey({ kind: 'comp', cls: 'ranger' }),
       tovez: wf.memberSpriteKey({ kind: 'comp', id: 'NPC_TOVEZ', cls: 'vanguard' }),
-      villains: ['tianne', 'soleil', 'beirus']
-        .every(k => wf.EARIG[k] && wf.EARIG[k].portrait && wf.EARIG[k].portrait.src.length > 50),
     };
   });
+  const villains = await publicPortraitChecks(page, ['tianne', 'soleil', 'beirus']);
   expect(out.hero).toBe('deymour');
   expect(out.vanguard).toBe('compVan');
   expect(out.shadow).toBe('compSha');
   expect(out.caster).toBe('compCas');
   expect(out.ranger).toBe('compRng');
   expect(out.tovez).toBe('carta2H');
-  expect(out.villains).toBe(true);
+  for (const portrait of villains) {
+    expect(portrait.decoded).toBe(true);
+    expect(portrait.square).toBe(true);
+    expect(portrait.width).toBeGreaterThan(10);
+  }
 });
 
 test('battle slots sit on the original BattleDisplay grid', async ({ page }) => {
@@ -114,15 +133,19 @@ test('the four original hero loadouts are riggable and steer the party', async (
     const rigs = wf.HERO_CHOICES.map(c => c.rig);
     const full = rigs.every(k => ['idle', 'strike', 'special', 'dmg', 'death', 'fwd', 'evade', 'block']
       .every(a => wf.DATA.eaRig[k].anims[a] && wf.DATA.eaRig[k].anims[a].f.length > 0));
-    const portraits = rigs.every(k => wf.EARIG[k].portrait && wf.EARIG[k].portrait.src.length > 50);
     wf.S.hero = { rig: 'heroMag', cls: 'caster' };
     const heroKey = wf.memberSpriteKey({ kind: 'hero', cls: 'caster' });
     wf.S.hero = null;
     const legacy = wf.memberSpriteKey({ kind: 'hero', cls: 'vanguard' });
-    return { full, portraits, heroKey, legacy, choices: wf.HERO_CHOICES.map(c => c.cls).sort() };
+    return { full, heroKey, legacy, choices: wf.HERO_CHOICES.map(c => c.cls).sort() };
   });
+  const portraits = await publicPortraitChecks(page, ['heroWar', 'heroRog', 'heroMag', 'heroArc', 'heroRog2', 'heroMag2']);
   expect(out.full).toBe(true);                   // every loadout ships its full original anim set
-  expect(out.portraits).toBe(true);
+  for (const portrait of portraits) {
+    expect(portrait.decoded).toBe(true);
+    expect(portrait.square).toBe(true);
+    expect(portrait.width).toBeGreaterThanOrEqual(96);
+  }
   expect(out.heroKey).toBe('heroMag');           // the chosen discipline rides into battle
   expect(out.legacy).toBe('deymour');            // old saves keep their champion
   // 6 loadouts now: the Half-Elf Rogue doubles 'shadow', the Red Wizard doubles 'caster'

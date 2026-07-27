@@ -3,7 +3,7 @@
    portraits, the earned drink (consumables spend a recall-bought action),
    the labeled streak chip, and the question-card size setting. */
 const { test } = require('@playwright/test');
-const { freshGame, wakeRigs, expect } = require('./helpers');
+const { loadGame, freshGame, wakeRigs, expect } = require('./helpers');
 
 test('legends join the roster with their original stat rows on the d20', async ({ page }) => {
   await freshGame(page, 'c');
@@ -84,6 +84,19 @@ test('the hero screen portraits resolve sharp, not thumbnail-sized', async ({ pa
     return sizes;
   }, keys);
   for (const k of keys) expect(out[k], k).toBeGreaterThanOrEqual(96);
+});
+
+test('cold Creation Hall cards update to square portraits after their rigs load', async ({ page }) => {
+  await loadGame(page);
+  await page.evaluate(() => window.__wf.chooseHero(null, true));
+  await page.waitForFunction(() => {
+    const heroKeys = new Set(window.__wf.HERO_CHOICES.map((hero) => hero.rig));
+    const cards = [...document.querySelectorAll('[data-hero]')]
+      .filter((card) => heroKeys.has(card.dataset.hero))
+      .map((card) => card.querySelector('img'));
+    return cards.length === heroKeys.size && cards.every((img) => img.complete && img.naturalWidth >= 96 &&
+        img.naturalWidth === img.naturalHeight);
+  });
 });
 
 test('the half-elf rogue and the red wizard stand in the hall with full hero rigs', async ({ page }) => {
