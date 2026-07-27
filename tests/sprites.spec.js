@@ -22,6 +22,14 @@ async function publicPortraitChecks(page, keys) {
   }, keys);
 }
 
+function expectSquarePortraits(portraits, minimumWidth) {
+  for (const portrait of portraits) {
+    expect(portrait.decoded).toBe(true);
+    expect(portrait.square).toBe(true);
+    expect(portrait.width).toBeGreaterThanOrEqual(minimumWidth);
+  }
+}
+
 test('mapped foe shapes resolve to a loaded verbatim rig', async ({ page }) => {
   await loadGame(page);
   // rig art demand-loads: ask for the genlock rig, then wait for frame 0
@@ -97,11 +105,7 @@ test('the party companions wear their own guild looks; villains keep their rigs'
   expect(out.caster).toBe('compCas');
   expect(out.ranger).toBe('compRng');
   expect(out.tovez).toBe('carta2H');
-  for (const portrait of villains) {
-    expect(portrait.decoded).toBe(true);
-    expect(portrait.square).toBe(true);
-    expect(portrait.width).toBeGreaterThan(10);
-  }
+  expectSquarePortraits(villains, 11);
 });
 
 test('battle slots sit on the original BattleDisplay grid', async ({ page }) => {
@@ -141,11 +145,7 @@ test('the four original hero loadouts are riggable and steer the party', async (
   });
   const portraits = await publicPortraitChecks(page, ['heroWar', 'heroRog', 'heroMag', 'heroArc', 'heroRog2', 'heroMag2']);
   expect(out.full).toBe(true);                   // every loadout ships its full original anim set
-  for (const portrait of portraits) {
-    expect(portrait.decoded).toBe(true);
-    expect(portrait.square).toBe(true);
-    expect(portrait.width).toBeGreaterThanOrEqual(96);
-  }
+  expectSquarePortraits(portraits, 96);
   expect(out.heroKey).toBe('heroMag');           // the chosen discipline rides into battle
   expect(out.legacy).toBe('deymour');            // old saves keep their champion
   // 6 loadouts now: the Half-Elf Rogue doubles 'shadow', the Red Wizard doubles 'caster'

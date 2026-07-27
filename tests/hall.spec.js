@@ -90,12 +90,16 @@ test('cold Creation Hall cards update to square portraits after their rigs load'
   await loadGame(page);
   await page.evaluate(() => window.__wf.chooseHero(null, true));
   await page.waitForFunction(() => {
-    const heroKeys = new Set(window.__wf.HERO_CHOICES.map((hero) => hero.rig));
+    const wf = window.__wf;
+    const heroKeys = new Set(wf.HERO_CHOICES.map((hero) => hero.rig));
+    const hallKeys = new Set([...wf.HERO_CHOICES, ...wf.LEGEND_CHOICES].map((hero) => hero.rig));
     const cards = [...document.querySelectorAll('[data-hero]')]
-      .filter((card) => heroKeys.has(card.dataset.hero))
-      .map((card) => card.querySelector('img'));
-    return cards.length === heroKeys.size && cards.every((img) => img.complete && img.naturalWidth >= 96 &&
-        img.naturalWidth === img.naturalHeight);
+      .filter((card) => hallKeys.has(card.dataset.hero));
+    return cards.length === hallKeys.size && cards.every((card) => {
+      const img = card.querySelector('img');
+      return img.complete && img.naturalWidth === img.naturalHeight &&
+        (!heroKeys.has(card.dataset.hero) || img.naturalWidth >= 96);
+    });
   });
 });
 
@@ -107,7 +111,7 @@ test('the half-elf rogue and the red wizard stand in the hall with full hero rig
     const kinds = ['idle', 'strike', 'special', 'dmg', 'death', 'fwd', 'evade', 'block'];
     const whole = (k) => {
       const r = wf.DATA.eaRig[k];
-      return !!(r && r.portrait && kinds.every(a => r.anims[a] && r.anims[a].f.length > 0));
+      return !!(r && kinds.every(a => r.anims[a] && r.anims[a].f.length > 0));
     };
     return {
       rog: byRig.heroRog2 && byRig.heroRog2.cls,
@@ -120,6 +124,29 @@ test('the half-elf rogue and the red wizard stand in the hall with full hero rig
   expect(out.mag).toBe('caster');
   expect(out.rogWhole).toBe(true);
   expect(out.magWhole).toBe(true);
+});
+
+test('a missing dedicated portrait falls back to the idle frame through the public renderer', async ({ page }) => {
+  await freshGame(page, 'c');
+  await wakeRigs(page, ['heroWar']);
+  const out = await page.evaluate(async () => {
+    const wf = window.__wf;
+    const rig = wf.EARIG.heroWar;
+    const portrait = rig.portrait;
+    rig.portrait = null;
+    const url = wf.portraitSquare('heroWar');
+    rig.portrait = portrait;
+    const img = new Image();
+    const decoded = await new Promise((resolve) => {
+      img.onload = () => resolve(true);
+      img.onerror = () => resolve(false);
+      img.src = url;
+    });
+    return { decoded, square: img.naturalWidth === img.naturalHeight, width: img.naturalWidth };
+  });
+  expect(out.decoded).toBe(true);
+  expect(out.square).toBe(true);
+  expect(out.width).toBeGreaterThanOrEqual(96);
 });
 
 test('portraits crop to content and land centered on a square', async ({ page }) => {
