@@ -97,7 +97,7 @@ test('cold Creation Hall cards update to square portraits after their rigs load'
       .filter((card) => hallKeys.has(card.dataset.hero));
     return cards.length === hallKeys.size && cards.every((card) => {
       const img = card.querySelector('img');
-      return img.complete && img.naturalWidth === img.naturalHeight &&
+      return img.complete && img.src.startsWith('data:image/png') && img.naturalWidth === img.naturalHeight &&
         (!heroKeys.has(card.dataset.hero) || img.naturalWidth >= 96);
     });
   });
