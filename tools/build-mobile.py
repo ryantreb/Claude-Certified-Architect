@@ -95,16 +95,46 @@ REGISTER_SNIPPET = r"""<script>
    https); over a plain-http LAN ip this returns immediately and changes nothing. */
 (function () {
   if (!("serviceWorker" in navigator) || !window.isSecureContext) return;
-  navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).catch(function () {});
 
   /* a new build's worker takes control (skipWaiting + claim) — reload once so
      the fresh shell runs now, not on the open after. Guarded on a previous
      controller existing, so the very first install never reload-loops. */
   var hadSW = !!navigator.serviceWorker.controller;
+  var reloadingForUpdate = false;
   navigator.serviceWorker.addEventListener("controllerchange", function () {
-    if (hadSW) location.reload();
+    if (hadSW && !reloadingForUpdate) {
+      reloadingForUpdate = true;
+      location.reload();
+    }
     hadSW = true;
   });
+
+  /* iPadOS often resumes a Home Screen app without navigating, so the browser
+     may keep an old shell open indefinitely unless the page explicitly asks
+     its registration to check. Throttle the overlapping visibility/pageshow/
+     focus events that a single resume can emit. */
+  var registration = null, lastUpdateCheck = 0;
+  function checkForUpdate() {
+    var now = Date.now();
+    if (now - lastUpdateCheck < 2000) return;
+    lastUpdateCheck = now;
+    var lookup = registration
+      ? Promise.resolve(registration)
+      : navigator.serviceWorker.getRegistration();
+    lookup.then(function (reg) {
+      if (reg) return reg.update();
+    }).catch(function () {});
+  }
+  function checkWhenVisible() {
+    if (document.visibilityState === "visible") checkForUpdate();
+  }
+  document.addEventListener("visibilitychange", checkWhenVisible);
+  window.addEventListener("pageshow", checkForUpdate);
+  window.addEventListener("focus", checkForUpdate);
+
+  navigator.serviceWorker.register("sw.js", { updateViaCache: "none" })
+    .then(function (reg) { registration = reg; })
+    .catch(function () {});
 
   var pill;
   function say(t) {

@@ -3,7 +3,7 @@
    portraits, the earned drink (consumables spend a recall-bought action),
    the labeled streak chip, and the question-card size setting. */
 const { test } = require('@playwright/test');
-const { freshGame, wakeRigs, expect } = require('./helpers');
+const { loadGame, freshGame, wakeRigs, expect } = require('./helpers');
 
 test('legends join the roster with their original stat rows on the d20', async ({ page }) => {
   await freshGame(page, 'c');
@@ -86,6 +86,23 @@ test('the hero screen portraits resolve sharp, not thumbnail-sized', async ({ pa
   for (const k of keys) expect(out[k], k).toBeGreaterThanOrEqual(96);
 });
 
+test('cold Creation Hall cards update to square portraits after their rigs load', async ({ page }) => {
+  await loadGame(page);
+  await page.evaluate(() => window.__wf.chooseHero(null, true));
+  await page.waitForFunction(() => {
+    const wf = window.__wf;
+    const heroKeys = new Set(wf.HERO_CHOICES.map((hero) => hero.rig));
+    const hallKeys = new Set([...wf.HERO_CHOICES, ...wf.LEGEND_CHOICES].map((hero) => hero.rig));
+    const cards = [...document.querySelectorAll('[data-hero]')]
+      .filter((card) => hallKeys.has(card.dataset.hero));
+    return cards.length === hallKeys.size && cards.every((card) => {
+      const img = card.querySelector('img');
+      return img.complete && img.src.startsWith('data:image/png') && img.naturalWidth === img.naturalHeight &&
+        (!heroKeys.has(card.dataset.hero) || img.naturalWidth >= 96);
+    });
+  });
+});
+
 test('the half-elf rogue and the red wizard stand in the hall with full hero rigs', async ({ page }) => {
   await freshGame(page, 'c');
   const out = await page.evaluate(() => {
@@ -94,7 +111,7 @@ test('the half-elf rogue and the red wizard stand in the hall with full hero rig
     const kinds = ['idle', 'strike', 'special', 'dmg', 'death', 'fwd', 'evade', 'block'];
     const whole = (k) => {
       const r = wf.DATA.eaRig[k];
-      return !!(r && r.portrait && kinds.every(a => r.anims[a] && r.anims[a].f.length > 0));
+      return !!(r && kinds.every(a => r.anims[a] && r.anims[a].f.length > 0));
     };
     return {
       rog: byRig.heroRog2 && byRig.heroRog2.cls,
@@ -107,6 +124,29 @@ test('the half-elf rogue and the red wizard stand in the hall with full hero rig
   expect(out.mag).toBe('caster');
   expect(out.rogWhole).toBe(true);
   expect(out.magWhole).toBe(true);
+});
+
+test('a missing dedicated portrait falls back to the idle frame through the public renderer', async ({ page }) => {
+  await freshGame(page, 'c');
+  await wakeRigs(page, ['heroWar']);
+  const out = await page.evaluate(async () => {
+    const wf = window.__wf;
+    const rig = wf.EARIG.heroWar;
+    const portrait = rig.portrait;
+    rig.portrait = null;
+    const url = wf.portraitSquare('heroWar');
+    rig.portrait = portrait;
+    const img = new Image();
+    const decoded = await new Promise((resolve) => {
+      img.onload = () => resolve(true);
+      img.onerror = () => resolve(false);
+      img.src = url;
+    });
+    return { decoded, square: img.naturalWidth === img.naturalHeight, width: img.naturalWidth };
+  });
+  expect(out.decoded).toBe(true);
+  expect(out.square).toBe(true);
+  expect(out.width).toBeGreaterThanOrEqual(96);
 });
 
 test('portraits crop to content and land centered on a square', async ({ page }) => {

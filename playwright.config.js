@@ -3,8 +3,15 @@ const { defineConfig, devices } = require('@playwright/test');
 
 /* Sigilbound is a single static index.html with no build step. We serve the
    repo over http (not file://) so localStorage and module-scope globals behave
-   exactly as they do in a real browser tab. */
-const PORT = Number(process.env.PLAYWRIGHT_PORT || 8753);
+   exactly as they do in a real browser tab.
+
+   The root must be the repo, not mobile/: the suite needs /index.html (the
+   source) AND /mobile/index.html (the generated build the phone plays). Port
+   8753 cannot be used — sigilbound-mobile.service holds it and serves mobile/
+   as its root, so /mobile/index.html 404s there and reuseExistingServer below
+   would silently attach the whole suite to that server. 8754 is the save
+   endpoint. Keep this off both. */
+const PORT = Number(process.env.PLAYWRIGHT_PORT || 8757);
 
 module.exports = defineConfig({
   testDir: './tests',

@@ -475,6 +475,17 @@ body.nomotion *{animation:none !important;transition:none !important}
   border:3px solid #17121c;border-radius:14px;background:#fff2ca;color:#24171d;box-shadow:3px 3px 0 rgba(0,0,0,.48);
   cursor:grab;user-select:none;-webkit-user-select:none;touch-action:none;font:900 12px/1 Impact,"Arial Black",sans-serif;letter-spacing:.08em;text-transform:uppercase}
 #cardDragHandle::before{content:"⠿";font:900 19px/12px system-ui;letter-spacing:0}#cardDragHandle:active{cursor:grabbing}
+/* the only resize affordance the comic card has: the edge handles above are
+   hidden here, and pinch is invisible and width-only. One finger-sized corner
+   grip drags both axes; the words never scale with it. */
+/* it rides in the sticky action row, so it is always at the card's bottom-right
+   corner and costs no extra height */
+#cardResizeGrip{flex:0 0 auto;align-self:center;margin-left:8px;width:42px;height:42px;
+  display:flex;align-items:flex-end;justify-content:flex-end;padding:5px;
+  border:3px solid #17121c;border-radius:16px 16px 16px 4px;background:#fff2ca;box-shadow:3px 3px 0 rgba(0,0,0,.48);
+  cursor:nwse-resize;touch-action:none;user-select:none;-webkit-user-select:none}
+#cardResizeGrip::after{content:"";width:15px;height:15px;border-right:3px solid #17121c;border-bottom:3px solid #17121c;border-radius:0 0 4px 0}
+#cardResizeGrip:active{background:#ffe7a0}
 #bScroll{overflow-y:auto;overflow-x:hidden;padding:0;display:grid;grid-template-columns:minmax(240px,1.15fr) minmax(230px,.85fr);gap:16px;align-items:start}
 #qDomain{grid-column:1;display:inline-flex!important;width:max-content;background:hsl(var(--region-hue),68%,58%);border:3px solid #17121c;padding:5px 9px;
   margin:0 0 -3px 14px;position:relative;z-index:2;transform:rotate(-2deg);color:#17121c;font:900 12px/1 Impact,"Arial Black",sans-serif;letter-spacing:.1em}
@@ -514,7 +525,24 @@ body.nomotion *{animation:none !important;transition:none !important}
 @keyframes combatRoll{0%{transform:rotate(-12deg) scale(.9)}33%{transform:rotate(9deg) scale(1.08)}66%{transform:rotate(25deg) scale(.95)}}
 #combatRollHelp{background:#fff2ca;color:#24171d;border:4px solid #171019;box-shadow:5px 5px 0 #000;padding:8px 15px;font:900 18px Impact,"Arial Black",sans-serif;text-transform:uppercase}
 @media (max-width:760px){#combatHotbar{grid-template-columns:repeat(5,min(16vw,68px));gap:5px;padding:6px}.combat-slot{border-width:2px}}
-@media (max-width:760px){#battleBox{left:5%;top:8%;width:90%}#bScroll{grid-template-columns:1fr;gap:8px}#qOpts{grid-column:1;grid-row:auto;padding-top:12px}#qContext,#ruleBar,#bActions{grid-column:1}#qScen{padding:14px 17px}}
+/* Phones stack the answers under the question. Two columns were measured and
+   are worse here: at a 351px card each column is ~170px, which wraps the text
+   so hard that both halves grow taller than the stacked pair (qOpts alone went
+   235px -> 379px). Height is bought back by tightening the chrome instead. */
+@media (max-width:760px){#battleBox{left:5%;top:8%;width:90%}
+  #bScroll{grid-template-columns:1fr;gap:8px}
+  #qOpts{grid-column:1;grid-row:auto;padding-top:12px;gap:7px}
+  #qContext,#ruleBar,#bActions{grid-column:1}
+  #qDomain{margin:0 0 -3px 10px;padding:4px 7px;font-size:11px}
+  /* chrome shrinks, reading sizes do not: the question stays 18px and the
+     options stay 14px, exactly as on the desktop card */
+  #qScen{padding:12px 14px;border-width:3px;border-radius:22px;box-shadow:4px 4px 0 rgba(0,0,0,.58)}
+  #qScen::after{left:34px;bottom:-19px;border-width:11px}
+  #qOpts .opt{min-height:42px;padding:8px 11px;border-radius:16px;box-shadow:3px 3px 0 rgba(0,0,0,.62)}
+  #ruleBar{gap:9px}
+  #ruleBar #rbRule,#ruleBar #rbExample{padding:11px 14px;border-width:3px;border-radius:19px}
+  #ruleBar #rbRule{margin-right:5%}#ruleBar #rbExample{margin-left:5%}
+  #bActions .btn{flex:1 1 auto}}
 
 </style>
 <link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="assets/img0048.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Sigilbound"></head>
@@ -575,6 +603,7 @@ body.nomotion *{animation:none !important;transition:none !important}
           <button class="btn ghost hidden" id="btnReplay">↻ Replay</button>
           <button class="btn primary hidden" id="btnContinue">Continue</button>
           <button class="btn danger hidden" id="btnFlee">Withdraw</button>
+          <div id="cardResizeGrip" title="Drag to resize the card · double-click to restore its size"></div>
         </div>
       </div>
       <div id="bHead" title="drag to move the card · drag an edge to resize the card without scaling its words · double-click to return it to your hand">
@@ -8701,6 +8730,38 @@ function applyCardPos(){
     h.addEventListener("pointerup",rend);
     h.addEventListener("pointercancel",rend);
   });
+  /* ---- the corner grip drags both axes at once: on touch it is the only
+         resize the player can see, since the edge handles are hidden and the
+         two-finger pinch is invisible and width-only ---- */
+  const grip=$("cardResizeGrip");
+  if(grip){
+    let gz=null;
+    grip.addEventListener("pointerdown",e=>{
+      gz={id:e.pointerId,px:e.clientX,py:e.clientY,W0:box.offsetWidth,H0:box.offsetHeight};
+      box.classList.add("dragging");
+      try{grip.setPointerCapture(e.pointerId)}catch(err){}
+      e.stopPropagation();          // no preventDefault: it would eat the dblclick reset
+    });
+    grip.addEventListener("pointermove",e=>{
+      if(!gz||e.pointerId!==gz.id)return;
+      S.settings.cardW=clamp(gz.W0+(e.clientX-gz.px),280,Math.min(760,window.innerWidth-16));
+      S.settings.cardH=clamp(gz.H0+(e.clientY-gz.py),140,window.innerHeight-8);
+      applyCardZoom();
+      e.preventDefault();
+    });
+    const gend=e=>{
+      if(!gz||e.pointerId!==gz.id)return;
+      gz=null;box.classList.remove("dragging");queueSave();
+    };
+    grip.addEventListener("pointerup",gend);
+    grip.addEventListener("pointercancel",gend);
+    grip.addEventListener("dblclick",e=>{
+      e.stopPropagation();
+      S.settings.cardW=null;S.settings.cardH=null;queueSave();
+      applyCardZoom();
+      toast("The card returns to its natural size.");
+    });
+  }
   window.addEventListener("resize",()=>{if(S&&S.settings){if(S.settings.cardXY)applyCardPos();applyCardZoom();}});
 })();
 $("btnTonic").addEventListener("click",useTonic);
@@ -8745,7 +8806,14 @@ function pickTrackIntro(){
    the discipline shapes skills and art, never mastery. */
 /* a portrait cropped to its painted content and centered on a square —
    the raw symbol exports carry uneven framing */
-const PORTCACHE={};
+const PORTCACHE={},PORTPENDING=new Set();
+function refreshHeroPortraits(rigKey,url){
+  document.querySelectorAll("#modalBox [data-hero]").forEach(card=>{
+    if(card.dataset.hero!==rigKey)return;
+    const img=card.querySelector("img");
+    if(img)img.src=url;
+  });
+}
 function portraitSquare(rigKey){
   if(PORTCACHE[rigKey])return PORTCACHE[rigKey];
   wakeRig(rigKey);                /* hero cards take raw keys, not rigReady */
@@ -8753,7 +8821,23 @@ function portraitSquare(rigKey){
   let img=rec&&rec.portrait;
   if(!img||!img.src)img=rec&&rec.anims&&rec.anims.idle&&rec.anims.idle[0];   /* no portrait shipped: the idle frame stands in */
   if(!img||!img.src)return "";
-  if(!img.complete||!img.naturalWidth)return img.src;
+  if(!img.complete||!img.naturalWidth){
+    if(!PORTPENDING.has(rigKey)){
+      PORTPENDING.add(rigKey);
+      let attempts=0;
+      const refresh=()=>{
+        if(!img.complete||!img.naturalWidth){
+          if(++attempts<1250){setTimeout(refresh,16);return;}
+          PORTPENDING.delete(rigKey);return;
+        }
+        PORTPENDING.delete(rigKey);
+        const square=portraitSquare(rigKey);
+        if(square)refreshHeroPortraits(rigKey,square);
+      };
+      setTimeout(refresh,0);
+    }
+    return img.src;
+  }
   try{
     const w=img.naturalWidth,hh=img.naturalHeight;
     const cv=document.createElement("canvas");cv.width=w;cv.height=hh;
@@ -9461,16 +9545,46 @@ boot();
    https); over a plain-http LAN ip this returns immediately and changes nothing. */
 (function () {
   if (!("serviceWorker" in navigator) || !window.isSecureContext) return;
-  navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).catch(function () {});
 
   /* a new build's worker takes control (skipWaiting + claim) — reload once so
      the fresh shell runs now, not on the open after. Guarded on a previous
      controller existing, so the very first install never reload-loops. */
   var hadSW = !!navigator.serviceWorker.controller;
+  var reloadingForUpdate = false;
   navigator.serviceWorker.addEventListener("controllerchange", function () {
-    if (hadSW) location.reload();
+    if (hadSW && !reloadingForUpdate) {
+      reloadingForUpdate = true;
+      location.reload();
+    }
     hadSW = true;
   });
+
+  /* iPadOS often resumes a Home Screen app without navigating, so the browser
+     may keep an old shell open indefinitely unless the page explicitly asks
+     its registration to check. Throttle the overlapping visibility/pageshow/
+     focus events that a single resume can emit. */
+  var registration = null, lastUpdateCheck = 0;
+  function checkForUpdate() {
+    var now = Date.now();
+    if (now - lastUpdateCheck < 2000) return;
+    lastUpdateCheck = now;
+    var lookup = registration
+      ? Promise.resolve(registration)
+      : navigator.serviceWorker.getRegistration();
+    lookup.then(function (reg) {
+      if (reg) return reg.update();
+    }).catch(function () {});
+  }
+  function checkWhenVisible() {
+    if (document.visibilityState === "visible") checkForUpdate();
+  }
+  document.addEventListener("visibilitychange", checkWhenVisible);
+  window.addEventListener("pageshow", checkForUpdate);
+  window.addEventListener("focus", checkForUpdate);
+
+  navigator.serviceWorker.register("sw.js", { updateViaCache: "none" })
+    .then(function (reg) { registration = reg; })
+    .catch(function () {});
 
   var pill;
   function say(t) {
