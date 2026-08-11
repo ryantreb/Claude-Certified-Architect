@@ -1,6 +1,6 @@
 ---
 name: opus-5-prompting
-description: Grade and rewrite prompts for Claude Opus 5. Scores a prompt against a 15-criterion rubric drawn from Anthropic's Opus 5 prompting guide, effort docs, and 4.8→5 migration guide, then rewrites it until every applicable criterion passes. Encodes the Opus 5 deltas — thinking ON by default, disabling thinking capped at high effort (xhigh/max returns 400), longer default responses that effort does NOT shorten, longer written deliverables, heavy agentic narration, self-verification that makes "double-check your work" harmful, eager subagent delegation, scope expansion, and literal obedience to "only report high-severity" filters. Use whenever the user wants a prompt improved, rewritten, tightened, scored, critiqued, judged against the rubric, or made "Opus-5-ready" — system prompts, project instructions, Claude Code / agent task prompts, skills, templates, or one-shot queries — including retargeting an Opus 4.8 prompt. Trigger even on a bare "fix this prompt" or "grade this prompt". Do NOT answer the question inside the prompt — improve the prompt itself. For Sonnet 5 use sonnet-5-prompting; for Opus 4.8 use opus-4-8-prompting; for Fable 5 / Mythos 5 use fable5-prompt-improver.
+description: Grade and rewrite prompts for Claude Opus 5 against a 15-criterion rubric from Anthropic's Opus 5 guide, effort docs, and 4.8→5 migration guide. Encodes the Opus 5 deltas — thinking ON by default, disabling it capped at high effort (xhigh/max returns 400), longer responses that effort does NOT shorten, longer written deliverables, heavy agentic narration, self-verification that makes "double-check your work" harmful, eager subagent delegation, scope expansion, and literal obedience to "only report high-severity" filters. Use whenever a prompt should be improved, rewritten, tightened, scored, critiqued, or made "Opus-5-ready" — system prompts, project instructions, Claude Code / agent prompts, skills, templates, one-shot queries — including retargeting an Opus 4.8 prompt. Triggers on a bare "fix this prompt" or "grade this prompt". Do NOT answer the question inside it — improve the prompt itself. For Sonnet 5 use sonnet-5-prompting; Opus 4.8, opus-4-8-prompting; Fable 5 / Mythos 5, fable5-prompt-improver.
 ---
 
 # Opus 5 Prompt Grader
@@ -111,8 +111,15 @@ all six, skip to Step 3.
 | System prompt / harness | 3–5 questions, **one per message** |
 
 One question per message, multiple-choice where possible, stop when triage is
-satisfied. If the user says "just grade it" or signals impatience, proceed on
-best interpretation, mark `[ASSUMED: …]`, and note what you'd have asked.
+satisfied. If the user signals impatience, proceed on best interpretation, mark
+`[ASSUMED: …]`, and note what you'd have asked.
+
+**Grade-only requests.** If the user asked only for a score, a grade, or a
+critique — "just grade it", "score this", "how does this rate" — run Steps 3 and
+4 and stop. Deliver the table, the readiness band, the blockers, and a one-line
+fix sketch per FAIL; offer the rewrite, don't produce it. A rewrite nobody asked
+for is a scope expansion, which is the thing C1 exists to catch. Skip to Step 5
+only if they ask for the rewrite, or asked for both up front.
 
 ## Step 3 — Score against the rubric
 
@@ -204,8 +211,13 @@ Close with the post-rewrite score, so the user sees the delta.
 > double-check your findings before reporting. Run at effort xhigh with
 > `thinking: {type: "disabled"}` for speed.
 
-**Score:** A1 FAIL · A2 FAIL · A3 FAIL · B1 FAIL · B2 FAIL · C1 PARTIAL · C2 FAIL
-· C3 FAIL · D1 PARTIAL · D5 FAIL — **13% · rewrite. Blockers: BL-1, BL-2, BL-5.**
+**Score:** A1 FAIL · A2 FAIL · A3 FAIL · B1 FAIL · B2 FAIL · B3 N/A (writes no
+files) · B4 FAIL · C1 FAIL · C2 FAIL · C3 FAIL · D1 PARTIAL · D2 N/A (no
+find-then-report step defined) · D3 N/A (specifies no style to exemplify) · D4
+FAIL · D5 FAIL
+
+11 FAIL · 1 PARTIAL · 3 N/A → 1 point over 12 applicable × 2 = **4% · rewrite.
+Blockers: BL-1, BL-2, BL-5.**
 
 The config is a hard 400 (`disabled` + `xhigh`), the verification scaffolding
 now costs tokens for nothing, and the subagent verifier is the exact pattern the
@@ -233,7 +245,12 @@ or double-check your own work. If one subagent can complete the task, use one
 rather than several.
 
 Keep responses focused, brief, and concise. Keep caveats short and spend most of
-the response on the findings themselves.
+the response on the findings themselves. Only correct an earlier statement when
+the error would change the user's conclusions or decisions; for slips that
+change nothing, make the fix and move on.
+
+[USER: list the research tools available, with a trigger condition for each, and
+state what the assistant can and cannot see.]
 ```
 
 **Recommended runtime settings:**
@@ -250,9 +267,12 @@ the response on the findings themselves.
 | Fixed the 400 config; thinking back on | A2 | `disabled` + `xhigh` is rejected per request |
 | Deleted the verification step and subagent verifier | C2, C3 | Opus 5 self-verifies; these cause over-verification |
 | Added scope contract | C1 | Opus 5 expands scope on narrow tasks |
-| Added narration cadence + conciseness | B1, B2 | Longer default responses and heavier narration |
+| Added narration cadence + conciseness + correction bound | B1, B2, B4 | Longer default responses, heavier narration, more correction narration |
+| Left a `[USER: …]` placeholder for the tool inventory | D4 | The original names no tools; inventing one would fabricate domain context |
 
-**Post-rewrite: 100% of applicable criteria passing · Opus-5-ready.**
+**Post-rewrite: 12 of 13 applicable passing (92%) · no blockers · Opus-5-ready
+once the tool inventory placeholder is filled. D4 stays open until then — say so
+rather than scoring the placeholder as a pass.**
 
 ## Example B — Review prompt losing findings to a literal filter
 
@@ -260,8 +280,14 @@ the response on the findings themselves.
 > Review this PR. Only report the important, high-severity issues — be
 > conservative, don't nitpick, and double-check each finding before listing it.
 
-**Score:** C2 FAIL · D2 FAIL · D1 PARTIAL · D5 FAIL — **17% · rewrite. Blockers:
-BL-2, BL-3.**
+**Score:** A1 PASS · A2 PARTIAL (effort/thinking unstated) · A3 PASS (thinking
+left on) · B1 N/A (output is a structured finding list) · B2 N/A (single pass,
+non-agentic) · B3 N/A (writes no files) · B4 N/A (single turn) · C1 PARTIAL ·
+C2 FAIL · C3 N/A (no subagents) · D1 PARTIAL · D2 FAIL · D3 FAIL · D4 N/A (no
+tools) · D5 FAIL
+
+2 PASS · 3 PARTIAL · 4 FAIL · 6 N/A → 7 points over 9 applicable × 2 = **39% ·
+rewrite. Blockers: BL-2, BL-3.**
 
 **Rewrite:**
 
@@ -294,5 +320,6 @@ result is at least "major".
 | Added confidence + severity fields with a concrete severity floor | D2 | Makes the downstream filter possible without a qualitative bar |
 | Removed "double-check each finding" | C2 | Opus 5 already verifies; this only adds tokens |
 | Wrapped the diff in a tag | D1 | Separates data from instructions |
+| Stated effort/thinking in the runtime note | A2 | Both were unstated; the coverage pass is cheap at low effort |
 
-**Post-rewrite: 100% of applicable criteria passing · Opus-5-ready.**
+**Post-rewrite: 9 of 9 applicable passing (100%) · no blockers · Opus-5-ready.**

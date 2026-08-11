@@ -42,7 +42,7 @@ handles differently from prior models and that reliably degrade output:
 | # | Blocker | Criterion |
 |---|---|---|
 | BL-1 | `thinking: {type: "disabled"}` combined with effort `xhigh` or `max` — **returns HTTP 400** [M] | A2 |
-| BL-2 | Explicit verification / double-check / "verify with a subagent" instructions [G] | C2 |
+| BL-2 | **Self**-verification scaffolding — "double-check your answer", "add a final verification step", "use a subagent to verify" [G]. Instructions to run *external* checks (the test suite, a linter, an API call) are tool use, not self-verification, and never trigger this blocker. | C2 |
 | BL-3 | A qualitative filter bar ("only high-severity", "be conservative") on a find-everything task [G] | D2 |
 | BL-4 | A rule telling the model not to think or not to reason (increases XML tag leakage) [G] | A3 |
 | BL-5 | Effort/`max_tokens` values carried over from an earlier model with no re-sweep [G][E][M] | A2, D5 |
@@ -56,11 +56,16 @@ if the prompt touches that surface, blank = usually N/A.
 
 | | A1 | A2 | A3 | B1 | B2 | B3 | B4 | C1 | C2 | C3 | D1 | D2 | D3 | D4 | D5 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **System prompt (user-facing product)** | • | • | ~ | • | ~ | ~ | • | • | • | ~ | • | ~ | • | ~ | • |
-| **Agent / Claude Code task prompt** | • | • | ~ | ~ | • | ~ | ~ | • | • | • | • | ~ | • | • | • |
-| **Agent harness / system scaffolding** | • | • | ~ | • | • | • | • | • | • | • | • | • | • | • | • |
-| **Skill or reusable template** | • | ~ | | ~ | ~ | ~ | ~ | • | • | ~ | • | ~ | • | ~ | ~ |
+| **System prompt (user-facing product)** | • | • | • | • | ~ | ~ | • | • | • | ~ | • | ~ | • | ~ | • |
+| **Agent / Claude Code task prompt** | • | • | • | ~ | • | ~ | ~ | • | • | • | • | ~ | • | • | • |
+| **Agent harness / system scaffolding** | • | • | • | • | • | • | • | • | • | • | • | • | • | • | • |
+| **Skill or reusable template** | • | ~ | ~ | ~ | ~ | ~ | ~ | • | • | ~ | • | ~ | • | ~ | ~ |
 | **One-shot chat query** | • | ~ | | ~ | | ~ | | • | ~ | | • | ~ | ~ | | |
+
+The matrix is a starting expectation, not the score. Whatever you end up marking,
+**every one of the 15 criteria must appear in the output table** with a score or
+an N/A plus its one-clause justification — that is what makes the percentage
+reproducible by a second grader.
 
 ---
 
@@ -117,6 +122,10 @@ analogy to a prior model without a re-sweep noted.
 settings silently inherited from Opus 4.8/4.7 (**BL-5**); thinking assumed off
 when the prompt never disables it.
 
+**Detection.** grep for: `budget_tokens`, `temperature`, `top_p`, `top_k`,
+`effort`, `thinking`, `max_tokens`. Cross-check every effort/thinking pair
+against BL-1, and every `max_tokens` against the 64k floor at `xhigh`/`max`.
+
 **Fix.** Emit a runtime note:
 
 ```
@@ -141,17 +150,22 @@ thinking enabled and control cost with lower effort: "for most tasks, thinking
 enabled at `low` effort performs better than thinking disabled at similar cost"
 [G].
 
-**N/A** when thinking is on (the default) — note that and move on.
+**N/A** only when the prompt has no say over runtime configuration — a chat-surface
+query where the author cannot set `thinking`. If the prompt or its harness controls
+the setting, A3 is applicable and scores below; thinking-on is a PASS, not an N/A.
 
-**PASS** — Thinking stays enabled with cost controlled by effort; **or**, where
-disabling is mandatory, the prompt carries the combined mitigation verbatim in
-spirit, contains no "do not think" rule, and does not name thinking tags.
+**PASS** — Thinking stays enabled (the default) with cost controlled by effort;
+**or**, where disabling is mandatory, the prompt carries the combined mitigation
+in spirit, contains no "do not think" rule, and does not name thinking tags.
 
 **PARTIAL** — Thinking disabled with only one of the two artifacts mitigated, or
 the mitigation names `<thinking>` explicitly.
 
 **FAIL** — Thinking disabled with no mitigation, or a "do not think / do not
 reason" rule present (**BL-4**).
+
+**Detection.** grep for: `do not (think|reason)`, `don't think`, `without
+thinking`, `<thinking>`, `"disabled"`, `no reasoning`.
 
 **Fix (paste-ready, from the guide).**
 
@@ -178,6 +192,9 @@ buried mid-prompt in a long system prompt with no reminder.
 
 **FAIL** — No length guidance in a prompt whose output the user reads directly;
 or length is (wrongly) delegated to a lowered effort setting.
+
+**Detection.** grep for: `concise`, `brief`, `short`, `length`, `words`,
+`paragraphs`. Zero hits in a user-facing prompt is a FAIL on its own.
 
 **Fix (from the guide).**
 
@@ -211,6 +228,9 @@ no cadence or shape.
 **FAIL** — Agentic prompt with no narration guidance; or legacy fixed-interval
 scaffolding ("summarize every 3 tool calls") that fights the model's own cadence.
 
+**Detection.** grep for: `update`, `narrat`, `progress`, `summar`, `every \d+
+(tool|steps?)`, `keep me posted`, `explain what you're doing`.
+
 **Fix (from the guide).**
 
 ```
@@ -237,6 +257,10 @@ with no document-specific rule.
 
 **FAIL** — Document-producing prompt with no length calibration.
 
+**Detection.** grep for the file-producing verbs (`write .* to`, `report`,
+`document`, `\.md`, `summary file`); if any hit, check for a length rule scoped
+to documents rather than to chat replies.
+
 **Fix (from the guide).**
 
 ```
@@ -260,6 +284,9 @@ multi-turn user-facing product.
 
 **FAIL** — Multi-turn user-facing prompt with no bound, or one that actively
 invites self-critique narration.
+
+**Detection.** grep for: `correct`, `mistake`, `apolog`, `earlier`, `acknowledge`,
+`admit`. An invitation to narrate self-critique is as much a FAIL as silence.
 
 **Fix (from the guide).**
 
@@ -287,6 +314,10 @@ are voiced without silently reshaping the work.
 requirement, or vice versa).
 
 **FAIL** — A narrow task with no scope bound, on a model that will widen it.
+
+**Detection.** grep for: `scope`, `only`, `do not (add|refactor)`, `finish`,
+`complete`, `stub`, `beyond`. Absence of any scope vocabulary on a narrow task
+is the FAIL signal.
 
 **Fix (from the guide).**
 
@@ -318,7 +349,14 @@ optional.
 verify" (**BL-2**).
 
 **Detection.** grep for: `double.?check`, `verify (your|the) (work|answer)`,
-`re-?verify`, `final verification`, `sanity check`, `review your own`.
+`re-?verify`, `final verification`, `sanity check`, `review your own`. Triage each
+hit: self-directed re-checks are the target; "run the test suite" is not.
+
+**Fix.** Delete the self-verification clause outright — there is no replacement
+text, because the behavior it asks for is already the model's default. Keep any
+external check (tests, linter, API call) and, if it was tangled into the same
+sentence, restate it as plain tool use: "Run `npx playwright test` before
+reporting done."
 
 ---
 
@@ -339,6 +377,10 @@ excludes verification subagents and small tasks.
 
 **FAIL** — Subagent-capable, cost-sensitive harness with no guidance; or a
 prompt instructing subagent-based verification (also **BL-2**).
+
+**Detection.** grep for: `subagent`, `delegate`, `spawn`, `parallel agents`,
+`Task tool`. If the harness exposes a subagent tool but the prompt never names
+one of these, the guidance is missing.
 
 **Fix (from the guide).**
 
@@ -369,6 +411,31 @@ input/instruction boundary is missing.
 **FAIL** — Task dribbled across turns, or so underspecified that a colleague
 with minimal context could not follow it [B].
 
+**Detection.** Run the colleague test [B]: could someone with no context follow
+this? Then check for four things by name — the task, its inputs, its
+constraints, and a definition of done. Any missing one is at most PARTIAL. In
+prompts over ~40 lines, grep for `<` to confirm instructions, context, and data
+are tag-separated.
+
+**Fix.** Restructure into labelled sections rather than adding prose. A skeleton
+that satisfies D1 for most agentic prompts:
+
+```
+<role>Who you are, and what you can and cannot see.</role>
+
+<task>The complete specification, up front — Opus 5 does best given all of it
+and left to run.</task>
+
+<constraints>Bounds, non-goals, and the motivation behind any non-obvious
+rule.</constraints>
+
+<done>What finished looks like, concretely enough to check.</done>
+
+<input>
+[USER: the data goes here, below the instructions]
+</input>
+```
+
 ---
 
 ## D2 — Coverage and filtering are separated; bars are concrete
@@ -392,6 +459,10 @@ qualitative hedge.
 **FAIL** — "Only report important/high-severity issues", "be conservative",
 "don't nitpick" inside the finding step (**BL-3**).
 
+**Detection.** grep for: `only report`, `high-severity`, `important`,
+`conservative`, `nitpick`, `significant`, `major issues`, `worth mentioning`.
+Every hit inside a finding step is a candidate BL-3.
+
 **Fix.** Convert the filter into a coverage instruction plus per-finding
 metadata, and move ranking to a second pass. Accuracy holds at lower effort on
 Opus 5, "which supports a fast pass at review time and a more thorough pass
@@ -407,6 +478,10 @@ what not to do" [G]. Generally: tell Claude what to do instead of what not to do
 [B], and examples are the most reliable steering lever — relevant, diverse, and
 wrapped in `<example>` tags, 3–5 for best results [B].
 
+**N/A** when the prompt specifies no style, tone, or format behavior at all —
+there is nothing framed by negation to correct. (Missing style guidance is
+scored by B1/B2/D1, not here.)
+
 **PASS** — Style, tone, and format are shown with at least one concrete positive
 example; necessary prohibitions are each paired with their replacement.
 
@@ -415,6 +490,17 @@ a negation.
 
 **FAIL** — Behavior specified mainly by a list of don'ts, with no exemplar of
 the target.
+
+**Detection.** grep for: `do not`, `don't`, `never`, `avoid`, `no `. Count them
+against the number of `<example>` blocks; a prohibition-heavy prompt with zero
+exemplars fails.
+
+**Fix.** Invert each prohibition into the behavior you want, and show one
+instance of it. "Don't be verbose" becomes a sample answer at the target length;
+"no bullet lists" becomes "write in flowing prose paragraphs" [B]. Where a
+prohibition must stay, attach its replacement in the same sentence: "use plain
+language; define any technical term you do need on first use." Wrap exemplars in
+`<example>` tags so they read as illustrations rather than instructions [B].
 
 ---
 
@@ -439,6 +525,25 @@ calls are instructed to run in parallel.
 over-prompting ("CRITICAL: you MUST always use this tool") that now overtriggers
 [B].
 
+**Detection.** For each tool in the harness, grep the prompt for its name. A tool
+with no mention, or a mention with no trigger condition, is the gap. Also grep
+for `CRITICAL`, `MUST`, `ALWAYS`, `if in doubt` — over-prompting is now its own
+failure mode.
+
+**Fix.** Give each tool one line of when-and-why, state the visibility boundary,
+and set the action posture:
+
+```
+<tools>
+- read_file: inspect every file that imports the module before editing, to find
+  all affected call sites.
+- web_search: when a referenced API's current replacement is uncertain.
+You can see the repo; you cannot see runtime logs or CI — ask if you need them.
+By default implement changes rather than only suggesting them.
+If several tool calls are independent, make them in parallel.
+</tools>
+```
+
 ---
 
 ## D5 — Eval-gated, not vibes-gated
@@ -457,6 +562,21 @@ pending or done.
 
 **FAIL** — No success criteria, and prior-model tuning carried forward untested
 (**BL-5**).
+
+**Detection.** grep for: `eval`, `test set`, `success`, `criteria`, `measure`,
+`baseline`, `sweep`. Separately, ask whether any number in the prompt or its
+config (effort, `max_tokens`, thresholds) was chosen for an earlier model.
+
+**Fix.** This one usually lives in the runtime note, not the prompt body —
+unless the prompt itself defines the eval. Name the success criteria, point at a
+test set, and record the two open re-validations:
+
+```
+Success criteria: <what a good output does>
+Test set: <n cases, including the edge cases that broke before>
+Pending: fresh effort sweep (low → max); re-validate prompt-side vision
+workarounds carried over from an earlier model.
+```
 
 ---
 
